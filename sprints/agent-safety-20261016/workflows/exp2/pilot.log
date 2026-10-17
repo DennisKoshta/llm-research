@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/workflows/exp2/run.py", line 252, in <module>
+    elif a.command=='collect':collect(a.stage)
+                              ^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/workflows/exp2/run.py", line 183, in collect
+    analyze(stage)
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/workflows/exp2/run.py", line 209, in analyze
+    jsonl(HERE/f'{stage}_scored.jsonl',scored);dump(HERE/f'{stage}_analysis.json',summary)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/workflows/exp2/run.py", line 33, in dump
+    path.write_text(json.dumps(obj, indent=2, ensure_ascii=False, allow_nan=False))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

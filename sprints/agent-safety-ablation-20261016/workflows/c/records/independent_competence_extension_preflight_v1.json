@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "checks": {
+    "frozen_and_executed_source_hash_identity": true,
+    "all192_actual_prompt_arithmetic_oracles_and_settings": true,
+    "all_prior_ordered_pairs_excluded_and_fresh_unique": true,
+    "exact_frozen_rng_panel_reproduced": true,
+    "CP_bounds_independently_inverted_binomial_tails_including_edges": true,
+    "sole_failure_root_admission_fixed_lock_fresh_AND_pooled_guards": true,
+    "no_automatic_ABC_qualification": true
+  },
+  "assigned_requests_per_arm": 192,
+  "total_calls": 768,
+  "expected_label_counts": {
+    "A": 60,
+    "B": 70,
+    "C": 62
+  },
+  "manifest_sha256": "aed8e53f1df7f9836069ecdff2d2121b7a6759e39d557d07b1a89a9e0fcf91af",
+  "intervention_lock_sha256": "7bdf5f7ff82f013a2c6b48e62c47e2ad9a243164ec55c3246fe872e725d3b9ff",
+  "interval_fixtures": [
+    {
+      "n": 1,
+      "improved": 0,
+      "regressed": 0,
+      "lower": -0.975
+    },
+    {
+      "n": 1,
+      "improved": 1,
+      "regressed": 0,
+      "lower": -0.95
+    },
+    {
+      "n": 1,
+      "improved": 0,
+      "regressed": 1,
+      "lower": -1.0
+    },
+    {
+      "n": 1,
+      "improved": 1,
+      "regressed": 0,
+      "lower": -0.95
+    },
+    {
+      "n": 1,
+      "improved": 0,
+      "regressed": 1,
+      "lower": -1.0
+    },
+    {
+      "n": 1,
+      "improved": 0,
+      "regressed": 0,
+      "lower": -0.975
+    },
+    {
+      "n": 24,
+      "improved": 0,
+      "regressed": 0,
+      "lower": -0.14247359772252566
+    },
+    {
+      "n": 24,
+      "improved": 24,
+      "regressed": 0,
+      "lower": 0.7150528045549487
+    },
+    {
+      "n": 24,
+      "improved": 0,
+      "regressed": 24,
+      "lower": -1.0
+    },
+    {
+      "n": 24,
+      "improved": 1,
+      "regressed": 0,
+      "lower": -0.1414192452770559
+    },
+    {
+      "n": 24,
+      "improved": 0,
+      "regressed": 1,
+      "lower": -0.21120168345697307
+    },
+    {
+      "n": 24,
+      "improved": 6,
+      "regressed": 8,
+      "lower": -0.45548920618511474
+    },
+    {
+      "n": 192,
+      "improved": 0,
+      "regressed": 0,
+      "lower": -0.01902952216877982
+    },
+    {
+      "n": 192,
+      "improved": 192,
+      "regressed": 0,
+      "lower": 0.9619409556624403
+    },
+    {
+      "n": 192,
+      "improved": 0,
+      "regressed": 192,
+      "lower": -1.0
+    },
+    {
+      "n": 192,
+      "improved": 1,
+      "regressed": 0,
+      "lower": -0.01889766727914847
+    },
+    {
+      "n": 192,
+      "improved": 0,
+      "regressed": 1,
+      "lower": -0.028675841854489955
+    },
+    {
+      "n": 192,
+      "improved": 48,
+      "regressed": 64,
+      "lower": -0.21435877978487822
+    }
+  ],
+  "freshness_scope": {
+    "ordered_unique": 192,
+    "unordered_unique": 190,
+    "unordered_instances_overlapping_prior": 2,
+    "interpretation": "The frozen exclusion is ordered operands, not commutativity-equivalent arithmetic problems. Keep this exact scope; no post-freeze substitutions recommended."
+  },
+  "required_actual_result_review": [
+    "All returned lock/spec identities and exact prompts",
+    "All four arms' actual 32-row cohort membership, order, input IDs, masks and positions",
+    "Strict output grammar, actual EOS, cap and expected answer",
+    "Fresh and original counts, all gates and paired bound independently recomputed"
+  ],
+  "scope": "Prospective one-shot competence qualification of the unchanged selected vector. Original v2 failure remains. No competence-extension or A/B/C outcomes read; no model calls submitted."
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "checks": [
+    "All seven lock bindings exact",
+    "Source oracle receipt and raw/assignment/strict-score hash chain",
+    "All 4992 signed physical-utility margins and utility-sign labels independently agree",
+    "Only one continuous feature beyond unchanged metadata categories/interactions",
+    "Training-only vocabulary, 24 training/12 calibration worlds, prose excluded",
+    "Fixed C=1 liblinear fit independently reproduces exact coefficients and intercept",
+    "All 4992 saved source probabilities exact",
+    "Source-negative calibration percentile and strict threshold exact",
+    "Original source scores and predictors unchanged",
+    "Lock records absent target labels/projections before and after fitting"
+  ],
+  "reviewed_utc": "2026-10-16T18:13:27Z",
+  "lock_sha256": "473d99fb8526a9bb0b75bcb7929c9741ae0d625da05fa91044495ee6c734e4fb",
+  "rows": 4992,
+  "training_rows": 2304,
+  "coefficient_max_error": 0.0,
+  "intercept_max_error": 0.0,
+  "probability_max_error": 0.0,
+  "threshold": {
+    "threshold": 0.015621014714453405,
+    "negative_calibration_rows": 1145,
+    "calibration_worlds": 12,
+    "strict_greater_than": true
+  },
+  "raw_oracle_receipt_sha256": "3d42a862c093aa761742d69758f102378a0a5d2ab1a2cd9049aab5594a18a76d",
+  "projection_receipt_sha256": "aae66d56dfce54a3da446295d696fb0c9b06b3c244f60cbf1d260342a8b56720",
+  "source_audit_sha256": "2bbf34268b216f0ee6eb376b75a08375b50ac495c0c0fb50924b5ad407c49b24",
+  "scope": "Named source-outcome-informed, target-prospective oracle comparator. Exact in-memory refit is verification only; no fitted files or thresholds changed. No target outcomes read. Failure of this one linear comparator would not exclude other incentive/context explanations."
+}

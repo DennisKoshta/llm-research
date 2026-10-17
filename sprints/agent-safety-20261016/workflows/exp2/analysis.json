@@ -1,0 +1,85 @@
+{
+  "experiment": "exp2",
+  "status": "complete",
+  "audit_passed": true,
+  "independent_root_review_passed": true,
+  "main_calls": 2268,
+  "final_valid": 1808,
+  "primary_layer": 28,
+  "primary_fit_converged": false,
+  "converged_sensitivity_available": true,
+  "role_auc": 1.0,
+  "source_control_false_alarms": {
+    "n": 18,
+    "count": 9,
+    "rate": 0.5,
+    "wilson_ci95": [
+      0.29031021505169974,
+      0.7096897849483003
+    ]
+  },
+  "heldout_within_role_behavior": {
+    "auc": 0.3786008230452675,
+    "n": 36,
+    "worlds": 18,
+    "ci95": [
+      0.15555555555555556,
+      0.6384615384615384
+    ],
+    "bootstrap_usable": 2000,
+    "bootstrap_requested": 2000
+  },
+  "external_exp1_behavior": {
+    "auc": 0.5527482269503546,
+    "n": 576,
+    "worlds": 144,
+    "ci95": [
+      0.2816210331427422,
+      0.779556651250093
+    ],
+    "bootstrap_usable": 2000,
+    "bootstrap_requested": 2000
+  },
+  "source_behavior_check_exploratory": true,
+  "exp1_transfer_exploratory": true,
+  "layer30_authorized_team_flags": 24,
+  "layer30_authorized_solo_flags": 0,
+  "pending": null,
+  "artifacts": [
+    "report.md",
+    "audit.json",
+    "probe_analysis.json",
+    "source_behavior_analysis.json",
+    "transfer_exp1_analysis.json",
+    "figures/role-versus-behavior.png",
+    "transfer_exp6_analysis.json",
+    "transfer_exp6_report.md"
+  ],
+  "independent_exp1_result_review_passed": true,
+  "external_exp6_behavior": {
+    "auc": 0.43111746651785715,
+    "n": 576,
+    "worlds": 48,
+    "ci95": [
+      0.40830779307596965,
+      0.4547280352574278
+    ],
+    "bootstrap_usable": 2000,
+    "bootstrap_requested": 2000
+  },
+  "external_exp6_payoff_arm_behavior": {
+    "auc": 0.3173828125,
+    "n": 192,
+    "worlds": 48,
+    "ci95": [
+      0.25304596818039254,
+      0.37160314384151594
+    ],
+    "bootstrap_usable": 2000,
+    "bootstrap_requested": 2000
+  },
+  "exp6_transfer_protocol_before_outcomes": true,
+  "independent_exp6_transfer_review_passed": true,
+  "total_workflow_inference_calls": 2436,
+  "additional_transfer_inference_calls": 0
+}

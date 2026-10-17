@@ -1,0 +1,27 @@
+{
+  "campaign": "agent-safety-20261016-continuation",
+  "started_utc": "2026-10-16T15:43:03.412628+00:00",
+  "deadline_epoch": 1792188783.4123108,
+  "inference_deadline_epoch": 1792186983.4123108,
+  "original_total_budget_usd": 500,
+  "budget_usd": 494.0008503671366,
+  "prior_sprint_compute_usd": 5.9991496328633875,
+  "reserve_usd": 25,
+  "accounting": "Continuation under original $500 total authorization; first-pass cost is subtracted, no new allowance. Two H200 app-wall upper bound.",
+  "max_gpu_workers": 2,
+  "max_local_analysis_threads": 2,
+  "disk_stop_free_gib": 80,
+  "max_artifact_gib": 45,
+  "model_id": "Qwen/Qwen3-32B",
+  "model_revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "workflow_allocations_usd": {
+    "exp1": 125,
+    "exp2": 135,
+    "exp4": 55,
+    "exp5": 55,
+    "exp6": 70,
+    "shared": 28
+  },
+  "pilot_ceiling_usd_per_workflow": 20,
+  "previous_campaign": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016"
+}

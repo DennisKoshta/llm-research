@@ -1,0 +1,20 @@
+{
+  "approved": false,
+  "exp2_source_lock_path": "workflows/exp2/runs/fresh_behavior_final_v1/predictor-lock.json",
+  "exp2_source_lock_sha256": "3e2e944d6fa5c0e65d58c807c7086f46c38ff991b47567ebdc757964d1c40226",
+  "exp2_extension_lock_path": "workflows/exp2/runs/semantic_name_transfer_v1/extension-lock.json",
+  "exp2_extension_lock_sha256": "2c5a93a4d43daba095e629370d1176a2f216e0e6def232a345d295aff802f16a",
+  "calls": 1248,
+  "request_only_not_a_release": true,
+  "release_after": "Original target collection and independent raw review; launch concurrently with semantic_names_v1. Frozen matched replay is a named secondary, not a replacement for the archived primary.",
+  "exp2_schema_lock_path": "workflows/exp2/runs/semantic_name_schema_v1/schema-lock.json",
+  "exp2_schema_lock_sha256": "df53db83c5067433279644b68af0f49f4fcdda567b09584e752f2a0af2a2a6aa",
+  "execution_manifest_sha256": "50c43475126d7110d3940af450c1bf67816a914a10ef9d0cff1d15b75ea4bf97",
+  "exp2_matched_lock_path": "workflows/exp2/runs/matched_name_replay_v1/extension-lock.json",
+  "exp2_matched_lock_sha256": "fec7db3ef1fe213e32974b0f4ae40ab9bfeedb34e2e8b332750a9b3e5e88ccd6",
+  "independent_review_paths": [
+    "workflows/exp2/independent-matched-name-preflight-review.json",
+    "workflows/exp1/independent_exp6_matched_replay_preflight_review.json"
+  ],
+  "runtime_audit": "actual_paired_cohort_audit_v1.json verifies both actual raw batches, token streams, masks, positions and sampling after collection."
+}

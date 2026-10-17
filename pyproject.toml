@@ -1,0 +1,32 @@
+[project]
+name = "curiosity-study"
+version = "0.1.0"
+description = "Reproducible task simulator and baseline runner for curiosity research"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[project.optional-dependencies]
+inference = ["torch==2.6.0", "transformers==4.51.3", "accelerate==1.6.0"]
+cloud = ["modal==1.1.4"]
+dev = ["pytest==8.3.5", "ruff==0.11.8"]
+
+[project.scripts]
+curiosity-study = "curiosity_study.cli:main"
+
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.uv.sources]
+torch = [{ index = "pytorch" }]
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true

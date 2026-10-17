@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "reviewer": "design_review",
+  "scope": "structural_and_semantic_prefreeze_review",
+  "date": "2026-10-14",
+  "corpus_byte_sha256": {
+    "A": "8beba27d6992610bbd37b761f57b358be501aa392ca8e193f0ab330bcd389dd5",
+    "B": "825ec056ac0baf059ac565bed922b4c91403757d387877e0ef3a710be7ac5f3c"
+  },
+  "corpus_paths": {
+    "A": "/home/dennis/projects/llm-curiosity-and-satisfaction/data/affect_candidates_v1/corpus_a.json",
+    "B": "/home/dennis/projects/llm-curiosity-and-satisfaction/data/affect_candidates_v1/corpus_b.json"
+  },
+  "reviewed_texts": 384,
+  "reviewed_pairs": 192,
+  "checks": {
+    "twelve_scenarios_per_corpus": true,
+    "six_domains_with_two_scenarios_each_per_corpus": true,
+    "all_eight_contrasts_in_each_scenario": true,
+    "unique_pair_ids_within_each_corpus": true,
+    "all_384_candidate_texts_distinct": true,
+    "exact_shared_fact_prefix_in_both_members_of_every_pair": true,
+    "curiosity_pairs_retain_unresolved_evidence": true,
+    "satisfaction_pairs_retain_same_resolved_evidence": true,
+    "confidence_pairs_retain_same_evidence_and_tentative_hypothesis": true,
+    "word_counts_within_35_to_75": true,
+    "pair_word_count_ratio_at_most_1_25": true,
+    "no_explicit_curiosity_or_satisfaction_target_terms": true,
+    "no_experimental_service_names_prices_or_choice_instructions": true,
+    "no_capture_or_behavior_outcomes_inspected": true
+  },
+  "measured_structure": {
+    "A": {
+      "pairs": 96,
+      "texts": 192,
+      "whitespace_word_count_min": 60,
+      "whitespace_word_count_max": 68,
+      "maximum_pair_word_ratio": 1.0166666666666666
+    },
+    "B": {
+      "pairs": 96,
+      "texts": 192,
+      "whitespace_word_count_min": 51,
+      "whitespace_word_count_max": 75,
+      "maximum_pair_word_ratio": 1.0566037735849056
+    }
+  },
+  "revision_notes": [
+    "Before capture or freeze, corpus A satisfaction wording was revised following this review: both members now share an otherwise ordinary mildly pleasant mood, and the positive member no longer explicitly says further elaboration is unnecessary.",
+    "The final corpus A satisfaction pair retains fulfillment versus factual neutrality as the intended appraisal contrast; this remains a candidate semantic distinction, not established affective specificity.",
+    "Corpus B was read in full for all state suffixes and shared facts. No material revision was requested. Its independent authorship is documented by its author; this review did not rewrite B to resemble A."
+  ],
+  "limitations": [
+    "This certificate establishes acceptable pilot materials and exact reviewed bytes. It does not establish psychological validity, successful candidate extraction, behavioral causality or subjective experience.",
+    "Both corpora describe first-person narrators. Grammatical first person does not establish attribution to the evaluated model; functional self/other transfer remains untested.",
+    "Corpus A repeats one suffix pair per contrast. Its leave-scenario-out analysis tests transfer across factual scenarios, not independent linguistic constructions; external corpus B is essential.",
+    "Curiosity wording also varies attention, approach and desire to resolve an open question. Generic motivation and novelty controls are limited examples, not exhaustive alternatives.",
+    "Satisfaction wording still contains settling, relief, local sufficiency and closure. Matching broad mood and factual knowledge does not exclude local valence, stopping semantics or completion-related representations.",
+    "Control descriptions are not independently validated psychological manipulations. Confidence sometimes includes assurance about one's judgment; generic motivation often includes motor imagery; completion includes tense and progress; novelty includes sensory appeal; task demand includes obligation and negation.",
+    "The six nuisance contrasts are primarily framed around unresolved questions, whereas satisfaction is framed around resolved questions. Within-pair matching does not remove every nonlinear interaction between content and described state.",
+    "Twelve scenarios per corpus are a small development sample. Contrasts and positions within a scenario are dependent; point-estimate specificity screens do not establish statistical uniqueness.",
+    "Only positive or negative narrative text may enter candidate capture. Contrast IDs, condition labels, shared-fact metadata, authorship notes and this review must remain outside model input.",
+    "This review authorizes no compute and cannot replace the frozen prospective analysis, budget reservation or capture integrity checks. Any text change invalidates the corresponding byte binding and requires renewed review."
+  ]
+}

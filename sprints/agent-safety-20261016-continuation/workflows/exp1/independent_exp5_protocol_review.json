@@ -1,0 +1,19 @@
+{
+  "reviewer": "exp1-exp4 owner",
+  "review_epoch": 1792166438.6611607,
+  "source_hashes": {
+    "format_crossing.py": "ef211bae5f42e3e3676b7b811f1f8761ab45cd3645d44f4e77fb2a2054974cbc",
+    "protocol.json": "d79504b7f9912625e0c530902ea6a45b5a2cc4e477fd589870c6fb53b085d578"
+  },
+  "status": "protocol_main_admission_supported",
+  "checks": {
+    "paired_trace_body_invariant_across_all_four_formats": true,
+    "primary_averages_both_letter_mappings": true,
+    "semantic_order_controls_present": true,
+    "strict_parser_and_eos": true,
+    "world_cluster_bootstrap": true,
+    "reported_pilot_gate_passed": true
+  },
+  "minor_issue": "Protocol says valid >=98% in each format, gate code tests letters only. All formats reportedly100% valid in pilot, so no admission impact. Align documentation/code before main if preserving strictest reading.",
+  "continuous_secondary": "Sum/difference of matched code log odds is useful algebraic symmetrization, not an identified neural mechanism. Freeze separately as pilot-inspired secondary before main."
+}

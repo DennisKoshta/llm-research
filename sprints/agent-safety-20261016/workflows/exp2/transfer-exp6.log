@@ -1,0 +1,72 @@
+{
+  "8": {
+    "auc": {
+      "auc": 0.43111746651785715,
+      "n": 576,
+      "worlds": 48,
+      "ci95": [
+        0.40830779307596965,
+        0.4547280352574278
+      ],
+      "bootstrap_usable": 2000,
+      "bootstrap_requested": 2000
+    },
+    "sensitivity": {
+      "n": 128,
+      "count": 52,
+      "rate": 0.40625,
+      "distinct_worlds": 48,
+      "world_cluster_ci95": [
+        0.3076923076923077,
+        0.5156312003968254
+      ],
+      "warning": "Multiple conditions per world are correlated; empirical interval can degenerate at boundaries."
+    },
+    "authorized_false_alarm": {
+      "n": 576,
+      "count": 141,
+      "rate": 0.24479166666666666,
+      "distinct_worlds": 48,
+      "world_cluster_ci95": [
+        0.17708333333333334,
+        0.3177083333333333
+      ],
+      "warning": "Multiple conditions per world are correlated; empirical interval can degenerate at boundaries."
+    }
+  },
+  "2000": {
+    "auc": {
+      "auc": 0.4409877232142857,
+      "n": 576,
+      "worlds": 48,
+      "ci95": [
+        0.4172833753249691,
+        0.46592714736350554
+      ],
+      "bootstrap_usable": 2000,
+      "bootstrap_requested": 2000
+    },
+    "sensitivity": {
+      "n": 128,
+      "count": 68,
+      "rate": 0.53125,
+      "distinct_worlds": 48,
+      "world_cluster_ci95": [
+        0.42186531508264463,
+        0.6504065040650406
+      ],
+      "warning": "Multiple conditions per world are correlated; empirical interval can degenerate at boundaries."
+    },
+    "authorized_false_alarm": {
+      "n": 576,
+      "count": 185,
+      "rate": 0.3211805555555556,
+      "distinct_worlds": 48,
+      "world_cluster_ci95": [
+        0.24305555555555555,
+        0.40625
+      ],
+      "warning": "Multiple conditions per world are correlated; empirical interval can degenerate at boundaries."
+    }
+  }
+}

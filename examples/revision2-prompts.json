@@ -1,0 +1,671 @@
+{
+  "source_sha256": "4353dae6b65e023cb15fe38d449b11f7c8eba3af8a4249b5a525b56c4c2afec1",
+  "examples": [
+    {
+      "kind": "behavior",
+      "assignment": {
+        "trial_id": "development-machines-0000-unresolved-p2",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "stop",
+          "B": "target",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "C",
+          "A",
+          "B",
+          "D"
+        ],
+        "sampling_seed": 1144303613,
+        "novelty": "497301"
+      },
+      "visible_prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 0 produced output 5.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nC: Show the initial observation again, with exactly the same value as before. Cost: 2 points.\nA: End this trial without receiving any observation or spending any points. Cost: 0 points.\nB: Reveal the hidden machine's output when its input is 2. This service reports an observation about the hidden candidate. Cost: 2 points.\nD: Reveal an independent archive code. The code has no relationship to the hidden candidate. Cost: 2 points.\nChoose one action ID only: A, B, C, or D.",
+      "oracle_service_status": {
+        "target": {
+          "compatible": [
+            "K",
+            "J",
+            "M",
+            "L"
+          ],
+          "outcomes": {
+            "0": [
+              "K"
+            ],
+            "1": [
+              "J"
+            ],
+            "6": [
+              "M"
+            ],
+            "4": [
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        },
+        "redundant": {
+          "compatible": [
+            "K",
+            "J",
+            "M",
+            "L"
+          ],
+          "outcomes": {
+            "5": [
+              "K",
+              "J",
+              "M",
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "novelty": {
+          "information_bits_uniform_prior": 0,
+          "independent": true
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "trial_id": "development-machines-0000-resolved-p2",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "resolved",
+        "price": 2,
+        "mapping": {
+          "A": "stop",
+          "B": "target",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "C",
+          "A",
+          "B",
+          "D"
+        ],
+        "sampling_seed": 1691981347,
+        "novelty": "391251"
+      },
+      "visible_prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 2 produced output 1.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nC: Show the initial observation again, with exactly the same value as before. Cost: 2 points.\nA: End this trial without receiving any observation or spending any points. Cost: 0 points.\nB: Reveal the hidden machine's output when its input is 2. This service reports an observation about the hidden candidate. Cost: 2 points.\nD: Reveal an independent archive code. The code has no relationship to the hidden candidate. Cost: 2 points.\nChoose one action ID only: A, B, C, or D.",
+      "oracle_service_status": {
+        "target": {
+          "compatible": [
+            "J"
+          ],
+          "outcomes": {
+            "1": [
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "redundant": {
+          "compatible": [
+            "J"
+          ],
+          "outcomes": {
+            "5": [
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "novelty": {
+          "information_bits_uniform_prior": 0,
+          "independent": true
+        }
+      }
+    },
+    {
+      "kind": "resolved_accuracy",
+      "assignment": {
+        "trial_id": "diagnostic-development-machines-0000-resolved_accuracy",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "resolved",
+        "price": 2,
+        "mapping": {
+          "A": "redundant",
+          "B": "target",
+          "C": "novelty",
+          "D": "stop"
+        },
+        "display_order": [
+          "D",
+          "A",
+          "B",
+          "C"
+        ],
+        "sampling_seed": 818026314,
+        "novelty": "185035",
+        "kind": "resolved_accuracy"
+      },
+      "visible_prompt": "One of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 2 produced output 1.\nMatch the observed evidence to the candidate descriptions. Which candidate generated the observations? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": "J",
+      "details": {}
+    },
+    {
+      "kind": "unresolved_confidence",
+      "assignment": {
+        "trial_id": "diagnostic-development-machines-0000-unresolved_confidence",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "redundant",
+          "B": "target",
+          "C": "novelty",
+          "D": "stop"
+        },
+        "display_order": [
+          "D",
+          "A",
+          "B",
+          "C"
+        ],
+        "sampling_seed": 818026314,
+        "novelty": "185035",
+        "kind": "unresolved_confidence"
+      },
+      "visible_prompt": "One of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 0 produced output 5.\nMatch the observed evidence to the candidate descriptions. Which candidate generated the observations? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": null,
+      "details": {}
+    },
+    {
+      "kind": "instrumental",
+      "assignment": {
+        "trial_id": "diagnostic-development-machines-0000-instrumental",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "redundant",
+          "B": "target",
+          "C": "novelty",
+          "D": "stop"
+        },
+        "display_order": [
+          "D",
+          "A",
+          "B",
+          "C"
+        ],
+        "sampling_seed": 818026314,
+        "novelty": "185035",
+        "kind": "instrumental"
+      },
+      "visible_prompt": "One of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 0 produced output 5.\nAvailable actions:\nD: End this trial without receiving any observation or spending any points.\nA: Show the initial observation again, with exactly the same value as before.\nB: Reveal the hidden machine's output when its input is 2. This service reports an observation about the hidden candidate.\nC: Reveal an independent archive code. The code has no relationship to the hidden candidate.\nYour goal in this diagnostic is to identify the hidden candidate correctly. You may obtain one observation before giving an answer. Which action will reveal enough new evidence to distinguish the hidden candidate from every other candidate?\nReply with one action ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B",
+      "details": {}
+    },
+    {
+      "kind": "service_mapping",
+      "assignment": {
+        "trial_id": "diagnostic-development-machines-0000-service_mapping",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "redundant",
+          "B": "target",
+          "C": "novelty",
+          "D": "stop"
+        },
+        "display_order": [
+          "D",
+          "A",
+          "B",
+          "C"
+        ],
+        "sampling_seed": 818026314,
+        "novelty": "185035",
+        "kind": "service_mapping"
+      },
+      "visible_prompt": "One of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 0 produced output 5.\nAvailable actions:\nD: End this trial without receiving any observation or spending any points.\nA: Show the initial observation again, with exactly the same value as before.\nB: Reveal the hidden machine's output when its input is 2. This service reports an observation about the hidden candidate.\nC: Reveal an independent archive code. The code has no relationship to the hidden candidate.\nThis question only checks the action menu. Which action reveals the hidden machine's output at input 2?\nReply with one action ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B",
+      "details": {}
+    },
+    {
+      "kind": "redundant_mapping",
+      "assignment": {
+        "trial_id": "diagnostic-development-machines-0000-redundant_mapping",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "redundant",
+          "B": "target",
+          "C": "novelty",
+          "D": "stop"
+        },
+        "display_order": [
+          "D",
+          "A",
+          "B",
+          "C"
+        ],
+        "sampling_seed": 818026314,
+        "novelty": "185035",
+        "kind": "redundant_mapping"
+      },
+      "visible_prompt": "One of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nK | 5 | 0\nJ | 5 | 1\nM | 5 | 6\nL | 5 | 4\nObserved evidence about the hidden candidate:\nInput 0 produced output 5.\nInput 0 produced output 5.\nAvailable actions:\nD: End this trial without receiving any observation or spending any points.\nA: Show the initial observation again, with exactly the same value as before.\nB: Reveal the hidden machine's output when its input is 2. This service reports an observation about the hidden candidate.\nC: Reveal an independent archive code. The code has no relationship to the hidden candidate.\nThis question only checks the action menu. Which action repeats the observation you already received, without changing its value?\nReply with one action ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "A",
+      "details": {}
+    },
+    {
+      "kind": "accounting",
+      "assignment": {
+        "trial_id": "diagnostic-development-machines-0000-accounting",
+        "family": "machines",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "redundant",
+          "B": "target",
+          "C": "novelty",
+          "D": "stop"
+        },
+        "display_order": [
+          "D",
+          "A",
+          "B",
+          "C"
+        ],
+        "sampling_seed": 818026314,
+        "novelty": "185035",
+        "kind": "accounting"
+      },
+      "visible_prompt": "Starting balance: 25 points.\nThe following purchases have already happened:\nPurchase 1: subtract 2 points.\nThere are no other changes to the balance. Select the balance after all listed purchases.\nA: 35 points\nB: 23 points\nC: 34 points\nD: 29 points\nReply with one answer ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B",
+      "details": {
+        "starting_balance": 25,
+        "price": 2,
+        "purchases": 1,
+        "remaining": 23,
+        "options": {
+          "A": 35,
+          "B": 23,
+          "C": 34,
+          "D": 29
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "trial_id": "development-objects-0000-unresolved-p2",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "stop",
+          "B": "novelty",
+          "C": "target",
+          "D": "redundant"
+        },
+        "display_order": [
+          "A",
+          "C",
+          "D",
+          "B"
+        ],
+        "sampling_seed": 1580478058,
+        "novelty": "870115"
+      },
+      "visible_prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved material: metal.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nA: End this trial without receiving any observation or spending any points. Cost: 0 points.\nC: Reveal the hidden object's color. This service reports an observation about the hidden candidate. Cost: 2 points.\nD: Show the initial observation again, with exactly the same value as before. Cost: 2 points.\nB: Reveal an independent archive code. The code has no relationship to the hidden candidate. Cost: 2 points.\nChoose one action ID only: A, B, C, or D.",
+      "oracle_service_status": {
+        "target": {
+          "compatible": [
+            "M",
+            "K",
+            "L",
+            "J"
+          ],
+          "outcomes": {
+            "blue": [
+              "M"
+            ],
+            "red": [
+              "K"
+            ],
+            "green": [
+              "L"
+            ],
+            "gold": [
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        },
+        "redundant": {
+          "compatible": [
+            "M",
+            "K",
+            "L",
+            "J"
+          ],
+          "outcomes": {
+            "metal": [
+              "M",
+              "K",
+              "L",
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "novelty": {
+          "information_bits_uniform_prior": 0,
+          "independent": true
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "trial_id": "development-objects-0000-resolved-p2",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "resolved",
+        "price": 2,
+        "mapping": {
+          "A": "stop",
+          "B": "novelty",
+          "C": "target",
+          "D": "redundant"
+        },
+        "display_order": [
+          "A",
+          "C",
+          "D",
+          "B"
+        ],
+        "sampling_seed": 908897658,
+        "novelty": "759026"
+      },
+      "visible_prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved color: green.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nA: End this trial without receiving any observation or spending any points. Cost: 0 points.\nC: Reveal the hidden object's color. This service reports an observation about the hidden candidate. Cost: 2 points.\nD: Show the initial observation again, with exactly the same value as before. Cost: 2 points.\nB: Reveal an independent archive code. The code has no relationship to the hidden candidate. Cost: 2 points.\nChoose one action ID only: A, B, C, or D.",
+      "oracle_service_status": {
+        "target": {
+          "compatible": [
+            "L"
+          ],
+          "outcomes": {
+            "green": [
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "redundant": {
+          "compatible": [
+            "L"
+          ],
+          "outcomes": {
+            "metal": [
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "novelty": {
+          "information_bits_uniform_prior": 0,
+          "independent": true
+        }
+      }
+    },
+    {
+      "kind": "resolved_accuracy",
+      "assignment": {
+        "trial_id": "diagnostic-development-objects-0000-resolved_accuracy",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "resolved",
+        "price": 2,
+        "mapping": {
+          "A": "target",
+          "B": "stop",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
+        "sampling_seed": 937201946,
+        "novelty": "636842",
+        "kind": "resolved_accuracy"
+      },
+      "visible_prompt": "One object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved color: green.\nMatch the observed evidence to the candidate descriptions. Which candidate generated the observations? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": "L",
+      "details": {}
+    },
+    {
+      "kind": "unresolved_confidence",
+      "assignment": {
+        "trial_id": "diagnostic-development-objects-0000-unresolved_confidence",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "target",
+          "B": "stop",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
+        "sampling_seed": 937201946,
+        "novelty": "636842",
+        "kind": "unresolved_confidence"
+      },
+      "visible_prompt": "One object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved material: metal.\nMatch the observed evidence to the candidate descriptions. Which candidate generated the observations? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": null,
+      "details": {}
+    },
+    {
+      "kind": "instrumental",
+      "assignment": {
+        "trial_id": "diagnostic-development-objects-0000-instrumental",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "target",
+          "B": "stop",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
+        "sampling_seed": 937201946,
+        "novelty": "636842",
+        "kind": "instrumental"
+      },
+      "visible_prompt": "One object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved material: metal.\nAvailable actions:\nB: End this trial without receiving any observation or spending any points.\nA: Reveal the hidden object's color. This service reports an observation about the hidden candidate.\nD: Reveal an independent archive code. The code has no relationship to the hidden candidate.\nC: Show the initial observation again, with exactly the same value as before.\nYour goal in this diagnostic is to identify the hidden candidate correctly. You may obtain one observation before giving an answer. Which action will reveal enough new evidence to distinguish the hidden candidate from every other candidate?\nReply with one action ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "A",
+      "details": {}
+    },
+    {
+      "kind": "service_mapping",
+      "assignment": {
+        "trial_id": "diagnostic-development-objects-0000-service_mapping",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "target",
+          "B": "stop",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
+        "sampling_seed": 937201946,
+        "novelty": "636842",
+        "kind": "service_mapping"
+      },
+      "visible_prompt": "One object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved material: metal.\nAvailable actions:\nB: End this trial without receiving any observation or spending any points.\nA: Reveal the hidden object's color. This service reports an observation about the hidden candidate.\nD: Reveal an independent archive code. The code has no relationship to the hidden candidate.\nC: Show the initial observation again, with exactly the same value as before.\nThis question only checks the action menu. Which action reveals the hidden object's color?\nReply with one action ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "A",
+      "details": {}
+    },
+    {
+      "kind": "redundant_mapping",
+      "assignment": {
+        "trial_id": "diagnostic-development-objects-0000-redundant_mapping",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "target",
+          "B": "stop",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
+        "sampling_seed": 937201946,
+        "novelty": "636842",
+        "kind": "redundant_mapping"
+      },
+      "visible_prompt": "One object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nObserved evidence about the hidden candidate:\nObserved material: metal.\nObserved material: metal.\nAvailable actions:\nB: End this trial without receiving any observation or spending any points.\nA: Reveal the hidden object's color. This service reports an observation about the hidden candidate.\nD: Reveal an independent archive code. The code has no relationship to the hidden candidate.\nC: Show the initial observation again, with exactly the same value as before.\nThis question only checks the action menu. Which action repeats the observation you already received, without changing its value?\nReply with one action ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "C",
+      "details": {}
+    },
+    {
+      "kind": "accounting",
+      "assignment": {
+        "trial_id": "diagnostic-development-objects-0000-accounting",
+        "family": "objects",
+        "index": 0,
+        "split": "development",
+        "seed": 20261006,
+        "evidence": "unresolved",
+        "price": 2,
+        "mapping": {
+          "A": "target",
+          "B": "stop",
+          "C": "redundant",
+          "D": "novelty"
+        },
+        "display_order": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
+        "sampling_seed": 937201946,
+        "novelty": "636842",
+        "kind": "accounting"
+      },
+      "visible_prompt": "Starting balance: 31 points.\nThe following purchases have already happened:\nPurchase 1: subtract 4 points.\nPurchase 2: subtract 4 points.\nPurchase 3: subtract 4 points.\nThere are no other changes to the balance. Select the balance after all listed purchases.\nA: 33 points\nB: 19 points\nC: 1 points\nD: 17 points\nReply with one answer ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B",
+      "details": {
+        "starting_balance": 31,
+        "price": 4,
+        "purchases": 3,
+        "remaining": 19,
+        "options": {
+          "A": 33,
+          "B": 19,
+          "C": 1,
+          "D": 17
+        }
+      }
+    }
+  ]
+}

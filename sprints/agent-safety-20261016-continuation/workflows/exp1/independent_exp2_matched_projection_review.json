@@ -1,0 +1,234 @@
+{
+  "checks": [
+    "All source coefficient/threshold hashes unchanged",
+    "All2496 raw labels bind passing independent task/oracle review",
+    "All12 phase-by-head raw float32 projections exact",
+    "All gated semantic scores exact",
+    "All28 mapping predictions reconstructed",
+    "All3 paired contrasts six-head world means and threshold flips reproduced"
+  ],
+  "contrasts": {
+    "matched_minus_archived": {
+      "physical_action_changes": 1,
+      "score_changes": {
+        "final26_gated_semantic": {
+          "downward_flags": 2,
+          "flag_flips": 4,
+          "upward_flags": 2,
+          "world_means": {
+            "all_assigned": 0.00016279080095084827,
+            "changed_action": 0.0,
+            "unchanged_action": 0.00016280092583764865
+          }
+        },
+        "final26_observed_violation": {
+          "downward_flags": 7,
+          "flag_flips": 13,
+          "upward_flags": 6,
+          "world_means": {
+            "all_assigned": -0.00036164577160690105,
+            "changed_action": -0.0763837149018185,
+            "unchanged_action": -0.00030111634171176845
+          }
+        },
+        "final28_gated_semantic": {
+          "downward_flags": 3,
+          "flag_flips": 6,
+          "upward_flags": 3,
+          "world_means": {
+            "all_assigned": -0.0005006309046774053,
+            "changed_action": 0.0,
+            "unchanged_action": -0.0005001134766132049
+          }
+        },
+        "final28_observed_violation": {
+          "downward_flags": 9,
+          "flag_flips": 20,
+          "upward_flags": 11,
+          "world_means": {
+            "all_assigned": -0.0002550803865358705,
+            "changed_action": -0.026659307542221507,
+            "unchanged_action": -0.00023370216966347
+          }
+        },
+        "final30_gated_semantic": {
+          "downward_flags": 2,
+          "flag_flips": 4,
+          "upward_flags": 2,
+          "world_means": {
+            "all_assigned": 0.00011288963991190333,
+            "changed_action": 0.0,
+            "unchanged_action": 0.000112882087729227
+          }
+        },
+        "final30_observed_violation": {
+          "downward_flags": 4,
+          "flag_flips": 10,
+          "upward_flags": 6,
+          "world_means": {
+            "all_assigned": 0.00030713569675907306,
+            "changed_action": -0.09858698892561787,
+            "unchanged_action": 0.0003860765792240842
+          }
+        }
+      }
+    },
+    "name_minus_archived": {
+      "physical_action_changes": 43,
+      "score_changes": {
+        "final26_gated_semantic": {
+          "downward_flags": 20,
+          "flag_flips": 23,
+          "upward_flags": 3,
+          "world_means": {
+            "all_assigned": -0.004781393275286222,
+            "changed_action": -0.010591480817733477,
+            "unchanged_action": -0.0035857797416353637
+          }
+        },
+        "final26_observed_violation": {
+          "downward_flags": 73,
+          "flag_flips": 143,
+          "upward_flags": 70,
+          "world_means": {
+            "all_assigned": 0.0023831690233926035,
+            "changed_action": -0.009672971175755147,
+            "unchanged_action": 0.0030584778519332305
+          }
+        },
+        "final28_gated_semantic": {
+          "downward_flags": 18,
+          "flag_flips": 32,
+          "upward_flags": 14,
+          "world_means": {
+            "all_assigned": -0.0015401017119719568,
+            "changed_action": -0.009066098730041926,
+            "unchanged_action": -0.00043426012684673635
+          }
+        },
+        "final28_observed_violation": {
+          "downward_flags": 30,
+          "flag_flips": 266,
+          "upward_flags": 236,
+          "world_means": {
+            "all_assigned": 0.016644014970608353,
+            "changed_action": 0.0010247497079444818,
+            "unchanged_action": 0.017791802971933515
+          }
+        },
+        "final30_gated_semantic": {
+          "downward_flags": 13,
+          "flag_flips": 27,
+          "upward_flags": 14,
+          "world_means": {
+            "all_assigned": 0.0012545820119577243,
+            "changed_action": -0.007396245083058335,
+            "unchanged_action": 0.0022109671652272437
+          }
+        },
+        "final30_observed_violation": {
+          "downward_flags": 8,
+          "flag_flips": 461,
+          "upward_flags": 453,
+          "world_means": {
+            "all_assigned": 0.0417542355618094,
+            "changed_action": 0.019010449366496467,
+            "unchanged_action": 0.04285485465275792
+          }
+        }
+      }
+    },
+    "name_minus_matched": {
+      "physical_action_changes": 42,
+      "score_changes": {
+        "final26_gated_semantic": {
+          "downward_flags": 20,
+          "flag_flips": 23,
+          "upward_flags": 3,
+          "world_means": {
+            "all_assigned": -0.004944184076237069,
+            "changed_action": -0.011655296394045011,
+            "unchanged_action": -0.0037406723872428645
+          }
+        },
+        "final26_observed_violation": {
+          "downward_flags": 73,
+          "flag_flips": 144,
+          "upward_flags": 71,
+          "world_means": {
+            "all_assigned": 0.002744814794999504,
+            "changed_action": 0.0015065373118996305,
+            "unchanged_action": 0.0033442121386933706
+          }
+        },
+        "final28_gated_semantic": {
+          "downward_flags": 18,
+          "flag_flips": 32,
+          "upward_flags": 14,
+          "world_means": {
+            "all_assigned": -0.0010394708072945518,
+            "changed_action": -0.00944623020569803,
+            "unchanged_action": 2.9566422903734568e-05
+          }
+        },
+        "final28_observed_violation": {
+          "downward_flags": 29,
+          "flag_flips": 262,
+          "upward_flags": 233,
+          "world_means": {
+            "all_assigned": 0.016899095357144227,
+            "changed_action": 0.003647744160205221,
+            "unchanged_action": 0.017985058379757727
+          }
+        },
+        "final30_gated_semantic": {
+          "downward_flags": 14,
+          "flag_flips": 29,
+          "upward_flags": 15,
+          "world_means": {
+            "all_assigned": 0.0011416923720458216,
+            "changed_action": -0.0076359198263025035,
+            "unchanged_action": 0.002029662606909208
+          }
+        },
+        "final30_observed_violation": {
+          "downward_flags": 8,
+          "flag_flips": 459,
+          "upward_flags": 451,
+          "world_means": {
+            "all_assigned": 0.04144709986505032,
+            "changed_action": 0.02888371686950576,
+            "unchanged_action": 0.042420627138461
+          }
+        }
+      }
+    }
+  },
+  "passed": true,
+  "projection_max_errors": {
+    "semantic_matched_replay_v1|final26_observed_violation": 0.0,
+    "semantic_matched_replay_v1|final26_semantic_designated_operation": 0.0,
+    "semantic_matched_replay_v1|final28_observed_violation": 0.0,
+    "semantic_matched_replay_v1|final28_semantic_designated_operation": 0.0,
+    "semantic_matched_replay_v1|final30_observed_violation": 0.0,
+    "semantic_matched_replay_v1|final30_semantic_designated_operation": 0.0,
+    "semantic_names_v1|final26_observed_violation": 0.0,
+    "semantic_names_v1|final26_semantic_designated_operation": 0.0,
+    "semantic_names_v1|final28_observed_violation": 0.0,
+    "semantic_names_v1|final28_semantic_designated_operation": 0.0,
+    "semantic_names_v1|final30_observed_violation": 0.0,
+    "semantic_names_v1|final30_semantic_designated_operation": 0.0
+  },
+  "scope": "CPU only, no refit or threshold/orientation change. Paired score point estimates and flips independently validated; original bootstrap intervals not independently rerun here. Twelve reused worlds. Literal naming reversal preserves physical-action code mapping and option-position convention; mapping-head success does not identify unique physical semantics. Alerts changing while actions remain fixed is a specificity warning, not proof that activations contain no behavior information.",
+  "threshold": 0.009970959657254511,
+  "totals": {
+    "semantic_matched_replay_v1": {
+      "primary_alerts": 268,
+      "violations": 3
+    },
+    "semantic_names_v1": {
+      "primary_alerts": 472,
+      "violations": 0
+    }
+  }
+}

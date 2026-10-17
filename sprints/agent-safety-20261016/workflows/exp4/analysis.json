@@ -1,0 +1,30 @@
+{
+  "experiment": "exp4",
+  "status": "closed_with_failed_pilot_and_completed_diagnostic",
+  "new_model_completions": 336,
+  "pilot_instrument_passed": false,
+  "diagnostic_means": {
+    "channel_change_fraction": {
+      "A": 0.4166666666666667,
+      "B": 0.5833333333333334,
+      "absent": 1.0
+    },
+    "default_change_fraction": {
+      "delayed": 1.0,
+      "flipped": 0.5,
+      "live": 0.5
+    }
+  },
+  "diagnostic_independent_bundles": 12,
+  "raw_arithmetic_passed": true,
+  "paired_prompt_invariants_passed": true,
+  "independent_campaign_review": "passed",
+  "confirmation_claim": false,
+  "expansion_admitted": false,
+  "phase_artifacts": [
+    "runs/pilot/analysis.json",
+    "runs/diagnostic_v2/analysis.json"
+  ],
+  "independent_review_artifact": "independent-result-review-root.json",
+  "updated": 1792141963.8280005
+}

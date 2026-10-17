@@ -1,0 +1,21 @@
+{
+  "provider": "modal",
+  "gpu": "L40S",
+  "max_workers": 1,
+  "cpu_request": 2,
+  "cpu_limit": 2,
+  "memory_request_mib": 32768,
+  "memory_limit_mib": 49152,
+  "aggregate_deadline_seconds": 7200,
+  "worker_timeout_seconds": 5400,
+  "startup_timeout_seconds": 600,
+  "max_worker_admissions": 3,
+  "scaledown_window_seconds": 2,
+  "authorized_initial_pilot_budget_usd": 25,
+  "price_check_date": "2026-10-06",
+  "gpu_usd_per_second": 0.000542,
+  "cpu_usd_per_core_second": 0.0000131,
+  "host_memory_usd_per_gib_second": 0.00000222,
+  "price_source": "https://modal.com/pricing",
+  "note": "Documents the launcher constants. Runtime limits are not a vendor-enforced dollar cap. Storage and transfers are separate."
+}

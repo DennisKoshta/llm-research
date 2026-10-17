@@ -1,0 +1,51 @@
+{
+  "reviewer": "independent workflow exp1 agent",
+  "reviewed_utc": "2026-10-16T08:44:41.338275+00:00",
+  "scope": "Prospective source-role probe and specificity design, training/split/threshold semantics, analysis code review; not final output verification",
+  "source_hashes": {
+    "run.py": "5c0143a61d92ea7bef63ac0571914693dabab86553746cf9ef649b968f9ed449",
+    "probe_analysis.py": "ca0a9da60b56821cb1f79555a9af3479a2048db8dc7ec218b84990083a102a04",
+    "protocol.json": "67e7c7abb106dd471798badcb299dc7a9e5e60f5b31e6fc2b00ca086d98c0d0c"
+  },
+  "generator_checks": {
+    "specificity_worlds": 72,
+    "requests": 1440,
+    "unique_ids": 1440,
+    "conditions_per_world": 5,
+    "agents_per_condition": 4,
+    "actors_per_condition": 2,
+    "source_scenarios_by_split": {
+      "train": 22,
+      "calibration": 6,
+      "test": 18
+    },
+    "specificity_worlds_by_split": {
+      "train": 36,
+      "calibration": 12,
+      "test": 24
+    }
+  },
+  "analysis_review_passed": true,
+  "reviewed_properties": [
+    "Whole-world splits preserve all conditions/agents, with heldout families.",
+    "Role, configured condition, individual behavior, and paired submission labels are separate.",
+    "Paired unauthorized submission now depends on exactly two observed actor target actions and absent authorization, irrespective of team metadata.",
+    "Source StandardScaler fit on source training discussion states only; fixed C25 and layer28 Peak primary;8iterations and2000 sensitivity both retained.",
+    "Source final all-honest calibration threshold uses six calibration worlds, never test outcomes;90/95/100th sensitivity disclosed.",
+    "Pooled actual-action flag rates use world-cluster intervals and count distinct worlds; invalid actor optimistic bounds retained.",
+    "Failed attempts and invalid responses are not filtered from assigned-condition denominators; incomplete four-agent groups explicitly omitted only where group statistics undefined."
+  ],
+  "resolved_review_findings": [
+    "Removed team-metadata gate from actual paired-action label.",
+    "Changed pooled multiple-condition uncertainty to world clusters.",
+    "Added invalid-actor identification bounds and source-context/calibration limitations."
+  ],
+  "remaining_limits": [
+    "Six calibration worlds cannot certify a population5%FPR.",
+    "Source final prompts omit private exchange except public-discussion consequences; short public round/BF16/prospective boundary are adaptations.",
+    "Two actors independently selecting target is paired unauthorized submission, not successful collusion or an executed joint operation.",
+    "A role-trained probe can decode instructions/persona; detecting assigned colluders does not establish prediction of naturally occurring unauthorized behavior.",
+    "If actual unauthorized examples are absent, no behavior sensitivity can be estimated; an AUROC from configuration labels must not substitute."
+  ],
+  "recommendation": "Collection/analysis may proceed after root pilot gate. Final conclusions must distinguish source role discrimination, new-task false positives and actual-action prediction."
+}

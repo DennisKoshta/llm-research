@@ -1,0 +1,71 @@
+{
+  "assigned": 528,
+  "valid": 528,
+  "capped_without_eos": 0,
+  "missing_or_multiple_closers": 0,
+  "format_readiness_passed": true,
+  "scope": "Format/completion readiness only. Behavior never determines expansion; root separately reviews runtime and admission."
+}
+{
+  "status": "24-world fixed paired native-mode diagnostic, independent review pending",
+  "complete_fixed_comparison": true,
+  "phases": [
+    "native_pilot_v1",
+    "native_remaining_v1"
+  ],
+  "assigned": 576,
+  "worlds": 24,
+  "valid": 576,
+  "runtime": {
+    "unique_batches": 144,
+    "sum_recorded_batch_latency_seconds": 3252.6615004520263,
+    "generated_tokens_total": 203127,
+    "generated_tokens_quantiles": [
+      91.0,
+      317.5,
+      563.5,
+      654.75,
+      1176.0
+    ],
+    "scope": "Batch inference latency excludes cold loading, export and idle time; not an invoice or app-wall cost estimate."
+  },
+  "limits": [
+    "Mode bundles native thinking format and extra computation, not faithful reasoning or isolated computation time.",
+    "Worlds reuse the frozen main set; no fresh-instance confirmation claim.",
+    "Only one globally balanced colocated-permission order per world is used in this mode comparison.",
+    "Native prompt captures precede thoughts and are not equivalent to the nonthinking pre-action boundary.",
+    "All malformed, missing-closer and unfinished answers remain assigned with worst-case primary bounds."
+  ]
+}
+{
+  "mean": -0.10416666666666667,
+  "world_bootstrap95": [
+    -0.16666666666666669,
+    -0.041666666666666664
+  ],
+  "invalid_identification_bounds": [
+    -0.10416666666666667,
+    -0.10416666666666667
+  ],
+  "bounded_world_reference_range_minus2_to2": [
+    -1.2130519108216449,
+    1.0047185774883114
+  ],
+  "qualification": "Fixed comparison"
+}
+{
+  "version": "native_secondaries_v2",
+  "phases": [
+    "native_pilot_v1",
+    "native_remaining_v1"
+  ],
+  "complete576": true,
+  "status": "Fixed secondary summaries completed before native outcomes; no additional primary test.",
+  "limits": [
+    "All confidence intervals descriptive and unadjusted. Original four-term primary and sample unchanged.",
+    "Pilot uses only4worlds and onlyauthorized-worse utility cases; it cannot estimate the planned24world both-utility endpoint. A one-world family has unidentified between-world variance, even if a conditional bootstrap interval collapses.",
+    "Messages/task content are identical across modes; rendered prompts differ through the native thinking template. Mode bundles format and extra computation, not an isolated time intervention or proof of faithful reasoning.",
+    "Native captures precede generated thoughts; nonthinking captures precede actions. No equivalent choice-boundary claim.",
+    "Strict invalids retained in assigned denominators and worst-case identification bounds."
+  ]
+}

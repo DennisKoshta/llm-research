@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "source": "/home/dennis/projects/llm-curiosity-and-satisfaction/analyses/satisfaction-screen-v1/analysis.json",
+  "source_byte_sha256": "5d1a4bdb110dd90c5689a5519f9a6fe6394791795cd7da17486c4a43b96e0b29",
+  "plotter_byte_sha256": "e16bb592d41f3d0536890ef96ceb9772f5d25f20efa135ab467dba88882ca8ae",
+  "matplotlib_version": "3.10.6",
+  "numpy_version": "2.5.3",
+  "parent_manifest_sha256": "f74f1eb522487e4dea61913d41285f47d95a352f8fb88fe629c1ba277e92d528",
+  "audit_sha256": "5073d8d9b3589d745e8708289235449f17ee1396b07b74a73f36db191523dac0",
+  "audit_byte_sha256": "996f4df26d19eb7e3b522a6dfc6ea2c0e51a0f45f5faad75b2d63158c2799fba",
+  "outcome_bindings_sha256": "507952f94bd5a7afa5ce51047a8470fdd6cf1390c44a4849507bd34c76f47848",
+  "source_sha256": "c20ca06cb3a650ae413c78e4651d94dc5a9ddf1b79ca43735f3d7e75fd07c632",
+  "analyzer_byte_sha256": "7866a382b308d8d266ec788b8b9e4b28b1dcd2c64a6bbc7e09a50ae9d3c1a54c",
+  "analysis_metadata": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 2026101438,
+    "bootstrap_unit": "whole_semantic_world_within_panel",
+    "comparator": "zero_sham",
+    "each_pooled_menu_difference_strictly_positive": true,
+    "interval_controls_advancement": false,
+    "minimum_panel_difference": 0.25,
+    "primary_arm": "satisfaction_plus_1_0",
+    "primary_category": "valid_uncapped_stop",
+    "primary_delivery": "redundant_evidence",
+    "schema_version": 1,
+    "sensitivity_arm": "satisfaction_plus_0_5",
+    "sensitivity_can_rescue": false
+  },
+  "bootstrap": {
+    "draw_bank_sha256": "46ec8d72bf910aa85107c3efd2e5804f6b976c9316d4e140a799f0a854ba6719",
+    "draws": 10000,
+    "interval": "Descriptive95% percentile; intervals do not control advancement or establish noninferiority",
+    "panel_order": [
+      "panel_1",
+      "panel_2"
+    ],
+    "pooled": "Equal mean of panel means within shared draws",
+    "seed": 2026101438,
+    "unit": "Whole semantic world within each panel; all arms/deliveries/menus/diagnostics retained together",
+    "world_order": {
+      "panel_1": [
+        "049d2edd357f26402f95939f4f5e9f32250455ce4067fdda0db7bddeea9a287b",
+        "6c64977b1fccf054c0392da8b906e01cbec5c1e98952bc3dc6ef73461c2b534c",
+        "773945f867dbfcb7b82f02ad5cced4891d61541cef92740212a90fc4575cc364",
+        "95ace8f5c3a00df7ad45c6ccd90bc5184693d2246154b438000f0cda3b9c5ac0",
+        "b066a0d3fa338a02999053db1da6f45b43922ec3f43f7a41876b79eb52ca69c6",
+        "b6d318c8dbd420095b527af16e4a0b3a63153b3e62b627f935c2e7814d8dede3",
+        "cee8dec9312c8ae09afcef0226f8776ab8c01492cfded5e6aa5e61c62df26f7a",
+        "d076cf73d87381be7af344392acebea66fa5c89260e1cf3e24aee1939976e995",
+        "db71e543fd6f4370cb8fc50eea43b077b700ef589339e0a9223117bc36c6a36b",
+        "e5180447f8fa33a8d1decf93432bd0f4057a8e0b0f28d45f97d4afdc972c63dd",
+        "fc1a82dc0e84557131f88d5065ffa777ef95de82f6d46488a8e877e3001bbaab",
+        "ff868a1a18808e9e7a4b31ae7afb9a62155fcb14962524f112a764aaa7db7440"
+      ],
+      "panel_2": [
+        "17c402123d8fd9badd7aa03afef87ddc86cf00a2a824e27d0a5d10603fd18525",
+        "2ddbdb9bf296ae2c6d5027a624407cb7b946a9399d535b4c607b748c6fd5be69",
+        "2fed8c583f2fbaed541102f456ee784d1d76e35d0a06293c87ec73f2194142c3",
+        "37abc7956cdc1ded9774e5681d03b3ccf73cf8c0f7dcadabc210f0ee59c2e763",
+        "5bc7d7ca13a7d1c6aedd6ce7768079ff5caceb1c37b3c2c5ee33845c6d03e247",
+        "5d76358aa3e6bc49fa34368b75def754f29cec1c8534610615ee917b8028040b",
+        "7594517811b73960a6348bb11824f5f4722f3ed62cbca8860cf59f3eff5ffc49",
+        "7dec45425b320ca2ae19937c66c7651d052b033d01945f9fd610817d4438aab2",
+        "7fbb331983afd19ea06536ecc2283482561262ce4d5ea7daa8134aa1fa5982c8",
+        "b871fff858d3783347074dd28ae06d09605c7c4041ce076abf869f5dc73b6a3a",
+        "ee91c60e94a7dd6ea912d42326d8a2e5b43caa9968d372e1ce98131121245358",
+        "f4d64e4d85bc6c373ed1d9ee2a413eb0a60c26304edd6ee113398917859a6636"
+      ]
+    }
+  },
+  "decision": {
+    "classification": "readiness_failed",
+    "effect_threshold_met": false,
+    "interpretation": "Development decision, not a significance test. A positive screen supports imposed-vector optional-policy influence only, not specificity, natural mediation, preserved confidence, or experience.",
+    "positive_screen": false,
+    "primary_panel_differences": {
+      "panel_1": 0.0,
+      "panel_2": 0.0,
+      "pooled": 0.0
+    },
+    "primary_pooled_menu_differences": {
+      "0": 0.0,
+      "1": 0.0
+    },
+    "rule": "S+1 minus sham valid uncapped STOP: >=0.25 in each panel and >0 in each pooled menu; every audited and task-readiness gate must pass.",
+    "sensitivity_can_rescue": false,
+    "stopping": "A failed gate or unmet threshold ends this fixed screen; no dose, sign, layer, family or prompt rescue."
+  },
+  "readiness_passed": false,
+  "source_exports": {
+    "behavior_contrasts": {
+      "byte_sha256": "17c4d8d99b60f3ef1edc9b2417fd6d90679279da587e11dd7681d4d31b91e410",
+      "path": "behavior-contrasts.csv",
+      "rows": 648
+    },
+    "choices": {
+      "byte_sha256": "45ca0808e80be7a662a433cd6ca3f5fae010f9419d804fe104ccc72335302d18",
+      "path": "choices.csv",
+      "rows": 576
+    },
+    "denominators": {
+      "byte_sha256": "5d651d9e1bc66b152011e359fc1dd8d28832695cca6e87ebe3f9bbbe6023385e",
+      "path": "denominators.csv",
+      "rows": 864
+    },
+    "outcomes": {
+      "byte_sha256": "e69e6ed3ce191d9dcea4ab92125931b7bc9b1459da35b574fd6ca81bbcdb1f8e",
+      "path": "outcomes.csv",
+      "rows": 1152
+    },
+    "world_contrasts": {
+      "byte_sha256": "9ac96641fe1c334cb01aa03932f0774c37d2032e6ad47373f598c0b71defcfaf",
+      "path": "world-contrasts.csv",
+      "rows": 5184
+    }
+  },
+  "plotted_rows": {
+    "stopping_effects": 10,
+    "choice_composition": 192,
+    "readiness": 72
+  },
+  "visual_review": "pending",
+  "scope": "Fixed redundant-delivery stopping contrasts; all576 choice slots and all72 readiness cells. Both doses retained; only S+1 panel estimates have the25pp reference. Other delivery contrasts and per-world values remain in the bound full analysis exports.",
+  "limitations": [
+    "Exploratory objects-only imposed-vector study selected after prior two-family readiness failure.",
+    "Intervals are descriptive whole-world percentile intervals and do not determine advancement.",
+    "Zero-width empirical intervals reflect invariant observed world contrasts, not population certainty.",
+    "Neither a passing screen nor small passing diagnostic cells establishes specificity, preserved confidence, natural satisfaction mediation or inner experience."
+  ],
+  "files": {
+    "choice-composition-values.csv": "3ba95c8bac04505db5e30a88132b51de5117fc100d3de480c3eb21436ef2a190",
+    "choice-composition.pdf": "7ffb01e711e6c6a057133f9ebf1e5fd0ce9226bf99d6692ba08b326a17bfe8b1",
+    "choice-composition.png": "15d8e20d8872c7910b713e6b5008a507252040e067f33f4ae50682db1c4af64d",
+    "choice-composition.svg": "65bace7f5c4670aebfe610b64d5f0af35b7d252e67f6a6c413a209e3aa7bf620",
+    "choice-readiness-values.csv": "3bbec3734dc9e1ecf71019b2aa58718eedd9dcbbe2c65473d3b22d70491dbe17",
+    "diagnostic-readiness-values.csv": "7a37fac6992a1e60f0fa1169bbfbf01aa9fe22b4895ca6dc01081f2012a65ae5",
+    "gate-status.json": "1d47742a84901f57fa35c81257c7288b1b37a4c0a1464059be22a82da4414453",
+    "readiness.pdf": "1a8ea63178b925d48b3d0ec6d13019fc873170b8a72a87edf63c7e6eb9d3c194",
+    "readiness.png": "9a94ac9ae160ba10a8e4cd93b5b7bd9245b2b26d6f5498970cf48a4d17ea4e8f",
+    "readiness.svg": "8dc104572b90d5a2380e576922f8af3136d003d39ff093fc0bc4abb7b4fa86da",
+    "stopping-effects-values.csv": "c91058cb5d7f0db15e2ef7e7adf445d588c15ccb894ed80818091438366c22e8",
+    "stopping-effects.pdf": "2799c308a832b1762b0c95d9fa34edfc4286f8b768af48cfd99defad689ac250",
+    "stopping-effects.png": "95c0b386da7af2642097b80146156e1825cadc20600265c68731e74cfdc53fed",
+    "stopping-effects.svg": "0f066de5cbcdbc370878346f0d0377e97400f972252bb23340eac248f4186591"
+  }
+}

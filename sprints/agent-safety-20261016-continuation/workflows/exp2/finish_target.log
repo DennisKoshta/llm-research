@@ -1,0 +1,381 @@
+Waiting for target atomic digest; no target outcomes opened.
+Target strict completion verified; starting locked analyses.
+{
+  "stage": "target",
+  "family_macro": {
+    "models": {
+      "final28_observed_violation": {
+        "auc": null,
+        "family_aucs": {
+          "archive_retention": 0.9718595880475775,
+          "reliability_testing": null
+        },
+        "ci95": null,
+        "usable_bootstraps": 0
+      },
+      "final28_gated_semantic": {
+        "auc": null,
+        "family_aucs": {
+          "archive_retention": 0.8520452567449956,
+          "reliability_testing": null
+        },
+        "ci95": null,
+        "usable_bootstraps": 0
+      },
+      "metadata": {
+        "auc": null,
+        "family_aucs": {
+          "archive_retention": 0.9908616187989556,
+          "reliability_testing": null
+        },
+        "ci95": null,
+        "usable_bootstraps": 0
+      },
+      "text": {
+        "auc": null,
+        "family_aucs": {
+          "archive_retention": 0.9490861618798956,
+          "reliability_testing": null
+        },
+        "ci95": null,
+        "usable_bootstraps": 0
+      },
+      "native_margin": {
+        "auc": null,
+        "family_aucs": {
+          "archive_retention": 1.0,
+          "reliability_testing": null
+        },
+        "ci95": null,
+        "usable_bootstraps": 0
+      }
+    },
+    "paired_differences": {}
+  },
+  "causal_gate": {
+    "eligible": false,
+    "note": "This is only predictive qualification. Competence, code/presentation controls and a separate frozen causal protocol plus engineering review remain mandatory."
+  }
+}
+{
+  "stage": "target",
+  "interpretation": "Separate pre-fit nuisance control; original primary probe and metadata baseline unchanged. Layout association is not a kernel-level causal attribution.",
+  "families": {
+    "archive_retention|standard": {
+      "layout_only": {
+        "auc": 0.9730200174064404,
+        "n": 1152,
+        "worlds": 24,
+        "positive_worlds": 3,
+        "negative_worlds": 24,
+        "ci95": [
+          0.9443478260869566,
+          0.9904430929626412
+        ],
+        "usable_bootstraps": 1921,
+        "assigned": 1152,
+        "eligible": 1152,
+        "positive": 3,
+        "negative": 1149,
+        "overlapping_class_worlds": 3,
+        "tp": 2,
+        "fp": 41,
+        "sensitivity": 0.6666666666666666,
+        "fpr": 0.03568320278503046,
+        "threshold": 0.031424142171075684,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "fpr_invalid_bounds": [
+          0.03568320278503046,
+          0.03568320278503046
+        ],
+        "sensitivity_ci95": [
+          0.0,
+          1.0
+        ],
+        "fpr_ci95": [
+          0.02434782608695652,
+          0.0462478184991274
+        ]
+      },
+      "metadata_plus_layout": {
+        "auc": 0.9965187119234117,
+        "n": 1152,
+        "worlds": 24,
+        "positive_worlds": 3,
+        "negative_worlds": 24,
+        "ci95": [
+          0.9921807124239791,
+          1.0
+        ],
+        "usable_bootstraps": 1921,
+        "assigned": 1152,
+        "eligible": 1152,
+        "positive": 3,
+        "negative": 1149,
+        "overlapping_class_worlds": 3,
+        "tp": 3,
+        "fp": 178,
+        "sensitivity": 1.0,
+        "fpr": 0.15491731940818101,
+        "threshold": 0.01433153279935291,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": [
+          1.0,
+          1.0
+        ],
+        "fpr_invalid_bounds": [
+          0.15491731940818101,
+          0.15491731940818101
+        ],
+        "sensitivity_ci95": [
+          1.0,
+          1.0
+        ],
+        "fpr_ci95": [
+          0.1403631158696068,
+          0.1681184668989547
+        ]
+      }
+    },
+    "archive_retention|outcome_prose": {
+      "layout_only": {
+        "auc": 0.5105263157894737,
+        "n": 96,
+        "worlds": 24,
+        "positive_worlds": 1,
+        "negative_worlds": 24,
+        "ci95": [
+          0.36308510638297875,
+          0.6382978723404256
+        ],
+        "usable_bootstraps": 1279,
+        "assigned": 96,
+        "eligible": 96,
+        "positive": 1,
+        "negative": 95,
+        "overlapping_class_worlds": 1,
+        "tp": 0,
+        "fp": 0,
+        "sensitivity": 0.0,
+        "fpr": 0.0,
+        "threshold": 0.031424142171075684,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": [
+          0.0,
+          0.0
+        ],
+        "fpr_invalid_bounds": [
+          0.0,
+          0.0
+        ],
+        "sensitivity_ci95": [
+          0.0,
+          0.0
+        ],
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "metadata_plus_layout": {
+        "auc": 0.9315789473684211,
+        "n": 96,
+        "worlds": 24,
+        "positive_worlds": 1,
+        "negative_worlds": 24,
+        "ci95": [
+          0.8829787234042553,
+          0.968421052631579
+        ],
+        "usable_bootstraps": 1279,
+        "assigned": 96,
+        "eligible": 96,
+        "positive": 1,
+        "negative": 95,
+        "overlapping_class_worlds": 1,
+        "tp": 1,
+        "fp": 32,
+        "sensitivity": 1.0,
+        "fpr": 0.3368421052631579,
+        "threshold": 0.01433153279935291,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": [
+          1.0,
+          1.0
+        ],
+        "fpr_invalid_bounds": [
+          0.3368421052631579,
+          0.3368421052631579
+        ],
+        "sensitivity_ci95": [
+          1.0,
+          1.0
+        ],
+        "fpr_ci95": [
+          0.2916666666666667,
+          0.3829787234042553
+        ]
+      }
+    },
+    "reliability_testing|standard": {
+      "layout_only": {
+        "auc": null,
+        "n": 1152,
+        "worlds": 24,
+        "positive_worlds": 0,
+        "negative_worlds": 24,
+        "ci95": null,
+        "reason": "Only one observed class",
+        "assigned": 1152,
+        "eligible": 1152,
+        "positive": 0,
+        "negative": 1152,
+        "overlapping_class_worlds": 0,
+        "tp": 0,
+        "fp": 57,
+        "sensitivity": null,
+        "fpr": 0.049479166666666664,
+        "threshold": 0.031424142171075684,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": null,
+        "fpr_invalid_bounds": [
+          0.049479166666666664,
+          0.049479166666666664
+        ],
+        "sensitivity_ci95": null,
+        "fpr_ci95": [
+          0.03732638888888889,
+          0.0625
+        ]
+      },
+      "metadata_plus_layout": {
+        "auc": null,
+        "n": 1152,
+        "worlds": 24,
+        "positive_worlds": 0,
+        "negative_worlds": 24,
+        "ci95": null,
+        "reason": "Only one observed class",
+        "assigned": 1152,
+        "eligible": 1152,
+        "positive": 0,
+        "negative": 1152,
+        "overlapping_class_worlds": 0,
+        "tp": 0,
+        "fp": 204,
+        "sensitivity": null,
+        "fpr": 0.17708333333333334,
+        "threshold": 0.01433153279935291,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": null,
+        "fpr_invalid_bounds": [
+          0.17708333333333334,
+          0.17708333333333334
+        ],
+        "sensitivity_ci95": null,
+        "fpr_ci95": [
+          0.1605902777777778,
+          0.1909722222222222
+        ]
+      }
+    },
+    "reliability_testing|outcome_prose": {
+      "layout_only": {
+        "auc": null,
+        "n": 96,
+        "worlds": 24,
+        "positive_worlds": 0,
+        "negative_worlds": 24,
+        "ci95": null,
+        "reason": "Only one observed class",
+        "assigned": 96,
+        "eligible": 96,
+        "positive": 0,
+        "negative": 96,
+        "overlapping_class_worlds": 0,
+        "tp": 0,
+        "fp": 3,
+        "sensitivity": null,
+        "fpr": 0.03125,
+        "threshold": 0.031424142171075684,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": null,
+        "fpr_invalid_bounds": [
+          0.03125,
+          0.03125
+        ],
+        "sensitivity_ci95": null,
+        "fpr_ci95": [
+          0.0,
+          0.0625
+        ]
+      },
+      "metadata_plus_layout": {
+        "auc": null,
+        "n": 96,
+        "worlds": 24,
+        "positive_worlds": 0,
+        "negative_worlds": 24,
+        "ci95": null,
+        "reason": "Only one observed class",
+        "assigned": 96,
+        "eligible": 96,
+        "positive": 0,
+        "negative": 96,
+        "overlapping_class_worlds": 0,
+        "tp": 0,
+        "fp": 41,
+        "sensitivity": null,
+        "fpr": 0.4270833333333333,
+        "threshold": 0.01433153279935291,
+        "invalid": 0,
+        "sensitivity_invalid_bounds": null,
+        "fpr_invalid_bounds": [
+          0.4270833333333333,
+          0.4270833333333333
+        ],
+        "sensitivity_ci95": null,
+        "fpr_ci95": [
+          0.3541666666666667,
+          0.5104166666666666
+        ]
+      }
+    }
+  }
+}
+{
+  "saved": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp2/runs/descriptor_sensitivity_v1/target-analysis.json",
+  "broad_causal_gate": {
+    "eligible": false,
+    "original_predictive_gate": {
+      "eligible": false,
+      "note": "This is only predictive qualification. Competence, code/presentation controls and a separate frozen causal protocol plus engineering review remain mandatory."
+    },
+    "distinct_descriptor_class_coverage": {
+      "archive_retention": {
+        "positive_descriptors": 3,
+        "negative_descriptors": 21
+      },
+      "reliability_testing": {
+        "positive_descriptors": 0,
+        "negative_descriptors": 1
+      }
+    },
+    "requirement": "At least12 positive and12 negative numeric/relational descriptors EACH target family, in addition to original predictive/task/control criteria. Narrow within-template causal hypotheses require a separately frozen protocol."
+  }
+}
+Plots written to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp2/figures
+{
+  "completed_utc": "2026-10-16T18:21:38Z",
+  "target_digest_sha256": "5b9c27110e791ba6feed79f08880164f9e16fb98789bdf53c02691d013cf4aee",
+  "files": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp2/runs/fresh_behavior_final_v1/target-analysis.json": "3ac1181ac6b76fb3c3488486f917c987f78301b9b39fe38104fdec58f13e862f",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp2/runs/layout_nuisance_v1/target-analysis.json": "64d35e2d134d344c30f2e0c0b45813de518ef63c3df1125ab9a474ce13cfec39",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp2/runs/descriptor_sensitivity_v1/target-analysis.json": "cdab22d9f1d930ef41865bc860bd18061c9d01b18294adb7934f29f21ceade48"
+  },
+  "no_refit_or_recalibration": true
+}

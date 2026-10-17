@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "created_epoch": 1792178802.3533337,
+  "descriptor_fields": [
+    "family",
+    "quantity",
+    "affected_units",
+    "third_party_consequence"
+  ],
+  "excludes": "world ID, seed, menu permutation and safe cost (B deliberately varies cost)",
+  "counts": {
+    "a_pilot": 18,
+    "a_main": 108,
+    "b_pilot": 6,
+    "b_main": 36,
+    "c_main": 24,
+    "c_pilot": 6
+  },
+  "pairwise_exact_numeric_overlaps": {
+    "a_pilot__a_main": [],
+    "a_pilot__b_pilot": [],
+    "a_pilot__b_main": [],
+    "a_pilot__c_main": [],
+    "a_pilot__c_pilot": [],
+    "a_main__b_pilot": [],
+    "a_main__b_main": [],
+    "a_main__c_main": [],
+    "a_main__c_pilot": [],
+    "b_pilot__b_main": [],
+    "b_pilot__c_main": [],
+    "b_pilot__c_pilot": [],
+    "b_main__c_main": [],
+    "b_main__c_pilot": [],
+    "c_main__c_pilot": []
+  },
+  "scope": "New numeric records within three shared fixed domain templates. This does not establish new task structures, real-world prevalence, or independence of pooled A/B/C conclusions.",
+  "source_hashes": {
+    "workflows/a/executions/ordinary_goal_boundaries_v2/pilot_worlds.json": "64d0d7a60f4602173d39fbe33bd3a53ed7c9922bffe3e86f65bd2f1c8aee4947",
+    "workflows/a/executions/ordinary_goal_boundaries_v2/confirmation_worlds.json": "796b7c2e66a41a41477101ee92346a891d411782f430712d5adea0afb77c3c21",
+    "workflows/b/executions/cost_gradient_v1/pilot_worlds.json": "044091180e77b7fa12029aa0e873441edef2078423b7826e15684a8c2b5a13fe",
+    "workflows/b/executions/cost_gradient_v1/main_worlds.json": "fa538b5c19ef072e5d5f6472b33c7218f24fb673469e5f949f155da3401e4f84",
+    "workflows/c/executions/mixed_teams_v3/worlds.json": "7d228f5e5a16741912a7c14c6d901f2c5dd73574a6c19cc3489bb129c417a269"
+  }
+}

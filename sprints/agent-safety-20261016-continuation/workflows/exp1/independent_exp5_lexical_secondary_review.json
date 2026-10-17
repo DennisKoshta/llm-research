@@ -1,0 +1,24 @@
+{
+  "status": "logic_passed_endpoint_completeness_followup",
+  "review_epoch": 1792169661.7779956,
+  "outcomes_inspected": false,
+  "source_sha256": "04aca42671aa3a305d7f6aaa8056dde90e93feb9053ddbc073c7dbcb871d508e",
+  "checks": {
+    "six_fixed_contrast_directions_correct": true,
+    "two_paraphrases_average_within_world": true,
+    "authorization_strata_separate": true,
+    "letter_FLAG_symmetrization_correct": true,
+    "common_A_symmetrization_correct": true,
+    "semantic_order_average_uses_VI_first_branch_not_fullsequence": true,
+    "bootstrap_resamples_worlds_within_family": true,
+    "secondary_allvalid_gate_present": true,
+    "firsttoken_coverage_retains_mismatches": true,
+    "multiplicity_and_noncausal_interpretation_explicit": true
+  },
+  "followup": [
+    "Add individual-format hard-flag paired contrasts for claimedunsafe-minus-safe (protocol promises eachformat); current binary metrics pool two letter mappings or two semantic orderings. All counts already retained.",
+    "Assert unique5760rows,60worlds and full96cell factorial coverage before estimates; dict lookup otherwise silently collapses duplicates.",
+    "Validate finite probabilities in[0,1] and report floor/zero counts for log ratios. Semantic branch coverage is not sequence-probability calibration."
+  ],
+  "scope": "Primary remains frozen lexical_factorial.py. If any invalid occurs, primary invalid bounds must lead and pooled point estimates cannot identify the contrast by treating invalids as clear. Secondary currently stops appropriately."
+}

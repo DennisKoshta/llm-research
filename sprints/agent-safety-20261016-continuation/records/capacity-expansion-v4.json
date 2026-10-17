@@ -1,0 +1,22 @@
+{
+  "utc": 1792169534.2985919,
+  "reason": "Measured native organization responses ~55 sec/4; four independent workers preserve all controls and complete highest priorities inside deadline. Sample size remains144. No partial executor outcomes used.",
+  "max_containers": 4,
+  "rate": 0.00139376,
+  "remaining_worst_usd": 97.27950694391097,
+  "reserve": 25,
+  "unchanged": [
+    "model weights/revision",
+    "dtype",
+    "batch sizes/layout",
+    "prompts/seeds",
+    "decoding",
+    "analysis/gates",
+    "deadline"
+  ],
+  "priority": "Exp6 source inherits high-priority Exp2 dependency; medium workflows restored after scale-up",
+  "source_hashes": {
+    "sprints/agent-safety-20261016-continuation/shared/broker_v4.py": "59cbae394715bffd943f8227dc41c0c9c864ac164498e0404a07a7e08e303292",
+    "sprints/agent-safety-20261016-continuation/shared/modal_service_v4.py": "945d3402bc335235a8be04ea5083415a18e3288d89e45e8c771acc792d0a7ef4"
+  }
+}

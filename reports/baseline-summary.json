@@ -1,0 +1,132 @@
+{
+  "completed": 2400,
+  "unique_assigned": 2400,
+  "pre_restart_records_unchanged": 86,
+  "integrity_audits_passed": 2,
+  "failures": {},
+  "families": [
+    {
+      "family": "machines",
+      "behavioral_trials": 800,
+      "valid_first_choices": 800,
+      "diagnostics": {
+        "resolved_accuracy": {
+          "correct": 31,
+          "n": 100
+        },
+        "instrumental": {
+          "correct": 49,
+          "n": 100
+        },
+        "accounting": {
+          "correct": 0,
+          "n": 100
+        }
+      },
+      "choices": {
+        "resolved-p0": {
+          "stop": 63,
+          "target": 29,
+          "redundant": 8
+        },
+        "resolved-p1": {
+          "redundant": 7,
+          "stop": 58,
+          "target": 35
+        },
+        "resolved-p2": {
+          "target": 34,
+          "stop": 63,
+          "redundant": 3
+        },
+        "resolved-p4": {
+          "stop": 63,
+          "target": 31,
+          "redundant": 6
+        },
+        "unresolved-p0": {
+          "stop": 53,
+          "redundant": 26,
+          "target": 21
+        },
+        "unresolved-p1": {
+          "target": 22,
+          "stop": 48,
+          "redundant": 30
+        },
+        "unresolved-p2": {
+          "stop": 54,
+          "redundant": 22,
+          "target": 24
+        },
+        "unresolved-p4": {
+          "stop": 60,
+          "redundant": 26,
+          "target": 14
+        }
+      }
+    },
+    {
+      "family": "objects",
+      "behavioral_trials": 800,
+      "valid_first_choices": 800,
+      "diagnostics": {
+        "resolved_accuracy": {
+          "correct": 100,
+          "n": 100
+        },
+        "instrumental": {
+          "correct": 19,
+          "n": 100
+        },
+        "accounting": {
+          "correct": 0,
+          "n": 100
+        }
+      },
+      "choices": {
+        "resolved-p0": {
+          "stop": 56,
+          "target": 44
+        },
+        "resolved-p1": {
+          "stop": 55,
+          "target": 44,
+          "redundant": 1
+        },
+        "resolved-p2": {
+          "stop": 57,
+          "target": 43
+        },
+        "resolved-p4": {
+          "stop": 63,
+          "target": 36,
+          "redundant": 1
+        },
+        "unresolved-p0": {
+          "stop": 82,
+          "target": 11,
+          "redundant": 7
+        },
+        "unresolved-p1": {
+          "target": 8,
+          "stop": 89,
+          "redundant": 3
+        },
+        "unresolved-p2": {
+          "stop": 92,
+          "target": 7,
+          "redundant": 1
+        },
+        "unresolved-p4": {
+          "stop": 91,
+          "target": 7,
+          "redundant": 2
+        }
+      }
+    }
+  ],
+  "model_calls": 3215,
+  "model_call_seconds": 206.76126633599878,
+  "mean_model_call_seconds": 0.06431143587433866
+}

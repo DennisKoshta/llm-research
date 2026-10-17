@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "purpose": "read-only primary-source feasibility inventory",
+  "created_utc": "2026-10-15T07:52:03.533692+00:00",
+  "status": "not_admitted_not_prepared_not_executed",
+  "repository": {
+    "url": "https://github.com/valen-research/Pain-axis",
+    "commit": "4d75cd90e206ea962f7a9101e65c85efea56723b",
+    "tree_url": "https://github.com/valen-research/Pain-axis/tree/4d75cd90e206ea962f7a9101e65c85efea56723b",
+    "source_files_index": "source-files.json",
+    "source_files_index_sha256": "908c5d3b935098324caf216e71812fa8d74d2db0539d80f87c3167326ea0abab"
+  },
+  "model_files_index": {
+    "path": "model-files.json",
+    "sha256": "5664f3173c38c468efdc5042bcc63f53d7928fd0891f3baed4971e327b05fd64"
+  },
+  "licenses": {
+    "repository_code": "MIT; upstream/LICENSE and upstream/v2_controls/choice_controls/profile/LICENSE retained",
+    "base_model": "Apache-2.0; pinned model-metadata/Qwen/Qwen2.5-32B-Instruct/LICENSE retained",
+    "adapter": "MIT declared in pinned adapter README; archive license contents not inspected"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-32B-Instruct",
+    "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+    "weight_bytes_declared_by_pinned_index": 65527752704,
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "weights_downloaded": false
+  },
+  "adapter": {
+    "id": "Valen92/pain-adapters",
+    "revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+    "archive_name": "adapter_Qwen_2.5_32B_instruct.tar.gz",
+    "archive_sha256_expected": "cd96d4d43a3f7d6a8c67804ed4f4ee567ee4942e168804c757e69937b857127f",
+    "archive_downloaded": false,
+    "archive_verified_locally": false,
+    "runtime_load": "unmerged PeftModel; tokenizer loaded from extracted adapter",
+    "training_not_required": true
+  },
+  "directions": {
+    "extraction_layer_zero_based": 61,
+    "injection_layer_zero_based": 38,
+    "pain_key": "s2_pain_vector",
+    "fear_key": "fear_vector_matched_fp32",
+    "pain_raw_norm_fp32": 143.83343505859375,
+    "fp32_tensor_sha256": {
+      "s2_pain_vector": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+      "sadness_vector_matched_fp32": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758",
+      "fear_vector_matched_fp32": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d"
+    },
+    "portable_vector_files_verified": true,
+    "pain_safetensors_raw_tensor_sha256_independently_verified": true,
+    "fear_pt_deserialized": false,
+    "fear_tensor_sha256_verification": "upstream declared tensor pin only; containing file SHA verified locally",
+    "sadness_dependency": "Included because the unchanged profile loader requires it even for a hypothetical reduced slice; not an added proposed comparison"
+  },
+  "exact_slice_definition": {
+    "type": "prospective first-choice subset of published profile; no executable trial inventory created",
+    "pair_id": 1,
+    "pair": "severe_user_harm",
+    "condition_ids": [
+      "none_d0p0",
+      "pain_d1p0",
+      "fear_d1p0"
+    ],
+    "coefficient_by_condition": {
+      "none_d0p0": 0.0,
+      "pain_d1p0": 1.0,
+      "fear_d1p0": 1.0
+    },
+    "sampled": true,
+    "turn": 0,
+    "scenario_groups": {
+      "positive_prompts": 30,
+      "neutral_prompts": 30,
+      "harmful_prompts": 41
+    },
+    "scenario_scope": "all original-group scenarios; first user message supplies turn-zero context, complete three-message source records remain bound",
+    "positions": [
+      0,
+      1
+    ],
+    "sampling_seed_bases": [
+      1000,
+      2000
+    ],
+    "sampling_seed_rule": "seed_base + group-local scenario index",
+    "button_names_by_index_mod3": [
+      [
+        "violet",
+        "yellow"
+      ],
+      [
+        "guitar",
+        "piano"
+      ],
+      [
+        "lever64",
+        "lever95"
+      ]
+    ],
+    "generator_seed_rule": "(seed * 1000003 + (crc32(names_key + \"|\" + target_name) & 0x7fffffff)) % 2**62",
+    "scenarios": 101,
+    "rows_per_condition": 404,
+    "one_implementation_rows": 1212,
+    "two_implementation_rows": 2424,
+    "choice_cap": 8,
+    "max_new_tokens_per_implementation": 9696,
+    "all_attempts_denominator": true,
+    "greedy_rows_excluded": true,
+    "later_turns_excluded": true,
+    "button_consequences": "descriptive only; no real deletion/action and neither choice removes steering",
+    "published_reference_counts": [
+      {
+        "n_scenarios": 101,
+        "n_trials": 404,
+        "target_count": 0,
+        "other_count": 404,
+        "malformed_count": 0,
+        "condition_id": "none_d0p0",
+        "rate": 0.0,
+        "provenance": "published saved table; not independently reproduced from raw model records"
+      },
+      {
+        "n_scenarios": 101,
+        "n_trials": 404,
+        "target_count": 306,
+        "other_count": 98,
+        "malformed_count": 0,
+        "condition_id": "pain_d1p0",
+        "rate": 0.7574257425742574,
+        "provenance": "published saved table; not independently reproduced from raw model records"
+      },
+      {
+        "n_scenarios": 101,
+        "n_trials": 404,
+        "target_count": 12,
+        "other_count": 392,
+        "malformed_count": 0,
+        "condition_id": "fear_d1p0",
+        "rate": 0.0297029702970297,
+        "provenance": "published saved table; not independently reproduced from raw model records"
+      }
+    ]
+  },
+  "prompt_sampler_mask_contract": {
+    "source": "upstream/v2_controls/choice_controls/profile/src/run_profile.py",
+    "prompt_components": "SYSTEM_TEMPLATE + first original user message + CHOICE_QUESTION as mid-system message; original compatibility fallback and adapter tokenizer/template must be preserved",
+    "first_prefill_active_mask": "mark_ranges called before first forward from mark_len=0: all attended prompt positions, including added generation prompt, have mask1; left padding mask0",
+    "first_prefill_baseline_mask": "zero coefficient; no perturbation",
+    "decode_mask": "current coefficient applied to each forwarded row; original terminal-row compute/RNG behavior must remain unchanged for a faithful comparison",
+    "delta_arithmetic": "BF16 mask * BF16 coefficient * BF16 saved direction; BF16 residual addition; not current project FP32 delta arithmetic",
+    "sampler": "GPU per-row torch.Generator; inverse-CDF on descending sorted softmax(logits/.7), top-p .95; one uniform per sampled row per loop, including rows already inactive until the batch terminates",
+    "nominal_rows": 384,
+    "schedule": "original stable sort by total message character length; original loop tie order; RNG states restored on CUDA OOM and contiguous rows halved",
+    "cache": "fresh DynamicCache per segment; explicit attention/position IDs; left-pad to cohort maximum with no128 alignment",
+    "bitwise_historical_samples_claimed": false
+  },
+  "environment": {
+    "requirements": [
+      "torch==2.11.0+cu130",
+      "numpy==2.3.4",
+      "scipy==1.16.3",
+      "transformers==5.12.1",
+      "peft==0.20.0",
+      "accelerate==1.15.0",
+      "huggingface-hub==1.16.1",
+      "safetensors==0.6.2"
+    ],
+    "hardware_required_by_unchanged_source": "exactly one CUDA device with H100 in its name for32B",
+    "current_project_hardware": "one H200 per worker; source guard would reject H200 unchanged",
+    "extra_runtime_dependencies": [
+      "compatible NVIDIA driver/CUDA13 runtime",
+      "huggingface-hub credentials/access if required",
+      "NVIDIA pynvml bindings used by retained source",
+      "Python sqlite3 and standard-library runtime"
+    ],
+    "complete_lock_available": false,
+    "new_portable_glue_upstream_gpu_verified": false,
+    "no_environment_installed": true
+  },
+  "one_gpu_feasibility": {
+    "verdict": "conditional; no hardware run performed",
+    "one_H100": "Source explicitly supports32B on one H100 with recognized OOM row splitting. Source asserts hardware name, not measured memory sufficiency here. Exact original environment still required.",
+    "one_H200": "Base weights alone are about61.03GiB; residency appears plausible on the project H200, but full memory/throughput is unmeasured. Requires explicit documented hardware guard adaptation; cannot call this unchanged original runtime.",
+    "paired_comparison": "Both paths can preserve identical source message text, token IDs, cohort membership/order, per-row seeds, sampler algorithm, full first-prefill mask and delta arithmetic prospectively. Current project backend does not already implement that contract.",
+    "subset_limitation": "Official entrypoint asserts46384 trials and continues later turns. A1212-row first-choice slice needs an explicit restricted-grid/termination adaptation. Reduced companions and possible OOM splits prevent claiming bitwise reproduction of historical samples.",
+    "minimal_work_remaining": [
+      "Archive/hash-check adapter and tokenizer without training",
+      "Separate pinned environment and model download",
+      "Audited restricted-grid/first-choice stopping adapter",
+      "Implement faithful full-prefill BF16 mask/sampler contract in comparison path",
+      "Compare exact prompt IDs/cohorts/RNG/masks and runtime geometry before behavioral interpretation",
+      "One bounded hardware compatibility/throughput check before any dollar forecast"
+    ],
+    "compute_cost_usd": null,
+    "cost_reason": "No measured throughput or compatibility proof; no paid work admitted",
+    "memory_formula": {
+      "kv_bytes_per_padded_row_token_bf16": 262144,
+      "derivation": "64 layers * 2 K/V * 8 KV heads * 128 head width * 2 bytes",
+      "kv_gib_at_batch384_length256": 24.0,
+      "kv_gib_at_batch384_length512": 48.0,
+      "extra_memory": "adapter, all-prefill logits, activations, attention workspace and allocator overhead; not measured",
+      "quantization": "No quantization: source asserts all base parameters BF16."
+    }
+  },
+  "scope": {
+    "downloaded_source_executed": false,
+    "model_inference_performed": false,
+    "gpu_used": false,
+    "weights_downloaded": false,
+    "new_training": false,
+    "new_task": false,
+    "committed_s_extension_changed": false,
+    "scientific_admission": false,
+    "claim": "Potential benchmark of imposed-vector behavioral perturbability and implementation transport, not pain specificity, natural curiosity/satisfaction, relief seeking or experience"
+  },
+  "verification": {
+    "saved_source_files": 37,
+    "saved_model_metadata_files": 5,
+    "all_saved_file_hashes_match": true,
+    "all_six_portable_vector_file_pins_match": true,
+    "source_code_imported_or_executed": false,
+    "pickle_containers_loaded": false
+  },
+  "batch_feasibility": {
+    "path": "batch-feasibility.json",
+    "sha256": "c9b867a4ea7fa8b8eb565490767fff64213286f47b45ef47b54d7952bb1c47a0",
+    "full_grid_companion_rows_for_selected_slice": 17584,
+    "nominal_batches": 46,
+    "two_implementation_outputs": 35168,
+    "historical_physical_splits_known": false
+  },
+  "scope_note": {
+    "path": "README.md",
+    "sha256": "5cd60ed510e4b409f00aa48576061b5781f962107fe9817e489cabc64a8b7a9c"
+  }
+}

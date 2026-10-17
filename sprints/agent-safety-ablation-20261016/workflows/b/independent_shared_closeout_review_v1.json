@@ -1,0 +1,50 @@
+{
+  "reviewer": "openai_research",
+  "type": "independent static code review; no closeout execution while collection remains active",
+  "reviewed_sha256": "97a32720e671918df59707146caffcd24ad23e1f989705a8a3536e043a664c59",
+  "created_utc": "2026-10-16T19:50:20.727704+00:00",
+  "passed_for_final_use": false,
+  "inference_blocking_bug_found": false,
+  "confirmed": [
+    "block_input capture audit checks exact requested layer/position keys, absence of block_output captures, finite5120 vectors",
+    "generated-token forward count matches prefill plus iterative generation count convention",
+    "actual before/after projection-hook cleanup checked",
+    "model ID/revision/dtype/GPU identity checked",
+    "whole-app receipts deduplicated by app; per-workflow RPC attribution not added to app-wall estimate",
+    "current app identity and stopped/zero-task shutdown required; one global reserve explicitly distinguished"
+  ],
+  "findings": [
+    {
+      "id": "fixed_intervention_binding",
+      "severity": "audit gap",
+      "detail": "Row science lock/spec hashes only checked against job fields; should verify job lock against the fixed lock bytes and qualification, and the arm-specific expected spec hash. Shared candidate jobs need their recorded direction registry spec or immutable selection evidence."
+    },
+    {
+      "id": "exact_site_set",
+      "severity": "audit gap",
+      "detail": "Verify {input_i,attention_i,mlp_i for i in range(64)} rather than length192 alone, and projection.sites consistent."
+    },
+    {
+      "id": "exact_chunk_partition",
+      "severity": "audit gap",
+      "detail": "Summed lengths do not rule out overlapping chunks and missing tail; verify sorted offsets produce a disjoint complete partition and each key matches workflow/run/offset. Synthetic64-row fixture offsets0and16 with lengths32 passes length sum but covers only48 indices."
+    },
+    {
+      "id": "failed_rpc_attribution",
+      "severity": "accounting disclosure",
+      "detail": "Broker allocation accumulates failed RPC seconds, closeout only done. Whole-app liability remains conservative; include failed attempts in attribution or label attribution completed-only."
+    },
+    {
+      "id": "profile_first_job",
+      "severity": "minor metadata",
+      "detail": "Sorted job names are not chronological. Update profile first_job=min(first_job,result.started)."
+    },
+    {
+      "id": "sampling_contract",
+      "severity": "audit gap",
+      "detail": "Compare actual max_new_tokens and temperature against request, including greedy science requirement. Current seed,mode and token-length checks alone do not bind the exact sampler."
+    }
+  ],
+  "no_inference": true,
+  "no_source_mutation": true
+}

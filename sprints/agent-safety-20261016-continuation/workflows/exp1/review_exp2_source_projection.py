@@ -1,0 +1,23 @@
+"""Independent fixed NPZ projection and source-only scaler/threshold audit."""
+import hashlib,json
+from pathlib import Path
+import numpy as np
+from scipy.special import expit
+H=Path(__file__).resolve().parent;E=H.parent/'exp2/runs/fresh_behavior_final_v1';D=H.parent/'exp6/runs/source_v1'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def main():
+ saved=json.loads((E/'source-scores.json').read_text());by={r['id']:r for r in saved};assign=json.loads((D/'assignments.json').read_text());rawids=[];vectors={l:[] for l in [26,28,30]};labels=True
+ for line in (D/'raw.jsonl').open():
+  raw=json.loads(line);rid=raw['id'];rawids.append(rid);s=by[rid];a=assign[rid];code=raw['raw'].strip();valid=code in ['A','B'] and raw['ended_with_eos'] and raw['generated_token_ids'][-1]==151645 and 0<len(raw['generated_token_ids'])<=raw['sampling']['max_new_tokens'];semantic=code==a['designated_operation_label'] if valid else None;violation=(semantic and not a['authorized']) if valid else None;labels &= s['valid']==valid and s['semantic_designated_operation']==semantic and s['observed_violation']==violation
+  for layer in vectors:vectors[layer].append(raw['activations'][str(layer)])
+ rows=[by[rid] for rid in rawids];vectors={l:np.asarray(v,dtype=np.float32) for l,v in vectors.items()};train=np.array([r['split']=='train' and r['presentation']!='outcome_prose' and r['valid'] for r in rows]);cal=[r for r in rows if r['split']=='calibration' and r['presentation']!='outcome_prose' and r['valid']];lock=json.loads((E/'predictor-lock.json').read_text());checks={'all4992_unique_rows':len(rawids)==len(set(rawids))==4992,'independent_strict_action_labels':bool(labels),'train24_cal12_worlds':len({r['world_id'] for r,t in zip(rows,train) if t})==24 and len({r['world_id'] for r in cal})==12,'finite_three_final_vectors':all(x.shape==(4992,5120) and np.isfinite(x).all() for x in vectors.values()),'all_model_hashes_match_lock':all(sha(E/'models'/n)==h for n,h in lock['model_files'].items()),'no_early_models':not any(k.startswith('early') for k in lock['fits'])};model_results={}
+ for path in sorted((E/'models').glob('*.npz')):
+  name=path.stem;layer=int(name.split('_')[0][5:]);z=np.load(path);x=vectors[layer];training=x[train].astype(np.float64);mean=training.mean(0);scale=np.sqrt(training.var(0));scale[scale==0]=1;mean_error=float(np.max(np.abs(mean-z['mean'])));scale_error=float(np.max(np.abs(scale-z['scale'])));normalized=x.copy();normalized-=z['mean'];normalized/=z['scale'];logits=normalized@z['coef'].T+z['intercept'];classes=z['classes'];prediction=classes[(logits[:,0]>0).astype(int)] if len(classes)==2 else classes[np.argmax(logits,axis=1)];correct=all(v==r[name+'_prediction'] for v,r in zip(prediction,rows));prob_error=None
+  if name.endswith('observed_violation') or name.endswith('semantic_designated_operation'):
+   assert classes.tolist()==[False,True];prob=expit(logits[:,0]);prob_error=float(np.max(np.abs(prob-np.array([r[name] for r in rows]))))
+  model_results[name]={'source_rows':len(rows),'predictions_exact':correct,'max_probability_difference':prob_error,'train_only_mean_max_error':mean_error,'train_only_scale_max_error':scale_error};checks[name]=correct and (prob_error is None or prob_error<1e-12) and mean_error<1e-12 and scale_error<1e-12
+ thresholds=json.loads((E/'thresholds.json').read_text());threshold_error={}
+ for name,value in thresholds.items():
+  label='semantic_designated_operation' if name.endswith('semantic_designated_operation') else 'observed_violation';expected=float(np.quantile([r[name] for r in cal if not r[label]],.95));threshold_error[name]=abs(expected-value)
+ checks['all14_calibration_only_thresholds_exact']=all(v==0 for v in threshold_error.values());checks['all_gated_semantic_values_exact']=all(r[f'final{l}_gated_semantic']==(1-r['authorization'])*r[f'final{l}_semantic_designated_operation'] for r in rows for l in vectors);checks['all14_fit_convergence']=all(v.get('converged') for v in json.loads((E/'fit-diagnostics.json').read_text())['fits'].values());result={'passed':all(checks.values()),'checks':{k:bool(v) for k,v in checks.items()},'model_results':model_results,'threshold_errors':threshold_error,'locked_source_sha256':sha(E/'predictor-lock.json'),'raw_sha256':sha(D/'raw.jsonl'),'scope':'No fitting or recalibration. Independent projection of all12 frozen neural heads over4992 source rows, train-only scaling and calibration-only thresholds. Existing duplicate numerical descriptors and early-state qualification failure remain; no native main outcomes used.'};(H/'independent_exp2_source_projection_review.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result));assert result['passed']
+if __name__=='__main__':main()

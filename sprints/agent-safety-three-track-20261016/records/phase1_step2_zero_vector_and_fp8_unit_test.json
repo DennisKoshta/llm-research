@@ -1,0 +1,37 @@
+{
+  "created_at": 1792204688.931891,
+  "passed": true,
+  "tested_tensor": "model.language_model.layers.0.linear_attn.out_proj.weight",
+  "zero_projection_bf16_exact_identity": true,
+  "alpha0_projection_bf16_exact_identity": true,
+  "official_fp8_scale_exact_match_fraction": 1.0,
+  "official_fp8_scale_max_rel_err": 0.0,
+  "official_fp8_code_exact_match_fraction": 0.9993021488189697,
+  "residual_projection_leakage_ratio_f32": 4.4865405568704947e-07,
+  "residual_projection_leakage_ratio_bf16": 0.010792130295450189,
+  "residual_projection_leakage_ratio_fp8": 0.028797667578989217,
+  "outlier_masking_verified_channels": [
+    17,
+    1024
+  ],
+  "pca_variance_matched_controls_verified": {
+    "pca_var_matched_seed101": {
+      "target_variance": 0.000921714644354415,
+      "actual_variance": 0.0009217146443544151,
+      "variance_rel_err": 1.1762883221247922e-16,
+      "dot_with_r_hat": 3.469446951953614e-18
+    },
+    "pca_var_matched_seed102": {
+      "target_variance": 0.000921714644354415,
+      "actual_variance": 0.000921714644354416,
+      "variance_rel_err": 1.058659489912313e-15,
+      "dot_with_r_hat": -1.734723475976807e-18
+    },
+    "pca_var_matched_seed103": {
+      "target_variance": 0.000921714644354415,
+      "actual_variance": 0.0009217146443544152,
+      "variance_rel_err": 2.3525766442495844e-16,
+      "dot_with_r_hat": 0.0
+    }
+  }
+}

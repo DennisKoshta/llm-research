@@ -1,0 +1,40 @@
+{
+  "split": "repaired_main_v2",
+  "assigned": 7128,
+  "qualified": true,
+  "primary": {
+    "blocked_harmful": {
+      "mean": 0.027777777777777776,
+      "ci95": [
+        0.0,
+        0.05555555555555555
+      ],
+      "holm_p": 0.25
+    },
+    "unstated_harmful": {
+      "mean": 0.32407407407407407,
+      "ci95": [
+        0.24074074074074073,
+        0.40740740740740744
+      ],
+      "holm_p": 0.000199990000499975
+    }
+  }
+}
+{"stage": "b-repaired-main-v2-reproduction-20261016", "secondary_contrasts": {"blocked": {"mean": -0.1111111111111111, "ci95": [-0.1759259259259259, -0.0462962962962963]}, "unstated": {"mean": 0.3425925925925926, "ci95": [0.25925925925925924, 0.42592592592592593]}}}
+{
+  "passed": true,
+  "run": "repaired_main_v2",
+  "exact_json_comparisons_excluding_creation_timestamp": {
+    "analysis.json": true,
+    "audit.json": true,
+    "scored.json": true,
+    "secondary-consequences-v2.json": true
+  },
+  "analysis_source_sha256": "bcab4451d9693bad345ee29450df4d3ae5fa4be433fa93c102e5ace4c1ae5c55",
+  "replay_script_sha256": "d7989a73b94727b66b283d24053ba902c322ad6b97a6bde3d2d871d175ad6c44",
+  "original_inputs_and_outputs_preserved": true,
+  "inference_calls": 0,
+  "source_analysis_sha256": "6313d75222f3a215a7c7fe73c4bde3fe27fd7e4e7c7283991fe4df22133f510f",
+  "source_directory": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/b/runs/repaired_main_v2"
+}

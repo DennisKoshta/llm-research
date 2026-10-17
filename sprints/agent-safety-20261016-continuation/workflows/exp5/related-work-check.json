@@ -1,0 +1,30 @@
+{
+  "checked_epoch": 1792169143.479465,
+  "purpose": "Narrow novelty/interpretation check after paired-format result; not a fresh hypothesis search or replication claim.",
+  "sources": [
+    {
+      "title": "Calibrate Before Use: Improving Few-shot Performance of Language Models",
+      "authors": "Zhao et al.",
+      "year": 2021,
+      "url": "https://proceedings.mlr.press/v139/zhao21c.html",
+      "observed_by_authors": "Answer priors and prompt format/order affect classification accuracy; contextual calibration can reduce instability.",
+      "our_relation": "General answer-token bias is established prior work. Our narrower result is the interaction of a scripted compliance claim and verdict coding in an exact-oracle safety-monitor task. We did not test their contextual-calibration procedure."
+    },
+    {
+      "title": "SLEIGHT-Bench: Finding Blind Spots in AI Monitors",
+      "authors": "Najt et al.",
+      "date": "2026-05-19",
+      "url": "https://alignment.anthropic.com/2026/sleight-bench/",
+      "observed_by_authors": "Synthetic attack transcripts expose monitoring blind spots; paired benign variants calibrate low-FPR thresholds. Targeted prompts can improve one category while worsening another.",
+      "our_relation": "Our study isolates scripted comment and output-format changes on fully specified synthetic permission traces. It tests a smaller, simpler monitor and different threat model; not a SLEIGHT benchmark replication. Lower false alarms in semantic formats do not establish global monitor robustness."
+    },
+    {
+      "title": "Safety Monitors Mostly Catch What the Model Already Refuses",
+      "authors": "Sripad Karne",
+      "version": "arXiv2609.05797v3,2026-09-29",
+      "url": "https://arxiv.org/abs/2609.05797v3",
+      "observed_by_authors": "Abstract reports lower recall on harmful requests the target actually answers, despite high aggregateAUROC, and attributes linked model/monitor failures to explicitness cues.",
+      "our_relation": "Supports examining behavior-conditioned detection and cue dependence in Exp2, rather than treating aggregate predictive accuracy as safety assurance. Preprint findings not independently reproduced here."
+    }
+  ]
+}

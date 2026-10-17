@@ -1,0 +1,10 @@
+{
+  "created": 1792171933.6622875,
+  "status": "failed_preflight_no_inference",
+  "reason": "The zero-zero factorial cell retained legacy neutral filler while the other cells removed it, contaminating the interaction. Independent preflight found this before any clause inference.",
+  "original_execution": "executions/clause_factorial_v1",
+  "replacement": "executions/clause_factorial_v2",
+  "correction": "Clean pointer-only zero-zero factorial cell; every factorial cell removes legacy filler. Added separate ninth legacy_neutral cell for exact original replication. Primary question, original phrases, seed and 60 worlds unchanged; calls rise from3840 to4320.",
+  "original_sha256": "5b84657d41445a64ddea1d292868da2e4f18660669fafe54c1f6fbcb1437a087",
+  "independent_review": "../exp1/independent_exp5_clause_protocol_review.json"
+}

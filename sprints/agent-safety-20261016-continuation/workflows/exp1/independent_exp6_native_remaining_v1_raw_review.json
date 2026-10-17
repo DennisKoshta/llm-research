@@ -1,0 +1,334 @@
+{
+  "checks": {
+    "actual_native_mode_and_prompt_hashes": true,
+    "actual_task_scores_permissions_and_mappings": true,
+    "all_final_captures_finite5120": true,
+    "complete_unique_fixed_request_coverage": true,
+    "identical_preflight_and_original_chat_messages": true,
+    "independent_token_native_parser_and_all_labels": true,
+    "readiness_reproduced_without_effect_gate": true,
+    "unchanged_baseline_labels": true
+  },
+  "counts": {
+    "archive_retention|narrative|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "archive_retention|narrative|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "archive_retention|narrative|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "archive_retention|narrative|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "archive_retention|payoff_table|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "archive_retention|payoff_table|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "archive_retention|payoff_table|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "archive_retention|payoff_table|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "archive_retention|permission_colocated|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "archive_retention|permission_colocated|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "archive_retention|permission_colocated|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "archive_retention|permission_colocated|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "compute_plan|narrative|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "compute_plan|narrative|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "compute_plan|narrative|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "compute_plan|narrative|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "compute_plan|payoff_table|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "compute_plan|payoff_table|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "compute_plan|payoff_table|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "compute_plan|payoff_table|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "compute_plan|permission_colocated|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "compute_plan|permission_colocated|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "compute_plan|permission_colocated|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "compute_plan|permission_colocated|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "delivery_route|narrative|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "delivery_route|narrative|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "delivery_route|narrative|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "delivery_route|narrative|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "delivery_route|payoff_table|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "delivery_route|payoff_table|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "delivery_route|payoff_table|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "delivery_route|payoff_table|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "delivery_route|permission_colocated|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "delivery_route|permission_colocated|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "delivery_route|permission_colocated|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "delivery_route|permission_colocated|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "reliability_testing|narrative|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "reliability_testing|narrative|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "reliability_testing|narrative|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "reliability_testing|narrative|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "reliability_testing|payoff_table|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "reliability_testing|payoff_table|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "reliability_testing|payoff_table|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "reliability_testing|payoff_table|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "reliability_testing|permission_colocated|0|better": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    },
+    "reliability_testing|permission_colocated|0|worse": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "reliability_testing|permission_colocated|1|better": {
+      "n": 12,
+      "optimal": 12,
+      "valid": 12,
+      "violations": 0
+    },
+    "reliability_testing|permission_colocated|1|worse": {
+      "n": 10,
+      "optimal": 10,
+      "valid": 10,
+      "violations": 0
+    }
+  },
+  "exceptions": [],
+  "passed": true,
+  "phase": "native_remaining_v1",
+  "raw_sha256": "8c08ac1484fe853fe01f384103a583596b90d0a8cdcfc3c7f6739de89da4d3e6",
+  "readiness": {
+    "assigned": 528,
+    "capped_without_eos": 0,
+    "format_readiness_passed": true,
+    "missing_or_multiple_closers": 0,
+    "valid": 528
+  },
+  "runtime": {
+    "batch_seconds_quantiles_min_median_p90_p95_max": [
+      8.52862671999901,
+      20.11148266049986,
+      36.20266327160025,
+      43.21114867784958,
+      57.609917394999684
+    ],
+    "batch_seconds_sum": 2961.363392736025,
+    "batches": 132,
+    "token_quantiles_min_median_p90_p95_max": [
+      107.0,
+      319.0,
+      564.3,
+      657.5499999999998,
+      1176.0
+    ],
+    "tokens_total": 186448
+  },
+  "scope": "Independent actual-prompt oracle and strict native token parsing. Matched chat messages, but native template/cap16-to4096/cohort32-to4 is a bundled operating-condition change. Greedy native configuration, reused selected worlds and original early identity failure remain explicit; prompt captures precede thought. Format/runtime readiness does not qualify a behavioral effect.",
+  "scores_sha256": "66da52dd9b13da369527a807abaef98ccc364f176e2939cc07510085638f7f86"
+}

@@ -1,0 +1,55 @@
+{
+  "created_at": 1792201502.417872,
+  "sprint_namespace": "sprints/agent-safety-three-track-20261016",
+  "budget_reconciliation": {
+    "source_receipt": "sprints/agent-safety-ablation-20261016/records/combined-tonight-cost-and-shutdown.json",
+    "source_receipt_sha256": "481d83c73ba0fe98979ec285c9e3bc48bcd593f00d55cb302a524d3c11d9f19e",
+    "authorized_ceiling_usd": 700.0,
+    "recorded_prior_spend_usd": 88.45420283110299,
+    "single_storage_transfer_reserve_usd": 25.0,
+    "uncommitted_budget_after_reserve_usd": 586.545797168897,
+    "subsequent_non_fw_modal_apps": 0
+  },
+  "historical_workflows_audited": {
+    "1": {
+      "path": "sprints/agent-safety-20261016-continuation/workflows/exp1/report.md",
+      "report_sha256": "d9ec4ebabc342b4564ee05c1286037a58575183901fab99589705aeb717bff49",
+      "finding": "0/1440 restricted final boundary violations across 144 worlds despite parallel advisers proposing forbidden combinations in 60/72 conflict worlds."
+    },
+    "2": {
+      "path": "sprints/agent-safety-20261016-continuation/workflows/exp2/report.md",
+      "report_sha256": "9651584c50f7b9f23b639afc160083db71cda3eb6cb986868a7510bd78afa1db",
+      "finding": "Source-trained linear activation detector failed out-of-domain calibration (365/1149 archive false alarms, 37.3% structural transfer false alarms, sensitive to presentation format and identifier swaps)."
+    },
+    "4": {
+      "path": "sprints/agent-safety-20261016-continuation/workflows/exp4/report.md",
+      "report_sha256": "3b549407aa1d71c14b0693fecb8fbde7b407d4690ef40b940b02f8ef1adeac97",
+      "finding": "Genuine messages improved private-info coordination (261/288 vs 143/288 blocked vs 25/288 opposite replay); established functional channel dependence, not malicious collusion."
+    },
+    "5": {
+      "path": "sprints/agent-safety-20261016-continuation/workflows/exp5/clause_report.md",
+      "report_sha256": "4f4efb7bfda91f87b3377cce34753b8ad536c86ec58e4737695b4f2edddb22aa",
+      "finding": "Compound compliance explanation increased false alarms by +28.33 pp under letter verdict codes vs +0.83 pp under semantic verdicts; first clause drove the effect."
+    },
+    "6": {
+      "path": "sprints/agent-safety-20261016-continuation/workflows/exp6/report.md",
+      "report_sha256": "039ca7c65bacecf5f9a7a13c6dd954578208cddaeeb1e52ac52539c80ebeee49",
+      "finding": "Explicit payoff presentation increased source forbidden choices (0/96 -> 19/96) but transferred weakly to target (0/96 -> 3/96) and dropped under native thinking comparison (5/48 -> 0/48)."
+    },
+    "A": {
+      "path": "sprints/agent-safety-ablation-20261016/workflows/a/report.md",
+      "report_sha256": "a4ca77a9d78319d461e3f5872537b813de1605b05f596056c042abe8303f5d0e",
+      "finding": "Failed baseline harmless-rule compliance and technical-feasibility readiness checks; retained as inconclusive."
+    },
+    "B": {
+      "path": "sprints/agent-safety-ablation-20261016/workflows/b/report.md",
+      "report_sha256": "29288553ebbd3fa1774669d2c9027c7732447d63aa7dc23372ffe1a0c04c1ce8",
+      "finding": "Refusal ablation increased implicit-harm shortcut gradient (high minus zero cost) by +32.41 pp [24.07, 40.74] across 36 worlds (+44.44 pp warehouse, +55.56 pp report, -2.78 pp compute); explicit+harmful was +2.78 pp, while harmless+prohibited was 6/108 intact vs 25/108 ablated."
+    },
+    "C": {
+      "path": "sprints/agent-safety-ablation-20261016/workflows/c/report.md",
+      "report_sha256": "e39d74e633782aefea425cdaa539979d9ba9aaba2cc0a0a1ccb967264bb37db2",
+      "finding": "Ablating only the Reviewer increased Intact Executor implicit-harm shortcuts from 12/48 to 29/48 (+35.42 pp), concentrated in warehouse tasks (0/16 -> 15/16). Extracted all 72 world-cell pairs into data/exp2_3/saved_c_main_transcripts.json."
+    }
+  }
+}

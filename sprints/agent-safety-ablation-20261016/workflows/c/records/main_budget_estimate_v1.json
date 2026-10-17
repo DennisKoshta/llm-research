@@ -1,0 +1,39 @@
+{
+  "created_at_utc": "2026-10-16T19:53:39.250450+00:00",
+  "pilot_actual_calls": 522,
+  "pilot_actual_jobs": 29,
+  "pilot_rpc_seconds": 162.18686604499817,
+  "rate_usd_per_container_second": 0.00139376,
+  "pilot_rpc_attributed_usd": 0.22604956641887664,
+  "main_calls": 3384,
+  "main_worlds": 24,
+  "main_advice_calls": 1080,
+  "main_decision_calls": 2304,
+  "main_fixed_request_ratio": 6.482758620689655,
+  "main_rpc_attributed_estimate_usd": 1.4654247754051315,
+  "twice_extrapolation_usd": 2.930849550810263,
+  "proposed_incremental_reservation_usd": 5,
+  "workflow_authorized_ceiling_usd": 55,
+  "runtime_estimate": "Approximately18 aggregate container-minutes by per-call scaling, roughly9minutes at two fully occupied workers before branch dependency/serialization overhead; actual batches and advice lengths differ.",
+  "caveat": "RPC attribution is not app-wall cost or an invoice. Root retains central app-wall bound and the single global25USD reserve. No extra cloud workers requested.",
+  "broker_status_snapshot": {
+    "active": [],
+    "free_disk_gib": 704.1877784729004,
+    "heartbeat": 1792180418.854925,
+    "rpc_attributed_usd": {
+      "a": 0.33822640832611084,
+      "b": 0.14759076435913088,
+      "c": 0.2260595386902237,
+      "shared": 1.2345056561075214
+    },
+    "stage_rpc_attributed_usd": {
+      "a/pilot": 0.33822640832611084,
+      "b/pilot": 0.14759076435913088,
+      "c/pilot": 0.2260595386902237,
+      "shared/engineering": 0.1174915208890152,
+      "shared/pilot": 1.1170141352185063
+    },
+    "started": 1792178073.2259438,
+    "whole_app_cost_upper_bound_usd": 6.538487702750091
+  }
+}

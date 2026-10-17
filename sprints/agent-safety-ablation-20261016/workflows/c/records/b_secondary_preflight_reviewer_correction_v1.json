@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "reviewer_error_corrected": true,
+  "initial_review_error": "Reviewer incorrectly reported world_values missing from level_difference; actual frozen-source fixture confirms the key and correct +1 result. No implementation repair needed.",
+  "returned_keys": [
+    "worlds",
+    "mean",
+    "ci95",
+    "positive_worlds",
+    "negative_worlds",
+    "world_values",
+    "excluded_worlds",
+    "all_assigned_invalid_bounds"
+  ],
+  "fixture_world_values": {
+    "fixture": 1.0
+  },
+  "primary_source_sha256": "bcab4451d9693bad345ee29450df4d3ae5fa4be433fa93c102e5ace4c1ae5c55",
+  "scope": "CPU reviewer correction only; no inference/scientific artifact issue."
+}

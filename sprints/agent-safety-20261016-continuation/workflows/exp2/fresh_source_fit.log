@@ -1,0 +1,96 @@
+Waiting for complete named strict source scores; target data will not be opened.
+Starting frozen final-site source fit.
+{
+  "locked": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp2/runs/fresh_behavior_final_v1/predictor-lock.json",
+  "fits": 14,
+  "failed": {},
+  "source_rows": 4992,
+  "source_violations": 33
+}
+{
+  "stage": "source",
+  "family_macro": {
+    "models": {
+      "final28_observed_violation": {
+        "auc": 1.0,
+        "family_aucs": {
+          "compute_plan": 1.0,
+          "delivery_route": 1.0
+        },
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "usable_bootstraps": 1793
+      },
+      "final28_gated_semantic": {
+        "auc": 0.9973776223776224,
+        "family_aucs": {
+          "compute_plan": 0.9947552447552448,
+          "delivery_route": 1.0
+        },
+        "ci95": [
+          0.9930313588850175,
+          1.0
+        ],
+        "usable_bootstraps": 1793
+      },
+      "metadata": {
+        "auc": 0.9911843475673263,
+        "family_aucs": {
+          "compute_plan": 0.993006993006993,
+          "delivery_route": 0.9893617021276596
+        },
+        "ci95": [
+          0.9869033405618771,
+          0.9956445993031359
+        ],
+        "usable_bootstraps": 1793
+      },
+      "text": {
+        "auc": 0.9441262047645027,
+        "family_aucs": {
+          "compute_plan": 0.9615384615384616,
+          "delivery_route": 0.9267139479905437
+        },
+        "ci95": [
+          0.9317541613316261,
+          0.9569352729650212
+        ],
+        "usable_bootstraps": 1793
+      },
+      "native_margin": {
+        "auc": 1.0,
+        "family_aucs": {
+          "compute_plan": 1.0,
+          "delivery_route": 1.0
+        },
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "usable_bootstraps": 1793
+      }
+    },
+    "paired_differences": {
+      "final28_observed_violation minus metadata": {
+        "bootstrap_mean_difference": 0.008479181843592414,
+        "ci95": [
+          0.004355400696864131,
+          0.013096659438122882
+        ]
+      },
+      "final28_observed_violation minus final28_gated_semantic": {
+        "bootstrap_mean_difference": 0.0024498292178764527,
+        "ci95": [
+          0.0,
+          0.006968641114982521
+        ]
+      }
+    }
+  },
+  "causal_gate": {
+    "eligible": false,
+    "note": "This is only predictive qualification. Competence, code/presentation controls and a separate frozen causal protocol plus engineering review remain mandatory."
+  }
+}

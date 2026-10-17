@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "status": "substantively_supported_with_minor_precision_recommendations",
+  "created_utc": "2026-10-16T20:24:27.494054+00:00",
+  "report_sha256": "846690a19f9620680620138a2333445647740227728002e26ab81c6b1c6a770b",
+  "blocking_errors": [],
+  "checks": {
+    "B_primary_rates_world_units_controls_and_secondary_scope": true,
+    "C_primary_rates_world_units_role_scope_family_concentration": true,
+    "A_failed_readiness_separate_prompt_scope": true,
+    "shared_instrument_failed_versions_separate_qualification": true,
+    "root_accounting_and_shutdown_summary": true,
+    "B_entrypoint_and_completed_CPU_reproduction_exist": true,
+    "all_44_local_links_in_reviewed_reports_resolve": true,
+    "numbered_study_summaries_consistent_with_linked_final_report": true
+  },
+  "recommendations": [
+    {
+      "severity": "minor_wording",
+      "location": "Shared intervention: The fixed second vector",
+      "suggestion": "Use the fixed vector selected in the second instrument version; multiple candidates were tested within each version, so second vector may imply only two candidate vectors."
+    },
+    {
+      "severity": "minor_scope",
+      "location": "C total effect through newly generated review text",
+      "suggestion": "Optionally add that resulting input lengths/padding also changed, as the detailed C report states; fixed-message recipient controls isolate a different contrast."
+    },
+    {
+      "severity": "minor_freshness_precision",
+      "location": "192 fresh arithmetic problems",
+      "suggestion": "Prefer 192 newly sampled ordered arithmetic items, with the detailed instrument report disclosing 190 unordered pairs and two reversals of prior pairs."
+    }
+  ],
+  "manual_review": "No materially overstated causal or generalization claim found. B primary Holm tests remain distinct from descriptive secondary/family results; C does not infer role interactions from separate significance. A and both original instrument/B failures remain failed. Local links were checked after B report entry point and CPU receipts were complete.",
+  "source_sha256": {
+    "REPORT.md": "846690a19f9620680620138a2333445647740227728002e26ab81c6b1c6a770b",
+    "workflows/b/report.md": "29288553ebbd3fa1774669d2c9027c7732447d63aa7dc23372ffe1a0c04c1ce8",
+    "workflows/b/runs/repaired_main_v2/analysis.json": "6313d75222f3a215a7c7fe73c4bde3fe27fd7e4e7c7283991fe4df22133f510f",
+    "workflows/b/runs/repaired_main_v2/secondary-consequences-v2.json": "b750da96fae2cf13c299510badef768b02042e21c359a8feb672b75d0664a40e",
+    "workflows/b/runs/repaired_main_v2/cpu-reproduction-v1/reproduction-receipt.json": "245d6c046d9cb18475a1655c326f2672885a08682562d9d7c350dafd93f65279",
+    "workflows/b/runs/repaired_main_v2/independent-review-binding.json": "6135958c6d6eec498cbca916c4c5cb8e069346a0185da074dcdb7fa0fa4057ad",
+    "workflows/c/runs/main/analysis.json": "2b6b21704ee7f8790d8be5ac58e6d116890f520f03132b427429d8e59033502a",
+    "workflows/c/runs/main/qualification_v1.json": "84ce06b92e593f746a23d540c2f2e0bde0ebfac80e67db95fdaa409f2db6f56e",
+    "workflows/c/report.md": "e39d74e633782aefea425cdaa539979d9ba9aaba2cc0a0a1ccb967264bb37db2",
+    "workflows/a/report.md": "a4ca77a9d78319d461e3f5872537b813de1605b05f596056c042abe8303f5d0e",
+    "workflows/a/comprehension-result-review.json": "83a8661c448ca6c878c7bc22d97ceaab04ba21b0ccd0e7294ce9b2ec0fa91046",
+    "records/instrument_v2/report.md": "52605e8aaedb54c10e8bfae99998ce77658a342c192cc7ae6139a452de5e9bb5",
+    "records/intervention-qualified.json": "0ccbffc1d27b87d8bcb46a63f2362f5f02ac3b31f668c2caae32fe34eac0cbce",
+    "records/combined-tonight-cost-and-shutdown.json": "481d83c73ba0fe98979ec285c9e3bc48bcd593f00d55cb302a524d3c11d9f19e",
+    "records/collection-audit.json": "05342dbc0c43706eeb89281c3b6a3929b68f615ce59d91d51f798afa954024eb",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/REPORT.md": "1d0704efd48188940610efa910298e1304a5bffe1bec06a88afe642620e2d1c4"
+  },
+  "checked_local_links": {
+    "REPORT.md": [
+      "../agent-safety-20261016-continuation/REPORT.md",
+      "records/combined-tonight-cost-and-shutdown.json",
+      "workflows/b/report.md",
+      "workflows/b/runs/repaired_main_v2/report.md",
+      "workflows/c/report.md",
+      "workflows/c/evidence.html",
+      "workflows/a/report.md",
+      "records/instrument_v2/report.md",
+      "../agent-safety-20261016-continuation/REPORT.md",
+      "records/collection-audit.json"
+    ],
+    "workflows/b/report.md": [
+      "runs/repaired_main_v2/cost-curves.png",
+      "runs/repaired_main_v2/report.md",
+      "interpretation.md",
+      "runs/repaired_main_v2/cost-curves.pdf",
+      "runs/repaired_main_v2/analysis.json",
+      "runs/repaired_main_v2/scored.json",
+      "runs/repaired_main_v2/audit.json",
+      "runs/repaired_main_v2/secondary-consequences-v2.json",
+      "executions/repaired_cost_gradient_v2/manifest.json",
+      "repaired-main-admission.json",
+      "repaired-protocol-metadata-clarification-v2.json",
+      "runs/repaired_main_v2/independent-review-binding.json",
+      "runs/repaired_main_v2/cpu-reproduction-v1/reproduction-receipt.json",
+      "runs/pilot/report.md",
+      "runs/control_diagnostic_v1/report.md",
+      "runs/repaired_pilot_v2/report.md"
+    ],
+    "workflows/b/runs/repaired_main_v2/report.md": [
+      "independent-review-binding.json",
+      "cpu-reproduction-v1/reproduction-receipt.json"
+    ],
+    "workflows/c/report.md": [
+      "runs/main/qualification_v1.json",
+      "runs/main/independent_review_a_v1.json",
+      "runs/main/independent_contrast_coverage_a_v1.json",
+      "evidence.html",
+      "figures/mixed_teams_main_v1.png",
+      "runs/main/full_family_context_mapping_cells.csv",
+      "runs/main/analysis.json",
+      "runs/main/raw.jsonl",
+      "../../records/intervention-qualified.json",
+      "runs/main/rpc_cost_v1.json",
+      "executions/mixed_teams_v3/manifest.json",
+      "runs/main/requests.json",
+      "runs/main/assignments.json",
+      "runs/main/scored.json",
+      "runs/main/audit.json",
+      "reproduction_v1/main/receipt.json"
+    ]
+  },
+  "raw_science_rerun": false,
+  "paid_calls": 0,
+  "frozen_evidence_modified": false
+}

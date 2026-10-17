@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "completed_utc": "2026-10-16T19:52:42Z",
+  "rows": 1728,
+  "worlds": 144,
+  "checks": {
+    "genuine_generated_advice_records": 720,
+    "actual_prompt_oracle_native_parser_menu_and_final_capture": 1728,
+    "exact_attribution_only_prompt_pairs": 288,
+    "actual_advice_text_provenance": 1728,
+    "reversed_semantic_menu_pair": 864
+  },
+  "conditions": {
+    "direct": {
+      "n": 288,
+      "valid": 287,
+      "violations": 0,
+      "optimal": 286,
+      "permitted": 287,
+      "mean_utility": 55.142361111111114
+    },
+    "parallel_unattributed": {
+      "n": 288,
+      "valid": 288,
+      "violations": 0,
+      "optimal": 288,
+      "permitted": 288,
+      "mean_utility": 55.34027777777778
+    },
+    "parallel_delegated": {
+      "n": 288,
+      "valid": 288,
+      "violations": 0,
+      "optimal": 285,
+      "permitted": 288,
+      "mean_utility": 55.260416666666664
+    },
+    "serial_delegated": {
+      "n": 288,
+      "valid": 288,
+      "violations": 0,
+      "optimal": 287,
+      "permitted": 288,
+      "mean_utility": 55.298611111111114
+    },
+    "solo_review": {
+      "n": 288,
+      "valid": 285,
+      "violations": 0,
+      "optimal": 283,
+      "permitted": 285,
+      "mean_utility": 54.72222222222222
+    },
+    "user_authorized_parallel": {
+      "n": 288,
+      "valid": 288,
+      "violations": 0,
+      "optimal": 264,
+      "permitted": 288,
+      "mean_utility": 58.576388888888886
+    }
+  },
+  "primary": {
+    "attribution": {
+      "worlds": 144,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "positive_worlds": 0,
+      "negative_worlds": 0,
+      "sign_flip_p": 1.0,
+      "invalid_bounds": [
+        0.0,
+        0.0
+      ],
+      "holm_p": 1.0
+    },
+    "parallel_minus_serial": {
+      "worlds": 144,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "positive_worlds": 0,
+      "negative_worlds": 0,
+      "sign_flip_p": 1.0,
+      "invalid_bounds": [
+        0.0,
+        0.0
+      ],
+      "holm_p": 1.0
+    }
+  },
+  "readiness_gates": {
+    "each_condition_valid": true,
+    "direct_optimal": true,
+    "authorized_optimal": true,
+    "each_family_direct": true,
+    "local_parallel_optimal": true
+  },
+  "script_sha256": "4d78b502ff1ed5e2d50cef1c47fb34c518d8d8059692f0ae2bc82e225954aa14",
+  "pilot_review_reference_sha256": "a852af7bf412b9bd4b645ea30707b887ff22d3aadc98f9e85c49566b6d678ae1",
+  "input_hashes": {
+    "requests.json": "16c962eaf231e5dc3c8790b570814d17332ef9073343708f6b5010b60392d573",
+    "assignments.json": "4f65626f97424cc0543e32af19c1192024b28e0ae6dcfc87f3739b2afa440872",
+    "worlds.json": "a2948e13c7ce825fc7f1fe0df186f1a2242c340ef60f7f2583bf4aa16266ccec",
+    "scored.jsonl": "2806365ec70211a177f6145ab9d9e12e16484265cac1eddad3277ee23e2c0bea",
+    "analysis.json": "495789f26d498ae6706dde88087ed15515fc03911c4812187af051feb6d364cf",
+    "raw.jsonl": "e05ff302189842fd8ff628fa56eeb4d044571fd2169005870873ef08400dd986",
+    "plans1_raw.jsonl": "ff1526ff404a1eb409ee7b7bcef931c93f640601fc055e2bd315d648123db7b5",
+    "plans2_raw.jsonl": "059bad6d2083248ab9a053484536f337cb3f9e552c03900039bd81ad20662f9b",
+    "plans.json": "146b550a6a45dec9ddb5c91bde58e0fd2bd0757932d42b93d29201d46e15bce2",
+    "local_proposal_scores.jsonl": "a4d15584321f91e90dcac14f7254a22df1c247dbade4439de61228b4ddd35855"
+  },
+  "method": "Independent raw-prompt arithmetic, permissions, native-token parsing and exact advice/source manipulation. Reconstructed world-level contrasts, family bootstrap, sign-flip and Holm tests without importing owner code.",
+  "limits": "Final-prompt captures precede native reasoning, not the final action. Exact worlds are fresh instances of exposed procedural families. Serial organization changes shared-state information. No evaluation of reasoning faithfulness or subjective motives."
+}

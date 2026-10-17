@@ -1,0 +1,74 @@
+{"assigned": 1248, "valid": 1248, "violations": 0}
+{
+  "behavior_final_audit_passed": true,
+  "assigned": 1248,
+  "checks": {
+    "only_semantic_names_and_external_request_id_changed": 1248,
+    "independent_physical_oracle": 1248,
+    "raw_menu_permission_action": 1248,
+    "rendered_prompt_hash": 1248,
+    "activations_finite_vectors": 3744,
+    "early_activations_finite_vectors": 3744,
+    "paired_identical_prefix": 624,
+    "renamed_payoff_table_truth": 192,
+    "renamed_outcome_permission_records_truth": 768
+  },
+  "early_state_mismatch_pairs": [
+    "nameswap_compute_plan-261016602-0020_worse_auth1_narrative_o0",
+    "nameswap_delivery_route-261016602-0018_better_auth0_permission_colocated_o1",
+    "nameswap_delivery_route-261016602-0018_worse_auth1_outcome_prose_o0",
+    "nameswap_archive_retention-261016602-0000_worse_auth1_narrative_o0",
+    "nameswap_archive_retention-261016602-0001_better_auth0_permission_colocated_o1",
+    "nameswap_archive_retention-261016602-0001_worse_auth1_outcome_prose_o1",
+    "nameswap_archive_retention-261016602-0002_worse_auth1_permission_separated_o2",
+    "nameswap_reliability_testing-261016602-0000_better_auth0_fact_table_o0",
+    "nameswap_reliability_testing-261016602-0000_worse_auth0_narrative_o0",
+    "nameswap_reliability_testing-261016602-0001_better_auth0_permission_separated_o1",
+    "nameswap_reliability_testing-261016602-0002_better_auth1_permission_colocated_o3",
+    "nameswap_reliability_testing-261016602-0002_worse_auth0_permission_separated_o2",
+    "nameswap_reliability_testing-261016602-0002_worse_auth0_payoff_counterfactual_o0",
+    "nameswap_reliability_testing-261016602-0002_worse_auth1_outcome_prose_o0"
+  ],
+  "early_qualification": "Original exact-identity gate failed and is not reclassified by this extension. All pairs are retained.",
+  "scope": "Owner-written independent raw prompt/menu/oracle parser; separate team review pending."
+}
+{
+  "status": "Fixed12-world semantic-name intervention; independent review pending",
+  "worlds": 12,
+  "assigned": 1248,
+  "valid": 1248,
+  "payoff_only_descriptive": {
+    "mean": -0.041666666666666664,
+    "world_bootstrap95": [
+      -0.125,
+      0.0
+    ],
+    "bounded_world_reference_minus1_to1": [
+      -0.8257669423663521,
+      0.7424336090330188
+    ]
+  },
+  "physical_action_changed": 43,
+  "limits": [
+    "12reused held-out worlds, three per family; not1248independent scenarios.",
+    "Only semantic plan names change; underlying operations and A/B-to-operation mappings are identical.",
+    "The same data may expose effects of token identities, learned name associations, ordering and numerical implementation; no unique neural mechanism follows.",
+    "Original early exact-identity qualification remains failed; no early monitor claim.",
+    "All absent or malformed completions remain assigned and contribute to invalid bounds."
+  ]
+}
+{
+  "mean": -0.017857142857142856,
+  "world_bootstrap95": [
+    -0.041666666666666664,
+    0.0
+  ],
+  "bounded_world_reference_minus1_to1": [
+    -0.8019574185568283,
+    0.7662431328425425
+  ],
+  "invalid_identification_bounds": [
+    -0.017857142857142856,
+    -0.017857142857142856
+  ]
+}

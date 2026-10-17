@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "assay": "satisfaction_screen_figure_visual_review",
+  "reviewer": "design_review",
+  "passed": true,
+  "scope": "Actual PNG visual inspection plus exported-value and immutable-byte checks; no new scientific audit or outcome analysis.",
+  "provenance": {
+    "path": "reports/figures/satisfaction-screen-v1/provenance.json",
+    "byte_sha256": "98ba81b2e04567db0e07d7fe209bf4853e134001c2431a610b94b38a3c41ecd7"
+  },
+  "source_analysis": {
+    "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/analyses/satisfaction-screen-v1/analysis.json",
+    "byte_sha256": "5d1a4bdb110dd90c5689a5519f9a6fe6394791795cd7da17486c4a43b96e0b29"
+  },
+  "execution_summary": {
+    "path": "analyses/satisfaction-screen-v1-execution/arm-summary.json",
+    "byte_sha256": "d5b26ddb559df8f0535575c0f3b99e4baa1567623c4e1db1baa8e4cb3b41b9dc"
+  },
+  "figures": [
+    {
+      "name": "stopping-effects",
+      "png": {
+        "path": "reports/figures/satisfaction-screen-v1/stopping-effects.png",
+        "byte_sha256": "95c0b386da7af2642097b80146156e1825cadc20600265c68731e74cfdc53fed",
+        "width": 2700,
+        "height": 1300
+      },
+      "visually_inspected": true,
+      "method": "tools.view_image actual PNG, displayed resized by tool",
+      "pdf": {
+        "path": "reports/figures/satisfaction-screen-v1/stopping-effects.pdf",
+        "byte_sha256": "2799c308a832b1762b0c95d9fa34edfc4286f8b768af48cfd99defad689ac250"
+      },
+      "svg": {
+        "path": "reports/figures/satisfaction-screen-v1/stopping-effects.svg",
+        "byte_sha256": "0f066de5cbcdbc370878346f0d0377e97400f972252bb23340eac248f4186591"
+      }
+    },
+    {
+      "name": "choice-composition",
+      "png": {
+        "path": "reports/figures/satisfaction-screen-v1/choice-composition.png",
+        "byte_sha256": "15d8e20d8872c7910b713e6b5008a507252040e067f33f4ae50682db1c4af64d",
+        "width": 2800,
+        "height": 1720
+      },
+      "visually_inspected": true,
+      "method": "tools.view_image actual PNG, displayed resized by tool",
+      "pdf": {
+        "path": "reports/figures/satisfaction-screen-v1/choice-composition.pdf",
+        "byte_sha256": "7ffb01e711e6c6a057133f9ebf1e5fd0ce9226bf99d6692ba08b326a17bfe8b1"
+      },
+      "svg": {
+        "path": "reports/figures/satisfaction-screen-v1/choice-composition.svg",
+        "byte_sha256": "65bace7f5c4670aebfe610b64d5f0af35b7d252e67f6a6c413a209e3aa7bf620"
+      }
+    },
+    {
+      "name": "readiness",
+      "png": {
+        "path": "reports/figures/satisfaction-screen-v1/readiness.png",
+        "byte_sha256": "9a94ac9ae160ba10a8e4cd93b5b7bd9245b2b26d6f5498970cf48a4d17ea4e8f",
+        "width": 3000,
+        "height": 1900
+      },
+      "visually_inspected": true,
+      "method": "tools.view_image actual PNG, displayed resized by tool",
+      "pdf": {
+        "path": "reports/figures/satisfaction-screen-v1/readiness.pdf",
+        "byte_sha256": "1a8ea63178b925d48b3d0ec6d13019fc873170b8a72a87edf63c7e6eb9d3c194"
+      },
+      "svg": {
+        "path": "reports/figures/satisfaction-screen-v1/readiness.svg",
+        "byte_sha256": "8dc104572b90d5a2380e576922f8af3136d003d39ff093fc0bc4abb7b4fa86da"
+      }
+    }
+  ],
+  "checks": {
+    "all_original_provenance_files_unchanged": true,
+    "legible_titles_axes_labels_legends_and_footnotes": true,
+    "no_clipping_or_material_overlap": true,
+    "all_ten_stopping_estimates_and_intervals_zero": true,
+    "primary_25pp_reference_scoped_to_primary_panel_estimates": true,
+    "all_576_assigned_choices_in_composition": true,
+    "all_72_readiness_cells_visible": true,
+    "only_failed_readiness_cell_explicitly_marked": true,
+    "failed_overall_readiness_and_decision_preserved": true,
+    "dose_units_are_frozen_full_corpus_A_contrast_norm_multiples": true,
+    "zero_width_interval_caveat_visible": true,
+    "exploratory_and_inner_experience_limitations_visible": true
+  },
+  "observations": [
+    "All stopping contrasts equal zero; zero-width empirical intervals describe invariance among these observed worlds and do not establish population certainty.",
+    "Every arm has 96 report choices and 48 stop choices; all assigned invalid, cap, error and missing categories remain represented at zero.",
+    "Satisfaction +1, panel 2, new_fact is the only failed readiness cell: 11/12 valid and correct, zero caps. It is visibly outlined and marked.",
+    "Gray stop-bar hatching passes through the count labels but the labels remain legible at the inspected resolution."
+  ],
+  "limitations": [
+    "PNG images were visually inspected through the image tool at its displayed resolution; PDF and SVG outputs share the plotted figure and have bound bytes but were not separately rendered for visual inspection.",
+    "This separate receipt records completion of visual review; the original provenance visual_review=pending field and every original output byte remain unchanged.",
+    "The review does not certify a causal satisfaction mechanism, statistical confirmation, natural mediation, or inner experience."
+  ]
+}

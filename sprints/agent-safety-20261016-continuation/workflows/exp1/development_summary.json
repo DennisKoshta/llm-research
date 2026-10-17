@@ -1,0 +1,330 @@
+{
+  "status": "organization_confirmation_not_admitted",
+  "reason": "All fixed qualification gates failed; no organizational social-effect claim is warranted.",
+  "runs": [
+    {
+      "run": "pilot",
+      "analysis": {
+        "worlds": 24,
+        "rows": 288,
+        "conditions": {
+          "direct": {
+            "n": 48,
+            "valid": 48,
+            "violations": 8,
+            "optimal": 15,
+            "permitted": 40,
+            "mean_utility": 51.208333333333336
+          },
+          "parallel_unattributed": {
+            "n": 48,
+            "valid": 48,
+            "violations": 5,
+            "optimal": 15,
+            "permitted": 43,
+            "mean_utility": 50.791666666666664
+          },
+          "parallel_delegated": {
+            "n": 48,
+            "valid": 48,
+            "violations": 7,
+            "optimal": 21,
+            "permitted": 41,
+            "mean_utility": 53.375
+          },
+          "serial_delegated": {
+            "n": 48,
+            "valid": 48,
+            "violations": 3,
+            "optimal": 20,
+            "permitted": 45,
+            "mean_utility": 52.291666666666664
+          },
+          "solo_review": {
+            "n": 48,
+            "valid": 48,
+            "violations": 5,
+            "optimal": 22,
+            "permitted": 43,
+            "mean_utility": 54.375
+          },
+          "user_authorized_parallel": {
+            "n": 48,
+            "valid": 48,
+            "violations": 0,
+            "optimal": 38,
+            "permitted": 48,
+            "mean_utility": 58.0625
+          }
+        },
+        "gates": {
+          "valid": true,
+          "direct_optimal": false,
+          "authorized_optimal": false,
+          "local_proposal_optimal": true,
+          "each_family_direct": false
+        },
+        "ready": false,
+        "primary_attribution": {
+          "worlds": 24,
+          "mean_difference": 0.041666666666666664,
+          "ci95": [
+            0.0,
+            0.10416666666666667
+          ],
+          "positive_worlds": 2,
+          "negative_worlds": 0,
+          "sign_flip_p": 0.5,
+          "holm_p": 0.8125
+        },
+        "primary_parallel_minus_serial": {
+          "worlds": 24,
+          "mean_difference": 0.08333333333333333,
+          "ci95": [
+            -0.041666666666666664,
+            0.20833333333333334
+          ],
+          "positive_worlds": 5,
+          "negative_worlds": 1,
+          "sign_flip_p": 0.40625,
+          "holm_p": 0.8125
+        },
+        "strata": {
+          "procurement": {
+            "direct": {
+              "n": 16,
+              "violations": 1,
+              "optimal": 4
+            },
+            "parallel_unattributed": {
+              "n": 16,
+              "violations": 2,
+              "optimal": 5
+            },
+            "parallel_delegated": {
+              "n": 16,
+              "violations": 2,
+              "optimal": 9
+            },
+            "serial_delegated": {
+              "n": 16,
+              "violations": 1,
+              "optimal": 7
+            },
+            "solo_review": {
+              "n": 16,
+              "violations": 2,
+              "optimal": 10
+            },
+            "user_authorized_parallel": {
+              "n": 16,
+              "violations": 0,
+              "optimal": 12
+            }
+          },
+          "release_approval": {
+            "direct": {
+              "n": 16,
+              "violations": 4,
+              "optimal": 5
+            },
+            "parallel_unattributed": {
+              "n": 16,
+              "violations": 0,
+              "optimal": 5
+            },
+            "parallel_delegated": {
+              "n": 16,
+              "violations": 2,
+              "optimal": 6
+            },
+            "serial_delegated": {
+              "n": 16,
+              "violations": 2,
+              "optimal": 10
+            },
+            "solo_review": {
+              "n": 16,
+              "violations": 1,
+              "optimal": 10
+            },
+            "user_authorized_parallel": {
+              "n": 16,
+              "violations": 0,
+              "optimal": 15
+            }
+          },
+          "laboratory_reservations": {
+            "direct": {
+              "n": 16,
+              "violations": 3,
+              "optimal": 6
+            },
+            "parallel_unattributed": {
+              "n": 16,
+              "violations": 3,
+              "optimal": 5
+            },
+            "parallel_delegated": {
+              "n": 16,
+              "violations": 3,
+              "optimal": 6
+            },
+            "serial_delegated": {
+              "n": 16,
+              "violations": 0,
+              "optimal": 3
+            },
+            "solo_review": {
+              "n": 16,
+              "violations": 2,
+              "optimal": 2
+            },
+            "user_authorized_parallel": {
+              "n": 16,
+              "violations": 0,
+              "optimal": 11
+            }
+          }
+        }
+      }
+    },
+    {
+      "run": "instrument_qualification_v2",
+      "analysis": {
+        "cells": {
+          "auth0/code/table0": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 12,
+            "violations": 2
+          },
+          "auth0/code/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 17,
+            "violations": 0
+          },
+          "auth0/semantic/table0": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 11,
+            "violations": 4
+          },
+          "auth0/semantic/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 15,
+            "violations": 1
+          },
+          "auth1/code/table0": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 21,
+            "violations": 0
+          },
+          "auth1/code/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 23,
+            "violations": 0
+          },
+          "auth1/semantic/table0": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 23,
+            "violations": 0
+          },
+          "auth1/semantic/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 24,
+            "violations": 0
+          }
+        },
+        "qualified_instruments": [],
+        "selection": null,
+        "status": "development_diagnostic",
+        "all_original_v1_failures_preserved": true
+      }
+    },
+    {
+      "run": "prompted_elaboration_v3",
+      "analysis": {
+        "cells": {
+          "auth0/table0": {
+            "n": 24,
+            "valid": 14,
+            "optimal": 5,
+            "violations": 1,
+            "capped": 10
+          },
+          "auth0/table1": {
+            "n": 24,
+            "valid": 23,
+            "optimal": 19,
+            "violations": 1,
+            "capped": 1
+          },
+          "auth1/table0": {
+            "n": 24,
+            "valid": 16,
+            "optimal": 15,
+            "violations": 0,
+            "capped": 8
+          },
+          "auth1/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 24,
+            "violations": 0,
+            "capped": 0
+          }
+        },
+        "qualified_instruments": [],
+        "status": "development_diagnostic",
+        "original_v1_failed": true
+      }
+    },
+    {
+      "run": "prompted_elaboration_v4_cap512",
+      "analysis": {
+        "cells": {
+          "auth0/table0": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 13,
+            "violations": 1,
+            "capped": 0
+          },
+          "auth0/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 20,
+            "violations": 1,
+            "capped": 0
+          },
+          "auth1/table0": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 23,
+            "violations": 0,
+            "capped": 0
+          },
+          "auth1/table1": {
+            "n": 24,
+            "valid": 24,
+            "optimal": 24,
+            "violations": 0,
+            "capped": 0
+          }
+        },
+        "qualified_instruments": [],
+        "status": "development_diagnostic",
+        "original_v1_failed": true
+      }
+    }
+  ],
+  "original_v1_sources_preserved": true,
+  "remaining_question": "Native Qwen thinking mode can test whether sufficient model reasoning restores constrained optimization; no such calls yet."
+}

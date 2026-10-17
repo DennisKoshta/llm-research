@@ -1,0 +1,17 @@
+# Replay padding engineering amendment
+
+October 14, 2026. This engineering change follows the failed exact-identity check in `qwen32-thinking-replay-v2-parity`. It precedes collection with the revised engine. No scientific causal intervention results have been collected.
+
+The fixed 80-source, 160-row parity collection completed. Five baseline/sham pairs differed in captured activations despite identical padded inputs, masks, position IDs, and capture positions. Each unequal pair occupied the last two rows of a 16-row cohort. Differences were already present at layer 15, before the layer-31 zero intervention; the other 75 pairs were exactly equal. This localizes the discrepancy to computation before the patch. A numerical boundary effect is a working hypothesis, not an established kernel diagnosis.
+
+There is a separate source/replay discrepancy: all 80 layer-57 final-position captures exceed the frozen 0.03 relative-L2 limit (median 0.0521, maximum 0.0751), despite all allowed-label argmaxes agreeing and maximum label probability difference of 0.001596. The alignment experiment does not presume it can repair this difference between original incremental generation and full-prefix prefill. Both failures are preserved in the [v2 audit](qwen32-thinking-replay-v2-parity-audit.json) and [layout diagnostic](qwen32-thinking-replay-v2-layout-diagnostic.json).
+
+The prospective StateBackend change rounds the left-padded prefill width up to a multiple of 128. Added padding remains masked; every original token, real-token position ID, and unpadded capture location stays unchanged. Width and padding multiple are recorded in each measurement. This changes the engine hash and invalidates previous engineering admission for future causal collections. It does not alter the existing thinking collector or any frozen collection.
+
+Repeat all 80 originally selected sources with this new engine in a separately named collection. Keep the existing parity thresholds: exact baseline/sham logits, probabilities, and captures; all allowed-label argmax decisions match the original source; maximum label probability difference at most 0.03 with at least 99% within 0.01; capture cosine at least 0.995 and relative L2 at most 0.03. Preserve the original failed collection and audit. Do not discard the five troublesome pairs, change thresholds, or treat padding as proof that the issue is solved.
+
+Local tests verify masked padding and token positions. Large-model replay and later natural-generation engineering must independently pass their applicable checks before scientific interpretation. Changing batch size, packing, or generation allowance requires the corresponding natural engineering proof.
+
+The scientific priority is now the already planned original-prompt natural-generation branch, which has its own prospective long-generation engineering checks and fresh baseline gates. The existing record/layer-47 direction will be a frozen transferred candidate there; this does not retrospectively declare any subset of the failed replay assay successful. Any later donor intervention must use activations measured in its applicable engine. Rebuilding all late replay axes is deferred.
+
+PyTorch documents that floating-point results can vary with batching and operation layout; this supports investigating numerical effects but does not identify this particular cause. [PyTorch numerical-accuracy documentation](https://github.com/pytorch/pytorch/blob/main/docs/source/notes/numerical_accuracy.md).

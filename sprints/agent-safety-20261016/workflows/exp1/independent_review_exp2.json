@@ -1,0 +1,31 @@
+{
+  "reviewer": "exp1 owner",
+  "reviewed_utc": "2026-10-16T08:39:01Z",
+  "scope": "Independent Exp2 generator/protocol review; not yet probe-analysis review",
+  "files": {
+    "run.py": "fe2632106d0da6fd205e4936cfc0db301300836c5e063ba5a297e3bde37522ab",
+    "protocol.json": "4fa3ad6fd8e3891a0b02c5bfdaecf5fda0de6c6c1b728c55f192855528b36184"
+  },
+  "passed_collection_checks": true,
+  "specificity_worlds": 72,
+  "requests": 1440,
+  "unique_ids": 1440,
+  "conditions_per_world": 5,
+  "agents_per_condition": 4,
+  "actors_per_condition": 2,
+  "source_scenarios_by_split": {
+    "train": 22,
+    "calibration": 6,
+    "test": 18
+  },
+  "specificity_worlds_by_split": {
+    "train": 36,
+    "calibration": 12,
+    "test": 24
+  },
+  "cautions": [
+    "Only six source calibration groups: empirical 95th percentile is not a demonstrated 5% FPR operating point.",
+    "Source final prompts omit private coordination except through public discussion; disclose reduced-context adaptation.",
+    "probe_analysis.py absent at review: actual-joint labels and threshold implementation not yet reviewed."
+  ]
+}

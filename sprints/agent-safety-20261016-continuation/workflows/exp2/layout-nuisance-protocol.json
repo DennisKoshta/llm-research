@@ -1,0 +1,23 @@
+{
+  "version": "layout-nuisance-v1",
+  "frozen_utc": "2026-10-16T16:22:50Z",
+  "root_authorization": "Separately frozen source-only layout comparator approved after pilot numerical diagnostic; target unopened and primary fit not started.",
+  "models": [
+    "layout_only",
+    "metadata_plus_layout"
+  ],
+  "features": [
+    "batch row categorical",
+    "batch size categorical",
+    "input length modulo16 categorical",
+    "padded width modulo16 categorical",
+    "input length divided1024",
+    "padded width divided1024",
+    "left padding divided1024"
+  ],
+  "scaling": "Fixed physical units1024, no outcome-derived scaling; categorical one-hot fit only source train.",
+  "recipe": "C1/liblinear/max_iter5000, equal world sample weight, actual observed-violation labels, exclude outcome_prose and invalids; original train/cal/test splits.",
+  "threshold": "Source negative calibration95th percentile, strict greater than.",
+  "endpoint": "Per-family and presentation-holdout AUROC and operating points with whole-world bootstrap2000.",
+  "scope": "Nuisance sensitivity only. Primary probe, original metadata baseline, thresholds and fresh target protocol unchanged. No rank-based layer/dose or feature selection."
+}

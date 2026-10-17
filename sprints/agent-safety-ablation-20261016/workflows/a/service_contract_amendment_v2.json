@@ -1,0 +1,9 @@
+{
+  "version":"ordinary_goal_boundaries_service_contract_v2",
+  "timing":"Before any science call or outcome; initial v1 waiter stopped without submission because no qualified root release existed.",
+  "original_manifest_sha256":"d62a775df95ea5dd86f0af71ef8c4f389391c44bc371cbb3ef889bdf539df3ee",
+  "reason":"Newly available shared broker requires explicit greedy=true and returns arm-specific intervention specification hashes. The scientific protocol already required greedy nonthinking decoding.",
+  "changes":["Explicit greedy=true and direction_key=locked added to each request.","Returned intervention spec SHA is checked against root's per-arm expected_intervention_by_arm settings: baseline has null spec, zero_sham/refusal share refusal spec, random uses its own spec.","Actual hook cleanup and temperature0 are additionally checked during scoring."],
+  "unchanged":"All world facts, numeric descriptors, messages, IDs, seeds, code maps, arm order, token caps, capture layers, sample sizes, simulator outcomes, hypotheses, estimands, competence gates and stopping rules.",
+  "preservation":"Original v1 source/requests/manifest and waiter log retained. No v1 science request was submitted and no v1 outcome exists. New v2 freeze is used for the same fixed pilot and confirmation."
+}

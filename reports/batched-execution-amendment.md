@@ -1,0 +1,25 @@
+# Prospective batch execution amendment — 2026-10-07
+
+The Qwen3-8B, 2,048-token serial comprehension run completed all 1,400 assignments and passed every frozen cell (1,399 valid and correct). Its ensuing 1,200-choice calibration was stopped for resource reasons, before using scientific outcomes to make the decision. A timing-only snapshot of the first 33 completed choices showed roughly 1,700–1,760 output tokens and 43–73 seconds per response across workers. Completing serial generation projected beyond the remaining $100 total allowance. All four workers were committed, stopped, and exported: 82 terminal records are retained across their four child runs. This is an incomplete calibration, not a passing study and not a sample to pool into subsequent calibration.
+
+Conservative compute expenditure at shutdown: $50.29322076. The $10 storage/transfer reserve leaves $39.70677924 for additional compute. The budget guard remains in force. No spending is inferred from credits, and these estimates are not an invoice.
+
+## Explicit implementation change
+
+Use `torch_batched_v1`, maximum 32 independent requests per fixed assignment cohort, Qwen3 with the same pinned weights, BF16, eager attention, exact H100, temperature 0.7, full-vocabulary sampling, and 2,048-token cap. The task text, final-answer parser, action mapping, seeds within an assignment, and validation/calibration criteria do not change. Each row gets an independent torch random generator. Left padding, attention masks, position IDs, actual cohort identities, row index, and generated token IDs are saved. Prefill computes only the final position's logits. New source and execution configuration are bound into the manifest; no serial/batched observations are pooled.
+
+Per-row latency overlaps within a batch. It must not be summed as GPU time. Use unique batch wall times for execution summaries and application wall time for conservative costs. Caches are fresh per batch; attention cannot cross rows. Intervention hooks operate on each designated row's final prompt token and are removed before generation. Actual interventions remain deferred until a suitable assay has passed calibration.
+
+Batch shape can change floating-point results. Equality to serial sampled answers is not assumed. Local and cloud integration checks must verify sham equivalence at fixed shape, per-row intervention isolation, padding, independent RNG streams, early stopping, and exception cleanup. A distinct small cloud throughput smoke uses seed 20261012 and two pairs per family (28 diagnostics); it cannot pass the minimum-sample gate or authorize calibration. It only checks memory, timing, and execution integrity. No prompt or scoring choice is selected from smoke answers.
+
+If integration and throughput are viable, freeze a **fresh full validation**, seed 20261011, 100 pairs per family, all 1,400 diagnostics. The same 90% correct / 95% valid criteria must pass in every cell. Only then prepare the matching 1,200-choice calibration. No token-limit expansion, partial-sample advancement, invalid-answer retry, or outcome-based stopping is authorized by this amendment. If the fresh validation fails, report that failure; no further backend/task search is planned within this amendment.
+
+All completed responses are immutable. Resuming an interrupted cohort may contain fewer remaining rows, and therefore a different numerical shape; the actual cohort is recorded. Completed rows are never regenerated. Any observed batch runtime failure produces terminal failure records for its outstanding rows and aborts the worker. Partial coverage is explicitly reported.
+
+A passing calibration can support subsequent assay work; it does not establish an internal motivational state or subjective experience. Baseline headroom, neutral activity controls, and speaker/attribution controls remain necessary before stronger claims.
+
+## Execution-only scheduling appendix
+
+The first full 32-row validation batch took 57.98 seconds, projecting approximately 43 minutes for 44 serial cohorts. To reduce elapsed time, continuation may use up to four exactly reserved H100 workers within the original parent deadline. The infrastructure partitioner now assigns whole original cohorts round-robin, preserving each full cohort's row order and batch shape. Any interrupted short cohort is placed at the end of a child, never joined with another original cohort. Already completed records are retained unchanged. Partition coverage and whole-cohort preservation have dedicated tests. This scheduling change does not change scientific source, prompts, samples, scoring, or gates. Each child repeats the real-model integration audits; only the complete parent can advance. A future matching calibration can use the same cohort-preserving partitioner from its start.
+
+The local decoder also matched the pinned Transformers `generate` implementation exactly on three unequal-length greedy prompts, including early EOS, under the same batch shape. This supplements, rather than replaces, the full comprehension validation.

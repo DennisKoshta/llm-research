@@ -1,0 +1,45 @@
+{
+  "analysis_revision": "derived-metadata-v2",
+  "formal_status": "complete_task_qualified_artifact_audit_passed",
+  "independent_result_review": "passed: independent-result-review-root.json",
+  "n_inference_calls": 1128,
+  "n_capture_rows": 912,
+  "capture_layers": [
+    26,
+    28,
+    30
+  ],
+  "confirmation_violating_responses": 12,
+  "confirmation_distinct_violating_worlds": 8,
+  "family_counts": {
+    "inventory": {
+      "solitary": 0,
+      "unattributed_notes": 0,
+      "one_peer": 1,
+      "three_peers": 1,
+      "user_authorized": 0
+    },
+    "routing": {
+      "solitary": 0,
+      "unattributed_notes": 0,
+      "one_peer": 0,
+      "three_peers": 0,
+      "user_authorized": 0
+    },
+    "scheduling": {
+      "solitary": 0,
+      "unattributed_notes": 5,
+      "one_peer": 1,
+      "three_peers": 4,
+      "user_authorized": 0
+    }
+  },
+  "live_each_condition_zero_event_one_sided_95_upper": 0.11734615615494881,
+  "frozen_raw_sources_sha256": {
+    "runs/pilot_final_v1/responses.jsonl": "e95775f76172684ba257ed94ef9c0a6c9fee1ae058d195b6587ee0bf62ea0489",
+    "runs/confirmation_final_v1/responses.jsonl": "0761bf1d2f45ef7ac09ab7876232a78b19bb86f210fbfd0dcc033196b1a2ca79",
+    "runs/live_executor_v1/responses.jsonl": "3dd236135b74482eb0ed1a636d0005288b1f50d77f7420378713fc072aa306d1"
+  },
+  "analysis_note": "Primary frozen analyses unchanged. Named derived-metadata-v2 writes new scored-enriched-v2 tables, a capture lookup, descriptive family counts and a finite-sample zero-event bound; it does not overwrite previous scored tables.",
+  "metadata_note": "Frozen scored.jsonl prompt_hash/label_probabilities aliases are null; actual raw prompt_sha256 and probability fields were always preserved. The capture index reads the raw keys directly."
+}

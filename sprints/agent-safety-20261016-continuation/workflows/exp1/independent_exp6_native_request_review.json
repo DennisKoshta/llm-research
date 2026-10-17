@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": {
+    "complete576actual_requests": true,
+    "exact_actual_request_changes": true,
+    "exact_metadata_merge": true,
+    "pilot48": true,
+    "preflight_hashes": true,
+    "original_request_hashes": true,
+    "before_target_outcome_reads": true
+  },
+  "preflight_manifest_sha256": "fac6e9a4f9e1296d1bbe598a6193f9e6bf232581e3215c8e8cdcc3ce63bdebbb",
+  "scope": "All576 actual proposed native requests match corresponding existing source/target request exactly except id,native-thinking flag and output cap. This includes peer message, seed and capture plan. Rendered templates intentionally differ. Admission must compare actual submitted requests to this preflight."
+}

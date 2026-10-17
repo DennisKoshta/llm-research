@@ -1,0 +1,21 @@
+{
+  "version": "semantic_name_components_v1",
+  "scope": "Named CPU-only secondary, fixed before name/replay outcomes; no inference, steering, fitting or new primary.",
+  "sample": "All 1248 assigned decisions from each of archived original, matched replay and renamed cohorts; all 624 physical-action A/B pairs.",
+  "definitions": {
+    "physical_operation_logodds": "(zA-zB)/2",
+    "common_A_logodds": "(zA+zB)/2",
+    "zA": "log P(A)/P(B) under mapping where the same physical operation uses A",
+    "zB": "log P(A)/P(B) where it uses B"
+  },
+  "contrasts": [
+    "names-minus-matched",
+    "matched-minus-archived",
+    "names-minus-archived"
+  ],
+  "cells": "All 7 presentations, 2 authorization, 2 utility states, all 4 families and pooled. Average display orders within each world/arm; optional pooled-arm endpoint weights 7 arms equally.",
+  "uncertainty": "20,000 family-stratified whole-world bootstrap draws, seed261016699, descriptive95% intervals; no multiplicity-adjusted claim or bounded-rate interval for unbounded log odds.",
+  "missing_invalid": "Require complete fixed assignment coverage and both mappings in every pair. Missing/invalid probabilities stop the analysis. Invalid final choices remain in probability summaries with counts and no compliant relabeling. Record all probability clips at1e-12 and greedy-sign discrepancies.",
+  "native_exclusion": "Only nonthinking actual action-token probabilities; native prethinking logits expressly excluded.",
+  "limits": "Output-score algebra, not neural factorization. Exposed12-world set with known descriptor/template duplication; actual worker dispatch may differ even with matched cohort layout. Behavioral and Exp2 fixed analyses unchanged; Exp2 retains its different equal104-row weighting."
+}

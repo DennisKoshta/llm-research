@@ -1,0 +1,20 @@
+{
+  "version": "structural_components_v1",
+  "scope": "Root-approved CPU-only prospective descriptive secondary. No new inference, prompts, samples, source fits, behavioral thresholds or primary claims.",
+  "cohorts": "Fixed structural pilot8 and main40 analyzed separately, all24 assigned decisions/world.",
+  "contrasts": [
+    "payoff_table minus narrative",
+    "permission_colocated minus payoff_table"
+  ],
+  "factors": "All2authorization x2utility cells; paired A/B mappings and all recorded orders stay within world. Structural protocol uses one counterbalanced order/world.",
+  "algebra": {
+    "zA": "log P(A)/P(B) when the physical designated operation uses A",
+    "zB": "log P(A)/P(B) when it uses B",
+    "physical_operation_logodds": "(zA-zB)/2",
+    "common_A_logodds": "(zA+zB)/2"
+  },
+  "uncertainty": "20,000 whole-world bootstrap draws, fixedseed261016709, descriptive95% intervals; no multiple-testing or new confirmatory interpretation.",
+  "coverage": "All assigned nonthinking prompt probabilities, including invalid decoded responses; invalids counted. Missing mapping pairs or nonfinite probabilities stop analysis. Clipping at1e-12 and greedy-sign mismatches recorded. No native prethinking logits.",
+  "review": "Agent1 independently checks formula and raw-logit validity before analysis; fixed raw-score helper copied from the earlier frozen source.",
+  "scope_limits": "One set-union algorithm with distinct full membership structures and disclosed repeated reduced-equivalence classes. Output algebra, not neural factorization. Failed early capture qualification remains failed."
+}

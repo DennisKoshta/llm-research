@@ -1,0 +1,250 @@
+{
+  "artifact_gib": 1.4152877693995833,
+  "checks": {
+    "finite_5120_vector": 13512,
+    "job_coverage": 281,
+    "job_input_hashes": 281,
+    "model_environment": 281,
+    "prompt_sampling_provenance": 8548
+  },
+  "created": 1792142437.1982412,
+  "done_jobs": 281,
+  "errors": [],
+  "failed_attempts": [
+    {
+      "error": "RemoteError('')",
+      "key": "shared--engineering_plain--000000",
+      "workflow": "shared"
+    }
+  ],
+  "maximum_rpc_seconds": 76.47598218917847,
+  "passed": true,
+  "pending_jobs": 0,
+  "profiles": {
+    "ta-01M51XK5AF9DN76J71FV2XKWJR": {
+      "first_job": 1792139956.7099917,
+      "jobs": 126,
+      "last_job": 1792141035.8469753,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 66.94894362100001,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91066296320
+    },
+    "ta-01M51XNJR96AET7NQWN4RH5R1R": {
+      "first_job": 1792139956.7851202,
+      "jobs": 116,
+      "last_job": 1792141042.0622666,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 33.777400061,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91349497856
+    },
+    "ta-01M51Z98RF9SKZ94F8YMT11PFR": {
+      "first_job": 1792141528.2461665,
+      "jobs": 21,
+      "last_job": 1792141667.100747,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 43.03569950399999,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 72383323648
+    },
+    "ta-01M51Z98RFMQ0H7N61VJ7XQG9R": {
+      "first_job": 1792141528.2030652,
+      "jobs": 18,
+      "last_job": 1792141673.660326,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 43.767776964,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 72383323648
+    }
+  },
+  "running_jobs": 0,
+  "scope": "Engineering coverage/provenance/capture audit, separate from experiment-specific scientific qualification. Failed startup and development gates retained.",
+  "workflows": {
+    "exp1": {
+      "calls": 1128,
+      "capture_rows": 912,
+      "generated_tokens": 4469,
+      "input_tokens": 627191,
+      "jobs": 38,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.4310264663970564,
+      "stage_confirmation": 864,
+      "stage_extension": 120,
+      "stage_pilot": 144
+    },
+    "exp2": {
+      "calls": 2436,
+      "capture_rows": 2436,
+      "generated_tokens": 39736,
+      "input_tokens": 925842,
+      "jobs": 83,
+      "non_eos_rows": 50,
+      "rpc_attributed_usd": 1.1182991177092365,
+      "stage_confirmation": 2268,
+      "stage_pilot": 168
+    },
+    "exp4": {
+      "calls": 336,
+      "capture_rows": 0,
+      "generated_tokens": 672,
+      "input_tokens": 53800,
+      "jobs": 12,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.05296156343421936,
+      "stage_pilot": 336
+    },
+    "exp5": {
+      "calls": 3024,
+      "capture_rows": 0,
+      "generated_tokens": 6048,
+      "input_tokens": 2409536,
+      "jobs": 95,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.8638110668288803,
+      "stage_confirmation": 2304,
+      "stage_pilot": 720
+    },
+    "exp6": {
+      "calls": 1616,
+      "capture_rows": 1152,
+      "generated_tokens": 5924,
+      "input_tokens": 510034,
+      "jobs": 51,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.6116480498500441,
+      "stage_confirmation": 1248,
+      "stage_pilot": 368
+    },
+    "shared": {
+      "calls": 8,
+      "capture_rows": 4,
+      "generated_tokens": 16,
+      "input_tokens": 330,
+      "jobs": 2,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.10921625764064789,
+      "stage_engineering": 8
+    }
+  }
+}

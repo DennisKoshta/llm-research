@@ -1,0 +1,150 @@
+{
+  "actual_selected_payload_rows": 71,
+  "app_wall_seconds": 1371,
+  "assay": "curiosity_coverage_engineering_operational_measurements",
+  "assigned_calls": 16,
+  "assigned_slots": 512,
+  "cost_estimate_usd": "1.91084496",
+  "expected_deliberate_fault_slots": 64,
+  "export_plus_local_coverage_hash_seconds": 80.658922028,
+  "independently_reconstructed_selected_components": 6528000,
+  "inputs": {
+    "engineering_audit": {
+      "byte_sha256": "9dc852673306b3126ef711bfdcc1801d2f1836e7411e55594237e55e7d1c55d5",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/audit.json"
+    },
+    "engineering_cost": {
+      "byte_sha256": "ea404e2525813681ae2f74c223c0f2d91373080a8c9c15bc0c438ee10196b4ac",
+      "path": "reports/qwen32-curiosity-coverage-engineering-v1-cost-and-shutdown.json"
+    },
+    "engineering_lifecycle": {
+      "byte_sha256": "39f49bf75f7b324baed4b62c5796ce555fdb6737bc31db5d80f2812bc523de95",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/lifecycle-audit.json"
+    },
+    "engineering_manifest": {
+      "byte_sha256": "251526f44276f6477d0461a3a84c6bd86758f8db83a4d84870b6f8ab852fc7ab",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/manifest.json"
+    },
+    "engineering_summary": {
+      "byte_sha256": "1c59e3daf900232a1a4daecbe522acbefd4ed5d837891895e7a0ea0f8bdbef89",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/engineering-summary.json"
+    }
+  },
+  "lifecycle_checks": {
+    "completed_execution_and_export": true,
+    "exact_checkpoint_geometry_and_termination": true,
+    "execution_finished_within_fixed_deadline": true,
+    "external_inputs_unchanged": true,
+    "fixed_single_admission": true,
+    "frozen_context_audit_passed": true,
+    "global_admission_exact_bytes": true,
+    "launch_and_summary_binding": true,
+    "raw_inputs_unchanged_during_context_audit": true,
+    "raw_inputs_unchanged_through_lifecycle_check": true,
+    "single_engineering_app": true,
+    "stopped_and_inside_resource_allowance": true
+  },
+  "missing_slots": 0,
+  "numerical_checks": {
+    "all16_raw_calls_present": true,
+    "all_call_numerics": true,
+    "clean_after_decode_fault": true,
+    "clean_after_prefill_fault": true,
+    "common_prefill_before_identity": true,
+    "full_zero_identity": true,
+    "one_fixed_order_no_after_failure": true,
+    "record_zero_identity": true,
+    "row0_only_isolation": true,
+    "short_gate_before_timing": true
+  },
+  "ordinary_completions": 448,
+  "receipt_assigned_dispositions": 105,
+  "schema_version": 1,
+  "scientific_effects_scored": false,
+  "scope": "Engineering arithmetic, coverage, integrity and runtime only; no scientific curiosity effect estimate.",
+  "short_check_ordinary_rows_reaching_intentional_cap128": 256,
+  "stop_dispositions": 34,
+  "timing_calls": [
+    {
+      "actual_receipt_rows": 10,
+      "actual_receipt_width": 384,
+      "artifact_bytes": 42668661,
+      "call_index": 10,
+      "condition": "baseline",
+      "generation_seconds": 193.636084304,
+      "receipt_forward_seconds": 1.1494135219999748,
+      "receipt_parsing_seconds": 0.07792498399999204,
+      "receipt_serialization_seconds": 0.07953764799998453,
+      "serialization_seconds": 1.7881361490000245,
+      "source_cohort": 0
+    },
+    {
+      "actual_receipt_rows": 10,
+      "actual_receipt_width": 384,
+      "artifact_bytes": 34939491,
+      "call_index": 11,
+      "condition": "record_nonzero",
+      "generation_seconds": 85.74267457200006,
+      "receipt_forward_seconds": 1.1507248640000398,
+      "receipt_parsing_seconds": 0.08243400000003476,
+      "receipt_serialization_seconds": 0.08586088599997765,
+      "serialization_seconds": 1.9629760949999309,
+      "source_cohort": 0
+    },
+    {
+      "actual_receipt_rows": 10,
+      "actual_receipt_width": 384,
+      "artifact_bytes": 49528673,
+      "call_index": 12,
+      "condition": "full_nonzero",
+      "generation_seconds": 127.30195469500006,
+      "receipt_forward_seconds": 1.150893085000007,
+      "receipt_parsing_seconds": 0.07266952499992385,
+      "receipt_serialization_seconds": 0.07479496300004485,
+      "serialization_seconds": 1.8581517679999706,
+      "source_cohort": 0
+    },
+    {
+      "actual_receipt_rows": 14,
+      "actual_receipt_width": 384,
+      "artifact_bytes": 33403894,
+      "call_index": 13,
+      "condition": "baseline",
+      "generation_seconds": 124.51340596199998,
+      "receipt_forward_seconds": 1.5906929419999187,
+      "receipt_parsing_seconds": 0.08050230900005317,
+      "receipt_serialization_seconds": 0.09323824900002364,
+      "serialization_seconds": 1.8317593759999227,
+      "source_cohort": 3
+    },
+    {
+      "actual_receipt_rows": 14,
+      "actual_receipt_width": 384,
+      "artifact_bytes": 70177561,
+      "call_index": 14,
+      "condition": "record_nonzero",
+      "generation_seconds": 295.8097528420001,
+      "receipt_forward_seconds": 1.5904720360001647,
+      "receipt_parsing_seconds": 0.07860673699997278,
+      "receipt_serialization_seconds": 0.09554333400001269,
+      "serialization_seconds": 2.406991752000067,
+      "source_cohort": 3
+    },
+    {
+      "actual_receipt_rows": 13,
+      "actual_receipt_width": 384,
+      "artifact_bytes": 67706023,
+      "call_index": 15,
+      "condition": "full_nonzero",
+      "generation_seconds": 229.264999215,
+      "receipt_forward_seconds": 1.495649824000111,
+      "receipt_parsing_seconds": 0.08050980200005142,
+      "receipt_serialization_seconds": 0.09493759900010446,
+      "serialization_seconds": 2.4298493000001145,
+      "source_cohort": 3
+    }
+  ],
+  "timing_cap4096_hits": 0,
+  "timing_rows": 192,
+  "unexpected_errors": 0
+}

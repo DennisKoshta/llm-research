@@ -1,0 +1,69 @@
+{
+  "passed": false,
+  "checks": {
+    "context_integrity_passed": true,
+    "context_complete": true,
+    "raw_unchanged_during_context_audit": true,
+    "exclusive_parent_admission_bytes": true,
+    "parent_policy_and_admission": true,
+    "worker_0_exclusive_claim_and_parent_bytes": true,
+    "worker_0_checkpoint_geometry_and_termination": true,
+    "worker_0_completed_bound_execution": true,
+    "worker_1_exclusive_claim_and_parent_bytes": true,
+    "worker_1_checkpoint_geometry_and_termination": true,
+    "worker_1_completed_bound_execution": true,
+    "worker_2_exclusive_claim_and_parent_bytes": true,
+    "worker_2_checkpoint_geometry_and_termination": true,
+    "worker_2_completed_bound_execution": true,
+    "parent_export_and_complete_coverage": false,
+    "worker_0_identity_and_export": true,
+    "worker_0_stopped_within_liability": true,
+    "worker_1_identity_and_export": false,
+    "worker_1_stopped_within_liability": true,
+    "worker_2_identity_and_export": true,
+    "worker_2_stopped_within_liability": true,
+    "three_worker_costs_within_reservation": true,
+    "fresh_allowance_and_retained_reserve": true,
+    "saved_cost_receipt_matches_current_charges": true,
+    "external_inputs_unchanged": true,
+    "raw_unchanged_through_lifecycle_audit": true
+  },
+  "errors": [],
+  "charges": {
+    "passed": false,
+    "checks": {
+      "worker_0_identity_and_export": true,
+      "worker_0_stopped_within_liability": true,
+      "worker_1_identity_and_export": false,
+      "worker_1_stopped_within_liability": true,
+      "worker_2_identity_and_export": true,
+      "worker_2_stopped_within_liability": true,
+      "three_worker_costs_within_reservation": true,
+      "fresh_allowance_and_retained_reserve": true
+    },
+    "app_charges": [
+      {
+        "app_id": "ap-VMNsGgDDxJhWmufW9Nl5Sf",
+        "gpu": "H200",
+        "app_wall_seconds": 15022.0,
+        "rate_usd_per_second": 0.00139376,
+        "compute_estimate_usd": 20.93706272
+      },
+      {
+        "app_id": "ap-yz8SQBOcfI4vcKNPViYIw4",
+        "gpu": "H200",
+        "app_wall_seconds": 13868.0,
+        "rate_usd_per_second": 0.00139376,
+        "compute_estimate_usd": 19.32866368
+      },
+      {
+        "app_id": "ap-uex2tiIhhLWK53aJe8eHOu",
+        "gpu": "H200",
+        "app_wall_seconds": 15167.0,
+        "rate_usd_per_second": 0.00139376,
+        "compute_estimate_usd": 21.13915792
+      }
+    ],
+    "total_compute_estimate_usd": 61.404884319999994
+  }
+}

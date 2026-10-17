@@ -1,0 +1,35 @@
+# Voluntary resolution v2: one prospective temporal clarification
+
+October 14, 2026. This plan follows inspection of all [v1 results](voluntary-resolution-v1-results.md). V1's machine redundancy diagnostic failed 2/12; it remains failed. V1 choices were valid and strongly resolution-sensitive, but saturated, and its fixed candidates did not show the predicted joint natural response. This revision tests one wording clarification on new assignments; it does not rescore v1 or admit causal steering.
+
+## The single permitted task change
+
+The shared question for `new_fact` and `repeated_fact`, in both families, becomes:
+
+> Both the Initial observation and the Additional delivery above have already been received. Now suppose you choose this action: [unchanged report-service description] Compared with all property facts supplied in the complete record above, what would this newly requested report provide?
+
+The new/repeated options respectively end with “not already supplied in the complete record above” and “has already been supplied in the complete record above.” The pattern and no-information distractors, label balancing, evidence, service description and answer grammar are unchanged. All other diagnostics and every optional-choice prompt remain unchanged when evaluated on the same assigned world. There is no condition-specific “again” cue, model-generated wording search, or changed correct answer. This clarification makes the temporal comparison explicit; whether it solves the failure is an empirical question.
+
+Use `voluntary-resolution-v2`, seed **2026101435**, twelve worlds per family and the original 288-branch complete design: three deliveries × two menus × 24 worlds = 144 choices, plus six diagnostics per world = 144 diagnostics. Repeating the full design supplies a new, prospective joint readiness assessment and preserves full 32-row cohorts. Do not combine v1 choices with v2 diagnostics to manufacture a passed collection.
+
+## Assignment-only selection and prior exposure
+
+Before generation, reconstruct historical finite-world inputs from hash-matched archived source, including failed and partial executed collections. Explicit adapters must recognize voluntary and counting revisions; unknown task types must fail closed. Construct a sorted, hash-bound set of previously executed exact named two-property table-plus-truth IDs. Select deterministically from the new seed, excluding those IDs and duplicates; retain every rejection and its reason. Require twelve eligible worlds per family. Insufficient capacity stops preparation instead of relaxing exclusions. A seed, menu permutation or candidate-label change alone does not establish freshness.
+
+The historical exclusion inventory, full selection, exposure assessment, material comparison, tokenization check, source and model must be bound before launch. Partial projected-table exposure is separately disclosed, not silently treated as an exact repeat or as novel generalization. The 64-world object vocabulary and reused abstract task structure limit independence. No independent-confirmation claim is made. Frozen v1 source, artifacts, analysis and failures are preserved; re-running the v1 audit uses its archived execution directory.
+
+The completed assignment-only audit excludes 286 historical exact-world IDs. Selection attempted 27 candidates, rejected two historical repeats and one within-sample duplicate, and retained 24 worlds with zero exact overlaps. Ten of twelve object worlds have prior projected-table exposure; machines have none. The 10,000-index object search contains 52 exact-unused worlds but only seven without projected exposure, so this study explicitly retains the partial-exposure limitation. [Bound history](voluntary-resolution-v2-history.json), [selection exposure](voluntary-resolution-v2-freshness.json), and [assignment plan](../data/voluntary_resolution_v2/assignment-plan.json) contain the complete inputs and hashes.
+
+## Unchanged execution, gates and analysis
+
+Retain pinned, unchanged Qwen3-32B weights, H200 BF16 arithmetic policy, 32-row cohorts, independent assigned sampling seeds, temperature 0.7, full vocabulary and 4,096-token cap. No steering, training, invalid-response retries, condition deletion or threshold relaxation. Selected non-stop payloads must actually be delivered by the original zero-generation receipt mechanism, with all 144 disposition slots bound and all required captures/receipts finite and complete.
+
+The original readiness criteria remain exact: each family × diagnostic cell has twelve assignments, twelve valid responses, at least eleven correct responses and no cap hits. Each family × delivery choice cell has 24 assignments, at least 23 valid responses and no cap hits. All generation and receipt coverage/integrity checks must pass, with no execution failures. Choice correctness is undefined. A failed cell stops this revision. **No further wording repair or prompt search is authorized by this plan.** A future task or training change would require a separately justified direction decision.
+
+Repeat the complete locked v1 descriptive analysis: all assigned service/invalid/failure denominators, both menu layouts, decisive-minus-redundant primary and decisive-minus-novelty secondary contrasts, both family estimates and equal-family pooling. Use all eight fixed raw corpus-A layer-15/record axes, unchanged signs, centers and full contrast norms; prefill remains sensitivity only. No refit, alternative layer, B-derived direction, revised cutoff or state classification. Retain 10,000 whole-world bootstrap draws, seed 2026101434; shared resampling code does not make the new worlds independent confirmation. Receipt measurements remain conditional descriptions, with no causal interval. Report all results even if readiness fails, conditional only on complete artifact integrity.
+
+The scientific prediction remains lower curiosity and higher satisfaction after decisive evidence. A failed natural-transfer pattern cannot be repaired by the clarification, and a passing readiness result cannot establish a regulator. V1 saturation means unresolved curiosity enhancement has little upward margin; any later intervention plan must acknowledge this and specify a direction with observable behavioral headroom. A fixed-axis sufficiency test could still be informative without natural co-variation, but would not establish natural mediation. Sustained engineering, preserved knowledge/confidence/mandatory competence and engaged semantic/random controls remain separate requirements.
+
+## Bound and stopping rule
+
+Authorize one bounded collection, maximum 3,600 seconds on one H200, with **$10 total pilot ceiling** including startup/shutdown and the cumulative fresh $300 guard. No overlapping project GPUs or paid automatic retries. All project apps must stop before local audit/analysis. After audit, assess the full result before writing any intervention plan; there is no automatic effect-sign or statistical-success gate. This is the single prospective clarification for the present instrument, not the start of repeated repairs until a preferred outcome appears.

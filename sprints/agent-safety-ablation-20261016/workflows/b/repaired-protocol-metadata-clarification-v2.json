@@ -1,0 +1,13 @@
+{
+  "version": "repaired-protocol-metadata-clarification-v2",
+  "manifest_sha256": "e4e359057b409f70a4fc102214cdeb00d6c0fed7f652fea7c309aead1f73726c",
+  "timing": "After source/prompt review, before any repaired study inference",
+  "no_input_or_estimator_or_gate_change": true,
+  "world_sampling_seed": 2026101669,
+  "request_generation_seed": "2026101669 +97*new-world-index; actual fixed requests are authoritative",
+  "row_shuffle_seed": 2026101615,
+  "inherited_pilot_seed_note": "The nested pilot.seed2026101602 is retained from original protocol metadata; it is not the revised world-sampling seed. Top-level pilot_seed2026101669 and actual frozen worlds/requests govern the revised pilot. The inherited row-shuffle seed intentionally remains unchanged.",
+  "revised_pilot_ceiling_usd": 3,
+  "inherited_budget_note": "Original initial_pilot_ceiling_usd12 belongs to v1. Explicit repaired pilot_budget_cap_usd3 and this admission govern this new bounded pilot.",
+  "main_admitted": false
+}

@@ -1,0 +1,871 @@
+{
+  "source_sha256": "3074e4deb74ae4a0935a3204762f9ce6dac9f93dbb55875d9b8bd69bf9ce8f46",
+  "examples": [
+    {
+      "kind": "behavior",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 2070925897,
+        "trial_id": "credit-machines-0000-XY-both_unresolved"
+      },
+      "prompt": "This is an optional, ungraded information choice. There is no instruction to prefer either mystery or to use the credit.\nThere are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 0 produced output 3.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 1 produced output 6.\n\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAvailable actions:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nChoose one action ID only: A, B, or C.",
+      "oracle_status": {
+        "X": {
+          "compatible": [
+            "L",
+            "J",
+            "M",
+            "K"
+          ],
+          "outcomes": {
+            "5": [
+              "L"
+            ],
+            "4": [
+              "J"
+            ],
+            "6": [
+              "M"
+            ],
+            "1": [
+              "K"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        },
+        "Y": {
+          "compatible": [
+            "J",
+            "M",
+            "K",
+            "L"
+          ],
+          "outcomes": {
+            "3": [
+              "J"
+            ],
+            "0": [
+              "M"
+            ],
+            "4": [
+              "K"
+            ],
+            "1": [
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "x_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-machines-0000-XY-x_resolved"
+      },
+      "prompt": "This is an optional, ungraded information choice. There is no instruction to prefer either mystery or to use the credit.\nThere are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 2 produced output 5.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 1 produced output 6.\n\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAvailable actions:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nChoose one action ID only: A, B, or C.",
+      "oracle_status": {
+        "X": {
+          "compatible": [
+            "L"
+          ],
+          "outcomes": {
+            "5": [
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "Y": {
+          "compatible": [
+            "J",
+            "M",
+            "K",
+            "L"
+          ],
+          "outcomes": {
+            "3": [
+              "J"
+            ],
+            "0": [
+              "M"
+            ],
+            "4": [
+              "K"
+            ],
+            "1": [
+              "L"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "y_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 292391321,
+        "trial_id": "credit-machines-0000-XY-y_resolved"
+      },
+      "prompt": "This is an optional, ungraded information choice. There is no instruction to prefer either mystery or to use the credit.\nThere are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 0 produced output 3.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 4 produced output 3.\n\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAvailable actions:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nChoose one action ID only: A, B, or C.",
+      "oracle_status": {
+        "X": {
+          "compatible": [
+            "L",
+            "J",
+            "M",
+            "K"
+          ],
+          "outcomes": {
+            "5": [
+              "L"
+            ],
+            "4": [
+              "J"
+            ],
+            "6": [
+              "M"
+            ],
+            "1": [
+              "K"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        },
+        "Y": {
+          "compatible": [
+            "J"
+          ],
+          "outcomes": {
+            "3": [
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        }
+      }
+    },
+    {
+      "kind": "identify_x",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "x_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-identify_x",
+        "kind": "identify_x"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 2 produced output 5.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 1 produced output 6.\nMatch the evidence for mystery X to its table. Which candidate is hidden in mystery X? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": "L"
+    },
+    {
+      "kind": "identify_y",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "y_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-identify_y",
+        "kind": "identify_y"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 0 produced output 3.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 4 produced output 3.\nMatch the evidence for mystery Y to its table. Which candidate is hidden in mystery Y? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": "J"
+    },
+    {
+      "kind": "instrument_x",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-instrument_x",
+        "kind": "instrument_x"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 0 produced output 3.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 1 produced output 6.\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. \nAvailable actions:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nFor this diagnostic, your goal is to identify mystery X's hidden candidate. Which action gives enough new evidence to identify mystery X? Reply with one action ID only: A, B, or C.",
+      "labels": "ABC",
+      "expected": "A"
+    },
+    {
+      "kind": "instrument_y",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-instrument_y",
+        "kind": "instrument_y"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nL: output = (1 * input + 3) modulo 7\nJ: output = (4 * input + 3) modulo 7\nM: output = (5 * input + 3) modulo 7\nK: output = (6 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 0 | output at input 2\nL | 3 | 5\nJ | 3 | 4\nM | 3 | 6\nK | 3 | 1\nObserved evidence:\nInput 0 produced output 3.\nInput 0 produced output 3.\n\nMystery Y:\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nJ: output = (6 * input + 0) modulo 7\nM: output = (5 * input + 1) modulo 7\nK: output = (4 * input + 2) modulo 7\nL: output = (3 * input + 3) modulo 7\nThe following lookup table gives the exact outputs for both inputs used in this task. You may match observations directly to this table; no arithmetic is needed.\nCandidate | output at input 1 | output at input 4\nJ | 6 | 3\nM | 6 | 0\nK | 6 | 4\nL | 6 | 1\nObserved evidence:\nInput 1 produced output 6.\nInput 1 produced output 6.\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. \nAvailable actions:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nFor this diagnostic, your goal is to identify mystery Y's hidden candidate. Which action gives enough new evidence to identify mystery Y? Reply with one action ID only: A, B, or C.",
+      "labels": "ABC",
+      "expected": "C"
+    },
+    {
+      "kind": "exclusive_x",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-exclusive_x",
+        "kind": "exclusive_x"
+      },
+      "prompt": "You have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAction menu:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nSuppose you select action A. Which description states what happens?\nA: Both clues are delivered, one after the other.\nB: Only the clue for X is delivered; the clue for Y cannot be requested afterward.\nC: Neither clue is delivered, and the trial ends.\nD: Only the clue for Y is delivered; the clue for X cannot be requested afterward.\nReply with one description ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B"
+    },
+    {
+      "kind": "exclusive_y",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-exclusive_y",
+        "kind": "exclusive_y"
+      },
+      "prompt": "You have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAction menu:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nSuppose you select action C. Which description states what happens?\nA: Both clues are delivered, one after the other.\nB: Only the clue for Y is delivered; the clue for X cannot be requested afterward.\nC: Only the clue for X is delivered; the clue for Y cannot be requested afterward.\nD: Neither clue is delivered, and the trial ends.\nReply with one description ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B"
+    },
+    {
+      "kind": "decline",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "machines",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "X",
+          "B": "stop",
+          "C": "Y"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1100685448,
+        "trial_id": "credit-check-machines-0000-decline",
+        "kind": "decline"
+      },
+      "prompt": "You have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAction menu:\nC: Reveal the hidden machine's output at input 4 for mystery Y, then end the trial. No clue for mystery X will be delivered.\nB: Decline both clues and end the trial.\nA: Reveal the hidden machine's output at input 2 for mystery X, then end the trial. No clue for mystery Y will be delivered.\nSuppose you select action B. Which description states what happens?\nA: Only the clue for Y is delivered; the clue for X cannot be requested afterward.\nB: Only the clue for X is delivered; the clue for Y cannot be requested afterward.\nC: Neither clue is delivered, and the trial ends.\nD: Both clues are delivered, one after the other.\nReply with one description ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "C"
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1955329764,
+        "trial_id": "credit-objects-0000-XY-both_unresolved"
+      },
+      "prompt": "This is an optional, ungraded information choice. There is no instruction to prefer either mystery or to use the credit.\nThere are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAvailable actions:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nChoose one action ID only: A, B, or C.",
+      "oracle_status": {
+        "X": {
+          "compatible": [
+            "K",
+            "L",
+            "J",
+            "M"
+          ],
+          "outcomes": {
+            "green": [
+              "K"
+            ],
+            "blue": [
+              "L"
+            ],
+            "gold": [
+              "J"
+            ],
+            "red": [
+              "M"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        },
+        "Y": {
+          "compatible": [
+            "L",
+            "M",
+            "K",
+            "J"
+          ],
+          "outcomes": {
+            "square": [
+              "L"
+            ],
+            "round": [
+              "M"
+            ],
+            "oval": [
+              "K"
+            ],
+            "triangular": [
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "x_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 1528923325,
+        "trial_id": "credit-objects-0000-XY-x_resolved"
+      },
+      "prompt": "This is an optional, ungraded information choice. There is no instruction to prefer either mystery or to use the credit.\nThere are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved color: green.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAvailable actions:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nChoose one action ID only: A, B, or C.",
+      "oracle_status": {
+        "X": {
+          "compatible": [
+            "K"
+          ],
+          "outcomes": {
+            "green": [
+              "K"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        },
+        "Y": {
+          "compatible": [
+            "L",
+            "M",
+            "K",
+            "J"
+          ],
+          "outcomes": {
+            "square": [
+              "L"
+            ],
+            "round": [
+              "M"
+            ],
+            "oval": [
+              "K"
+            ],
+            "triangular": [
+              "J"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        }
+      }
+    },
+    {
+      "kind": "behavior",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "y_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-objects-0000-XY-y_resolved"
+      },
+      "prompt": "This is an optional, ungraded information choice. There is no instruction to prefer either mystery or to use the credit.\nThere are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved shape: oval.\n\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAvailable actions:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nChoose one action ID only: A, B, or C.",
+      "oracle_status": {
+        "X": {
+          "compatible": [
+            "K",
+            "L",
+            "J",
+            "M"
+          ],
+          "outcomes": {
+            "green": [
+              "K"
+            ],
+            "blue": [
+              "L"
+            ],
+            "gold": [
+              "J"
+            ],
+            "red": [
+              "M"
+            ]
+          },
+          "information_bits_uniform_prior": 2.0,
+          "decisive": true,
+          "redundant": false
+        },
+        "Y": {
+          "compatible": [
+            "K"
+          ],
+          "outcomes": {
+            "oval": [
+              "K"
+            ]
+          },
+          "information_bits_uniform_prior": 0.0,
+          "decisive": false,
+          "redundant": true
+        }
+      }
+    },
+    {
+      "kind": "identify_x",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "x_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-identify_x",
+        "kind": "identify_x"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved color: green.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\nMatch the evidence for mystery X to its table. Which candidate is hidden in mystery X? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": "K"
+    },
+    {
+      "kind": "identify_y",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "y_resolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-identify_y",
+        "kind": "identify_y"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved shape: oval.\nMatch the evidence for mystery Y to its table. Which candidate is hidden in mystery Y? Reply with one candidate ID only: J, K, L, or M.",
+      "labels": "JKLM",
+      "expected": "K"
+    },
+    {
+      "kind": "instrument_x",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-instrument_x",
+        "kind": "instrument_x"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. \nAvailable actions:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nFor this diagnostic, your goal is to identify mystery X's hidden candidate. Which action gives enough new evidence to identify mystery X? Reply with one action ID only: A, B, or C.",
+      "labels": "ABC",
+      "expected": "C"
+    },
+    {
+      "kind": "instrument_y",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-instrument_y",
+        "kind": "instrument_y"
+      },
+      "prompt": "There are two separate mysteries, X and Y. Their hidden candidates are independent.\n\nMystery X:\nOne object from this complete table generated the observations.\nK: color=green, shape=oval, material=metal\nL: color=blue, shape=square, material=metal\nJ: color=gold, shape=round, material=metal\nM: color=red, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\n\nMystery Y:\nOne object from this complete table generated the observations.\nL: color=gold, shape=square, material=metal\nM: color=red, shape=round, material=metal\nK: color=blue, shape=oval, material=metal\nJ: color=green, shape=triangular, material=metal\nObserved evidence:\nObserved material: metal.\nObserved material: metal.\nYou have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. \nAvailable actions:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nFor this diagnostic, your goal is to identify mystery Y's hidden candidate. Which action gives enough new evidence to identify mystery Y? Reply with one action ID only: A, B, or C.",
+      "labels": "ABC",
+      "expected": "B"
+    },
+    {
+      "kind": "exclusive_x",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-exclusive_x",
+        "kind": "exclusive_x"
+      },
+      "prompt": "You have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAction menu:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nSuppose you select action C. Which description states what happens?\nA: Only the clue for Y is delivered; the clue for X cannot be requested afterward.\nB: Only the clue for X is delivered; the clue for Y cannot be requested afterward.\nC: Neither clue is delivered, and the trial ends.\nD: Both clues are delivered, one after the other.\nReply with one description ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "B"
+    },
+    {
+      "kind": "exclusive_y",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-exclusive_y",
+        "kind": "exclusive_y"
+      },
+      "prompt": "You have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAction menu:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nSuppose you select action B. Which description states what happens?\nA: Neither clue is delivered, and the trial ends.\nB: Only the clue for X is delivered; the clue for Y cannot be requested afterward.\nC: Both clues are delivered, one after the other.\nD: Only the clue for Y is delivered; the clue for X cannot be requested afterward.\nReply with one description ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "D"
+    },
+    {
+      "kind": "decline",
+      "assignment": {
+        "assay": "one_credit",
+        "family": "objects",
+        "index": 0,
+        "seed": 20261006,
+        "item_indices": [
+          0,
+          1
+        ],
+        "condition": "both_unresolved",
+        "layout": "XY",
+        "mapping": {
+          "A": "stop",
+          "B": "Y",
+          "C": "X"
+        },
+        "menu_order": [
+          "C",
+          "B",
+          "A"
+        ],
+        "sampling_seed": 891090572,
+        "trial_id": "credit-check-objects-0000-decline",
+        "kind": "decline"
+      },
+      "prompt": "You have one information credit. It can reveal the offered clue for X OR the offered clue for Y, but not both. After choosing, the selected clue is shown and the trial ends. The other clue cannot be requested later. Declining gives neither clue and ends the trial. Previously shown evidence remains known. There are no later questions, scores, rewards, or future trials affected by this choice.\nAction menu:\nC: Reveal the hidden object's color for mystery X, then end the trial. No clue for mystery Y will be delivered.\nB: Reveal the hidden object's shape for mystery Y, then end the trial. No clue for mystery X will be delivered.\nA: Decline both clues and end the trial.\nSuppose you select action A. Which description states what happens?\nA: Only the clue for Y is delivered; the clue for X cannot be requested afterward.\nB: Only the clue for X is delivered; the clue for Y cannot be requested afterward.\nC: Neither clue is delivered, and the trial ends.\nD: Both clues are delivered, one after the other.\nReply with one description ID only: A, B, C, or D.",
+      "labels": "ABCD",
+      "expected": "C"
+    }
+  ]
+}

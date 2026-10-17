@@ -1,0 +1,13 @@
+# Source numerical stack: pinned Pain-axis profile commit
+# 4d75cd90e206ea962f7a9101e65c85efea56723b.
+# Resolve with the official PyTorch cu130 wheel index; the generated lock binds
+# all transitive distributions. No model execution occurs during resolution.
+torch==2.11.0+cu130
+numpy==2.3.4
+scipy==1.16.3
+transformers==5.12.1
+peft==0.20.0
+accelerate==1.15.0
+huggingface-hub==1.16.1
+safetensors==0.6.2
+nvidia-ml-py

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/a/review_c_preflight_v3.py", line 117, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/a/review_c_preflight_v3.py", line 28, in main
+    assert corrected_domain.replace("'permutation_index': ((i//3) + 2*(i%3)) % 6", "'permutation_index': (i//3) % 6")==original_domain
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

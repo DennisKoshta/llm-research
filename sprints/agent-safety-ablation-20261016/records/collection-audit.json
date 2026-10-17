@@ -1,0 +1,537 @@
+{
+  "artifact_gib": 2.6281112655997276,
+  "checks": {
+    "finite_5120_vector": 25760,
+    "job_coverage": 622,
+    "job_input_hashes": 622,
+    "model_environment": 622,
+    "projection_job_coverage": 622,
+    "prompt_sampling_provenance": 18042
+  },
+  "created": 1792182080.5861838,
+  "deferred_jobs": 0,
+  "done_jobs": 622,
+  "errors": [],
+  "failed_attempts": [],
+  "maximum_rpc_seconds": 76.800541639328,
+  "passed": true,
+  "pending_jobs": 0,
+  "profiles": {
+    "ta-01M5326FQXTSE8G8Q4AGX7DJ7R": {
+      "first_job": 1792178149.6746678,
+      "jobs": 36,
+      "last_job": 1792178383.4742012,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 63.363907700000006,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 67455768576
+    },
+    "ta-01M53294N9KNZGSK957Z8HCT2R": {
+      "first_job": 1792178214.2466547,
+      "jobs": 1,
+      "last_job": 1792178223.79334,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 41.651463363999994,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 67104247808
+    },
+    "ta-01M532DDZ3WA3D1RS8P5T51G4R": {
+      "first_job": 1792178372.1429641,
+      "jobs": 1,
+      "last_job": 1792178381.0382316,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 61.145114723,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 67454744576
+    },
+    "ta-01M532W4NQ65FZ77JCZRE84DAR": {
+      "first_job": 1792178837.017733,
+      "jobs": 24,
+      "last_job": 1792179113.785163,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 44.393837415,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 67624940032
+    },
+    "ta-01M532W4NQQRY3KXBNSKKB3TVR": {
+      "first_job": 1792178848.7456012,
+      "jobs": 16,
+      "last_job": 1792179053.5049338,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 55.551692601999996,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 67123521536
+    },
+    "ta-01M5334G18WW8F636HD2SR4M2R": {
+      "first_job": 1792179104.8991182,
+      "jobs": 2,
+      "last_job": 1792179116.1410894,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 34.817261343,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 67623850496
+    },
+    "ta-01M533NTM5BC6WTMSYFMGEZM1R": {
+      "first_job": 1792179674.203489,
+      "jobs": 16,
+      "last_job": 1792179701.9153466,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 38.413722123,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 66337175552
+    },
+    "ta-01M533NTM5QHBGE1REKCDNJFDR": {
+      "first_job": 1792179688.8559787,
+      "jobs": 8,
+      "last_job": 1792179703.4213228,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 52.555093751,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 66337175552
+    },
+    "ta-01M5340SAAME3KTC7NABVMYV2R": {
+      "first_job": 1792180026.3903794,
+      "jobs": 48,
+      "last_job": 1792180271.7774072,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 32.043590705,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 75559739904
+    },
+    "ta-01M5340SDKNS5P8ZPTY0EDXKPR": {
+      "first_job": 1792180046.3660555,
+      "jobs": 33,
+      "last_job": 1792180274.0412333,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 50.216253868,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 74561575936
+    },
+    "ta-01M534J6SQCZ1ZY9DAKPPZTRCR": {
+      "first_job": 1792180604.7135882,
+      "jobs": 225,
+      "last_job": 1792181986.6820087,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 41.105866037,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 74502495232
+    },
+    "ta-01M534J6SQWN0NEM78MHARSH0R": {
+      "first_job": 1792180599.8986988,
+      "jobs": 212,
+      "last_job": 1792181985.1971638,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 36.282708658,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "projection": "rank-one FP32 subtraction cast to activation dtype at every decoder input, attention output and MLP output; all positions and generation forwards; no weight mutation",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "refusal_projection_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 74533179392
+    }
+  },
+  "running_jobs": 0,
+  "scope": "Engineering coverage/provenance/capture audit, separate from experiment-specific scientific qualification. Failed startup and development gates retained.",
+  "workflows": {
+    "a": {
+      "calls": 2016,
+      "capture_rows": 2016,
+      "generated_tokens": 4122,
+      "input_tokens": 608160,
+      "jobs": 68,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.6922799616966248,
+      "stage_extension": 1296,
+      "stage_pilot": 720
+    },
+    "b": {
+      "calls": 9144,
+      "capture_rows": 9144,
+      "generated_tokens": 18294,
+      "input_tokens": 2895216,
+      "jobs": 296,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 1.5925650024246973,
+      "stage_confirmation": 7128,
+      "stage_pilot": 2016
+    },
+    "c": {
+      "calls": 3906,
+      "capture_rows": 2664,
+      "generated_tokens": 62527,
+      "input_tokens": 1404220,
+      "jobs": 154,
+      "non_eos_rows": 1,
+      "rpc_attributed_usd": 1.4195390132771306,
+      "stage_confirmation": 3384,
+      "stage_pilot": 522
+    },
+    "shared": {
+      "calls": 2976,
+      "capture_rows": 272,
+      "generated_tokens": 111756,
+      "input_tokens": 113904,
+      "jobs": 104,
+      "non_eos_rows": 893,
+      "rpc_attributed_usd": 1.2344652064349366,
+      "stage_engineering": 16,
+      "stage_pilot": 2960
+    }
+  }
+}

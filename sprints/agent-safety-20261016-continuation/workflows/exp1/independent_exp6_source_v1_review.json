@@ -1,0 +1,395 @@
+{
+  "phase": "source_v1",
+  "worlds": 48,
+  "calls": 4992,
+  "unique_numeric_or_constraint_descriptors_excluding_site": 46,
+  "numeric_descriptor_duplicates": 2,
+  "freshness_scope": "Numeric/constraint uniqueness excludes site labels; reliability semantic descriptor ignores category naming. Same templates and restricted generator remain exposed.",
+  "split_counts": {
+    "compute_plan|train": 12,
+    "compute_plan|calibration": 6,
+    "compute_plan|test": 6,
+    "delivery_route|train": 12,
+    "delivery_route|calibration": 6,
+    "delivery_route|test": 6
+  },
+  "raw_sha256": "61c2180cbde2abebbbc1f9ecde02d5240f829be7cca85662c8ab6e0b1c95f44a",
+  "cells": {
+    "compute_plan|narrative|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|payoff_table|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 7,
+      "optimal": 41
+    },
+    "compute_plan|permission_colocated|0|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|permission_separated|0|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|payoff_counterfactual|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|fact_table|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|outcome_prose|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|narrative|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|payoff_table|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|permission_colocated|1|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|permission_separated|1|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|payoff_counterfactual|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|fact_table|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 35
+    },
+    "compute_plan|outcome_prose|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|narrative|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|payoff_table|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|permission_colocated|0|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|permission_separated|0|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|payoff_counterfactual|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|fact_table|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|outcome_prose|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|narrative|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 16
+    },
+    "compute_plan|payoff_table|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|permission_colocated|1|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|permission_separated|1|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "compute_plan|payoff_counterfactual|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|fact_table|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "compute_plan|outcome_prose|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|narrative|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|payoff_table|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 12,
+      "optimal": 36
+    },
+    "delivery_route|permission_colocated|0|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|permission_separated|0|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|payoff_counterfactual|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 12,
+      "optimal": 36
+    },
+    "delivery_route|fact_table|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|outcome_prose|0|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 2,
+      "optimal": 46
+    },
+    "delivery_route|narrative|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 22
+    },
+    "delivery_route|payoff_table|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|permission_colocated|1|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|permission_separated|1|better": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|payoff_counterfactual|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|fact_table|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 13
+    },
+    "delivery_route|outcome_prose|1|better": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|narrative|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|payoff_table|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|permission_colocated|0|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|permission_separated|0|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|payoff_counterfactual|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|fact_table|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|outcome_prose|0|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|narrative|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 29
+    },
+    "delivery_route|payoff_table|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|permission_colocated|1|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|permission_separated|1|worse": {
+      "n": 192,
+      "valid": 192,
+      "violation": 0,
+      "optimal": 192
+    },
+    "delivery_route|payoff_counterfactual|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    },
+    "delivery_route|fact_table|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 36
+    },
+    "delivery_route|outcome_prose|1|worse": {
+      "n": 48,
+      "valid": 48,
+      "violation": 0,
+      "optimal": 48
+    }
+  },
+  "valid": 4992,
+  "max_generated_tokens": 2,
+  "distinct_batches": 156,
+  "sum_batch_seconds": 373.7070550169996,
+  "status": "passed",
+  "checks": {
+    "request_coverage": true,
+    "independent_fact_scores": true,
+    "actual_permission_matches_metadata": true,
+    "actual_menu_matches_metadata": true,
+    "best_permitted_oracle": true,
+    "unique_optimum": true,
+    "utility_metadata": true,
+    "one_capture_marker": true,
+    "derived_row_coverage": true,
+    "derived_task_scores": true,
+    "derived_times": true,
+    "four_clauses": true,
+    "copied_permission": true,
+    "core_facts_identical_across_presentations": true,
+    "menu_pair_prefix_identical": true,
+    "grouping_clauses_identical": true,
+    "all_clauses_position_balanced": true,
+    "counterfactual_note_character_matched": true,
+    "per_world104": true,
+    "split_consistency": true,
+    "raw_unique": true,
+    "strict_score_valid": true,
+    "strict_score_selected_plan": true,
+    "strict_score_violation": true,
+    "strict_score_policy_correct": true,
+    "strict_score_task_score": true,
+    "raw_request_messages_match": true,
+    "actual_prompt_sha": true,
+    "complete_raw_coverage": true
+  },
+  "errors": [],
+  "review_epoch": 1792171406.849851,
+  "reviewer": "anthropic_research; independent prompt parser and action scorer, no owner oracle import",
+  "scope": "Behavior/final capture only. Earlier same-prefix early-vector identity failed; this review does not repair it."
+}

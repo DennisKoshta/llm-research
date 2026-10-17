@@ -1,0 +1,1253 @@
+{
+  "passed": true,
+  "checks": {
+    "complete4320unique_coverage": true,
+    "frozen_preflight_passed": true,
+    "actual_permission_oracle_all4320": true,
+    "actual_label_maps_all4320": true,
+    "rendered_hashes_all4320": true,
+    "messages_equal_frozen_requests": true,
+    "strict_EOS_cap_allvalid": true,
+    "probabilities_valid_positive_subset": true,
+    "all72cells_per60worlds": true,
+    "all72cell_counts_match": true,
+    "all960world_contrast_values_match": true,
+    "all80contrasts_intervals_match": true,
+    "exact2_coprimary_tests": true
+  },
+  "coprimary": {
+    "1/clause_interaction/letter_hard": {
+      "mean": -0.10833333333333334,
+      "interval": [
+        -0.18333333333333332,
+        -0.03333333333333333
+      ],
+      "per_contrast_coverage": 0.975,
+      "coprimary": true,
+      "invalid_identification_bounds": [
+        -0.10833333333333334,
+        -0.10833333333333334
+      ]
+    },
+    "1/clause_interaction/letter_FLAG": {
+      "mean": -0.8229166607998695,
+      "interval": [
+        -1.1271093759284894,
+        -0.5145833270881728
+      ],
+      "per_contrast_coverage": 0.975,
+      "coprimary": true
+    }
+  },
+  "secondary": {
+    "0/clause_interaction/letter_hard": {
+      "mean": 0.09166666666666666,
+      "interval": [
+        0.041666666666666664,
+        0.14166666666666666
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.09166666666666666,
+        0.09166666666666666
+      ]
+    },
+    "0/clause_interaction/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/clause_interaction/letter_FLAG": {
+      "mean": 2.371874989029455,
+      "interval": [
+        2.1479166561790755,
+        2.593776044741465
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/clause_interaction/letter_common_A": {
+      "mean": -0.47395833609687293,
+      "interval": [
+        -0.587500012607743,
+        -0.36249999907025326
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/clause_interaction/semantic_firstbranch": {
+      "mean": 1.021874985193114,
+      "interval": [
+        0.7677083147400188,
+        1.2802083144695846
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_replication/letter_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/original_replication/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/original_replication/letter_FLAG": {
+      "mean": 0.2114583390954655,
+      "interval": [
+        0.048958331288274745,
+        0.3729166743915383
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_replication/letter_common_A": {
+      "mean": 0.0781250017279132,
+      "interval": [
+        -0.050026052594845466,
+        0.20520834219740558
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_replication/semantic_firstbranch": {
+      "mean": -0.6843750045567062,
+      "interval": [
+        -0.9395833369563571,
+        -0.4218749982916174
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_vs_clean_pointer/letter_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/original_vs_clean_pointer/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/original_vs_clean_pointer/letter_FLAG": {
+      "mean": -0.6989583374158078,
+      "interval": [
+        -0.8739843925985861,
+        -0.5197916701226732
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_vs_clean_pointer/letter_common_A": {
+      "mean": 0.3427083251418639,
+      "interval": [
+        0.21874998854155825,
+        0.46562499790946227
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_vs_clean_pointer/semantic_firstbranch": {
+      "mean": -1.4666666721885764,
+      "interval": [
+        -1.766666679454041,
+        -1.1583333405586962
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_first_alone/letter_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/original_first_alone/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/original_first_alone/letter_FLAG": {
+      "mean": 0.4187499997669766,
+      "interval": [
+        0.24895833571725076,
+        0.595833331715066
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_first_alone/letter_common_A": {
+      "mean": 0.056249999067628155,
+      "interval": [
+        -0.036458335744209466,
+        0.1489583318303652
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/original_first_alone/semantic_firstbranch": {
+      "mean": 0.167708339454614,
+      "interval": [
+        -0.08752603420718608,
+        0.44062500210374433
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/second_alone/letter_hard": {
+      "mean": -0.09166666666666666,
+      "interval": [
+        -0.14166666666666666,
+        -0.05
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        -0.09166666666666666,
+        -0.09166666666666666
+      ]
+    },
+    "0/second_alone/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/second_alone/letter_FLAG": {
+      "mean": -3.4895833262122387,
+      "interval": [
+        -3.70416666206623,
+        -3.2729166610278506
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/second_alone/letter_common_A": {
+      "mean": 0.7604166621711088,
+      "interval": [
+        0.6499999950361203,
+        0.8687499996221585
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/second_alone/semantic_firstbranch": {
+      "mean": -2.656249996836304,
+      "interval": [
+        -2.896874995096966,
+        -2.406249989914343
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_prefix_without_tail/letter_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/selfcheck_prefix_without_tail/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/selfcheck_prefix_without_tail/letter_FLAG": {
+      "mean": 1.6312500042994345,
+      "interval": [
+        1.5291666705985507,
+        1.7385416657417954
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_prefix_without_tail/letter_common_A": {
+      "mean": -0.18124999683091447,
+      "interval": [
+        -0.25624999764331674,
+        -0.10624999901544457
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_prefix_without_tail/semantic_firstbranch": {
+      "mean": 1.627083343505676,
+      "interval": [
+        1.48229168483833,
+        1.7739583472913691
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_prefix_with_tail/letter_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/selfcheck_prefix_with_tail/semantic_hard": {
+      "mean": 0.016666666666666666,
+      "interval": [
+        0.0,
+        0.041666666666666664
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.016666666666666666,
+        0.016666666666666666
+      ]
+    },
+    "0/selfcheck_prefix_with_tail/letter_FLAG": {
+      "mean": 1.4218749990438921,
+      "interval": [
+        1.3010416633269182,
+        1.5458593900867388
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_prefix_with_tail/letter_common_A": {
+      "mean": -0.31562500170199986,
+      "interval": [
+        -0.3885677169961307,
+        -0.24166667080012005
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_prefix_with_tail/semantic_firstbranch": {
+      "mean": 1.6031249932508962,
+      "interval": [
+        1.471848944115693,
+        1.7427343759726912
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_alone/letter_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "0/selfcheck_alone/semantic_hard": {
+      "mean": -0.008333333333333333,
+      "interval": [
+        -0.025,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        -0.008333333333333333,
+        -0.008333333333333333
+      ]
+    },
+    "0/selfcheck_alone/letter_FLAG": {
+      "mean": -0.9833333381821027,
+      "interval": [
+        -1.0895833362188287,
+        -0.8770833328890003
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_alone/letter_common_A": {
+      "mean": 0.34166666030795934,
+      "interval": [
+        0.2604166581716031,
+        0.4249999935049902
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "0/selfcheck_alone/semantic_firstbranch": {
+      "mean": -1.1427083396372708,
+      "interval": [
+        -1.3041666660692721,
+        -0.9802083529162817
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/clause_interaction/semantic_hard": {
+      "mean": -0.09166666666666666,
+      "interval": [
+        -0.15,
+        -0.041666666666666664
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        -0.09166666666666666,
+        -0.09166666666666666
+      ]
+    },
+    "1/clause_interaction/letter_common_A": {
+      "mean": 0.5145833441247789,
+      "interval": [
+        0.4000000235339434,
+        0.6250000063030524
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/clause_interaction/semantic_firstbranch": {
+      "mean": -1.6145833432015066,
+      "interval": [
+        -1.825000015231026,
+        -1.3937239599892115
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_replication/letter_hard": {
+      "mean": 0.3,
+      "interval": [
+        0.21666666666666667,
+        0.38333333333333336
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.3,
+        0.3
+      ]
+    },
+    "1/original_replication/semantic_hard": {
+      "mean": 0.03333333333333333,
+      "interval": [
+        0.0,
+        0.075
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.03333333333333333,
+        0.03333333333333333
+      ]
+    },
+    "1/original_replication/letter_FLAG": {
+      "mean": 3.72500000386188,
+      "interval": [
+        3.5187500045993505,
+        3.933333330159386
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_replication/letter_common_A": {
+      "mean": -0.233333327192976,
+      "interval": [
+        -0.3812499979986934,
+        -0.081250003886444
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_replication/semantic_firstbranch": {
+      "mean": 2.345833330517975,
+      "interval": [
+        2.1479166716928737,
+        2.5416927090642427
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_vs_clean_pointer/letter_hard": {
+      "mean": 0.2833333333333333,
+      "interval": [
+        0.2,
+        0.36666666666666664
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.2833333333333333,
+        0.2833333333333333
+      ]
+    },
+    "1/original_vs_clean_pointer/semantic_hard": {
+      "mean": 0.03333333333333333,
+      "interval": [
+        0.0,
+        0.075
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.03333333333333333,
+        0.03333333333333333
+      ]
+    },
+    "1/original_vs_clean_pointer/letter_FLAG": {
+      "mean": 4.160416662235199,
+      "interval": [
+        3.8686979095308565,
+        4.447916657866864
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_vs_clean_pointer/letter_common_A": {
+      "mean": -0.18958332950608486,
+      "interval": [
+        -0.3688020931188448,
+        -0.012499996611054887
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_vs_clean_pointer/semantic_firstbranch": {
+      "mean": 3.0562499992221808,
+      "interval": [
+        2.8156249978308616,
+        3.291666667708533
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_first_alone/letter_hard": {
+      "mean": 0.4083333333333333,
+      "interval": [
+        0.31666666666666665,
+        0.5083333333333333
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.4083333333333333,
+        0.4083333333333333
+      ]
+    },
+    "1/original_first_alone/semantic_hard": {
+      "mean": 0.11666666666666667,
+      "interval": [
+        0.058333333333333334,
+        0.19166666666666668
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.11666666666666667,
+        0.11666666666666667
+      ]
+    },
+    "1/original_first_alone/letter_FLAG": {
+      "mean": 4.5937499869591845,
+      "interval": [
+        4.320781227950937,
+        4.868749994266652
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_first_alone/letter_common_A": {
+      "mean": -0.40625000510764536,
+      "interval": [
+        -0.5375000089666905,
+        -0.2770833320882858
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/original_first_alone/semantic_firstbranch": {
+      "mean": 3.9145833315234997,
+      "interval": [
+        3.699999995810599,
+        4.1218749932409064
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/second_alone/letter_hard": {
+      "mean": -0.016666666666666666,
+      "interval": [
+        -0.05,
+        0.016666666666666666
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        -0.016666666666666666,
+        -0.016666666666666666
+      ]
+    },
+    "1/second_alone/semantic_hard": {
+      "mean": 0.008333333333333333,
+      "interval": [
+        0.0,
+        0.025
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.008333333333333333,
+        0.008333333333333333
+      ]
+    },
+    "1/second_alone/letter_FLAG": {
+      "mean": 0.38958333607588347,
+      "interval": [
+        0.16875001891990485,
+        0.6124999958897062
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/second_alone/letter_common_A": {
+      "mean": -0.2979166685232183,
+      "interval": [
+        -0.4041666736087551,
+        -0.1854166703591072
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/second_alone/semantic_firstbranch": {
+      "mean": 0.7562500109001878,
+      "interval": [
+        0.5906250127180884,
+        0.9114583417777111
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_prefix_without_tail/letter_hard": {
+      "mean": 0.4083333333333333,
+      "interval": [
+        0.31666666666666665,
+        0.5
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.4083333333333333,
+        0.4083333333333333
+      ]
+    },
+    "1/selfcheck_prefix_without_tail/semantic_hard": {
+      "mean": 0.11666666666666667,
+      "interval": [
+        0.058333333333333334,
+        0.19166666666666668
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.11666666666666667,
+        0.11666666666666667
+      ]
+    },
+    "1/selfcheck_prefix_without_tail/letter_FLAG": {
+      "mean": 2.4895833293155847,
+      "interval": [
+        2.3479166634235136,
+        2.631249987482859
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_prefix_without_tail/letter_common_A": {
+      "mean": 0.05624999159338035,
+      "interval": [
+        -0.012500009942856733,
+        0.12500000083475782
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_prefix_without_tail/semantic_firstbranch": {
+      "mean": 1.744791662904588,
+      "interval": [
+        1.6197916732448427,
+        1.871874998112282
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_prefix_with_tail/letter_hard": {
+      "mean": 0.2833333333333333,
+      "interval": [
+        0.20833333333333334,
+        0.35833333333333334
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.2833333333333333,
+        0.2833333333333333
+      ]
+    },
+    "1/selfcheck_prefix_with_tail/semantic_hard": {
+      "mean": 0.03333333333333333,
+      "interval": [
+        0.0,
+        0.075
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.03333333333333333,
+        0.03333333333333333
+      ]
+    },
+    "1/selfcheck_prefix_with_tail/letter_FLAG": {
+      "mean": 1.622916662584257,
+      "interval": [
+        1.4937499990694119,
+        1.7624999910800547
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_prefix_with_tail/letter_common_A": {
+      "mean": 0.010416661742804959,
+      "interval": [
+        -0.05416666263936681,
+        0.07291666205882584
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_prefix_with_tail/semantic_firstbranch": {
+      "mean": 1.3218750029214876,
+      "interval": [
+        1.1739583304768026,
+        1.4708333350505887
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_alone/letter_hard": {
+      "mean": -0.008333333333333333,
+      "interval": [
+        -0.025,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        -0.008333333333333333,
+        -0.008333333333333333
+      ]
+    },
+    "1/selfcheck_alone/semantic_hard": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false,
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "1/selfcheck_alone/letter_FLAG": {
+      "mean": 0.018750003349204587,
+      "interval": [
+        -0.11666666354678594,
+        0.15625000780864193
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_alone/letter_common_A": {
+      "mean": -0.0979166681767166,
+      "interval": [
+        -0.19166667034997342,
+        -0.002083333549409713
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    },
+    "1/selfcheck_alone/semantic_firstbranch": {
+      "mean": 0.29166667893700127,
+      "interval": [
+        0.1468750142146479,
+        0.43125000025187427
+      ],
+      "per_contrast_coverage": 0.95,
+      "coprimary": false
+    }
+  },
+  "condition_counts": {
+    "1/letter_flag_A/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 2
+    },
+    "1/letter_flag_A/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 32
+    },
+    "0/letter_flag_A/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/letter_flag_B/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/words_flag_first/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/words_flag_first/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_flag_first/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_flag_first/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_clear_first/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/letter_flag_B/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/letter_flag_B/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/letter_flag_A/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_flag_first/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 10
+    },
+    "1/letter_flag_B/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/words_clear_first/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 1
+    },
+    "1/letter_flag_A/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 3
+    },
+    "0/letter_flag_A/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/letter_flag_B/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_flag_first/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/letter_flag_A/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 7
+    },
+    "0/letter_flag_B/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 49
+    },
+    "0/words_clear_first/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 58
+    },
+    "0/letter_flag_A/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/letter_flag_B/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 14
+    },
+    "1/letter_flag_B/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/words_clear_first/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_clear_first/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/letter_flag_A/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 4
+    },
+    "0/words_flag_first/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/letter_flag_B/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/letter_flag_A/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_clear_first/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/words_flag_first/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/letter_flag_A/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_flag_first/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 2
+    },
+    "0/letter_flag_A/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_clear_first/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 4
+    },
+    "1/words_flag_first/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/words_flag_first/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_flag_first/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/letter_flag_B/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_flag_first/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/letter_flag_B/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_clear_first/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_clear_first/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/words_clear_first/selfcheck_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 59
+    },
+    "1/letter_flag_B/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 6
+    },
+    "1/letter_flag_A/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 39
+    },
+    "0/letter_flag_B/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/letter_flag_A/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_clear_first/none_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_flag_first/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/words_flag_first/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/words_clear_first/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 2
+    },
+    "0/letter_flag_B/selfcheck_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 56
+    },
+    "0/letter_flag_B/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_clear_first/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/words_clear_first/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/words_clear_first/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/letter_flag_B/original_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_flag_first/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/letter_flag_B/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/letter_flag_A/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 4
+    },
+    "1/words_flag_first/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "0/words_flag_first/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_clear_first/original_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "1/letter_flag_A/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 2
+    },
+    "1/words_clear_first/none_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 0
+    },
+    "1/letter_flag_A/plain_tail0": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 4
+    },
+    "0/letter_flag_A/plain_tail1": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/words_clear_first/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    },
+    "0/letter_flag_B/legacy_neutral": {
+      "n": 60,
+      "valid": 60,
+      "flagged": 60
+    }
+  },
+  "probability_audit": {
+    "out_of_range": 0,
+    "zero": 0,
+    "pair_mass_above_one": 0
+  },
+  "first_branch_coverage": {
+    "letter": {
+      "n": 2160,
+      "first_token_matches": 2160
+    },
+    "semantic": {
+      "n": 2160,
+      "first_token_matches": 2160
+    }
+  },
+  "source_hashes": {
+    "requests": "9bbf25fb5c8d1839c95a5eb5402afafeeb5105d7e445c677b7ea98b6dffea415",
+    "raw_gz": "14a6a1751b858719d6179a21d411aa16ede39c88b7b6ae29f2893c054fce1a08",
+    "analysis": "8017c49ce5a20c3be2b23e80ae44489f36f5b579f765ae5255982252fb2d03ad"
+  },
+  "scope": "All actual permission/format/raw validity records and fixed clause contrasts independently reconstructed. No owner scorer imports or model calls. Output-score interaction is not a neural mechanism; firstbranch VI is not fullsequence VIOLATION probability. Fixed strings and three exposed templates; failed v1 preflight remains retained."
+}

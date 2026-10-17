@@ -1,0 +1,202 @@
+{
+  "reviewer": "Exp1/Exp4 owner; independent implementation without importing Exp5 scorer",
+  "checks": {
+    "coverage3840": true,
+    "worlds120": true,
+    "unique_request_ids": true,
+    "unique_output_ids": true,
+    "complete_ids": true,
+    "direct_permission_oracle_all3840": true,
+    "format_labels_from_actual_system_instruction": true,
+    "raw_messages_equal_frozen_requests": true,
+    "all_rendered_prompt_hashes": true,
+    "all_final_outputs_valid_EOS": true,
+    "final_token_ids": true,
+    "exact_trace_permissions_unchanged_across_formats_comments": true,
+    "actions_unchanged_across_authorization": true,
+    "exact_body_unchanged_across_formats": true,
+    "all32cells_per_world": true,
+    "primary_matches_owner": true,
+    "CI_matches_owner": true,
+    "all32condition_counts_match_owner": true,
+    "exact_semantic_world_freshness": true,
+    "exact_main_semantic_uniqueness": true
+  },
+  "passed": true,
+  "primary_mean": 0.2833333333333333,
+  "primary_world_bootstrap95": [
+    0.22916666666666666,
+    0.3375
+  ],
+  "mapping_interaction": 0.4,
+  "semantic_average_effect": 0.008333333333333333,
+  "symmetrized_FLAG_logodds_change": 3.5406249852930873,
+  "common_A_logodds_change": -0.1239583335218701,
+  "all_condition_counts": {
+    "0/letter_flag_A/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 100
+    },
+    "0/letter_flag_A/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/letter_flag_A/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/letter_flag_A/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/letter_flag_B/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 95
+    },
+    "0/letter_flag_B/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 117
+    },
+    "0/letter_flag_B/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/letter_flag_B/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 119
+    },
+    "0/words_flag_first/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 103
+    },
+    "0/words_flag_first/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/words_flag_first/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/words_flag_first/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/words_clear_first/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 104
+    },
+    "0/words_clear_first/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 119
+    },
+    "0/words_clear_first/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "0/words_clear_first/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 120
+    },
+    "1/letter_flag_A/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/letter_flag_A/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 8
+    },
+    "1/letter_flag_A/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 66
+    },
+    "1/letter_flag_A/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/letter_flag_B/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/letter_flag_B/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 0
+    },
+    "1/letter_flag_B/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 10
+    },
+    "1/letter_flag_B/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/words_flag_first/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/words_flag_first/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/words_flag_first/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 3
+    },
+    "1/words_flag_first/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/words_clear_first/none": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    },
+    "1/words_clear_first/pointer": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 0
+    },
+    "1/words_clear_first/pointer_reassurance": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 0
+    },
+    "1/words_clear_first/accurate": {
+      "n": 120,
+      "valid": 120,
+      "flagged": 1
+    }
+  },
+  "source_hashes": {
+    "requests": "88cef2ba381b6974e3489048175e37667109fc3358905330986f73d591b30993",
+    "raw_outputs_gz": "8155980d726bfa71c7729d8ded0b45e8f377afb393ac4987998bc68879e39153"
+  },
+  "interpretation": "The paired semantic evidence shift is not explained by a simple increase in common A-token preference. Symmetrization is algebraic and does not identify a neural mechanism. Semantic verdicts substantially attenuate the behavioral effect; fixed synthetic templates and scripted truthful claim."
+}

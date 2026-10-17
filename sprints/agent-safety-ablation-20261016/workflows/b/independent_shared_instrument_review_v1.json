@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "checks": {
+    "all_frozen_shared_source_hashes": true,
+    "all_frozen_data_hashes": true,
+    "harmful_train_count": true,
+    "harmful_train_source_records_exact": true,
+    "harmless_train_count": true,
+    "harmless_train_source_records_exact": true,
+    "harmful_val_count": true,
+    "harmful_val_source_records_exact": true,
+    "harmless_val_count": true,
+    "harmless_val_source_records_exact": true,
+    "harmful_test_count": true,
+    "harmful_test_source_records_exact": true,
+    "harmless_test_count": true,
+    "harmless_test_source_records_exact": true,
+    "no_normalized_prompt_overlap_across_extraction_selection_heldout": true,
+    "val_24_exact_qa_oracles": true,
+    "test_24_exact_qa_oracles": true,
+    "qa_exact_prompt_split_disjoint": true,
+    "eight_candidate_grid": true,
+    "zero_sham_all_inputs_tokens_probabilities_captures_exact": true,
+    "baseline_after_all_inputs_tokens_probabilities_captures_exact": true,
+    "same_container": true,
+    "hook_inventory_clean_before_and_after": true,
+    "zero_sham_192_sites_prompt_and_generation": true,
+    "projected_192_sites_prompt_and_generation": true,
+    "both_hook_samples_exact_independent_cpu_projection": true
+  },
+  "max_abs_projection_errors": [
+    0.0,
+    0.0
+  ],
+  "bindings": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_engineering_v1_baseline--000000.json.gz": "62d74d81b499263b60c7a69f10db52bd1dabf8812cc2d9539f6be4ceb964d9e5",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_engineering_v1_zero_sham--000000.json.gz": "b402df0a50e027304c2f36224351820467b177066a4f0964d62bb3cd153498ec",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_engineering_v1_projected--000000.json.gz": "811d27bfb6c06a64375f59402243b31b2f9ddd1d61365a4ce140d3a971ccffe6",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_engineering_v1_baseline_after--000000.json.gz": "2dca3a5104e96d17d108886a3501e697881e05efddeb0559aa3d4346f35f9ef8",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/executions/instrument_v1/source-freeze.json": "0d0bbbc5ede9b344181a37180242dd83460a59d8949fddd1ca7da616e1ed031a",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/executions/instrument_v1/freeze.json": "9441cf96da94f5f36324400e7e9ea6d6207362eb3757b32b524316aecb25e51b"
+  },
+  "static_review": {
+    "candidate_selection": "Eight fixed candidates, 22/24 QA minimum and no more than two QA losses; ordered harmful-regex count, QA, harmless exact text, layer, negative position. This matches the frozen protocol.",
+    "heldout": "No qualification implementation is auto-invoked by instrument.py. It writes blinded semantic prefixes and a separate key. Science remains blocked pending independent semantic review and exact gate accounting.",
+    "exception_cleanup": "finally removes projection hooks. A deliberately induced exception was not part of the dynamic smoke.",
+    "misleading_protocol_field": "selection_has_no_response_outcomes refers to initial dataset sampling only; candidate ranking uses validation response outcomes explicitly. No A/B/C outcomes are used."
+  },
+  "scope": "No semantic held-out labels, arm mapping or A/B/C outcomes read; no additional inference."
+}

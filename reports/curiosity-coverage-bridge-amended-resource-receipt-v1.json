@@ -1,0 +1,139 @@
+{
+  "amended_resource_check_passed": true,
+  "assay": "curiosity_coverage_bridge_amended_resource_decision",
+  "assignment_sha256": "f1694430372c2c13a311580d0d4047046e7827f50bbe8cccde13ad6280470cb7",
+  "budget": {
+    "app_wall_estimate_not_invoice": true,
+    "available_after_full_ceiling_and_storage_usd": "77.21713708",
+    "available_after_maximum_liability_and_storage_usd": "79.63954348",
+    "fresh_admission_reconciliation_required": true,
+    "fresh_allowance_usd": "300.00",
+    "remaining_after_maximum_liability_usd": "89.63954348",
+    "remaining_before_reservations_usd": "207.21713708",
+    "retained_storage_reserve_usd": "10.00",
+    "spent_estimate_usd": "92.78286292"
+  },
+  "causal_admission": false,
+  "decision": "adopt_one_prospective_resource_only_amendment",
+  "engineering_effect_estimate_used": false,
+  "engineering_manifest_sha256": "6de4589af3e007ddba55440988f8f07ebabcf80f1e16f1d01584d017f8d9adf5",
+  "engineering_outputs_existed_at_decision": true,
+  "engineering_raw_input_files_sha256": "6e3ea63392de70ecf6badf4aa0588e4b59d6e184a449e43cc64f3bd8b97ac27e",
+  "forecast_values_recomputed": false,
+  "global_budget_admission": false,
+  "inputs": {
+    "amendment": {
+      "byte_sha256": "3e5309453bab1d11e9fae3b175c1256dd8b72463bbe0b63e338b5b7f94790f3f",
+      "path": "reports/curiosity-coverage-bridge-resource-amendment-v1.md"
+    },
+    "engineering_audit": {
+      "byte_sha256": "9dc852673306b3126ef711bfdcc1801d2f1836e7411e55594237e55e7d1c55d5",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/audit.json"
+    },
+    "engineering_cost": {
+      "byte_sha256": "ea404e2525813681ae2f74c223c0f2d91373080a8c9c15bc0c438ee10196b4ac",
+      "path": "reports/qwen32-curiosity-coverage-engineering-v1-cost-and-shutdown.json"
+    },
+    "engineering_lifecycle": {
+      "byte_sha256": "39f49bf75f7b324baed4b62c5796ce555fdb6737bc31db5d80f2812bc523de95",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/lifecycle-audit.json"
+    },
+    "engineering_manifest": {
+      "byte_sha256": "251526f44276f6477d0461a3a84c6bd86758f8db83a4d84870b6f8ab852fc7ab",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/manifest.json"
+    },
+    "engineering_summary": {
+      "byte_sha256": "1c59e3daf900232a1a4daecbe522acbefd4ed5d837891895e7a0ea0f8bdbef89",
+      "path": "runs/qwen32-curiosity-coverage-engineering-v1/engineering-summary.json"
+    },
+    "forecast_method": {
+      "byte_sha256": "d7bdacba2c03c629611da8e6d1b7417a4ab0ae1970dd12bb3fec45975d1d2f4d",
+      "path": "reports/curiosity-coverage-forecast-method.md"
+    },
+    "forecast_script": {
+      "byte_sha256": "b87bf0facd155fea0099bb1abb27b0cb624d9352d208b5e71caeed6d9faced7c",
+      "path": "scripts/forecast_curiosity_coverage_bridge.py"
+    },
+    "original_failed_forecast": {
+      "byte_sha256": "e4c1c794895d9b575fc60853cca07bc1a142b517305cf0c327becf4fbe41fdd6",
+      "path": "reports/curiosity-coverage-bridge-v1-feasibility.json"
+    },
+    "original_plan": {
+      "byte_sha256": "cf003d0fd11c0fdda73abe052fe971ef7800bc6e56e38251b268c205fd658eea",
+      "path": "reports/curiosity-coverage-bridge-v1-plan.md"
+    },
+    "scientific_collector": {
+      "byte_sha256": "7a5f43bfe64f3e0244d734cb6d9cf2cd6dbb75d2a0163be4a32b94b4bfbd0868",
+      "path": "src/curiosity_study/coverage_bridge.py"
+    },
+    "scientific_estimator": {
+      "byte_sha256": "7839834735a0c7c3ca43c82eb2ad95e3759253eee42363be2fa12dd8cac41cb4",
+      "path": "scripts/analyze_curiosity_coverage_bridge.py"
+    },
+    "scientific_materials": {
+      "byte_sha256": "0597313aff2a8cc04ac59c252c646d0dc301152b6012bbf24c5ea9f7164f25cb",
+      "path": "scripts/prepare_curiosity_coverage_bridge.py"
+    }
+  },
+  "limitations": [
+    "Explicit deviation from original stopping rule; v1 remains failed.",
+    "No scientific admission from this receipt alone.",
+    "Forecasts include existing margin and overhead but do not guarantee completion.",
+    "Unseen control trajectories remain extrapolations.",
+    "Imposed perturbability does not establish native mechanism or inner experience."
+  ],
+  "original_forecast_available": true,
+  "original_forecast_passed": false,
+  "overridden_rule": "Original v1 prohibition on extending the deadline/ceiling after failed feasibility",
+  "protocol_deviation": true,
+  "resources": {
+    "common_startup_inclusive_wall_seconds": 28000,
+    "cpu_per_worker": 2,
+    "deadline_reset": false,
+    "distinct_apps": 3,
+    "further_automatic_extension": false,
+    "gpu": "H200",
+    "max_containers_per_app": 1,
+    "maximum_compute_liability_usd": "117.57759360",
+    "memory_gib_per_worker": 48,
+    "rate_usd_per_app_second": "0.00139376",
+    "resume": false,
+    "retries": 0,
+    "stage_ceiling_usd": "120.00",
+    "teardown_seconds": 120,
+    "workers": 3
+  },
+  "schema_version": 1,
+  "scientific_admission": false,
+  "scientific_outputs_existed_at_decision": false,
+  "timestamp_utc": "2026-10-15T12:39:00.293638+00:00",
+  "workers": [
+    {
+      "amended_deadline_seconds": 28000,
+      "amended_fits_deadline": true,
+      "headroom_seconds": 962.5247095261475,
+      "original_deadline_seconds": 19000,
+      "original_fits_deadline": false,
+      "unchanged_forecast_seconds": 27037.475290473853,
+      "worker": 0
+    },
+    {
+      "amended_deadline_seconds": 28000,
+      "amended_fits_deadline": true,
+      "headroom_seconds": 2185.3474419295344,
+      "original_deadline_seconds": 19000,
+      "original_fits_deadline": false,
+      "unchanged_forecast_seconds": 25814.652558070466,
+      "worker": 1
+    },
+    {
+      "amended_deadline_seconds": 28000,
+      "amended_fits_deadline": true,
+      "headroom_seconds": 2661.9357924314427,
+      "original_deadline_seconds": 19000,
+      "original_fits_deadline": false,
+      "unchanged_forecast_seconds": 25338.064207568557,
+      "worker": 2
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/a/review_c_preflight_v3.py", line 115, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/a/review_c_preflight_v3.py", line 26, in main
+    assert sha(EX/'domains.py')==sha(HOME/'executions/ordinary_goal_boundaries_v2/domains.py')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

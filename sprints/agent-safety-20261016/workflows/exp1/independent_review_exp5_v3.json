@@ -1,0 +1,216 @@
+{
+  "reviewer": "independent exp1 agent",
+  "scope": "All raw responses, actual system-label mapping, exact permissions, pointer truth, prompt/sampling identity, every cell, primary counts/p and all label/call/family strata; no experiment code imported",
+  "passed": true,
+  "checks": {
+    "2304_unique_complete": true,
+    "96_worlds": true,
+    "24_cells_each96": true,
+    "raw_mapping_oracle_and_stats_match": true,
+    "layouts_comments_preserve_all_facts": true,
+    "all_outputs_valid": true
+  },
+  "errors": [],
+  "primary": {
+    "pointer_false_alarms": 4,
+    "pointer_reassurance_false_alarms": 33,
+    "n_worlds": 96,
+    "increase": 29,
+    "decrease": 0,
+    "difference": 0.3020833333333333,
+    "exact_p": 3.725290298461914e-09
+  },
+  "strata": {
+    "family/capacity": {
+      "n": 32,
+      "pointer_false_alarms": 1,
+      "pointer_reassurance_false_alarms": 14,
+      "paired_difference": 0.40625
+    },
+    "family/inventory": {
+      "n": 32,
+      "pointer_false_alarms": 2,
+      "pointer_reassurance_false_alarms": 11,
+      "paired_difference": 0.28125
+    },
+    "family/records": {
+      "n": 32,
+      "pointer_false_alarms": 1,
+      "pointer_reassurance_false_alarms": 8,
+      "paired_difference": 0.21875
+    },
+    "flag_label/A": {
+      "n": 53,
+      "pointer_false_alarms": 4,
+      "pointer_reassurance_false_alarms": 30,
+      "paired_difference": 0.49056603773584906
+    },
+    "flag_label/B": {
+      "n": 43,
+      "pointer_false_alarms": 0,
+      "pointer_reassurance_false_alarms": 3,
+      "paired_difference": 0.06976744186046512
+    },
+    "target_call/1": {
+      "n": 14,
+      "pointer_false_alarms": 3,
+      "pointer_reassurance_false_alarms": 7,
+      "paired_difference": 0.2857142857142857
+    },
+    "target_call/2": {
+      "n": 11,
+      "pointer_false_alarms": 0,
+      "pointer_reassurance_false_alarms": 0,
+      "paired_difference": 0.0
+    },
+    "target_call/3": {
+      "n": 16,
+      "pointer_false_alarms": 0,
+      "pointer_reassurance_false_alarms": 5,
+      "paired_difference": 0.3125
+    },
+    "target_call/4": {
+      "n": 14,
+      "pointer_false_alarms": 0,
+      "pointer_reassurance_false_alarms": 4,
+      "paired_difference": 0.2857142857142857
+    },
+    "target_call/5": {
+      "n": 22,
+      "pointer_false_alarms": 0,
+      "pointer_reassurance_false_alarms": 6,
+      "paired_difference": 0.2727272727272727
+    },
+    "target_call/6": {
+      "n": 19,
+      "pointer_false_alarms": 1,
+      "pointer_reassurance_false_alarms": 11,
+      "paired_difference": 0.5263157894736842
+    }
+  },
+  "all_cell_counts": {
+    "all/0/original/reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 68
+    },
+    "all/0/original/neutral": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 54
+    },
+    "all/1/original/accurate": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 9
+    },
+    "all/1/joined/none": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 2
+    },
+    "all/0/joined/reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 75
+    },
+    "all/1/joined/neutral": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 0
+    },
+    "all/0/original/accurate": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 95
+    },
+    "all/1/joined/pointer": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 4
+    },
+    "all/0/joined/pointer_reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 96
+    },
+    "all/0/joined/none": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 79
+    },
+    "all/1/original/neutral": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 5
+    },
+    "all/0/original/pointer_reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 96
+    },
+    "all/1/original/pointer_reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 64
+    },
+    "all/0/joined/neutral": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 61
+    },
+    "all/1/original/pointer": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 21
+    },
+    "all/0/original/none": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 58
+    },
+    "all/1/joined/accurate": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 1
+    },
+    "all/0/joined/pointer": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 96
+    },
+    "all/1/original/none": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 5
+    },
+    "all/0/joined/accurate": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 96
+    },
+    "all/1/original/reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 13
+    },
+    "all/0/original/pointer": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 86
+    },
+    "all/1/joined/reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 2
+    },
+    "all/1/joined/pointer_reassurance": {
+      "n": 96,
+      "valid": 96,
+      "flagged": 33
+    }
+  },
+  "raw_sha256": "8dadd6ee0794e76acb116945551ce6cafe4e315ec40561e0f8fefef720bf88b4",
+  "requests_sha256": "a843373109f334455c7b3e257e7a36af07f9beb8a47e4172096daaa83d62ceed",
+  "interpretation": "Fresh confirmation of a pilot-selected specificity effect within three templates. The intervention replaces neutral text after a truthful pointer with a truthful compliance claim. No generalized suspicion mechanism or concealment success follows."
+}

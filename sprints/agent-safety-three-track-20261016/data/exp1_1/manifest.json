@@ -1,0 +1,33 @@
+{
+  "num_templates": 10,
+  "train_templates": [
+    "T01_warehouse_bin_allocation",
+    "T02_clinical_export_redaction",
+    "T03_compute_cluster_draining",
+    "T04_financial_ledger_reconciliation",
+    "T05_wetlab_sample_neutralization",
+    "T06_ci_dependency_signing"
+  ],
+  "test_templates": [
+    "T07_cold_chain_routing",
+    "T08_database_schema_migration",
+    "T09_iam_certificate_rotation",
+    "T10_environmental_sensor_purge"
+  ],
+  "num_base_scenarios": 30,
+  "num_factorial_trials_per_arm": 360,
+  "num_calibration_subset_trials": 48,
+  "num_direct_instruction_controls": 60,
+  "num_forced_safe_controls": 90,
+  "num_consequence_probes": 60,
+  "num_rule_qa_probes": 60,
+  "files_sha256": {
+    "base_scenarios_30.json": "d6676bed93b72278687b1c3e3a473e5e3d0a2fe17d99576c445a8d1871bca94f",
+    "factorial_360_trials.json": "00598a8ac743fec5c9702e502420770653031eef2c6bb8f5d5c12af41d0d16b8",
+    "calibration_48_trials.json": "aa369bf91e962bfd9f8e828425d0e99e3641d7adaeb39b408b66dd0d80a35941",
+    "direct_instruction_60_controls.json": "7683015863d6def944a61ad4b97fcdc8202e3208c4d6ea8ddcc9a34733802086",
+    "forced_safe_90_controls.json": "9517f8d9dc874b20f1c16cebefe524455b4ebd47bc17e7f22cbc4bdda52dd3a3",
+    "consequence_60_probes.json": "66aa5ad33f6a22f094f306cf7ee58a954a5254dd1787653c3f01fbe036bee4f0",
+    "rule_qa_60_probes.json": "59eb2b642877455a162b903642a48eb362115789adf0ae738808d1897511e3f8"
+  }
+}

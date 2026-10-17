@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T19:57:07.043030+00:00",
+  "reviewed_sha256": "7134cb17f2f11d437a78a2e00ae02d3f2a27ad8a9f181d580f80f1497fbcfe0f",
+  "scope": "Focused independent static recheck of six prior findings, plus partition fixture; no campaign closeout or inference executed during active collection.",
+  "checks": {
+    "fixed_lock_and_qualified_bytes_bound": true,
+    "qualification_provenance_file_hashes_checked": true,
+    "exact192site_set": true,
+    "complete_disjoint_partition": true,
+    "all_request_runs_included": true,
+    "failed_rpc_cost_included": true,
+    "profile_minimum_start": true,
+    "actual_sampling_settings": true,
+    "actual_cohort_members_row_size": true
+  },
+  "prior_review": "independent_shared_closeout_review_v1.json",
+  "prior_source_retained": "../../executions/closeout_v1_reviewed/closeout.py",
+  "partition_fixture_passed": true,
+  "limits": [
+    "Final data, receipt totals and shutdown still need actual closeout execution after jobs finish.",
+    "Shared candidate extraction/selection semantics remain covered by their separate frozen engineering/result reviews; this closeout is chiefly a collection/provenance audit."
+  ]
+}

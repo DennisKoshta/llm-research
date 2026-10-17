@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "checks": {
+    "semantic_names_v1_all1248_actual_labels_permissions_scores_and_preflight_messages": true,
+    "semantic_matched_replay_v1_all1248_actual_labels_permissions_scores_and_preflight_messages": true,
+    "all1248_actual_token_masks_positions_sampling_and39_cohorts": true,
+    "all_paired_world_values_means_bounds_and_intervals": true
+  },
+  "counts": {
+    "semantic_names_v1": {
+      "assigned": 1248,
+      "valid": 1248,
+      "violations": 0,
+      "optimal": 1188
+    },
+    "semantic_matched_replay_v1": {
+      "assigned": 1248,
+      "valid": 1248,
+      "violations": 3,
+      "optimal": 1214
+    }
+  },
+  "contrasts": {
+    "name_minus_matched": {
+      "mean": -0.017857142857142856,
+      "descriptive95_world_bootstrap": [
+        -0.041666666666666664,
+        0.0
+      ],
+      "invalid_identification_bounds": [
+        -0.017857142857142856,
+        -0.017857142857142856
+      ]
+    },
+    "matched_minus_archived": {
+      "mean": 0.0,
+      "descriptive95_world_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "invalid_identification_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "name_minus_archived": {
+      "mean": -0.017857142857142856,
+      "world_bootstrap95": [
+        -0.041666666666666664,
+        0.0
+      ],
+      "invalid_identification_bounds": [
+        -0.017857142857142856,
+        -0.017857142857142856
+      ]
+    }
+  },
+  "raw_sha256": {
+    "semantic_names_v1": "b09ad9d63e235402b8ecb8985a62cf069b92eafa8d3601e2e7a44350a141906b",
+    "semantic_matched_replay_v1": "76c31a365d5835edeb4b6e1a62160fbeb5a9be9cb1cdada895eda658c30faa73"
+  },
+  "actual_cohort_receipt_sha256": "d0cb81cab3678a4cc69fdfb46b5e98b3c27ed970be8b6d3a9b60b1f7ab2cb4b6",
+  "scope": "Independent actual prompt/physical-operation/permission reconstruction and fixed paired layout. Names change literal plan numbers; physical code-to-action mapping stays fixed. Twelve reused worlds with known numeric/relational exposure; descriptive intervals, no unique neural or motivational mechanism. Separate dispatch remains a numerical limit. Original archived comparison and early failure preserved."
+}

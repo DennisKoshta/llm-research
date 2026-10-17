@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/shared/smoke.py", line 14, in <module>
+    'max_new_tokens':8, 'greedy':True, 'labels':'AB'} for i,p in enumerate(prompts)]
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/shared/client.py", line 94, in run_batch
+    raise RuntimeError(f'Terminal recorded inference failure: {failed}: ' + json.loads(failed.read_text()).get('error', ''))
+RuntimeError: Terminal recorded inference failure: /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016/queue/failed/shared--engineering_plain--000000.json: RemoteError('')

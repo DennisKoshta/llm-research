@@ -1,0 +1,33 @@
+{
+  "approved": true,
+  "approved_at_utc": "2026-10-16T18:26:43.659265+00:00",
+  "authorization": "Root explicit release after independent target raw and contrast reviews; source models and fixed endpoints unchanged.",
+  "calls": 1248,
+  "execution_manifest_sha256": "a9639804fe524a927625346f37a55b7edb81c149b52ba0cb56957fb0fdc81e6f",
+  "exp2_extension_lock_path": "workflows/exp2/runs/semantic_name_transfer_v1/extension-lock.json",
+  "exp2_extension_lock_sha256": "2c5a93a4d43daba095e629370d1176a2f216e0e6def232a345d295aff802f16a",
+  "exp2_schema_lock_path": "workflows/exp2/runs/semantic_name_schema_v1/schema-lock.json",
+  "exp2_schema_lock_sha256": "df53db83c5067433279644b68af0f49f4fcdda567b09584e752f2a0af2a2a6aa",
+  "exp2_source_lock_path": "workflows/exp2/runs/fresh_behavior_final_v1/predictor-lock.json",
+  "exp2_source_lock_sha256": "3e2e944d6fa5c0e65d58c807c7086f46c38ff991b47567ebdc757964d1c40226",
+  "independent_reviews": [
+    {
+      "path": "workflows/exp1/independent_exp6_target_v1_review.json",
+      "sha256": "e0e0fe5c77968087c2c51327753138275038e78e9417b3249c4ebdb17c8e592f"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_target_contrasts_review.json",
+      "sha256": "21f58416dac3f510802e15afae136b8677cec7c61b1c23b6fd985b43c28516f1"
+    },
+    {
+      "path": "workflows/exp2/independent-semantic-name-request-review.json",
+      "sha256": "e2a29fc81a0fcab0acb19fa63ef27dd4f692acfe9b4f42b462c00e8e8c8b38bb"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_matched_replay_preflight_review.json",
+      "sha256": "25252e3ca119ae1023ce15e475ee5101984a9ff0d3957cac194b4ae1901a6f57"
+    }
+  ],
+  "operational_scope": "Names and matched replay launch concurrently first. Native48 starts when a workflow process slot is free; no native528 admission.",
+  "release_after": "Original target collection and independent raw review, then names before structural pilot; structural main also requires fixed pilot competence/audit and independent review. No effect gate."
+}

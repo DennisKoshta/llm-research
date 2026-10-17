@@ -1,0 +1,32 @@
+{
+  "reviewer": "exp2_and_b_owner",
+  "created_utc": "2026-10-16T19:04:33Z",
+  "status": "requires_direction_lock_binding_before_science",
+  "input_sha256": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/shared/client.py": "2f9d60f908d821e15cd56430b72daa8fc61799fa2607d2240acd00b762fa18c5",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/shared/broker_v1.py": "94148874ce9de0a16959cfdced5242375268697b82c3adcbf288f882daefd7df",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/shared/modal_service_v1.py": "99826f38bf2f88d6451152e808b869f78c0b71e42bdc869b4457e7c34e49607c",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/shared/vendor/curiosity_study/batched.py": "539c39b60693dbaeaf420c45f3de10baa7f352f3d985a647005ab00eecc2ad4d"
+  },
+  "accepted_static_checks": [
+    "Projection hooks installed outside infer_batch, therefore remain active through all generation forwards",
+    "Each decoder input, attention output and MLP output is projected; tuple output structure preserved",
+    "Captures are restricted to the initial forward via batch_hook; generation does not overwrite candidate captures",
+    "zero_sham returns the exact input tensor and retains the same hook locations",
+    "Projection and capture handles removed in finally; postcall inventory and active-hooks guard",
+    "Two executor threads, Modal max_containers2, no retries, hard deadline guard and conservative app-wall reservation",
+    "Same request ordering is supported; actual crossarm cohort equality must be audited by workflow/engineering smoke"
+  ],
+  "required_fixes": [
+    "Bind both refusal and random intervention specs to immutable expected SHA256 values in intervention-lock.json and reject a changed registry spec",
+    "Require a passed intervention-qualified receipt that is bound to the same lock; mere existence is insufficient",
+    "Reject nonlocked direction_key for a/b/c science requests; candidate selection keys are shared-only"
+  ],
+  "numerical_requirements": [
+    "BF16 recasting can leave a small nonzero directional residual; smoke must use an explicit reasonable tolerance and record before/after numerical residuals",
+    "Exact baseline/zero-sham output-token and first-probability identity on identical cohorts",
+    "Verify each site is reached on prompt and generation forwards and no hook leaks after an exception",
+    "Verify direction hash from payload in the worker as well as broker"
+  ],
+  "scope": "Static independent source review only. No cloud launch, local model loading or numerical smoke was performed by this reviewer."
+}

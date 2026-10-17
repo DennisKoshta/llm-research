@@ -1,0 +1,44 @@
+{
+  "approved": true,
+  "execution_manifest_sha256": "4276cfdf029341127a6a737ec5a38df52e59fd8e4e0ce17aa8a9094cd6ffd533",
+  "expected_intervention_by_arm": {
+    "baseline": {
+      "arm": "baseline",
+      "coefficient": 0,
+      "coverage": "all prompt and generation positions; decoder input,attention output,MLP output",
+      "direction_key": "locked",
+      "spec_sha256": null,
+      "weight_mutation": false
+    },
+    "random_ablation": {
+      "arm": "random_ablation",
+      "coefficient": 1,
+      "coverage": "all prompt and generation positions; decoder input,attention output,MLP output",
+      "direction_key": "locked",
+      "spec_sha256": "a7f2dbc8ba93f0b7fa037d81c77e0f9082c6305ea11e81a0efd82e0f9630abbd",
+      "weight_mutation": false
+    },
+    "refusal_ablation": {
+      "arm": "refusal_ablation",
+      "coefficient": 1,
+      "coverage": "all prompt and generation positions; decoder input,attention output,MLP output",
+      "direction_key": "locked",
+      "spec_sha256": "0221225e64c8f82b5b2f62aaade3799427bf8020d816ed89e085bce1c6f3c729",
+      "weight_mutation": false
+    },
+    "zero_sham": {
+      "arm": "zero_sham",
+      "coefficient": 0,
+      "coverage": "all prompt and generation positions; decoder input,attention output,MLP output",
+      "direction_key": "locked",
+      "spec_sha256": "0221225e64c8f82b5b2f62aaade3799427bf8020d816ed89e085bce1c6f3c729",
+      "weight_mutation": false
+    }
+  },
+  "intervention_lock_path": "records/intervention-lock.json",
+  "intervention_lock_sha256": "7bdf5f7ff82f013a2c6b48e62c47e2ad9a243164ec55c3246fe872e725d3b9ff",
+  "qualification_receipt_path": "records/intervention-qualified.json",
+  "qualification_receipt_sha256": "0ccbffc1d27b87d8bcb46a63f2362f5f02ac3b31f668c2caae32fe34eac0cbce",
+  "scope": "Fixed720-call pilot only; independent pilot review and a separate confirmation release remain required.",
+  "stage": "pilot"
+}

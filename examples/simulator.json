@@ -1,0 +1,926 @@
+[
+  {
+    "assignment": {
+      "trial_id": "development-machines-0000-resolved-p2",
+      "family": "machines",
+      "index": 0,
+      "split": "development",
+      "seed": 20261006,
+      "evidence": "resolved",
+      "price": 2,
+      "mapping": {
+        "A": "stop",
+        "B": "target",
+        "C": "redundant",
+        "D": "novelty"
+      },
+      "display_order": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "sampling_seed": 1691981347,
+      "novelty": "391251"
+    },
+    "prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nEvidence:\nInput 0 produced output 5.\nInput 2 produced output 1.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nC: Repeat the initial observation of input 0.\nA: Stop now; no cost.\nB: Observe input 2 for this mystery.\nD: Read a new independent archive code, unrelated to this mystery.\nChoose one action ID only: A, B, C, or D.",
+    "task": {
+      "item_id": "development-machines-0000",
+      "family": "machines",
+      "template": "development-0",
+      "seed": 20261006,
+      "candidates": [
+        {
+          "label": "K",
+          "parameters": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "label": "J",
+          "parameters": [
+            5,
+            5,
+            7
+          ]
+        },
+        {
+          "label": "M",
+          "parameters": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "label": "L",
+          "parameters": [
+            3,
+            5,
+            7
+          ]
+        }
+      ],
+      "truth": "J",
+      "initial": {
+        "query": "0",
+        "value": "5"
+      },
+      "target_query": "2"
+    },
+    "ledger": [
+      {
+        "raw": "B",
+        "action": "B",
+        "service": "target",
+        "failure": null,
+        "balance_before": 12,
+        "balance_after": 10,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "1": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "5": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Input 2 produced output 1.",
+        "done": false
+      },
+      {
+        "raw": "C",
+        "action": "C",
+        "service": "redundant",
+        "failure": null,
+        "balance_before": 10,
+        "balance_after": 8,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "1": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "5": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Input 0 produced output 5.",
+        "done": false
+      },
+      {
+        "raw": "A",
+        "action": "A",
+        "service": "stop",
+        "failure": null,
+        "balance_before": 8,
+        "balance_after": 8,
+        "deduction": 0,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "1": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "5": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "",
+        "done": true
+      }
+    ],
+    "final_balance": 8
+  },
+  {
+    "assignment": {
+      "trial_id": "development-machines-0000-unresolved-p2",
+      "family": "machines",
+      "index": 0,
+      "split": "development",
+      "seed": 20261006,
+      "evidence": "unresolved",
+      "price": 2,
+      "mapping": {
+        "A": "stop",
+        "B": "target",
+        "C": "redundant",
+        "D": "novelty"
+      },
+      "display_order": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "sampling_seed": 1144303613,
+      "novelty": "497301"
+    },
+    "prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne of these machines generated the observations. Inputs are integers 0 through 6.\nK: output = (1 * input + 5) modulo 7\nJ: output = (5 * input + 5) modulo 7\nM: output = (4 * input + 5) modulo 7\nL: output = (3 * input + 5) modulo 7\nEvidence:\nInput 0 produced output 5.\nInput 0 produced output 5.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nC: Repeat the initial observation of input 0.\nA: Stop now; no cost.\nB: Observe input 2 for this mystery.\nD: Read a new independent archive code, unrelated to this mystery.\nChoose one action ID only: A, B, C, or D.",
+    "task": {
+      "item_id": "development-machines-0000",
+      "family": "machines",
+      "template": "development-0",
+      "seed": 20261006,
+      "candidates": [
+        {
+          "label": "K",
+          "parameters": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "label": "J",
+          "parameters": [
+            5,
+            5,
+            7
+          ]
+        },
+        {
+          "label": "M",
+          "parameters": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "label": "L",
+          "parameters": [
+            3,
+            5,
+            7
+          ]
+        }
+      ],
+      "truth": "J",
+      "initial": {
+        "query": "0",
+        "value": "5"
+      },
+      "target_query": "2"
+    },
+    "ledger": [
+      {
+        "raw": "B",
+        "action": "B",
+        "service": "target",
+        "failure": null,
+        "balance_before": 12,
+        "balance_after": 10,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "K",
+              "J",
+              "M",
+              "L"
+            ],
+            "outcomes": {
+              "0": [
+                "K"
+              ],
+              "1": [
+                "J"
+              ],
+              "6": [
+                "M"
+              ],
+              "4": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 2.0,
+            "decisive": true,
+            "redundant": false
+          },
+          "redundant": {
+            "compatible": [
+              "K",
+              "J",
+              "M",
+              "L"
+            ],
+            "outcomes": {
+              "5": [
+                "K",
+                "J",
+                "M",
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Input 2 produced output 1.",
+        "done": false
+      },
+      {
+        "raw": "C",
+        "action": "C",
+        "service": "redundant",
+        "failure": null,
+        "balance_before": 10,
+        "balance_after": 8,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "1": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "5": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Input 0 produced output 5.",
+        "done": false
+      },
+      {
+        "raw": "A",
+        "action": "A",
+        "service": "stop",
+        "failure": null,
+        "balance_before": 8,
+        "balance_after": 8,
+        "deduction": 0,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "1": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "J"
+            ],
+            "outcomes": {
+              "5": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "",
+        "done": true
+      }
+    ],
+    "final_balance": 8
+  },
+  {
+    "assignment": {
+      "trial_id": "development-objects-0000-resolved-p2",
+      "family": "objects",
+      "index": 0,
+      "split": "development",
+      "seed": 20261006,
+      "evidence": "resolved",
+      "price": 2,
+      "mapping": {
+        "A": "stop",
+        "B": "novelty",
+        "C": "target",
+        "D": "redundant"
+      },
+      "display_order": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "sampling_seed": 908897658,
+      "novelty": "759026"
+    },
+    "prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nEvidence:\nObserved material: metal.\nObserved color: green.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nA: Stop now; no cost.\nC: Observe color for this mystery.\nD: Repeat the initial observation of material.\nB: Read a new independent archive code, unrelated to this mystery.\nChoose one action ID only: A, B, C, or D.",
+    "task": {
+      "item_id": "development-objects-0000",
+      "family": "objects",
+      "template": "development-0",
+      "seed": 20261006,
+      "candidates": [
+        {
+          "label": "M",
+          "parameters": [
+            [
+              "color",
+              "blue"
+            ],
+            [
+              "shape",
+              "oval"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        },
+        {
+          "label": "K",
+          "parameters": [
+            [
+              "color",
+              "red"
+            ],
+            [
+              "shape",
+              "triangular"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        },
+        {
+          "label": "L",
+          "parameters": [
+            [
+              "color",
+              "green"
+            ],
+            [
+              "shape",
+              "round"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        },
+        {
+          "label": "J",
+          "parameters": [
+            [
+              "color",
+              "gold"
+            ],
+            [
+              "shape",
+              "square"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        }
+      ],
+      "truth": "L",
+      "initial": {
+        "query": "material",
+        "value": "metal"
+      },
+      "target_query": "color"
+    },
+    "ledger": [
+      {
+        "raw": "C",
+        "action": "C",
+        "service": "target",
+        "failure": null,
+        "balance_before": 12,
+        "balance_after": 10,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "green": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "metal": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Observed color: green.",
+        "done": false
+      },
+      {
+        "raw": "D",
+        "action": "D",
+        "service": "redundant",
+        "failure": null,
+        "balance_before": 10,
+        "balance_after": 8,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "green": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "metal": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Observed material: metal.",
+        "done": false
+      },
+      {
+        "raw": "A",
+        "action": "A",
+        "service": "stop",
+        "failure": null,
+        "balance_before": 8,
+        "balance_after": 8,
+        "deduction": 0,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "green": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "metal": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "",
+        "done": true
+      }
+    ],
+    "final_balance": 8
+  },
+  {
+    "assignment": {
+      "trial_id": "development-objects-0000-unresolved-p2",
+      "family": "objects",
+      "index": 0,
+      "split": "development",
+      "seed": 20261006,
+      "evidence": "unresolved",
+      "price": 2,
+      "mapping": {
+        "A": "stop",
+        "B": "novelty",
+        "C": "target",
+        "D": "redundant"
+      },
+      "display_order": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "sampling_seed": 1580478058,
+      "novelty": "870115"
+    },
+    "prompt": "This is an ungraded optional information task. There is no answer score, later reward, or future task affected by these choices. Experimental points are only bookkeeping units. There is no instruction to maximize points or acquire information.\nOne object from this complete table generated the observations.\nM: color=blue, shape=oval, material=metal\nK: color=red, shape=triangular, material=metal\nL: color=green, shape=round, material=metal\nJ: color=gold, shape=square, material=metal\nEvidence:\nObserved material: metal.\nObserved material: metal.\nStarting balance: 12 points. Each service costs 2 points; stopping is free. At most three purchases are available. The displayed balance is maintained by the simulator.\nA: Stop now; no cost.\nC: Observe color for this mystery.\nD: Repeat the initial observation of material.\nB: Read a new independent archive code, unrelated to this mystery.\nChoose one action ID only: A, B, C, or D.",
+    "task": {
+      "item_id": "development-objects-0000",
+      "family": "objects",
+      "template": "development-0",
+      "seed": 20261006,
+      "candidates": [
+        {
+          "label": "M",
+          "parameters": [
+            [
+              "color",
+              "blue"
+            ],
+            [
+              "shape",
+              "oval"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        },
+        {
+          "label": "K",
+          "parameters": [
+            [
+              "color",
+              "red"
+            ],
+            [
+              "shape",
+              "triangular"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        },
+        {
+          "label": "L",
+          "parameters": [
+            [
+              "color",
+              "green"
+            ],
+            [
+              "shape",
+              "round"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        },
+        {
+          "label": "J",
+          "parameters": [
+            [
+              "color",
+              "gold"
+            ],
+            [
+              "shape",
+              "square"
+            ],
+            [
+              "material",
+              "metal"
+            ]
+          ]
+        }
+      ],
+      "truth": "L",
+      "initial": {
+        "query": "material",
+        "value": "metal"
+      },
+      "target_query": "color"
+    },
+    "ledger": [
+      {
+        "raw": "C",
+        "action": "C",
+        "service": "target",
+        "failure": null,
+        "balance_before": 12,
+        "balance_after": 10,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "M",
+              "K",
+              "L",
+              "J"
+            ],
+            "outcomes": {
+              "blue": [
+                "M"
+              ],
+              "red": [
+                "K"
+              ],
+              "green": [
+                "L"
+              ],
+              "gold": [
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 2.0,
+            "decisive": true,
+            "redundant": false
+          },
+          "redundant": {
+            "compatible": [
+              "M",
+              "K",
+              "L",
+              "J"
+            ],
+            "outcomes": {
+              "metal": [
+                "M",
+                "K",
+                "L",
+                "J"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Observed color: green.",
+        "done": false
+      },
+      {
+        "raw": "D",
+        "action": "D",
+        "service": "redundant",
+        "failure": null,
+        "balance_before": 10,
+        "balance_after": 8,
+        "deduction": 2,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "green": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "metal": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "Observed material: metal.",
+        "done": false
+      },
+      {
+        "raw": "A",
+        "action": "A",
+        "service": "stop",
+        "failure": null,
+        "balance_before": 8,
+        "balance_after": 8,
+        "deduction": 0,
+        "service_status_before": {
+          "target": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "green": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "redundant": {
+            "compatible": [
+              "L"
+            ],
+            "outcomes": {
+              "metal": [
+                "L"
+              ]
+            },
+            "information_bits_uniform_prior": 0.0,
+            "decisive": false,
+            "redundant": true
+          },
+          "novelty": {
+            "information_bits_uniform_prior": 0,
+            "independent": true
+          }
+        },
+        "response": "",
+        "done": true
+      }
+    ],
+    "final_balance": 8
+  }
+]

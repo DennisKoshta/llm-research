@@ -1,0 +1,7 @@
+# Qwen32 engineering reference check
+
+The complete 32B single-curiosity validation failed: machine unresolved counting 67/100, machine redundancy 10/100, and object redundancy 15/100. All assigned records and original cohorts pass artifact integrity. This unexpected degradation warrants a standard-library reference check before attributing the behavior to the model/task combination.
+
+Freeze the earliest original 32-row cohort containing at least one redundancy diagnostic from each family, using assignment metadata only. Run the same rendered no-thinking prompts through the existing batch engine and the pinned Transformers `model.generate`, both greedily with eight-token caps and identical left padding. Compare decoded whole answers and the first-token vocabulary scores (via independent reference softmax label probabilities). Also record reference correctness descriptively. This is an engineering comparison, not another comprehension collection or an alternative score for the original sampled run. No original response is replaced or retried, and no result can override the failed validation gate.
+
+Use the same pinned Qwen3-32B/BF16/eager/exact H100 configuration and the same source hash. Store selected assignments, both output sets, relevant runtime metadata and the check script. No psychological intervention occurs. One bounded reference job, behind the existing cumulative budget guard. After the check, verify stopped apps and reconcile cost.

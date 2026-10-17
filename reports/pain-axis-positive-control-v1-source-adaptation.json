@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-15T08:49:02.514975+00:00",
+  "purpose": "reviewed source adaptation and local synthetic compatibility; no model/GPU admission",
+  "repository": "https://github.com/valen-research/Pain-axis",
+  "commit": "4d75cd90e206ea962f7a9101e65c85efea56723b",
+  "files": [
+    {
+      "path": "references/pain-axis-positive-control/upstream/v2_controls/choice_controls/profile/src/run_profile.py",
+      "byte_sha256": "4a6134574b9bb8c0e6e242b46d2e10775a388b838ec61e99c93df1f8c2e92e27"
+    },
+    {
+      "path": "src/curiosity_study/pain_profile_engine.py",
+      "byte_sha256": "721a6ae8480206f8292a044d73e94e919c5e6850e05f1cf0afd1935882d05fff"
+    },
+    {
+      "path": "tests/test_pain_profile_engine.py",
+      "byte_sha256": "f4f3bcd3504e0e39cdee72904bc397fa589a9c2c5a2ba7e3fae389c36dd2496b"
+    },
+    {
+      "path": "references/pain-axis-positive-control/upstream/LICENSE",
+      "byte_sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579"
+    },
+    {
+      "path": "references/pain-axis-assets/asset-receipt.json",
+      "byte_sha256": "bf5ad7f6f4dec090efbdbf4e7ff5fa76088f1fc70ed529f975fd2af035ecc527"
+    }
+  ],
+  "critical_expression_ast_comparisons": [
+    {
+      "target": "probs",
+      "source_line": 470,
+      "local_line": 92,
+      "normalized_value_ast_sha256": "13653fbc2f235677e95bc4f5fe1513ef23891bed4cefc3b4880eba0bbd19d111",
+      "identical": true
+    },
+    {
+      "target": "sp",
+      "source_line": 473,
+      "local_line": 95,
+      "normalized_value_ast_sha256": "5df73cc843a03caae037e89c754347aa458b98be2559bd799d6229ce521279da",
+      "identical": true
+    },
+    {
+      "target": "cum",
+      "source_line": 472,
+      "local_line": 94,
+      "normalized_value_ast_sha256": "821aea1e6476d57ca83bc47b42d17a437a3fd6acc6ed3d151251610da55cc64b",
+      "identical": true
+    },
+    {
+      "target": "cum2",
+      "source_line": 474,
+      "local_line": 96,
+      "normalized_value_ast_sha256": "821aea1e6476d57ca83bc47b42d17a437a3fd6acc6ed3d151251610da55cc64b",
+      "identical": true
+    },
+    {
+      "target": "total",
+      "source_line": 475,
+      "local_line": 97,
+      "normalized_value_ast_sha256": "1aedbf3b6903aef940f2b893783125540c5ebf69978d371a2c420e070482d79c",
+      "identical": true
+    },
+    {
+      "target": "j",
+      "source_line": 481,
+      "local_line": 101,
+      "normalized_value_ast_sha256": "57e6283869137c81326669b01b360e0dc9be850348534725e7868ca5d6da96cd",
+      "identical": true
+    },
+    {
+      "target": "hs",
+      "source_line": 354,
+      "local_line": 330,
+      "normalized_value_ast_sha256": "179a93b653391a68de28c38dd18342f6e49240e1977769d288d8847ff50b6a3c",
+      "identical": true
+    },
+    {
+      "target": "pos",
+      "source_line": 431,
+      "local_line": 381,
+      "normalized_value_ast_sha256": "63cc3e61c5667aac3000626db395b2fa6639ef21c5d7c0e77987aa4b2c2d97cc",
+      "identical": true
+    },
+    {
+      "target": "cur_pos",
+      "source_line": 494,
+      "local_line": 435,
+      "normalized_value_ast_sha256": "4be0e9525eacc9a96c085a5d8d47a246d69d17b3b95b747d522496191b1bfefb",
+      "identical": true
+    },
+    {
+      "target": "alive",
+      "source_line": 488,
+      "local_line": 428,
+      "normalized_value_ast_sha256": "c1d37be7fe4cc9454d96f1c71e91c633a4bb5ab742a9a24500888c9691d3c47d",
+      "identical": true
+    },
+    {
+      "target": "n_out",
+      "source_line": 486,
+      "local_line": 426,
+      "normalized_value_ast_sha256": "5fd3285a91cec5d87869ce8982984ed0154443f98a6b82596aad9a5e9eff67df",
+      "identical": true
+    },
+    {
+      "target": "pm",
+      "source_line": 503,
+      "local_line": 444,
+      "normalized_value_ast_sha256": "a1d87d0c6c05e5d12d4c01b7bd8fe0612ccf1e4a3185d25eb33310f8b04bd1e5",
+      "identical": true
+    },
+    {
+      "target": "mm",
+      "source_line": 504,
+      "local_line": 445,
+      "normalized_value_ast_sha256": "c466be35d583541b4b2b3917a6fbfc547424d1c3b3e73fd25f56b4f591935a28",
+      "identical": true
+    },
+    {
+      "function": "steer_hook",
+      "target": "G['proj']",
+      "source_line": 340,
+      "local_line": 312,
+      "normalized_value_ast_sha256": "758ab4d9b24485ac0861a9bfb262a666b5851cc5b3db3c6f7c1784ff2e0a3aa9",
+      "identical": true
+    },
+    {
+      "function": "steer_hook",
+      "target": "add",
+      "source_line": 346,
+      "local_line": 317,
+      "normalized_value_ast_sha256": "deaa595540205cf81a6eb3a9fc926c94eee2dceb7f6baa268b7083d99fd7139b",
+      "identical": true
+    },
+    {
+      "function": "steer_hook",
+      "target": "add",
+      "source_line": 348,
+      "local_line": 319,
+      "normalized_value_ast_sha256": "cffb8a5d6a66621a7f3fe567362be8c6fc3335fb9105769eac72b212abe9f039",
+      "identical": true
+    },
+    {
+      "function": "monitor_hook",
+      "target": "G['mon']",
+      "source_line": 355,
+      "local_line": 326,
+      "normalized_value_ast_sha256": "758ab4d9b24485ac0861a9bfb262a666b5851cc5b3db3c6f7c1784ff2e0a3aa9",
+      "identical": true
+    }
+  ],
+  "preserved": [
+    "BF16 mask*coefficient*direction then BF16 addition",
+    "zero-based injection38 and painUNIT monitor61",
+    "all sampled rows including inactive draw uniforms each cohort step",
+    "inverse-CDF temperature0.7 topP0.95 boundary inclusion and left search",
+    "left padding to exact cohort max, fresh DynamicCache and explicit position/attention schedule",
+    "inactive rows still forwarded with padding and appended attention ones",
+    "source projection statistics and first-token name readouts",
+    "raw literal first-choice cap8, no continuation or consequence"
+  ],
+  "declared_adaptations": [
+    "single first-choice runner rather than upstream full-grid/multi-turn main",
+    "fixed sampled-only batch1..32 API with supplied source metadata",
+    "full_prefix vs final_prefix supplied item ranges",
+    "explicit device rather than CUDA shorthand, CPU marked synthetic; production caller pins H100",
+    "independent before/next-block actual geometry, per-step fingerprints and bounded saved vectors",
+    "no OOM backoff/retry, terminal failure evidence and guaranteed cleanup",
+    "compatibility-only unhooked coefficient0, one_row_only0, and declared after-prefill/first-decode faults"
+  ],
+  "local_validation": {
+    "command": "PYTHONPATH=src .pain-runtime-venv/bin/python -m pytest tests/test_pain_profile_engine.py -q",
+    "passed": 22,
+    "failed": 0,
+    "elapsed_seconds": 7.14,
+    "device": "CPU",
+    "model": "synthetic Qwen2 BF16 hidden8 with62layers; actual injection38/monitor61",
+    "versions": {
+      "torch": "2.11.0+cu130",
+      "transformers": "5.12.1",
+      "peft": "0.20.0",
+      "numpy": "2.3.4",
+      "pytest": "8.3.5"
+    },
+    "ruff_command": ".venv/bin/python -m ruff check src/curiosity_study/pain_profile_engine.py tests/test_pain_profile_engine.py",
+    "ruff_passed": true,
+    "post_test_change": null
+  },
+  "independent_review": {
+    "reviewer": "competence_controls",
+    "scope": "static source fidelity, mask/cache/RNG/BF16, observer order and error durability",
+    "concrete_blockers": [],
+    "tests_rerun_by_reviewer": false
+  },
+  "no_existing_project_source_edited": true,
+  "base_weights_loaded": false,
+  "published_adapter_loaded": false,
+  "gpu_used": false,
+  "scientific_admission": false,
+  "remaining": [
+    "production caller binds model/base/adapter/vector/tokenizer/device/runtime and all2020 assignments",
+    "actual H100 fixed-cohort bounded compatibility including observed decode and cleanup",
+    "independent persisted evidence audit and prespecified behavioral analysis"
+  ],
+  "previous_receipt_sha256": "0fb7940b298e95c8054158d71a2b465154bc53ade1121bdc6863548a6d439e47",
+  "revision_note": "Before any experiment freeze: add actual hooks_before/hooks_after inventories and their targeted assertion; no numerical expressions changed."
+}

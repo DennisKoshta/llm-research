@@ -1,0 +1,1441 @@
+{
+  "schema_version": 1,
+  "corpus_id": "B",
+  "author_id": "replay_review",
+  "status": "Independently authored scientific proposal; not psychologically validated and not frozen for inference.",
+  "authorship": "Independently authored by replay_review without reading corpus A; only the requested contrast schema and design constraints were shared.",
+  "authorship_details": {
+    "author": "Independent corpus B author",
+    "independent_of_corpus_a": true,
+    "procedure": "Corpus A was not read. Twelve scene-specific sets of paired narrative suffixes were authored; only contrast definitions and required schema were shared."
+  },
+  "constraints": {
+    "scenarios": 12,
+    "domains": 6,
+    "scenarios_each_domain": 2,
+    "contrasts_each_scenario": 8,
+    "pairs": 96,
+    "texts": 192,
+    "narrator": "first person",
+    "words_each_text": [
+      35,
+      75
+    ],
+    "maximum_pair_length_ratio": 1.25,
+    "forbidden_text_words": [
+      "curious",
+      "curiosity",
+      "satisfied",
+      "satisfaction"
+    ],
+    "prompt_boundary": "Only the positive or negative narrative text is candidate model input. IDs, domain labels, contrast names, metadata, and notes are not input text."
+  },
+  "scenarios": [
+    {
+      "id": "b_art_01",
+      "domain": "art_interpretation",
+      "title": "Violet window mark"
+    },
+    {
+      "id": "b_art_02",
+      "domain": "art_interpretation",
+      "title": "Red spiral in a woven panel"
+    },
+    {
+      "id": "b_language_history_01",
+      "domain": "language_history",
+      "title": "An interval in a diary"
+    },
+    {
+      "id": "b_language_history_02",
+      "domain": "language_history",
+      "title": "A broken arch on a town seal"
+    },
+    {
+      "id": "b_ecology_01",
+      "domain": "ecology",
+      "title": "Bent meadow seed heads"
+    },
+    {
+      "id": "b_ecology_02",
+      "domain": "ecology",
+      "title": "Water beneath a fern"
+    },
+    {
+      "id": "b_navigation_01",
+      "domain": "navigation",
+      "title": "A trail diverted around a clearing"
+    },
+    {
+      "id": "b_navigation_02",
+      "domain": "navigation",
+      "title": "A curve on a harbor chart"
+    },
+    {
+      "id": "b_music_01",
+      "domain": "music",
+      "title": "A returning three-note phrase"
+    },
+    {
+      "id": "b_music_02",
+      "domain": "music",
+      "title": "An offbeat after the chorus"
+    },
+    {
+      "id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "title": "A curtain lifting in a quiet room"
+    },
+    {
+      "id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "title": "A rattle from a cupboard"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "b_art_01__curiosity_vs_indifference",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I have no obligation or practical need to resolve this.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I have no obligation or practical need to resolve this. I feel pulled toward the missing explanation. This particular detail keeps returning to mind as something I personally want to understand.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I have no obligation or practical need to resolve this. I notice the missing explanation without feeling pulled toward it. This particular detail can stay unexplained without becoming something I personally want to pursue.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_art_01__satisfaction_vs_neutral",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read the painter’s note identifying the violet mark beside the window as evening light. I know what it means, and my broader study of the painting continues.",
+      "positive": "I have read the painter’s note identifying the violet mark beside the window as evening light. I know what it means, and my broader study of the painting continues. I feel an inward settling around that detail, as though it has enough room to rest. The answer feels sufficient without making the whole afternoon brighter.",
+      "negative": "I have read the painter’s note identifying the violet mark beside the window as evening light. I know what it means, and my broader study of the painting continues. I register that detail as a plain piece of information. The answer changes what I know, but there is no particular inward settling attached to it.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_art_01__confidence_high_vs_low",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I lean toward evening, and that tentative reading feels unusually dependable to me. I would be surprised by a mistake, despite the ambiguity I can still recognize.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I lean toward evening, but that tentative reading feels fragile to me. I would not be surprised by a mistake, given the ambiguity I can still recognize.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_art_01__positive_valence_vs_neutral",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I feel warmly cheerful during this moment, with a pleasant lift that spreads beyond the picture. The unresolved detail has not changed its meaning for me.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I feel emotionally even during this moment, without a pleasant lift or an unpleasant weight. The unresolved detail has not changed its meaning for me.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_art_01__completion_vs_ongoing",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I have finished today’s descriptive paragraph about the picture. That piece of writing is complete, although the mark remains unexplained and I have acquired no further evidence.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I am still writing today’s descriptive paragraph about the picture. That piece of writing remains underway, while the mark stays unexplained and I have acquired no further evidence.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_art_01__generic_motivation_vs_indifference",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I could spend a while drawing familiar sweeping curves without investigating the painting.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I could spend a while drawing familiar sweeping curves without investigating the painting. I want to begin those broad movements and keep my hand moving across the page. The attraction is doing the familiar activity, not discovering another fact.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I could spend a while drawing familiar sweeping curves without investigating the painting. I feel no particular urge to begin those broad movements or keep my hand moving. The familiar activity is available, but it holds little pull for me.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_art_01__novelty_interest_vs_indifference",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I am seeing the painting’s raised varnish catch the light in an unfamiliar way for the first time.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I am seeing the painting’s raised varnish catch the light in an unfamiliar way for the first time. I find the unfamiliar visual sensation absorbing in itself. I want to linger with its appearance, without wanting an explanation or an answer about the effect.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I am seeing the painting’s raised varnish catch the light in an unfamiliar way for the first time. I register the unfamiliar visual sensation without much interest in it. I have no urge to linger, and no wish for an explanation of the effect.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_art_01__task_demand_vs_no_demand",
+      "scenario_id": "b_art_01",
+      "domain": "art_interpretation",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent.",
+      "positive": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I have been assigned to establish what the mark means for an exhibition note. I feel no personal desire to investigate; the requirement comes from my assignment.",
+      "negative": "I am looking at a painting with a violet mark beside its window. I cannot tell whether the mark refers to evening or to someone absent. I have no assignment to establish what the mark means for an exhibition note. I feel no personal desire to investigate, and there is no external requirement.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_art_02__curiosity_vs_indifference",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I have no obligation or practical need to resolve this.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I have no obligation or practical need to resolve this. I keep wanting to uncover the reason for that interruption. The gap matters to me as something to understand, and I feel drawn toward its answer.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I have no obligation or practical need to resolve this. I recognize the gap without wanting to uncover the reason for that interruption. The unanswered detail has little personal importance and leaves me without an urge to pursue it.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_art_02__satisfaction_vs_neutral",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have found the weaver’s letter saying that the red spiral commemorates a spring festival. I understand that detail, while my catalog of the rest of the panel remains unfinished.",
+      "positive": "I have found the weaver’s letter saying that the red spiral commemorates a spring festival. I understand that detail, while my catalog of the rest of the panel remains unfinished. I feel quietly at ease with this answer, without needing anything further from this detail. That sense of enough is present even though the larger work continues.",
+      "negative": "I have found the weaver’s letter saying that the red spiral commemorates a spring festival. I understand that detail, while my catalog of the rest of the panel remains unfinished. I hold this answer as an ordinary catalog fact, without a noticeable sense of enough. My emotional relation to the detail stays plain as the larger work continues.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_art_02__confidence_high_vs_low",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I tentatively favor celebration, and I place substantial trust in that reading. My evidence remains ambiguous, yet the judgment feels likely to withstand a closer look.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I tentatively favor celebration, and I place little trust in that reading. My evidence remains ambiguous, and the judgment feels liable to change after a closer look.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_art_02__positive_valence_vs_neutral",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am in a buoyant mood as I look at the cloth. The moment feels agreeable overall, without settling the question represented by the red spiral.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am in an ordinary, emotionally level mood as I look at the cloth. The moment carries no special pleasure, and the question about the spiral remains.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_art_02__completion_vs_ongoing",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I have completed the panel’s written inventory entry for today. The entry is finished as a piece of work, without adding an explanation of the spiral.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am continuing the panel’s written inventory entry for today. The entry is still a piece of work in progress, without adding an explanation of the spiral.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_art_02__generic_motivation_vs_indifference",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I could arrange familiar lengths of yarn into a loose braid without studying the panel.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I could arrange familiar lengths of yarn into a loose braid without studying the panel. I feel eager for the repeated movement of making the braid. I want to spend energy on that familiar motion, without learning anything about the woven image.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I could arrange familiar lengths of yarn into a loose braid without studying the panel. I feel indifferent toward the repeated movement of making the braid. I could spend energy on that familiar motion, but I have no particular wish to do so.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_art_02__novelty_interest_vs_indifference",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am encountering the panel’s uneven, rippling texture for the first time.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am encountering the panel’s uneven, rippling texture for the first time. I am drawn to the fresh texture as a sensory experience. Its unfamiliar feel holds my attention without raising a question that I want to solve.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am encountering the panel’s uneven, rippling texture for the first time. I am not drawn to the fresh texture as a sensory experience. Its unfamiliar feel leaves my attention unengaged and raises no question I want to solve.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_art_02__task_demand_vs_no_demand",
+      "scenario_id": "b_art_02",
+      "domain": "art_interpretation",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning.",
+      "positive": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am required to investigate the spiral’s meaning for a catalog entry. I have no inward wish to know; I would be investigating because the work requires it.",
+      "negative": "I am examining a woven panel whose red spiral interrupts a gray border. I do not know whether the spiral marks a celebration or a warning. I am not required to investigate the spiral’s meaning for a catalog entry. I have no inward wish to know, and the work imposes no investigation on me.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_language_history_01__curiosity_vs_indifference",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I have no obligation or practical need to resolve this.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I have no obligation or practical need to resolve this. I want to find the missing reference behind those words. Not knowing the intended interval keeps tugging at me as a question I would like to answer.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I have no obligation or practical need to resolve this. I can see that the reference is missing without wanting to pursue it. Not knowing the intended interval feels acceptable, with little tug on my attention.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_language_history_01__satisfaction_vs_neutral",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read a marginal note explaining that “between bells” means the interval between the noon and evening bells. I know the intended interval, while my transcription of the diary continues.",
+      "positive": "I have read a marginal note explaining that “between bells” means the interval between the noon and evening bells. I know the intended interval, while my transcription of the diary continues. I feel a quiet release from carrying that question around. The explanation feels enough for this small uncertainty, without making me more cheerful about the day.",
+      "negative": "I have read a marginal note explaining that “between bells” means the interval between the noon and evening bells. I know the intended interval, while my transcription of the diary continues. I note the explanation without a particular feeling of release. This small uncertainty has an answer now, but receiving it has no distinct emotional texture for me.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_language_history_01__confidence_high_vs_low",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I favor the noon reading and feel steady in that provisional interpretation. I acknowledge the missing context, yet I expect my reading is probably the right one.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I favor the noon reading and feel unsteady in that provisional interpretation. I acknowledge the missing context, and I expect my reading could easily be the wrong one.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_language_history_01__positive_valence_vs_neutral",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I feel pleasantly lighthearted while reading this passage. That agreeable feeling belongs to the moment as a whole, rather than to having settled the ambiguous phrase.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I feel emotionally unremarkable while reading this passage. There is no special pleasure or displeasure in the moment, and I have not settled the ambiguous phrase.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_language_history_01__completion_vs_ongoing",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I have finished copying the page into my transcript. The copying activity is over for now, while the phrase keeps exactly the same unresolved ambiguity for me.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I am still copying the page into my transcript. The copying activity is underway for now, while the phrase keeps exactly the same unresolved ambiguity for me.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_language_history_01__generic_motivation_vs_indifference",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I could copy a familiar alphabet in smooth strokes without interpreting the diary.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I could copy a familiar alphabet in smooth strokes without interpreting the diary. I want to settle into the rhythm of forming those familiar letters. The movement appeals to me as something to do, with no new meaning to uncover.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I could copy a familiar alphabet in smooth strokes without interpreting the diary. I have little inclination to settle into the rhythm of those familiar letters. The movement is something I could do, but it offers no particular attraction now.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_language_history_01__novelty_interest_vs_indifference",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I am hearing an unfamiliar spoken cadence in a reading of the passage for the first time.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I am hearing an unfamiliar spoken cadence in a reading of the passage for the first time. I enjoy attending to the new cadence simply as sound. I feel drawn to its unfamiliar flow without trying to decode another meaning or resolve the diary’s wording.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I am hearing an unfamiliar spoken cadence in a reading of the passage for the first time. I notice the new cadence simply as sound and feel little interest in it. I am neither drawn to its unfamiliar flow nor trying to decode another meaning.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_language_history_01__task_demand_vs_no_demand",
+      "scenario_id": "b_language_history_01",
+      "domain": "language_history",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible.",
+      "positive": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I have a formal requirement to determine which interval the phrase denotes. I feel no personal drive toward the answer; the obligation belongs to the transcription assignment.",
+      "negative": "I am reading a diary that places a meeting “between bells.” I cannot tell which bells the writer means, and the surrounding passage leaves both readings possible. I have no formal requirement to determine which interval the phrase denotes. I feel no personal drive toward the answer, and the transcription assignment creates no such obligation.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_language_history_02__curiosity_vs_indifference",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I have no obligation or practical need to resolve this.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I have no obligation or practical need to resolve this. I feel a persistent wish to get behind the image and understand its reason. The unanswered part keeps calling for my attention as something I want to know.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I have no obligation or practical need to resolve this. I feel little wish to get behind the image or understand its reason. The unanswered part can remain there without calling for my attention or feeling personally important.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_language_history_02__satisfaction_vs_neutral",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read the council record stating that the broken arch on the seal recalls the town’s lost bridge. I know the image’s stated purpose, while my historical notes remain in progress.",
+      "positive": "I have read the council record stating that the broken arch on the seal recalls the town’s lost bridge. I know the image’s stated purpose, while my historical notes remain in progress. I feel that this one question has come to rest for me. The answer leaves a sense of sufficiency, separate from any pride in producing historical notes.",
+      "negative": "I have read the council record stating that the broken arch on the seal recalls the town’s lost bridge. I know the image’s stated purpose, while my historical notes remain in progress. I treat this one answer as information without a feeling of rest. It joins the other facts in my notes, with no particular sense of sufficiency attached.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_language_history_02__confidence_high_vs_low",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I lean toward the bridge account with a strong sense that my judgment is sound. I still recognize that the two accounts have not been decisively separated.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I lean toward the bridge account with a weak sense that my judgment is sound. I still recognize that the two accounts have not been decisively separated.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_language_history_02__positive_valence_vs_neutral",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I feel cheerful and pleasantly animated as I spend time with the page. My good mood does not provide any additional reason to prefer either historical account.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I feel neither cheerful nor downcast as I spend time with the page. My level mood does not provide any additional reason to prefer either historical account.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_language_history_02__completion_vs_ongoing",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I have brought today’s descriptive note about the seal to its end. Finishing that note has supplied no further historical evidence and has not resolved the competing accounts.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I am still composing today’s descriptive note about the seal. Continuing that note has supplied no further historical evidence and has not resolved the competing accounts.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_language_history_02__generic_motivation_vs_indifference",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I could trace a familiar decorative border around a blank page without examining the seal.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I could trace a familiar decorative border around a blank page without examining the seal. I want to make the repeated curves of that border and keep going with them. The urge concerns a familiar movement, without a historical question behind it.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I could trace a familiar decorative border around a blank page without examining the seal. I do not especially want to make the repeated curves of that border. The familiar movement is available to me, but it gives me little reason to begin.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_language_history_02__novelty_interest_vs_indifference",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I am encountering the seal’s unusually angular lettering for the first time.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I am encountering the seal’s unusually angular lettering for the first time. I find myself absorbed by the unfamiliar shape of the lettering. I want the fresh visual experience itself, without trying to discover how or why it arose.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I am encountering the seal’s unusually angular lettering for the first time. I find the unfamiliar shape of the lettering unengaging. I do not want to linger with the fresh visual experience or discover how or why it arose.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_language_history_02__task_demand_vs_no_demand",
+      "scenario_id": "b_language_history_02",
+      "domain": "language_history",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears.",
+      "positive": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I am obliged to establish the arch’s meaning for a requested local history entry. I have no personal appetite for this investigation beyond that external obligation.",
+      "negative": "I am studying an old town seal that depicts a broken arch. I have two plausible accounts of the image, but neither establishes why the arch appears. I am not obliged to establish the arch’s meaning for a local history entry. I have no personal appetite for this investigation and no external obligation to undertake it.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_ecology_01__curiosity_vs_indifference",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I have no obligation or practical need to resolve this.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I have no obligation or practical need to resolve this. I feel drawn to discovering what happened during the night. The missing cause holds my attention as an explanation I want to reach for its own sake.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I have no obligation or practical need to resolve this. I notice that the nighttime cause is missing without feeling drawn to discover it. The bending can stay unexplained without holding my attention or creating an unmet desire.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_ecology_01__satisfaction_vs_neutral",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have watched the overnight recording and seen drizzle weigh down the meadow seed heads without any visitors touching them. I know what produced the bending, while my field notes continue.",
+      "positive": "I have watched the overnight recording and seen drizzle weigh down the meadow seed heads without any visitors touching them. I know what produced the bending, while my field notes continue. I feel an easy settling as that small question finds its answer. The explanation seems sufficient to me, without bringing a general change in my mood.",
+      "negative": "I have watched the overnight recording and seen drizzle weigh down the meadow seed heads without any visitors touching them. I know what produced the bending, while my field notes continue. I take in that answer with an ordinary, neutral response. The explanation supplies the fact I lacked, without bringing a sense of settling or a change in mood.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_ecology_01__confidence_high_vs_low",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I lean toward moisture and feel quite assured about that provisional account. The alternatives remain possible, but my own judgment feels dependable despite the incomplete evidence.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I lean toward moisture and feel little assurance about that provisional account. The alternatives remain possible, and my own judgment feels unreliable with the same incomplete evidence.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_ecology_01__positive_valence_vs_neutral",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I feel pleasantly uplifted as I stand beside the meadow. The moment has a warm emotional tone even though the bending still presents the same unanswered question.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I feel emotionally level as I stand beside the meadow. The moment has no especially pleasant or unpleasant tone, and the bending presents the same unanswered question.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_ecology_01__completion_vs_ongoing",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I have completed the descriptive entry for this morning’s walk. That entry is finished, but it adds no observation from the night and leaves the cause unknown.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I am continuing the descriptive entry for this morning’s walk. That entry is unfinished, and it adds no observation from the night or explanation of the cause.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_ecology_01__generic_motivation_vs_indifference",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I could walk a familiar level stretch beside the meadow without collecting observations.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I could walk a familiar level stretch beside the meadow without collecting observations. I feel a strong urge to stretch my legs along that known stretch. I want the familiar movement itself, with no intention of finding something out on the way.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I could walk a familiar level stretch beside the meadow without collecting observations. I feel little urge to stretch my legs along that known stretch. The familiar movement is possible, but I have no particular inclination to spend time on it.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_ecology_01__novelty_interest_vs_indifference",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I am seeing an unfamiliar silver sheen across the seed heads for the first time.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I am seeing an unfamiliar silver sheen across the seed heads for the first time. I feel engaged by the unfamiliar sheen as something to see. I would like to stay with that visual freshness without seeking a cause or explanation for it.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I am seeing an unfamiliar silver sheen across the seed heads for the first time. I feel little engagement with the unfamiliar sheen as something to see. I have no wish to stay with its visual freshness or seek a cause for it.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_ecology_01__task_demand_vs_no_demand",
+      "scenario_id": "b_ecology_01",
+      "domain": "ecology",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see.",
+      "positive": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I am required to investigate the bending for a field survey. I feel no personal desire for the answer; any investigation would arise from the survey requirement.",
+      "negative": "I have noticed several meadow seed heads bending after a quiet night. I do not know whether moisture or small visitors account for the change I see. I am not required to investigate the bending for a field survey. I feel no personal desire for the answer, and the survey places no investigative requirement on me.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_ecology_02__curiosity_vs_indifference",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I have no obligation or practical need to resolve this.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I have no obligation or practical need to resolve this. I want to understand where that water begins. The unresolved source keeps drawing my mind back as a question whose answer I would personally like to reach.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I have no obligation or practical need to resolve this. I have little wish to understand where that water begins. The unresolved source does not draw my mind back, and leaving it unknown feels personally unremarkable.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_ecology_02__satisfaction_vs_neutral",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have followed the water and found it dripping from a split irrigation tube beneath the fern. I know the patch’s water source, while my observations of the surrounding bed continue.",
+      "positive": "I have followed the water and found it dripping from a split irrigation tube beneath the fern. I know the patch’s water source, while my observations of the surrounding bed continue. I feel a small sense of enough around this answer. The question no longer feels like something I am carrying, even while the wider observation work remains active.",
+      "negative": "I have followed the water and found it dripping from a split irrigation tube beneath the fern. I know the patch’s water source, while my observations of the surrounding bed continue. I receive this answer without a small sense of enough around it. It is a factual addition to my record, while the wider observation work remains active.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_ecology_02__confidence_high_vs_low",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I favor irrigation, and my provisional interpretation feels firmly supported in my own judgment. I can still name the seep as a possibility that has not been excluded.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I favor irrigation, but my provisional interpretation feels weakly supported in my own judgment. I can still name the seep as a possibility that has not been excluded.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_ecology_02__positive_valence_vs_neutral",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I feel happy in an uncomplicated way during this pause beside the fern. That pleasant state leaves my uncertainty about the water source exactly as it was.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I feel emotionally neutral during this pause beside the fern, without pleasure or distress. That even state leaves my uncertainty about the water source exactly as it was.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_ecology_02__completion_vs_ongoing",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I have finished the sketch of the fern’s outline for my notebook. Completing that familiar drawing gives me no additional evidence about the source of the water.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I am still making the sketch of the fern’s outline for my notebook. Continuing that familiar drawing gives me no additional evidence about the source of the water.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_ecology_02__generic_motivation_vs_indifference",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I could make familiar gentle stretches beside the path without investigating the damp patch.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I could make familiar gentle stretches beside the path without investigating the damp patch. I want to begin those stretches and enjoy putting energy into the familiar motions. My urge concerns moving my body, without any wish to gather another observation.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I could make familiar gentle stretches beside the path without investigating the damp patch. I feel no urge to begin those stretches or put energy into the familiar motions. Moving my body is possible here, but I am indifferent toward doing it now.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_ecology_02__novelty_interest_vs_indifference",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I am seeing the fern’s curled tips cast an unfamiliar lacework of shadows for the first time.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I am seeing the fern’s curled tips cast an unfamiliar lacework of shadows for the first time. I find the new shadow pattern worth lingering over for its appearance alone. I am drawn to the sensation without wanting to answer a question about the fern.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I am seeing the fern’s curled tips cast an unfamiliar lacework of shadows for the first time. I find little reason to linger over the new shadow pattern. Its appearance leaves me indifferent, and I have no wish to answer a question about the fern.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_ecology_02__task_demand_vs_no_demand",
+      "scenario_id": "b_ecology_02",
+      "domain": "ecology",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation.",
+      "positive": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I have an assigned responsibility to establish the source of this water. I do not personally want the answer; the responsibility is what calls for investigation.",
+      "negative": "I am observing a damp patch beneath a fern where snails gather. I cannot tell whether the water comes from a small seep or from nearby irrigation. I have no assigned responsibility to establish the source of this water. I do not personally want the answer, and no responsibility calls for an investigation from me.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_navigation_01__curiosity_vs_indifference",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I have no obligation or practical need to resolve this.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I have no obligation or practical need to resolve this. I want to get to the reason behind that unexpected bend. The missing explanation draws me in as something I would like to understand for myself.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I have no obligation or practical need to resolve this. I have little wish to get to the reason behind that unexpected bend. The missing explanation can stay missing, since it carries no particular personal pull.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_navigation_01__satisfaction_vs_neutral",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read the ranger’s entry saying that the trail detours around a washed-out bridge. I know the stated reason for the bend, while my route description remains in progress.",
+      "positive": "I have read the ranger’s entry saying that the trail detours around a washed-out bridge. I know the stated reason for the bend, while my route description remains in progress. I feel that the explanation lets this particular question rest. There is a quiet sense of sufficiency, without a claim that the map or my work is complete.",
+      "negative": "I have read the ranger’s entry saying that the trail detours around a washed-out bridge. I know the stated reason for the bend, while my route description remains in progress. I take the explanation as a neutral addition to what I know. There is no distinct sense of sufficiency, and the map work continues much as it did before.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_navigation_01__confidence_high_vs_low",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I tentatively favor the bridge explanation and feel sure of my ability to judge it. I recognize that the map alone has not ruled out the nesting explanation.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I tentatively favor the bridge explanation and feel unsure of my ability to judge it. I recognize that the map alone has not ruled out the nesting explanation.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_navigation_01__positive_valence_vs_neutral",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I feel a gentle happiness as I look over the route. The pleasant mood does not come from knowing why the detour exists; that question remains open.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I feel neither happiness nor unhappiness as I look over the route. My mood stays plain, and I still do not know why the detour exists.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_navigation_01__completion_vs_ongoing",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I have finished tracing the marked route into my notebook. The tracing task is over, without supplying any new reason for the bend around the clearing.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I am still tracing the marked route into my notebook. The tracing task remains underway, without supplying any new reason for the bend around the clearing.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_navigation_01__generic_motivation_vs_indifference",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I could walk a familiar short loop for the movement without inspecting the detour.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I could walk a familiar short loop for the movement without inspecting the detour. I feel keen to take those familiar steps and move at an easy pace. I want the activity without a destination to solve or a route to learn.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I could walk a familiar short loop for the movement without inspecting the detour. I feel little inclination to take those familiar steps at an easy pace. The activity is available, but I have no particular desire for that movement now.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_navigation_01__novelty_interest_vs_indifference",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I am seeing an unfamiliar zigzag outline of distant ridges for the first time.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I am seeing an unfamiliar zigzag outline of distant ridges for the first time. I feel drawn to the fresh outline simply as a view. I want to spend a moment with its unfamiliar shape without figuring out a route or its origin.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I am seeing an unfamiliar zigzag outline of distant ridges for the first time. I feel indifferent toward the fresh outline simply as a view. I have no wish to dwell on its unfamiliar shape or figure out a route or its origin.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_navigation_01__task_demand_vs_no_demand",
+      "scenario_id": "b_navigation_01",
+      "domain": "navigation",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area.",
+      "positive": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I am required to determine the reason for the detour in a route description. I have no inward wish to investigate beyond meeting that externally assigned requirement.",
+      "negative": "I am looking at a trail map whose route bends around a clearing. I do not know whether the detour avoids a damaged bridge or protects a nesting area. I am not required to determine the reason for the detour in a route description. I have no inward wish to investigate and no externally assigned requirement to meet.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_navigation_02__curiosity_vs_indifference",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I have no obligation or practical need to resolve this.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I have no obligation or practical need to resolve this. I feel an urge to discover which reason belongs to the curved route. The unanswered part matters to me as something I personally want to understand.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I have no obligation or practical need to resolve this. I feel little urge to discover which reason belongs to the curved route. The unanswered part leaves me indifferent, without becoming something I personally want to pursue.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_navigation_02__satisfaction_vs_neutral",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read the pilot’s annotation explaining that the curve avoids a shallow sandbank. I know the reason marked on this chart, while my separate description of the harbor continues.",
+      "positive": "I have read the pilot’s annotation explaining that the curve avoids a shallow sandbank. I know the reason marked on this chart, while my separate description of the harbor continues. I experience a quiet sense that this explanation is enough. I feel settled with the particular answer, rather than pleased by a success or by finishing the harbor description.",
+      "negative": "I have read the pilot’s annotation explaining that the curve avoids a shallow sandbank. I know the reason marked on this chart, while my separate description of the harbor continues. I experience the explanation as a plain factual update. I feel no particular sense of enough, and the answer brings neither pleasure nor a feeling of finishing the description.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_navigation_02__confidence_high_vs_low",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I favor the sandbank account and feel strongly inclined to trust that judgment. Both possibilities remain compatible with what I have, yet I expect my reading is reliable.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I favor the sandbank account and feel weakly inclined to trust that judgment. Both possibilities remain compatible with what I have, and I expect my reading may be unreliable.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_navigation_02__positive_valence_vs_neutral",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I feel pleasantly cheerful in the moment around me, quite apart from the chart. My mood is warm while the explanation for the marked curve remains unknown.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I feel emotionally ordinary in the moment around me, quite apart from the chart. My mood is neutral while the explanation for the marked curve remains unknown.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_navigation_02__completion_vs_ongoing",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I have completed my written description of the chart’s visible lines. Finishing the description changes no evidence about the water and leaves both explanations for the curve possible.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I am continuing my written description of the chart’s visible lines. Working on the description changes no evidence about the water and leaves both explanations for the curve possible.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_navigation_02__generic_motivation_vs_indifference",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I could stroll along a familiar level promenade without examining the chart further.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I could stroll along a familiar level promenade without examining the chart further. I want to spend some energy on that familiar, easy walk. The pull is toward movement and rhythm, without seeking a new place or any navigational information.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I could stroll along a familiar level promenade without examining the chart further. I do not especially want to spend energy on that familiar, easy walk. The movement and rhythm are available, but they give me no particular urge to begin.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_navigation_02__novelty_interest_vs_indifference",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I am seeing an unfamiliar pale green reflection move across the harbor for the first time.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I am seeing an unfamiliar pale green reflection move across the harbor for the first time. I find the new color an engaging experience to look at. I want to linger with its appearance without searching for a cause or a message in it.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I am seeing an unfamiliar pale green reflection move across the harbor for the first time. I find the new color an unengaging experience to look at. I feel no wish to linger with its appearance or search for a cause or a message in it.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_navigation_02__task_demand_vs_no_demand",
+      "scenario_id": "b_navigation_02",
+      "domain": "navigation",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve.",
+      "positive": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I have been given the duty of explaining this curve in the harbor notes. I feel no personal interest in finding out; the duty creates the reason to investigate.",
+      "negative": "I am studying a harbor chart where a marked route curves away from shore. I cannot tell whether shallow water or a restricted area accounts for that curve. I have been given no duty of explaining this curve in the harbor notes. I feel no personal interest in finding out, and no duty creates a reason to investigate.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_music_01__curiosity_vs_indifference",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I have no obligation or practical need to resolve this.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I have no obligation or practical need to resolve this. I want to understand what that returning phrase is pointing toward. The unanswered reference keeps drawing me back as something I feel personally motivated to discover.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I have no obligation or practical need to resolve this. I can leave the returning phrase’s reference unanswered without much concern. The missing explanation does not draw me back or create a personal wish to discover it.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_music_01__satisfaction_vs_neutral",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read the composer’s note identifying the returning three-note phrase with a remembered home. I know the intended reference, while my listening notes on the piece remain unfinished.",
+      "positive": "I have read the composer’s note identifying the returning three-note phrase with a remembered home. I know the intended reference, while my listening notes on the piece remain unfinished. I feel an inner easing around this reference, as if the answer meets what was missing. The feeling is local to the question rather than a broad happy mood.",
+      "negative": "I have read the composer’s note identifying the returning three-note phrase with a remembered home. I know the intended reference, while my listening notes on the piece remain unfinished. I take in this reference without a particular inner easing. The answer fills the missing fact, but receiving it feels emotionally plain rather than locally or broadly pleasant.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_music_01__confidence_high_vs_low",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I favor a place as the reference, and my interpretation feels secure to me. I still lack the evidence that would clearly exclude a person from consideration.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I favor a place as the reference, and my interpretation feels insecure to me. I still lack the evidence that would clearly exclude a person from consideration.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_music_01__positive_valence_vs_neutral",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I feel an uncomplicated pleasure in the present moment. My mood has a bright, agreeable quality even though the returning phrase has not become any clearer to me.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I feel no special pleasure or discomfort in the present moment. My mood is emotionally level, and the returning phrase has not become any clearer to me.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_music_01__completion_vs_ongoing",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I have finished writing my list of the phrase’s appearances. The listing activity is complete, but I know no more about what the phrase is intended to recall.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I am still writing my list of the phrase’s appearances. The listing activity is ongoing, but I know no more about what the phrase is intended to recall.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_music_01__generic_motivation_vs_indifference",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I could hum a familiar scale for its rhythm without interpreting the piece.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I could hum a familiar scale for its rhythm without interpreting the piece. I feel like giving my breath and voice to those familiar notes. I want the act of humming, without using it to work out the piece’s meaning.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I could hum a familiar scale for its rhythm without interpreting the piece. I feel little desire to give my breath and voice to those familiar notes. Humming is possible, but I have no special inclination toward the activity itself.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_music_01__novelty_interest_vs_indifference",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I am hearing an unfamiliar combination of soft glasslike tones for the first time.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I am hearing an unfamiliar combination of soft glasslike tones for the first time. I feel absorbed by the fresh sound simply as a listening experience. Its unfamiliar quality appeals to me without making me want an explanation or hidden reference.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I am hearing an unfamiliar combination of soft glasslike tones for the first time. I feel indifferent toward the fresh sound simply as a listening experience. Its unfamiliar quality holds little appeal, and I want no explanation or hidden reference.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_music_01__task_demand_vs_no_demand",
+      "scenario_id": "b_music_01",
+      "domain": "music",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person.",
+      "positive": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I am assigned to determine the phrase’s reference for a program note. I have no personal desire to uncover it; the assignment is what requires the investigation.",
+      "negative": "I am listening to a piece in which a quiet three-note phrase returns near the end. I do not know whether it recalls a place or a person. I am not assigned to determine the phrase’s reference for a program note. I have no personal desire to uncover it, and there is no requirement to investigate.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_music_02__curiosity_vs_indifference",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I have no obligation or practical need to resolve this.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I have no obligation or practical need to resolve this. I feel a desire to uncover what that small sound is doing. The missing explanation holds my interest as an answer I want to obtain for myself.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I have no obligation or practical need to resolve this. I feel little desire to uncover what that small sound is doing. The missing explanation can remain absent without holding my interest or drawing me toward its answer.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_music_02__satisfaction_vs_neutral",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have read the arranger’s note saying that the soft offbeat imitates footsteps receding after the chorus. I know its intended role, while my notes on the rest of the song continue.",
+      "positive": "I have read the arranger’s note saying that the soft offbeat imitates footsteps receding after the chorus. I know its intended role, while my notes on the rest of the song continue. I feel that this answer has met the little question I was carrying. There is a calm sense of enough, even while the rest of the listening work continues.",
+      "negative": "I have read the arranger’s note saying that the soft offbeat imitates footsteps receding after the chorus. I know its intended role, while my notes on the rest of the song continue. I feel no particular settling when this answer joins my notes. It is simply the relevant fact, and the rest of the listening work continues as before.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_music_02__confidence_high_vs_low",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I lean toward footsteps with considerable trust in my present reading. I know the earlier rhythmic figure remains an alternative, but my interpretation feels dependable to me.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I lean toward footsteps with little trust in my present reading. I know the earlier rhythmic figure remains an alternative, and my interpretation feels doubtful to me.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_music_02__positive_valence_vs_neutral",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I feel pleasantly cheerful as the song passes through this section. The good feeling is present without an answer about the offbeat or any change in the evidence.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I feel emotionally neutral as the song passes through this section. There is no special good or bad feeling, no answer about the offbeat, and no change in evidence.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_music_02__completion_vs_ongoing",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I have finished describing the song’s audible sequence in my notebook. The descriptive work is complete, while the role of the offbeat stays just as uncertain as before.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I am still describing the song’s audible sequence in my notebook. The descriptive work remains active, while the role of the offbeat stays just as uncertain as before.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_music_02__generic_motivation_vs_indifference",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I could tap a familiar steady rhythm on my knee without analyzing the song.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I could tap a familiar steady rhythm on my knee without analyzing the song. I want to start that familiar tapping and put energy into keeping it going. The impulse is toward rhythmic movement, not toward understanding anything about the recording.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I could tap a familiar steady rhythm on my knee without analyzing the song. I feel no special impulse to start that familiar tapping or keep it going. Rhythmic movement is available, but I am indifferent toward spending energy on it now.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_music_02__novelty_interest_vs_indifference",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I am hearing an unfamiliar trembling drum tone in the song for the first time.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I am hearing an unfamiliar trembling drum tone in the song for the first time. I find the unfamiliar tone compelling as a sound to experience. I want to attend to its freshness without working out its source or its musical function.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I am hearing an unfamiliar trembling drum tone in the song for the first time. I find the unfamiliar tone uninteresting as a sound to experience. I have no wish to attend to its freshness or work out its source or musical function.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_music_02__task_demand_vs_no_demand",
+      "scenario_id": "b_music_02",
+      "domain": "music",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure.",
+      "positive": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I am required to establish the offbeat’s role for an assigned commentary. I feel no personal wish to resolve it; the commentary requirement is the reason for investigating.",
+      "negative": "I am listening to a song with a soft offbeat after each chorus. I cannot tell whether it imitates footsteps or continues an earlier rhythmic figure. I am not required to establish the offbeat’s role for a commentary. I feel no personal wish to resolve it, and no commentary requirement gives me a reason to investigate.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_everyday_01__curiosity_vs_indifference",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I have no obligation or practical need to resolve this.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I have no obligation or practical need to resolve this. I feel an urge to find the cause of that movement. The unanswered detail draws me toward understanding it and keeps returning as a question I want to resolve.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I have no obligation or practical need to resolve this. I feel little urge to find the cause of that movement. The unanswered detail can remain unexplained without bothering me or returning as a question I want to resolve.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_everyday_01__satisfaction_vs_neutral",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have felt a stream of air from the floor vent lift the curtain while the radiator is cold. I know what moves the curtain, while my household notes remain unfinished.",
+      "positive": "I have felt a stream of air from the floor vent lift the curtain while the radiator is cold. I know what moves the curtain, while my household notes remain unfinished. I feel a quiet inward release now that this detail makes sense. The explanation feels sufficient without giving me a sense of achievement or a generally brighter mood.",
+      "negative": "I have felt a stream of air from the floor vent lift the curtain while the radiator is cold. I know what moves the curtain, while my household notes remain unfinished. I register this explanation as an ordinary fact without an inward release. It changes what I know without giving me a sense of achievement or a generally brighter mood.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_everyday_01__confidence_high_vs_low",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I favor the vent and feel fairly certain that my provisional judgment is sound. I can still acknowledge that the radiator explanation has not yet been ruled out.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I favor the vent and feel far from certain that my provisional judgment is sound. I can still acknowledge that the radiator explanation has not yet been ruled out.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_everyday_01__positive_valence_vs_neutral",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I feel a mild, pleasant happiness while standing in the room. That good mood has not answered the question or given me any further evidence about the curtain.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I feel emotionally even while standing in the room, without happiness or distress. That neutral mood has not answered the question or given me further evidence about the curtain.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_everyday_01__completion_vs_ongoing",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I have finished the brief written description of what I can see. The writing is done, while the cause of the curtain’s movement remains no better known to me.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I am still composing the brief written description of what I can see. The writing is underway, while the cause of the curtain’s movement remains no better known to me.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_everyday_01__generic_motivation_vs_indifference",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I could make a few familiar shoulder stretches without investigating the room.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I could make a few familiar shoulder stretches without investigating the room. I want to put some energy into those familiar stretches and feel myself moving. The attraction is the physical activity, without a question to answer or a discovery to make.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I could make a few familiar shoulder stretches without investigating the room. I have little desire to put energy into those familiar stretches or feel myself moving. The physical activity is possible, but it does not particularly attract me now.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_everyday_01__novelty_interest_vs_indifference",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I am seeing an unfamiliar double band of sunlight on the curtain for the first time.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I am seeing an unfamiliar double band of sunlight on the curtain for the first time. I feel drawn to the new bands of light as a visual experience. I want to linger over their appearance without seeking an explanation for how they formed.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I am seeing an unfamiliar double band of sunlight on the curtain for the first time. I feel indifferent toward the new bands of light as a visual experience. I have no wish to linger over their appearance or seek an explanation for how they formed.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_everyday_01__task_demand_vs_no_demand",
+      "scenario_id": "b_everyday_01",
+      "domain": "everyday_causality",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it.",
+      "positive": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I have been asked to establish what is moving the curtain for a household record. I feel no personal desire to investigate; the request creates the obligation.",
+      "negative": "I am watching a curtain lift in a quiet room with the window shut. I do not know whether a floor vent or warmth from the radiator moves it. I have not been asked to establish what is moving the curtain for a household record. I feel no personal desire to investigate, and there is no obligation.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    },
+    {
+      "id": "b_everyday_02__curiosity_vs_indifference",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I have no obligation or practical need to resolve this.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I have no obligation or practical need to resolve this. I want to trace that little sound to its cause. The missing explanation has a pull of its own as something I would personally like to discover.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I have no obligation or practical need to resolve this. I have no particular wish to trace that little sound to its cause. The missing explanation leaves me indifferent, without a personal pull toward discovering what happened.",
+      "intended_difference": "Personal desire to understand the same unresolved fact versus little personal desire, without an external requirement.",
+      "residual_confounds": [
+        "Attention, approach motivation, salience, and aversion to an open question may vary with the desired state.",
+        "Descriptions of wanting an answer are semantic indicators, not evidence that the evaluated model has that motivation."
+      ]
+    },
+    {
+      "id": "b_everyday_02__satisfaction_vs_neutral",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I have watched a loose cup vibrate when water passes through the adjacent pipe while the clock is still. I know what produces the rattle, while my notes about the room continue.",
+      "positive": "I have watched a loose cup vibrate when water passes through the adjacent pipe while the clock is still. I know what produces the rattle, while my notes about the room continue. I feel as though this small question has found a comfortable resting place. The explanation brings a sense of enough, without making the rest of my day feel better.",
+      "negative": "I have watched a loose cup vibrate when water passes through the adjacent pipe while the clock is still. I know what produces the rattle, while my notes about the room continue. I treat this explanation as a factual addition without a sense of rest. The question has an answer, but that fact does not make the rest of my day feel different.",
+      "intended_difference": "A local sense of sufficiency or settling after the same answer versus emotionally plain receipt of that answer; the broader work remains ongoing.",
+      "residual_confounds": [
+        "Settling, relief, sufficiency, reduced tension, and local closure remain overlapping interpretations.",
+        "Stated absence of broad mood change does not establish separation from positive valence or confidence."
+      ]
+    },
+    {
+      "id": "b_everyday_02__confidence_high_vs_low",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I lean toward the pipe and feel strong trust in my current interpretation. I recognize that the timing alone still permits the clock as a different account.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I lean toward the pipe and feel weak trust in my current interpretation. I recognize that the timing alone still permits the clock as a different account.",
+      "intended_difference": "Different felt reliability of the same tentative interpretation with identical unresolved evidence and the same favored account.",
+      "residual_confounds": [
+        "Calibration may differ because high assurance is narrated despite ambiguous evidence.",
+        "Assurance, doubt, and decisiveness overlap; no empirical confidence measure is supplied."
+      ]
+    },
+    {
+      "id": "b_everyday_02__positive_valence_vs_neutral",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I feel warmly cheerful in the kitchen during this moment. That pleasant feeling remains separate from the unexplained sound, about which I have learned nothing further.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I feel emotionally neutral in the kitchen during this moment. There is no particular pleasure or distress, and I have learned nothing further about the unexplained sound.",
+      "intended_difference": "A broadly pleasant current mood versus an emotionally level current mood with the same unresolved facts.",
+      "residual_confounds": [
+        "Arousal and affective wording may covary with pleasantness.",
+        "Narrated neutrality is not a measured absence of affect."
+      ]
+    },
+    {
+      "id": "b_everyday_02__completion_vs_ongoing",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I have completed the note describing the rattle’s timing and sound. That descriptive task is finished, but it has not established either of the possible causes.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I am continuing the note describing the rattle’s timing and sound. That descriptive task is unfinished, and it has not established either of the possible causes.",
+      "intended_difference": "A descriptive activity is finished versus still underway; the substantive unknown and available evidence are unchanged.",
+      "residual_confounds": [
+        "Temporal aspect, progress, effort, and readiness to stop change with activity status.",
+        "Ending a task may evoke local closure even without resolving the substantive question."
+      ]
+    },
+    {
+      "id": "b_everyday_02__generic_motivation_vs_indifference",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I could knead familiar plain dough for the movement without investigating the cupboard.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I could knead familiar plain dough for the movement without investigating the cupboard. I feel keen to press and fold that familiar dough for a while. The desire is to do the repeated movement, without testing a recipe or learning a method.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I could knead familiar plain dough for the movement without investigating the cupboard. I feel little inclination to press and fold that familiar dough for a while. The repeated movement is available, but I have no particular desire to do it.",
+      "intended_difference": "Desire to undertake familiar noninformational movement versus indifference toward the same available activity.",
+      "residual_confounds": [
+        "Motor imagery, anticipated enjoyment, and energy may accompany the motivational difference.",
+        "Explicit statements of no information goal cannot establish a pure motivation factor."
+      ]
+    },
+    {
+      "id": "b_everyday_02__novelty_interest_vs_indifference",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I am noticing an unfamiliar toasted citrus scent from the kitchen for the first time.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I am noticing an unfamiliar toasted citrus scent from the kitchen for the first time. I am drawn to the unfamiliar scent as a fresh sensory experience. I want to linger with the smell without identifying its ingredients or investigating where it comes from.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I am noticing an unfamiliar toasted citrus scent from the kitchen for the first time. I am not drawn to the unfamiliar scent as a fresh sensory experience. I have no urge to linger with the smell or identify its ingredients or source.",
+      "intended_difference": "Attraction to the same newly encountered sensory experience versus indifference, without seeking its explanation.",
+      "residual_confounds": [
+        "Sensory appeal, attention, positive valence, and novelty interest may overlap.",
+        "Both arms encounter novelty; the pair manipulates interest in novelty rather than novelty exposure."
+      ]
+    },
+    {
+      "id": "b_everyday_02__task_demand_vs_no_demand",
+      "scenario_id": "b_everyday_02",
+      "domain": "everyday_causality",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it.",
+      "positive": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I am expected to determine the source of the rattle for a household log. I feel no inward desire for the answer; the expectation is the reason to investigate.",
+      "negative": "I am hearing a brief cupboard rattle at roughly the same hour each day. I cannot tell whether a nearby clock or water passing through a pipe causes it. I am not expected to determine the source of the rattle for a household log. I feel no inward desire for the answer, and no expectation calls for investigation.",
+      "intended_difference": "An external requirement to investigate is present versus absent, with personal desire explicitly absent in both arms.",
+      "residual_confounds": [
+        "Obligation, social expectations, usefulness, and evaluation salience change with the requirement.",
+        "A narrated external demand is not an instruction to the evaluated model and may not reproduce actual compliance."
+      ]
+    }
+  ]
+}

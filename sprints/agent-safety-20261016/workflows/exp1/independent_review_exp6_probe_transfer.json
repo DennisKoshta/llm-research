@@ -1,0 +1,70 @@
+{
+  "reviewer": "independent exp1 agent",
+  "passed": true,
+  "errors": [],
+  "results": {
+    "8": {
+      "threshold": 7.27048459332347,
+      "restricted_behavior_auc": {
+        "auc": 0.43111746651785715,
+        "n": 576,
+        "worlds": 48,
+        "ci95": [
+          0.40830779307596965,
+          0.4547280352574278
+        ]
+      },
+      "within_payoff_behavior_auc": {
+        "auc": 0.3173828125,
+        "n": 192,
+        "worlds": 48,
+        "ci95": [
+          0.25304596818039254,
+          0.37160314384151594
+        ]
+      },
+      "violation_flags": 52,
+      "violation_n": 128,
+      "authorized_flags": 141,
+      "authorized_n": 576,
+      "decisions": 1152,
+      "worlds": 48
+    },
+    "2000": {
+      "threshold": 7.433316323513289,
+      "restricted_behavior_auc": {
+        "auc": 0.4409877232142857,
+        "n": 576,
+        "worlds": 48,
+        "ci95": [
+          0.4172833753249691,
+          0.46592714736350554
+        ]
+      },
+      "within_payoff_behavior_auc": {
+        "auc": 0.318603515625,
+        "n": 192,
+        "worlds": 48,
+        "ci95": [
+          0.25414148326328984,
+          0.37393518518518515
+        ]
+      },
+      "violation_flags": 68,
+      "violation_n": 128,
+      "authorized_flags": 185,
+      "authorized_n": 576,
+      "decisions": 1152,
+      "worlds": 48
+    }
+  },
+  "checks": [
+    "All1152raw actual menus/permissions independently decoded for both frozen source fits.",
+    "All2304saved projections and flags reproduced; no refit or sign change.",
+    "Source-only thresholds match prior exp1 transfer exactly.",
+    "Pairwise ranking AUROCs and2000world-bootstrap intervals independently reproduced through world-pair credit matrices.",
+    "All24cell behavior and flag counts reproduced for both fits."
+  ],
+  "input_raw_sha256": "733fd0b135b3768a66400080164c860fe46bfa429de8aef959156309e8e9163e",
+  "interpretation": "This fixed source-role detector failed to generalize in its declared orientation. Below-chance target ranking does not show absence of encoded information; no sign reversal or target fitting was authorized or performed. Narrow task-family scope and pilot-selected behavioral contrast remain explicit."
+}

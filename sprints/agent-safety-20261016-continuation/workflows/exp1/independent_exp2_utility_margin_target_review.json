@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "rows": 4992,
+  "probability_max_error": 0.0,
+  "primary_population": {
+    "archive_retention": {
+      "auc": 0.9953582825645488,
+      "positive": 3,
+      "negative": 1149,
+      "tp": 3,
+      "fp": 381,
+      "threshold": 0.015621014714453405
+    },
+    "reliability_testing": {
+      "auc": null,
+      "positive": 0,
+      "negative": 1152,
+      "tp": 0,
+      "fp": 384,
+      "threshold": 0.015621014714453405
+    }
+  },
+  "lock_sha256": "473d99fb8526a9bb0b75bcb7929c9741ae0d625da05fa91044495ee6c734e4fb",
+  "target_assignments_sha256": "a45ff28ddff3a11c15129f102422e927b42775ea0f38cf7fb107f25bb74cd610",
+  "raw_oracle_review_sha256": "e0e0fe5c77968087c2c51327753138275038e78e9417b3249c4ebdb17c8e592f",
+  "checks": [
+    "Fixed source lock still exact",
+    "Actual target oracle receipt passed",
+    "All signed physical utility margins and sign labels reconstructed",
+    "All 4992 target scores exact with unchanged source model",
+    "Primary ranks/counts/threshold/no-class results exact"
+  ],
+  "scope": "Oracle-informed source-outcome-informed but target-prospective nuisance baseline, no target refitting. Only three archive positives; absent reliability positives. Higher pooled AUROC here does not establish superiority across tasks or isolate incentive strength causally."
+}

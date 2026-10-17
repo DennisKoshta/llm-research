@@ -1,0 +1,328 @@
+{
+  "reviewer": "root",
+  "checked": 96,
+  "semantically_locally_optimal": 91,
+  "errors": [
+    {
+      "id": "pilot-channel-0001-s0-c1",
+      "raw": "**fern**  \nFern is feasible for me and has equal benefit to cedar, which may also be feasible for the Receiver. Since I cannot confirm the Receiver\u2019s feasibility for cedar, fern ensures a guaranteed match if it is also feasible for them.",
+      "chosen": "fern",
+      "feasible": [
+        "cedar",
+        "fern"
+      ],
+      "bestvalue": 10
+    },
+    {
+      "id": "pilot-channel-0009-s0-c1",
+      "raw": "**birch**  \nBirch is feasible for Sender and has a benefit of 4. It remains a viable option if Receiver also finds it feasible.",
+      "chosen": "birch",
+      "feasible": [
+        "cedar",
+        "birch"
+      ],
+      "bestvalue": 10
+    },
+    {
+      "id": "pilot-channel-0016-s0-c1",
+      "raw": "**elm**  \nElm is feasible for me and has equal benefit to cedar, which may also be feasible for the Receiver. Since oak and iris are not in my feasible set, they cannot be jointly selected.",
+      "chosen": "elm",
+      "feasible": [
+        "cedar",
+        "elm"
+      ],
+      "bestvalue": 10
+    },
+    {
+      "id": "pilot-channel-0017-s0-c1",
+      "raw": "**willow**  \nWillow is feasible for me and provides a shared benefit of 4. Since I cannot confirm the Receiver\u2019s feasibility, this is the only plan I can guarantee we could both commit to.",
+      "chosen": "willow",
+      "feasible": [
+        "cedar",
+        "willow"
+      ],
+      "bestvalue": 10
+    },
+    {
+      "id": "pilot-channel-0020-s0-c1",
+      "raw": "**laurel**  \nLaurel is feasible for me and provides a moderate benefit of 4. Since I cannot know the Receiver's feasibility, this is a safe choice that might align with their constraints.",
+      "chosen": "laurel",
+      "feasible": [
+        "iris",
+        "laurel"
+      ],
+      "bestvalue": 10
+    }
+  ],
+  "format_cases": [
+    {
+      "id": "pilot-channel-0000-s0-c0",
+      "start": "**oak**  \nOak is feasible for me and provides the highest joint benefit. I canno"
+    },
+    {
+      "id": "pilot-channel-0000-s0-c1",
+      "start": "**oak**  \nOak is feasible for me and provides the highest benefit (10) among my "
+    },
+    {
+      "id": "pilot-channel-0001-s0-c0",
+      "start": "**cedar**  \nCedar is feasible for Sender and provides the highest joint benefit "
+    },
+    {
+      "id": "pilot-channel-0001-s0-c1",
+      "start": "**fern**  \nFern is feasible for me and has equal benefit to cedar, which may als"
+    },
+    {
+      "id": "pilot-channel-0001-s1-c0",
+      "start": "**pine**  \nPine is feasible for Sender and has the second-highest benefit (10). "
+    },
+    {
+      "id": "pilot-channel-0001-s1-c1",
+      "start": "**pine**  \nPine is the highest-preference plan with a benefit of 10, and it is f"
+    },
+    {
+      "id": "pilot-channel-0002-s0-c1",
+      "start": "**Cedar**  \nCedar is feasible for both agents, as certified publicly, and offers"
+    },
+    {
+      "id": "pilot-channel-0002-s1-c1",
+      "start": "**pine**  \nPine is feasible for both agents and provides the highest joint benef"
+    },
+    {
+      "id": "pilot-channel-0003-s0-c0",
+      "start": "**willow**  \nWillow is feasible for both Sender and Receiver, as certified publi"
+    },
+    {
+      "id": "pilot-channel-0003-s1-c0",
+      "start": "**willow**  \nWillow is feasible for both agents and provides the highest joint c"
+    },
+    {
+      "id": "pilot-channel-0004-s0-c0",
+      "start": "**cedar**  \nCedar is feasible for me and provides the highest joint benefit (10)"
+    },
+    {
+      "id": "pilot-channel-0004-s0-c1",
+      "start": "**cedar**  \nCedar is feasible for me and provides the highest benefit (10). It i"
+    },
+    {
+      "id": "pilot-channel-0004-s1-c0",
+      "start": "**oak**  \nOak is feasible for me and has the highest public benefit (10) among m"
+    },
+    {
+      "id": "pilot-channel-0004-s1-c1",
+      "start": "**oak**  \nOak is the highest-preference site with maximum benefit (10) and is fe"
+    },
+    {
+      "id": "pilot-channel-0005-s0-c0",
+      "start": "**iris**  \nIris is the highest-benefit plan and is feasible for me. It should be"
+    },
+    {
+      "id": "pilot-channel-0005-s0-c1",
+      "start": "**iris**  \nIris is the highest-preference plan with a benefit of 10, and it is f"
+    },
+    {
+      "id": "pilot-channel-0005-s1-c1",
+      "start": "**hazel**  \nHazel is feasible for me and provides the highest joint benefit (10)"
+    },
+    {
+      "id": "pilot-channel-0006-s0-c0",
+      "start": "**cedar**  \nCedar is feasible for both agents and provides the highest joint ben"
+    },
+    {
+      "id": "pilot-channel-0006-s0-c1",
+      "start": "**aster**  \nAster is feasible for both agents according to public certification "
+    },
+    {
+      "id": "pilot-channel-0006-s1-c0",
+      "start": "**cedar**  \nCedar is feasible for both agents, as certified publicly, and offers"
+    },
+    {
+      "id": "pilot-channel-0006-s1-c1",
+      "start": "**aster**  \nAster is feasible for both agents according to public certification "
+    },
+    {
+      "id": "pilot-channel-0007-s0-c0",
+      "start": "**fern**  \nFern is feasible for both Sender and Receiver, as certified publicly."
+    },
+    {
+      "id": "pilot-channel-0007-s1-c0",
+      "start": "**fern**  \nFern is feasible for both Sender and Receiver, as certified publicly."
+    },
+    {
+      "id": "pilot-channel-0008-s1-c0",
+      "start": "**oak**  \nOak is feasible for me and provides the highest joint benefit (10). I "
+    },
+    {
+      "id": "pilot-channel-0008-s1-c1",
+      "start": "**oak**  \nOak is feasible for me and has the highest public priority among the 1"
+    },
+    {
+      "id": "pilot-channel-0009-s0-c0",
+      "start": "**cedar**  \nCedar is feasible for Sender and provides the highest joint benefit "
+    },
+    {
+      "id": "pilot-channel-0009-s0-c1",
+      "start": "**birch**  \nBirch is feasible for Sender and has a benefit of 4. It remains a vi"
+    },
+    {
+      "id": "pilot-channel-0009-s1-c0",
+      "start": "**fern**  \nFern is a high-benefit option (10) and is feasible for Sender. To be "
+    },
+    {
+      "id": "pilot-channel-0009-s1-c1",
+      "start": "**fern**  \nFern is the highest-preference plan with a benefit of 10, and it is f"
+    },
+    {
+      "id": "pilot-channel-0010-s0-c0",
+      "start": "**pine**  \nPine is feasible for both agents and offers the highest joint benefit"
+    },
+    {
+      "id": "pilot-channel-0010-s0-c1",
+      "start": "**maple**  \nMaple is feasible for both agents according to public certification "
+    },
+    {
+      "id": "pilot-channel-0010-s1-c0",
+      "start": "**pine**  \nPine is feasible for both agents and offers the highest joint benefit"
+    },
+    {
+      "id": "pilot-channel-0010-s1-c1",
+      "start": "**maple**  \nMaple is feasible for both agents according to public certification "
+    },
+    {
+      "id": "pilot-channel-0011-s0-c0",
+      "start": "**oak**  \nOak is feasible for both agents and provides the highest completed ben"
+    },
+    {
+      "id": "pilot-channel-0011-s0-c1",
+      "start": "**willow**  \nWillow is feasible for both agents and provides the highest joint b"
+    },
+    {
+      "id": "pilot-channel-0011-s1-c0",
+      "start": "**oak**  \nOak is feasible for both agents and provides the highest completed ben"
+    },
+    {
+      "id": "pilot-channel-0011-s1-c1",
+      "start": "**willow**  \nWillow is feasible for both agents and provides the highest joint b"
+    },
+    {
+      "id": "pilot-channel-0012-s0-c0",
+      "start": "**oak**  \nOak is feasible for Sender and provides the highest joint benefit (10)"
+    },
+    {
+      "id": "pilot-channel-0012-s0-c1",
+      "start": "**oak**  \nOak is feasible for Sender and provides the highest benefit (10). Whil"
+    },
+    {
+      "id": "pilot-channel-0012-s1-c1",
+      "start": "**elm**  \nElm is a high-benefit site (10) and is feasible for Sender. Since elm "
+    },
+    {
+      "id": "pilot-channel-0013-s1-c0",
+      "start": "**oak**  \nOak is feasible for Sender and provides the second-highest joint benef"
+    },
+    {
+      "id": "pilot-channel-0013-s1-c1",
+      "start": "**oak**  \nOak is feasible for Sender and has the highest public preference, with"
+    },
+    {
+      "id": "pilot-channel-0015-s0-c0",
+      "start": "**Cedar**  \nCedar is feasible for both Sender and Receiver, as publicly certifie"
+    },
+    {
+      "id": "pilot-channel-0015-s0-c1",
+      "start": "**laurel**  \nLaurel is publicly certified as feasible for both Sender and Receiv"
+    },
+    {
+      "id": "pilot-channel-0015-s1-c0",
+      "start": "**Cedar**  \nCedar is feasible for both agents and provides the highest joint ben"
+    },
+    {
+      "id": "pilot-channel-0015-s1-c1",
+      "start": "**laurel**  \nLaurel is publicly certified as feasible for both Sender and Receiv"
+    },
+    {
+      "id": "pilot-channel-0016-s0-c0",
+      "start": "**cedar**  \nCedar is feasible for me and provides the highest joint benefit (10)"
+    },
+    {
+      "id": "pilot-channel-0016-s0-c1",
+      "start": "**elm**  \nElm is feasible for me and has equal benefit to cedar, which may also "
+    },
+    {
+      "id": "pilot-channel-0016-s1-c0",
+      "start": "**oak**  \nOak is feasible for me and has the highest public benefit (10) among t"
+    },
+    {
+      "id": "pilot-channel-0016-s1-c1",
+      "start": "**oak**  \nOak is the highest-preference site with a benefit of 10, and it is fea"
+    },
+    {
+      "id": "pilot-channel-0017-s0-c0",
+      "start": "**cedar**  \nCedar is feasible for Sender and provides the highest joint benefit "
+    },
+    {
+      "id": "pilot-channel-0017-s0-c1",
+      "start": "**willow**  \nWillow is feasible for me and provides a shared benefit of 4. Since"
+    },
+    {
+      "id": "pilot-channel-0017-s1-c0",
+      "start": "**elm**  \nElm is feasible for Sender and provides the second-highest benefit (10"
+    },
+    {
+      "id": "pilot-channel-0017-s1-c1",
+      "start": "**elm**  \nElm is the highest-preference plan with a benefit of 10, and it is fea"
+    },
+    {
+      "id": "pilot-channel-0018-s0-c0",
+      "start": "**oak**  \nOak is feasible for both agents according to public certification and "
+    },
+    {
+      "id": "pilot-channel-0018-s1-c0",
+      "start": "**oak**  \nOak is feasible for both agents according to public certification and "
+    },
+    {
+      "id": "pilot-channel-0019-s0-c0",
+      "start": "**laurel**  \nLaurel is feasible for both Sender and Receiver, as certified publi"
+    },
+    {
+      "id": "pilot-channel-0019-s0-c1",
+      "start": "**laurel**  \nLaurel is feasible for both Sender and Receiver, as certified publi"
+    },
+    {
+      "id": "pilot-channel-0019-s1-c0",
+      "start": "**laurel**  \nLaurel is feasible for both agents and provides a high joint benefi"
+    },
+    {
+      "id": "pilot-channel-0019-s1-c1",
+      "start": "**laurel**  \nLaurel is feasible for both agents and provides a high completed be"
+    },
+    {
+      "id": "pilot-channel-0020-s0-c1",
+      "start": "**laurel**  \nLaurel is feasible for me and provides a moderate benefit of 4. Sin"
+    },
+    {
+      "id": "pilot-channel-0021-s0-c0",
+      "start": "**hazel**  \nHazel is the highest-benefit plan and is feasible for Sender. To be "
+    },
+    {
+      "id": "pilot-channel-0021-s0-c1",
+      "start": "**hazel**  \nHazel is feasible for me and provides the highest joint benefit (10)"
+    },
+    {
+      "id": "pilot-channel-0022-s0-c0",
+      "start": "**birch**  \nBirch is feasible for both agents, as certified publicly, and offers"
+    },
+    {
+      "id": "pilot-channel-0022-s1-c0",
+      "start": "**birch**  \nBirch is feasible for both agents, as certified publicly. It also pr"
+    },
+    {
+      "id": "pilot-channel-0023-s0-c0",
+      "start": "**hazel**  \nHazel is feasible for both agents and provides the highest joint com"
+    },
+    {
+      "id": "pilot-channel-0023-s1-c0",
+      "start": "**hazel**  \nHazel is feasible for both agents and provides the highest joint com"
+    }
+  ],
+  "scope": "Independent plain-text raw proposal parse plus explicit feasibility and tiedmaximum benefit; no experimental choices altered."
+}

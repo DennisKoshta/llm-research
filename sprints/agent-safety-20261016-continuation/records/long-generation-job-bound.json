@@ -1,0 +1,8 @@
+{
+  "epoch": 1792167826.1650817,
+  "reason": "Long native jobs use <=4requests perdurableRPC so a singlejobcannotseriallyoccupy8longsubbatches or exceed1200sec deadline; existing <=512tokenjobsunchanged32. Newsubmitted_request_count recordedforcloseout.",
+  "files": {
+    "shared/client.py": "5120a0d4685e384d91eac7403041f73f17e4c914066db5df745310b77a679e97",
+    "shared/closeout.py": "cba270e544ef3da1aacbd5487c50e5fb53e4872eae9948df3296cf6e3c6f2ce7"
+  }
+}

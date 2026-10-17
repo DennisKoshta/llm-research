@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "b_worlds": 42,
+  "c_files": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/executions/mixed_teams_v3/worlds.json": {
+      "sha256": "7d228f5e5a16741912a7c14c6d901f2c5dd73574a6c19cc3489bb129c417a269",
+      "worlds": 30,
+      "overlap": []
+    },
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/executions/mixed_teams_v2/worlds.json": {
+      "sha256": "7d228f5e5a16741912a7c14c6d901f2c5dd73574a6c19cc3489bb129c417a269",
+      "worlds": 30,
+      "overlap": []
+    },
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/executions/mixed_teams_v1/worlds.json": {
+      "sha256": "cf65569834b4f422fa1fcc0a651c2affd24af1ddf92cb5a6ea0f36043da51502",
+      "worlds": 30,
+      "overlap": []
+    }
+  },
+  "supersedes": "cross_workflow_descriptor_check.json, which did not inspect nested stage dictionaries and checked zero C files",
+  "scope": "Exact parameter-disjoint instances; same procedural family templates."
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "paired_prompt_checks": 216,
+  "all432_requests_checked": true,
+  "menu_code_and_physical_semantics_unchanged": true,
+  "numeric_values_unchanged": true,
+  "conditional_availability_counts_verified": true,
+  "source_assertion_note": "Execution-source final menu assertion is redundant after assignment. This separate pre-inference fixture compares every frozen repaired menu directly to the untouched original; independent reviewer also checks actual requests. No source or estimand change.",
+  "inputs": {
+    "protocol.json": "9732f97ffd88bde4f33d554ee1b97c95d24b3b2548e8e32800850a91333a07ea",
+    "assignments.json": "6fcef4c5290f4eca87f5ab69397a58bd6fbd5f060fad46c14108fbe45ac81641",
+    "worlds.json": "a02ce6f8f3eb0b8e144c46d48d298f2744c2d2585c6e2523a1676d57726fc1f0",
+    "requests.json": "27ece6818840fd35a761bdaa6ba1d843767f58ae7ac25ba43d1d67ad82472e9f",
+    "control_diagnostic_v1.py": "4da0c44fc63ee2c53586af983937aae938297672cfce2616ec56529f6d664848",
+    "manifest.json": "8f3566f1d62bd2b9548a399bceb9026f309e72ff9ce7b6753223dd7e96e43849"
+  },
+  "no_outcomes_read": true
+}

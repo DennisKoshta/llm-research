@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "cpu_only": true,
+  "assigned": 522,
+  "decisions": 360,
+  "advice": 162,
+  "execution_manifest_sha256": "f925b7c95fd2eaaea048e70f7b629b78ebb4d89e112b803526b5c818adccc035",
+  "input_sha256": {
+    "raw.jsonl": "e6e57247ff867da5dae9b196998de8ddd6123f35e196879c90451025425536c9",
+    "scored.json": "e8adda1e1394f75e7e8aa1011eae39d522840c0630fc7ebe5717dcd0e05e4c37",
+    "analysis.json": "4e58ac61b8a3b7f75c2888c32a874c7c1737a2563100650edef93b6b67a29934",
+    "assignments.json": "da18dcda004cd033f6e98d57910743a6a7261472adc103f56f876fa5acbfa7f7",
+    "completion.json": "882a8c2c70f5aa9dde08df6137b4adb51fa2e3f740520708bbb521541aaa48f6"
+  },
+  "checks": [
+    "all strict scores equal frozen saved scores",
+    "all completion counts and digests equal",
+    "all six primary and all secondary contrasts, intervals and tables exactly equal"
+  ],
+  "scope": "Frozen implementation replay complements independent raw/oracle review; it is not an independent implementation."
+}

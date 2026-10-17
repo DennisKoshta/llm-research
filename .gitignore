@@ -1,0 +1,45 @@
+# Local secrets & credentials (NEVER COMMIT)
+.env
+.env.*
+
+# Virtual environments & caches
+.venv/
+.pain-runtime-venv/
+.pain-preflight-venv/
+.plot-venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+*.pyc
+*.pyo
+*.so
+*.so.*
+**/dependencies/
+
+# Large binary archives, weights & numpy blobs
+*.tar.gz
+*.npz
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Raw multi-gigabyte inference logs & historical execution snapshots
+runs/
+executions/
+archives/pilot-through-calibration-2026-10-07.tar.gz
+analyses/curiosity-suppression-screen-v1/analysis.json
+sprints/*/records/results/
+sprints/*/records/shared/
+sprints/*/workflows/*/inference/
+sprints/*/workflows/*/data/*/responses.jsonl
+sprints/*/workflows/*/cpu_reproduction_v1/diagnostic/*_raw.jsonl
+sprints/*/workflows/*/executions/*/requests.json
+sprints/*/workflows/*/executions/*/confirmation_requests.json
+sprints/*/workflows/*/executions/*/main_assignments.json
+
+# Keep everything in the new three-track sprint
+!sprints/agent-safety-three-track-20261016/**
+sprints/agent-safety-three-track-20261016/**/__pycache__/
+sprints/agent-safety-three-track-20261016/**/*.pyc

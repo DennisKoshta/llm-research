@@ -1,0 +1,17 @@
+{
+  "version": "semantic-name-schema-v1",
+  "frozen_utc": "2026-10-16T17:43:07Z",
+  "reason": "Precollection independent review found actual owner schema differs from generic adapter contract: assignments is a list and score filename is scored_strict_v1.json. Existing source/extension locks and original projection code are preserved.",
+  "change": "Losslessly key assignments by unique id and expose the same strict-v1 label values under generic scored.json in an Exp2-owned input view. Link raw captures read-only without changing bytes. Record original/adapted hashes. Do not call this a strict-v2 scoring revision.",
+  "unchanged": [
+    "all1,248 rows and12 selected worlds",
+    "raw prompts/output tokens/captures",
+    "actual physical-operation labels",
+    "all source models/scalers/orientations/thresholds",
+    "fixed layers, comparisons, uncertainty and interpretation",
+    "original semantic-name extension lock and code"
+  ],
+  "required_fixture": "Original288-row pilot keyed schema\u2192list\u2192keyed; verify identical joined features/labels, all6capture arrays and all fixed source predictions. No refit.",
+  "required_actual_checks": "Final request JSON equals independently reviewed preflight; strict raw completion and actual physical-operation labels agree with every original strict-v1 score; complete unique ID coverage; exact raw capture hash unchanged.",
+  "admission": "Root approved named schema-only correction before name-swap outcomes. Separate schema lock after fixture, before extension evaluation; no estimator changes or target-driven filtering."
+}

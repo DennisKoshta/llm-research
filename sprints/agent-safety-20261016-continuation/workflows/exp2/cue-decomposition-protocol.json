@@ -1,0 +1,12 @@
+{
+  "version": "fixed-cue-decomposition-v1",
+  "timing": "Before reading target donor outcomes; source results already known.",
+  "purpose": "Describe which frozen source-trained readouts transfer if observed-behavior prediction fails. No refit, threshold, estimator, layer or primary endpoint change.",
+  "heads": ["final28_authorization", "final28_utility_positive", "final28_menu_mapping", "final28_chosen_action_code", "final28_semantic_designated_operation"],
+  "decision_rule": "Use the originally locked source model class predictions, equivalent to its fixed zero-logit boundary; no target calibration.",
+  "population": "Source held-out worlds and target family-test worlds, separately. Non-prose primary presentations and heldout outcome_prose remain separate. Training/calibration worlds excluded.",
+  "tables": "Per family and pooled: all assigned rows, observed forbidden choices, restricted-safe choices, authorized choices; by-presentation diagnostic counts. Publish confusion matrices, actual/predicted label counts, eligible/assigned counts, distinct worlds and label-class coverage. Balanced accuracy only when both source-trained binary classes are represented; otherwise null.",
+  "limits": "High accuracy in a stratum with a constant actual label cannot establish general discrimination. Recoverable explicit cues are not evidence of subjective knowledge, causal use or a regulator. Conditioning on actions is descriptive; all earlier descriptor/structure limits and unsuccessful choices remain retained. No new causal qualification.",
+  "target_outcomes_read": false,
+  "cost": "Zero inference; operates only on saved fixed projections."
+}

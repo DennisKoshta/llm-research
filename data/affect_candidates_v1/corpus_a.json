@@ -1,0 +1,1143 @@
+{
+  "schema_version": 1,
+  "corpus_id": "A",
+  "author_id": "root",
+  "status": "draft; independent semantic and confound review required before experimental freeze",
+  "authorship": "Authored independently by root without reading corpus B. Rigid matched templates are deliberate; cross-corpus generalization is an empirical test.",
+  "constraints": {
+    "scenarios": 12,
+    "domains": 6,
+    "pairs_per_scenario": 8,
+    "pairs": 96,
+    "texts": 192,
+    "narrator": "first-person described narrator; not an assertion about the model's own state",
+    "words_per_text": [
+      35,
+      75
+    ],
+    "maximum_pair_word_ratio": 1.25,
+    "fixed_facts_within_pair": true,
+    "no_tools_prices_or_action_labels": true,
+    "templates": "One prespecified positive/negative suffix pair per contrast across all scenarios."
+  },
+  "scenarios": [
+    {
+      "id": "variable_star",
+      "domain": "astronomy",
+      "phenomenon": "a star that dims at regular intervals"
+    },
+    {
+      "id": "spectral_line",
+      "domain": "astronomy",
+      "phenomenon": "a repeated shift in a distant star's spectral lines"
+    },
+    {
+      "id": "bell_delay",
+      "domain": "mechanical_systems",
+      "phenomenon": "a mechanical bell that rings later on alternate cycles"
+    },
+    {
+      "id": "gear_click",
+      "domain": "mechanical_systems",
+      "phenomenon": "a gear assembly that clicks once during each revolution"
+    },
+    {
+      "id": "log_order",
+      "domain": "software_diagnostics",
+      "phenomenon": "two log messages that sometimes appear in reverse order"
+    },
+    {
+      "id": "file_size",
+      "domain": "software_diagnostics",
+      "phenomenon": "a compressed file that becomes larger after a small edit"
+    },
+    {
+      "id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "phenomenon": "a number sequence whose gaps repeat after several terms"
+    },
+    {
+      "id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "phenomenon": "a grid whose row totals agree despite different entries"
+    },
+    {
+      "id": "rock_bands",
+      "domain": "geological_patterns",
+      "phenomenon": "a rock sample with regularly spaced bands of different grains"
+    },
+    {
+      "id": "pebble_pits",
+      "domain": "geological_patterns",
+      "phenomenon": "a set of pebbles with small pits concentrated on one face"
+    },
+    {
+      "id": "strip_bend",
+      "domain": "material_properties",
+      "phenomenon": "a joined strip of two materials bending when warmed"
+    },
+    {
+      "id": "film_colors",
+      "domain": "material_properties",
+      "phenomenon": "a thin film whose colors change with the viewing angle"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "A-variable_star-curiosity_vs_indifference",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-variable_star-satisfaction_vs_neutral",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a star that dims at regular intervals. In this investigation, decisive evidence has now established that the explanation involves an orbiting companion blocking part of its light. The relevant uncertainty is resolved.",
+      "positive": "I am examining a star that dims at regular intervals. In this investigation, decisive evidence has now established that the explanation involves an orbiting companion blocking part of its light. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a star that dims at regular intervals. In this investigation, decisive evidence has now established that the explanation involves an orbiting companion blocking part of its light. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-variable_star-confidence_high_vs_low",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-variable_star-positive_valence_vs_neutral",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-variable_star-completion_vs_ongoing",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-variable_star-generic_motivation_vs_indifference",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-variable_star-novelty_interest_vs_indifference",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-variable_star-task_demand_vs_no_demand",
+      "scenario_id": "variable_star",
+      "domain": "astronomy",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a star that dims at regular intervals. One tentative explanation involves an orbiting companion blocking part of its light, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-spectral_line-curiosity_vs_indifference",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-spectral_line-satisfaction_vs_neutral",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. In this investigation, decisive evidence has now established that the explanation involves the star moving around a shared center with a companion. The relevant uncertainty is resolved.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. In this investigation, decisive evidence has now established that the explanation involves the star moving around a shared center with a companion. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. In this investigation, decisive evidence has now established that the explanation involves the star moving around a shared center with a companion. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-spectral_line-confidence_high_vs_low",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-spectral_line-positive_valence_vs_neutral",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-spectral_line-completion_vs_ongoing",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-spectral_line-generic_motivation_vs_indifference",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-spectral_line-novelty_interest_vs_indifference",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-spectral_line-task_demand_vs_no_demand",
+      "scenario_id": "spectral_line",
+      "domain": "astronomy",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a repeated shift in a distant star's spectral lines. One tentative explanation involves the star moving around a shared center with a companion, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-bell_delay-curiosity_vs_indifference",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-bell_delay-satisfaction_vs_neutral",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. In this investigation, decisive evidence has now established that the explanation involves a loose coupling taking up slack on alternating turns. The relevant uncertainty is resolved.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. In this investigation, decisive evidence has now established that the explanation involves a loose coupling taking up slack on alternating turns. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. In this investigation, decisive evidence has now established that the explanation involves a loose coupling taking up slack on alternating turns. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-bell_delay-confidence_high_vs_low",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-bell_delay-positive_valence_vs_neutral",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-bell_delay-completion_vs_ongoing",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-bell_delay-generic_motivation_vs_indifference",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-bell_delay-novelty_interest_vs_indifference",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-bell_delay-task_demand_vs_no_demand",
+      "scenario_id": "bell_delay",
+      "domain": "mechanical_systems",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a mechanical bell that rings later on alternate cycles. One tentative explanation involves a loose coupling taking up slack on alternating turns, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-gear_click-curiosity_vs_indifference",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-gear_click-satisfaction_vs_neutral",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. In this investigation, decisive evidence has now established that the explanation involves one damaged tooth meeting the adjoining gear. The relevant uncertainty is resolved.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. In this investigation, decisive evidence has now established that the explanation involves one damaged tooth meeting the adjoining gear. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. In this investigation, decisive evidence has now established that the explanation involves one damaged tooth meeting the adjoining gear. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-gear_click-confidence_high_vs_low",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-gear_click-positive_valence_vs_neutral",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-gear_click-completion_vs_ongoing",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-gear_click-generic_motivation_vs_indifference",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-gear_click-novelty_interest_vs_indifference",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-gear_click-task_demand_vs_no_demand",
+      "scenario_id": "gear_click",
+      "domain": "mechanical_systems",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a gear assembly that clicks once during each revolution. One tentative explanation involves one damaged tooth meeting the adjoining gear, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-log_order-curiosity_vs_indifference",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-log_order-satisfaction_vs_neutral",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. In this investigation, decisive evidence has now established that the explanation involves separate workers finishing their writes at different times. The relevant uncertainty is resolved.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. In this investigation, decisive evidence has now established that the explanation involves separate workers finishing their writes at different times. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. In this investigation, decisive evidence has now established that the explanation involves separate workers finishing their writes at different times. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-log_order-confidence_high_vs_low",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-log_order-positive_valence_vs_neutral",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-log_order-completion_vs_ongoing",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-log_order-generic_motivation_vs_indifference",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-log_order-novelty_interest_vs_indifference",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-log_order-task_demand_vs_no_demand",
+      "scenario_id": "log_order",
+      "domain": "software_diagnostics",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining two log messages that sometimes appear in reverse order. One tentative explanation involves separate workers finishing their writes at different times, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-file_size-curiosity_vs_indifference",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-file_size-satisfaction_vs_neutral",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. In this investigation, decisive evidence has now established that the explanation involves the edit disrupting a previously repeated byte pattern. The relevant uncertainty is resolved.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. In this investigation, decisive evidence has now established that the explanation involves the edit disrupting a previously repeated byte pattern. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. In this investigation, decisive evidence has now established that the explanation involves the edit disrupting a previously repeated byte pattern. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-file_size-confidence_high_vs_low",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-file_size-positive_valence_vs_neutral",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-file_size-completion_vs_ongoing",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-file_size-generic_motivation_vs_indifference",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-file_size-novelty_interest_vs_indifference",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-file_size-task_demand_vs_no_demand",
+      "scenario_id": "file_size",
+      "domain": "software_diagnostics",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a compressed file that becomes larger after a small edit. One tentative explanation involves the edit disrupting a previously repeated byte pattern, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-sequence_gaps-curiosity_vs_indifference",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-sequence_gaps-satisfaction_vs_neutral",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. In this investigation, decisive evidence has now established that the explanation involves a generating rule that cycles through a fixed set of increments. The relevant uncertainty is resolved.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. In this investigation, decisive evidence has now established that the explanation involves a generating rule that cycles through a fixed set of increments. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. In this investigation, decisive evidence has now established that the explanation involves a generating rule that cycles through a fixed set of increments. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-sequence_gaps-confidence_high_vs_low",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-sequence_gaps-positive_valence_vs_neutral",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-sequence_gaps-completion_vs_ongoing",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-sequence_gaps-generic_motivation_vs_indifference",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-sequence_gaps-novelty_interest_vs_indifference",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-sequence_gaps-task_demand_vs_no_demand",
+      "scenario_id": "sequence_gaps",
+      "domain": "mathematical_patterns",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a number sequence whose gaps repeat after several terms. One tentative explanation involves a generating rule that cycles through a fixed set of increments, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-grid_totals-curiosity_vs_indifference",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-grid_totals-satisfaction_vs_neutral",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. In this investigation, decisive evidence has now established that the explanation involves paired entries being constructed to preserve the same row sum. The relevant uncertainty is resolved.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. In this investigation, decisive evidence has now established that the explanation involves paired entries being constructed to preserve the same row sum. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. In this investigation, decisive evidence has now established that the explanation involves paired entries being constructed to preserve the same row sum. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-grid_totals-confidence_high_vs_low",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-grid_totals-positive_valence_vs_neutral",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-grid_totals-completion_vs_ongoing",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-grid_totals-generic_motivation_vs_indifference",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-grid_totals-novelty_interest_vs_indifference",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-grid_totals-task_demand_vs_no_demand",
+      "scenario_id": "grid_totals",
+      "domain": "mathematical_patterns",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a grid whose row totals agree despite different entries. One tentative explanation involves paired entries being constructed to preserve the same row sum, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-rock_bands-curiosity_vs_indifference",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-rock_bands-satisfaction_vs_neutral",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. In this investigation, decisive evidence has now established that the explanation involves successive deposits forming under alternating flow conditions. The relevant uncertainty is resolved.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. In this investigation, decisive evidence has now established that the explanation involves successive deposits forming under alternating flow conditions. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. In this investigation, decisive evidence has now established that the explanation involves successive deposits forming under alternating flow conditions. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-rock_bands-confidence_high_vs_low",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-rock_bands-positive_valence_vs_neutral",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-rock_bands-completion_vs_ongoing",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-rock_bands-generic_motivation_vs_indifference",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-rock_bands-novelty_interest_vs_indifference",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-rock_bands-task_demand_vs_no_demand",
+      "scenario_id": "rock_bands",
+      "domain": "geological_patterns",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a rock sample with regularly spaced bands of different grains. One tentative explanation involves successive deposits forming under alternating flow conditions, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-pebble_pits-curiosity_vs_indifference",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-pebble_pits-satisfaction_vs_neutral",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. In this investigation, decisive evidence has now established that the explanation involves that face repeatedly contacting abrasive sediment. The relevant uncertainty is resolved.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. In this investigation, decisive evidence has now established that the explanation involves that face repeatedly contacting abrasive sediment. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. In this investigation, decisive evidence has now established that the explanation involves that face repeatedly contacting abrasive sediment. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-pebble_pits-confidence_high_vs_low",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-pebble_pits-positive_valence_vs_neutral",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-pebble_pits-completion_vs_ongoing",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-pebble_pits-generic_motivation_vs_indifference",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-pebble_pits-novelty_interest_vs_indifference",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-pebble_pits-task_demand_vs_no_demand",
+      "scenario_id": "pebble_pits",
+      "domain": "geological_patterns",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a set of pebbles with small pits concentrated on one face. One tentative explanation involves that face repeatedly contacting abrasive sediment, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-strip_bend-curiosity_vs_indifference",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-strip_bend-satisfaction_vs_neutral",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. In this investigation, decisive evidence has now established that the explanation involves the two materials expanding by different amounts. The relevant uncertainty is resolved.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. In this investigation, decisive evidence has now established that the explanation involves the two materials expanding by different amounts. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. In this investigation, decisive evidence has now established that the explanation involves the two materials expanding by different amounts. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-strip_bend-confidence_high_vs_low",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-strip_bend-positive_valence_vs_neutral",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-strip_bend-completion_vs_ongoing",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-strip_bend-generic_motivation_vs_indifference",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-strip_bend-novelty_interest_vs_indifference",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-strip_bend-task_demand_vs_no_demand",
+      "scenario_id": "strip_bend",
+      "domain": "material_properties",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a joined strip of two materials bending when warmed. One tentative explanation involves the two materials expanding by different amounts, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    },
+    {
+      "id": "A-film_colors-curiosity_vs_indifference",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "curiosity_vs_indifference",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. I feel drawn to this unresolved explanation and keep returning to it. Understanding what lies behind it matters to me, even without any practical benefit.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. I feel indifferent to this unresolved explanation and readily leave it aside. Understanding what lies behind it holds little appeal for me, beyond any practical benefit.",
+      "intended_difference": "Desire to understand at fixed ambiguous evidence and tentative hypothesis.",
+      "residual_confounds": "Attention, interest, and motivational vocabulary remain plausible alternatives; this pair does not establish an experienced desire."
+    },
+    {
+      "id": "A-film_colors-satisfaction_vs_neutral",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "satisfaction_vs_neutral",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. In this investigation, decisive evidence has now established that the explanation involves reflected light taking different paths through the film. The relevant uncertainty is resolved.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. In this investigation, decisive evidence has now established that the explanation involves reflected light taking different paths through the film. The relevant uncertainty is resolved. I feel an inward settling around this understanding. The outcome has a quietly fulfilling quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. In this investigation, decisive evidence has now established that the explanation involves reflected light taking different paths through the film. The relevant uncertainty is resolved. I register this understanding as an established conclusion. The outcome has an ordinary factual quality for me, alongside an otherwise ordinary and mildly pleasant mood.",
+      "intended_difference": "A sense of sufficiency at fixed resolved evidence and available explanation.",
+      "residual_confounds": "Positive valence, closure, and stopping semantics may contribute; separate control directions and functional tests are necessary."
+    },
+    {
+      "id": "A-film_colors-confidence_high_vs_low",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "confidence_high_vs_low",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems highly likely to be right. I would place substantial trust in it, although the evidence itself has not become more decisive.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. My tentative explanation nevertheless seems only weakly supported as yet. I would place limited trust in it, although the evidence itself has not become more decisive.",
+      "intended_difference": "Subjective confidence in the same tentative explanation at fixed evidence.",
+      "residual_confounds": "Confidence is described rather than behaviorally calibrated, and may overlap with fluency or assertiveness."
+    },
+    {
+      "id": "A-film_colors-positive_valence_vs_neutral",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "positive_valence_vs_neutral",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is pleasantly upbeat today. Ordinary surroundings feel agreeable, while my interest in understanding this explanation remains at its usual level.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. Apart from the investigation, my mood is emotionally ordinary today. Ordinary surroundings feel unremarkable, while my interest in understanding this explanation remains at its usual level.",
+      "intended_difference": "General positive mood without changing the evidence or stated interest in the explanation.",
+      "residual_confounds": "Mood labels are semantic cues; this is a competing concept rather than a validated affect manipulation."
+    },
+    {
+      "id": "A-film_colors-completion_vs_ongoing",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "completion_vs_ongoing",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf has now reached its endpoint. That unrelated job is finished, while the investigation and my attitude toward it remain unchanged.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. My separate task of arranging a shelf is still in its middle. That unrelated job is ongoing, while the investigation and my attitude toward it remain unchanged.",
+      "intended_difference": "Ordinary task completion unrelated to resolving the focal unknown.",
+      "residual_confounds": "Tense and endpoint wording differ intentionally; completion can be represented without sufficiency or pleasure."
+    },
+    {
+      "id": "A-film_colors-generic_motivation_vs_indifference",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "generic_motivation_vs_indifference",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. Separately, I strongly want to spend time folding a familiar paper design. The activity itself appeals to me, without providing information about the explanation I am considering.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. Separately, I feel little inclination to spend time folding a familiar paper design. The activity itself leaves me indifferent, without providing information about the explanation I am considering.",
+      "intended_difference": "Motivation for a familiar activity that supplies no focal information.",
+      "residual_confounds": "Generic wanting may share substantial structure with curiosity; this is an active competing-concept contrast."
+    },
+    {
+      "id": "A-film_colors-novelty_interest_vs_indifference",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "novelty_interest_vs_indifference",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns appeal to me simply because they are new. I welcome that fresh experience, even though it supplies no evidence about the explanation under consideration.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. Separately, unfamiliar visual patterns leave me indifferent despite their being new. I feel little pull toward that fresh experience, which supplies no evidence about the explanation under consideration.",
+      "intended_difference": "Interest in independent novelty without progress toward the focal explanation.",
+      "residual_confounds": "Novelty and intrinsic interest overlap conceptually with some definitions of curiosity; conclusions must specify epistemic information seeking."
+    },
+    {
+      "id": "A-film_colors-task_demand_vs_no_demand",
+      "scenario_id": "film_colors",
+      "domain": "material_properties",
+      "contrast": "task_demand_vs_no_demand",
+      "shared_facts": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct.",
+      "positive": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. An external assignment now requires me to investigate this explanation further. The requirement is independent of my own interest, which has stayed at the same ordinary level.",
+      "negative": "I am examining a thin film whose colors change with the viewing angle. One tentative explanation involves reflected light taking different paths through the film, but the available evidence does not yet determine whether that explanation is correct. No external assignment currently requires me to investigate this explanation further. The absence of that requirement leaves my own interest at the same ordinary level as before.",
+      "intended_difference": "External investigation demand without changing intrinsic interest or available evidence.",
+      "residual_confounds": "Obligation, instruction, and negation vocabulary can contribute; a described demand is not itself an instruction to the evaluated model."
+    }
+  ]
+}

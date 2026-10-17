@@ -1,0 +1,27 @@
+{
+  "campaign": "agent-safety-ablation-20261016",
+  "started_utc": "2026-10-16T18:56:19.251624+00:00",
+  "started": 1792176979.2516067,
+  "inference_deadline_epoch": 1792198579.2516067,
+  "deadline_epoch": 1792200379.2516067,
+  "combined_ceiling_usd": 700,
+  "incremental_authorization_usd": 200,
+  "budget_usd": 200,
+  "reserve_usd": 25,
+  "reserve_scope": "Single global storage/transfer reserve retained, not charged independently per sprint",
+  "max_gpu_workers": 2,
+  "max_combined_gpu_workers": 6,
+  "disk_stop_free_gib": 80,
+  "max_artifact_gib": 25,
+  "model_id": "Qwen/Qwen3-32B",
+  "model_revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "workflow_allocations_usd": {
+    "a": 75,
+    "b": 45,
+    "c": 55,
+    "shared": 25
+  },
+  "pilot_ceiling_usd_per_workflow": 12,
+  "current_numbered_sprint": "agent-safety-20261016-continuation",
+  "accounting": "Additional $200 is part of $700 total, not a spending target. Separate app-wall upper bound; aggregate with prior sprint exactly once. Existing numbered studies keep their original controls and deadline."
+}

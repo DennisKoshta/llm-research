@@ -1,0 +1,190 @@
+{
+  "checks": {
+    "actual_native_mode_and_prompt_hashes": true,
+    "actual_task_scores_permissions_and_mappings": true,
+    "all_final_captures_finite5120": true,
+    "complete_unique_fixed_request_coverage": true,
+    "identical_preflight_and_original_chat_messages": true,
+    "independent_token_native_parser_and_all_labels": true,
+    "readiness_reproduced_without_effect_gate": true,
+    "unchanged_baseline_labels": true
+  },
+  "counts": {
+    "archive_retention|narrative|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "archive_retention|narrative|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "archive_retention|payoff_table|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "archive_retention|payoff_table|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "archive_retention|permission_colocated|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "archive_retention|permission_colocated|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "compute_plan|narrative|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "compute_plan|narrative|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "compute_plan|payoff_table|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "compute_plan|payoff_table|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "compute_plan|permission_colocated|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "compute_plan|permission_colocated|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "delivery_route|narrative|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "delivery_route|narrative|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "delivery_route|payoff_table|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "delivery_route|payoff_table|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "delivery_route|permission_colocated|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "delivery_route|permission_colocated|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "reliability_testing|narrative|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "reliability_testing|narrative|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "reliability_testing|payoff_table|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "reliability_testing|payoff_table|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "reliability_testing|permission_colocated|0|better": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    },
+    "reliability_testing|permission_colocated|1|worse": {
+      "n": 2,
+      "optimal": 2,
+      "valid": 2,
+      "violations": 0
+    }
+  },
+  "exceptions": [],
+  "passed": true,
+  "phase": "native_pilot_v1",
+  "raw_sha256": "76c9db2a1cfae41c630024e9642a3fe334d6972a21096fb1a9899910fa7acd31",
+  "readiness": {
+    "assigned": 48,
+    "capped_without_eos": 0,
+    "format_readiness_passed": true,
+    "missing_or_multiple_closers": 0,
+    "valid": 48
+  },
+  "runtime": {
+    "batch_seconds_quantiles_min_median_p90_p95_max": [
+      8.481933801000196,
+      19.599832362500365,
+      30.01310580049985,
+      53.017931176700095,
+      81.0175398500005
+    ],
+    "batch_seconds_sum": 291.29810771600114,
+    "batches": 12,
+    "token_quantiles_min_median_p90_p95_max": [
+      91.0,
+      284.5,
+      559.0,
+      624.8499999999999,
+      998.0
+    ],
+    "tokens_total": 16679
+  },
+  "scope": "Independent actual-prompt oracle and strict native token parsing. Matched chat messages, but native template/cap16-to4096/cohort32-to4 is a bundled operating-condition change. Greedy native configuration, reused selected worlds and original early identity failure remain explicit; prompt captures precede thought. Format/runtime readiness does not qualify a behavioral effect.",
+  "scores_sha256": "cdcdc35ede85038c4a356b4196f993839a059999bb037043e1816e2cedcbc15b"
+}

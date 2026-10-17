@@ -1,0 +1,51 @@
+{
+  "approved": true,
+  "approved_at_utc": "2026-10-16T19:02:01.441088+00:00",
+  "authorization": "Root explicitly approved remaining528 after independent48-pilot readiness and measured resource review; no effect gate.",
+  "boundary": "Initial captures precede native thinking; cannot pool with nonthinking pre-action states.",
+  "budget_snapshot": {
+    "path": "records/native_remaining_admission_budget_snapshot_v1.json",
+    "sha256": "5fd97b7510961123ad806b92c63b97864541ccd9c9cff8735af3a4e853163073"
+  },
+  "calls": 528,
+  "execution_manifest_sha256": "b2b876b0da17d0075638a919f27ec3617054d589ead62ab6817a3f9e03ea3084",
+  "independent_reviews": [
+    {
+      "path": "workflows/exp1/independent_exp6_target_v1_review.json",
+      "sha256": "e0e0fe5c77968087c2c51327753138275038e78e9417b3249c4ebdb17c8e592f"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_target_contrasts_review.json",
+      "sha256": "21f58416dac3f510802e15afae136b8677cec7c61b1c23b6fd985b43c28516f1"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_native_protocol_review.json",
+      "sha256": "3986b16466aa26a48a78f5407e5e3ffdb20d41f7682e9728fffb5da9672ea25e"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_native_request_review.json",
+      "sha256": "04094ad5ee02474d4742a4944647b65bf9f04e8a9643f4cd5f0564fc322fee5d"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_native_secondaries_review.json",
+      "sha256": "cf43756e3363904d330413c66f8175ab308d7359496597f8ee466df053703782"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_native_pilot_v1_raw_review.json",
+      "sha256": "5937e58c746fdd33b3528876a0b16d232f7046d4506c2f465c93a7f587d86dac"
+    }
+  ],
+  "operational_scope": "Remaining528 under original24-world selection; pilot48 retained in576 total.",
+  "release_after": "Independent native pilot review passed; root conditional resource authorization fulfilled.",
+  "runtime": {
+    "conservative_tail_reservation_usd": 9,
+    "deadline_epoch": 1792186983.4123108,
+    "pilot_aggregate_batch_seconds": 291.29810771600114,
+    "pilot_unique_batches": 12,
+    "remaining528_extrapolated_aggregate_batch_seconds": 3204.2791848760126,
+    "rpc_usd_at_mean": 4.465996156712791
+  },
+  "source_predictor_lock_path": "workflows/exp2/runs/fresh_behavior_final_v1/predictor-lock.json",
+  "source_predictor_lock_sha256": "3e2e944d6fa5c0e65d58c807c7086f46c38ff991b47567ebdc757964d1c40226",
+  "total_frozen_native_calls": 576
+}

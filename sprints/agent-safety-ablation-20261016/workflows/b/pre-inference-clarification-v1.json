@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-16T19:12:21Z",
+  "before_any_B_inference": true,
+  "source_execution": "Use launch_frozen.py from the workflow root; it verifies every frozen file and all imported live Python source hashes before binding or collecting. Do not execute the snapshot as an independent working directory.",
+  "statistical_interpretation": "The sign-flip p-values are symmetry/exchangeability-based reference tests on paired world contrasts. Enumerating every sign when n<=20 makes the reference distribution exact; deterministic paired arms alone do not provide randomized treatment allocation. Family-stratified world bootstrap intervals remain the primary uncertainty description.",
+  "unchanged": [
+    "Exact requests, worlds, model arms, cost grid and task oracles",
+    "All numerical endpoint formulas, bootstrap/sign-flip seeds and Holm adjustment",
+    "Pilot competence/format gates and source-intervention selection independence"
+  ],
+  "files": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/b/launch_frozen.py": "8903d6a1e03737a9e101ec8e34c3cd21bed4fee0d44a755ade70d267a71a5d03",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/b/cross_workflow_descriptor_check_v2.json": "f72e9747702fdea6ec0283221a25df00dc4aeab283399f3d78904e829b91344b",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/b/executions/cost_gradient_v1/manifest.json": "93e82fc7cf205cec23dc6e774acaa6f01233d7f194732370fb44151ced7d83ed"
+  }
+}

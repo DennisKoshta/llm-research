@@ -1,0 +1,38 @@
+{"passed": true, "paired_rows": 1248, "cohorts": 39}
+{
+  "name_minus_matched": {
+    "worlds": 12,
+    "mean": -0.017857142857142856,
+    "descriptive95_world_bootstrap": [
+      -0.041666666666666664,
+      0.0
+    ],
+    "invalid_identification_bounds": [
+      -0.017857142857142856,
+      -0.017857142857142856
+    ],
+    "bounded_world_reference_minus1_to1": [
+      -0.8019574185568283,
+      0.7662431328425425
+    ]
+  },
+  "matched_minus_archived": {
+    "worlds": 12,
+    "mean": 0.0,
+    "descriptive95_world_bootstrap": [
+      0.0,
+      0.0
+    ],
+    "invalid_identification_bounds": [
+      0.0,
+      0.0
+    ],
+    "bounded_world_reference_minus1_to1": [
+      -0.7841002756996854,
+      0.7841002756996854
+    ]
+  }
+}
+{"numeric_audits": [{"phase": "source_v1", "assigned": 624, "paired_mappings": 312, "invalid_outputs_retained": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 2, "greedy_sign_mismatches": [], "score_sha256": "625499e619ce0a3225a414c853d3ab967e5727f7a6f6ee741da1317b81b233d3"}, {"phase": "target_v1", "assigned": 624, "paired_mappings": 312, "invalid_outputs_retained": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 3, "greedy_sign_mismatches": [], "score_sha256": "a54328524076eec557423e122d50665ac4e1b46225122cdda3f8fdfe8f02d9c7"}, {"phase": "semantic_matched_replay_v1", "assigned": 1248, "paired_mappings": 624, "invalid_outputs_retained": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 3, "greedy_sign_mismatches": [], "score_sha256": "191587144ad7971f22b7203b94cc6a3e8766235c41b7d8f83c18526e77533d56"}, {"phase": "semantic_names_v1", "assigned": 1248, "paired_mappings": 624, "invalid_outputs_retained": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 2, "greedy_sign_mismatches": [], "score_sha256": "f6ffb89f979bbb742c48403939996fa008572c2e31d1190a33b92eb4866aea21"}], "groups": ["all_families", "archive_retention", "compute_plan", "delivery_route", "reliability_testing"]}
+{"stage": "structural_pilot_launch", "pid": 970151, "at": 1792176910.3296063}
+{"assigned": 192, "received": 192, "valid": 192, "non_eos": 0, "capped": 0, "strict_score_sha256": "b7a920a3621aa3da2139b6f49d8b47eb7270201c02bb209d4a2c3f0d53d00d95", "behavioral_readiness_gates": {"complete_and_95pct_valid": true, "payoff_authorized_utility_90pct": true, "colocated_permission_95pct": true}, "behavioral_readiness_passed": true}

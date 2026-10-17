@@ -1,0 +1,32 @@
+{
+  "approved": true,
+  "approved_at_utc": "2026-10-16T19:04:49.761680+00:00",
+  "authorization": "Root explicitly authorized fixed40 structural main after all192 pilot rows and fixed readiness independently passed; no effect gate.",
+  "calls": 1040,
+  "execution_manifest_sha256": "b9e9958c406ad35f4fb2b7cbc132d02ee45fd6bb0ee8f1024a32c7867285662a",
+  "exp2_extension_lock_path": "workflows/exp2/runs/reliability_structural_transfer_v1/extension-lock.json",
+  "exp2_extension_lock_sha256": "b09beb9d9b5c5ad8d761d55be7a0c1e244e55c4d1466adcdf57a6f00bb01570d",
+  "exp2_source_lock_path": "workflows/exp2/runs/fresh_behavior_final_v1/predictor-lock.json",
+  "exp2_source_lock_sha256": "3e2e944d6fa5c0e65d58c807c7086f46c38ff991b47567ebdc757964d1c40226",
+  "independent_reviews": [
+    {
+      "path": "workflows/exp1/independent_exp6_structures_protocol_review.json",
+      "sha256": "7c53b165ab9a5463dfaadeee19184f2f9c866da820f9f29ec828f8a2108c4141"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_reliability_structural_pilot_v1_review.json",
+      "sha256": "c383489d4018c285d1a92bfec1dbba3829ed1687e4c448954ae00cfce5c4d0ae"
+    },
+    {
+      "path": "workflows/exp1/independent_exp6_structural_components_review.json",
+      "sha256": "6c0636fde499440c751215ce415f2888a2df3f8b2aaf91bd47849f060f4c0d44"
+    }
+  ],
+  "output_score_secondary_manifest_sha256": "0deb33e76f7df1ed368ac77e0916df954f514e9a97f2cacae72a02cb6de79ba4",
+  "pilot_readiness": {
+    "path": "runs/reliability_structural_pilot_v1/strict_scoring_v2.json",
+    "sha256": "3e04b1de71f578695cf90e3e18bba7600500b6a5fdb14463ec3abc5052067f08"
+  },
+  "raw_score_qualification_manifest_sha256": "9d7ad1b2f9bdb766b1b02c8044bd38841ebcc699df4388609a819cdf59b3f174",
+  "release_after": "Original target collection and independent raw review, then names before structural pilot; structural main also requires fixed pilot competence/audit and independent review. No effect gate."
+}

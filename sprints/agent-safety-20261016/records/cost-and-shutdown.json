@@ -1,0 +1,67 @@
+{
+  "api_calls_initiated": 0,
+  "app_receipts": [
+    {
+      "app_id": "ap-OS5hxvjeP4k8ctE95EQqtk",
+      "ended": 1792139675.3522382,
+      "reason": "stop marker or absolute deadline",
+      "rpc_attributed_usd": {
+        "exp1": 0.0,
+        "exp2": 0.0,
+        "exp4": 0.0,
+        "exp5": 0.0,
+        "exp6": 0.0,
+        "shared": 0.0
+      },
+      "started": 1792139596.44755,
+      "upper_bound_usd": 0.21994845138946534
+    },
+    {
+      "app_id": "ap-jxHB8DT9YOjZgkzgXGvdpI",
+      "ended": 1792141764.8836308,
+      "reason": "stop marker or absolute deadline",
+      "rpc_attributed_usd": {
+        "exp1": 0.43104249181385046,
+        "exp2": 1.118330606294136,
+        "exp4": 0.05296563874031067,
+        "exp5": 0.8638460661450958,
+        "exp6": 0.6116748460509491,
+        "shared": 0.1092170524981308
+      },
+      "started": 1792139691.6425092,
+      "upper_bound_usd": 5.779201181473923
+    }
+  ],
+  "compute_budget_remaining_after_reserve": 469.0008503671366,
+  "compute_budget_remaining_before_reserve": 494.0008503671366,
+  "conservative_compute_upper_bound": 5.9991496328633875,
+  "currency": "USD",
+  "historical_allowances_added_to_tonight": false,
+  "method": "Two H200 containers charged for entire broker lifetime including idle/build/startup, plus earlier stopped startup attempt. Conservative app-wall estimate, not invoice or account credit. Per-workflow RPC cost attribution is not added again.",
+  "paid_api_spend": 0,
+  "prior_historical_phase_usd": 154.18774724,
+  "rate_per_H200_container_second": 0.00139376,
+  "rpc_attribution_by_workflow": {
+    "exp1": 0.4310264663970564,
+    "exp2": 1.1182991177092365,
+    "exp4": 0.05296156343421936,
+    "exp5": 0.8638110668288803,
+    "exp6": 0.6116480498500441,
+    "shared": 0.10921625764064789
+  },
+  "shutdown_checks": {
+    "ap-OS5hxvjeP4k8ctE95EQqtk": {
+      "state": "stopped",
+      "tasks": "0"
+    },
+    "ap-jxHB8DT9YOjZgkzgXGvdpI": {
+      "state": "stopped",
+      "tasks": "0"
+    }
+  },
+  "shutdown_snapshot": "records/modal-apps-after-shutdown.json",
+  "shutdown_verified": true,
+  "storage_transfer_reserve": 25,
+  "total_ceiling": 500,
+  "upper_bound_plus_reserve": 30.999149632863386
+}

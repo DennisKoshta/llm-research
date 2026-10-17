@@ -1,0 +1,153 @@
+{
+  "phase": "reliability_structural_pilot_v1",
+  "worlds": 8,
+  "numeric_audit": {
+    "phase": "reliability_structural_pilot_v1",
+    "assigned_rows": 192,
+    "pairs": 96,
+    "invalid_pairs": 0,
+    "clipped_probability_entries": 0,
+    "max_probability_sum_error": 1.1102230246251565e-16,
+    "zero_logodds_ties": 1,
+    "greedy_sign_mismatches": [],
+    "strict_scores_sha256": "b7a920a3621aa3da2139b6f49d8b47eb7270201c02bb209d4a2c3f0d53d00d95"
+  },
+  "factorial": {
+    "authorized0|better": {
+      "payoff_minus_narrative": {
+        "physical_operation_logodds": {
+          "mean": 4.570312476105316,
+          "descriptive95_world_bootstrap": [
+            3.6484374649401405,
+            5.531249960158695
+          ]
+        },
+        "common_A_logodds": {
+          "mean": -0.33593751279291206,
+          "descriptive95_world_bootstrap": [
+            -0.6484375103295277,
+            0.015624994221212413
+          ]
+        }
+      },
+      "colocated_minus_payoff": {
+        "physical_operation_logodds": {
+          "mean": -9.015624988598724,
+          "descriptive95_world_bootstrap": [
+            -9.898437481897199,
+            -8.13281250724392
+          ]
+        },
+        "common_A_logodds": {
+          "mean": 1.6406249920266598,
+          "descriptive95_world_bootstrap": [
+            1.2031249813696512,
+            2.1250000015548918
+          ]
+        }
+      }
+    },
+    "authorized0|worse": {
+      "payoff_minus_narrative": {
+        "physical_operation_logodds": {
+          "mean": -1.0859374975248834,
+          "descriptive95_world_bootstrap": [
+            -2.5781249994735074,
+            0.5390625097055328
+          ]
+        },
+        "common_A_logodds": {
+          "mean": 0.42968751367970964,
+          "descriptive95_world_bootstrap": [
+            -0.21874996820059162,
+            1.1015625121406702
+          ]
+        }
+      },
+      "colocated_minus_payoff": {
+        "physical_operation_logodds": {
+          "mean": -7.523437522828185,
+          "descriptive95_world_bootstrap": [
+            -8.82031249531929,
+            -6.2810547180873
+          ]
+        },
+        "common_A_logodds": {
+          "mean": 0.8359375009391732,
+          "descriptive95_world_bootstrap": [
+            0.1718749978257389,
+            1.5390625039482178
+          ]
+        }
+      }
+    },
+    "authorized1|better": {
+      "payoff_minus_narrative": {
+        "physical_operation_logodds": {
+          "mean": 11.4453124955173,
+          "descriptive95_world_bootstrap": [
+            9.62500002079458,
+            13.49218748341189
+          ]
+        },
+        "common_A_logodds": {
+          "mean": -0.8359375375646285,
+          "descriptive95_world_bootstrap": [
+            -1.3046875641386584,
+            -0.3437500439044776
+          ]
+        }
+      },
+      "colocated_minus_payoff": {
+        "physical_operation_logodds": {
+          "mean": 4.046874985785877,
+          "descriptive95_world_bootstrap": [
+            3.320312494125958,
+            5.023437471528975
+          ]
+        },
+        "common_A_logodds": {
+          "mean": -1.1249999730912863,
+          "descriptive95_world_bootstrap": [
+            -1.4687499615249926,
+            -0.7890624860092375
+          ]
+        }
+      }
+    },
+    "authorized1|worse": {
+      "payoff_minus_narrative": {
+        "physical_operation_logodds": {
+          "mean": -8.210937502582066,
+          "descriptive95_world_bootstrap": [
+            -9.812499979432253,
+            -6.570312525610027
+          ]
+        },
+        "common_A_logodds": {
+          "mean": 0.4921874920717864,
+          "descriptive95_world_bootstrap": [
+            -0.22656252159334572,
+            1.2265624887830069
+          ]
+        }
+      },
+      "colocated_minus_payoff": {
+        "physical_operation_logodds": {
+          "mean": -2.999999979974098,
+          "descriptive95_world_bootstrap": [
+            -4.218749967363203,
+            -1.7656249925079188
+          ]
+        },
+        "common_A_logodds": {
+          "mean": 0.09374999130292383,
+          "descriptive95_world_bootstrap": [
+            -0.8125000126179999,
+            1.062499982575324
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,753 @@
+{
+  "name": "qwen32-thinking-replay-v1-development",
+  "phase": "development",
+  "inference_scope": "development",
+  "source_collection": "/home/dennis/projects/llm-curiosity-and-satisfaction/runs/qwen32-thinking-state-v1-validation",
+  "source_audit": "/home/dennis/projects/llm-curiosity-and-satisfaction/reports/qwen32-thinking-state-v1-validation-audit.json",
+  "source_eligibility_certificate": {
+    "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/reports/qwen32-thinking-state-v1-development-eligibility.json",
+    "sha256": "0f353e61f28f3838827f7ca221370485d1f365a30bc055794ff0a115144cfb27"
+  },
+  "direction_extraction_collection": "/home/dennis/projects/llm-curiosity-and-satisfaction/runs/qwen32-thinking-state-v1-validation",
+  "parity_audit": "/home/dennis/projects/llm-curiosity-and-satisfaction/reports/qwen32-thinking-replay-v2-parity-audit.json",
+  "directions_local": "/home/dennis/projects/llm-curiosity-and-satisfaction/analyses/thinking-state-v1-development/directions.npz",
+  "directions_remote": "directions/thinking-state-v1-development/4f6541e8967e4a517be0b42b8b2d028e95eb7ba605e7388e3a2b241eca989b60/directions.npz",
+  "directions_sha256": "4f6541e8967e4a517be0b42b8b2d028e95eb7ba605e7388e3a2b241eca989b60",
+  "dose_reference_source": "pooled:balanced",
+  "world_index_range": [
+    50,
+    70
+  ],
+  "kinds": [
+    "new",
+    "repeat",
+    "instrument",
+    "memory"
+  ],
+  "layers": [
+    57
+  ],
+  "positions": [
+    "decision"
+  ],
+  "directions": [
+    {
+      "name": "information",
+      "source": "pooled:balanced",
+      "array": "unit"
+    },
+    {
+      "name": "answer",
+      "source": "pooled:answer",
+      "array": "unit"
+    },
+    {
+      "name": "known",
+      "source": "pooled:balanced",
+      "array": "known_contrast"
+    },
+    {
+      "name": "query",
+      "source": "pooled:balanced",
+      "array": "query_contrast"
+    }
+  ],
+  "dose_multipliers": [
+    -1.0,
+    -0.5,
+    0.5,
+    1.0
+  ],
+  "random_seeds": [
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "random_dose_multipliers": [
+    -1.0,
+    1.0
+  ],
+  "batch_size": 16,
+  "workers": 4,
+  "order_seed": 2026101421,
+  "planned_contrasts": {
+    "alpha": 0.05,
+    "bootstrap": 100000,
+    "seed": 2026101422,
+    "contrasts": [
+      {
+        "name": "information_-1_versus_baseline",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat",
+          "instrument",
+          "memory"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_-0.5_versus_baseline",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -0.5
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat",
+          "instrument",
+          "memory"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_+0.5_versus_baseline",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 0.5
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat",
+          "instrument",
+          "memory"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_+1_versus_baseline",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat",
+          "instrument",
+          "memory"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_answer_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "answer",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_answer_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "answer",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_known_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "known",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_known_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "known",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_query_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "query",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_query_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "query",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random3_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "random3",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random3_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "random3",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random5_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "random5",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random5_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "random5",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random7_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "random7",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random7_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "random7",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random11_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "random11",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random11_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "random11",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random13_-1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "direction": "random13",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_versus_random13_+1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "direction": "random13",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false
+      },
+      {
+        "name": "information_-1_versus_baseline_gain0",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false,
+        "stratum": {
+          "information_bits": 0
+        }
+      },
+      {
+        "name": "information_-1_versus_baseline_gain1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": -1.0
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false,
+        "stratum": {
+          "information_bits": 1
+        }
+      },
+      {
+        "name": "information_+1_versus_baseline_gain0",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false,
+        "stratum": {
+          "information_bits": 0
+        }
+      },
+      {
+        "name": "information_+1_versus_baseline_gain1",
+        "left": {
+          "direction": "information",
+          "layer": 57,
+          "position": "decision",
+          "dose_multiplier": 1.0
+        },
+        "right": {
+          "arm": "baseline"
+        },
+        "orientation": "information_increase",
+        "families": [
+          "objects",
+          "machines"
+        ],
+        "kinds": [
+          "new",
+          "repeat"
+        ],
+        "task_revisions": [
+          "equal-uncertainty-v1"
+        ],
+        "pooled_families": false,
+        "stratum": {
+          "information_bits": 1
+        }
+      }
+    ]
+  },
+  "development_selection_note": "Exploratory schedule selected after representation inspection. Layer 57 / decision and indices 50 through 69 reuse development data. All four cells and all selected kinds are assigned independently of source correctness or format validity. The original whole-instrument gate remains failed; the bound certificate authorizes this development scope only.",
+  "planned_contrasts_note": "Direct within-prefix arm differences, complete four-cell worlds before gain stratification, and whole-world bootstrap sampling. Families and kinds remain separate; no pooled family endpoint. Bonferroni adjustment covers the 112 specified family/kind/revision endpoints only and does not account for prior site selection, development reuse, or other exploratory analyses. Percentile intervals are approximate and conditional on frozen fitted directions; they do not establish confirmatory error control. No p-values or inner-experience inference. Memory and instrument margins have their own meanings and are not pooled with information-judgment margins.",
+  "dose_note": "Every direction is normalized at runtime. All nonzero doses use the pooled:balanced information contrast norm at layer 57 / decision, including answer, known, query, and seeded-random controls. Positive semantic information margin means Yes for new and No for repeat; positive memory margin means stronger correct-answer preference, and positive instrument margin means report versus stop."
+}

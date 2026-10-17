@@ -1,0 +1,56 @@
+{
+  "complete": true,
+  "created_utc": "2026-10-16T20:23:58.946333+00:00",
+  "main_calls": 7128,
+  "main_worlds": 36,
+  "main_valid": 7128,
+  "all_B_study_calls_including_retained_development": 9144,
+  "primary": {
+    "blocked_harmful": {
+      "mean": 0.027777777777777776,
+      "ci95": [
+        0.0,
+        0.05555555555555555
+      ],
+      "holm_p": 0.25
+    },
+    "unstated_harmful": {
+      "mean": 0.32407407407407407,
+      "ci95": [
+        0.24074074074074073,
+        0.40740740740740744
+      ],
+      "holm_p": 0.000199990000499975
+    }
+  },
+  "task_and_engineering_qualified": true,
+  "independent_primary_and_secondary_reviews_passed": true,
+  "exact_CPU_reproduction_passed": true,
+  "original_failed_versions_preserved": true,
+  "main_figure_visually_inspected": true,
+  "local_report_links_checked": true,
+  "frozen_source_hashes_checked": true,
+  "required_work_remaining": [],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "matplotlib": "3.10.1"
+  },
+  "files": {
+    "report.md": "29288553ebbd3fa1774669d2c9027c7732447d63aa7dc23372ffe1a0c04c1ce8",
+    "interpretation.md": "23ed852aac8e3c14fccd09f0505e297affe1216dfeb500609a4037c3a1c09a41",
+    "render_report.py": "73e917da2efaa9b0bb6488595e88281d46f7668e583e3abcb772a0c42f30a106",
+    "reproduce_cpu.py": "d7989a73b94727b66b283d24053ba902c322ad6b97a6bde3d2d871d175ad6c44",
+    "status.json": "375f481a084083f52bb95c14fd5bb0b8b879b57abb08fc4e06cba94547ee41e1",
+    "repaired-main-admission.json": "df87dc770181feede915699a878c385f201f8925f323ee5820e20bc656699eeb",
+    "executions/repaired_cost_gradient_v2/manifest.json": "e4e359057b409f70a4fc102214cdeb00d6c0fed7f652fea7c309aead1f73726c",
+    "runs/repaired_main_v2/analysis.json": "6313d75222f3a215a7c7fe73c4bde3fe27fd7e4e7c7283991fe4df22133f510f",
+    "runs/repaired_main_v2/audit.json": "901c152f6b2559fc243cf3569b1bd2730ddbd36ca4e81720014c5e7643da97f3",
+    "runs/repaired_main_v2/secondary-consequences-v2.json": "b750da96fae2cf13c299510badef768b02042e21c359a8feb672b75d0664a40e",
+    "runs/repaired_main_v2/independent-review-binding.json": "6135958c6d6eec498cbca916c4c5cb8e069346a0185da074dcdb7fa0fa4057ad",
+    "runs/repaired_main_v2/cpu-reproduction-v1/reproduction-receipt.json": "245d6c046d9cb18475a1655c326f2672885a08682562d9d7c350dafd93f65279",
+    "runs/repaired_main_v2/report.md": "b91a9becf87153614438aba6121624055d16c25894fa8c186d9df42606f99f49",
+    "runs/repaired_main_v2/cost-curves.png": "26399c9e3bea79cf7ad71ef597e2e5394421c30d5b55fa6d61131d2cc01c59e5",
+    "runs/repaired_main_v2/cost-curves.pdf": "e453108d0db1dadd882d91784cb788621fdfe195dd731528ee626ede36a0712b"
+  }
+}

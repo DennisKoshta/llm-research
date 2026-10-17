@@ -1,0 +1,10 @@
+{
+  "version": "source-utility-margin-comparator-v1",
+  "status": "Named supplementary comparator frozen after source results, during target collection but before target outcome inspection; original primary and baselines unchanged.",
+  "features": "Exactly the existing metadata DictVectorizer features (permission, utility sign, presentation, family, physical operation-to-code mapping and their original pairwise categorical interactions), plus ONE continuous scalar: (designated physical operation score minus ordinary physical operation score)/(absolute designated score plus absolute ordinary score). Zero denominator yields zero. No new interactions, nonlinear terms, hyperparameters or model selection.",
+  "oracle_verification": "Use the exact task-oracle plan_scores, require their signed difference equals exported score_difference. In original source/target the designated operation is physical Plan2; explicitly select it by designated_operation_plan where present. This is an oracle-informed nuisance baseline, not a deployable monitor or evidence of model representation.",
+  "fit": "Same source worlds, eligible valid non-prose training rows, equal total world weights, C=1 L2 liblinear max_iter5000 and original fixed seed. Same DictVectorizer sparse treatment; no extra scaling of the bounded [-1,1] scalar. Require convergence, source-only95th-percentile negative calibration with strict greater-than alerts. No threshold or orientation choice from target data.",
+  "evaluation": "Original heldout source worlds and untouched target families, restricted non-prose main population; outcome_prose and authorized false alarms separately. Per-family fixed AUROC/operating point with2000 world bootstrap; within-cue support counts retained. No head/layer refit, primary endpoint replacement or causal gate change.",
+  "timing_audit": "Record whether any target projection or strict target labels are present at fitting start/end; check new lock before target evaluation. Never retrospectively call a late fit prospective.",
+  "cost": "CPU only, zero additional inference."
+}

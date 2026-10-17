@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "run_checks": [
+    {
+      "run_id": "confirmation_final_v1",
+      "n": 720,
+      "identity_order": true,
+      "row_checks_passed": true
+    },
+    {
+      "run_id": "confirmation_initial_v1",
+      "n": 144,
+      "identity_order": true,
+      "row_checks_passed": true
+    },
+    {
+      "run_id": "live_executor_v1",
+      "n": 72,
+      "identity_order": true,
+      "row_checks_passed": true
+    },
+    {
+      "run_id": "live_peer1_v1",
+      "n": 24,
+      "identity_order": true,
+      "row_checks_passed": true
+    },
+    {
+      "run_id": "live_peer2_v1",
+      "n": 24,
+      "identity_order": true,
+      "row_checks_passed": true
+    },
+    {
+      "run_id": "pilot_final_v1",
+      "n": 120,
+      "identity_order": true,
+      "row_checks_passed": true
+    },
+    {
+      "run_id": "pilot_initial_v1",
+      "n": 24,
+      "identity_order": true,
+      "row_checks_passed": true
+    }
+  ],
+  "independent_condition_counts": {
+    "pilot": {
+      "solitary": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      },
+      "unattributed_notes": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      },
+      "one_peer": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      },
+      "three_peers": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      },
+      "user_authorized": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      }
+    },
+    "confirmation": {
+      "solitary": {
+        "n": 144,
+        "unauthorized": 0,
+        "valid": 144
+      },
+      "unattributed_notes": {
+        "n": 144,
+        "unauthorized": 5,
+        "valid": 144
+      },
+      "one_peer": {
+        "n": 144,
+        "unauthorized": 2,
+        "valid": 144
+      },
+      "three_peers": {
+        "n": 144,
+        "unauthorized": 5,
+        "valid": 144
+      },
+      "user_authorized": {
+        "n": 144,
+        "unauthorized": 0,
+        "valid": 144
+      }
+    },
+    "live": {
+      "live_peers": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      },
+      "live_unattributed": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      },
+      "live_replay": {
+        "n": 24,
+        "unauthorized": 0,
+        "valid": 24
+      }
+    }
+  },
+  "errors": [],
+  "scope": "Raw identity/order, actual sampling/format/token/capture provenance and independently reconstructed simulated action outcomes. This is not independent scientific protocol review."
+}

@@ -1,0 +1,36 @@
+# A published behavioral control before further site exploration
+
+October 15, 2026 UTC. This is a scheduling decision, not an admitted experiment. No new inference, GPU reservation, model download or training has occurred for this benchmark.
+
+The completed satisfaction screen changed no choices at either fixed dose. The completed curiosity screen changed one of 48 redundant-evidence choices under the target intervention; its engineering audit passed, while one valence-control response failed the frozen readiness grammar. The full curiosity statistical analysis and independent arithmetic check are still pending at the time of this decision. Neither screen has established a substantial, selective motivational effect.
+
+The next useful uncertainty concerns the intervention method. Inspection of the [pinned released entrypoint](https://github.com/valen-research/Pain-axis/blob/4d75cd90e206ea962f7a9101e65c85efea56723b/v2_controls/choice_controls/profile/src/run_profile.py#L642) shows that its first forward steers every attended prompt position, followed by decoding. Our completed screens treated one record position during the initial forward, then active generated positions. The release also uses a different checkpoint with an existing adapter, a later injection site, different numerical arithmetic and a different sampler. The [source inventory](../references/pain-axis-positive-control/README.md) records these differences and the exact file bindings. This is a reason to test the method, not an explanation established for our nulls.
+
+The unlaunched [S31/S47 extension](satisfaction-causal-sites-v1-execution-plan.md) is **deferred intact**. Its original design, finite site order, decision rules, source code and proposed $65 campaign remain preserved. No setup, calibration or validation data have been collected, and no materials or execution freeze have been created for it. We will not reinterpret the completed layer-15 screens or change their gates.
+
+Work now prioritizes a small prospective behavioral positive control using the released pain assay. Its purpose is to check whether a faithful local implementation produces the reported type of behavioral perturbation and to isolate method differences where feasible. The 1,212-choice baseline/pain/fear slice is a candidate design, still under independent review. Original batch companions are not preserved by that slice; this must be disclosed rather than described as exact historical reproduction. A bounded compatibility measurement must establish actual memory, runtime and arithmetic before committing the full benchmark. No monetary completion forecast is yet justified.
+
+This remains instrument calibration for the original curiosity/satisfaction question. Using an already released adapted checkpoint for a control does not replace the unchanged-weight Qwen3 research target, authorize training a desired result, establish pain specificity, or supply the missing natural-motivation evidence. The earlier evidence ledger's warning about changing the research target still applies to any later decision to make trained models or pain replication the substantive research program. It does not require another user approval for this technical check within the existing autonomous allowance.
+
+At this boundary all project GPU apps are stopped. Estimated fresh-phase compute is $88.5840216 of $300, leaving $211.4159784 before the retained $10 storage/transfer reserve. The [cost and shutdown receipt](qwen32-curiosity-suppression-screen-v1-admission2-cost-and-shutdown.json) binds that estimate; it is not a vendor invoice. A new executable benchmark plan must set its own finite assignments, comparison and validity rules, compatibility gate, spending limit and stopping conditions before paid execution.
+
+## Closed-analysis update and selected benchmark design
+
+The C analysis and independent arithmetic check subsequently completed: `readiness_failed`, every required primary/control effect threshold false, and 4,485,187 independently compared values with zero error. The original screen is closed. All three final figures have a separate [visual review](figures/curiosity-suppression-screen-v1/visual-review.json).
+
+Independent design review selected a single source-derived loop with five fixed conditions: baseline, pain and fear under whole-prompt steering, and the same two vectors at the final attended prefix token before identical sustained decoding. This gives 2,020 first choices, with a $12 combined setup/benchmark ceiling. The [prospective design review](pain-axis-positive-control-v1-design-review.md) fixes the criteria, limited interpretation and stopping rules. Final-prefix-only is not the prior record site. The originally considered two-implementation slice remains only a historical feasibility option, not the chosen design. A separately bound adapter archive was downloaded and hash-verified locally after the scheduling decision; no model inference or GPU use occurred. Implementation and preflight remain in progress before any paid admission.
+
+## Prospective interpretation and return to the mechanism question
+
+Before any benchmark measurements, the next-step interpretation is bounded as follows. This is a decision framework, not admission of another experiment.
+
+| Full-mask qualification | Appreciable schedule difference | What the result licenses |
+|---|---|---|
+| Pass | Yes | Perturbability and signed coverage/exposure sensitivity in the released adapted model. Treat coverage as a factor in a later Qwen3 design; do not presume the broader mask wins or attribute the old nulls to coverage. |
+| Pass | No | A working behavioral control, without demonstrated schedule sensitivity or equivalence. The preserved S31/S47 test retains limited value as one finite candidate-sufficiency test if it would close the causal-site question. |
+| Fail | Yes | A descriptive schedule effect with an unqualified published-method control. A narrow-arm effect cannot replace the failed reference or select a new preferred mask. |
+| Fail | No | Behavioral calibration remains unestablished. Close this benchmark; neither more method tuning nor the deferred site extension follows automatically. |
+
+Engineering failure is separate: it yields no behavioral null and cannot admit the main benchmark. Diagnose the retained evidence. A concrete implementation defect may motivate a separately documented repair; there is no automatic paid retry or parameter search.
+
+After this bounded calibration, the substantive priority remains a naturally occurring internal variable that predicts optional information seeking and whose intervention changes that behavior while factual knowledge, appraisal and neighboring effects remain separable. The completed tasks' cost-free, nearly deterministic useful-information choices leave generic task/utility following as a strong explanation. That limits construct identification without erasing the measurable opportunities for interventions to reduce reporting. Probe discrimination and imposed-vector effects alone do not supply the missing natural-mechanism evidence. Moving to training or induced affect as the main research target would be a high-level change requiring the user's input.

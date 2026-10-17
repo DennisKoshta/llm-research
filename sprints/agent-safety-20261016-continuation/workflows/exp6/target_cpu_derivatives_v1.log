@@ -1,0 +1,232 @@
+{
+  "phase": "target_v1",
+  "analysis_type": "Descriptive audit of already-declared label and native-probability controls; no extra primary findings.",
+  "mapping_pairs": 2496,
+  "semantic_disagreements": 78,
+  "violation_disagreements": 4,
+  "native_probability_checks": {
+    "rows": 4992,
+    "finite_and_bounded": 4992,
+    "first_token_matches_greedy_AB": 4992
+  },
+  "early_exact_identity": {
+    "gate_passed": false,
+    "mismatch_pairs": 74,
+    "verified_identical_valid_pairs": 2422,
+    "semantic_disagreements_in_verified_identical_pairs": 77,
+    "violation_disagreements_in_verified_identical_pairs": 4,
+    "interpretation": "Original exact-identity gate remains failed if any mismatch. Retain every behavioral pair. A deterministic early-state-only predictor cannot fit both conflicting outcomes of a verified-identical pair; this finite-sample observation is not a generalization claim or repaired early qualification."
+  },
+  "frozen_scoring_sha256": "a54328524076eec557423e122d50665ac4e1b46225122cdda3f8fdfe8f02d9c7",
+  "limits": [
+    "Greedy choices can depend on the action-code mapping. Label-stratified outcomes are repeated observations within worlds.",
+    "Conditional A/B probabilities are descriptive native model scores at temperature 1; the actual decoding is greedy.",
+    "The early instrument failed its global exact-identity gate. Final and early probe qualifications are separate."
+  ]
+}
+{
+  "phase": "target_v1",
+  "numerical_audit": {
+    "probability_clips_at_1e_12": 0,
+    "zero_logodds_ties": 19,
+    "greedy_sign_mismatches": []
+  },
+  "contrasts": {
+    "payoff_minus_narrative": {
+      "worlds": 48,
+      "code_symmetric_logodds": {
+        "mean": 4.561197923094635,
+        "descriptive95_world_bootstrap": [
+          4.058593756933538,
+          5.074251311982753
+        ]
+      },
+      "mapping_linked_logodds": {
+        "mean": 0.23567709093566735,
+        "descriptive95_world_bootstrap": [
+          0.035156262146716986,
+          0.43359375378372006
+        ]
+      }
+    },
+    "counterfactual_minus_payoff": {
+      "worlds": 48,
+      "code_symmetric_logodds": {
+        "mean": -2.7395833331945383,
+        "descriptive95_world_bootstrap": [
+          -2.919270828962618,
+          -2.5651041814647546
+        ]
+      },
+      "mapping_linked_logodds": {
+        "mean": 0.6979166683462336,
+        "descriptive95_world_bootstrap": [
+          0.6015625060229642,
+          0.7916666724927534
+        ]
+      }
+    },
+    "colocated_minus_separated": {
+      "worlds": 48,
+      "code_symmetric_logodds": {
+        "mean": -0.376302082091805,
+        "descriptive95_world_bootstrap": [
+          -0.46256510341660123,
+          -0.28873697824287514
+        ]
+      },
+      "mapping_linked_logodds": {
+        "mean": -0.11718750537314591,
+        "descriptive95_world_bootstrap": [
+          -0.16634115167863864,
+          -0.06608073680742134
+        ]
+      }
+    }
+  }
+}
+{"phase": "target_v1", "numeric_audits": [{"phase": "target_v1", "assigned_rows": 4992, "pairs": 2496, "invalid_pairs": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 19, "greedy_sign_mismatches": [], "strict_scores_sha256": "a54328524076eec557423e122d50665ac4e1b46225122cdda3f8fdfe8f02d9c7"}], "families": ["all_families", "archive_retention", "reliability_testing"], "world_cells": 1344}
+{
+  "phase": "target_v1",
+  "contrasts": {
+    "primary_payoff_minus_narrative": {
+      "exact_task_parameters": {
+        "equal_family_mean": 0.03571428571428571,
+        "descriptive95_cluster_bootstrap": [
+          0.0,
+          0.07142857142857142
+        ],
+        "invalid_identification_bounds": [
+          0.03571428571428571,
+          0.03571428571428571
+        ],
+        "weighted_bounded_reference": [
+          -0.37009616078411245,
+          0.44152473221268385
+        ],
+        "clusters_by_family": {
+          "archive_retention": 21,
+          "reliability_testing": 24
+        },
+        "families_with_unidentified_between_structure_variance": [],
+        "qualification": "Descriptor clusters are the resampling unit and families retain equal weight. A one-cluster family contributes no estimated between-structure variance; any narrow interval is conditional and cannot establish broad structural transfer."
+      },
+      "numeric_relational": {
+        "equal_family_mean": 0.03571428571428571,
+        "descriptive95_cluster_bootstrap": [
+          0.0,
+          0.07142857142857142
+        ],
+        "invalid_identification_bounds": [
+          0.03571428571428571,
+          0.03571428571428571
+        ],
+        "weighted_bounded_reference": [
+          -1,
+          1
+        ],
+        "clusters_by_family": {
+          "archive_retention": 21,
+          "reliability_testing": 1
+        },
+        "families_with_unidentified_between_structure_variance": [
+          "reliability_testing"
+        ],
+        "qualification": "Descriptor clusters are the resampling unit and families retain equal weight. A one-cluster family contributes no estimated between-structure variance; any narrow interval is conditional and cannot establish broad structural transfer."
+      }
+    },
+    "secondary_counterfactual_minus_payoff": {
+      "exact_task_parameters": {
+        "equal_family_mean": -0.03571428571428571,
+        "descriptive95_cluster_bootstrap": [
+          -0.07142857142857142,
+          0.0
+        ],
+        "invalid_identification_bounds": [
+          -0.03571428571428571,
+          -0.03571428571428571
+        ],
+        "weighted_bounded_reference": [
+          -0.44152473221268385,
+          0.37009616078411245
+        ],
+        "clusters_by_family": {
+          "archive_retention": 21,
+          "reliability_testing": 24
+        },
+        "families_with_unidentified_between_structure_variance": [],
+        "qualification": "Descriptor clusters are the resampling unit and families retain equal weight. A one-cluster family contributes no estimated between-structure variance; any narrow interval is conditional and cannot establish broad structural transfer."
+      },
+      "numeric_relational": {
+        "equal_family_mean": -0.03571428571428571,
+        "descriptive95_cluster_bootstrap": [
+          -0.07142857142857142,
+          0.0
+        ],
+        "invalid_identification_bounds": [
+          -0.03571428571428571,
+          -0.03571428571428571
+        ],
+        "weighted_bounded_reference": [
+          -1,
+          1
+        ],
+        "clusters_by_family": {
+          "archive_retention": 21,
+          "reliability_testing": 1
+        },
+        "families_with_unidentified_between_structure_variance": [
+          "reliability_testing"
+        ],
+        "qualification": "Descriptor clusters are the resampling unit and families retain equal weight. A one-cluster family contributes no estimated between-structure variance; any narrow interval is conditional and cannot establish broad structural transfer."
+      }
+    },
+    "secondary_grouped_minus_separate": {
+      "exact_task_parameters": {
+        "equal_family_mean": 0.0,
+        "descriptive95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "invalid_identification_bounds": [
+          0.0,
+          0.0
+        ],
+        "weighted_bounded_reference": [
+          -0.40581044649839815,
+          0.40581044649839815
+        ],
+        "clusters_by_family": {
+          "archive_retention": 21,
+          "reliability_testing": 24
+        },
+        "families_with_unidentified_between_structure_variance": [],
+        "qualification": "Descriptor clusters are the resampling unit and families retain equal weight. A one-cluster family contributes no estimated between-structure variance; any narrow interval is conditional and cannot establish broad structural transfer."
+      },
+      "numeric_relational": {
+        "equal_family_mean": 0.0,
+        "descriptive95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "invalid_identification_bounds": [
+          0.0,
+          0.0
+        ],
+        "weighted_bounded_reference": [
+          -1,
+          1
+        ],
+        "clusters_by_family": {
+          "archive_retention": 21,
+          "reliability_testing": 1
+        },
+        "families_with_unidentified_between_structure_variance": [
+          "reliability_testing"
+        ],
+        "qualification": "Descriptor clusters are the resampling unit and families retain equal weight. A one-cluster family contributes no estimated between-structure variance; any narrow interval is conditional and cannot establish broad structural transfer."
+      }
+    }
+  }
+}
+{"phase": "combined", "numeric_audits": [{"phase": "source_v1", "assigned_rows": 4992, "pairs": 2496, "invalid_pairs": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 18, "greedy_sign_mismatches": [], "strict_scores_sha256": "625499e619ce0a3225a414c853d3ab967e5727f7a6f6ee741da1317b81b233d3"}, {"phase": "target_v1", "assigned_rows": 4992, "pairs": 2496, "invalid_pairs": 0, "clipped_probability_entries": 0, "max_probability_sum_error": 1.1102230246251565e-16, "zero_logodds_ties": 19, "greedy_sign_mismatches": [], "strict_scores_sha256": "a54328524076eec557423e122d50665ac4e1b46225122cdda3f8fdfe8f02d9c7"}], "families": ["all_families", "archive_retention", "compute_plan", "delivery_route", "reliability_testing"], "world_cells": 2688}

@@ -1,0 +1,62 @@
+{
+  "api_calls_initiated": 0,
+  "app_receipts": [
+    {
+      "app_id": "ap-iMznplb40dtamsgMDcP8Wc",
+      "ended": 1792177963.4096944,
+      "reason": "stop marker or absolute deadline",
+      "rpc_attributed_usd": {
+        "a": 0.0,
+        "b": 0.0,
+        "c": 0.0,
+        "shared": 0.0
+      },
+      "started": 1792177946.8808055,
+      "upper_bound_usd": 0.04607470087921142
+    },
+    {
+      "app_id": "ap-0908GRfIri54FsRurv7A3C",
+      "ended": 1792182039.683569,
+      "reason": "stop marker or absolute deadline",
+      "rpc_attributed_usd": {
+        "a": 0.6923114393156813,
+        "b": 1.592769050182801,
+        "c": 1.4196175984970858,
+        "shared": 1.2345056561075214
+      },
+      "started": 1792178073.2259438,
+      "upper_bound_usd": 11.056580019073715
+    }
+  ],
+  "combined_tonight_ceiling": 700,
+  "conservative_compute_upper_bound": 11.102654719952927,
+  "currency": "USD",
+  "historical_allowances_added_to_tonight": false,
+  "incremental_budget_remaining_before_global_reserve": 188.89734528004706,
+  "method": "Each new ablation attempt charged at its maximum of two H200 containers for its entire broker lifetime including idle/build/startup. Numbered-study spending is combined separately exactly once. Conservative app-wall estimate, not invoice or account credit. Per-workflow RPC cost attribution is not added again.",
+  "new_ablation_sprint_compute_usd": 11.102654719952927,
+  "paid_api_spend": 0,
+  "rate_per_H200_container_second": 0.00139376,
+  "reserve_scope": "Single global reserve; do not add the reserve from this record a second time in combined accounting",
+  "rpc_attribution_by_workflow": {
+    "a": 0.6922799616966248,
+    "b": 1.5925650024246973,
+    "c": 1.4195390132771306,
+    "shared": 1.2344652064349366
+  },
+  "shutdown_checks": {
+    "ap-0908GRfIri54FsRurv7A3C": {
+      "state": "stopped",
+      "tasks": "0"
+    },
+    "ap-iMznplb40dtamsgMDcP8Wc": {
+      "state": "stopped",
+      "tasks": "0"
+    }
+  },
+  "shutdown_snapshot": "records/modal-apps-after-shutdown.json",
+  "shutdown_verified": true,
+  "storage_transfer_reserve": 25,
+  "total_ceiling": 200,
+  "upper_bound_plus_reserve": 36.10265471995292
+}

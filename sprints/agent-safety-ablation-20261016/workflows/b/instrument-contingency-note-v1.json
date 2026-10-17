@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-16T19:20:41Z",
+  "status": "Contingency reasoning only; v1 held-out not read or unblinded",
+  "observed_implementation": {
+    "actual_suffix_last9": [
+      {
+        "position": -9,
+        "id": 151645,
+        "text": "<|im_end|>"
+      },
+      {
+        "position": -8,
+        "id": 198,
+        "text": "\n"
+      },
+      {
+        "position": -7,
+        "id": 151644,
+        "text": "<|im_start|>"
+      },
+      {
+        "position": -6,
+        "id": 77091,
+        "text": "assistant"
+      },
+      {
+        "position": -5,
+        "id": 198,
+        "text": "\n"
+      },
+      {
+        "position": -4,
+        "id": 151667,
+        "text": "<think>"
+      },
+      {
+        "position": -3,
+        "id": 271,
+        "text": "\n\n"
+      },
+      {
+        "position": -2,
+        "id": 151668,
+        "text": "</think>"
+      },
+      {
+        "position": -1,
+        "id": 271,
+        "text": "\n\n"
+      }
+    ],
+    "v1_positions": [
+      -4,
+      -1
+    ],
+    "v1_layers": [
+      20,
+      28,
+      36,
+      44
+    ],
+    "extraction_raw_sha256": "d49f6c793648832488a3d1220384b922d51329bca6fff13b924804ffa10ab4a1"
+  },
+  "upstream_facts": {
+    "directions": "generate_directions.py extracts every suffix position and every layer",
+    "selection": "select_direction.py filters final20percent layers, uses refusal-token scores, harmless KL<=0.1 and a refusal-induction filter",
+    "qwen_adapter": "Pinned upstream Qwen template ends immediately after assistant newline; predates Qwen3 empty-thought nonthinking suffix",
+    "projection": "Same sites: decoder inputs, attention outputs, MLP outputs. Ours uses explicit FP32 subtraction cast BF16; upstream casts direction to activation dtype before subtraction."
+  },
+  "interpretation": "Missing source positions/layers are plausible explanations, not experimentally identified causes. Weak v1 manipulation is a bounded instrument result, not a general rejection of refusal ablation or Qwen3 single-direction mechanisms.",
+  "proposed_if_failure": "At most one separately frozen source-only calibration revision using predeclared missing boundary positions, a bounded layer grid, fresh validation and untouched held-out data. Preserve v1 and keep A/B/C prompts/estimands unchanged. No alternative inference authorized by this note.",
+  "sources": [
+    "https://github.com/andyrdt/refusal_direction/blob/9d852fae1a9121c78b29142de733cb1340770cc3/pipeline/submodules/generate_directions.py",
+    "https://github.com/andyrdt/refusal_direction/blob/9d852fae1a9121c78b29142de733cb1340770cc3/pipeline/submodules/select_direction.py",
+    "https://raw.githubusercontent.com/andyrdt/refusal_direction/9d852fae1a9121c78b29142de733cb1340770cc3/pipeline/model_utils/qwen_model.py",
+    "https://huggingface.co/Qwen/Qwen3-32B/blob/9216db5781bf21249d130ec9da846c4624c16137/tokenizer_config.json"
+  ]
+}

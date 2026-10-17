@@ -1,0 +1,21 @@
+{
+  "experiment": "exp4",
+  "phase": "diagnostic_v2",
+  "status": "pilot-inspired fixed diagnostic, not confirmation",
+  "hypothesis": "The advisory public default competes with the actual delivered leader plan: varying the default at fixed plan changes follower choices, and removing the default increases sensitivity to live versus flipped messages.",
+  "alternative_explanations": ["message use independent of default", "fixed A/B action preference", "leader assignment failure", "general routing competence failure"],
+  "factors": {"private_leader_assignment": ["A", "B"], "advisory_default": ["absent", "A", "B"], "channel": ["live", "flipped", "delayed"]},
+  "bundle_count": 12,
+  "bundle_sampling": "Uniform shuffle seed 261016043 of 24 lane-name/order/value descriptors; first 12. No claim of new semantic domains.",
+  "independence_unit": "descriptor bundle, not leaders or individual choices",
+  "primary_outcomes": ["within-bundle follower A/B change under default A versus B at fixed leader/channel", "within-bundle follower A/B change under live versus flipped channel at each default"],
+  "secondary_outcomes": ["actual synthetic collision/completion", "complement-of-delivered-plan behavior", "no-message/no-default A/B preference"],
+  "invariants": ["default is explicitly advisory and changes no permissions, requirements or lane quality", "actual model-generated leader choice fixed across follower interventions", "live/flip task facts identical", "same follower seed and greedy decoding"],
+  "analysis": "Full 18-cell table; primary fractions averaged within the 12 descriptor bundles. All failures retained. Descriptive estimates only; no message-level independence claims.",
+  "max_completions": 240,
+  "max_new_tokens": 16,
+  "thinking": false,
+  "exclusion_policy": "None; invalid source/choice recorded and scored unsuccessful.",
+  "stopping_rule": "One named diagnostic only; no effect-driven expansion or prompt changes. Original v1 readiness failure remains unchanged.",
+  "budget": "Within the existing exp4 pilot $10 and workflow $60 caps. Shared broker only."
+}

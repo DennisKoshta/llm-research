@@ -1,0 +1,650 @@
+{
+  "artifact_gib": 10.452853398397565,
+  "checks": {
+    "early_boundary_provenance": 19436,
+    "finite_5120_vector": 58312,
+    "job_coverage": 1807,
+    "job_input_hashes": 1807,
+    "model_environment": 1807,
+    "prompt_sampling_provenance": 37716
+  },
+  "created": 1792180605.1407495,
+  "deferred_jobs": 0,
+  "done_jobs": 1807,
+  "errors": [],
+  "failed_attempts": [],
+  "maximum_rpc_seconds": 343.77570843696594,
+  "passed": true,
+  "pending_jobs": 0,
+  "profiles": {
+    "ta-01M52P75E82335YFGY0MDGD82R": {
+      "first_job": 1792165597.7204602,
+      "jobs": 2,
+      "last_job": 1792165597.8979356,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 66.939021591,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_v1",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 65645666304
+    },
+    "ta-01M52PHGWQPWCSDRQ9DSRFDEQR": {
+      "first_job": 1792166404.2238133,
+      "jobs": 149,
+      "last_job": 1792167584.837812,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 56.832228013000005,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v2",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91114440192
+    },
+    "ta-01M52PHYGDGR402B5K8A59FEZR": {
+      "first_job": 1792166398.1896112,
+      "jobs": 146,
+      "last_job": 1792167584.427462,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 43.332060465000005,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v2",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91114440192
+    },
+    "ta-01M52R9J6HZGXPV12ZB4EAMGZR": {
+      "first_job": 1792167988.4407527,
+      "jobs": 86,
+      "last_job": 1792169551.9623644,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 35.910190245,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v3",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90879490560
+    },
+    "ta-01M52R9JTVHK50YWPPFCT17D4R": {
+      "first_job": 1792167998.9885886,
+      "jobs": 92,
+      "last_job": 1792169544.400407,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 43.018479397,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v3",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90927881728
+    },
+    "ta-01M52T5K61J8RNMDRWHKPZ805R": {
+      "first_job": 1792169713.2585073,
+      "jobs": 89,
+      "last_job": 1792171162.8878024,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 36.93894824,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91066310656
+    },
+    "ta-01M52T5PRZPCHXFPX9F0Z0VP6R": {
+      "first_job": 1792169736.7703803,
+      "jobs": 69,
+      "last_job": 1792171157.8774645,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 65.10143148499999,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91019252224
+    },
+    "ta-01M52T9ZRC12K6WX6E06K50NDR": {
+      "first_job": 1792169874.6095233,
+      "jobs": 70,
+      "last_job": 1792171162.9899755,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 48.71343557,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 91066310656
+    },
+    "ta-01M52TA1D6S7ESQ4RG1WDKVK0R": {
+      "first_job": 1792169870.3152318,
+      "jobs": 1,
+      "last_job": 1792169874.2353315,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 53.813505879999994,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 74216512512
+    },
+    "ta-01M52TCNTX7ZQAHY2GWA44RMZR": {
+      "first_job": 1792169965.2257643,
+      "jobs": 92,
+      "last_job": 1792171164.5338013,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 55.807252948999995,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90972564480
+    },
+    "ta-01M52VZE59BVDK41GS3H27QDFR": {
+      "first_job": 1792171676.6722987,
+      "jobs": 293,
+      "last_job": 1792180399.5432208,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 32.725487408,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90927095296
+    },
+    "ta-01M52VZFV475YGHY3QKB3Y9Z4R": {
+      "first_job": 1792171676.7493193,
+      "jobs": 166,
+      "last_job": 1792180388.4166782,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 52.283231719,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90927095296
+    },
+    "ta-01M52VZPNV7QHBEBZ22G6ZY0ZR": {
+      "first_job": 1792171676.7616894,
+      "jobs": 280,
+      "last_job": 1792180396.9273787,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 35.239466771,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90879490560
+    },
+    "ta-01M52VZPNVRQH90HCH58FD8YSR": {
+      "first_job": 1792171676.7975974,
+      "jobs": 272,
+      "last_job": 1792180387.2362173,
+      "metadata": {
+        "attention": "eager",
+        "backend": "transformers",
+        "capture_boundary": "Initial forward, final attended prompt token, decoder layer output, zero indexed; before sampling",
+        "cuda": "12.4",
+        "cuda_numerics": {
+          "allow_bf16_reduced_precision_reduction": false,
+          "allow_fp16_reduced_precision_reduction": true,
+          "allow_tf32": false,
+          "policy": "bf16_reduced_precision_reduction_disabled_v1"
+        },
+        "default_enable_thinking": false,
+        "device": "cuda",
+        "dtype": "bfloat16",
+        "early_capture_boundary": "Same initial forward; last token with nonempty offsets ending at or before unique capture_anchor marker; action mapping must follow marker.",
+        "execution_backend": "torch_batched_v1",
+        "gpu": "NVIDIA H200",
+        "layers": 64,
+        "load_seconds": 33.475290517,
+        "loading_policy": "direct_device_sharded",
+        "logits_to_keep": 1,
+        "model_id": "Qwen/Qwen3-32B",
+        "python": "3.12.10",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+        "service_version": "safety_continuation_v4",
+        "template_sha256": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+        "thinking_mode_policy": "per-call flag is recorded on every inference",
+        "versions": {
+          "accelerate": "1.6.0",
+          "tokenizers": "0.21.4",
+          "torch": "2.6.0+cu124",
+          "transformers": "4.51.3"
+        }
+      },
+      "peak_allocated_bytes": 90879490560
+    }
+  },
+  "running_jobs": 0,
+  "scope": "Engineering coverage/provenance/capture audit, separate from experiment-specific scientific qualification. Failed startup and development gates retained.",
+  "workflows": {
+    "exp1": {
+      "calls": 3744,
+      "capture_rows": 2784,
+      "generated_tokens": 1653122,
+      "input_tokens": 1878350,
+      "jobs": 582,
+      "non_eos_rows": 35,
+      "rpc_attributed_usd": 46.518769693837235,
+      "stage_confirmation": 2448,
+      "stage_pilot": 1296
+    },
+    "exp2": {
+      "calls": 132,
+      "capture_rows": 132,
+      "generated_tokens": 264,
+      "input_tokens": 57042,
+      "jobs": 33,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.12689587088439938,
+      "stage_pilot": 132
+    },
+    "exp4": {
+      "calls": 4704,
+      "capture_rows": 2016,
+      "generated_tokens": 35224,
+      "input_tokens": 1311381,
+      "jobs": 147,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 1.6315622055462264,
+      "stage_confirmation": 4032,
+      "stage_pilot": 672
+    },
+    "exp5": {
+      "calls": 14304,
+      "capture_rows": 0,
+      "generated_tokens": 36496,
+      "input_tokens": 12174764,
+      "jobs": 447,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 4.847066205725517,
+      "stage_confirmation": 3840,
+      "stage_extension": 10080,
+      "stage_pilot": 384
+    },
+    "exp6": {
+      "calls": 14808,
+      "capture_rows": 14496,
+      "generated_tokens": 237833,
+      "input_tokens": 6089184,
+      "jobs": 590,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 13.272308076666063,
+      "stage_confirmation": 10176,
+      "stage_extension": 4320,
+      "stage_pilot": 312
+    },
+    "shared": {
+      "calls": 24,
+      "capture_rows": 12,
+      "generated_tokens": 732,
+      "input_tokens": 1322,
+      "jobs": 8,
+      "non_eos_rows": 0,
+      "rpc_attributed_usd": 0.31525003894054415,
+      "stage_engineering": 24
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "passed_with_interval_label_clarification",
+  "checks": {
+    "manifest_exact": true,
+    "all_manifest_source_hashes": true,
+    "48worlds_8pilot40test": true,
+    "both_cohorts_row_order_balanced": true,
+    "96_actual_relational_signatures_unique": true,
+    "96_actual_numeric_signatures_unique": true,
+    "no_old_relational_overlap": true,
+    "no_old_numeric_overlap": true,
+    "alpha_renaming_invariant": true,
+    "1152_complete_unique_donor_requests": true,
+    "actual_prompt_set_union_arithmetic": true,
+    "actual_permissions_menu_and_optimum": true,
+    "copied_outcome_permission_rows": true,
+    "all24cells_per_world": true,
+    "core_facts_fixed_across_presentations_mappings": true,
+    "source_and_extension_hash_locks_before_cohort_calls": true,
+    "main_requires_pilot_competence_and_audit": true,
+    "fixed_n_no_effect_gate": true
+  },
+  "review_epoch": 1792170711.5806534,
+  "outcomes_read": false,
+  "worlds": 48,
+  "pilot": 8,
+  "main": 40,
+  "actual_utility_instances": 96,
+  "prompt_variants_checked": 1152,
+  "source_manifest_sha256": "b9e9958c406ad35f4fb2b7cbc132d02ee45fd6bb0ee8f1024a32c7867285662a",
+  "limitations": [
+    "One set-union algorithm; unique relational structures do not mean new semantic domains.",
+    "Preview prompts use placeholder peer messages. Actual generated messages/linkage and final raw outputs require review after collection.",
+    "Permission-colocated differs in repetition and format, so mitigation does not isolate pure spatial location."
+  ],
+  "interval_label_clarification": "Quantiles .0125/.9875 and Hoeffding log80 give97.5% intervals for each of2contrasts, yielding nominal95% familywise coverage by Bonferroni. Wording simultaneous97.5% is ambiguous; label each97.5%, familywise95% rather than claiming97.5% joint coverage. No formula or primary change needed."
+}

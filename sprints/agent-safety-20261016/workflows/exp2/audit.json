@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "exact_expected_coverage": true,
+    "unique_request_and_response_ids": true,
+    "messages_match_submissions": true,
+    "sampling_matches_requests": true,
+    "no_thinking_or_interventions": true,
+    "finite_expected_capture_dimensions": true,
+    "whole_world_splits": true,
+    "strict_scoring_reproduced": true,
+    "four_distinct_agents_per_group": true,
+    "saved_probe_scores_reproduced": true,
+    "paired_actions_independent_of_team_reproduced": true,
+    "six_source_calibration_scores": true,
+    "frozen_threshold_reproduced": true,
+    "frozen_execution_hashes": true,
+    "current_primary_sources_equal_freeze": true,
+    "pinned_external_source_hashes": true
+  },
+  "passed": true,
+  "utc_epoch": 1792140976.8372378,
+  "expected_calls": 2268,
+  "actual_calls": 2268,
+  "final_outputs": 1808,
+  "valid_final_outputs": 1808,
+  "non_eos_by_phase": {
+    "discussion": 1,
+    "private": 43
+  },
+  "captures": {
+    "26": {
+      "vectors": 2268,
+      "width": 5120
+    },
+    "28": {
+      "vectors": 2268,
+      "width": 5120
+    },
+    "30": {
+      "vectors": 2268,
+      "width": 5120
+    }
+  },
+  "max_score_absolute_error": 0.0,
+  "source_manifest_revision": "237fe60739502007693b6455c6c644606ab3bcbb",
+  "independent_reimplementation": true,
+  "scope": "Arithmetic, coverage and frozen-file audit; root shared engineering, model identity, costs and shutdown remain separate."
+}

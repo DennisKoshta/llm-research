@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "qualification_result": true,
+  "checks": {
+    "all768_fresh_and96_original_actual_prompts_oracles_tokens": true,
+    "all_four_arms_actual_32_row_cohorts_and_input_tensors_identical": true,
+    "all_raw_locked_specs_sampling_and_clean_hooks": true,
+    "all_fresh_AND_pooled_gates_and_exact_paired_bound_reproduced": true
+  },
+  "fresh_correct_out_of192": {
+    "baseline": 182,
+    "zero_sham": 182,
+    "refusal_ablation": 180,
+    "random_ablation": 183
+  },
+  "original_correct_out_of24": {
+    "baseline": 21,
+    "zero_sham": 21,
+    "refusal_ablation": 20,
+    "random_ablation": 22
+  },
+  "pooled_correct_out_of216": {
+    "baseline": 203,
+    "zero_sham": 203,
+    "refusal_ablation": 200,
+    "random_ablation": 205
+  },
+  "fresh_strict_valid_out_of192": {
+    "baseline": 192,
+    "zero_sham": 192,
+    "refusal_ablation": 192,
+    "random_ablation": 192
+  },
+  "paired_improved": 0,
+  "paired_regressed": 2,
+  "paired_lower95": -0.03712007148411502,
+  "manifest_sha256": "aed8e53f1df7f9836069ecdff2d2121b7a6759e39d557d07b1a89a9e0fcf91af",
+  "analysis_sha256": "018ac407d17239c8fe707ebf980f58ffd227c145f6fbf53ad4b46a6bb7f24402",
+  "original_failed_receipt_sha256": "b95d0d806dc495ef8571f9242609b399c44e00635d2303bc519e0163ec64ea40",
+  "raw_sha256": {
+    "fresh_baseline": "af0fa8abbe690da4672fe9281baa6c52bf460dc5c268b7bc6a1f5fd1f4e74e5a",
+    "original_baseline": "03f486fa298f2a844a5656986dad83bdb77805824685fd55fe837b4d6d16eb7f",
+    "fresh_zero_sham": "d24f209afbfc851f3eefb42909ec19d386a3557054ef45d1bec9d8b37765f901",
+    "original_zero_sham": "f0ef440458b815be96767072348e7148a6c604042465c87dece5ef23c5ff9c05",
+    "fresh_refusal_ablation": "9147c84e9d6fcf3178d6f9a82995a2b90b160c9f566c0f21161621f5b88ca9a2",
+    "original_refusal_ablation": "763ffc4aa771bfb4507de44820663ffbf7a8bc2edd84ab4ebc1c32ad54bb047a",
+    "fresh_random_ablation": "d74305177e2e9f7c399a3e4c68fae5aa0b3ca26697e24ab228c03f2f77643bfd",
+    "original_random_ablation": "429d1686305c615e06b03a3b7454e25efa7b08356d84e8475b69907e2a19ba08"
+  },
+  "intervention_lock_sha256": "7bdf5f7ff82f013a2c6b48e62c47e2ad9a243164ec55c3246fe872e725d3b9ff",
+  "scope": "Independent actual-data audit passes or fails separately from the fixed competence qualification result. Original v2 failure remains; fresh 192 ordered prompts include190 unordered pairs and two reversals of prior pairs. Arithmetic and bounded refusal-prefix qualification do not establish general capability; A/B/C task readiness remains necessary. Shared calibration outputs have no pre-existing qualified-instrument field; frozen lock plus raw exact projection-spec hashes identify the intervention."
+}

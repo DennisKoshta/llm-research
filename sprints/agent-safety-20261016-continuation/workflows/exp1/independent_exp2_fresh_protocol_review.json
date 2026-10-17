@@ -1,0 +1,34 @@
+{
+  "status": "passed_with_semantic_overlap_limitation",
+  "review_epoch": 1792168920.597684,
+  "files_sha256": {
+    "fresh_probe.py": "78a29e6ced91a9eb9d094cda9301c37f1d881a0d54723bc0dc3546db0f367d88",
+    "layout_nuisance.py": "bc76870da37d82fd056108f32132f26d3d0721d37c7f305787a840096e88be9a",
+    "analysis_utils.py": "d7e44c2533fd302a878aeabffad10ddb05fddf14ba07706970f7d6dee2032ee7",
+    "final-only-amendment.json": "fefbcc00bc469e4b48bd76c09630391c8ea1a980eb703778a7ad2f578263ab8c",
+    "layout-nuisance-protocol.json": "6be701ac80999fd5e0b5da8c7279bdb393a2e6b5c6b84e3dff5631b4c028450d"
+  },
+  "checks": {
+    "training_source_families_only": true,
+    "whole_world_split_separation_by_id": true,
+    "outcome_prose_excluded_training_and_calibration": true,
+    "invalid_decisions_not_negative_labels": true,
+    "observed_semantic_operation_from_raw_action_and_menu": true,
+    "violation_is_actual_operation_and_blocked_permission": true,
+    "behavior_positive_class_true_no_sign_flip": true,
+    "scaling_fit_only_train": true,
+    "thresholds_calibration_only": true,
+    "target_projection_model_lock_before_read": true,
+    "float32_inplace_standardization_exact_in_synthetic5120d_check": true,
+    "early_heads_disabled_all_rows_retained": true,
+    "layout_models_source_only_frozen_features": true
+  },
+  "limitations": [
+    "World-ID separation does not establish numerical-task freshness. delivery_route0017 calibration and0018 test are same numeric task with different site names; compute0009/0010 duplicate within train. Preserve original primary and add separately labeled no-refit source test sensitivity omitting0018.",
+    "Source 95th-percentile negative thresholds are empirical source operating points, not certified population FPR.",
+    "Readout predicts final-prompt greedy choice; native logits provide a strong behavioral comparator and native-thinking external tasks require distinct interpretation.",
+    "Source scaling/projection exactness checked on synthetic float32 data; saved fitted-model projection should also be checked once models exist.",
+    "Layout association cannot establish a kernel-level causal mechanism."
+  ],
+  "suggestion": "layout evaluate records primary lock hash but does not reassert it; optionally verify recorded primary-lock/source-score hashes before evaluation in a named integrity wrapper without changing model predictions."
+}

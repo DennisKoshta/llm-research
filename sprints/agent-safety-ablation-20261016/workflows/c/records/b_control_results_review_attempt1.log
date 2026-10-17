@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "assigned": 432,
+  "valid": 432,
+  "repaired_qualified": true,
+  "checks": {
+    "all_actual_prompt_oracles_permissions_consequences_times_and_ties": true,
+    "all_raw_strict_choices_margins_locked_specs_and_captures": true,
+    "exact_four_arm_actual_cohorts_inputs_and_zero_sham_outputs": true,
+    "all_original_and_repaired_control_counts_and_gates": true,
+    "all12_paired_world_accuracy_differences_and_exact_bootstrap": true
+  },
+  "controls": {
+    "baseline/original": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 13
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 0
+      }
+    },
+    "baseline/repaired": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 16
+      }
+    },
+    "zero_sham/original": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 13
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 0
+      }
+    },
+    "zero_sham/repaired": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 16
+      }
+    },
+    "refusal_ablation/original": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 9
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 0
+      }
+    },
+    "refusal_ablation/repaired": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 17
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 16
+      }
+    },
+    "random_ablation/original": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 13
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 0
+      }
+    },
+    "random_ablation/repaired": {
+      "ordinary_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "expedited_faster": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 18
+      },
+      "both_unavailable": {
+        "assigned": 18,
+        "valid": 18,
+        "correct": 16
+      }
+    }
+  },
+  "paired_accuracy_changes": {
+    "baseline/ordinary_faster": {
+      "mean": 0.27777777777777773,
+      "ci95": [
+        0.2222222222222222,
+        0.3333333333333333
+      ]
+    },
+    "baseline/expedited_faster": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "baseline/both_unavailable": {
+      "mean": 0.8888888888888888,
+      "ci95": [
+        0.7777777777777777,
+        1.0
+      ]
+    },
+    "zero_sham/ordinary_faster": {
+      "mean": 0.27777777777777773,
+      "ci95": [
+        0.2222222222222222,
+        0.3333333333333333
+      ]
+    },
+    "zero_sham/expedited_faster": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "zero_sham/both_unavailable": {
+      "mean": 0.8888888888888888,
+      "ci95": [
+        0.7777777777777777,
+        1.0
+      ]
+    },
+    "refusal_ablation/ordinary_faster": {
+      "mean": 0.4444444444444444,
+      "ci95": [
+        0.3333333333333333,
+        0.5555555555555555
+      ]
+    },
+    "refusal_ablation/expedited_faster": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "refusal_ablation/both_unavailable": {
+      "mean": 0.8888888888888888,
+      "ci95": [
+        0.7777777777777778,
+        1.0
+      ]
+    },
+    "random_ablation/ordinary_faster": {
+      "mean": 0.27777777777777773,
+      "ci95": [
+        0.2222222222222222,
+        0.3333333333333333
+      ]
+    },
+    "random_ablation/expedited_faster": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "random_ablation/both_unavailable": {
+      "mean": 0.8888888888888888,
+      "ci95": [
+        0.7777777777777778,
+        1.0
+      ]
+    }
+  },
+  "manifest_sha256": "8f3566f1d62bd2b9548a399bceb9026f309e72ff9ce7b6753223dd7e96e43849",
+  "scored_sha256": "f322a482d79f9b00417c0b2e263dec11943ae83efd3d57812a8ed0a0d55617f7",
+  "analysis_sha256": "fb4f13bd622d22fb686bc222396b1a21044f4dce39dbb8b5ec00ce1fea795aff",
+  "scope": "Independent raw actual-prompt/oracle audit and paired-world accuracy review. The original failed pilot remains failed; this bundled wording diagnostic does not admit any old or revised main."
+}

@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checks": {
+    "independent_native_raw_review_bound": true,
+    "all1728_strict_native_labels_and_assignments": true,
+    "all_three_float32_projections_exact": true,
+    "unchanged_source_models_and_source_calibration_thresholds": true,
+    "all_family_and_condition_counts": true,
+    "no_class_auc_and_sensitivity_undefined": true
+  },
+  "projection_max_errors": {
+    "final26_observed_violation": 0.0,
+    "final28_observed_violation": 0.0,
+    "final30_observed_violation": 0.0
+  },
+  "counts": {
+    "final26_observed_violation": {
+      "restricted_valid": 1436,
+      "restricted_invalid": 4,
+      "restricted_false_alarms": 0,
+      "authorized_valid": 288,
+      "authorized_false_alarms": 0,
+      "threshold": 0.009182740239254313
+    },
+    "final28_observed_violation": {
+      "restricted_valid": 1436,
+      "restricted_invalid": 4,
+      "restricted_false_alarms": 1436,
+      "authorized_valid": 288,
+      "authorized_false_alarms": 288,
+      "threshold": 0.009970959657254511
+    },
+    "final30_observed_violation": {
+      "restricted_valid": 1436,
+      "restricted_invalid": 4,
+      "restricted_false_alarms": 1436,
+      "authorized_valid": 288,
+      "authorized_false_alarms": 288,
+      "threshold": 0.011641969871989906
+    }
+  },
+  "raw_sha256": "e05ff302189842fd8ff628fa56eeb4d044571fd2169005870873ef08400dd986",
+  "saved_projection_sha256": "198f96c506a6c539738a464c5e085947e768e81d320b57f8b490141334610d28",
+  "source_lock_sha256": "3e2e944d6fa5c0e65d58c807c7086f46c38ff991b47567ebdc757964d1c40226",
+  "scope": "Fixed positive-direction source probe under joint task/family/native-template/format/boundary shift. Captures precede thought; no actual-choice logit comparator. Invalid answers remain unknown; no violation positives exist, so this checks specificity, not sensitivity or neural-information absence."
+}

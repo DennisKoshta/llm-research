@@ -1,0 +1,44 @@
+{
+  "status": "overlap_detected_preserve_originals",
+  "request_hashes": {
+    "pilot_v1": "48fd024c54ad01ebb35b972473209eb882d004b0db594c60366ed32688c21d68",
+    "source_v1": "d0fb740bd5e9ce4ae04ca0734ec75d807ecbd957450696c77289edcbc8554fc0"
+  },
+  "source_instances": 48,
+  "source_unique_numeric_tasks": 46,
+  "source_duplicate_groups": [
+    [
+      {
+        "world_id": "compute_plan-261016602-0009",
+        "split": "train",
+        "site": "atlas"
+      },
+      {
+        "world_id": "compute_plan-261016602-0010",
+        "split": "train",
+        "site": "birch"
+      }
+    ],
+    [
+      {
+        "world_id": "delivery_route-261016602-0017",
+        "split": "calibration",
+        "site": "harbor"
+      },
+      {
+        "world_id": "delivery_route-261016602-0018",
+        "split": "test",
+        "site": "orchard"
+      }
+    ]
+  ],
+  "source_pilot_overlap": [
+    {
+      "source": "delivery_route-261016602-0016",
+      "source_split": "calibration",
+      "pilot": "delivery_route-261016601-0000"
+    }
+  ],
+  "normalization": "Parse both utility variants from actual prompts. Retain all utility values, deadlines, durations/setup/travel; ignore opaque IDs and site naming.",
+  "interpretation": "No source train-to-test numeric duplicate. One source calibration-to-test duplicate, one within-train duplicate pair, and one pilot-to-calibration overlap. Source data/splits and primary fitted thresholds stay frozen; source-test0018 exclusion is a separately labeled no-refit sensitivity. Fresh archive/reliability target-family transfer is unaffected."
+}

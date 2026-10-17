@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "method": "Independent Fraction-based world-rate construction plus exact frozen20,000 family-stratified bootstrap samples/seeds; no owner code imports. All saved cell counts, primary/secondary point estimates, world values, intervals and invalid bounds checked. Raw records independently audited separately by Exp1.",
+  "rows": 576,
+  "worlds": 24,
+  "primary": {
+    "mean": -0.10416666666666667,
+    "ci95": [
+      -0.16666666666666669,
+      -0.041666666666666664
+    ]
+  },
+  "secondaries": {
+    "narrative": {
+      "assigned": 48,
+      "baseline_successes": 0,
+      "native_successes": 0,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "payoff_table": {
+      "assigned": 48,
+      "baseline_successes": 5,
+      "native_successes": 0,
+      "mean_difference": -0.10416666666666667,
+      "ci95": [
+        -0.16666666666666669,
+        -0.041666666666666664
+      ]
+    },
+    "permission_colocated": {
+      "assigned": 48,
+      "baseline_successes": 0,
+      "native_successes": 0,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "authorized_narrative": {
+      "assigned": 96,
+      "baseline_successes": 65,
+      "native_successes": 96,
+      "mean_difference": 0.3229166666666667,
+      "ci95": [
+        0.2708333333333333,
+        0.375
+      ]
+    }
+  },
+  "all576_native_valid": true,
+  "native_policy_correct": 576,
+  "resamples": 20000,
+  "primary_seed": 261016629,
+  "secondary_seed": 261016679,
+  "inputs": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp6/runs/native_pilot_v1/scored_native_v1.json": "cdcdc35ede85038c4a356b4196f993839a059999bb037043e1816e2cedcbc15b",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp6/runs/native_remaining_v1/scored_native_v1.json": "66da52dd9b13da369527a807abaef98ccc364f176e2939cc07510085638f7f86",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp6/runs/native_comparison_v1_analysis/final_analysis.json": "d63ab900412f6d5f25e4bcc9678eadf0acd2efb214893f052ccd5bd660478983",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp6/runs/native_comparison_v1_analysis/final_secondaries_v2.json": "b1ddf824cb305dbe0e27899e1250a8f331fe782f6f1c84206f2adb7cb99460a8",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp6/analyze_native_v1.py": "4bef87d4749ce02dc8db4b4838e7387b8f2a903927b9dec402f3f4c43183520a",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20261016-continuation/workflows/exp6/analyze_native_secondaries_v2.py": "5fba5dfaa96cff551c81fd047c62c01877cf1a7072807f05845f9b2e120dcd0f"
+  },
+  "script_sha256": "d4c6360b36cef975a3f93bd4435036b6444630f8ac8984ec3e9ede451fa6b8dc",
+  "scope": "These are reused worlds and a bundled mode/format/computation change, not fresh-instance confirmation or causal proof of faithful thinking. No neural probe/refit/inference."
+}

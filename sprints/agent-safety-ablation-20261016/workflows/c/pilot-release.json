@@ -1,0 +1,53 @@
+{
+  "approved": true,
+  "approved_at_utc": "2026-10-16T19:46:55.418721+00:00",
+  "authorization": "Root explicitly authorized frozen C v3 522-call pilot after independently reviewed prospective competence qualification. Original instrument v1/v2 failures and stopped waiters remain retained. Main is not released.",
+  "calls": 522,
+  "execution_manifest_sha256": "f925b7c95fd2eaaea048e70f7b629b78ebb4d89e112b803526b5c818adccc035",
+  "intervention_lock_sha256": "7bdf5f7ff82f013a2c6b48e62c47e2ad9a243164ec55c3246fe872e725d3b9ff",
+  "main_release": false,
+  "no_effect_gate": true,
+  "pilot_ceiling_usd": 12,
+  "qualification_sha256": "0ccbffc1d27b87d8bcb46a63f2362f5f02ac3b31f668c2caae32fe34eac0cbce",
+  "qualification_version": "instrument_v2_with_prospective_competence_extension_v1",
+  "required_receipts": [
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/intervention-qualified.json",
+      "sha256": "0ccbffc1d27b87d8bcb46a63f2362f5f02ac3b31f668c2caae32fe34eac0cbce"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/intervention-lock.json",
+      "sha256": "7bdf5f7ff82f013a2c6b48e62c47e2ad9a243164ec55c3246fe872e725d3b9ff"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/a/independent_c_protocol_review_v3.json",
+      "sha256": "478e5e05f77eef4c7882c376e7751b2608f8fb3bb5c34f7fbe64df9f5c644773"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/instrument_v2/engineering.json",
+      "sha256": "426b02ca163314526c7f9a9eaeb786189692fb95786468f23d48c705948a54f1"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/records/pre_inference_corrections_v3.json",
+      "sha256": "11be8170ad689bab883310358a5a69a2059769cb287391da080ee7a23b94518b"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/records/audit_fixture_v1.json",
+      "sha256": "2adfc3d69f8972895aa7084ab214397a6c7d90620e10f525018b8d1e5596d51a"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/records/pilot_not_admitted_instrument_v1.json",
+      "sha256": "6d9284f0d3dab51623e55ad3e042511690f447cc04263e3e878d1776fe427135"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/records/independent_competence_extension_preflight_v1.json",
+      "sha256": "7e341bd360ebf85f499b4298766e6a70cfe8936238aa61b446d50ef84fea10b7"
+    },
+    {
+      "path": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/workflows/c/records/independent_competence_extension_results_v1.json",
+      "sha256": "94f242a4fc5df9c05317d14e1a453362fa576826fae782619bdc9a63aa298a29"
+    }
+  ],
+  "workflow_ceiling_usd": 55,
+  "worlds": 6
+}

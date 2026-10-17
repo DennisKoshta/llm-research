@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "baseline_after_activations_exact": true,
+    "baseline_after_attention_mask_exact": true,
+    "baseline_after_generated_token_ids_exact": true,
+    "baseline_after_input_ids_exact": true,
+    "baseline_after_label_probabilities_temperature_1_exact": true,
+    "baseline_after_position_ids_exact": true,
+    "baseline_after_unpadded_input_ids_exact": true,
+    "baseline_has_no_projection": true,
+    "hooks_removed_every_run": true,
+    "no_weight_mutation_contract": true,
+    "projected_all192sites_every_forward": true,
+    "projection_changes_activation": true,
+    "projection_numeric_samples": true,
+    "same_container_across_sequential_replays": true,
+    "zero_sham_activations_exact": true,
+    "zero_sham_all192sites_every_forward": true,
+    "zero_sham_attention_mask_exact": true,
+    "zero_sham_generated_token_ids_exact": true,
+    "zero_sham_input_ids_exact": true,
+    "zero_sham_label_probabilities_temperature_1_exact": true,
+    "zero_sham_position_ids_exact": true,
+    "zero_sham_unpadded_input_ids_exact": true
+  },
+  "container_ids": {
+    "baseline": "ta-01M5326FQXTSE8G8Q4AGX7DJ7R",
+    "baseline_after": "ta-01M5326FQXTSE8G8Q4AGX7DJ7R",
+    "projected": "ta-01M5326FQXTSE8G8Q4AGX7DJ7R",
+    "zero_sham": "ta-01M5326FQXTSE8G8Q4AGX7DJ7R"
+  },
+  "note": "Weight immutability supported by reviewed hook-only implementation and same-container post-projection replay; not a full checkpoint checksum.",
+  "passed": true,
+  "projection_numeric_errors": [
+    {
+      "call": 1,
+      "exact_fraction": 1.0,
+      "max_abs_error": 0.0,
+      "within_bf16_ulp": true
+    },
+    {
+      "call": 2,
+      "exact_fraction": 1.0,
+      "max_abs_error": 0.0,
+      "within_bf16_ulp": true
+    }
+  ],
+  "source_freeze_sha256": "0d0bbbc5ede9b344181a37180242dd83460a59d8949fddd1ca7da616e1ed031a"
+}

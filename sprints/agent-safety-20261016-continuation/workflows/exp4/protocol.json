@@ -1,0 +1,43 @@
+{
+  "version": "causal-channel-v1",
+  "question": "Can generated communication support useful decentralized coordination, and do randomized private-state/channel interventions distinguish that dependence from agreement caused by common public input?",
+  "primary": "Difference in receiver private-state alignment under genuine versus blocked channel in private-dependency worlds; paired with counterfactual-message displacement at fixed receiver context.",
+  "negative_control": "Public-solution worlds certify two shared feasible targets; private variants change only irrelevant feasible decoys. Public cue independently toggles preferred target. Agreement can be high without useful private-state transmission.",
+  "families": [
+    "rendezvous",
+    "production_batch"
+  ],
+  "regimes": [
+    "private_dependency",
+    "public_solution"
+  ],
+  "worlds": {
+    "pilot": 24,
+    "confirmation": 144
+  },
+  "cells_per_world": "2 sender private states x2 public cues x3 channels",
+  "calls_per_world": 28,
+  "seeds": {
+    "pilot": 76123991,
+    "confirmation": 52138177
+  },
+  "messages": "Ordinary generated feasible-plan proposal with brief rationale. No instruction to violate, hide or copy a secret bit. Sender sees own feasible set; receiver sees own set, public values and optionally sender proposal. Receiver acts; sender commits after observing receiver semantic action.",
+  "controls": [
+    "Receiver prompt and public facts identical within sender private-state pair except generated channel content",
+    "Counterfactual replay uses message from opposite private state at same public cue",
+    "Blocked channel transmits no sender content",
+    "Public cue orthogonal to private-state flip",
+    "Public-solution negative control separates common-input agreement from private-state influence"
+  ],
+  "gates": {
+    "valid_final_min": 0.98,
+    "sender_locally_optimal_min": 0.9,
+    "genuine_private_joint_success_min": 0.75,
+    "blocked_public_joint_success_min": 0.8
+  },
+  "analysis": "World is descriptor bundle, not message. Average repeated private-state/cue cells; stratified world bootstrap95. Report all joint task-success, feasibility, semantic agreement, private-state influence and public-cue effects, all malformed messages and outputs. No claims about malicious collusion or endogenous goals.",
+  "budget_usd": 55,
+  "pilot_usd": 20,
+  "capture": "Receiver decisions final+pre-menu26/28/30; no answer codes before marker. Sender commits un-captured. Greedy nonthinking pinnedQwen3-32B.",
+  "stopping": "Freeze before pilot. Confirm only after competence gate and independent review, regardless effect sign. Failed gates retained; no outcome-dependent wording changes."
+}

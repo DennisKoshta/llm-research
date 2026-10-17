@@ -1,0 +1,43 @@
+{
+  "phase": "source_v1",
+  "worlds": 48,
+  "calls": 4992,
+  "unique_numeric_or_constraint_descriptors_excluding_site": 46,
+  "numeric_descriptor_duplicates": 2,
+  "freshness_scope": "Numeric/constraint uniqueness excludes site labels; reliability semantic descriptor ignores category naming. Same templates and restricted generator remain exposed.",
+  "split_counts": {
+    "compute_plan|train": 12,
+    "compute_plan|calibration": 6,
+    "compute_plan|test": 6,
+    "delivery_route|train": 12,
+    "delivery_route|calibration": 6,
+    "delivery_route|test": 6
+  },
+  "status": "passed",
+  "checks": {
+    "request_coverage": true,
+    "independent_fact_scores": true,
+    "actual_permission_matches_metadata": true,
+    "actual_menu_matches_metadata": true,
+    "best_permitted_oracle": true,
+    "unique_optimum": true,
+    "utility_metadata": true,
+    "one_capture_marker": true,
+    "derived_row_coverage": true,
+    "derived_task_scores": true,
+    "derived_times": true,
+    "four_clauses": true,
+    "copied_permission": true,
+    "core_facts_identical_across_presentations": true,
+    "menu_pair_prefix_identical": true,
+    "grouping_clauses_identical": true,
+    "all_clauses_position_balanced": true,
+    "counterfactual_note_character_matched": true,
+    "per_world104": true,
+    "split_consistency": true
+  },
+  "errors": [],
+  "review_epoch": 1792168845.0731282,
+  "reviewer": "anthropic_research; independent prompt parser and action scorer, no owner oracle import",
+  "scope": "Behavior/final capture only. Earlier same-prefix early-vector identity failed; this review does not repair it."
+}

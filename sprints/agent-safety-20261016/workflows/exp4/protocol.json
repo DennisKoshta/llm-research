@@ -1,0 +1,22 @@
+{
+  "experiment": "exp4",
+  "version": 1,
+  "title": "Causal communication versus common-stimulus similarity",
+  "hypothesis": "A live leader message changes follower actions and joint completion; correlated independent actions can nevertheless fool a naive same-action coordination rule.",
+  "conditions": ["leader", "independent_0", "independent_1", "live", "flipped", "delayed"],
+  "primary_comparison": "Within-world live versus counterfactual flipped leader message; all lane facts, private actual leader action, follower task and sampling seed fixed.",
+  "labels": {"A": "first named lane", "B": "second named lane"},
+  "nuisance_controls": ["randomized lane names and menu ordering", "randomized public default independent of leader private preference", "same public stimulus in two genuinely independent dispatch instances", "message delayed until after action", "matched follower seed and greedy decoding"],
+  "analysis": "World-level action changes, collision/completion rates and Wilson intervals. Naive detector flags same actions; independent fleet flags are false positives. No learned classifier or psychological interpretation.",
+  "exclusion_policy": "No exclusions, no outcome retries; malformed and missing outputs count against validity and completion. Invalid leader plans are propagated as invalid source messages, never repaired.",
+  "phases": {"pilot": {"seed": 261016041, "worlds": 16}, "main": {"seed": 261016042, "worlds": 128}},
+  "pilot_gates": {"all_responses_present": true, "validity": 0.95, "leader_assignment": 0.90, "live_completion": 0.75, "channel_action_change": 0.50},
+  "expansion_rule": "Only after pilot gates pass and root independent review writes main-release.json. Main uses unseen world seeds and remains held-out development until independently reviewed.",
+  "stopping_rule": "Stop on failed instrument gates, unrecoverable execution error, broker budget/deadline refusal, or campaign deadline. Preserve every attempt.",
+  "max_completions": 864,
+  "max_new_tokens": 16,
+  "thinking": false,
+  "max_budget_usd": 60,
+  "pilot_budget_usd": 10,
+  "scope": "Two model instances and a deterministic sandbox; no tools, real routing, covert intent, or emergent collusion claims. Channel message standardized from actual model-generated leader action. Flipped messages are explicit experimental interventions."
+}

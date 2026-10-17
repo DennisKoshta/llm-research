@@ -1,0 +1,178 @@
+{
+  "primary": {
+    "probe_observed_violation": {
+      "auc": 0.9619190404797601,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        0.9253585397653195,
+        0.9925133689839573
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 29,
+      "fp": 14,
+      "threshold": 0.13282762124252023
+    },
+    "gated_semantic_probability": {
+      "auc": 0.9715142428785607,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        0.9458915960451978,
+        0.9971484213562433
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 29,
+      "fp": 24,
+      "threshold": 0.0011444507601600276
+    },
+    "metadata_probability": {
+      "auc": 0.9799100449775112,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        0.959327731092437,
+        0.9938616071428571
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 29,
+      "fp": 12,
+      "threshold": 0.019551475870409635
+    },
+    "text_probability": {
+      "auc": 0.9269865067466266,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        0.8873486564586309,
+        0.9608272868038493
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 25,
+      "fp": 15,
+      "threshold": 0.23238548416036897
+    },
+    "native_violation_probability": {
+      "auc": 1.0,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 29,
+      "fp": 19,
+      "threshold": 0.006145603241898561
+    },
+    "native_margin": {
+      "auc": 1.0,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 29,
+      "fp": 19,
+      "threshold": -5.0875000396947305
+    },
+    "explicit_permission_utility": {
+      "auc": 0.6565217391304348,
+      "n": 144,
+      "worlds": 12,
+      "positive_worlds": 12,
+      "negative_worlds": 12,
+      "ci95": [
+        0.65,
+        0.6636363636363637
+      ],
+      "usable_bootstraps": 2000,
+      "valid": 144,
+      "positive": 29,
+      "negative": 115,
+      "tp": 0,
+      "fp": 0,
+      "threshold": 1.0
+    }
+  },
+  "old_exp1": {
+    "restricted": {
+      "auc": 0.5412234042553191,
+      "n": 576,
+      "worlds": 144,
+      "positive_worlds": 8,
+      "negative_worlds": 144,
+      "ci95": [
+        0.3220871993486403,
+        0.7264967967196744
+      ],
+      "usable_bootstraps": 2000
+    },
+    "operating": {
+      "n": 576,
+      "valid": 576,
+      "positive": 12,
+      "negative": 564,
+      "positive_worlds": 8,
+      "negative_worlds": 144,
+      "tp": 0,
+      "fp": 0,
+      "threshold": 0.13282762124252023,
+      "auc": 0.5412234042553191
+    },
+    "authorized": {
+      "n": 144,
+      "valid": 144,
+      "positive": 0,
+      "negative": 144,
+      "positive_worlds": 0,
+      "negative_worlds": 144,
+      "tp": 0,
+      "fp": 0,
+      "threshold": 0.13282762124252023,
+      "auc": null
+    },
+    "sampling": "Old Exp1 temperature0.7, unlike old Exp6 greedy. Native probabilities are temperature1 and are not asserted to be calibrated sampling probabilities."
+  },
+  "head_accuracy": {
+    "observed_violation": 0.9722222222222222,
+    "semantic_designated_operation": 0.9652777777777778,
+    "authorization": 1.0,
+    "utility_positive": 0.8888888888888888,
+    "chosen_action_code": 0.9131944444444444,
+    "menu_mapping": 1.0,
+    "presentation": 1.0
+  }
+}

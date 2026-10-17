@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "assay": "curiosity_suppression_screen_figure_visual_review",
+  "reviewer": "root",
+  "passed": true,
+  "scope": "Actual PNG inspection and exported-value/file binding checks; no new scientific admission.",
+  "provenance": {
+    "path": "reports/figures/curiosity-suppression-screen-v1/provenance.json",
+    "byte_sha256": "91d38f5dfc714c2fb48cee3cfaf83ab2bc4832f351d6b41272b1eac3ed7e5f33"
+  },
+  "analysis_byte_sha256": "41d1fd696104bf6867c48aab3bf61fc90c74080197d7ed0463c58f32605a2ea5",
+  "figures": [
+    {
+      "name": "choice-composition",
+      "width": 3200,
+      "height": 2000,
+      "png_sha256": "6334e4feb265b21f58dd90d01d8c88af9546ea22ae05b111a160cbcb226d1dbf",
+      "pdf_sha256": "6b5fabe94635e14d64dafbde341791993d477e8ea2918fbf37c5400f9da5ae4a",
+      "svg_sha256": "e3924bd072a1337e575dd5998e1ebf9dd8efcd9001ab0ca128eeb02dc46127ed",
+      "visually_inspected": true,
+      "method": "tools.view_image actual PNG at displayed resolution"
+    },
+    {
+      "name": "decision-comparisons",
+      "width": 3400,
+      "height": 1800,
+      "png_sha256": "15dfe9582014f2c13be30c180d8d26bdf3189ec2ace872f896b586ff20b998ed",
+      "pdf_sha256": "29e0a7bcbc5df9593865becc314b96dbde67dc16e5dfe7b1ffb48e078faf9548",
+      "svg_sha256": "6f83b848d641abbc50916baed4ef52cd0fc2b8c35d47da8dfa2de7c6eb1a7009",
+      "visually_inspected": true,
+      "method": "tools.view_image actual PNG at displayed resolution"
+    },
+    {
+      "name": "readiness",
+      "width": 3000,
+      "height": 3400,
+      "png_sha256": "c0f89c8229b71061d456cc48885bf9c4dc7f950c5fa042c6af156a1fded6415a",
+      "pdf_sha256": "06d771464be2ae3ff9c9c59aa304c98dc61fd2ae646f14ea702f655895ea32d5",
+      "svg_sha256": "3c1ebc77aefecfa57a4ec10fc4a7c3431d44a23fa3a07fd1333cba737963aa11",
+      "visually_inspected": true,
+      "method": "tools.view_image actual PNG at displayed resolution"
+    }
+  ],
+  "checks": {
+    "all_original_output_bytes_unchanged": true,
+    "all_2160_assigned_choices_visible": true,
+    "all_65_decision_comparisons_visible": true,
+    "all_270_readiness_cells_visible": true,
+    "only_failed_readiness_cell_marked": true,
+    "confidence_invalid_and_target_single_stop_visible": true,
+    "confidence_conservative_bound_lower_than_observed_visible": true,
+    "failure_status_and_interval_limitations_visible": true,
+    "titles_axes_labels_legends_footnotes_legible": true,
+    "no_material_clipping_or_overlap": true
+  },
+  "observations": [
+    "The target has one additional stop after redundant evidence, while confidence+ has one invalid response; their small segments remain visible.",
+    "Panel1 has zero target-sham effect; panel2 and menu0 have a small positive effect, below the fixed thresholds.",
+    "Valence+ panel2 pattern independence is the sole failed diagnostic cell; random04 semantic error and confidence+ invalid choice remain visible but pass their cell rules."
+  ],
+  "limitations": [
+    "PNG displays were resized by the viewing tool; PDF/SVG bytes are bound but those formats were not separately rendered.",
+    "The unchanged original provenance still says visual_review=pending; this separate receipt records completion.",
+    "Plots do not establish psychological engagement, natural regulation, or subjective experience."
+  ]
+}

@@ -1,0 +1,264 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-OS5hxvjeP4k8ctE95EQqtk
+Building image im-T6WWM3j2R4Ig4LnjPDP6oG
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HOME=/weights/huggingface
+
+=> Step 2: ENV HF_HUB_OFFLINE=1
+
+=> Step 3: ENV TOKENIZERS_PARALLELISM=false
+
+=> Step 4: ENV OMP_NUM_THREADS=2
+Saving image...
+Image saved, took 1.63s
+
+Built image im-T6WWM3j2R4Ig4LnjPDP6oG in 2.43s
+
+
+Building image im-ZFZz6iTWths6QaAFScFZ93
+
+=> Step 0: FROM base
+
+=> Step 1: COPY . /
+Saving image...
+Image saved, took 1.11s
+
+Built image im-ZFZz6iTWths6QaAFScFZ93 in 2.11s
+
+
+✓ Created objects.
+├── 🔨 Created mount PythonPackage:shared
+├── 🔨 Created mount 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-20
+│   261016/shared/vendor
+└── 🔨 Created function Inference.*.
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Runner failed with exception: IndexError(2)
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Runner failed with exception: IndexError(2)
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 740, in handle_user_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 430, in main
+    service = import_class_service(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/user_code_imports.py", line 328, in import_class_service
+    module = importlib.import_module(function_def.module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/shared/modal_service.py", line 8, in <module>
+    PROJECT = HERE.parents[2]
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2
+Runner failed with exception: IndexError(2)
+Stopping app - user stopped from CLI.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-OS5hxvjeP4k8ctE95EQqtk

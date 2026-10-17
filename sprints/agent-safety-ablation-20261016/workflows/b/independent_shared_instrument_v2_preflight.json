@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": {
+    "source_freeze_exact": true,
+    "data_freeze_exact": true,
+    "all_shared_backend_and_vendor_sources_unchanged": true,
+    "same_extraction_records": true,
+    "harmful_val_count_and_exact_source": true,
+    "harmless_val_count_and_exact_source": true,
+    "harmful_test_count_and_exact_source": true,
+    "harmless_test_count_and_exact_source": true,
+    "all_96_evaluation_prompts_unused_and_disjoint": true,
+    "128_exact_extraction_prompts_and_mode": true,
+    "fixed_6_by_2_capture_grid": true,
+    "actual_all128_suffix_boundaries": true,
+    "instrument_v1_val_qa_oracles": true,
+    "instrument_v1_test_qa_oracles": true,
+    "instrument_v2_val_qa_oracles": true,
+    "instrument_v2_test_qa_oracles": true,
+    "48_new_ordered_operand_pairs_disjoint": true,
+    "engineering_receipt_exact_reuse": true,
+    "same_qualification_gates": true
+  },
+  "actual_suffix_ids": [
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "input_hashes": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/executions/instrument_v2/source-freeze.json": "d8b48dfb73b966b1e8e40085ab06fcc31e5a517cebf82fdc8f52fa3e98be4adb",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/executions/instrument_v2/freeze.json": "aca0c23426834d1f2a9f03afd949cd242b759f05d9a07621e6e10f94da156ff7",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/executions/instrument_v2/protocol.json": "f48e44b4213cead20c39c3df74474b27e91c9585c0ace4bed4165302efc3ee14"
+  },
+  "v1_actual_boundary_evidence": {
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_extract_v1--000000.json.gz": "e50b2434f6ba4a0ba4fe877df477de3e1ff197183963b7f83701a5b7dfbddda0",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_extract_v1--000032.json.gz": "d49f6c793648832488a3d1220384b922d51329bca6fff13b924804ffa10ab4a1",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_extract_v1--000064.json.gz": "ce641f45bff21fd9985e32376c7dfec2a4a4691b59f0d99cbc30fa23d4782eeb",
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-ablation-20261016/records/results/shared--instrument_extract_v1--000096.json.gz": "8f7b919d7197d22b5cadb884ece08de2124d26a6b5d53275cbe58805e213cb32"
+  },
+  "scope": "V2 is a bounded exploratory calibration revision after v1 validation; same model and projection code, a broader source boundary/layer grid, new source-only validation and unused held-out prompts. Validation now comes from unused upstream TRAIN rather than VAL; no semantic-domain novelty claim. V1 evidence stays preserved.",
+  "lifecycle_requirement": "Root confirmed exact v1 lock archival and formal failure binding before freeing the active lock alias. Entry checks root admission and failed v1 receipt. No v2 inference launched by this review.",
+  "qualification_review_note": "Before qualification, verify each annotation receipt binds the exact v2 blinded-input and rubric hashes. IDs repeat across versions, so ID coverage alone cannot rule out a stale review. Bind adjudication and engineering provenance in the final receipt."
+}
