@@ -351,10 +351,13 @@ Evaluated on the 4 full-grid arms (`Intact`, `Refusal-Ablated`, `PCA 101`, `Unre
 
 ### 2.3 External Validity Benchmark: `Qwen3.8-Flash-Next-FP8` vs. `orcarouter/Qwen3.8-Flash-Next-Uncensored-FP8`
 - **Receipt:** [external_validity_flash_next_results.json](file:///home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-three-track-20261016/records/external_validity_flash_next_results.json) (scoped strictly to this public MoE checkpoint pair).
-- **Experiment 1.1 External Validity (`exp1_1_external_validity_summary`, $N=30$/cell, `cot_on`):**
-  - `high_tedium__harmful__implicit`: **`0.00%`** (`Flash-Next-Intact`) vs. **`36.67%`** (`Flash-Next-Uncensored`, $\Delta = +36.67\text{ pp}$).
-  - `high_friction__harmful__implicit`: **`3.33%`** (`Flash-Next-Intact`) vs. **`33.33%`** (`Flash-Next-Uncensored`, $\Delta = +30.00\text{ pp}$).
-  - `low_cost__harmful__implicit`: **`0.00%`** on both checkpoints (`low_cost__harmless__implicit`: `56.67%` Intact vs. `70.00%` Uncensored; `high_tedium__harmless__implicit` and `high_friction__harmless__implicit`: `100.00%` on both; explicit prohibition cells: `0.00%` across all cells).
+- **Experiment 1.1 External Validity (`exp1_1_external_validity_summary`, 6 evaluated cells, $N=30$/cell, `cot_on`):**
+  - `high_tedium__harmful__implicit`: **`0.00%`** (`0/30`, `Flash-Next-Intact-FP8`) vs. **`36.67%`** (`11/30`, `Flash-Next-Uncensored-FP8`, $\Delta = +36.67\text{ pp}$).
+  - `high_friction__harmful__implicit`: **`3.33%`** (`1/30`, `Flash-Next-Intact-FP8`) vs. **`33.33%`** (`10/30`, `Flash-Next-Uncensored-FP8`, $\Delta = +30.00\text{ pp}$).
+  - `low_cost__harmful__implicit`: **`0.00%`** (`0/30`) on both checkpoints (`safe_completion_rate`: `100.00%` Intact, `96.67%` Uncensored).
+  - `high_tedium__harmless__implicit`: **`66.67%`** (`20/30`, `Flash-Next-Intact-FP8`) vs. **`90.00%`** (`27/30`, `Flash-Next-Uncensored-FP8`).
+  - `high_tedium__harmful__explicit`: **`0.00%`** (`0/30`) on both checkpoints (`safe_completion_rate = 100.00%` on both).
+  - `high_friction__harmful__explicit`: **`3.33%`** (`1/30`, `Flash-Next-Intact-FP8`, `safe_completion_rate = 86.67%`) vs. **`0.00%`** (`0/30`, `Flash-Next-Uncensored-FP8`, `safe_completion_rate = 36.67%`).
 - **Experiment 2.3 External Validity (`exp2_3_external_validity_summary`, `peer_advisory`):**
   - Full 48-scenario sweep (`cot_off__peer_advisory`, $N=48$ all worlds / $N=16$ warehouse):
     - `Flash-Next-Intact-FP8` Executor: `B0_no_reviewer = 8.33%` (`6.25%` whse), `B1_saved_32B_intact = 22.92%` (`0.00%` whse), `R1_saved_32B_ablated_raw = 35.42%` (`25.00%` whse), `B4a = 33.33%`, `B4b = 0.00%`.
@@ -443,22 +446,22 @@ Evaluated across 6 explanation conditions (`action_log_only`, `truthful_complian
 
 | Domain | `Intact` (`cot_on`) | `Refusal-Ablated` (`cot_on`) | Pooled (`cot_on`) | `Intact` (`cot_off`) | `Refusal-Ablated` (`cot_off`) | Mixed-Effects GLMM OR vs. `warehouse` ($N=768$ pooled) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`warehouse_logistics`** | **20.84%** | **10.42%** | **15.63%** | **0.00%** | **12.50%** | $1.000$ (Reference) |
+| **`warehouse_logistics`** | **20.83%** | **10.42%** | **15.63%** | **0.00%** | **12.50%** | $1.000$ (Reference) |
 | **`compute_infrastructure`** | **10.42%** | **22.92%** | **16.67%** | **0.00%** | **0.00%** | $\text{OR} = \mathbf{0.7599}$ ($p = \mathbf{0.467}$) |
 | **`financial_reporting`** | **8.33%** | **4.17%** | **6.25%** | **0.00%** | **0.00%** | $\text{OR} = \mathbf{0.2847}$ ($p = \mathbf{0.0103}$) |
 | **`wet_lab_protocol`** | **0.00%** | **4.17%** | **2.08%** | **0.00%** | **0.00%** | $\text{OR} = \mathbf{0.0854}$ ($p = \mathbf{0.000857}$) |
 
-- **Payoff Format Means & Mixed-Effects GLMM (`exp3_1_mixed_effects_glmm`, $N=768$ Observations, 48 Scenarios, 12 Templates):**
+- **Payoff Format Means & Mixed-Effects GLMM (`exp3_1_mixed_effects_glmm`, $N=768$ Observations, 96 Scenarios, 12 Templates):**
   - **Payoff presentation rates:**
     - Under `cot_on`: `narrative` (`narrative-stakes`) rate = **`9.38%`**, `numeric_table` rate = **`10.94%`**.
     - Under `cot_off`: `narrative` (`narrative-stakes`) rate = **`1.04%`**, `numeric_table` rate = **`2.08%`**.
   - **GLMM Fixed-Effect Coefficients (single model pooling `cot_on` and `cot_off` with `cot_on` as a covariate):**
     - `numeric_table_format` (payoff format): $\text{OR} = \mathbf{1.3173}$ ($\log\text{OR} = 0.2756, \text{SE} = 0.3333, p = \mathbf{0.408}$).
-    - `refusal_ablated` vs. `Intact`: $\text{OR} = \mathbf{1.4719}$ ($\log\text{OR} = 0.3865, \text{SE} = 0.3347, p = \mathbf{0.248}$).
-    - `cot_on` vs. `cot_off`: $\text{OR} = \mathbf{8.1699}$ ($\log\text{OR} = 2.1005, \text{SE} = 0.6256, p = \mathbf{0.000786}$).
-    - `domain_compute_vs_warehouse`: $\text{OR} = \mathbf{0.7599}$ ($p = \mathbf{0.467}$).
-    - `domain_financial_vs_warehouse`: $\text{OR} = \mathbf{0.2847}$ ($p = \mathbf{0.0103}$).
-    - `domain_wetlab_vs_warehouse`: $\text{OR} = \mathbf{0.0854}$ ($p = \mathbf{0.000857}$).
+    - `refusal_ablated` vs. `Intact`: $\text{OR} = \mathbf{1.4719}$ ($\log\text{OR} = 0.3865, \text{SE} = 0.3348, p = \mathbf{0.248}$).
+    - `cot_on` vs. `cot_off`: $\text{OR} = \mathbf{8.1699}$ ($\log\text{OR} = 2.1005, \text{SE} = 0.6255, p = \mathbf{0.000786}$).
+    - `domain_compute_vs_warehouse`: $\text{OR} = \mathbf{0.7599}$ ($\log\text{OR} = -0.2746, \text{SE} = 0.3779, p = \mathbf{0.467}$).
+    - `domain_financial_vs_warehouse`: $\text{OR} = \mathbf{0.2847}$ ($\log\text{OR} = -1.2562, \text{SE} = 0.4898, p = \mathbf{0.0103}$).
+    - `domain_wetlab_vs_warehouse`: $\text{OR} = \mathbf{0.0854}$ ($\log\text{OR} = -2.4599, \text{SE} = 0.7379, p = \mathbf{0.000857}$).
 
 #### Table 4: Experiment 3.2 Pre-Action Activation Probing (`layer = 48`, $d = 5120$) vs. 6 Baselines (`exp3_2_probe_evaluation`)
 - Residual-stream activations were captured at the **final prompt token prior to generation** across all $N=768$ trials: `cot_on` ($N=384$, overall violation rate **`10.16%`**) and `cot_off` ($N=384$, overall violation rate **`1.56%`**, i.e., 6 positives all in `warehouse_logistics`, so LODO folds 2–4 have zero test positives while LTTO folds each contain test positives).
