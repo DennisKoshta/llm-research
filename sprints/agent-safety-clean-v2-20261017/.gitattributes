@@ -1,0 +1,43 @@
+# Keep readable trial records in Git; store large numerical artifacts in Git LFS.
+# Exact paths preserve frozen source snapshots and all original artifact bytes.
+* -text
+activations/phase1_activation_full_v2/intact.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_activation_full_v2/refusal_ablated.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_activation_v3/intact.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_activation_v3/refusal_ablated.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_activation_v4_diagnostic/refusal_ablated.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_directions.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_logits_full_v2_logits_q1/intact.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_logits_full_v2_logits_q1/pca_101.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_logits_full_v2_logits_q1/pca_102.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_logits_full_v2_logits_q1/pca_103.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_logits_full_v2_logits_q1/unrelated.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_logits_full_v2_logits_q2_cap8192/refusal_ablated.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_qualification_full_v2_q1/intact.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_qualification_full_v2_q1/pca_101.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_qualification_full_v2_q1/pca_102.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_qualification_full_v2_q1/refusal_ablated.npz filter=lfs diff=lfs merge=lfs -text
+activations/phase1_source.npz filter=lfs diff=lfs merge=lfs -text
+checkpoint_doses_v1/tokenizer_audit/tokenizer.json filter=lfs diff=lfs merge=lfs -text
+closeout_packages/20261018T082021Z/snapshot.tar filter=lfs diff=lfs merge=lfs -text
+executions/phase1_logits_q2_cap8192/phase1_directions.npz filter=lfs diff=lfs merge=lfs -text
+infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/tokenizer.json filter=lfs diff=lfs merge=lfs -text
+infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer.json filter=lfs diff=lfs merge=lfs -text
+infrastructure/tokenizer_metadata/llama_pinned_v1/tokenizer.json filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_activation_vectors_full_v2/intact.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_activation_vectors_full_v2/refusal_ablated.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_activation_vectors_v3/intact.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_activation_vectors_v3/refusal_ablated.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_activation_vectors_v4_diagnostic/refusal_ablated.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/intact.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_101.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_102.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_103.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/unrelated.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_logits_vectors_full_v2_logits_q2_cap8192/refusal_ablated.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_qualification_vectors_full_v2_q1/intact.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_qualification_vectors_full_v2_q1/pca_101.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_qualification_vectors_full_v2_q1/pca_102.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_qualification_vectors_full_v2_q1/refusal_ablated.jsonl filter=lfs diff=lfs merge=lfs -text
+raw_transcripts/phase1_source_vectors/intact_bf16.jsonl filter=lfs diff=lfs merge=lfs -text
+stimuli/exp11_design_v1.json filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-18T04:36:18.332609+00:00",
+  "observer_pid": 396461,
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+    "scripts/watch_phase1.py",
+    "--primary-attempt",
+    "vllm_q3_cap8192",
+    "--logit-stage",
+    "logits",
+    "--logit-attempt",
+    "full_v2_logits_q1",
+    "--logit-arm-attempts",
+    "infrastructure/primary_logit_arm_attempts.json",
+    "--external-attempt",
+    "v3_v4_eager",
+    "--external-intact-attempt",
+    "v3",
+    "--external-uncensored-attempt",
+    "v4_eager",
+    "--status-file",
+    "infrastructure/phase1_cap8192_watch_status.json",
+    "--poll-seconds",
+    "180"
+  ],
+  "primary_app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+  "old_observer_stopped": 384253,
+  "old_gpu_job_not_stopped": true,
+  "previous_observer_pid": 389129,
+  "mechanical_precheck_before_refusal_effects": true
+}

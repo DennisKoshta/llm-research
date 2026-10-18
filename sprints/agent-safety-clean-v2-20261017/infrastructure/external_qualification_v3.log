@@ -1,0 +1,1268 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-z3pMmUSCIFgiUKpDpyJWrU
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_external_qualification.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/external_qualification_worker.py
+├── ✓ Created Function qualify.
+└── ✓ Created Function run_pair.
+INFO 10-18 01:56:03 [api_utils.py:272] non-default args: {'max_model_len': 8192, 'tensor_parallel_size': 8, 'enable_expert_parallel': True, 'enable_prefix_caching': False, 'gpu_memory_utilization': 0.88, 'max_num_seqs': 16, 'disable_log_stats': True, 'enforce_eager': True, 'model': '/weights/agent-safety-clean-v2-20261017/source_models/Qwen__Qwen3.8-Flash-Next-FP8'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 10-18 01:56:22 [model.py:672] Resolved architecture: Qwen4ExpForConditionalGeneration
+INFO 10-18 01:56:22 [model.py:1965] Using max model len 8192
+WARNING 10-18 01:56:22 [model.py:963] Model does not support mm_device_do_normalize, forcing mm_device_do_normalize = False.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 10-18 01:56:27 [scheduler.py:246] Chunked prefill is enabled with max_num_batched_tokens=16384.
+WARNING 10-18 01:56:27 [vllm.py:1272] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 10-18 01:56:27 [vllm.py:1341] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 10-18 01:56:27 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+INFO 10-18 01:56:27 [vllm.py:1520] Cudagraph is disabled under eager mode
+INFO 10-18 01:56:27 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant, allreduce_rms
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) INFO 10-18 01:56:47 [core.py:122] Initializing a V1 LLM engine (v0.1.dev20073+g8e685d198) with config: model='/weights/agent-safety-clean-v2-20261017/source_models/Qwen__Qwen3.8-Flash-Next-FP8', speculative_config=None, tokenizer='/weights/agent-safety-clean-v2-20261017/source_models/Qwen__Qwen3.8-Flash-Next-FP8', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=8, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=fp8, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=/weights/agent-safety-clean-v2-20261017/source_models/Qwen__Qwen3.8-Flash-Next-FP8, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['+quant_fp8', 'all', '+quant_fp8'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [102, 16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': True, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=182) INFO 10-18 01:56:47 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=172.20.1.38 (local), world_size=8, local_world_size=8
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=257) INFO 10-18 01:57:00 [parallel_state.py:1638] world_size=8 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=298) INFO 10-18 01:57:10 [parallel_state.py:1638] world_size=8 rank=1 local_rank=1 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=381) INFO 10-18 01:57:18 [parallel_state.py:1638] world_size=8 rank=2 local_rank=2 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=466) INFO 10-18 01:57:27 [parallel_state.py:1638] world_size=8 rank=3 local_rank=3 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=551) INFO 10-18 01:57:36 [parallel_state.py:1638] world_size=8 rank=4 local_rank=4 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=636) INFO 10-18 01:57:45 [parallel_state.py:1638] world_size=8 rank=5 local_rank=5 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=721) INFO 10-18 01:57:54 [parallel_state.py:1638] world_size=8 rank=6 local_rank=6 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=806) INFO 10-18 01:58:02 [parallel_state.py:1638] world_size=8 rank=7 local_rank=7 distributed_init_method=file:///tmp/vllm_dist_d37d20edb7e44dc199cc393e37438b56 backend=nccl
+(Worker pid=257) INFO 10-18 01:58:02 [pynccl.py:113] vLLM is using nccl==2.30.7
+(Worker pid=257) INFO 10-18 01:58:06 [cuda_communicator.py:266] Using ['CUSTOM', 'SYMM_MEM', 'PYNCCL'] all-reduce backends (in dispatch order) for group 'tp:0' out of potential backends: ['NCCL_SYMM_MEM', 'QUICK_REDUCE', 'FLASHINFER', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=257) INFO 10-18 01:58:07 [cuda_communicator.py:266] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'ep:0' out of potential backends: ['NCCL_SYMM_MEM', 'QUICK_REDUCE', 'FLASHINFER', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=257) INFO 10-18 01:58:07 [parallel_state.py:1982] rank 0 in world size 8 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0, EPLB rank N/A
+(Worker pid=257) INFO 10-18 01:58:07 [gpu_worker.py:500] Using V2 Model Runner
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [model_runner.py:385] Loading model from scratch...
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [cuda.py:545] Using backend AttentionBackendEnum.FLASH_ATTN for vit attention
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [mm_encoder_attention.py:375] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [qwen_gdn_linear_attn.py:158] Using FlashInfer GDN prefill kernel (requested=auto, head_k_dim=128).
+(Worker_TP0_EP0 pid=257) WARNING 10-18 01:58:08 [qwen_gdn_linear_attn.py:165] FlashInfer GDN prefill is JIT-compiled; first run may take a while. Set --gdn-prefill-backend triton to skip JIT.
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [qwen_gdn_linear_attn.py:505] GDN decode kernel: cuda
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [expert_map_manager.py:245] [EP Rank 0/8] Expert parallelism is enabled. Expert placement strategy: linear. Local/global number of experts: 64/512. Experts local to global index map: 0->0, 1->1, 2->2, 3->3, 4->4, 5->5, 6->6, 7->7, 8->8, 9->9, 10->10, 11->11, 12->12, 13->13, 14->14, 15->15, 16->16, 17->17, 18->18, 19->19, 20->20, 21->21, 22->22, 23->23, 24->24, 25->25, 26->26, 27->27, 28->28, 29->29, 30->30, 31->31, 32->32, 33->33, 34->34, 35->35, 36->36, 37->37, 38->38, 39->39, 40->40, 41->41, 42->42, 43->43, 44->44, 45->45, 46->46, 47->47, 48->48, 49->49, 50->50, 51->51, 52->52, 53->53, 54->54, 55->55, 56->56, 57->57, 58->58, 59->59, 60->60, 61->61, 62->62, 63->63.
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [fp8.py:411] Using FLASHINFER_CUTLASS Fp8 MoE backend out of potential backends: ['FLASHINFER_CUTLASS', 'AITER', 'FLASHINFER_TRTLLM', 'DEEPGEMM', 'TRITON', 'MARLIN', 'HUMMING', 'BATCHED_DEEPGEMM', 'BATCHED_TRITON', 'XPU', 'CPU', 'HPC'].
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [flash_attn.py:911] Using FlashAttention version 3
+(Worker_TP0_EP0 pid=257) WARNING 10-18 01:58:08 [compilation.py:1350] Op 'quant_fp8' not present in model, enabling with '+quant_fp8' has no effect
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [weight_utils.py:866] Filesystem type for checkpoints: 9P. Checkpoint size: 172.78 GiB. Available RAM: 106.11 GiB.
+(Worker_TP0_EP0 pid=257) INFO 10-18 01:58:08 [weight_utils.py:896] Auto-prefetch is disabled because the filesystem (9P) is not a recognized network FS (NFS/Lustre) and the checkpoint size (172.78 GiB) exceeds 90% of available RAM (106.11 GiB).
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   0% Completed | 0/131 [00:00<?, ?it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   1% Completed | 1/131 [00:00<01:57,  1.11it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   2% Completed | 2/131 [00:01<02:06,  1.02it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   2% Completed | 3/131 [00:02<01:36,  1.33it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   3% Completed | 4/131 [00:03<01:41,  1.25it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   4% Completed | 5/131 [00:04<01:41,  1.24it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:04<01:41,  1.23it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:05<01:39,  1.25it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:06<01:36,  1.27it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:   7% Completed | 9/131 [00:06<01:21,  1.50it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  28% Completed | 37/131 [00:07<00:05, 18.03it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  32% Completed | 42/131 [00:10<00:15,  5.69it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  35% Completed | 46/131 [00:13<00:22,  3.83it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  37% Completed | 49/131 [00:14<00:25,  3.18it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  39% Completed | 51/131 [00:16<00:28,  2.79it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  40% Completed | 53/131 [00:17<00:31,  2.49it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  41% Completed | 54/131 [00:18<00:34,  2.25it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  42% Completed | 55/131 [00:18<00:33,  2.26it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  43% Completed | 56/131 [00:19<00:37,  2.00it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  44% Completed | 57/131 [00:19<00:37,  1.99it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  44% Completed | 58/131 [00:20<00:41,  1.74it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  45% Completed | 59/131 [00:21<00:39,  1.82it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  46% Completed | 60/131 [00:22<00:46,  1.53it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  47% Completed | 61/131 [00:23<00:48,  1.44it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  47% Completed | 62/131 [00:24<00:52,  1.31it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  48% Completed | 63/131 [00:24<00:54,  1.26it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  49% Completed | 64/131 [00:25<00:47,  1.41it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  50% Completed | 65/131 [00:26<00:48,  1.35it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  50% Completed | 66/131 [00:26<00:42,  1.53it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  51% Completed | 67/131 [00:27<00:45,  1.40it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  52% Completed | 68/131 [00:28<00:41,  1.53it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  53% Completed | 69/131 [00:28<00:44,  1.40it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  53% Completed | 70/131 [00:29<00:39,  1.56it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  54% Completed | 71/131 [00:30<00:42,  1.42it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  55% Completed | 72/131 [00:30<00:37,  1.57it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  56% Completed | 73/131 [00:31<00:40,  1.42it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  56% Completed | 74/131 [00:31<00:35,  1.60it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  57% Completed | 75/131 [00:32<00:38,  1.46it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  58% Completed | 76/131 [00:33<00:35,  1.55it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  59% Completed | 77/131 [00:34<00:37,  1.43it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  60% Completed | 78/131 [00:34<00:33,  1.60it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  60% Completed | 79/131 [00:35<00:37,  1.38it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  61% Completed | 80/131 [00:36<00:35,  1.46it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  62% Completed | 81/131 [00:37<00:40,  1.23it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  63% Completed | 82/131 [00:38<00:38,  1.27it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  63% Completed | 83/131 [00:39<00:42,  1.14it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  64% Completed | 84/131 [00:39<00:36,  1.27it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  65% Completed | 85/131 [00:40<00:40,  1.12it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  66% Completed | 86/131 [00:41<00:37,  1.21it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  66% Completed | 87/131 [00:42<00:38,  1.15it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  67% Completed | 88/131 [00:43<00:33,  1.27it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  68% Completed | 89/131 [00:44<00:36,  1.15it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  69% Completed | 90/131 [00:44<00:32,  1.27it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  69% Completed | 91/131 [00:45<00:34,  1.16it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  70% Completed | 92/131 [00:46<00:30,  1.29it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  71% Completed | 93/131 [00:47<00:33,  1.14it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  72% Completed | 94/131 [00:48<00:30,  1.22it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  73% Completed | 95/131 [00:49<00:32,  1.10it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  73% Completed | 96/131 [00:49<00:29,  1.21it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  74% Completed | 97/131 [00:50<00:30,  1.12it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  75% Completed | 98/131 [00:51<00:26,  1.24it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  76% Completed | 99/131 [00:52<00:31,  1.02it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  76% Completed | 100/131 [00:53<00:29,  1.06it/s]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  77% Completed | 101/131 [01:58<10:02, 20.07s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  78% Completed | 102/131 [02:01<07:10, 14.86s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  79% Completed | 103/131 [02:02<05:03, 10.84s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  79% Completed | 104/131 [02:03<03:33,  7.89s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  80% Completed | 105/131 [03:08<10:48, 24.96s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  81% Completed | 106/131 [03:09<07:22, 17.71s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  82% Completed | 107/131 [03:10<05:07, 12.82s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  82% Completed | 108/131 [03:11<03:32,  9.26s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  83% Completed | 109/131 [03:37<05:14, 14.30s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  84% Completed | 110/131 [04:14<07:20, 20.97s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  85% Completed | 111/131 [04:18<05:17, 15.88s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  85% Completed | 112/131 [04:20<03:46, 11.90s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  86% Completed | 113/131 [05:06<06:36, 22.00s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  87% Completed | 114/131 [05:27<06:11, 21.85s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  88% Completed | 115/131 [05:29<04:14, 15.93s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  89% Completed | 116/131 [05:31<02:55, 11.68s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  89% Completed | 117/131 [06:10<04:36, 19.74s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  90% Completed | 118/131 [06:40<04:59, 23.01s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  91% Completed | 119/131 [07:21<05:40, 28.35s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  92% Completed | 120/131 [07:48<05:07, 27.92s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  92% Completed | 121/131 [07:50<03:20, 20.07s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  93% Completed | 122/131 [07:51<02:08, 14.32s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  94% Completed | 123/131 [07:58<01:38, 12.30s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  95% Completed | 124/131 [08:59<03:06, 26.68s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  95% Completed | 125/131 [09:03<01:59, 19.85s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  96% Completed | 126/131 [09:10<01:19, 15.98s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  97% Completed | 127/131 [10:08<01:54, 28.59s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  98% Completed | 128/131 [10:10<01:02, 20.80s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  98% Completed | 129/131 [10:12<00:30, 15.08s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards:  99% Completed | 130/131 [10:22<00:13, 13.69s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards: 100% Completed | 131/131 [10:27<00:00, 11.13s/it]
+(Worker_TP0_EP0 pid=257) 
+Loading safetensors checkpoint shards: 100% Completed | 131/131 [10:27<00:00,  4.79s/it]
+(Worker_TP0_EP0 pid=257) 
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:36 [default_loader.py:430] Loading weights took 628.07 seconds
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:36 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+(Worker_TP3_EP3 pid=466) INFO 10-18 02:08:37 [model_runner.py:407] Model loading took 24.26 GiB memory and 629.821227 seconds
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:37 [model_runner.py:407] Model loading took 24.26 GiB memory and 629.797267 seconds
+(Worker_TP3_EP3 pid=466) INFO 10-18 02:08:37 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP3_EP3 pid=466) INFO 10-18 02:08:37 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:37 [topk_topp_sampler.py:62] Using FlashInfer for top-p & top-k sampling.
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:37 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:37 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP4_EP4 pid=551) INFO 10-18 02:08:40 [model_runner.py:407] Model loading took 24.26 GiB memory and 632.354910 seconds
+(Worker_TP4_EP4 pid=551) INFO 10-18 02:08:40 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP4_EP4 pid=551) INFO 10-18 02:08:40 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP1_EP1 pid=298) INFO 10-18 02:08:40 [model_runner.py:407] Model loading took 24.26 GiB memory and 632.371862 seconds
+(Worker_TP1_EP1 pid=298) INFO 10-18 02:08:40 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP1_EP1 pid=298) INFO 10-18 02:08:40 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP2_EP2 pid=381) INFO 10-18 02:08:40 [model_runner.py:407] Model loading took 24.26 GiB memory and 632.383333 seconds
+(Worker_TP2_EP2 pid=381) INFO 10-18 02:08:40 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP2_EP2 pid=381) INFO 10-18 02:08:40 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP5_EP5 pid=636) INFO 10-18 02:08:40 [model_runner.py:407] Model loading took 24.26 GiB memory and 632.426725 seconds
+(Worker_TP7_EP7 pid=806) INFO 10-18 02:08:40 [model_runner.py:407] Model loading took 24.26 GiB memory and 632.447947 seconds
+(Worker_TP5_EP5 pid=636) INFO 10-18 02:08:40 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP5_EP5 pid=636) INFO 10-18 02:08:40 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP7_EP7 pid=806) INFO 10-18 02:08:40 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP7_EP7 pid=806) INFO 10-18 02:08:40 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP6_EP6 pid=721) INFO 10-18 02:08:41 [model_runner.py:407] Model loading took 24.26 GiB memory and 634.272367 seconds
+(Worker_TP6_EP6 pid=721) INFO 10-18 02:08:41 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP6_EP6 pid=721) INFO 10-18 02:08:41 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=182) WARNING 10-18 02:08:41 [torch_utils.py:250] OMP_NUM_THREADS=16 is set; leaving Torch threads at 16 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(Worker_TP5_EP5 pid=636) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=636) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=466) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=466) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=551) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=551) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=721) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=721) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=806) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=806) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=298) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=298) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=381) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=381) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=257) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=257) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=636) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP3_EP3 pid=466) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP0_EP0 pid=257) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP4_EP4 pid=551) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP6_EP6 pid=721) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP2_EP2 pid=381) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP7_EP7 pid=806) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP1_EP1 pid=298) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP5_EP5 pid=636) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=636) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=257) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=257) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=721) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=721) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=381) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=381) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=806) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=806) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=466) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=466) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=551) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=551) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=298) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=298) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:08:48 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:09:24 [gpu_worker.py:693] Available KV cache memory: 93.9 GiB
+(EngineCore pid=182) INFO 10-18 02:09:24 [kv_cache_utils.py:2258] GPU KV cache size: 6,758,946 tokens, Maximum concurrency for 8,192 tokens per request: 825.07x
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:09:24 [deep_gemm.py:186] deep_gemm not found in site-packages, trying vendored vllm.third_party.deep_gemm
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:09:24 [deep_gemm.py:213] DeepGEMM PDL enabled on vllm.third_party.deep_gemm.
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:09:24 [kernel_warmup.py:260] Using FlashInfer autotune cache file: /root/.cache/vllm/flashinfer_autotune_cache/0.6.17/90a/40a17f30b590bf14366dd1b201985ea978e40105e8e883809df92200b19b36e4/autotune_configs.json
+(Worker_TP4_EP4 pid=551) 2026-10-18 02:09:24,838 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP1_EP1 pid=298) 2026-10-18 02:09:24,839 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP3_EP3 pid=466) 2026-10-18 02:09:24,839 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP5_EP5 pid=636) 2026-10-18 02:09:24,839 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP7_EP7 pid=806) 2026-10-18 02:09:24,839 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP0_EP0 pid=257) 2026-10-18 02:09:24,840 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP6_EP6 pid=721) 2026-10-18 02:09:24,840 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP2_EP2 pid=381) 2026-10-18 02:09:24,840 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP3_EP3 pid=466) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP2_EP2 pid=381) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP5_EP5 pid=636) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP1_EP1 pid=298) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP7_EP7 pid=806) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP6_EP6 pid=721) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP0_EP0 pid=257) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP4_EP4 pid=551) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 48.16profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 47.80profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 48.05profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 47.48profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 48.15profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 47.39profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 47.34profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 47.55profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 49.14profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 48.98profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 49.10profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 48.83profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 49.12profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 48.79profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 48.78profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 48.84profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.97profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.90profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.97profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.82profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.99profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.78profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.78profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  76%|███████▌  | 16/21 [00:00<00:00, 50.84profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.54profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.44profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.51profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.35profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.52profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.31profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.30profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 50.36profile/s]
+(Worker_TP0_EP0 pid=257) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP7_EP7 pid=806) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP6_EP6 pid=721) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP5_EP5 pid=636) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP4_EP4 pid=551) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP1_EP1 pid=298) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP2_EP2 pid=381) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP3_EP3 pid=466) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.30profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.32profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.35profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.33profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.40profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.50profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.44profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 49.36profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.92profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.93profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.92profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.89profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.90profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.95profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.93profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  52%|█████▏    | 11/21 [00:00<00:00, 49.91profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.51profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.52profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.51profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.50profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.53profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.54profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.52profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  76%|███████▌  | 16/21 [00:00<00:00, 49.52profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.32profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.32profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.32profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.32profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.33profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.36profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.34profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 50.34profile/s]
+(Worker_TP4_EP4 pid=551) 2026-10-18 02:09:46,603 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP6_EP6 pid=721) 2026-10-18 02:09:46,603 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP1_EP1 pid=298) 2026-10-18 02:09:46,605 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP7_EP7 pid=806) 2026-10-18 02:09:46,606 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP3_EP3 pid=466) 2026-10-18 02:09:46,607 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP2_EP2 pid=381) 2026-10-18 02:09:46,607 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP0_EP0 pid=257) 2026-10-18 02:09:46,608 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP5_EP5 pid=636) 2026-10-18 02:09:46,609 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP7_EP7 pid=806) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP3_EP3 pid=466) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP1_EP1 pid=298) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP2_EP2 pid=381) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP6_EP6 pid=721) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP5_EP5 pid=636) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP4_EP4 pid=551) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP0_EP0 pid=257) 2026-10-18 02:09:46,619 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 42 configs to /root/.cache/vllm/flashinfer_autotune_cache/0.6.17/90a/40a17f30b590bf14366dd1b201985ea978e40105e8e883809df92200b19b36e4/autotune_configs.json (42 new, 0 from previous config)
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:09:46 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(EngineCore pid=182) INFO 10-18 02:10:25 [shm_broadcast.py:801] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(Worker_TP1_EP1 pid=298) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP4_EP4 pid=551) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP5_EP5 pid=636) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP2_EP2 pid=381) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP7_EP7 pid=806) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP3_EP3 pid=466) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP6_EP6 pid=721) INFO 10-18 02:11:00 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:01 [torch_utils.py:250] OMP_NUM_THREADS=16 is set; leaving Torch threads at 16 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(EngineCore pid=182) INFO 10-18 02:11:01 [core.py:354] init engine (profile, create kv cache, warmup model) took 139.42 s
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=182) WARNING 10-18 02:11:07 [vllm.py:1272] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(EngineCore pid=182) WARNING 10-18 02:11:07 [vllm.py:1341] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore pid=182) INFO 10-18 02:11:07 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(EngineCore pid=182) INFO 10-18 02:11:07 [vllm.py:1520] Cudagraph is disabled under eager mode
+(EngineCore pid=182) INFO 10-18 02:11:07 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant, allreduce_rms
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 10-18 02:11:07 [hf.py:551] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+INFO 10-18 02:11:21 [base.py:235] Multi-modal warmup completed in 13.742s
+INFO 10-18 02:11:22 [base.py:235] Readonly multi-modal warmup completed in 1.156s
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:24 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _fused_post_conv_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:26 [jit_monitor.py:141] Triton kernel JIT compilation during inference: layer_norm_fwd_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:29 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_mqa_paged_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:30 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _expand_qsa_indices_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:32 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_sparse_paged_gqa_splitk_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:33 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_merge_splitk_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=257) WARNING 10-18 02:11:37 [jit_monitor.py:141] Triton kernel JIT compilation during inference: fused_sigmoid_gating_delta_rule_update_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+flash_next_intact pilot: 5/5
+flash_next_intact qualification: 16/64
+flash_next_intact qualification: 32/64
+flash_next_intact qualification: 48/64
+flash_next_intact qualification: 64/64
+INFO 10-18 02:17:55 [utils.py:615] [shutdown] Process manager: send sigterm to process EngineCore
+(EngineCore pid=182) INFO 10-18 02:17:55 [core.py:1329] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=182) INFO 10-18 02:17:55 [core.py:1465] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=182) INFO 10-18 02:17:55 [core.py:1496] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=182) INFO 10-18 02:17:55 [core.py:1342] [shutdown] EngineCore: exiting busy loop
+(Worker_TP0_EP0 pid=257) INFO 10-18 02:17:55 [multiproc_executor.py:837] Parent process exited, terminating worker queues
+(EngineCore pid=182) INFO 10-18 02:17:55 [multiproc_executor.py:469] [shutdown] Executor: waiting for worker exit count=8
+WARNING 10-18 02:18:00 [utils.py:635] [shutdown] Process manager: force killing remaining processes count=1
+WARNING 10-18 02:18:00 [utils.py:640] [shutdown] Process manager: force killing remaining process EngineCore pid 182
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+INFO 10-18 02:18:12 [api_utils.py:272] non-default args: {'max_model_len': 8192, 'tensor_parallel_size': 8, 'enable_expert_parallel': True, 'enable_prefix_caching': False, 'gpu_memory_utilization': 0.88, 'max_num_seqs': 16, 'disable_log_stats': True, 'enforce_eager': True, 'model': '/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 10-18 02:18:12 [model.py:672] Resolved architecture: Qwen4ExpForConditionalGeneration
+INFO 10-18 02:18:12 [model.py:1965] Using max model len 8192
+WARNING 10-18 02:18:12 [model.py:963] Model does not support mm_device_do_normalize, forcing mm_device_do_normalize = False.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 10-18 02:18:15 [scheduler.py:246] Chunked prefill is enabled with max_num_batched_tokens=16384.
+WARNING 10-18 02:18:15 [vllm.py:1272] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 10-18 02:18:15 [vllm.py:1341] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 10-18 02:18:15 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+INFO 10-18 02:18:15 [vllm.py:1520] Cudagraph is disabled under eager mode
+INFO 10-18 02:18:15 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant, allreduce_rms
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) INFO 10-18 02:18:32 [core.py:122] Initializing a V1 LLM engine (v0.1.dev20073+g8e685d198) with config: model='/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8', speculative_config=None, tokenizer='/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=8, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=fp8, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['+quant_fp8', 'all', '+quant_fp8'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [102, 16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': True, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=2451) INFO 10-18 02:18:32 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=172.20.1.38 (local), world_size=8, local_world_size=8
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2526) INFO 10-18 02:18:45 [parallel_state.py:1638] world_size=8 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2567) INFO 10-18 02:18:54 [parallel_state.py:1638] world_size=8 rank=1 local_rank=1 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2650) INFO 10-18 02:19:03 [parallel_state.py:1638] world_size=8 rank=2 local_rank=2 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2735) INFO 10-18 02:19:12 [parallel_state.py:1638] world_size=8 rank=3 local_rank=3 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2820) INFO 10-18 02:19:21 [parallel_state.py:1638] world_size=8 rank=4 local_rank=4 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2905) INFO 10-18 02:19:29 [parallel_state.py:1638] world_size=8 rank=5 local_rank=5 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=2990) INFO 10-18 02:19:38 [parallel_state.py:1638] world_size=8 rank=6 local_rank=6 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker pid=3075) INFO 10-18 02:19:46 [parallel_state.py:1638] world_size=8 rank=7 local_rank=7 distributed_init_method=file:///tmp/vllm_dist_97bc9a8d969c41c28bfa16aa9cde24dd backend=nccl
+(Worker pid=2526) INFO 10-18 02:19:46 [pynccl.py:113] vLLM is using nccl==2.30.7
+(Worker pid=2526) INFO 10-18 02:19:49 [cuda_communicator.py:266] Using ['CUSTOM', 'SYMM_MEM', 'PYNCCL'] all-reduce backends (in dispatch order) for group 'tp:0' out of potential backends: ['NCCL_SYMM_MEM', 'QUICK_REDUCE', 'FLASHINFER', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=2526) INFO 10-18 02:19:50 [cuda_communicator.py:266] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'ep:0' out of potential backends: ['NCCL_SYMM_MEM', 'QUICK_REDUCE', 'FLASHINFER', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=2526) INFO 10-18 02:19:50 [parallel_state.py:1982] rank 0 in world size 8 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0, EPLB rank N/A
+(Worker pid=2526) INFO 10-18 02:19:50 [gpu_worker.py:500] Using V2 Model Runner
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [model_runner.py:385] Loading model from scratch...
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [cuda.py:545] Using backend AttentionBackendEnum.FLASH_ATTN for vit attention
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [mm_encoder_attention.py:375] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [qwen_gdn_linear_attn.py:158] Using FlashInfer GDN prefill kernel (requested=auto, head_k_dim=128).
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:19:51 [qwen_gdn_linear_attn.py:165] FlashInfer GDN prefill is JIT-compiled; first run may take a while. Set --gdn-prefill-backend triton to skip JIT.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [qwen_gdn_linear_attn.py:505] GDN decode kernel: cuda
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [expert_map_manager.py:245] [EP Rank 0/8] Expert parallelism is enabled. Expert placement strategy: linear. Local/global number of experts: 64/512. Experts local to global index map: 0->0, 1->1, 2->2, 3->3, 4->4, 5->5, 6->6, 7->7, 8->8, 9->9, 10->10, 11->11, 12->12, 13->13, 14->14, 15->15, 16->16, 17->17, 18->18, 19->19, 20->20, 21->21, 22->22, 23->23, 24->24, 25->25, 26->26, 27->27, 28->28, 29->29, 30->30, 31->31, 32->32, 33->33, 34->34, 35->35, 36->36, 37->37, 38->38, 39->39, 40->40, 41->41, 42->42, 43->43, 44->44, 45->45, 46->46, 47->47, 48->48, 49->49, 50->50, 51->51, 52->52, 53->53, 54->54, 55->55, 56->56, 57->57, 58->58, 59->59, 60->60, 61->61, 62->62, 63->63.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [fp8.py:411] Using FLASHINFER_CUTLASS Fp8 MoE backend out of potential backends: ['FLASHINFER_CUTLASS', 'AITER', 'FLASHINFER_TRTLLM', 'DEEPGEMM', 'TRITON', 'MARLIN', 'HUMMING', 'BATCHED_DEEPGEMM', 'BATCHED_TRITON', 'XPU', 'CPU', 'HPC'].
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:51 [flash_attn.py:911] Using FlashAttention version 3
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:19:52 [compilation.py:1350] Op 'quant_fp8' not present in model, enabling with '+quant_fp8' has no effect
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:52 [weight_utils.py:866] Filesystem type for checkpoints: 9P. Checkpoint size: 172.78 GiB. Available RAM: 106.17 GiB.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:19:52 [weight_utils.py:896] Auto-prefetch is disabled because the filesystem (9P) is not a recognized network FS (NFS/Lustre) and the checkpoint size (172.78 GiB) exceeds 90% of available RAM (106.17 GiB).
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   0% Completed | 0/131 [00:00<?, ?it/s]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   1% Completed | 1/131 [00:01<03:00,  1.39s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   2% Completed | 2/131 [00:50<1:03:15, 29.42s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   2% Completed | 3/131 [01:05<48:57, 22.95s/it]
+(Worker_TP0_EP0 pid=2526)   
+Loading safetensors checkpoint shards:   3% Completed | 4/131 [01:07<30:59, 14.64s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   4% Completed | 5/131 [01:19<28:52, 13.75s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   5% Completed | 6/131 [02:02<49:17, 23.66s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   5% Completed | 7/131 [02:11<38:44, 18.74s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   6% Completed | 8/131 [02:12<26:47, 13.07s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:   7% Completed | 9/131 [02:13<18:55,  9.31s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  10% Completed | 13/131 [02:30<12:03,  6.13s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:41<13:50,  7.10s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  11% Completed | 15/131 [03:00<18:11,  9.41s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  12% Completed | 16/131 [03:14<20:08, 10.51s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  13% Completed | 17/131 [03:15<15:49,  8.33s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  14% Completed | 18/131 [03:16<11:52,  6.31s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  15% Completed | 19/131 [03:16<08:43,  4.67s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  15% Completed | 20/131 [03:53<25:27, 13.76s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  16% Completed | 21/131 [04:18<31:00, 16.92s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  17% Completed | 22/131 [04:19<22:08, 12.18s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  18% Completed | 23/131 [04:19<15:43,  8.74s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  18% Completed | 24/131 [04:20<11:26,  6.42s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  19% Completed | 25/131 [04:21<08:37,  4.88s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  20% Completed | 26/131 [04:23<06:38,  3.80s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  21% Completed | 27/131 [04:24<05:12,  3.01s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  21% Completed | 28/131 [04:25<04:23,  2.56s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  22% Completed | 29/131 [04:27<03:45,  2.21s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  23% Completed | 30/131 [04:28<03:02,  1.81s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  24% Completed | 31/131 [04:29<02:41,  1.62s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  24% Completed | 32/131 [04:30<02:18,  1.40s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  25% Completed | 33/131 [04:31<02:09,  1.32s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  26% Completed | 34/131 [04:32<01:55,  1.19s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  27% Completed | 35/131 [04:32<01:43,  1.08s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  27% Completed | 36/131 [04:33<01:35,  1.01s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  28% Completed | 37/131 [04:34<01:32,  1.02it/s]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  29% Completed | 38/131 [04:36<02:03,  1.33s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  30% Completed | 39/131 [04:38<02:04,  1.36s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  31% Completed | 40/131 [04:40<02:20,  1.54s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  31% Completed | 41/131 [04:41<02:21,  1.57s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  32% Completed | 42/131 [04:43<02:29,  1.68s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  33% Completed | 43/131 [04:45<02:20,  1.60s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  34% Completed | 44/131 [04:47<02:29,  1.72s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  34% Completed | 45/131 [04:48<02:24,  1.68s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  35% Completed | 46/131 [04:50<02:31,  1.78s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  36% Completed | 47/131 [04:52<02:25,  1.73s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  37% Completed | 48/131 [04:54<02:32,  1.84s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  37% Completed | 49/131 [04:56<02:25,  1.77s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  38% Completed | 50/131 [04:58<02:33,  1.90s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  39% Completed | 51/131 [04:59<02:24,  1.80s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  40% Completed | 52/131 [05:01<02:25,  1.85s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  40% Completed | 53/131 [05:03<02:19,  1.78s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  41% Completed | 54/131 [05:05<02:23,  1.86s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  42% Completed | 55/131 [05:07<02:24,  1.90s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  43% Completed | 56/131 [05:09<02:28,  1.98s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  44% Completed | 57/131 [05:11<02:12,  1.78s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  44% Completed | 58/131 [05:13<02:17,  1.89s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  45% Completed | 59/131 [05:14<02:13,  1.85s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  46% Completed | 60/131 [05:17<02:32,  2.15s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  47% Completed | 61/131 [05:20<02:34,  2.21s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  47% Completed | 62/131 [05:22<02:36,  2.27s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  48% Completed | 63/131 [05:24<02:32,  2.24s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  49% Completed | 64/131 [05:26<02:18,  2.06s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  50% Completed | 65/131 [05:28<02:24,  2.18s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  50% Completed | 66/131 [05:33<03:12,  2.96s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  51% Completed | 67/131 [06:32<20:57, 19.65s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  52% Completed | 68/131 [06:34<15:15, 14.53s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  53% Completed | 69/131 [06:37<11:19, 10.95s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  53% Completed | 70/131 [07:25<22:36, 22.24s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  54% Completed | 71/131 [07:43<20:40, 20.68s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  55% Completed | 72/131 [07:46<15:17, 15.55s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  56% Completed | 73/131 [07:48<11:03, 11.44s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  56% Completed | 74/131 [08:10<13:57, 14.69s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  57% Completed | 75/131 [08:57<22:33, 24.17s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  58% Completed | 76/131 [08:59<16:16, 17.76s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  59% Completed | 77/131 [09:01<11:37, 12.92s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  60% Completed | 78/131 [09:42<18:58, 21.49s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  60% Completed | 79/131 [10:08<19:39, 22.68s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  61% Completed | 80/131 [10:09<13:47, 16.23s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  62% Completed | 81/131 [10:11<09:53, 11.87s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  63% Completed | 82/131 [10:16<07:59,  9.78s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  63% Completed | 83/131 [10:25<07:42,  9.64s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  64% Completed | 84/131 [10:30<06:24,  8.18s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  65% Completed | 85/131 [10:37<06:04,  7.93s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  66% Completed | 86/131 [10:46<06:09,  8.21s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  66% Completed | 87/131 [10:55<06:14,  8.51s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  67% Completed | 88/131 [11:01<05:33,  7.75s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  68% Completed | 89/131 [11:08<05:16,  7.54s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  69% Completed | 90/131 [11:14<04:52,  7.14s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  69% Completed | 91/131 [11:20<04:23,  6.58s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  70% Completed | 92/131 [11:21<03:12,  4.94s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  71% Completed | 93/131 [11:54<08:34, 13.53s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  72% Completed | 94/131 [12:24<11:18, 18.35s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  73% Completed | 95/131 [12:28<08:23, 14.00s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  73% Completed | 96/131 [12:29<05:56, 10.17s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  74% Completed | 97/131 [12:31<04:19,  7.64s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  75% Completed | 98/131 [12:40<04:30,  8.21s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  76% Completed | 99/131 [12:57<05:44, 10.75s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  76% Completed | 100/131 [13:13<06:20, 12.26s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  77% Completed | 101/131 [13:33<07:23, 14.79s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  78% Completed | 102/131 [13:37<05:27, 11.31s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  79% Completed | 103/131 [13:39<03:57,  8.49s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  79% Completed | 104/131 [13:49<04:01,  8.95s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  80% Completed | 105/131 [14:46<10:12, 23.58s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  81% Completed | 106/131 [14:48<07:01, 16.87s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  82% Completed | 107/131 [14:55<05:36, 14.03s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  82% Completed | 108/131 [15:54<10:34, 27.57s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  83% Completed | 109/131 [15:56<07:15, 19.79s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  84% Completed | 110/131 [15:56<04:55, 14.08s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  85% Completed | 111/131 [16:58<09:28, 28.41s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  85% Completed | 112/131 [17:00<06:25, 20.27s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  86% Completed | 113/131 [17:01<04:23, 14.62s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  87% Completed | 114/131 [17:12<03:47, 13.40s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  88% Completed | 115/131 [17:21<03:17, 12.32s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  89% Completed | 116/131 [17:32<02:57, 11.84s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  89% Completed | 117/131 [17:42<02:36, 11.20s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  90% Completed | 118/131 [17:52<02:22, 10.94s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  91% Completed | 119/131 [18:03<02:10, 10.86s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  92% Completed | 120/131 [18:07<01:36,  8.77s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  92% Completed | 121/131 [18:09<01:06,  6.70s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  93% Completed | 122/131 [18:21<01:15,  8.34s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  94% Completed | 123/131 [18:36<01:23, 10.44s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  95% Completed | 124/131 [18:47<01:14, 10.69s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  95% Completed | 125/131 [19:04<01:14, 12.45s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  96% Completed | 126/131 [19:12<00:55, 11.19s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  97% Completed | 127/131 [19:16<00:35,  8.90s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  98% Completed | 128/131 [19:17<00:19,  6.51s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  98% Completed | 129/131 [20:09<00:40, 20.41s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards:  99% Completed | 130/131 [20:20<00:17, 17.41s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards: 100% Completed | 131/131 [20:20<00:00, 12.30s/it]
+(Worker_TP0_EP0 pid=2526) 
+Loading safetensors checkpoint shards: 100% Completed | 131/131 [20:20<00:00,  9.32s/it]
+(Worker_TP0_EP0 pid=2526) 
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:13 [default_loader.py:430] Loading weights took 1220.85 seconds
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:13 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+(Worker_TP3_EP3 pid=2735) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1222.846038 seconds
+(Worker_TP4_EP4 pid=2820) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1222.854511 seconds
+(Worker_TP3_EP3 pid=2735) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP3_EP3 pid=2735) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP4_EP4 pid=2820) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP4_EP4 pid=2820) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP2_EP2 pid=2650) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1222.867882 seconds
+(Worker_TP2_EP2 pid=2650) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP2_EP2 pid=2650) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1223.009827 seconds
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:14 [topk_topp_sampler.py:62] Using FlashInfer for top-p & top-k sampling.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP1_EP1 pid=2567) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1223.118314 seconds
+(Worker_TP1_EP1 pid=2567) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP1_EP1 pid=2567) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP6_EP6 pid=2990) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1223.205380 seconds
+(Worker_TP7_EP7 pid=3075) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1223.201202 seconds
+(Worker_TP5_EP5 pid=2905) INFO 10-18 02:40:14 [model_runner.py:407] Model loading took 24.26 GiB memory and 1223.219598 seconds
+(Worker_TP6_EP6 pid=2990) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP6_EP6 pid=2990) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP7_EP7 pid=3075) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP7_EP7 pid=3075) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(Worker_TP5_EP5 pid=2905) INFO 10-18 02:40:14 [interface.py:915] Setting attention block size to 208 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP5_EP5 pid=2905) INFO 10-18 02:40:14 [interface.py:939] Padding mamba page size by 4.26% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=2451) WARNING 10-18 02:40:14 [torch_utils.py:250] OMP_NUM_THREADS=16 is set; leaving Torch threads at 16 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(Worker_TP0_EP0 pid=2526) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=2526) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=3075) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=3075) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=2905) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=2905) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=2990) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=2990) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=2735) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=2735) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=2650) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=2650) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=2567) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=2567) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=2820) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=2820) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=2526) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP7_EP7 pid=3075) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP1_EP1 pid=2567) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP6_EP6 pid=2990) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP2_EP2 pid=2650) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP3_EP3 pid=2735) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP5_EP5 pid=2905) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP4_EP4 pid=2820) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker_TP0_EP0 pid=2526) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=2526) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=3075) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP7_EP7 pid=3075) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=2567) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP1_EP1 pid=2567) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=2990) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP6_EP6 pid=2990) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=2735) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP3_EP3 pid=2735) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=2905) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP5_EP5 pid=2905) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=2650) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP2_EP2 pid=2650) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=2820) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP4_EP4 pid=2820) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:20 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:31 [gpu_worker.py:693] Available KV cache memory: 93.9 GiB
+(EngineCore pid=2451) INFO 10-18 02:40:31 [kv_cache_utils.py:2258] GPU KV cache size: 6,758,946 tokens, Maximum concurrency for 8,192 tokens per request: 825.07x
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:32 [deep_gemm.py:186] deep_gemm not found in site-packages, trying vendored vllm.third_party.deep_gemm
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:32 [deep_gemm.py:213] DeepGEMM PDL enabled on vllm.third_party.deep_gemm.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:32 [kernel_warmup.py:260] Using FlashInfer autotune cache file: /root/.cache/vllm/flashinfer_autotune_cache/0.6.17/90a/56f37a4a77b5974f61ff7ab99a8a3b319fff9777c7359c9a225dde93b207f42c/autotune_configs.json
+(Worker_TP0_EP0 pid=2526) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP2_EP2 pid=2650) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP4_EP4 pid=2820) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP6_EP6 pid=2990) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP5_EP5 pid=2905) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP1_EP1 pid=2567) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP3_EP3 pid=2735) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP7_EP7 pid=3075) 2026-10-18 02:40:32,091 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(Worker_TP6_EP6 pid=2990) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP1_EP1 pid=2567) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP7_EP7 pid=3075) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP2_EP2 pid=2650) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP4_EP4 pid=2820) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP0_EP0 pid=2526) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP3_EP3 pid=2735) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP5_EP5 pid=2905) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:   0%|          | 0/21 [00:00<?, ?profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  10%|▉         | 2/21 [00:00<00:01, 17.20profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  14%|█▍        | 3/21 [00:00<00:00, 29.14profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  14%|█▍        | 3/21 [00:00<00:00, 27.73profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  14%|█▍        | 3/21 [00:00<00:00, 28.10profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  14%|█▍        | 3/21 [00:00<00:00, 28.02profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  14%|█▍        | 3/21 [00:00<00:00, 25.34profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 43.20profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  24%|██▍       | 5/21 [00:00<00:00, 41.00profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  33%|███▎      | 7/21 [00:00<00:00, 33.14profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  38%|███▊      | 8/21 [00:00<00:00, 38.79profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  38%|███▊      | 8/21 [00:00<00:00, 38.04profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  38%|███▊      | 8/21 [00:00<00:00, 38.20profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  38%|███▊      | 8/21 [00:00<00:00, 38.14profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  38%|███▊      | 8/21 [00:00<00:00, 36.58profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 43.98profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  48%|████▊     | 10/21 [00:00<00:00, 43.01profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  57%|█████▋    | 12/21 [00:00<00:00, 38.24profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  62%|██████▏   | 13/21 [00:00<00:00, 41.36profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  62%|██████▏   | 13/21 [00:00<00:00, 40.92profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  62%|██████▏   | 13/21 [00:00<00:00, 41.03profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  62%|██████▏   | 13/21 [00:00<00:00, 41.01profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  62%|██████▏   | 13/21 [00:00<00:00, 40.09profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  71%|███████▏  | 15/21 [00:00<00:00, 43.87profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  71%|███████▏  | 15/21 [00:00<00:00, 43.33profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  81%|████████  | 17/21 [00:00<00:00, 40.25profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  86%|████████▌ | 18/21 [00:00<00:00, 42.03profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  86%|████████▌ | 18/21 [00:00<00:00, 41.76profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  86%|████████▌ | 18/21 [00:00<00:00, 41.83profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  86%|████████▌ | 18/21 [00:00<00:00, 41.83profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  86%|████████▌ | 18/21 [00:00<00:00, 41.27profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  95%|█████████▌| 20/21 [00:00<00:00, 43.65profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1:  95%|█████████▌| 20/21 [00:00<00:00, 43.34profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 41.06profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 40.64profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 38.35profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 43.73profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 40.74profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 43.17profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 40.72profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm1: 100%|██████████| 21/21 [00:00<00:00, 39.85profile/s]
+(Worker_TP7_EP7 pid=3075) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP5_EP5 pid=2905) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP6_EP6 pid=2990) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP4_EP4 pid=2820) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP3_EP3 pid=2735) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP1_EP1 pid=2567) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP2_EP2 pid=2650) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s](Worker_TP0_EP0 pid=2526) 
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:   0%|          | 0/21 [00:00<?, ?profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.88profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.61profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.63profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.53profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.54profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.55profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.57profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  24%|██▍       | 5/21 [00:00<00:00, 42.50profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 43.12profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 43.00profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 42.99profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 42.97profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 42.98profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 42.98profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 42.98profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  48%|████▊     | 10/21 [00:00<00:00, 42.96profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.10profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.04profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.04profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.02profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.02profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.04profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.01profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  71%|███████▏  | 15/21 [00:00<00:00, 43.01profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.29profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.25profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.24profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.24profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.24profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.24profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.24profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2:  95%|█████████▌| 20/21 [00:00<00:00, 43.22profile/s]
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.36profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.29profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.29profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.27profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.28profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.29profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.29profile/s]
+
+[AutoTuner]: Tuning trtllm::fused_moe::gemm2: 100%|██████████| 21/21 [00:00<00:00, 43.26profile/s]
+(Worker_TP6_EP6 pid=2990) 2026-10-18 02:40:38,793 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP2_EP2 pid=2650) 2026-10-18 02:40:38,795 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP5_EP5 pid=2905) 2026-10-18 02:40:38,795 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP1_EP1 pid=2567) 2026-10-18 02:40:38,796 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP4_EP4 pid=2820) 2026-10-18 02:40:38,801 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP3_EP3 pid=2735) 2026-10-18 02:40:38,801 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP0_EP0 pid=2526) 2026-10-18 02:40:38,802 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP7_EP7 pid=3075) 2026-10-18 02:40:38,802 - INFO - autotuner.py:852 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(Worker_TP4_EP4 pid=2820) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP5_EP5 pid=2905) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP1_EP1 pid=2567) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP3_EP3 pid=2735) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP2_EP2 pid=2650) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP6_EP6 pid=2990) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP7_EP7 pid=3075) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP0_EP0 pid=2526) 2026-10-18 02:40:38,813 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 42 configs to /root/.cache/vllm/flashinfer_autotune_cache/0.6.17/90a/56f37a4a77b5974f61ff7ab99a8a3b319fff9777c7359c9a225dde93b207f42c/autotune_configs.json (42 new, 0 from previous config)
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:38 [gpu_worker.py:919] Free memory on device (137.63/139.79 GiB) on startup. Desired GPU memory utilization is (0.88, 123.02 GiB). Actual usage is 25.04 GiB for consumed memory (weights + non-torch), 4.07 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=100671132058` (93.76 GiB) to fit into requested memory, or `--kv-cache-memory=116356544512` (108.37 GiB) to fully utilize gpu memory. Current kv cache memory in use is 93.9 GiB.
+(Worker_TP4_EP4 pid=2820) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP0_EP0 pid=2526) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP7_EP7 pid=3075) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP5_EP5 pid=2905) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP1_EP1 pid=2567) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP2_EP2 pid=2650) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP6_EP6 pid=2990) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP3_EP3 pid=2735) INFO 10-18 02:40:41 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:40:41 [torch_utils.py:250] OMP_NUM_THREADS=16 is set; leaving Torch threads at 16 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(EngineCore pid=2451) INFO 10-18 02:40:41 [core.py:354] init engine (profile, create kv cache, warmup model) took 27.16 s
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+(EngineCore pid=2451) WARNING 10-18 02:40:47 [vllm.py:1272] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(EngineCore pid=2451) WARNING 10-18 02:40:47 [vllm.py:1341] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore pid=2451) INFO 10-18 02:40:47 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(EngineCore pid=2451) INFO 10-18 02:40:47 [vllm.py:1520] Cudagraph is disabled under eager mode
+(EngineCore pid=2451) INFO 10-18 02:40:47 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant, allreduce_rms
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+INFO 10-18 02:40:48 [hf.py:551] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+INFO 10-18 02:41:01 [base.py:235] Multi-modal warmup completed in 13.586s
+INFO 10-18 02:41:02 [base.py:235] Readonly multi-modal warmup completed in 1.160s
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _fused_post_conv_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: layer_norm_fwd_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_mqa_paged_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _expand_qsa_indices_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_sparse_paged_gqa_splitk_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_merge_splitk_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(Worker_TP0_EP0 pid=2526) WARNING 10-18 02:41:03 [jit_monitor.py:141] Triton kernel JIT compilation during inference: fused_sigmoid_gating_delta_rule_update_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+flash_next_uncensored pilot: 5/5
+Task's current input(s) ["in-01M56CTGNFPP7Z61JVDNQA1SFF:1792289882800-0"] cancelled because: Task's current input in-01M56CTGNFPP7Z61JVDNQA1SFF:1792289882800-0 hit its timeout of 1800s
+Traceback (most recent call last):
+[modal-client] 2026-10-18T02:48:02+0000 Received a cancellation signal while processing input ('in-01M56CTGNFPP7Z61JVDNQA1SFF:1792289882800-0',)
+[modal-client] 2026-10-18T02:48:02+0000 Successfully canceled input ('in-01M56CTGNFPP7Z61JVDNQA1SFF:1792289882800-0',)
+  File "/pkg/modal/_runtime/container_io_manager.py", line 987, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 266, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/modal_external_qualification.py", line 37, in run_pair
+    result=qualify.remote(payload);results.append(result)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_object.py", line 49, in wrapped
+    return await method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_functions.py", line 2081, in remote
+    return await self._call_function(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_functions.py", line 2018, in _call_function
+    return await invocation.run_function()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_functions.py", line 517, in run_function
+    return await _process_result(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_utils/function_utils.py", line 534, in _process_result
+    raise FunctionTimeoutError(result.exception)
+modal.exception.FunctionTimeoutError: Task's current input in-01M56CTGNFPP7Z61JVDNQA1SFF:1792289882800-0 hit its timeout of 1800s
+Runner terminated.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_external_qualification.py:59 in main           │
+│                                                                              │
+│   58 │   │   payloads.append(payload)                                        │
+│ ❱ 59 │   for result in run_pair.remote(payloads):                            │
+│   60 │   │   arm=result['arm']                                               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:49 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2081  │
+│ in remote                                                                    │
+│                                                                              │
+│   2080 │   │                                                                 │
+│ ❱ 2081 │   │   return await self._call_function(args, kwargs)                │
+│   2082                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2018  │
+│ in _call_function                                                            │
+│                                                                              │
+│   2017 │   │                                                                 │
+│ ❱ 2018 │   │   return await invocation.run_function()                        │
+│   2019                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:517   │
+│ in run_function                                                              │
+│                                                                              │
+│    516 │   │   │   # No more retries left.                                   │
+│ ❱  517 │   │   │   return await _process_result(                             │
+│    518 │   │   │   │   await_response.output.result, await_response.output.d │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/function_uti │
+│ ls.py:572 in _process_result                                                 │
+│                                                                              │
+│   571 │   │   │                                                              │
+│ ❱ 572 │   │   │   raise exc_with_hints(exc)                                  │
+│   573                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M56BHAEFZEFT2A9PTZ129P0R)...      │
+│                                                                              │
+│ /root/modal_external_qualification.py:37 in run_pair                         │
+│                                                                              │
+│ ❱ 37 result=qualify.remote(payload);results.append(result)                   │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_object.py:49 in wrapped                                          │
+│                                                                              │
+│ ❱ 49 return await method(self, *args, **kwargs)                              │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_functions.py:2081 in remote                                      │
+│                                                                              │
+│ ❱ 2081 return await self._call_function(args, kwargs)                        │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_functions.py:2018 in _call_function                              │
+│                                                                              │
+│ ❱ 2018 return await invocation.run_function()                                │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_functions.py:517 in run_function                                 │
+│                                                                              │
+│ ❱ 517 return await _process_result(                                          │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_utils/function_utils.py:534 in _process_result                   │
+│                                                                              │
+│ ❱ 534 raise FunctionTimeoutError(result.exception)                           │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FunctionTimeoutError: Task's current input 
+in-01M56CTGNFPP7Z61JVDNQA1SFF:1792289882800-0 hit its timeout of 1800s

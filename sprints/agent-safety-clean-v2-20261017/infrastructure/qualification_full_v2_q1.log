@@ -1,0 +1,379 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-mzOfPz2pIOPscQpAe2xFBK
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_qualify.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+├── ✓ Created Function run_group.
+└── ✓ Created Function qualify.
+
+[1ALoading weights:   0%|          | 0/1584 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1584 [00:01<50:04,  1.90s/it]
+[1ALoading weights:   1%|          | 18/1584 [00:02<02:07, 12.25it/s]
+[1ALoading weights:   2%|▏         | 34/1584 [00:02<01:00, 25.46it/s]
+[1ALoading weights:   3%|▎         | 46/1584 [00:02<00:42, 36.07it/s]
+[1ALoading weights:   4%|▎         | 58/1584 [00:02<00:32, 47.27it/s]
+[1ALoading weights:   4%|▍         | 70/1584 [00:02<00:27, 54.61it/s]
+[1ALoading weights:   6%|▌         | 91/1584 [00:02<00:18, 80.14it/s]
+[1ALoading weights:   7%|▋         | 104/1584 [00:02<00:16, 88.85it/s]
+[1ALoading weights:   7%|▋         | 117/1584 [00:02<00:15, 92.90it/s]
+[1ALoading weights:   8%|▊         | 132/1584 [00:02<00:14, 102.24it/s]
+[1ALoading weights:   9%|▉         | 145/1584 [00:03<00:15, 92.99it/s] 
+[1ALoading weights:  10%|█         | 161/1584 [00:03<00:13, 106.63it/s]
+[1ALoading weights:  11%|█         | 174/1584 [00:03<00:13, 103.36it/s]
+[1ALoading weights:  12%|█▏        | 190/1584 [00:03<00:12, 113.23it/s]
+[1ALoading weights:  13%|█▎        | 203/1584 [00:03<00:12, 110.46it/s]
+[1ALoading weights:  14%|█▎        | 215/1584 [00:03<00:12, 108.80it/s]
+[1ALoading weights:  14%|█▍        | 227/1584 [00:03<00:13, 101.97it/s]
+[1ALoading weights:  16%|█▌        | 248/1584 [00:03<00:10, 122.24it/s]
+[1ALoading weights:  16%|█▋        | 261/1584 [00:04<00:11, 116.06it/s]
+[1ALoading weights:  17%|█▋        | 274/1584 [00:04<00:11, 109.66it/s]
+[1ALoading weights:  18%|█▊        | 290/1584 [00:04<00:12, 99.87it/s] 
+[1ALoading weights:  19%|█▉        | 306/1584 [00:04<00:11, 111.69it/s]
+[1ALoading weights:  21%|██        | 328/1584 [00:04<00:09, 132.44it/s]
+[1ALoading weights:  22%|██▏       | 342/1584 [00:04<00:09, 133.10it/s]
+[1ALoading weights:  22%|██▏       | 356/1584 [00:04<00:10, 117.59it/s]
+[1ALoading weights:  23%|██▎       | 370/1584 [00:05<00:10, 115.13it/s]
+[1ALoading weights:  24%|██▍       | 382/1584 [00:05<00:11, 102.35it/s]
+[1ALoading weights:  25%|██▌       | 401/1584 [00:05<00:09, 118.84it/s]
+[1ALoading weights:  26%|██▌       | 414/1584 [00:05<00:10, 109.51it/s]
+[1ALoading weights:  27%|██▋       | 426/1584 [00:05<00:10, 108.28it/s]
+[1ALoading weights:  28%|██▊       | 438/1584 [00:05<00:10, 109.33it/s]
+[1ALoading weights:  28%|██▊       | 450/1584 [00:05<00:12, 93.82it/s] 
+[1ALoading weights:  29%|██▉       | 460/1584 [00:05<00:11, 95.08it/s]
+[1ALoading weights:  30%|███       | 481/1584 [00:06<00:09, 120.70it/s]
+[1ALoading weights:  31%|███       | 494/1584 [00:06<00:09, 109.07it/s]
+[1ALoading weights:  32%|███▏      | 506/1584 [00:06<00:10, 105.10it/s]
+[1ALoading weights:  33%|███▎      | 519/1584 [00:06<00:09, 110.09it/s]
+[1ALoading weights:  34%|███▎      | 531/1584 [00:06<00:10, 97.54it/s] 
+[1ALoading weights:  34%|███▍      | 542/1584 [00:06<00:10, 96.75it/s]
+[1ALoading weights:  35%|███▌      | 560/1584 [00:06<00:08, 116.18it/s]
+[1ALoading weights:  36%|███▌      | 573/1584 [00:06<00:08, 114.69it/s]
+[1ALoading weights:  37%|███▋      | 585/1584 [00:07<00:08, 113.54it/s]
+[1ALoading weights:  38%|███▊      | 602/1584 [00:07<00:08, 111.78it/s]
+[1ALoading weights:  39%|███▉      | 614/1584 [00:07<00:10, 90.79it/s] 
+[1ALoading weights:  40%|████      | 637/1584 [00:07<00:07, 119.23it/s]
+[1ALoading weights:  41%|████      | 651/1584 [00:07<00:08, 114.80it/s]
+[1ALoading weights:  42%|████▏     | 664/1584 [00:07<00:08, 104.54it/s]
+[1ALoading weights:  43%|████▎     | 682/1584 [00:08<00:09, 97.61it/s] 
+[1ALoading weights:  44%|████▍     | 693/1584 [00:08<00:09, 97.43it/s]
+[1ALoading weights:  45%|████▌     | 716/1584 [00:08<00:07, 115.20it/s]
+[1ALoading weights:  46%|████▌     | 728/1584 [00:08<00:08, 104.39it/s]
+[1ALoading weights:  47%|████▋     | 739/1584 [00:08<00:08, 98.50it/s] 
+[1ALoading weights:  47%|████▋     | 752/1584 [00:08<00:07, 105.28it/s]
+[1ALoading weights:  48%|████▊     | 763/1584 [00:08<00:08, 92.42it/s] 
+[1ALoading weights:  49%|████▉     | 773/1584 [00:08<00:09, 85.97it/s]
+[1ALoading weights:  50%|████▉     | 791/1584 [00:09<00:07, 107.56it/s]
+[1ALoading weights:  51%|█████     | 803/1584 [00:09<00:08, 87.45it/s] 
+[1ALoading weights:  52%|█████▏    | 817/1584 [00:09<00:08, 94.85it/s]
+[1ALoading weights:  53%|█████▎    | 834/1584 [00:09<00:06, 109.54it/s]
+[1ALoading weights:  53%|█████▎    | 846/1584 [00:09<00:07, 94.16it/s] 
+[1ALoading weights:  55%|█████▍    | 866/1584 [00:09<00:06, 117.88it/s]
+[1ALoading weights:  56%|█████▌    | 880/1584 [00:09<00:07, 99.86it/s] 
+[1ALoading weights:  57%|█████▋    | 896/1584 [00:10<00:06, 109.92it/s]
+[1ALoading weights:  58%|█████▊    | 912/1584 [00:10<00:05, 118.80it/s]
+[1ALoading weights:  58%|█████▊    | 925/1584 [00:10<00:06, 94.90it/s] 
+[1ALoading weights:  60%|██████    | 954/1584 [00:10<00:04, 129.20it/s]
+[1ALoading weights:  61%|██████▏   | 971/1584 [00:10<00:04, 131.66it/s]
+[1ALoading weights:  62%|██████▏   | 987/1584 [00:10<00:04, 132.54it/s]
+[1ALoading weights:  63%|██████▎   | 1002/1584 [00:10<00:05, 113.13it/s]
+[1ALoading weights:  65%|██████▍   | 1023/1584 [00:11<00:04, 134.05it/s]
+[1ALoading weights:  66%|██████▌   | 1038/1584 [00:11<00:04, 132.04it/s]
+[1ALoading weights:  66%|██████▋   | 1053/1584 [00:11<00:04, 132.44it/s]
+[1ALoading weights:  67%|██████▋   | 1067/1584 [00:11<00:03, 131.92it/s]
+[1ALoading weights:  68%|██████▊   | 1081/1584 [00:11<00:05, 90.52it/s] 
+[1ALoading weights:  70%|██████▉   | 1108/1584 [00:11<00:04, 112.43it/s]
+[1ALoading weights:  71%|███████   | 1125/1584 [00:11<00:03, 121.57it/s]
+[1ALoading weights:  72%|███████▏  | 1139/1584 [00:12<00:03, 113.93it/s]
+[1ALoading weights:  73%|███████▎  | 1152/1584 [00:12<00:04, 106.82it/s]
+[1ALoading weights:  73%|███████▎  | 1164/1584 [00:12<00:04, 104.93it/s]
+[1ALoading weights:  75%|███████▍  | 1184/1584 [00:12<00:03, 119.96it/s]
+[1ALoading weights:  76%|███████▌  | 1197/1584 [00:12<00:03, 118.71it/s]
+[1ALoading weights:  76%|███████▋  | 1210/1584 [00:12<00:03, 103.17it/s]
+[1ALoading weights:  77%|███████▋  | 1226/1584 [00:12<00:03, 111.19it/s]
+[1ALoading weights:  78%|███████▊  | 1238/1584 [00:13<00:03, 89.77it/s] 
+[1ALoading weights:  81%|████████  | 1283/1584 [00:13<00:01, 163.70it/s]
+[1ALoading weights:  85%|████████▌ | 1349/1584 [00:13<00:00, 278.02it/s]
+[1ALoading weights:  90%|█████████ | 1432/1584 [00:13<00:00, 414.80it/s]
+[1ALoading weights:  97%|█████████▋| 1535/1584 [00:13<00:00, 567.20it/s]
+[1ALoading weights: 100%|██████████| 1584/1584 [00:13<00:00, 116.71it/s]
+intact: loaded 400 FP8 modules
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1342.41it/s]
+
+[1ALoading weights:   0%|          | 0/1584 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1584 [00:00<25:53,  1.02it/s]
+[1ALoading weights:   0%|          | 2/1584 [00:01<26:01,  1.01it/s]
+[1ALoading weights:   1%|          | 18/1584 [00:02<01:58, 13.24it/s]
+[1ALoading weights:   2%|▏         | 36/1584 [00:02<00:53, 28.69it/s]
+[1ALoading weights:   4%|▎         | 56/1584 [00:02<00:31, 48.76it/s]
+[1ALoading weights:   4%|▍         | 69/1584 [00:02<00:27, 55.28it/s]
+[1ALoading weights:   6%|▌         | 94/1584 [00:02<00:17, 85.54it/s]
+[1ALoading weights:   7%|▋         | 112/1584 [00:02<00:14, 102.44it/s]
+[1ALoading weights:   8%|▊         | 128/1584 [00:02<00:13, 108.29it/s]
+[1ALoading weights:   9%|▉         | 143/1584 [00:02<00:13, 109.98it/s]
+[1ALoading weights:  10%|▉         | 158/1584 [00:03<00:12, 117.58it/s]
+[1ALoading weights:  11%|█         | 174/1584 [00:03<00:11, 127.39it/s]
+[1ALoading weights:  12%|█▏        | 190/1584 [00:03<00:10, 131.88it/s]
+[1ALoading weights:  13%|█▎        | 210/1584 [00:03<00:09, 148.51it/s]
+[1ALoading weights:  14%|█▍        | 226/1584 [00:03<00:10, 128.13it/s]
+[1ALoading weights:  16%|█▌        | 250/1584 [00:03<00:09, 145.73it/s]
+[1ALoading weights:  17%|█▋        | 266/1584 [00:03<00:09, 139.61it/s]
+[1ALoading weights:  18%|█▊        | 281/1584 [00:03<00:09, 135.82it/s]
+[1ALoading weights:  19%|█▊        | 295/1584 [00:04<00:09, 130.83it/s]
+[1ALoading weights:  20%|█▉        | 309/1584 [00:04<00:09, 133.16it/s]
+[1ALoading weights:  21%|██        | 328/1584 [00:04<00:08, 148.41it/s]
+[1ALoading weights:  22%|██▏       | 344/1584 [00:04<00:08, 148.83it/s]
+[1ALoading weights:  23%|██▎       | 360/1584 [00:04<00:08, 141.57it/s]
+[1ALoading weights:  24%|██▎       | 375/1584 [00:04<00:09, 133.96it/s]
+[1ALoading weights:  25%|██▍       | 389/1584 [00:04<00:09, 132.12it/s]
+[1ALoading weights:  26%|██▌       | 408/1584 [00:04<00:08, 145.90it/s]
+[1ALoading weights:  27%|██▋       | 426/1584 [00:04<00:07, 151.42it/s]
+[1ALoading weights:  28%|██▊       | 444/1584 [00:05<00:07, 156.04it/s]
+[1ALoading weights:  29%|██▉       | 460/1584 [00:05<00:08, 136.91it/s]
+[1ALoading weights:  31%|███       | 484/1584 [00:05<00:07, 155.61it/s]
+[1ALoading weights:  32%|███▏      | 502/1584 [00:05<00:06, 161.57it/s]
+[1ALoading weights:  33%|███▎      | 519/1584 [00:05<00:06, 155.58it/s]
+[1ALoading weights:  34%|███▍      | 535/1584 [00:05<00:07, 133.00it/s]
+[1ALoading weights:  35%|███▌      | 557/1584 [00:05<00:06, 150.08it/s]
+[1ALoading weights:  36%|███▌      | 573/1584 [00:05<00:06, 147.75it/s]
+[1ALoading weights:  37%|███▋      | 589/1584 [00:06<00:06, 142.84it/s]
+[1ALoading weights:  38%|███▊      | 604/1584 [00:06<00:06, 143.78it/s]
+[1ALoading weights:  39%|███▉      | 619/1584 [00:06<00:06, 141.03it/s]
+[1ALoading weights:  40%|████      | 637/1584 [00:06<00:06, 148.32it/s]
+[1ALoading weights:  42%|████▏     | 660/1584 [00:06<00:05, 154.60it/s]
+[1ALoading weights:  43%|████▎     | 678/1584 [00:06<00:05, 159.19it/s]
+[1ALoading weights:  44%|████▍     | 694/1584 [00:06<00:06, 134.47it/s]
+[1ALoading weights:  45%|████▌     | 718/1584 [00:06<00:05, 151.18it/s]
+[1ALoading weights:  47%|████▋     | 738/1584 [00:07<00:05, 152.20it/s]
+[1ALoading weights:  48%|████▊     | 754/1584 [00:07<00:06, 135.82it/s]
+[1ALoading weights:  48%|████▊     | 768/1584 [00:07<00:06, 117.43it/s]
+[1ALoading weights:  50%|█████     | 793/1584 [00:07<00:05, 146.73it/s]
+[1ALoading weights:  51%|█████     | 809/1584 [00:07<00:05, 143.85it/s]
+[1ALoading weights:  52%|█████▏    | 825/1584 [00:07<00:05, 144.90it/s]
+[1ALoading weights:  53%|█████▎    | 841/1584 [00:07<00:05, 134.89it/s]
+[1ALoading weights:  54%|█████▍    | 856/1584 [00:07<00:05, 133.50it/s]
+[1ALoading weights:  55%|█████▌    | 876/1584 [00:08<00:04, 145.49it/s]
+[1ALoading weights:  56%|█████▋    | 894/1584 [00:08<00:04, 148.55it/s]
+[1ALoading weights:  58%|█████▊    | 912/1584 [00:08<00:04, 154.23it/s]
+[1ALoading weights:  59%|█████▊    | 928/1584 [00:08<00:05, 127.83it/s]
+[1ALoading weights:  60%|██████    | 952/1584 [00:08<00:04, 146.64it/s]
+[1ALoading weights:  61%|██████    | 970/1584 [00:08<00:04, 148.67it/s]
+[1ALoading weights:  62%|██████▏   | 986/1584 [00:08<00:04, 147.99it/s]
+[1ALoading weights:  63%|██████▎   | 1002/1584 [00:08<00:04, 127.85it/s]
+[1ALoading weights:  65%|██████▍   | 1025/1584 [00:09<00:03, 147.41it/s]
+[1ALoading weights:  66%|██████▌   | 1041/1584 [00:09<00:03, 144.63it/s]
+[1ALoading weights:  67%|██████▋   | 1056/1584 [00:09<00:03, 135.81it/s]
+[1ALoading weights:  68%|██████▊   | 1072/1584 [00:09<00:03, 141.90it/s]
+[1ALoading weights:  69%|██████▊   | 1087/1584 [00:09<00:03, 137.90it/s]
+[1ALoading weights:  70%|██████▉   | 1108/1584 [00:09<00:03, 156.31it/s]
+[1ALoading weights:  71%|███████   | 1125/1584 [00:09<00:03, 144.55it/s]
+[1ALoading weights:  72%|███████▏  | 1140/1584 [00:09<00:03, 136.28it/s]
+[1ALoading weights:  73%|███████▎  | 1154/1584 [00:10<00:03, 130.11it/s]
+[1ALoading weights:  74%|███████▎  | 1168/1584 [00:10<00:03, 123.74it/s]
+[1ALoading weights:  75%|███████▌  | 1190/1584 [00:10<00:02, 136.89it/s]
+[1ALoading weights:  76%|███████▋  | 1208/1584 [00:10<00:02, 130.60it/s]
+[1ALoading weights:  78%|███████▊  | 1228/1584 [00:10<00:02, 135.37it/s]
+[1ALoading weights:  79%|███████▊  | 1247/1584 [00:10<00:02, 145.97it/s]
+[1ALoading weights:  83%|████████▎ | 1307/1584 [00:10<00:01, 259.93it/s]
+[1ALoading weights:  89%|████████▉ | 1407/1584 [00:10<00:00, 455.53it/s]
+[1ALoading weights:  96%|█████████▌| 1518/1584 [00:11<00:00, 634.32it/s]Loading weights: 100%|██████████| 1584/1584 [00:11<00:00, 143.00it/s]
+refusal_ablated: loaded 400 FP8 modules
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1238.62it/s]
+refusal_ablated pilot: 4/5
+intact pilot: 4/5
+intact pilot: 5/5
+refusal_ablated pilot: 5/5
+intact qualification: 4/128
+refusal_ablated qualification: 4/128
+refusal_ablated qualification: 8/128
+intact qualification: 8/128
+intact qualification: 12/128
+refusal_ablated qualification: 12/128
+refusal_ablated qualification: 16/128
+refusal_ablated qualification: 20/128
+refusal_ablated qualification: 24/128
+refusal_ablated qualification: 28/128
+refusal_ablated qualification: 32/128
+intact qualification: 16/128
+intact qualification: 20/128
+refusal_ablated qualification: 36/128
+intact qualification: 24/128
+intact qualification: 28/128
+refusal_ablated qualification: 40/128
+refusal_ablated qualification: 44/128
+refusal_ablated qualification: 48/128
+intact qualification: 32/128
+refusal_ablated qualification: 52/128
+intact qualification: 36/128
+refusal_ablated qualification: 56/128
+intact qualification: 40/128
+Container terminated due to preemption. Your Function will be restarted with the same input. For more details, see https://modal.com/docs/guide/preemption
+refusal_ablated qualification: 60/128
+intact qualification: 44/128
+refusal_ablated qualification: 64/128
+intact qualification: 48/128
+refusal_ablated qualification: 68/128
+intact qualification: 52/128
+refusal_ablated qualification: 72/128
+intact qualification: 56/128
+intact qualification: 60/128
+refusal_ablated qualification: 76/128
+intact qualification: 64/128
+refusal_ablated qualification: 80/128
+refusal_ablated qualification: 84/128
+intact qualification: 68/128
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_grpc_client.py:164 │
+│  in direct                                                                   │
+│                                                                              │
+│   163 │   │   self.wrapped_method.channel = await self.client._get_channel(s │
+│ ❱ 164 │   │   return await self.client._call_unary(self.wrapped_method, req, │
+│   165                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/client.py:533 in    │
+│ _call_unary                                                                  │
+│                                                                              │
+│   532 │   │   coro = grpclib_method(request, timeout=timeout, metadata=metad │
+│ ❱ 533 │   │   return await self._call_safely(coro, grpclib_method.name)      │
+│   534                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/client.py:489 in    │
+│ _call_safely                                                                 │
+│                                                                              │
+│   488 │   │   │   │   request_task.set_name(readable_method)                 │
+│ ❱ 489 │   │   │   │   return await request_task                              │
+│   490 │   │   │   except asyncio.CancelledError:                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/grpclib/client.py:912 in  │
+│ __call__                                                                     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/grpclib/client.py:242 in  │
+│ send_message                                                                 │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/grpclib/client.py:174 in  │
+│ send_request                                                                 │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/grpc_utils.p │
+│ y:136 in __connect__                                                         │
+│                                                                              │
+│   135 │   │   │   raise ClientClosed(self._closed_error_message)             │
+│ ❱ 136 │   │   return await super().__connect__()                             │
+│   137                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/grpclib/client.py:748 in  │
+│ __connect__                                                                  │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/grpc_utils.p │
+│ y:146 in _create_connection                                                  │
+│                                                                              │
+│   145 │   │   try:                                                           │
+│ ❱ 146 │   │   │   protocol = await self._open_connection()                   │
+│   147 │   │   except (asyncio.CancelledError, Exception) as exc:             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/grpc_utils.p │
+│ y:168 in _open_connection                                                    │
+│                                                                              │
+│   167 │   │   if proxy_url is None:                                          │
+│ ❱ 168 │   │   │   return await super()._create_connection()                  │
+│   169                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/grpclib/client.py:725 in  │
+│ _create_connection                                                           │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/asyncio/base_events.py:1083 in create_connection                     │
+│                                                                              │
+│   1082 │   │   │                                                             │
+│ ❱ 1083 │   │   │   infos = await self._ensure_resolved(                      │
+│   1084 │   │   │   │   (host, port), family=family,                          │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/asyncio/base_events.py:1466 in _ensure_resolved                      │
+│                                                                              │
+│   1465 │   │   else:                                                         │
+│ ❱ 1466 │   │   │   return await loop.getaddrinfo(host, port, family=family,  │
+│   1467 │   │   │   │   │   │   │   │   │   │     proto=proto, flags=flags)   │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/asyncio/base_events.py:905 in getaddrinfo                            │
+│                                                                              │
+│    904 │   │                                                                 │
+│ ❱  905 │   │   return await self.run_in_executor(                            │
+│    906 │   │   │   None, getaddr_func, host, port, family, type, proto, flag │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/concurrent/futures/thread.py:59 in run                               │
+│                                                                              │
+│    58 │   │   try:                                                           │
+│ ❱  59 │   │   │   result = self.fn(*self.args, **self.kwargs)                │
+│    60 │   │   except BaseException as exc:                                   │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/socket.py:978 in getaddrinfo                                         │
+│                                                                              │
+│   977 │   addrlist = []                                                      │
+│ ❱ 978 │   for res in _socket.getaddrinfo(host, port, family, type, proto, fl │
+│   979 │   │   af, socktype, proto, canonname, sa = res                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_qualify.py:190 in main                         │
+│                                                                              │
+│   189 │   ledger_path=ledger_folder/f'{group_id}.json'                       │
+│ ❱ 190 │   digest=hashlib.sha256(json.dumps(payloads,sort_keys=True).encode() │
+│   191 │   ledger=json.loads(ledger_path.read_text()) if ledger_path.exists() │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:49 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2081  │
+│ in remote                                                                    │
+│                                                                              │
+│   2080 │   │                                                                 │
+│ ❱ 2081 │   │   return await self._call_function(args, kwargs)                │
+│   2082                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2018  │
+│ in _call_function                                                            │
+│                                                                              │
+│   2017 │   │                                                                 │
+│ ❱ 2018 │   │   return await invocation.run_function()                        │
+│   2019                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:486   │
+│ in run_function                                                              │
+│                                                                              │
+│    485 │   │   │   metadata = await self.client.get_input_plane_metadata(sel │
+│ ❱  486 │   │   │   await_response: api_pb2.AttemptAwaitResponse = await self │
+│    487 │   │   │   │   await_request,                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ConnectionError: [Errno -3] Temporary failure in name resolution

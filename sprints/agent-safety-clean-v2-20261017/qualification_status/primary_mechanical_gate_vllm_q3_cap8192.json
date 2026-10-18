@@ -1,0 +1,74 @@
+{
+  "attempt": "vllm_q3_cap8192",
+  "arms": {
+    "intact": {
+      "pilot_n": 5,
+      "sweep_n": 128,
+      "pilot_capped": 0,
+      "sweep_capped": 0,
+      "sweep_truncated": 0,
+      "H5": true,
+      "H1": true,
+      "terminal": true,
+      "worker_status": "QUALIFICATION_COMPLETE"
+    },
+    "refusal_ablated": {
+      "pilot_n": 5,
+      "sweep_n": 128,
+      "pilot_capped": 0,
+      "sweep_capped": 0,
+      "sweep_truncated": 0,
+      "H5": true,
+      "H1": true,
+      "terminal": true,
+      "worker_status": "QUALIFICATION_COMPLETE"
+    },
+    "pca_101": {
+      "pilot_n": 5,
+      "sweep_n": 128,
+      "pilot_capped": 0,
+      "sweep_capped": 0,
+      "sweep_truncated": 0,
+      "H5": true,
+      "H1": true,
+      "terminal": true,
+      "worker_status": "QUALIFICATION_COMPLETE"
+    },
+    "pca_102": {
+      "pilot_n": 5,
+      "sweep_n": 128,
+      "pilot_capped": 0,
+      "sweep_capped": 0,
+      "sweep_truncated": 0,
+      "H5": true,
+      "H1": true,
+      "terminal": true,
+      "worker_status": "QUALIFICATION_COMPLETE"
+    },
+    "pca_103": {
+      "pilot_n": 5,
+      "sweep_n": 128,
+      "pilot_capped": 0,
+      "sweep_capped": 0,
+      "sweep_truncated": 0,
+      "H5": true,
+      "H1": true,
+      "terminal": true,
+      "worker_status": "QUALIFICATION_COMPLETE"
+    },
+    "unrelated": {
+      "pilot_n": 5,
+      "sweep_n": 0,
+      "pilot_capped": 1,
+      "sweep_capped": 0,
+      "sweep_truncated": 0,
+      "H5": false,
+      "H1": false,
+      "terminal": true,
+      "worker_status": "H5_FAILED"
+    }
+  },
+  "terminal": true,
+  "passed": false,
+  "held_out_refusal_effects_computed": false
+}

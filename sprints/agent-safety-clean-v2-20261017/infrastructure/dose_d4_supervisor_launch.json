@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-18T07:53:42.715715+00:00",
+  "pid": 501764,
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+    "scripts/admit_phase1_doses_d4.py",
+    "--attempt",
+    "author_v1_d4_cap8192_format_v1",
+    "--author-attempt",
+    "v1",
+    "--primary-receipt",
+    "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+    "--calibration-receipt",
+    "records/phase1_calibration_author_v1_c2_receipt.json",
+    "--descriptive-amendment",
+    "infrastructure/phase1_descriptive_dose_format_retry_v1.json",
+    "--poll-seconds",
+    "180"
+  ],
+  "log": "infrastructure/dose_d4_supervisor.log",
+  "scope": "Separate uniform format+cap hygiene repair of fixed descriptive measurement. Central admission only; primary qualification and Phase2/3 remain false.",
+  "workers_max": 4,
+  "proposed_reservation_usd": 30,
+  "source_sha256": "ca175915ecab8c8926e1d72d3b7ca9afb401f8f52fade04dd2947447fa64a275"
+}

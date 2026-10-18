@@ -1,0 +1,17 @@
+======================================================================
+FAIL: test_changed_prompt_ids_and_runtime_limits_are_rejected (test_audit_dose_response.DoseRawAuditTests.test_changed_prompt_ids_and_runtime_limits_are_rejected)
+----------------------------------------------------------------------
+AssertionError: Journal source binding differs: dose:ledger_00:low:harmless:implicit:turn1 prompt_token_ids
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/tests/test_audit_dose_response.py", line 203, in test_changed_prompt_ids_and_runtime_limits_are_rejected
+    with self.assertRaisesRegex(AssertionError,'token replay differs'):self.run_audit()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "token replay differs" does not match "Journal source binding differs: dose:ledger_00:low:harmless:implicit:turn1 prompt_token_ids"
+
+----------------------------------------------------------------------
+Ran 10 tests in 6.017s
+
+FAILED (failures=1)

@@ -1,0 +1,2636 @@
+{
+  "limits": {
+    "gpus": 10,
+    "single_gpu_workers": 6,
+    "tp8_workers": 1
+  },
+  "policy": "Whole-app bounds until verified stopped or verified reduced live count under a recorded autoscaler override. Conservative 10-GPU account ceiling; one TP8 job plus at most two single-GPU workers while it is active. Sole launch authority and shared atomic budget lock.",
+  "jobs": [
+    {
+      "job": "six_arm_batched_qualification_vllm_q2",
+      "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/batched_qualification_vllm_q2.log",
+      "allocation_status": "released_after_modal_stop",
+      "runtime_override": {
+        "function_id": "fu-X1TdDIzXiZM91YFEhRIobL",
+        "max_containers": 1,
+        "verified_utc": "2026-10-18T04:10:25.599612+00:00",
+        "live_count": {
+          "function_id": "fu-X1TdDIzXiZM91YFEhRIobL",
+          "num_total_runners": 1,
+          "num_running_inputs": 1,
+          "backlog": 3
+        },
+        "source": "infrastructure/primary_function_info_after_rebalance.json"
+      },
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:30.144098+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-batched-qualification",
+          "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 20:44:08-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:34:31-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "qualify": {
+              "id": "fu-X1TdDIzXiZM91YFEhRIobL",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            },
+            "run_group": {
+              "id": "fu-b3IwjClEPEPeYzy9G5B2ZX",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:07.706215+00:00",
+        "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+        "stopped_at": "2026-10-17 21:34:31-07:00"
+      }
+    },
+    {
+      "job": "six_arm_forward_logits_full_v2_logits_q1",
+      "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+      "gpus": 2,
+      "single_gpu_workers": 2,
+      "tp8_workers": 0,
+      "log": "infrastructure/forward_logits_full_v2_logits_q1.log",
+      "allocation_status": "released_after_modal_stop",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:31.382861+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-qualification",
+          "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 20:38:57-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:05:19-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "capture_logits": {
+              "id": "fu-oZDA5VEvuMyvIXR3OBR7BZ",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  },
+                  {
+                    "count": 1,
+                    "gpu_type": "H200"
+                  }
+                ]
+              }
+            },
+            "qualify": {
+              "id": "fu-YFOpFGqL1ab6RLDqz4Ocob",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  },
+                  {
+                    "count": 1,
+                    "gpu_type": "H200"
+                  }
+                ]
+              }
+            },
+            "run_group": {
+              "id": "fu-WFCuMN8e4NmFuk83WfgkY4",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:07.707082+00:00",
+        "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+        "stopped_at": "2026-10-17 21:05:19-07:00"
+      }
+    },
+    {
+      "job": "paired_scenario_author_v1",
+      "gpus": 8,
+      "single_gpu_workers": 0,
+      "tp8_workers": 1,
+      "log": "infrastructure/scenario_author_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_scenario_author.py",
+        "--attempt",
+        "v1",
+        "--external-receipt",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json",
+        "--cap",
+        "4096"
+      ],
+      "created_utc": "2026-10-18T03:48:41.437587+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "launch_pid": 360955,
+      "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:32.537547+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-scenario-author",
+          "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 20:48:41-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:31:04-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "author": {
+              "id": "fu-NTz7a0mD95lTblXnAvOdYJ",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 8,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            },
+            "coordinate": {
+              "id": "fu-n09sXSpaxbY71X5uBT9JMQ",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:07.707564+00:00",
+        "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+        "stopped_at": "2026-10-17 21:31:04-07:00"
+      }
+    },
+    {
+      "job": "llama_checkpoint_download_v1",
+      "gpus": 0,
+      "single_gpu_workers": 0,
+      "tp8_workers": 0,
+      "log": "infrastructure/llama_checkpoint_download_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_preflight.py",
+        "--download-repo",
+        "nvidia/Llama-3.3-70B-Instruct-FP8"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_preflight.py",
+        "source_sha256": "a336a2e38ae9611558f7a24b4043be8cb4864736c0053c3e7129ac98c98ce548",
+        "functions": {
+          "download": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 1800,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                16384,
+                16384
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 1800
+            }
+          }
+        },
+        "excluded_functions": {
+          "probe": "Download entrypoint branch calls only download.remote(row), once."
+        },
+        "call_bound_basis": "The selected download_repo entrypoint calls download.remote exactly once; retry=0; no GPU function or spawned children."
+      },
+      "created_utc": "2026-10-18T03:55:32.784300+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "a336a2e38ae9611558f7a24b4043be8cb4864736c0053c3e7129ac98c98ce548",
+        "whole_app_allocation": {
+          "gpus": 0,
+          "single_gpu_workers": 0,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 1,
+        "function_bounds": [
+          {
+            "function": "download",
+            "max_calls": 1,
+            "seconds_per_call_bound": 3720,
+            "rate_usd_per_second": 8.792e-05,
+            "compute_bound_usd": 0.3270624
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 365102,
+      "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:33.780040+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-preflight",
+          "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 20:55:32-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:00:36-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "download": {
+              "id": "fu-mIriDJpADIEJUlbvWYsDWZ",
+              "summary": {}
+            },
+            "probe": {
+              "id": "fu-QiMpuFlCSYj8MxLLWSQ6fi",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:07.708307+00:00",
+        "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+        "stopped_at": "2026-10-17 21:00:36-07:00"
+      }
+    },
+    {
+      "job": "ablated_forward_logits_q2_cap8192",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/forward_logits_q2_cap8192.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_qualify.py",
+        "--stage",
+        "logits",
+        "--arms",
+        "refusal_ablated",
+        "--cap",
+        "8192",
+        "--attempt",
+        "full_v2_logits_q2_cap8192",
+        "--family",
+        "checkpoints_full_residual_v2"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_qualify.py",
+        "source_sha256": "6eace62b96d34dc77b0109a1f8d5ad5fb0402ae6780b52c37e1fd2eb9b71670a",
+        "functions": {
+          "capture_logits": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": [
+                "H100",
+                "H200"
+              ],
+              "max_containers": 1,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "run_group": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 25200,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 25200
+            }
+          }
+        },
+        "excluded_functions": {
+          "qualify": "stage logits uses capture_logits.spawn; qualify.local executes in the bounded capture worker, not a separate GPU call."
+        },
+        "call_bound_basis": "One selected arm and one durable call ID, stage logits; five fresh pilots at8192 then unchanged64forward observations; no behavioral qualification rerun."
+      },
+      "created_utc": "2026-10-18T04:10:26.846916+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "6eace62b96d34dc77b0109a1f8d5ad5fb0402ae6780b52c37e1fd2eb9b71670a",
+        "whole_app_allocation": {
+          "gpus": 1,
+          "single_gpu_workers": 1,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 7,
+        "function_bounds": [
+          {
+            "function": "capture_logits",
+            "max_calls": 1,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 0.0014554799999999999,
+            "compute_bound_usd": 5.8510295999999995
+          },
+          {
+            "function": "run_group",
+            "max_calls": 1,
+            "seconds_per_call_bound": 50520,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.7739663999999999
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 373749,
+      "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:34.959278+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-qualification",
+          "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 21:10:27-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:16:56-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "capture_logits": {
+              "id": "fu-yCWbsveealdyJkhKc3r7W9",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  },
+                  {
+                    "count": 1,
+                    "gpu_type": "H200"
+                  }
+                ]
+              }
+            },
+            "qualify": {
+              "id": "fu-vdwG3NFo9PqXVcJLGxucX8",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  },
+                  {
+                    "count": 1,
+                    "gpu_type": "H200"
+                  }
+                ]
+              }
+            },
+            "run_group": {
+              "id": "fu-w3oQu6o2h8ZGlDWsN7jdup",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:09.306572+00:00",
+        "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+        "stopped_at": "2026-10-17 21:16:56-07:00"
+      }
+    },
+    {
+      "job": "llama_serving_pilot_v1",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/llama_serving_pilot_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_llama_serving_pilot.py",
+        "--attempt",
+        "v1"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_llama_serving_pilot.py",
+        "source_sha256": "5ebee7019581533bb934652a656385d795894d3c4162c636e149f855afabc988",
+        "functions": {
+          "pilot": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": "H200",
+              "max_containers": 1,
+              "timeout": 1800,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "run_pilot": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "One durable CPU coordinator and one five-trial Llama stack pilot, no downstream sweeps and no retries."
+      },
+      "created_utc": "2026-10-18T04:17:44.968599+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "5ebee7019581533bb934652a656385d795894d3c4162c636e149f855afabc988",
+        "whole_app_allocation": {
+          "gpus": 1,
+          "single_gpu_workers": 1,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 4,
+        "function_bounds": [
+          {
+            "function": "pilot",
+            "max_calls": 1,
+            "seconds_per_call_bound": 2220,
+            "rate_usd_per_second": 0.0014554799999999999,
+            "compute_bound_usd": 3.2311655999999997
+          },
+          {
+            "function": "run_pilot",
+            "max_calls": 1,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.0615864
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 378129,
+      "app_id": "ap-aTtYCFNtxQ7SR2AiI5724x",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:36.062989+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-llama-serving-pilot",
+          "app_id": "ap-aTtYCFNtxQ7SR2AiI5724x",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 21:17:45-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:22:01-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "pilot": {
+              "id": "fu-ysyI5vVQ9RBVcg4TJ4NVxP",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H200"
+                  }
+                ]
+              }
+            },
+            "run_pilot": {
+              "id": "fu-GNOljEId5RdJ76N4MqRCD0",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:09.307325+00:00",
+        "app_id": "ap-aTtYCFNtxQ7SR2AiI5724x",
+        "stopped_at": "2026-10-17 21:22:01-07:00"
+      }
+    },
+    {
+      "job": "phase1_dose_materialization_checkpoint_doses_v1",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/dose_materialization_author_v1_d1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_materialize_doses.py"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_materialize_doses.py",
+        "source_sha256": "31c919635c6375e67675dfd2f59ed02a787b2267594980fc10d61d536de22c87",
+        "functions": {
+          "materialize_dose": {
+            "max_calls": 3,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 1,
+              "timeout": 1800,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 7200,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                2048,
+                2048
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 7200
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly three sequential fixed-alpha materialize_dose FunctionCalls plus one durable coordinator, retries=0; no evaluation calls."
+      },
+      "frozen_files": {
+        "ENGINEERING_CORRECTIONS.md": "40f2201a4d4cf25c7698d5d95158288a537e712056435dd9d2284122a267fa02",
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "activations/phase1_direction_audit.json": "0dd2827ea26ffb897f5d6dbc4f20ec472b2a37528e73617bd031fc9ff6dcc8f2",
+        "activations/phase1_directions.npz": "7c902625e47e2d630ef777a10993694bb0d2d83353ceaffe2e0a9bc530b27384",
+        "activations/phase1_source.npz": "1310548f97e6fcb865c1a80940ee9c2eeb8d2d054a652776a7a58adc7359f8b6",
+        "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511",
+        "checkpoints_full_residual_v2/refusal_ablated_materialization.json": "a95eb1bc615ae040d7a8acbae3f657095c67adf7948588136b76b23f2bfd0f52",
+        "infrastructure/Qwen__Qwen3.8-27B-FP8_config.json": "74227dd615bf1ea975aa676bdf355a0379858c12f394b5365cd9dfa5fc2c70bc",
+        "infrastructure/Qwen__Qwen3.8-27B_config.json": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+        "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+        "raw_transcripts/phase1_source_vectors/intact_bf16.jsonl": "5e7418d8402783088cbe89daaa685921ad570b4215cbe49ef4a3ba70cceb6fd6",
+        "records/phase1_source_directions_receipt.json": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+        "scripts/admit_parallel_calibration.py": "c2cf0678d0baa4436ddd6cfffbae3c57db7a0ea099f40d2082f0af884b581467",
+        "scripts/admit_phase1_doses.py": "399f19b6a0996628382304ca7c0dd3e950eee7103aeaf68c7b4235dba5ad9e88",
+        "scripts/audit_source_directions.py": "edb992c9e09fb72c5c2ba4977072b24d17210a00cd02470810c2442fbefca23f",
+        "scripts/checkpoint_math.py": "bd697815de21509758a5ea6d04712287e103ad7d9e01af50d38acb2ac6a5ecf7",
+        "scripts/launch_bounded_job.py": "53b632fea624e4a744650b6d977e63f9d6ab38e485a97e0d864a1153258e46d1",
+        "scripts/modal_materialize_doses.py": "31c919635c6375e67675dfd2f59ed02a787b2267594980fc10d61d536de22c87",
+        "scripts/prepare_directions.py": "23a8db9487bcbc31a7e528dc48d08eb19d58c0525adb2aad7755b5fae2e0e62b"
+      },
+      "created_utc": "2026-10-18T04:24:26.953611+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "31c919635c6375e67675dfd2f59ed02a787b2267594980fc10d61d536de22c87",
+        "whole_app_allocation": {
+          "gpus": 1,
+          "single_gpu_workers": 1,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 9,
+        "function_bounds": [
+          {
+            "function": "materialize_dose",
+            "max_calls": 3,
+            "seconds_per_call_bound": 2220,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 8.6012568
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 14520,
+            "rate_usd_per_second": 1.7539999999999998e-05,
+            "compute_bound_usd": 0.2546808
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 382051,
+      "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:37.196675+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-materialize-doses",
+          "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 21:24:28-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:55:09-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "coordinate": {
+              "id": "fu-QhRJnSwkSsoAkHEHcNmVlG",
+              "summary": {}
+            },
+            "materialize_dose": {
+              "id": "fu-7bCbdKnVW4r7WnQv3fbrzO",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:09.308926+00:00",
+        "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+        "stopped_at": "2026-10-17 21:55:09-07:00"
+      }
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q3_cap8192",
+      "gpus": 4,
+      "single_gpu_workers": 4,
+      "tp8_workers": 0,
+      "log": "infrastructure/batched_qualification_vllm_q3_cap8192.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_primary_qualification_vllm.py",
+        "--attempt",
+        "vllm_q3_cap8192",
+        "--cap",
+        "8192"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_primary_qualification_vllm.py",
+        "source_sha256": "ae8843fa10fc4f1a6647312fae1e82a21468a3400431fcfcdf2fdfc2650f817f",
+        "functions": {
+          "qualify": {
+            "max_calls": 6,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 2,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "run_group": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 14400,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly six uniformly budgeted qualifier workers, each fresh5pilot then128trials only on H5PASS; one durable coordinator; retries0."
+      },
+      "frozen_files": {
+        "scripts/modal_primary_qualification_vllm.py": "ae8843fa10fc4f1a6647312fae1e82a21468a3400431fcfcdf2fdfc2650f817f",
+        "scripts/primary_serving_worker.py": "1793c4e14948006e1dab53a1f79de3e8bfe4b514526fd2900251667688b3e2f5",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/phase1_pilot.jsonl": "4c2ac48f756a83c505e895466da178fb09b5a9bfb8414b1ef32a5570f095892d",
+        "stimuli/phase1_qualification.jsonl": "0d41de8e6f49e4d2d2d9e96a752ed2b18feea090df630f65e31a4e426ce726be",
+        "infrastructure/primary_uniform_cap8192_rule.json": "3c17176ddc3eda5ab262bad7a20ea9faff2c9960484e4c482b3bc8044574f612",
+        "infrastructure/primary_logit_arm_attempts.json": "2ab8219f6b432e37eef3304a78b41a1c75357320edb8fc0837e235735749ef68",
+        "infrastructure/batched_runtime_transition_rule.json": "9fa1efde2208229f3825025a2eb6bffe433fb0ba37dbc5d0e5d660f3194515c8",
+        "qualification_status/serving_v4_intact.json": "f9835f76cead1a238ade999665c10451c472092818d70665ee701fe30d89a119"
+      },
+      "created_utc": "2026-10-18T04:32:39.323701+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "ae8843fa10fc4f1a6647312fae1e82a21468a3400431fcfcdf2fdfc2650f817f",
+        "whole_app_allocation": {
+          "gpus": 2,
+          "single_gpu_workers": 2,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 32,
+        "function_bounds": [
+          {
+            "function": "qualify",
+            "max_calls": 6,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 31.1504976
+          },
+          {
+            "function": "run_group",
+            "max_calls": 1,
+            "seconds_per_call_bound": 14820,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.22704239999999998
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 386947,
+      "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+      "autoscaler_override": {
+        "utc": "2026-10-18T04:46:42.256283+00:00",
+        "function_id": "fu-dc6mdp0uUnZZS2MVZCZrTk",
+        "max_containers_before": 2,
+        "max_containers_after": 4,
+        "reason": "Use released TP8 capacity for already queued independent arms; exact same six durable calls, checkpoints, prompts, worker resources, decoding and distinct arm outputs. Existing reservation bounds all six calls independent of concurrency.",
+        "effective_bound_note": "Four simultaneous workers override frozen decorator max2; use max4 for any future stopped-lifetime reconciliation. Six-call compute reservation unchanged."
+      },
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:38.310535+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-batched-qualification",
+          "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 21:32:39-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:11:11-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "qualify": {
+              "id": "fu-dc6mdp0uUnZZS2MVZCZrTk",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            },
+            "run_group": {
+              "id": "fu-TzyAE0gmVxcf5twg1ilfOp",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:09.312959+00:00",
+        "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+        "stopped_at": "2026-10-17 22:11:11-07:00"
+      }
+    },
+    {
+      "job": "phase1_intact_calibration_author_v1_c1",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/calibration_author_v1_c1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_sandbox_evaluation.py",
+        "--config",
+        "stimuli/calibration_v1.json",
+        "--attempt",
+        "author_v1_c1"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_sandbox_evaluation.py",
+        "source_sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "functions": {
+          "evaluate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 1,
+              "timeout": 7200,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 14400,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 14400
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "One fixed Intact payload; one durable coordinate call and one evaluate FunctionCall; no retries or other model arms."
+      },
+      "frozen_files": {
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "activations/phase1_activation_full_v2/intact.npz": "5594e964a385815ab98a17274d5ec1cf73da42e6498c992d1be9309c18ddde21",
+        "activations/phase1_activation_full_v2/refusal_ablated.npz": "38ae537c9f66af1cbaeb1f51b319eb772826404a5555d79b02de9dc9ac0d82d1",
+        "activations/phase1_direction_audit.json": "0dd2827ea26ffb897f5d6dbc4f20ec472b2a37528e73617bd031fc9ff6dcc8f2",
+        "activations/phase1_directions.npz": "7c902625e47e2d630ef777a10993694bb0d2d83353ceaffe2e0a9bc530b27384",
+        "activations/phase1_source.npz": "1310548f97e6fcb865c1a80940ee9c2eeb8d2d054a652776a7a58adc7359f8b6",
+        "checkpoints/intact_materialization.json": "a1b015cfc20a0481bd10b5e080fccbaeeb163eb86009dae7ea46a61ac24cee1c",
+        "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511",
+        "infrastructure/intact_zero_vector_identity.json": "2124174eba0ab07159ce72527361dcc6d5a5dc3210bda76cc903b8656240ffec",
+        "raw_transcripts/phase1_activation_vectors_full_v2/intact.jsonl": "1c4a9b03fce0821fea033500ebff68492bb2d9b08fc4aeb30d0efdc4553e3cf0",
+        "raw_transcripts/phase1_activation_vectors_full_v2/refusal_ablated.jsonl": "4707d0c957a526b343996bc3f10220670618422c1a5022c55541f37ea36278f1",
+        "raw_transcripts/phase1_author_v1/flash_next_uncensored.jsonl": "764d610d46c32af867bbcbe0cc28d014ae8db82ffbd34f4afc0bfbac24c3f18b",
+        "raw_transcripts/phase1_source_vectors/intact_bf16.jsonl": "5e7418d8402783088cbe89daaa685921ad570b4215cbe49ef4a3ba70cceb6fd6",
+        "records/phase1_author_v1_receipt.json": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+        "records/phase1_post_fp8_gate_receipt.json": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+        "records/phase1_source_directions_receipt.json": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+        "scripts/admit_parallel_calibration.py": "f48a00ef0c5f8da8998c6e7b2bbf8ebd6d13ea21c1b5caa9c408c358938ca938",
+        "scripts/audit_authored_scenarios.py": "63b6645e33c9524f56533aaf9a92f8d72806b2ae5cce57c405913738d6bf7a53",
+        "scripts/audit_sandbox_episodes.py": "d833573c857f27dfc0e753b5f40b17e606a742310cef562fe1159b3e1abf5370",
+        "scripts/audit_source_directions.py": "edb992c9e09fb72c5c2ba4977072b24d17210a00cd02470810c2442fbefca23f",
+        "scripts/check_phase1_activation_gate.py": "e3e67ed04b3c8bd10cb05a228dfa60ab877ac69c07384392c08ed6423a58e93e",
+        "scripts/launch_bounded_job.py": "c8ca1809f6992654d39c1240e26f4c6020e5386c7df3cf6940836e08d8e95de5",
+        "scripts/modal_sandbox_evaluation.py": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "scripts/prepare_calibration.py": "8770698e7a8f6eb6eba97186fb1ebf7ee976c2f8a3db751e22f96c5264073f0a",
+        "scripts/prepare_directions.py": "23a8db9487bcbc31a7e528dc48d08eb19d58c0525adb2aad7755b5fae2e0e62b",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/primary_model_loader.py": "a00a7f528f6467f372986e979edbd7888548e2e0ace81f3fc986ee676262df99",
+        "scripts/sandbox_evaluation_worker.py": "27ce0d56cf2099dfc0c70a75f8b942cc0f9990db4f8da24868dadefee315ebca",
+        "scripts/sandbox_runtime.py": "44aa769ef3ab4cb9c9d1628880beb763555165fe5ff5995ffaf48de5a4afa480",
+        "scripts/scenario_contract.py": "dae495d32da6858c89f6560d62aa81b160c08504dc8cab63ca26c0a5f4f9b6ee",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/authored_scenarios_v1.jsonl": "5b4c848de395c066deac590c0ff06ba3388275597b852ff0237a6359f1c71d1e",
+        "stimuli/calibration_v1.json": "e7d54d7500fe89b1f4b6ae7055527a03e78eccab1fa683d13289c8db7a8da394",
+        "stimuli/scenario_author_pilot_requests.jsonl": "9b49785acb55e630481fe06f3c27dfd4493622e660bcd5bf0e56cc34e3c52fc7",
+        "stimuli/scenario_author_requests.jsonl": "a366915613fcb20d7d238ebc2c5295b6e4bc50b573901bb04997f155fd7eae10"
+      },
+      "created_utc": "2026-10-18T04:39:49.172379+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "whole_app_allocation": {
+          "gpus": 1,
+          "single_gpu_workers": 1,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 11,
+        "function_bounds": [
+          {
+            "function": "evaluate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 7620,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 9.8410776
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 28920,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.44305439999999996
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 391326,
+      "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:39.422581+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-sandbox-evaluation",
+          "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 21:39:49-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 21:48:18-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "coordinate": {
+              "id": "fu-Q1Mb1Ks0HQSJgsnvH1tKKg",
+              "summary": {}
+            },
+            "evaluate": {
+              "id": "fu-7Xu0iKHLzzwSX1QhbdviLp",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:10.676463+00:00",
+        "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+        "stopped_at": "2026-10-17 21:48:18-07:00"
+      }
+    },
+    {
+      "job": "phase1_intact_calibration_author_v1_c2",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/calibration_author_v1_c2.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_sandbox_evaluation.py",
+        "--config",
+        "stimuli/calibration_v1_format_v2.json",
+        "--attempt",
+        "author_v1_c2"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_sandbox_evaluation.py",
+        "source_sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "functions": {
+          "evaluate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 1,
+              "timeout": 7200,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 14400,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 14400
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "One fixed Intact payload; one durable coordinate call and one evaluate FunctionCall; no retries or other model arms."
+      },
+      "frozen_files": {
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "activations/phase1_activation_full_v2/intact.npz": "5594e964a385815ab98a17274d5ec1cf73da42e6498c992d1be9309c18ddde21",
+        "activations/phase1_activation_full_v2/refusal_ablated.npz": "38ae537c9f66af1cbaeb1f51b319eb772826404a5555d79b02de9dc9ac0d82d1",
+        "activations/phase1_direction_audit.json": "0dd2827ea26ffb897f5d6dbc4f20ec472b2a37528e73617bd031fc9ff6dcc8f2",
+        "activations/phase1_directions.npz": "7c902625e47e2d630ef777a10993694bb0d2d83353ceaffe2e0a9bc530b27384",
+        "activations/phase1_source.npz": "1310548f97e6fcb865c1a80940ee9c2eeb8d2d054a652776a7a58adc7359f8b6",
+        "checkpoints/intact_materialization.json": "a1b015cfc20a0481bd10b5e080fccbaeeb163eb86009dae7ea46a61ac24cee1c",
+        "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511",
+        "infrastructure/intact_zero_vector_identity.json": "2124174eba0ab07159ce72527361dcc6d5a5dc3210bda76cc903b8656240ffec",
+        "raw_transcripts/phase1_activation_vectors_full_v2/intact.jsonl": "1c4a9b03fce0821fea033500ebff68492bb2d9b08fc4aeb30d0efdc4553e3cf0",
+        "raw_transcripts/phase1_activation_vectors_full_v2/refusal_ablated.jsonl": "4707d0c957a526b343996bc3f10220670618422c1a5022c55541f37ea36278f1",
+        "raw_transcripts/phase1_author_v1/flash_next_uncensored.jsonl": "764d610d46c32af867bbcbe0cc28d014ae8db82ffbd34f4afc0bfbac24c3f18b",
+        "raw_transcripts/phase1_source_vectors/intact_bf16.jsonl": "5e7418d8402783088cbe89daaa685921ad570b4215cbe49ef4a3ba70cceb6fd6",
+        "records/phase1_author_v1_receipt.json": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+        "records/phase1_post_fp8_gate_receipt.json": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+        "records/phase1_source_directions_receipt.json": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+        "scripts/admit_parallel_calibration.py": "7f45db7119408cc1f37f616e573d8f701e1c4789ad7e6b6ad8ec86112147947b",
+        "scripts/audit_authored_scenarios.py": "63b6645e33c9524f56533aaf9a92f8d72806b2ae5cce57c405913738d6bf7a53",
+        "scripts/audit_sandbox_episodes.py": "d833573c857f27dfc0e753b5f40b17e606a742310cef562fe1159b3e1abf5370",
+        "scripts/audit_source_directions.py": "edb992c9e09fb72c5c2ba4977072b24d17210a00cd02470810c2442fbefca23f",
+        "scripts/check_phase1_activation_gate.py": "e3e67ed04b3c8bd10cb05a228dfa60ab877ac69c07384392c08ed6423a58e93e",
+        "scripts/launch_bounded_job.py": "b23d6e70737dd50fa6e63c6f86dee06ecc581ffbf1c3e338e91b099d7bf1082a",
+        "scripts/modal_sandbox_evaluation.py": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "scripts/prepare_calibration.py": "02540c6be638754bcc210feafc408ed4e3540fc34b3be7f9ccc21d3652d27b22",
+        "scripts/prepare_directions.py": "23a8db9487bcbc31a7e528dc48d08eb19d58c0525adb2aad7755b5fae2e0e62b",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/primary_model_loader.py": "a00a7f528f6467f372986e979edbd7888548e2e0ace81f3fc986ee676262df99",
+        "scripts/sandbox_evaluation_worker.py": "27ce0d56cf2099dfc0c70a75f8b942cc0f9990db4f8da24868dadefee315ebca",
+        "scripts/sandbox_runtime.py": "44aa769ef3ab4cb9c9d1628880beb763555165fe5ff5995ffaf48de5a4afa480",
+        "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/authored_scenarios_v1.jsonl": "5b4c848de395c066deac590c0ff06ba3388275597b852ff0237a6359f1c71d1e",
+        "stimuli/calibration_v1_format_v2.json": "ec623f5b0d41a5a61b3dc46f3f8b3b55c598bc00314149b6872aac537e3ec77c",
+        "stimuli/scenario_author_pilot_requests.jsonl": "9b49785acb55e630481fe06f3c27dfd4493622e660bcd5bf0e56cc34e3c52fc7",
+        "stimuli/scenario_author_requests.jsonl": "a366915613fcb20d7d238ebc2c5295b6e4bc50b573901bb04997f155fd7eae10"
+      },
+      "created_utc": "2026-10-18T04:56:11.762411+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "whole_app_allocation": {
+          "gpus": 1,
+          "single_gpu_workers": 1,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 11,
+        "function_bounds": [
+          {
+            "function": "evaluate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 7620,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 9.8410776
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 28920,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.44305439999999996
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 400753,
+      "app_id": "ap-GPD13FtfZozkyKkcIGig87",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:40.525880+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-sandbox-evaluation",
+          "app_id": "ap-GPD13FtfZozkyKkcIGig87",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 21:56:12-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:22:15-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "coordinate": {
+              "id": "fu-MpIZOHIKAB5PS2vZLovz2h",
+              "summary": {}
+            },
+            "evaluate": {
+              "id": "fu-Iacwduj2CobXThBAmScRzQ",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:10.706002+00:00",
+        "app_id": "ap-GPD13FtfZozkyKkcIGig87",
+        "stopped_at": "2026-10-17 22:22:15-07:00"
+      }
+    },
+    {
+      "job": "phase1_calibration_provenance_author_v1_c2_cpu_v1",
+      "gpus": 0,
+      "single_gpu_workers": 0,
+      "tp8_workers": 0,
+      "log": "infrastructure/calibration_provenance_author_v1_c2_cpu_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_capture_calibration_provenance.py",
+        "--attempt",
+        "author_v1_c2",
+        "--capture-id",
+        "cpu_v1"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_capture_calibration_provenance.py",
+        "source_sha256": "b0159c508c1d28a2150ac99ee70201f1ff25cbdeaeefae8a3d01cdddb652ae49",
+        "functions": {
+          "capture": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 1800,
+              "startup_timeout": 300,
+              "cpu": [
+                2,
+                2
+              ],
+              "memory": [
+                4096,
+                4096
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "One bounded CPU capture.remote call verifies18immutableIntactshards and copies smalltokenizer/config/execution metadata; zeroGPUcalls,retries0,uniqueexclusivecaptureID."
+      },
+      "frozen_files": {
+        "scripts/modal_capture_calibration_provenance.py": "b0159c508c1d28a2150ac99ee70201f1ff25cbdeaeefae8a3d01cdddb652ae49",
+        "scripts/audit_calibration_provenance.py": "c3cc494c04878a17a46b47f3e92ffed37359a7532e39f10c12fb236333600e79",
+        "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511"
+      },
+      "created_utc": "2026-10-18T05:03:13.791030+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "b0159c508c1d28a2150ac99ee70201f1ff25cbdeaeefae8a3d01cdddb652ae49",
+        "whole_app_allocation": {
+          "gpus": 0,
+          "single_gpu_workers": 0,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 1,
+        "function_bounds": [
+          {
+            "function": "capture",
+            "max_calls": 1,
+            "seconds_per_call_bound": 2220,
+            "rate_usd_per_second": 3.5079999999999996e-05,
+            "compute_bound_usd": 0.07787759999999999
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 404761,
+      "app_id": "ap-kbaL8cCtKq8Oqvem0WFN2F",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:41.803773+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-calibration-provenance-capture",
+          "app_id": "ap-kbaL8cCtKq8Oqvem0WFN2F",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 22:03:14-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:04:45-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "capture": {
+              "id": "fu-sf3gCcx6heGkrwHQSzpQGd",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:10.712422+00:00",
+        "app_id": "ap-kbaL8cCtKq8Oqvem0WFN2F",
+        "stopped_at": "2026-10-17 22:04:45-07:00"
+      }
+    },
+    {
+      "job": "stock_runtime_metadata_v1",
+      "gpus": 0,
+      "single_gpu_workers": 0,
+      "tp8_workers": 0,
+      "log": "infrastructure/runtime_metadata_stock_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_runtime_versions.py"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_runtime_versions.py",
+        "source_sha256": "e7ba8fba9ebecfbe99b33684d9038b21ef876c68a1bbeb232d1b2dda38cce46d",
+        "functions": {
+          "capture": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 300,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly one CPU metadata capture, one subprocess reads seven installed package versions; zero model inference/GPU; retries0; exclusive immutable output path."
+      },
+      "frozen_files": {
+        "scripts/modal_runtime_versions.py": "e7ba8fba9ebecfbe99b33684d9038b21ef876c68a1bbeb232d1b2dda38cce46d"
+      },
+      "created_utc": "2026-10-18T05:08:55.381579+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "e7ba8fba9ebecfbe99b33684d9038b21ef876c68a1bbeb232d1b2dda38cce46d",
+        "whole_app_allocation": {
+          "gpus": 0,
+          "single_gpu_workers": 0,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 1,
+        "function_bounds": [
+          {
+            "function": "capture",
+            "max_calls": 1,
+            "seconds_per_call_bound": 720,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.0110304
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 408120,
+      "app_id": "ap-K0TINySiamQqfTbI4jHF3Q",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:43.035954+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-runtime-metadata",
+          "app_id": "ap-K0TINySiamQqfTbI4jHF3Q",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 22:08:54-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:09:22-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "capture": {
+              "id": "fu-pIFKQnlIL9MKFY4ebF3AhU",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:10.720292+00:00",
+        "app_id": "ap-K0TINySiamQqfTbI4jHF3Q",
+        "stopped_at": "2026-10-17 22:09:22-07:00"
+      }
+    },
+    {
+      "job": "primary_unrelated_cap16384_preflight_v1",
+      "gpus": 1,
+      "single_gpu_workers": 1,
+      "tp8_workers": 0,
+      "log": "infrastructure/primary_unrelated_cap16384_preflight_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_primary_serving_pilot.py",
+        "--attempt",
+        "unrelated_cap16384_v1",
+        "--arm",
+        "unrelated",
+        "--cap",
+        "16384"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_primary_serving_pilot.py",
+        "source_sha256": "c2555a56714dab7b1da23f2055a793fc72d4c27704b1b019690e571ae12250ca",
+        "functions": {
+          "pilot": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": [
+                "H200",
+                "H100"
+              ],
+              "max_containers": 1,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "run_pilot": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 7200,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "One fixed five-pilot Unrelated engineering preflight at uniform planned cap16384, one durable coordinator; no heldout qualification, no repeat calls or retries."
+      },
+      "frozen_files": {
+        "scripts/modal_primary_serving_pilot.py": "c2555a56714dab7b1da23f2055a793fc72d4c27704b1b019690e571ae12250ca",
+        "scripts/primary_serving_worker.py": "afee980cdb04b019d06c87b8d5af55f1bf58561ed7881fa0394b0088c682f19f",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/phase1_pilot.jsonl": "4c2ac48f756a83c505e895466da178fb09b5a9bfb8414b1ef32a5570f095892d",
+        "raw_transcripts/phase1_activation_full_v2/intact.jsonl": "858e089d0e3d89d8f910b6eee3bbdfcefa02c64790f2f6094928fa3f06c3ad24",
+        "checkpoints_full_residual_v2/unrelated_materialization.json": "bd66256e6534e52a86d3df900343572b8b5112ecce078341600a55bfc9902a20",
+        "infrastructure/primary_uniform_cap16384_rule.json": "92402e7301b2a8c159dd4e955b27001f97a4f490bc1bcd5bb66ff67006b0d202"
+      },
+      "created_utc": "2026-10-18T05:14:38.328548+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "c2555a56714dab7b1da23f2055a793fc72d4c27704b1b019690e571ae12250ca",
+        "whole_app_allocation": {
+          "gpus": 1,
+          "single_gpu_workers": 1,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 6,
+        "function_bounds": [
+          {
+            "function": "pilot",
+            "max_calls": 1,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 0.0014554799999999999,
+            "compute_bound_usd": 5.8510295999999995
+          },
+          {
+            "function": "run_pilot",
+            "max_calls": 1,
+            "seconds_per_call_bound": 7620,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.11673839999999999
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 411815,
+      "app_id": "ap-mibAtkLNQJ2vWrrXs5xuSV",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:44.168867+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+          "app_id": "ap-mibAtkLNQJ2vWrrXs5xuSV",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 22:14:38-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:25:48-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "pilot": {
+              "id": "fu-cKBhqrLPZ5IrrcftnnCXcD",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 1,
+                    "gpu_type": "H200"
+                  },
+                  {
+                    "count": 1,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            },
+            "run_pilot": {
+              "id": "fu-CtT7mrWfN6P6RMOFBlr6XI",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:12.100770+00:00",
+        "app_id": "ap-mibAtkLNQJ2vWrrXs5xuSV",
+        "stopped_at": "2026-10-17 22:25:48-07:00"
+      }
+    },
+    {
+      "job": "exp23_unified_author_v1",
+      "gpus": 8,
+      "single_gpu_workers": 0,
+      "tp8_workers": 1,
+      "log": "infrastructure/exp23_author_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_exp23_author.py",
+        "--attempt",
+        "v1",
+        "--external-receipt",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_exp23_author.py",
+        "source_sha256": "9ed4babf8905f1cc17bffadae61e43754af070d72a361e5a8e458a2fee18bcf5",
+        "functions": {
+          "author": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": "H100:8",
+              "max_containers": 1,
+              "timeout": 3600,
+              "startup_timeout": 600,
+              "cpu": [
+                16,
+                16
+              ],
+              "memory": [
+                131072,
+                131072
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 7200,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly one TP8 unified-author call for five fresh pilots then all48paired author records if H5PASS, plus one durable CPU coordinator. No Executor, Phase2 empirical evaluation, additional attempts, or retries."
+      },
+      "frozen_files": {
+        "scripts/modal_exp23_author.py": "9ed4babf8905f1cc17bffadae61e43754af070d72a361e5a8e458a2fee18bcf5",
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+        "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_download.json": "9160305b398cca92ded311b666413ee5790fb4fc6dfb613b751e4cbb9ee88234",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+        "stimuli/exp23_author_v1_input.json": "70366895ad9766ed2e61a5857d64aac1774f8851c5393f34af5892e16c9d977f",
+        "scripts/exp23_author_worker.py": "c56323e7a5b43371d3d6f4c2d2e9cc72b125ba85bf64cde8986ff0c31deab956",
+        "scripts/exp23_design.py": "571a662a202c3d6636606c6c3fc12286dfe45ddcf4023522460533dc69b87c3a",
+        "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3"
+      },
+      "created_utc": "2026-10-18T05:14:39.739748+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "9ed4babf8905f1cc17bffadae61e43754af070d72a361e5a8e458a2fee18bcf5",
+        "whole_app_allocation": {
+          "gpus": 8,
+          "single_gpu_workers": 0,
+          "tp8_workers": 1
+        },
+        "minimum_compute_reservation_usd": 41,
+        "function_bounds": [
+          {
+            "function": "author",
+            "max_calls": 1,
+            "seconds_per_call_bound": 4320,
+            "rate_usd_per_second": 0.009269760000000002,
+            "compute_bound_usd": 40.04536320000001
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 7620,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.11673839999999999
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "launch_pid": 411855,
+      "app_id": "ap-0bmVqHd8QW47ycTEPjAdzU",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:45.333815+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-exp23-author",
+          "app_id": "ap-0bmVqHd8QW47ycTEPjAdzU",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 22:14:39-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:15:31-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "author": {
+              "id": "fu-OawuEWNuv7KdhYNxKfYDm5",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 8,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            },
+            "coordinate": {
+              "id": "fu-HoWIRKcEElYL87QSrFLfyK",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:12.127620+00:00",
+        "app_id": "ap-0bmVqHd8QW47ycTEPjAdzU",
+        "stopped_at": "2026-10-17 22:15:31-07:00"
+      }
+    },
+    {
+      "job": "exp23_unified_author_v2",
+      "gpus": 8,
+      "single_gpu_workers": 0,
+      "tp8_workers": 1,
+      "log": "infrastructure/exp23_author_v2.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_exp23_author.py",
+        "--attempt",
+        "v2",
+        "--external-receipt",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_exp23_author.py",
+        "source_sha256": "b46c429b9770c340d7bbff307f05000a3594784e4d7679036acd575bef6530c7",
+        "functions": {
+          "author": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": "H100:8",
+              "max_containers": 1,
+              "timeout": 3600,
+              "startup_timeout": 600,
+              "cpu": [
+                16,
+                16
+              ],
+              "memory": [
+                131072,
+                131072
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 7200,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly one TP8 unified-author call for five fresh pilots then all48paired author records if H5PASS, plus one durable CPU coordinator. No Executor, Phase2 empirical evaluation, additional attempts, or retries."
+      },
+      "frozen_files": {
+        "scripts/modal_exp23_author.py": "b46c429b9770c340d7bbff307f05000a3594784e4d7679036acd575bef6530c7",
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+        "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_download.json": "9160305b398cca92ded311b666413ee5790fb4fc6dfb613b751e4cbb9ee88234",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+        "scripts/exp23_author_worker.py": "9b73bcfdbc319c5039c2fbc1b65cf8c554a629e10c0632cedbfc1566ac0bcf2b",
+        "scripts/exp23_design.py": "571a662a202c3d6636606c6c3fc12286dfe45ddcf4023522460533dc69b87c3a",
+        "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/exp23_author_v2_input.json": "ec49742c13e166063b50ac9162d5910676c0e424f6718cff3d35635204d88cd1",
+        "infrastructure/exp23_author_v2_volume_download_manifest.json": "82aec17efceed24de401ad3ffa632557470d8fb4e641acdffec49e90daecc80d"
+      },
+      "created_utc": "2026-10-18T05:21:53.606961+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "b46c429b9770c340d7bbff307f05000a3594784e4d7679036acd575bef6530c7",
+        "whole_app_allocation": {
+          "gpus": 8,
+          "single_gpu_workers": 0,
+          "tp8_workers": 1
+        },
+        "minimum_compute_reservation_usd": 41,
+        "function_bounds": [
+          {
+            "function": "author",
+            "max_calls": 1,
+            "seconds_per_call_bound": 4320,
+            "rate_usd_per_second": 0.009269760000000002,
+            "compute_bound_usd": 40.04536320000001
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 7620,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.11673839999999999
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "admitted_upper_bound_usd": 43,
+      "launch_pid": 416037,
+      "app_id": "ap-f4D78r1ham77oSqcjTsH3D",
+      "individual_stopped_observation": {
+        "checked_utc": "2026-10-18T07:56:46.517403+00:00",
+        "source": "modal app info --json",
+        "observation": {
+          "description": "agent-safety-clean-v2-20261017-exp23-author",
+          "app_id": "ap-f4D78r1ham77oSqcjTsH3D",
+          "lifecycle": {
+            "state": "stopped",
+            "created_at": "2026-10-17 22:21:54-07:00",
+            "created_by": "denniskoshta",
+            "deployed_at": null,
+            "deployed_by": null,
+            "version": null,
+            "stopped_at": "2026-10-17 22:37:12-07:00",
+            "stopped_by": null
+          },
+          "functions": {
+            "author": {
+              "id": "fu-O2P8VOu9JjMeEJtX7HoAna",
+              "summary": {
+                "gpu_config": [
+                  {
+                    "count": 8,
+                    "gpu_type": "H100"
+                  }
+                ]
+              }
+            },
+            "coordinate": {
+              "id": "fu-ASywc5uI7bVw58PvIay3gF",
+              "summary": {}
+            }
+          },
+          "servers": {}
+        }
+      },
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:12.136902+00:00",
+        "app_id": "ap-f4D78r1ham77oSqcjTsH3D",
+        "stopped_at": "2026-10-17 22:37:12-07:00"
+      }
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q4_cap16384",
+      "gpus": 2,
+      "single_gpu_workers": 2,
+      "tp8_workers": 0,
+      "log": "infrastructure/batched_qualification_vllm_q4_cap16384.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_primary_qualification_vllm.py",
+        "--attempt",
+        "vllm_q4_cap16384",
+        "--cap",
+        "16384"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_primary_qualification_vllm.py",
+        "source_sha256": "9747d53e89df97810ff50b7ad70e0bdb259124f5500afeb38dd2d895dc227b7c",
+        "functions": {
+          "qualify": {
+            "max_calls": 6,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 2,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "run_group": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 14400,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly six uniformly 16384-token-budget qualifier workers; each runs fresh five pilots then128 qualification trials only on H5PASS; one durable coordinator, retries0. Five-pilot Unrelated preflight independently passed before admission. No previous held-out effects inspected."
+      },
+      "frozen_files": {
+        "scripts/modal_primary_qualification_vllm.py": "9747d53e89df97810ff50b7ad70e0bdb259124f5500afeb38dd2d895dc227b7c",
+        "scripts/primary_serving_worker.py": "afee980cdb04b019d06c87b8d5af55f1bf58561ed7881fa0394b0088c682f19f",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/phase1_pilot.jsonl": "4c2ac48f756a83c505e895466da178fb09b5a9bfb8414b1ef32a5570f095892d",
+        "stimuli/phase1_qualification.jsonl": "0d41de8e6f49e4d2d2d9e96a752ed2b18feea090df630f65e31a4e426ce726be",
+        "infrastructure/primary_logit_arm_attempts.json": "2ab8219f6b432e37eef3304a78b41a1c75357320edb8fc0837e235735749ef68",
+        "infrastructure/batched_runtime_transition_rule.json": "9fa1efde2208229f3825025a2eb6bffe433fb0ba37dbc5d0e5d660f3194515c8",
+        "qualification_status/serving_v4_intact.json": "f9835f76cead1a238ade999665c10451c472092818d70665ee701fe30d89a119",
+        "infrastructure/primary_uniform_cap16384_rule.json": "92402e7301b2a8c159dd4e955b27001f97a4f490bc1bcd5bb66ff67006b0d202",
+        "scripts/phase1_evidence.py": "c53bdddcd10c4d9faf3a786b92da054743cbe3d1b45c79f351b9ca6a24114c94",
+        "scripts/paired_statistics.py": "dd23ab9443c119592b3d962a4d89020773f6ef74f551689a2e40f023b03b08a0",
+        "infrastructure/primary_preflight_unrelated_cap16384_v1_independent_audit.json": "efcc2a357aa815ae6b9482aa07cfd1515599a5bba3fd0734e143cf5e8f07340e",
+        "raw_transcripts/phase1_serving_unrelated_cap16384_v1/unrelated.jsonl": "255de4837b52638251e6cb41f6b4346ce544715d575b4536be9fb7c6a4e1806e",
+        "qualification_status/serving_unrelated_cap16384_v1_unrelated.json": "cc3352c55426fd2c596b92b788c367a02d10561d8f4073a55e633ef3d1903c84",
+        "raw_transcripts/phase1_activation_full_v2/intact.jsonl": "858e089d0e3d89d8f910b6eee3bbdfcefa02c64790f2f6094928fa3f06c3ad24"
+      },
+      "created_utc": "2026-10-18T05:29:47.814170+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "9747d53e89df97810ff50b7ad70e0bdb259124f5500afeb38dd2d895dc227b7c",
+        "whole_app_allocation": {
+          "gpus": 2,
+          "single_gpu_workers": 2,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 32,
+        "function_bounds": [
+          {
+            "function": "qualify",
+            "max_calls": 6,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 31.1504976
+          },
+          {
+            "function": "run_group",
+            "max_calls": 1,
+            "seconds_per_call_bound": 14820,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.22704239999999998
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "admitted_upper_bound_usd": 35,
+      "launch_pid": 420803,
+      "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:12.189884+00:00",
+        "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+        "stopped_at": "2026-10-17 23:25:28-07:00"
+      }
+    },
+    {
+      "job": "exp23_unified_author_v3_cap16384",
+      "gpus": 8,
+      "single_gpu_workers": 0,
+      "tp8_workers": 1,
+      "log": "infrastructure/exp23_author_v3_cap16384.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_exp23_author.py",
+        "--attempt",
+        "v3_cap16384",
+        "--external-receipt",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_exp23_author.py",
+        "source_sha256": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+        "functions": {
+          "author": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": "H100:8",
+              "max_containers": 1,
+              "timeout": 7200,
+              "startup_timeout": 600,
+              "cpu": [
+                16,
+                16
+              ],
+              "memory": [
+                131072,
+                131072
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 10800,
+              "startup_timeout": 300,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "One TP8 unified-author call: exactly five fixed pilots at16384 tokens before all48pairedauthorrequests only on strictH5PASS; one durableCPUparent; no retries. Larger context32768, unchanged actual promptbytes/schema/model/seed, no forcedprefix. Timeout7200 bounds long-form completion."
+      },
+      "frozen_files": {
+        "scripts/modal_exp23_author.py": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+        "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_download.json": "9160305b398cca92ded311b666413ee5790fb4fc6dfb613b751e4cbb9ee88234",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+        "scripts/exp23_author_worker.py": "fd889d584b1bec5719bacc6bfe8a64c8355e0c6c8bd4ff7156987f799b2debc4",
+        "scripts/exp23_design.py": "af0e7c7e17ec9f802f48cece315e6977b30e8cbb2c7ac7b73284f31829998b7b",
+        "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/exp23_author_v3_cap16384_input.json": "a7d2fda040e31d61eea5f978f7893adfd7226a3dc4a9c069be08ba36df8e4cc1",
+        "infrastructure/exp23_author_v3_cap16384_volume_download_manifest.json": "82aec17efceed24de401ad3ffa632557470d8fb4e641acdffec49e90daecc80d",
+        "infrastructure/exp23_author_uniform_cap16384_rule.json": "c4f6087403eb5f6226e59b0b1e4f568a355501a18636817d930f0f0a473a7604"
+      },
+      "created_utc": "2026-10-18T05:42:43.897821+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+        "whole_app_allocation": {
+          "gpus": 8,
+          "single_gpu_workers": 0,
+          "tp8_workers": 1
+        },
+        "minimum_compute_reservation_usd": 74,
+        "function_bounds": [
+          {
+            "function": "author",
+            "max_calls": 1,
+            "seconds_per_call_bound": 7920,
+            "rate_usd_per_second": 0.009269760000000002,
+            "compute_bound_usd": 73.41649920000002
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 11220,
+            "rate_usd_per_second": 1.532e-05,
+            "compute_bound_usd": 0.1718904
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "admitted_upper_bound_usd": 77,
+      "launch_pid": 428210,
+      "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:13.475765+00:00",
+        "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+        "stopped_at": "2026-10-18 00:35:52-07:00"
+      }
+    },
+    {
+      "job": "phase1_dose_evaluation_author_v1_d2_descriptive",
+      "gpus": 2,
+      "single_gpu_workers": 2,
+      "tp8_workers": 0,
+      "log": "infrastructure/dose_evaluation_author_v1_d2_descriptive.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_dose_evaluation.py",
+        "--config",
+        "stimuli/dose_evaluation_v1_author_v1_d2_descriptive.json",
+        "--attempt",
+        "author_v1_d2_descriptive",
+        "--primary-receipt",
+        "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+        "--calibration-receipt",
+        "records/phase1_calibration_author_v1_c2_receipt.json",
+        "--descriptive-amendment",
+        "infrastructure/phase1_descriptive_dose_amendment_v1.json"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_dose_evaluation.py",
+        "source_sha256": "312422e524a901303ed11e0aa0db36fe3e74c3617f991402acd7e423563975b5",
+        "functions": {
+          "evaluate": {
+            "max_calls": 5,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 2,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 14400,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                2048,
+                2048
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 14400
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly five fixed-alpha evaluate FunctionCalls plus one durable coordinator, retries=0; max two simultaneous GPU workers."
+      },
+      "frozen_files": {
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "activations/phase1_activation_full_v2/intact.npz": "5594e964a385815ab98a17274d5ec1cf73da42e6498c992d1be9309c18ddde21",
+        "activations/phase1_activation_full_v2/refusal_ablated.npz": "38ae537c9f66af1cbaeb1f51b319eb772826404a5555d79b02de9dc9ac0d82d1",
+        "activations/phase1_direction_audit.json": "0dd2827ea26ffb897f5d6dbc4f20ec472b2a37528e73617bd031fc9ff6dcc8f2",
+        "activations/phase1_directions.npz": "7c902625e47e2d630ef777a10993694bb0d2d83353ceaffe2e0a9bc530b27384",
+        "activations/phase1_source.npz": "1310548f97e6fcb865c1a80940ee9c2eeb8d2d054a652776a7a58adc7359f8b6",
+        "checkpoint_doses_v1/alpha_m0_5_materialization.json": "2b1c9e121150fb55b8ddd0197ff2c059c3dd77852ddcc02069c2ae29e281d7d3",
+        "checkpoint_doses_v1/alpha_p0_5_materialization.json": "610a46b3b8f29b15572593803a345b559809ce39aee840c421a075782dc3915d",
+        "checkpoint_doses_v1/alpha_p1_5_materialization.json": "9035707377cb1ad19f643896fa87b5a896a7999314bc178be5e776bc0579721e",
+        "checkpoint_doses_v1/materialization_set.json": "1fcd2a7379b4c4fc4b3c7a05cec7d78c98e53f2536f57c53f3de50d0db59bdc2",
+        "checkpoints/intact_materialization.json": "a1b015cfc20a0481bd10b5e080fccbaeeb163eb86009dae7ea46a61ac24cee1c",
+        "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511",
+        "checkpoints_full_residual_v2/refusal_ablated_materialization.json": "a95eb1bc615ae040d7a8acbae3f657095c67adf7948588136b76b23f2bfd0f52",
+        "evaluation_status/phase1_calibration_author_v1_c2_intact_cot_on.json": "1ee784907df5cfaccb8ee2c90b7744ba3b4546911de20c941d4ff536b27a01dc",
+        "executions/phase1_dose_supervisor_author_v1_d1/materialization/source_files/scripts/admit_phase1_doses.py": "399f19b6a0996628382304ca7c0dd3e950eee7103aeaf68c7b4235dba5ad9e88",
+        "group_calls/phase1_calibration_author_v1_c2_intact_cot_on.json": "d20395402d69ce8947d0b0fc5a684870b7707eaddf5f43b3a350bf3848160ac9",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture.json": "c68179a74db98874ce924150eb4d3e6b1e03b96d2f15b83be6e3dd21233feb3f",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/config.json": "f44b36b1459995510599a79a054bd8b9bfcc3efe132f85169802dd9f62b45b8d",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/execution/group_calls/phase1_calibration_author_v1_c2_intact_cot_on.json": "d20395402d69ce8947d0b0fc5a684870b7707eaddf5f43b3a350bf3848160ac9",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/execution/sandbox_inputs/phase1_calibration_author_v1_c2_intact_cot_on.json": "c7a931bbf8aa2bcd8c3c9b491ba5db35059c69f5dbe2fa7cdc28c1ec0e3a0951",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/model.safetensors.index.json": "bfeb453b103f4ec54b2ec502ca6e3a2c22bcc90db08889fe2cf9abcebff79fa7",
+        "infrastructure/intact_zero_vector_identity.json": "2124174eba0ab07159ce72527361dcc6d5a5dc3210bda76cc903b8656240ffec",
+        "infrastructure/phase1_descriptive_dose_amendment_v1.json": "1a2ff155f9f8561d54ae1adea4e19a781988ad50698ad9f9a3423d6f56e845f7",
+        "pilots/phase1_calibration_author_v1_c2_intact_cot_on_pilot_audit.md": "02f61dc5705ce9df761ffb280b10914675a7372b011a9003b8bed471e4106798",
+        "raw_transcripts/phase1_activation_vectors_full_v2/intact.jsonl": "1c4a9b03fce0821fea033500ebff68492bb2d9b08fc4aeb30d0efdc4553e3cf0",
+        "raw_transcripts/phase1_activation_vectors_full_v2/refusal_ablated.jsonl": "4707d0c957a526b343996bc3f10220670618422c1a5022c55541f37ea36278f1",
+        "raw_transcripts/phase1_author_v1/flash_next_uncensored.jsonl": "764d610d46c32af867bbcbe0cc28d014ae8db82ffbd34f4afc0bfbac24c3f18b",
+        "raw_transcripts/phase1_calibration_author_v1_c2/intact_cot_on.jsonl": "e17cefc2e02c61e0d02753a6af562adbf866ce4d37d33b193e844f6136238c5e",
+        "raw_transcripts/phase1_calibration_author_v1_c2/intact_cot_on_requests.jsonl": "0b9a4428ba7bcb414617e9df255d28a1dec06183c460e4b997b271e74de5dcba",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/intact.jsonl": "ebb62fb04fea51670b9d6f82eb9663ce5cb210fdc9d29017e3c530e5a34d6898",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_101.jsonl": "6a991843ccbe4737c4f39a03ed944cffd27890c9f5c996c5eeb2e8f87f3320bd",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_102.jsonl": "c63ea323fa4c194835ca22b68504a4073684162a9631577cff80e014014f08c3",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_103.jsonl": "adf83db42474199bf0cb4ff1064dce89f3b21a973941e9b946a77b63492c852e",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/unrelated.jsonl": "614fd9b8b21668e9c0f3edd0a94aee796f8662d84c06ee5b4d89c02ee3a15824",
+        "raw_transcripts/phase1_logits_full_v2_logits_q2_cap8192/refusal_ablated.jsonl": "34ef3f5cdb403533564f27baa74b069b9b57e7722b2a10686011feac0af88563",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/intact.jsonl": "d97d11caaccd69f6ae1855dfaabfee2f4f647ff1d70fb4c79bbbb8c3bf9f1629",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_101.jsonl": "d8a1ade68cd1d96c67734ebb0b11bf98c90eeb9272da3ed209fe8eb2edbe5e1c",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_102.jsonl": "b01301c022766a8d0c2b13a14dd7869804932f5fad1d7782ee8f82549a771dd4",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_103.jsonl": "7339133581dae612b9d153f73950f680f25053efdd530cfe7556c3caa20beb49",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/unrelated.jsonl": "18dcf12dadb1d46edef9f814574290ac7413df3fc213b4435ddee38a90d75633",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q2_cap8192/refusal_ablated.jsonl": "83bf210b1d83e7c25ab18fdeebdb6a4e9594b264e29fd8449b8fde165c6fc5d8",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/intact.jsonl": "5669c9cf9446fd9f7b3029e63f5147df59f5725899ed69380f8cc72ff5a9610e",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/pca_101.jsonl": "b84575e3a59999cde2c59563ccbc4c6bb2632ee0bca07ab9cfa76746ecebd7ea",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/pca_102.jsonl": "7aed954cb2b17b66e8248fc3a8025f77344bc7c68ecdf8869e5255acfb6e3a30",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/pca_103.jsonl": "be4427bea8d933ab6467c5a46620ab4ddbb8a203a6226022dd76d0d024c38ec8",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/refusal_ablated.jsonl": "35fb28669ee8eb853ee2914c73c62519af06edff7cb3464b88127d8c7f3cbb91",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/unrelated.jsonl": "3bf53c4ddad719ea798f78299fbc30bfd2520dc10ccc491d9e7353add32df832",
+        "raw_transcripts/phase1_source_vectors/intact_bf16.jsonl": "5e7418d8402783088cbe89daaa685921ad570b4215cbe49ef4a3ba70cceb6fd6",
+        "records/phase1_author_v1_receipt.json": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+        "records/phase1_calibration_author_v1_c2_receipt.json": "cd3fbd58738110cc7a43e2841f4c0cba848a0838fb63e2e460c87dc43ad94f4d",
+        "records/phase1_post_fp8_gate_receipt.json": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+        "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d",
+        "records/phase1_source_directions_receipt.json": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+        "sandbox_inputs/phase1_calibration_author_v1_c2_intact_cot_on.json": "c7a931bbf8aa2bcd8c3c9b491ba5db35059c69f5dbe2fa7cdc28c1ec0e3a0951",
+        "scripts/admit_parallel_calibration.py": "7f45db7119408cc1f37f616e573d8f701e1c4789ad7e6b6ad8ec86112147947b",
+        "scripts/admit_phase1_doses.py": "91103fff5c03527cf9c93450f4aebfe93f1729678711b93de331e98990000acb",
+        "scripts/audit_authored_scenarios.py": "63b6645e33c9524f56533aaf9a92f8d72806b2ae5cce57c405913738d6bf7a53",
+        "scripts/audit_calibration_provenance.py": "d0eece871620fc3ea0281553330882922b37b9898656ca8a1b4f76e66cb24983",
+        "scripts/audit_dose_response.py": "5da29760da4abf6f203d0c90a4b03a60dee5c67811c7906176300abaed80ef95",
+        "scripts/audit_prompt_boilerplate.py": "500c411e3d17eb60cce21db8f7e7608ac1b1d7824cb5add404de6d0d383b3b4a",
+        "scripts/audit_sandbox_episodes.py": "d833573c857f27dfc0e753b5f40b17e606a742310cef562fe1159b3e1abf5370",
+        "scripts/audit_source_directions.py": "edb992c9e09fb72c5c2ba4977072b24d17210a00cd02470810c2442fbefca23f",
+        "scripts/check_phase1_activation_gate.py": "e3e67ed04b3c8bd10cb05a228dfa60ab877ac69c07384392c08ed6423a58e93e",
+        "scripts/launch_bounded_job.py": "d075676aa919111efe8a6ca946aa8cab3bbaee29ad19d6f88f1674ba353bb0ac",
+        "scripts/modal_dose_evaluation.py": "312422e524a901303ed11e0aa0db36fe3e74c3617f991402acd7e423563975b5",
+        "scripts/modal_sandbox_evaluation.py": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "scripts/paired_statistics.py": "dd23ab9443c119592b3d962a4d89020773f6ef74f551689a2e40f023b03b08a0",
+        "scripts/phase1_evidence.py": "c53bdddcd10c4d9faf3a786b92da054743cbe3d1b45c79f351b9ca6a24114c94",
+        "scripts/prepare_calibration.py": "02540c6be638754bcc210feafc408ed4e3540fc34b3be7f9ccc21d3652d27b22",
+        "scripts/prepare_directions.py": "23a8db9487bcbc31a7e528dc48d08eb19d58c0525adb2aad7755b5fae2e0e62b",
+        "scripts/prepare_dose_evaluation.py": "170be26d94178f5f825f89f028dc588d522c42e177873d1333f899cf224b00eb",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/primary_model_loader.py": "c4dfd47358a7394d43a2c7b06168f4744c251fc301c7a14afb6f8976d0e7e943",
+        "scripts/raw_generation_evidence.py": "89b193c391cb4b1f3c0d58d57e717d3425d1085ee57b60073182102ffd0141e8",
+        "scripts/sandbox_evaluation_worker.py": "23dd716fbe7bc05e30d1b43c861021f7f8b4b87c8f82abcfa351105ae9bd9836",
+        "scripts/sandbox_runtime.py": "44aa769ef3ab4cb9c9d1628880beb763555165fe5ff5995ffaf48de5a4afa480",
+        "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/authored_scenarios_v1.jsonl": "5b4c848de395c066deac590c0ff06ba3388275597b852ff0237a6359f1c71d1e",
+        "stimuli/dose_evaluation_v1_author_v1_d2_descriptive.json": "66521ca1db385abeacd39e9465a9e92e10a4d8f3e54dc3553c0fea424e3f797b",
+        "stimuli/scenario_author_pilot_requests.jsonl": "9b49785acb55e630481fe06f3c27dfd4493622e660bcd5bf0e56cc34e3c52fc7",
+        "stimuli/scenario_author_requests.jsonl": "a366915613fcb20d7d238ebc2c5295b6e4bc50b573901bb04997f155fd7eae10",
+        "trajectories/phase1_calibration_author_v1_c2/intact_cot_on.jsonl": "87ca498b325d5de575d3a5a109d273b3a87d5de97a499c61c69039a416c805b3"
+      },
+      "created_utc": "2026-10-18T06:46:36.906386+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "312422e524a901303ed11e0aa0db36fe3e74c3617f991402acd7e423563975b5",
+        "whole_app_allocation": {
+          "gpus": 2,
+          "single_gpu_workers": 2,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 27,
+        "function_bounds": [
+          {
+            "function": "evaluate",
+            "max_calls": 5,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 25.958748
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 28920,
+            "rate_usd_per_second": 1.7539999999999998e-05,
+            "compute_bound_usd": 0.5072568
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "admitted_upper_bound_usd": 30,
+      "launch_pid": 464756,
+      "app_id": "ap-3gme0uZ8Zr8MLH3vQnfmO2",
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:13.477515+00:00",
+        "app_id": "ap-3gme0uZ8Zr8MLH3vQnfmO2",
+        "stopped_at": "2026-10-18 00:34:07-07:00"
+      }
+    },
+    {
+      "job": "phase1_dose_evaluation_author_v1_d4_cap8192_format_v1",
+      "gpus": 4,
+      "single_gpu_workers": 4,
+      "tp8_workers": 0,
+      "log": "infrastructure/dose_evaluation_author_v1_d4_cap8192_format_v1.log",
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+        "run",
+        "--detach",
+        "scripts/modal_dose_evaluation_d4.py",
+        "--config",
+        "stimuli/dose_evaluation_v1_author_v1_d4_cap8192_format_v1.json",
+        "--attempt",
+        "author_v1_d4_cap8192_format_v1",
+        "--primary-receipt",
+        "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+        "--calibration-receipt",
+        "records/phase1_calibration_author_v1_c2_receipt.json",
+        "--descriptive-amendment",
+        "infrastructure/phase1_descriptive_dose_format_retry_v1.json"
+      ],
+      "resource_profile": {
+        "source": "scripts/modal_dose_evaluation_d4.py",
+        "source_sha256": "446733dfdbf381af65aba49ff338764b2e57992a5394ec1c24f185ced51f7bdb",
+        "functions": {
+          "evaluate": {
+            "max_calls": 5,
+            "limits": {
+              "gpu": "H100",
+              "max_containers": 4,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "coordinate": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 14400,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                2048,
+                2048
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 14400
+            }
+          }
+        },
+        "excluded_functions": {},
+        "call_bound_basis": "Exactly five fixed-alpha evaluate FunctionCalls plus one durable coordinator, retries=0; max four simultaneous GPU workers after the TP8 author app stops."
+      },
+      "frozen_files": {
+        "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+        "activations/phase1_activation_full_v2/intact.npz": "5594e964a385815ab98a17274d5ec1cf73da42e6498c992d1be9309c18ddde21",
+        "activations/phase1_activation_full_v2/refusal_ablated.npz": "38ae537c9f66af1cbaeb1f51b319eb772826404a5555d79b02de9dc9ac0d82d1",
+        "activations/phase1_direction_audit.json": "0dd2827ea26ffb897f5d6dbc4f20ec472b2a37528e73617bd031fc9ff6dcc8f2",
+        "activations/phase1_directions.npz": "7c902625e47e2d630ef777a10993694bb0d2d83353ceaffe2e0a9bc530b27384",
+        "activations/phase1_source.npz": "1310548f97e6fcb865c1a80940ee9c2eeb8d2d054a652776a7a58adc7359f8b6",
+        "checkpoint_doses_v1/alpha_m0_5_materialization.json": "2b1c9e121150fb55b8ddd0197ff2c059c3dd77852ddcc02069c2ae29e281d7d3",
+        "checkpoint_doses_v1/alpha_p0_5_materialization.json": "610a46b3b8f29b15572593803a345b559809ce39aee840c421a075782dc3915d",
+        "checkpoint_doses_v1/alpha_p1_5_materialization.json": "9035707377cb1ad19f643896fa87b5a896a7999314bc178be5e776bc0579721e",
+        "checkpoint_doses_v1/materialization_set.json": "1fcd2a7379b4c4fc4b3c7a05cec7d78c98e53f2536f57c53f3de50d0db59bdc2",
+        "checkpoint_doses_v1/tokenizer_audit/chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+        "checkpoint_doses_v1/tokenizer_audit/generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+        "checkpoint_doses_v1/tokenizer_audit/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "checkpoint_doses_v1/tokenizer_audit/tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+        "checkpoint_doses_v1/tokenizer_audit/tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+        "checkpoint_doses_v1/tokenizer_audit/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+        "checkpoints/intact_materialization.json": "a1b015cfc20a0481bd10b5e080fccbaeeb163eb86009dae7ea46a61ac24cee1c",
+        "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511",
+        "checkpoints_full_residual_v2/refusal_ablated_materialization.json": "a95eb1bc615ae040d7a8acbae3f657095c67adf7948588136b76b23f2bfd0f52",
+        "evaluation_status/phase1_calibration_author_v1_c2_intact_cot_on.json": "1ee784907df5cfaccb8ee2c90b7744ba3b4546911de20c941d4ff536b27a01dc",
+        "evaluation_status/phase1_dose_response_author_v1_d2_descriptive_dose_0_0_cot_on.json": "04109b0dfefe05e4ffb1b0d4748f370333d5529d13ef8be54c4a4cfdef2d00b6",
+        "evaluation_status/phase1_dose_response_author_v1_d2_descriptive_dose_1_0_cot_on.json": "8942c8c4547ad24a4d4cfe703df45cffb90a0ba6dd7fdbfc291eff165da01db4",
+        "evaluation_status/phase1_dose_response_author_v1_d2_descriptive_dose_m0_5_cot_on.json": "8e16e305f2f6b2ce871e9f74064918b79a7542fab621f4478e79381344b1354b",
+        "evaluation_status/phase1_dose_response_author_v1_d2_descriptive_dose_p0_5_cot_on.json": "ed36e378ea47fc65826311746cac9add565e074c0528e8b3aa77faeb8274f015",
+        "evaluation_status/phase1_dose_response_author_v1_d2_descriptive_dose_p1_5_cot_on.json": "46c8076ed11ee23ddbef38d6bc7f62a3e0f70013521fbcbdb9225344662e74b1",
+        "evaluation_status/phase1_dose_response_author_v1_d2_descriptive_group.json": "805258f516bfd7685440f52e3a0ed84be3993ee7df12256f9d658c98ac0b9175",
+        "executions/phase1_dose_supervisor_author_v1_d1/materialization/source_files/scripts/admit_phase1_doses.py": "399f19b6a0996628382304ca7c0dd3e950eee7103aeaf68c7b4235dba5ad9e88",
+        "group_calls/phase1_calibration_author_v1_c2_intact_cot_on.json": "d20395402d69ce8947d0b0fc5a684870b7707eaddf5f43b3a350bf3848160ac9",
+        "group_calls/phase1_dose_response_author_v1_d2_descriptive/dose_0_0.json": "99af87f8d3ce472a49170a5343161b0512fac8e2455943341d50d47042d3f826",
+        "group_calls/phase1_dose_response_author_v1_d2_descriptive/dose_1_0.json": "87c458d40302ca44ba4d933c5035bb9806d2ab874aa78df095e108875b2c8de7",
+        "group_calls/phase1_dose_response_author_v1_d2_descriptive/dose_m0_5.json": "bd4de1ff5ca001537b95fbb3a2251db8791f7479713408067b8880304bd9bc0e",
+        "group_calls/phase1_dose_response_author_v1_d2_descriptive/dose_p0_5.json": "227f480b2d8515e52d7820a82859c5480d8f1ed8aa4d969caa2b36ab12624715",
+        "group_calls/phase1_dose_response_author_v1_d2_descriptive/dose_p1_5.json": "c0f4a6c1b331e9bef879d9aaf689cc63d90da0e21a89afa3669b9cbd6371a42a",
+        "group_calls/phase1_dose_response_author_v1_d2_descriptive/frozen_input.json": "1216cd5c4cfa2f68bf73950df760476cb62b681eb3706e5abb1a719d34ea6414",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture.json": "c68179a74db98874ce924150eb4d3e6b1e03b96d2f15b83be6e3dd21233feb3f",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/config.json": "f44b36b1459995510599a79a054bd8b9bfcc3efe132f85169802dd9f62b45b8d",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/execution/group_calls/phase1_calibration_author_v1_c2_intact_cot_on.json": "d20395402d69ce8947d0b0fc5a684870b7707eaddf5f43b3a350bf3848160ac9",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/execution/sandbox_inputs/phase1_calibration_author_v1_c2_intact_cot_on.json": "c7a931bbf8aa2bcd8c3c9b491ba5db35059c69f5dbe2fa7cdc28c1ec0e3a0951",
+        "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/model.safetensors.index.json": "bfeb453b103f4ec54b2ec502ca6e3a2c22bcc90db08889fe2cf9abcebff79fa7",
+        "infrastructure/dose_d3_unlaunched_disposition.json": "25e41f96def97758b0754026c624818b9f505c00592963dcf35deddb9388d059",
+        "infrastructure/dose_uniform_budget_retry_rule_v1.json": "ac8de189e43908578651c130a6fed8cb6b7ba9b5b9012fc55f7e3c1286cae208",
+        "infrastructure/intact_zero_vector_identity.json": "2124174eba0ab07159ce72527361dcc6d5a5dc3210bda76cc903b8656240ffec",
+        "infrastructure/phase1_descriptive_dose_amendment_v1.json": "1a2ff155f9f8561d54ae1adea4e19a781988ad50698ad9f9a3423d6f56e845f7",
+        "infrastructure/phase1_descriptive_dose_format_retry_v1.json": "6184a65528543e1c639c30c60ee3767018e7a1f18cafd0cf35c7bb42f94da163",
+        "infrastructure/phase1_descriptive_dose_retry_cap8192_v1.json": "7164631e825f484a10a14b08e3f671b6fdea55d22393899b105c6cdb96b6db0d",
+        "pilots/phase1_calibration_author_v1_c2_intact_cot_on_pilot_audit.md": "02f61dc5705ce9df761ffb280b10914675a7372b011a9003b8bed471e4106798",
+        "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_0_0_cot_on_pilot_audit.md": "d097721acdbc498663fb43344939aa210f73a197834bca972ca5f8d30ebadf7c",
+        "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_1_0_cot_on_pilot_audit.md": "70a534a0122e5a4b65b0e3e2b43be170e84b253eae470bfb44d9f1d05a7e5184",
+        "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_m0_5_cot_on_pilot_audit.md": "5ddf87eddec9da8bb5272371b73ce15b027b407c41ab166bf0037059d2a3223f",
+        "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_p0_5_cot_on_pilot_audit.md": "07cb7c065bd3b1f40291f869ee678e97f95af1bf70240ec7fbd5a87af86abbfc",
+        "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_p1_5_cot_on_pilot_audit.md": "d84e2884f948891412e2e509d825653abb3d7e1dc94f6e0b79b72fe4a27601d3",
+        "raw_transcripts/phase1_activation_vectors_full_v2/intact.jsonl": "1c4a9b03fce0821fea033500ebff68492bb2d9b08fc4aeb30d0efdc4553e3cf0",
+        "raw_transcripts/phase1_activation_vectors_full_v2/refusal_ablated.jsonl": "4707d0c957a526b343996bc3f10220670618422c1a5022c55541f37ea36278f1",
+        "raw_transcripts/phase1_author_v1/flash_next_uncensored.jsonl": "764d610d46c32af867bbcbe0cc28d014ae8db82ffbd34f4afc0bfbac24c3f18b",
+        "raw_transcripts/phase1_calibration_author_v1_c2/intact_cot_on.jsonl": "e17cefc2e02c61e0d02753a6af562adbf866ce4d37d33b193e844f6136238c5e",
+        "raw_transcripts/phase1_calibration_author_v1_c2/intact_cot_on_requests.jsonl": "0b9a4428ba7bcb414617e9df255d28a1dec06183c460e4b997b271e74de5dcba",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_0_0_cot_on.jsonl": "99636fec9f9af48d3910048c27642f4eb4b03cf9b00d08b5657173cb7900f2cf",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_0_0_cot_on_requests.jsonl": "23a461798ea0b2df4f070c04590e5c1ee247dc1ec35ea79b4a0cb113487fb61f",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_1_0_cot_on.jsonl": "f72cf49484475c90646caeaa469801ae24adab8accf1004c95c48f5eb209fabb",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_1_0_cot_on_requests.jsonl": "aafa0f89364a869c996426db9c5edec989ee386b6bbe09d7cd32b0dd52cb413d",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_m0_5_cot_on.jsonl": "1c816033947af9ed5454e5a6eb945960cf351a191e67a1fed0f74c1327ffba83",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_m0_5_cot_on_requests.jsonl": "06cbf29cb86a83a110a8380e6135603415cdcef2b8846648a38a7e277c2757df",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_p0_5_cot_on.jsonl": "5f844ce0c971fda3cbdaaa2a3bd4d930202ee9d968714b1cb1f40dadeb0b0ba4",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_p0_5_cot_on_requests.jsonl": "70bb63317ec1c342a0afa321628223c686a625af7bc16b26d98297866dbb80d5",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_p1_5_cot_on.jsonl": "d13eb26c7258af3454de704ebdba45ccb84d1b02517ed9b684c14585f0b69616",
+        "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_p1_5_cot_on_requests.jsonl": "7f85d61d2c57eaa90efa91bcd9781332f47383e345b9ff1fccbd73baf3224cac",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/intact.jsonl": "ebb62fb04fea51670b9d6f82eb9663ce5cb210fdc9d29017e3c530e5a34d6898",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_101.jsonl": "6a991843ccbe4737c4f39a03ed944cffd27890c9f5c996c5eeb2e8f87f3320bd",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_102.jsonl": "c63ea323fa4c194835ca22b68504a4073684162a9631577cff80e014014f08c3",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_103.jsonl": "adf83db42474199bf0cb4ff1064dce89f3b21a973941e9b946a77b63492c852e",
+        "raw_transcripts/phase1_logits_full_v2_logits_q1/unrelated.jsonl": "614fd9b8b21668e9c0f3edd0a94aee796f8662d84c06ee5b4d89c02ee3a15824",
+        "raw_transcripts/phase1_logits_full_v2_logits_q2_cap8192/refusal_ablated.jsonl": "34ef3f5cdb403533564f27baa74b069b9b57e7722b2a10686011feac0af88563",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/intact.jsonl": "d97d11caaccd69f6ae1855dfaabfee2f4f647ff1d70fb4c79bbbb8c3bf9f1629",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_101.jsonl": "d8a1ade68cd1d96c67734ebb0b11bf98c90eeb9272da3ed209fe8eb2edbe5e1c",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_102.jsonl": "b01301c022766a8d0c2b13a14dd7869804932f5fad1d7782ee8f82549a771dd4",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_103.jsonl": "7339133581dae612b9d153f73950f680f25053efdd530cfe7556c3caa20beb49",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/unrelated.jsonl": "18dcf12dadb1d46edef9f814574290ac7413df3fc213b4435ddee38a90d75633",
+        "raw_transcripts/phase1_logits_vectors_full_v2_logits_q2_cap8192/refusal_ablated.jsonl": "83bf210b1d83e7c25ab18fdeebdb6a4e9594b264e29fd8449b8fde165c6fc5d8",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/intact.jsonl": "5669c9cf9446fd9f7b3029e63f5147df59f5725899ed69380f8cc72ff5a9610e",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/pca_101.jsonl": "b84575e3a59999cde2c59563ccbc4c6bb2632ee0bca07ab9cfa76746ecebd7ea",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/pca_102.jsonl": "7aed954cb2b17b66e8248fc3a8025f77344bc7c68ecdf8869e5255acfb6e3a30",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/pca_103.jsonl": "be4427bea8d933ab6467c5a46620ab4ddbb8a203a6226022dd76d0d024c38ec8",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/refusal_ablated.jsonl": "35fb28669ee8eb853ee2914c73c62519af06edff7cb3464b88127d8c7f3cbb91",
+        "raw_transcripts/phase1_qualification_vllm_q4_cap16384/unrelated.jsonl": "3bf53c4ddad719ea798f78299fbc30bfd2520dc10ccc491d9e7353add32df832",
+        "raw_transcripts/phase1_source_vectors/intact_bf16.jsonl": "5e7418d8402783088cbe89daaa685921ad570b4215cbe49ef4a3ba70cceb6fd6",
+        "records/phase1_author_v1_receipt.json": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+        "records/phase1_calibration_author_v1_c2_receipt.json": "cd3fbd58738110cc7a43e2841f4c0cba848a0838fb63e2e460c87dc43ad94f4d",
+        "records/phase1_dose_response_author_v1_d2_descriptive_receipt.json": "7116350b9c2cf7e29261e2987d8a388218c1afa4aacc5114ada8d27368ddd0ac",
+        "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+        "records/phase1_initial_post_fp8_gate_receipt.json": "365f1b377958ddb18196db80030f05071cec9dcf867e29fde3199b1ab983b90c",
+        "records/phase1_post_fp8_gate_receipt.json": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+        "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d",
+        "records/phase1_source_directions_receipt.json": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+        "sandbox_inputs/phase1_calibration_author_v1_c2_intact_cot_on.json": "c7a931bbf8aa2bcd8c3c9b491ba5db35059c69f5dbe2fa7cdc28c1ec0e3a0951",
+        "sandbox_inputs/phase1_dose_response_author_v1_d2_descriptive_dose_0_0_cot_on.json": "a6df25d12425ab0f5bbcb75521c3abd858d3d7cf5d640832b15019dfbb2c4aab",
+        "sandbox_inputs/phase1_dose_response_author_v1_d2_descriptive_dose_1_0_cot_on.json": "09f0cd0979646a6ff67b8a3979f6d769d9716d4892fbbef8fef3795cfcbf7c72",
+        "sandbox_inputs/phase1_dose_response_author_v1_d2_descriptive_dose_m0_5_cot_on.json": "dac38696a363928a0932490a6bae888a8de9928bb5ca970fb0c265d394a4eea5",
+        "sandbox_inputs/phase1_dose_response_author_v1_d2_descriptive_dose_p0_5_cot_on.json": "cfd2dc93eddebd4cf24ac2a35f0040a9aa296e7e5407151a01c6f6156eac5bd3",
+        "sandbox_inputs/phase1_dose_response_author_v1_d2_descriptive_dose_p1_5_cot_on.json": "2781eceb997606b9e7b3743050b5ebd9fab20fb2d4c95129904785f6ded25175",
+        "scripts/admit_parallel_calibration.py": "7f45db7119408cc1f37f616e573d8f701e1c4789ad7e6b6ad8ec86112147947b",
+        "scripts/admit_phase1_doses.py": "91103fff5c03527cf9c93450f4aebfe93f1729678711b93de331e98990000acb",
+        "scripts/admit_phase1_doses_d3.py": "2d5f94a30a461813ec50635300a84152483464c1cab3950f398cf12818083a40",
+        "scripts/admit_phase1_doses_d4.py": "ca175915ecab8c8926e1d72d3b7ca9afb401f8f52fade04dd2947447fa64a275",
+        "scripts/audit_authored_scenarios.py": "63b6645e33c9524f56533aaf9a92f8d72806b2ae5cce57c405913738d6bf7a53",
+        "scripts/audit_calibration_provenance.py": "d0eece871620fc3ea0281553330882922b37b9898656ca8a1b4f76e66cb24983",
+        "scripts/audit_dose_response.py": "5da29760da4abf6f203d0c90a4b03a60dee5c67811c7906176300abaed80ef95",
+        "scripts/audit_dose_response_d3.py": "ceb871ab0b5c380f14b2f5289f0c07e5c719ecf7ce7c781bf585977b1579ef1e",
+        "scripts/audit_dose_response_d4.py": "28ec3bdc89943181c22f8aa80854e58c6b21aa3c7f458e99fb4c840633712c36",
+        "scripts/audit_prompt_boilerplate.py": "500c411e3d17eb60cce21db8f7e7608ac1b1d7824cb5add404de6d0d383b3b4a",
+        "scripts/audit_sandbox_episodes.py": "d833573c857f27dfc0e753b5f40b17e606a742310cef562fe1159b3e1abf5370",
+        "scripts/audit_source_directions.py": "edb992c9e09fb72c5c2ba4977072b24d17210a00cd02470810c2442fbefca23f",
+        "scripts/check_phase1_activation_gate.py": "e3e67ed04b3c8bd10cb05a228dfa60ab877ac69c07384392c08ed6423a58e93e",
+        "scripts/launch_bounded_job.py": "d075676aa919111efe8a6ca946aa8cab3bbaee29ad19d6f88f1674ba353bb0ac",
+        "scripts/modal_dose_evaluation.py": "312422e524a901303ed11e0aa0db36fe3e74c3617f991402acd7e423563975b5",
+        "scripts/modal_dose_evaluation_d3.py": "87d02ae07ba27ea09549c452c73117124815e49d3176a16cb96f253059a84689",
+        "scripts/modal_dose_evaluation_d4.py": "446733dfdbf381af65aba49ff338764b2e57992a5394ec1c24f185ced51f7bdb",
+        "scripts/modal_sandbox_evaluation.py": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+        "scripts/paired_statistics.py": "dd23ab9443c119592b3d962a4d89020773f6ef74f551689a2e40f023b03b08a0",
+        "scripts/phase1_evidence.py": "c53bdddcd10c4d9faf3a786b92da054743cbe3d1b45c79f351b9ca6a24114c94",
+        "scripts/prepare_calibration.py": "02540c6be638754bcc210feafc408ed4e3540fc34b3be7f9ccc21d3652d27b22",
+        "scripts/prepare_directions.py": "23a8db9487bcbc31a7e528dc48d08eb19d58c0525adb2aad7755b5fae2e0e62b",
+        "scripts/prepare_dose_evaluation.py": "170be26d94178f5f825f89f028dc588d522c42e177873d1333f899cf224b00eb",
+        "scripts/prepare_dose_evaluation_d3.py": "dae29826ef0d289934ad07de0bd30fd846545b81efa803afdadeb034ce7950ab",
+        "scripts/prepare_dose_evaluation_d4.py": "d7ccbeb9b94cdde8de47681291d88d71e29182318213ccacbbdaf382bf82cb28",
+        "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+        "scripts/primary_model_loader.py": "c4dfd47358a7394d43a2c7b06168f4744c251fc301c7a14afb6f8976d0e7e943",
+        "scripts/raw_generation_evidence.py": "89b193c391cb4b1f3c0d58d57e717d3425d1085ee57b60073182102ffd0141e8",
+        "scripts/sandbox_evaluation_worker.py": "23dd716fbe7bc05e30d1b43c861021f7f8b4b87c8f82abcfa351105ae9bd9836",
+        "scripts/sandbox_runtime.py": "44aa769ef3ab4cb9c9d1628880beb763555165fe5ff5995ffaf48de5a4afa480",
+        "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+        "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+        "stimuli/authored_scenarios_v1.jsonl": "5b4c848de395c066deac590c0ff06ba3388275597b852ff0237a6359f1c71d1e",
+        "stimuli/dose_evaluation_v1_author_v1_d2_descriptive.json": "66521ca1db385abeacd39e9465a9e92e10a4d8f3e54dc3553c0fea424e3f797b",
+        "stimuli/dose_evaluation_v1_author_v1_d3_cap8192_descriptive.json": "08e61396182ea65f151d8c69c4ebb94f7c9c2a7f2493454d2ec8850191f84f16",
+        "stimuli/dose_evaluation_v1_author_v1_d4_cap8192_format_v1.json": "e31d014dfe95a1f44760b68bd7cce5be226fba07862509c31385851c2fa36538",
+        "stimuli/scenario_author_pilot_requests.jsonl": "9b49785acb55e630481fe06f3c27dfd4493622e660bcd5bf0e56cc34e3c52fc7",
+        "stimuli/scenario_author_requests.jsonl": "a366915613fcb20d7d238ebc2c5295b6e4bc50b573901bb04997f155fd7eae10",
+        "trajectories/phase1_calibration_author_v1_c2/intact_cot_on.jsonl": "87ca498b325d5de575d3a5a109d273b3a87d5de97a499c61c69039a416c805b3",
+        "trajectories/phase1_dose_response_author_v1_d2_descriptive/dose_0_0_cot_on.jsonl": "c9fc6fd5a3c1ea6528787aec7aef285e55629b5b7d5620dc7182a3b903a94f6d",
+        "trajectories/phase1_dose_response_author_v1_d2_descriptive/dose_1_0_cot_on.jsonl": "f98a9ec083c6c1fccfb83cb220ee48ad9b6ed64480f6c27a81da168ff7a4e06e",
+        "trajectories/phase1_dose_response_author_v1_d2_descriptive/dose_m0_5_cot_on.jsonl": "7cef8370107c91056ae43183d07e6c21a030c6ed417e894ee53f5c440ea1ec39",
+        "trajectories/phase1_dose_response_author_v1_d2_descriptive/dose_p0_5_cot_on.jsonl": "9a64af07d9da3c6fcc45a9bfc3c6936980f7fc489c5f68c3482bf3e3cdaee6b8",
+        "trajectories/phase1_dose_response_author_v1_d2_descriptive/dose_p1_5_cot_on.jsonl": "bf437747c22f221942b0f240d4e80838941c23cf463dd0899fe612be52fe72bb"
+      },
+      "created_utc": "2026-10-18T07:56:48.089890+00:00",
+      "allocation_status": "released_after_modal_stop",
+      "resource_profile_audit": {
+        "source_sha256": "446733dfdbf381af65aba49ff338764b2e57992a5394ec1c24f185ced51f7bdb",
+        "whole_app_allocation": {
+          "gpus": 4,
+          "single_gpu_workers": 4,
+          "tp8_workers": 0
+        },
+        "minimum_compute_reservation_usd": 27,
+        "function_bounds": [
+          {
+            "function": "evaluate",
+            "max_calls": 5,
+            "seconds_per_call_bound": 4020,
+            "rate_usd_per_second": 0.00129148,
+            "compute_bound_usd": 25.958748
+          },
+          {
+            "function": "coordinate",
+            "max_calls": 1,
+            "seconds_per_call_bound": 28920,
+            "rate_usd_per_second": 1.7539999999999998e-05,
+            "compute_bound_usd": 0.5072568
+          }
+        ],
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+      },
+      "admitted_upper_bound_usd": 30,
+      "launch_pid": 503523,
+      "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+      "app_identity_binding": "infrastructure/dose_d4_h5_stop_decision.json",
+      "final_stopped_observation": {
+        "audit_path": "infrastructure/final_owned_compute_status.json",
+        "audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+        "checked_utc": "2026-10-18T08:15:13.510425+00:00",
+        "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+        "stopped_at": "2026-10-18 01:11:45-07:00"
+      }
+    }
+  ],
+  "limit_amendment": {
+    "utc": "2026-10-18T04:07:39.119325+00:00",
+    "previous_gpu_limit": 12,
+    "gpu_limit": 10,
+    "basis": "Conservative Starter-compatible scheduling; observed author began allocation only after forward workers freed capacity. Subscription tier not independently verified."
+  },
+  "single_worker_amendment": {
+    "utc": "2026-10-18T04:32:38.123362+00:00",
+    "previous_limit": 4,
+    "new_limit": 6,
+    "global_gpu_limit_unchanged": 10,
+    "per_app_limit_unchanged": 2,
+    "reason": "Allow independent calibration alongside existing materialization and uniform qualification retry. Every worker retains dedicatedGPU, boundedCPU/RAM, fixedcallcount and reservedbudget; TP8 still permits only2singleGPUs by totalGPUlimit."
+  },
+  "per_app_single_worker_amendment": {
+    "utc": "2026-10-18T04:46:42.256283+00:00",
+    "maximum": 4,
+    "global_gpu_limit": 10,
+    "global_single_limit": 6,
+    "basis": "Use released TP8 capacity for already queued independent arms; exact same six durable calls, checkpoints, prompts, worker resources, decoding and distinct arm outputs. Existing reservation bounds all six calls independent of concurrency."
+  }
+}

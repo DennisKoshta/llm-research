@@ -1,0 +1,545 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-SHdJ73l4GrHChixkIbJRRR
+Building image im-Kpv0knExasA8XZWYujsQc2
+
+=> Step 0: FROM base
+
+=> Step 1: RUN python -m pip install kernels==0.17.2
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting kernels==0.17.2
+  Downloading http://pypi-mirror.modal.local:5555/simple/kernels/kernels-0.17.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.1 kB)
+Requirement already satisfied: huggingface-hub>=1.10.0 in /usr/local/lib/python3.12/site-packages (from kernels==0.17.2) (2.2.0)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/site-packages (from kernels==0.17.2) (26.3)
+Requirement already satisfied: pyyaml>=6 in /usr/local/lib/python3.12/site-packages (from kernels==0.17.2) (6.0.3)
+Collecting sigstore<5,>=4 (from kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sigstore/sigstore-4.5.0-py3-none-any.whl.metadata (17 kB)
+Collecting tomlkit>=0.13.3 (from kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/tomlkit/tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (8.5.0)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (4.2.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (2026.9.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (1.7.0)
+Requirement already satisfied: httpx2<3,>=2.0.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (2.13.1)
+Requirement already satisfied: tqdm>=4.42.1 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (4.70.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (4.16.0)
+Collecting cryptography>=42 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/cryptography/cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+Collecting id>=1.1.0 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/id/id-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting pyasn1~=0.6 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyasn1/pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+Collecting pydantic<3,>=2 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pydantic/pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.0/133.0 kB 155.7 MB/s eta 0:00:00
+Collecting pyjwt>=2.1 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyjwt/pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyOpenSSL>=23.0.0 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyopenssl/pyopenssl-26.4.0-py3-none-any.whl.metadata (22 kB)
+Collecting requests (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: rich<16,>=13 in /usr/local/lib/python3.12/site-packages (from sigstore<5,>=4->kernels==0.17.2) (15.0.0)
+Collecting rfc8785~=0.1.2 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/rfc8785/rfc8785-0.1.4-py3-none-any.whl.metadata (3.4 kB)
+Collecting rfc3161-client<1.1.0,>=1.0.3 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/rfc3161-client/rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting sigstore-models==0.0.6 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-models/sigstore_models-0.0.6-py3-none-any.whl.metadata (1.3 kB)
+Collecting sigstore-rekor-types==0.0.18 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-rekor-types/sigstore_rekor_types-0.0.18-py3-none-any.whl.metadata (13 kB)
+Collecting tuf<8,>=6 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/tuf/tuf-7.0.1-py3-none-any.whl.metadata (8.1 kB)
+Collecting platformdirs~=4.2 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/platformdirs/platformdirs-4.13.4-py3-none-any.whl.metadata (5.5 kB)
+Collecting cffi>=2.0.0 (from cryptography>=42->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/cffi/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Requirement already satisfied: anyio>=4.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (4.15.1)
+Requirement already satisfied: httpcore2==2.13.1 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (2.13.1)
+Requirement already satisfied: idna>=3.18 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (3.20)
+Requirement already satisfied: truststore>=0.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (0.10.5)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/site-packages (from httpcore2==2.13.1->httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (0.16.0)
+Collecting urllib3<3,>=2 (from id>=1.1.0->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3,>=2->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/annotated-types/annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.1 (from pydantic<3,>=2->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pydantic-core/pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Collecting typing-inspection>=0.4.4 (from pydantic<3,>=2->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/typing-inspection/typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/site-packages (from rich<16,>=13->sigstore<5,>=4->kernels==0.17.2) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/site-packages (from rich<16,>=13->sigstore<5,>=4->kernels==0.17.2) (2.21.0)
+Collecting securesystemslib~=1.0 (from tuf<8,>=6->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/securesystemslib/securesystemslib-1.5.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting charset_normalizer<4,>=2 (from requests->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 129.5 MB/s eta 0:00:00
+Collecting certifi>=2023.5.7 (from requests->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=42->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pycparser/pycparser-3.11-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich<16,>=13->sigstore<5,>=4->kernels==0.17.2) (0.1.2)
+Collecting email-validator>=2.0.0 (from pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/email-validator/email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/dnspython/dnspython-2.9.0-py3-none-any.whl.metadata (5.7 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/kernels/kernels-0.17.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 111.2 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/sigstore/sigstore-4.5.0-py3-none-any.whl (111 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.7/111.7 kB 164.4 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-models/sigstore_models-0.0.6-py3-none-any.whl (13 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-rekor-types/sigstore_rekor_types-0.0.18-py3-none-any.whl (20 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/tomlkit/tomlkit-0.15.2-py3-none-any.whl (52 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.2/52.2 kB 140.5 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/cryptography/cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 156.1 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/id/id-1.6.1-py3-none-any.whl (14 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/platformdirs/platformdirs-4.13.4-py3-none-any.whl (32 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pyasn1/pyasn1-0.6.4-py3-none-any.whl (84 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.4/84.4 kB 159.6 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pydantic/pydantic-2.14.1-py3-none-any.whl (488 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 488.1/488.1 kB 168.2 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pydantic-core/pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 170.3 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pyjwt/pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pyopenssl/pyopenssl-26.4.0-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 154.8 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/rfc3161-client/rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 110.4 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/rfc8785/rfc8785-0.1.4-py3-none-any.whl (9.2 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/tuf/tuf-7.0.1-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 kB 154.5 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 163.6 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/annotated-types/annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.7.22-py3-none-any.whl (136 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 167.3 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/cffi/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.8/221.8 kB 166.5 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 257.6/257.6 kB 169.7 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/securesystemslib/securesystemslib-1.5.1-py3-none-any.whl (876 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.4/876.4 kB 169.9 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/typing-inspection/typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.8.0-py3-none-any.whl (135 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 169.1 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/email-validator/email_validator-2.3.0-py3-none-any.whl (35 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pycparser/pycparser-3.11-py3-none-any.whl (51 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.2/51.2 kB 150.9 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/dnspython/dnspython-2.9.0-py3-none-any.whl (354 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 354.8/354.8 kB 168.6 MB/s eta 0:00:00
+Installing collected packages: urllib3, typing-inspection, tomlkit, securesystemslib, rfc8785, pyjwt, pydantic-core, pycparser, pyasn1, platformdirs, dnspython, charset_normalizer, certifi, annotated-types, tuf, requests, pydantic, id, email-validator, cffi, sigstore-models, cryptography, sigstore-rekor-types, rfc3161-client, pyOpenSSL, sigstore, kernels
+Successfully installed annotated-types-0.8.0 certifi-2026.7.22 cffi-2.1.1 charset_normalizer-3.5.2 cryptography-50.0.2 dnspython-2.9.0 email-validator-2.3.0 id-1.6.1 kernels-0.17.2 platformdirs-4.13.4 pyOpenSSL-26.4.0 pyasn1-0.6.4 pycparser-3.11 pydantic-2.14.1 pydantic-core-2.50.1 pyjwt-2.15.1 requests-2.34.2 rfc3161-client-1.0.9 rfc8785-0.1.4 securesystemslib-1.5.1 sigstore-4.5.0 sigstore-models-0.0.6 sigstore-rekor-types-0.0.18 tomlkit-0.15.2 tuf-7.0.1 typing-inspection-0.4.4 urllib3-2.8.0
+
+[notice] A new release of pip is available: 23.3.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 3.21s
+
+Built image im-Kpv0knExasA8XZWYujsQc2 in 13.08s
+
+
+Building image im-OK4VnGCJrI7CtJdJhEtS0S
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HUB_OFFLINE=0
+
+=> Step 2: ENV HF_HOME=/weights/agent-safety-clean-v2-20261017/huggingface
+
+=> Step 3: ENV TRANSFORMERS_DISABLE_DEEPGEMM_LINEAR=1
+Saving image...
+Image saved, took 4.55s
+
+Built image im-OK4VnGCJrI7CtJdJhEtS0S in 6.69s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_qualify.py
+└── ✓ Created Function qualify.
+
+[1ALoading weights:   0%|          | 0/1520 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1520 [00:02<53:15,  2.10s/it]
+[1ALoading weights:   1%|          | 13/1520 [00:02<03:07,  8.02it/s]
+[1ALoading weights:   1%|▏         | 20/1520 [00:02<02:03, 12.14it/s]
+[1ALoading weights:   2%|▏         | 37/1520 [00:02<00:58, 25.26it/s]
+[1ALoading weights:   4%|▎         | 56/1520 [00:02<00:36, 39.92it/s]
+[1ALoading weights:   6%|▌         | 88/1520 [00:02<00:20, 71.52it/s]
+[1ALoading weights:   7%|▋         | 101/1520 [00:03<00:20, 69.27it/s]
+[1ALoading weights:   7%|▋         | 112/1520 [00:03<00:20, 67.72it/s]
+[1ALoading weights:   9%|▊         | 130/1520 [00:03<00:19, 71.27it/s]
+[1ALoading weights:  10%|█         | 157/1520 [00:03<00:13, 101.75it/s]
+[1ALoading weights:  11%|█▏        | 171/1520 [00:03<00:15, 88.37it/s] 
+[1ALoading weights:  12%|█▏        | 185/1520 [00:04<00:15, 86.65it/s]
+[1ALoading weights:  13%|█▎        | 204/1520 [00:04<00:12, 101.74it/s]
+[1ALoading weights:  14%|█▍        | 216/1520 [00:04<00:14, 90.36it/s] 
+[1ALoading weights:  16%|█▌        | 240/1520 [00:04<00:14, 90.32it/s]
+[1ALoading weights:  17%|█▋        | 259/1520 [00:04<00:12, 97.13it/s]
+[1ALoading weights:  18%|█▊        | 278/1520 [00:04<00:11, 106.84it/s]
+[1ALoading weights:  19%|█▉        | 290/1520 [00:05<00:11, 106.30it/s]
+[1ALoading weights:  21%|██        | 314/1520 [00:05<00:11, 107.08it/s]
+[1ALoading weights:  22%|██▏       | 333/1520 [00:05<00:10, 111.81it/s]
+[1ALoading weights:  23%|██▎       | 352/1520 [00:05<00:10, 116.38it/s]
+[1ALoading weights:  24%|██▍       | 364/1520 [00:05<00:10, 106.91it/s]
+[1ALoading weights:  26%|██▌       | 388/1520 [00:05<00:10, 108.41it/s]
+[1ALoading weights:  27%|██▋       | 407/1520 [00:06<00:09, 112.61it/s]
+[1ALoading weights:  28%|██▊       | 426/1520 [00:06<00:10, 107.39it/s]
+[1ALoading weights:  29%|██▉       | 437/1520 [00:06<00:10, 106.30it/s]
+[1ALoading weights:  30%|███       | 462/1520 [00:06<00:09, 117.20it/s]
+[1ALoading weights:  32%|███▏      | 481/1520 [00:06<00:09, 114.25it/s]
+[1ALoading weights:  33%|███▎      | 500/1520 [00:06<00:08, 119.74it/s]
+[1ALoading weights:  34%|███▍      | 513/1520 [00:07<00:09, 108.15it/s]
+[1ALoading weights:  35%|███▌      | 536/1520 [00:07<00:09, 106.36it/s]
+[1ALoading weights:  37%|███▋      | 555/1520 [00:07<00:09, 106.15it/s]
+[1ALoading weights:  38%|███▊      | 574/1520 [00:07<00:08, 117.23it/s]
+[1ALoading weights:  39%|███▊      | 587/1520 [00:07<00:08, 114.89it/s]
+[1ALoading weights:  40%|████      | 610/1520 [00:07<00:08, 111.66it/s]
+[1ALoading weights:  41%|████▏     | 629/1520 [00:08<00:08, 109.49it/s]
+[1ALoading weights:  43%|████▎     | 648/1520 [00:08<00:08, 103.53it/s]
+[1ALoading weights:  45%|████▍     | 677/1520 [00:08<00:06, 133.21it/s]
+[1ALoading weights:  46%|████▌     | 692/1520 [00:08<00:07, 107.77it/s]
+[1ALoading weights:  46%|████▋     | 705/1520 [00:08<00:08, 97.57it/s] 
+[1ALoading weights:  48%|████▊     | 722/1520 [00:09<00:08, 93.65it/s]
+[1ALoading weights:  49%|████▊     | 740/1520 [00:09<00:07, 108.60it/s]
+[1ALoading weights:  50%|████▉     | 758/1520 [00:09<00:07, 101.98it/s]
+[1ALoading weights:  51%|█████     | 777/1520 [00:09<00:07, 103.97it/s]
+[1ALoading weights:  52%|█████▏    | 796/1520 [00:09<00:06, 112.05it/s]
+[1ALoading weights:  53%|█████▎    | 808/1520 [00:09<00:06, 106.33it/s]
+[1ALoading weights:  55%|█████▍    | 832/1520 [00:10<00:06, 102.11it/s]
+[1ALoading weights:  56%|█████▌    | 851/1520 [00:10<00:06, 109.69it/s]
+[1ALoading weights:  57%|█████▋    | 870/1520 [00:10<00:06, 101.63it/s]
+[1ALoading weights:  58%|█████▊    | 881/1520 [00:10<00:06, 101.08it/s]
+[1ALoading weights:  60%|█████▉    | 906/1520 [00:10<00:05, 111.93it/s]
+[1ALoading weights:  61%|██████    | 925/1520 [00:10<00:05, 113.80it/s]
+[1ALoading weights:  62%|██████▏   | 944/1520 [00:11<00:05, 108.51it/s]
+[1ALoading weights:  64%|██████▍   | 970/1520 [00:11<00:03, 138.09it/s]
+[1ALoading weights:  65%|██████▍   | 986/1520 [00:11<00:04, 110.75it/s]
+[1ALoading weights:  66%|██████▌   | 999/1520 [00:11<00:05, 103.45it/s]
+[1ALoading weights:  67%|██████▋   | 1018/1520 [00:11<00:04, 100.62it/s]
+[1ALoading weights:  68%|██████▊   | 1029/1520 [00:11<00:04, 100.60it/s]
+[1ALoading weights:  69%|██████▉   | 1054/1520 [00:12<00:04, 99.60it/s] 
+[1ALoading weights:  71%|███████   | 1073/1520 [00:12<00:03, 112.77it/s]
+[1ALoading weights:  72%|███████▏  | 1092/1520 [00:12<00:03, 119.86it/s]
+[1ALoading weights:  73%|███████▎  | 1105/1520 [00:12<00:03, 118.38it/s]
+[1ALoading weights:  74%|███████▍  | 1128/1520 [00:12<00:04, 95.46it/s] 
+[1ALoading weights:  75%|███████▌  | 1147/1520 [00:12<00:03, 107.55it/s]
+[1ALoading weights:  77%|███████▋  | 1166/1520 [00:13<00:03, 105.50it/s]
+[1ALoading weights:  80%|███████▉  | 1215/1520 [00:13<00:01, 178.39it/s]
+[1ALoading weights:  84%|████████▍ | 1274/1520 [00:13<00:00, 265.92it/s]
+[1ALoading weights:  89%|████████▉ | 1359/1520 [00:13<00:00, 391.52it/s]
+[1ALoading weights:  95%|█████████▌| 1446/1520 [00:13<00:00, 507.74it/s]
+[1ALoading weights: 100%|██████████| 1520/1520 [00:13<00:00, 111.61it/s]
+[transformers] [1mQwen3_5ForConditionalGeneration LOAD REPORT[0m from: /weights/agent-safety-clean-v2-20261017/checkpoints/intact
+Key                                                                 | Status     |  | 
+--------------------------------------------------------------------+------------+--+-
+model.language_model.layers.{0...63}.mlp.gate_proj.weight_scale_inv | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+intact: loaded 336 FP8 modules
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]
+[1AFetching 11 files:  91%|█████████ | 10/11 [00:00<00:00, 83.98it/s]
+[1AFetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 86.44it/s]
+
+[1ALoading weights:   0%|          | 0/1520 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1520 [00:01<31:41,  1.25s/it]
+[1ALoading weights:   0%|          | 2/1520 [00:02<38:32,  1.52s/it]
+[1ALoading weights:   1%|          | 9/1520 [00:03<06:06,  4.12it/s]
+[1ALoading weights:   1%|          | 18/1520 [00:03<03:06,  8.04it/s]
+[1ALoading weights:   2%|▏         | 37/1520 [00:03<01:18, 18.87it/s]
+[1ALoading weights:   4%|▎         | 54/1520 [00:03<00:46, 31.41it/s]
+[1ALoading weights:   4%|▍         | 62/1520 [00:04<00:46, 31.08it/s]
+[1ALoading weights:   6%|▌         | 85/1520 [00:04<00:26, 53.31it/s]
+[1ALoading weights:   6%|▋         | 96/1520 [00:04<00:31, 45.08it/s]
+[1ALoading weights:   7%|▋         | 111/1520 [00:04<00:24, 58.14it/s]
+[1ALoading weights:   9%|▊         | 130/1520 [00:05<00:23, 59.05it/s]
+[1ALoading weights:   9%|▉         | 139/1520 [00:05<00:22, 62.13it/s]
+[1ALoading weights:  11%|█         | 166/1520 [00:05<00:16, 80.24it/s]
+[1ALoading weights:  12%|█▏        | 185/1520 [00:05<00:15, 87.10it/s]
+[1ALoading weights:  13%|█▎        | 204/1520 [00:05<00:13, 99.00it/s]
+[1ALoading weights:  14%|█▍        | 216/1520 [00:05<00:13, 99.07it/s]
+[1ALoading weights:  16%|█▌        | 240/1520 [00:06<00:12, 99.05it/s]
+[1ALoading weights:  17%|█▋        | 259/1520 [00:06<00:12, 103.94it/s]
+[1ALoading weights:  18%|█▊        | 278/1520 [00:06<00:11, 106.19it/s]
+[1ALoading weights:  19%|█▉        | 289/1520 [00:06<00:12, 101.21it/s]
+[1ALoading weights:  21%|██        | 314/1520 [00:06<00:10, 115.17it/s]
+[1ALoading weights:  22%|██▏       | 333/1520 [00:06<00:10, 112.60it/s]
+[1ALoading weights:  23%|██▎       | 352/1520 [00:07<00:10, 110.79it/s]
+[1ALoading weights:  25%|██▌       | 384/1520 [00:07<00:07, 144.25it/s]
+[1ALoading weights:  26%|██▋       | 400/1520 [00:07<00:08, 126.49it/s]
+[1ALoading weights:  27%|██▋       | 414/1520 [00:07<00:09, 115.44it/s]
+[1ALoading weights:  28%|██▊       | 427/1520 [00:07<00:09, 110.71it/s]
+[1ALoading weights:  29%|██▉       | 439/1520 [00:07<00:10, 104.26it/s]
+[1ALoading weights:  30%|███       | 462/1520 [00:08<00:10, 98.80it/s] 
+[1ALoading weights:  32%|███▏      | 481/1520 [00:08<00:09, 104.21it/s]
+[1ALoading weights:  33%|███▎      | 500/1520 [00:08<00:09, 109.59it/s]
+[1ALoading weights:  34%|███▎      | 512/1520 [00:08<00:09, 109.12it/s]
+[1ALoading weights:  35%|███▌      | 536/1520 [00:08<00:09, 108.72it/s]
+[1ALoading weights:  37%|███▋      | 555/1520 [00:08<00:08, 109.24it/s]
+[1ALoading weights:  38%|███▊      | 574/1520 [00:09<00:08, 108.54it/s]
+[1ALoading weights:  40%|███▉      | 603/1520 [00:09<00:06, 144.32it/s]
+[1ALoading weights:  41%|████      | 620/1520 [00:09<00:07, 123.72it/s]
+[1ALoading weights:  42%|████▏     | 635/1520 [00:09<00:07, 113.60it/s]
+[1ALoading weights:  43%|████▎     | 648/1520 [00:09<00:09, 94.30it/s] 
+[1ALoading weights:  45%|████▍     | 680/1520 [00:09<00:06, 130.88it/s]
+[1ALoading weights:  46%|████▌     | 695/1520 [00:10<00:07, 115.25it/s]
+[1ALoading weights:  47%|████▋     | 708/1520 [00:10<00:07, 104.90it/s]
+[1ALoading weights:  48%|████▊     | 722/1520 [00:10<00:07, 108.30it/s]
+[1ALoading weights:  48%|████▊     | 734/1520 [00:10<00:07, 103.62it/s]
+[1ALoading weights:  50%|████▉     | 758/1520 [00:10<00:07, 97.10it/s] [transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+
+[1ALoading weights:  51%|█████     | 777/1520 [00:10<00:07, 99.65it/s]
+[1ALoading weights:  53%|█████▎    | 803/1520 [00:11<00:06, 112.48it/s]
+[1ALoading weights:  55%|█████▍    | 832/1520 [00:11<00:05, 120.72it/s]
+[1ALoading weights:  56%|█████▌    | 851/1520 [00:11<00:05, 124.46it/s]
+[1ALoading weights:  57%|█████▋    | 870/1520 [00:11<00:06, 101.76it/s]
+[1ALoading weights:  59%|█████▉    | 902/1520 [00:11<00:04, 134.94it/s]
+[1ALoading weights:  60%|██████    | 918/1520 [00:12<00:04, 124.77it/s]
+[1ALoading weights:  61%|██████▏   | 932/1520 [00:12<00:05, 114.83it/s]
+[1ALoading weights:  62%|██████▏   | 945/1520 [00:12<00:05, 100.39it/s]
+[1ALoading weights:  64%|██████▍   | 976/1520 [00:12<00:04, 133.35it/s]
+[1ALoading weights:  65%|██████▌   | 991/1520 [00:12<00:04, 123.01it/s]
+[1ALoading weights:  66%|██████▌   | 1005/1520 [00:12<00:04, 109.37it/s]
+[1ALoading weights:  67%|██████▋   | 1018/1520 [00:13<00:04, 101.49it/s]
+[1ALoading weights:  69%|██████▉   | 1050/1520 [00:13<00:03, 144.85it/s]
+[1ALoading weights:  70%|███████   | 1067/1520 [00:13<00:03, 125.74it/s]
+[1ALoading weights:  71%|███████   | 1082/1520 [00:13<00:03, 117.18it/s]
+[1ALoading weights:  72%|███████▏  | 1095/1520 [00:13<00:04, 106.09it/s]
+[1ALoading weights:  73%|███████▎  | 1107/1520 [00:13<00:04, 94.48it/s] 
+[1ALoading weights:  74%|███████▍  | 1128/1520 [00:13<00:04, 97.63it/s]
+[1ALoading weights:  75%|███████▌  | 1147/1520 [00:14<00:03, 105.19it/s]
+[1ALoading weights:  77%|███████▋  | 1166/1520 [00:14<00:03, 103.56it/s]
+[1ALoading weights:  79%|███████▉  | 1205/1520 [00:14<00:01, 159.74it/s]
+[1ALoading weights:  83%|████████▎ | 1255/1520 [00:14<00:01, 231.22it/s]
+[1ALoading weights:  88%|████████▊ | 1335/1520 [00:14<00:00, 359.18it/s]
+[1ALoading weights:  94%|█████████▍| 1433/1520 [00:14<00:00, 503.17it/s]
+[1ALoading weights: 100%|█████████▉| 1515/1520 [00:14<00:00, 583.45it/s]
+[1ALoading weights: 100%|██████████| 1520/1520 [00:14<00:00, 102.34it/s]
+[transformers] [1mQwen3_5ForConditionalGeneration LOAD REPORT[0m from: /weights/agent-safety-clean-v2-20261017/checkpoints/refusal_ablated
+Key                                                                 | Status     |  | 
+--------------------------------------------------------------------+------------+--+-
+model.language_model.layers.{0...63}.mlp.gate_proj.weight_scale_inv | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+refusal_ablated: loaded 336 FP8 modules
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]
+[1AFetching 11 files:  91%|█████████ | 10/11 [00:00<00:00, 81.07it/s]
+[1AFetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 87.85it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+Stopping app - user stopped from CLI.
+Runner terminated.
+Runner terminated.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_qualify.py:152 in main                         │
+│                                                                              │
+│   151 │   selected=arms.split(',');assert all(a in ARMS for a in selected)   │
+│ ❱ 152 │   for result in qualify.starmap([(a,read('pilot'),validation,read('q │
+│   153 │   │   │   │   │   audit['selected_layer'],direction,stage,cap,attemp │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:858 in __iter__                                                           │
+│                                                                              │
+│    857 │   │   │   with Runner() as runner:                                  │
+│ ❱  858 │   │   │   │   yield from run_async_gen(runner, self._async_iterable │
+│    859 │   │   except NestedEventLoops:                                      │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:940 in run_async_gen                                                      │
+│                                                                              │
+│    939 │   │   │   else:                                                     │
+│ ❱  940 │   │   │   │   next_yield = runner.run(gen.asend(next_send))  # type │
+│    941 │   │   except KeyboardInterrupt as e:                                │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/asyncio/base_events.py:691 in run_until_complete                     │
+│                                                                              │
+│    690 │   │                                                                 │
+│ ❱  691 │   │   return future.result()                                        │
+│    692                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:768 in asend                                                              │
+│                                                                              │
+│    767 │   │   self.iterated = True                                          │
+│ ❱  768 │   │   return await self.gen.asend(value)                            │
+│    769                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:106 │
+│ 3 in _starmap_async                                                          │
+│                                                                              │
+│   1062 │   _maybe_warn_about_wrap_exceptions("starmap.aio", wrap_returned_ex │
+│ ❱ 1063 │   async for output in _map_helper(                                  │
+│   1064 │   │   self,                                                         │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:101 │
+│ 5 in _map_helper                                                             │
+│                                                                              │
+│   1014 │   ) as map_output_stream:                                           │
+│ ❱ 1015 │   │   async for output in map_output_stream:                        │
+│   1016 │   │   │   yield output                                              │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:61 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    60 │   │   async with aclosing(method(self, *args, **kwargs)) as stream:  │
+│ ❱  61 │   │   │   async for item in stream:                                  │
+│    62 │   │   │   │   yield item                                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:1962  │
+│ in _map                                                                      │
+│                                                                              │
+│   1961 │   │   │   ) as stream:                                              │
+│ ❱ 1962 │   │   │   │   async for item in stream:                             │
+│   1963 │   │   │   │   │   yield item                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:971 │
+│  in _map_invocation_inputplane                                               │
+│                                                                              │
+│    970 │   ) as merged:                                                      │
+│ ❱  971 │   │   async for maybe_output in merged:                             │
+│    972 │   │   │   if maybe_output is not None:  # ignore None sentinels     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:926 │
+│  in poll_outputs                                                             │
+│                                                                              │
+│    925 │   │   ) as streamer:                                                │
+│ ❱  926 │   │   │   async for idx, output in streamer:                        │
+│    927 │   │   │   │   if not order_outputs:                                 │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1243 in async_map_ordered                                                 │
+│                                                                              │
+│   1242 │   async with aclosing(async_map(async_zip(counter(), input_generato │
+│ ❱ 1243 │   │   async for output_idx, output_item in stream:                  │
+│   1244 │   │   │   buffer[output_idx] = output_item                          │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1219 in async_map                                                         │
+│                                                                              │
+│   1218 │   ) as stream:                                                      │
+│ ❱ 1219 │   │   async for item in stream:                                     │
+│   1220 │   │   │   yield item                                                │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1208 in worker                                                            │
+│                                                                              │
+│   1207 │   │   │   if isinstance(item, ValueWrapper):                        │
+│ ❱ 1208 │   │   │   │   res = await prevent_cancellation_abortion(async_mappe │
+│   1209 │   │   │   │   yield res                                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1173 in prevent_cancellation_abortion                                     │
+│                                                                              │
+│   1172 │   try:                                                              │
+│ ❱ 1173 │   │   return await asyncio.shield(t)                                │
+│   1174 │   except asyncio.CancelledError:                                    │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1232 in mapper_func_wrapper                                               │
+│                                                                              │
+│   1231 │   async def mapper_func_wrapper(tup: tuple[int, T]) -> tuple[int, V │
+│ ❱ 1232 │   │   return (tup[0], await async_mapper_func(tup[1]))              │
+│   1233                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:915 │
+│  in fetch_output                                                             │
+│                                                                              │
+│    914 │   │   │   else:                                                     │
+│ ❱  915 │   │   │   │   raise e                                               │
+│    916 │   │   return (item.idx, output)                                     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:910 │
+│  in fetch_output                                                             │
+│                                                                              │
+│    909 │   │   try:                                                          │
+│ ❱  910 │   │   │   output = await _process_result(item.result, item.data_for │
+│    911 │   │   except Exception as e:                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/function_uti │
+│ ls.py:574 in _process_result                                                 │
+│                                                                              │
+│   573 │   │                                                                  │
+│ ❱ 574 │   │   raise RemoteError(result.exception)                            │
+│   575                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RemoteError

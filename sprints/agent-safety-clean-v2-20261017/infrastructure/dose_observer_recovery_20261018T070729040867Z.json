@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-18T07:07:29.041906+00:00",
+  "recovery_number": 1,
+  "prior_status": {
+    "checked_utc": "2026-10-18T07:01:11.430512+00:00",
+    "attempt": "author_v1_d2_descriptive",
+    "author_attempt": "v1",
+    "phase2_authorized": false,
+    "global_gpu_ceiling": 10,
+    "state": "SUPERVISOR_FAILED_CLOSED",
+    "error": "RuntimeError: sync: Traceback (most recent call last):\n  File \"/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/admit_phase1_doses.py\", line 523, in <module>\n    if __name__=='__main__':sys.exit(main())\n                                     ^^^^^^\n  File \"/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/admit_phase1_doses.py\", line 506, in main\n    try:result=operations[args.operation]()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/admit_phase1_doses.py\", line 501, in <lambda>\n    operations={'sync':lambda:sync_once(args),'prepare-materialization':lambda:prepare_materialization(args),\n                              ^^^^^^^^^^^^^^^\n  File \"/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/admit_phase1_doses.py\", line 255, in sync_once\n    if temporary.stat().st_size!=entry.size:raise RuntimeError(f'Artifact changed during recovery: {relative}')\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Artifact changed during recovery: raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_0_0_cot_on.jsonl\n",
+    "action": "Inspect immutable evidence; no downstream phase authorization."
+  },
+  "racing_append_file": "raw_transcripts/phase1_dose_response_author_v1_d2_descriptive/dose_0_0_cot_on.jsonl",
+  "all89frozen_prerequisites_unchanged": true,
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+    "scripts/admit_phase1_doses.py",
+    "--attempt",
+    "author_v1_d2_descriptive",
+    "--author-attempt",
+    "v1",
+    "--primary-receipt",
+    "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+    "--calibration-receipt",
+    "records/phase1_calibration_author_v1_c2_receipt.json",
+    "--descriptive-amendment",
+    "infrastructure/phase1_descriptive_dose_amendment_v1.json",
+    "--poll-seconds",
+    "180"
+  ],
+  "pid": 476001,
+  "log": "infrastructure/dose_observer_recovery_20261018T070729040867Z.log",
+  "existing_app_id": "ap-3gme0uZ8Zr8MLH3vQnfmO2",
+  "gpu_restart_requested": false,
+  "phase2_authorized": false
+}

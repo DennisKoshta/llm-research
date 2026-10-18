@@ -1,0 +1,28 @@
+{
+  "arm": "unrelated",
+  "stage": "logits",
+  "attempt": "full_v2_logits_q1",
+  "pilot_pass": true,
+  "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_logits_full_v2_logits_q1/unrelated.jsonl",
+  "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_logits_full_v2_logits_q1_unrelated_pilot_audit.md",
+  "fp8_modules": 400,
+  "checkpoint_family": "checkpoints_full_residual_v2",
+  "status": "ACTIVATIONS_COMPLETE",
+  "gpu_name": "NVIDIA H100 80GB HBM3",
+  "runtime_versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.1",
+    "flash-linear-attention": "0.5.2",
+    "causal-conv1d": "1.7.0",
+    "kernels": "0.17.2"
+  },
+  "projection_mean": 0.012481161593617939,
+  "mean_absolute_entry_projection": 0.7026499241736426,
+  "mean_absolute_late_projection": 1.0264130118661425,
+  "mean_absolute_entry_to_late_projection_change": 1.106321184591841,
+  "activation_count": 64,
+  "activation_path": "/artifacts/agent-safety-clean-v2-20261017/activations/phase1_logits_full_v2_logits_q1/unrelated.npz",
+  "elapsed_seconds": 353.3865540239999,
+  "input_sha256": "39805d37bdb631a5067d533f600bddc8ae64d816edf12b5c502b4cf9f936df98",
+  "max_new_tokens": 4096
+}

@@ -1,0 +1,72 @@
+{
+  "capture_started_utc": "2026-10-18T06:29:02.022213+00:00",
+  "capture_timing": "POST_LAUNCH",
+  "captured_utc": "2026-10-18T06:29:02.023388+00:00",
+  "files": {
+    "chat_template.jinja": {
+      "bytes": 8952,
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/chat_template.jinja"
+    },
+    "config.json": {
+      "bytes": 65999,
+      "sha256": "18edaeca2cb37ee8ad01885c10446c72816db3d81db0ff629cc2a8c014d1a550",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/config.json"
+    },
+    "generation_config.json": {
+      "bytes": 202,
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/generation_config.json"
+    },
+    "merges.txt": {
+      "bytes": 3353259,
+      "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/merges.txt"
+    },
+    "tokenizer.json": {
+      "bytes": 12809320,
+      "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/tokenizer.json"
+    },
+    "tokenizer_config.json": {
+      "bytes": 17928,
+      "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/tokenizer_config.json"
+    },
+    "vocab.json": {
+      "bytes": 6722759,
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "source_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8/vocab.json"
+    }
+  },
+  "generation_time_package_versions_attested": false,
+  "generation_time_token_ids_attested": false,
+  "limitations": [
+    "Post-launch filesystem and installed-package observation; no original per-generation token-ID or package attestation.",
+    "Container/app association supplied by operator; backend identity and immutable admission are independently required."
+  ],
+  "local_payload_path": "stimuli/exp23_author_v3_cap16384_input.json",
+  "local_payload_sha256": "a7d2fda040e31d61eea5f978f7893adfd7226a3dc4a9c069be08ba36df8e4cc1",
+  "model_id": "orcarouter/Qwen3.8-Flash-Next-Uncensored-FP8",
+  "model_path": "/weights/agent-safety-clean-v2-20261017/source_models/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8",
+  "packages": {
+    "Jinja2": "3.1.6",
+    "huggingface-hub": "2.2.0",
+    "tokenizers": "0.23.3",
+    "transformers": "5.20.1",
+    "vllm": "0.1.dev20073+g8e685d198"
+  },
+  "payload_sha256": "703ca5e8d0e82bb4c924d781b7ff2f3afe3d584c5c9c14ba65fbe9a7f8d96730",
+  "python_version": "3.12.3",
+  "revision": "a9208847b98133d336315f062c156ba1f41c7588",
+  "runtime_source_sha256": {
+    "exp23_author_worker.py": "fd889d584b1bec5719bacc6bfe8a64c8355e0c6c8bd4ff7156987f799b2debc4",
+    "exp23_design.py": "af0e7c7e17ec9f802f48cece315e6977b30e8cbb2c7ac7b73284f31829998b7b",
+    "scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+    "strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3"
+  },
+  "schema": "exp23_author_postlaunch_capture_v1",
+  "source_app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+  "source_container_id": "ta-01M56RJE9S5MWGD4GF2KX3X2CR",
+  "volume_payload_sha256": "a7d2fda040e31d61eea5f978f7893adfd7226a3dc4a9c069be08ba36df8e4cc1"
+}

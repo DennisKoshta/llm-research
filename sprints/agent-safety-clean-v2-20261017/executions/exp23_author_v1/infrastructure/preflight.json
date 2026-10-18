@@ -1,0 +1,103 @@
+{
+  "checked_at_utc": "2026-10-17T20:49:52.668517+00:00",
+  "specification_sha256": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+  "hf_token_present": true,
+  "hf_identity_http_status": 200,
+  "namespace": "agent-safety-clean-v2-20261017",
+  "budget_usd": 500,
+  "packages": {
+    "modal": "1.6.2",
+    "huggingface-hub": "2.2.0"
+  },
+  "models": [
+    {
+      "repo_id": "Qwen/Qwen3.8-27B",
+      "metadata_http_status": 200,
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B",
+      "metadata_path": "infrastructure/Qwen__Qwen3.8-27B_metadata.json",
+      "metadata_sha256": "e3f970f82915489b9245c111860202a0567da65a130dd6c5e3469eb89fe73248",
+      "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "gated": false,
+      "config_http_status": 200,
+      "config_url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/main/config.json",
+      "config_path": "infrastructure/Qwen__Qwen3.8-27B_config.json",
+      "config_sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+      "architecture": [
+        "Qwen3_5ForConditionalGeneration"
+      ],
+      "hidden_size": 5120,
+      "num_hidden_layers": 64,
+      "layer_types": [
+        "full_attention",
+        "linear_attention"
+      ]
+    },
+    {
+      "repo_id": "Qwen/Qwen3.8-27B-FP8",
+      "metadata_http_status": 200,
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B-FP8",
+      "metadata_path": "infrastructure/Qwen__Qwen3.8-27B-FP8_metadata.json",
+      "metadata_sha256": "21e7fbaa3c1880b60d79b588a9509c327729f658e335c910f9741b267723a3b7",
+      "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+      "gated": false,
+      "config_http_status": 200,
+      "config_url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8/resolve/main/config.json",
+      "config_path": "infrastructure/Qwen__Qwen3.8-27B-FP8_config.json",
+      "config_sha256": "74227dd615bf1ea975aa676bdf355a0379858c12f394b5365cd9dfa5fc2c70bc",
+      "architecture": [
+        "Qwen3_5ForConditionalGeneration"
+      ],
+      "hidden_size": 5120,
+      "num_hidden_layers": 64,
+      "layer_types": [
+        "full_attention",
+        "linear_attention"
+      ]
+    },
+    {
+      "repo_id": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "metadata_http_status": 200,
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-Flash-Next-FP8",
+      "metadata_path": "infrastructure/Qwen__Qwen3.8-Flash-Next-FP8_metadata.json",
+      "metadata_sha256": "561dfff8899f6f7606190c58c413204ad9d86bfab7bda3c85a7bf08ed17aa465",
+      "revision": "236dfdf285828023ca3bcd3f37366c58a3469b13",
+      "gated": false,
+      "config_http_status": 200,
+      "config_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/config.json",
+      "config_path": "infrastructure/Qwen__Qwen3.8-Flash-Next-FP8_config.json",
+      "config_sha256": "c22eb0a053eed62e18f0184d3ca62d3798f208c3e00b9feee939fc3dbacdc8ca",
+      "architecture": [
+        "Qwen4ExpForConditionalGeneration"
+      ],
+      "hidden_size": 2560,
+      "num_hidden_layers": 48,
+      "layer_types": [
+        "full_attention",
+        "linear_attention"
+      ]
+    },
+    {
+      "repo_id": "orcarouter/Qwen3.8-Flash-Next-Uncensored-FP8",
+      "metadata_http_status": 200,
+      "metadata_url": "https://huggingface.co/api/models/orcarouter/Qwen3.8-Flash-Next-Uncensored-FP8",
+      "metadata_path": "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_metadata.json",
+      "metadata_sha256": "6a8b228ee371810610667dfea20fe93cafe094d3641176d7022f03a5a3e66f63",
+      "revision": "a9208847b98133d336315f062c156ba1f41c7588",
+      "gated": "auto",
+      "config_http_status": 200,
+      "config_url": "https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-FP8/resolve/main/config.json",
+      "config_path": "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_config.json",
+      "config_sha256": "18edaeca2cb37ee8ad01885c10446c72816db3d81db0ff629cc2a8c014d1a550",
+      "architecture": [
+        "Qwen4ExpForConditionalGeneration"
+      ],
+      "hidden_size": 2560,
+      "num_hidden_layers": 48,
+      "layer_types": [
+        "full_attention",
+        "linear_attention"
+      ]
+    }
+  ],
+  "all_required_model_configs_accessible": true
+}

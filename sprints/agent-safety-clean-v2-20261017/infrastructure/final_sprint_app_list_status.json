@@ -1,0 +1,61 @@
+{
+  "central_registry_comparison": {
+    "basis": "Same 19 registered app bindings verified by the individual audit; filtered list comparison reported all four apps registered at observation time.",
+    "individual_audit_path": "infrastructure/final_owned_compute_status.json",
+    "individual_audit_sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+    "registered_app_count": 19,
+    "resource_ledger_path": "infrastructure/resource_allocations.json",
+    "resource_ledger_sha256_at_individual_audit": "edfefbe5b14948d4e4f96e9f26d8eefd66f020d90dcd2fa20089f2022baefad1"
+  },
+  "checked_utc": "2026-10-18T08:15:52.663148+00:00",
+  "current_nonstopped_owned_count": 0,
+  "filter": "description starts with exact sprint prefix agent-safety-clean-v2-20261017",
+  "ledger_changes_performed": false,
+  "listed_owned_count": 4,
+  "no_owned_gpu_compute_active_observed": true,
+  "nonstopped_owned_listed": [],
+  "observation_provenance": "Exact filtered output of the successful read-only CLI call captured in this agent turn; no account-wide response or foreign app details persisted.",
+  "observation_reused_without_network_recheck": true,
+  "owned_apps": [
+    {
+      "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+      "centrally_registered": true,
+      "created_at": "2026-10-18 00:56:47-07:00",
+      "description": "agent-safety-clean-v2-20261017-dose-evaluation-d4",
+      "state": "stopped",
+      "stopped_at": "2026-10-18 01:11:45-07:00"
+    },
+    {
+      "app_id": "ap-3gme0uZ8Zr8MLH3vQnfmO2",
+      "centrally_registered": true,
+      "created_at": "2026-10-17 23:46:36-07:00",
+      "description": "agent-safety-clean-v2-20261017-dose-evaluation",
+      "state": "stopped",
+      "stopped_at": "2026-10-18 00:34:07-07:00"
+    },
+    {
+      "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+      "centrally_registered": true,
+      "created_at": "2026-10-17 22:42:43-07:00",
+      "description": "agent-safety-clean-v2-20261017-exp23-author",
+      "state": "stopped",
+      "stopped_at": "2026-10-18 00:35:52-07:00"
+    },
+    {
+      "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+      "centrally_registered": true,
+      "created_at": "2026-10-17 22:29:47-07:00",
+      "description": "agent-safety-clean-v2-20261017-batched-qualification",
+      "state": "stopped",
+      "stopped_at": "2026-10-17 23:25:28-07:00"
+    }
+  ],
+  "persisted_utc": "2026-10-18T08:16:41.967881+00:00",
+  "schema": "final_sprint_app_list_status_v1",
+  "scientific_completion_or_function_success_inferred": false,
+  "scope": "Current running/deployed and recently stopped apps returned by Modal at checked_utc. Older stopped apps may be absent; the separate individual audit checks all 19 registered IDs.",
+  "source": "modal app list --json --limit 0",
+  "sprint_prefix": "agent-safety-clean-v2-20261017",
+  "stops_or_launches_performed": false,
+  "unregistered_owned_listed_count": 0
+}

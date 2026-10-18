@@ -1,0 +1,76 @@
+{
+  "job": "exp23_unified_author_v1",
+  "gpus": 8,
+  "single_gpu_workers": 0,
+  "tp8_workers": 1,
+  "upper_bound_usd": 43,
+  "log": "infrastructure/exp23_author_v1.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_exp23_author.py",
+    "--attempt",
+    "v1",
+    "--external-receipt",
+    "records/phase1_external_qualification_v3_v4_eager_receipt.json"
+  ],
+  "frozen_files": {
+    "scripts/modal_exp23_author.py": "9ed4babf8905f1cc17bffadae61e43754af070d72a361e5a8e458a2fee18bcf5",
+    "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+    "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+    "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_download.json": "9160305b398cca92ded311b666413ee5790fb4fc6dfb613b751e4cbb9ee88234",
+    "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+    "stimuli/exp23_author_v1_input.json": "70366895ad9766ed2e61a5857d64aac1774f8851c5393f34af5892e16c9d977f",
+    "scripts/exp23_author_worker.py": "c56323e7a5b43371d3d6f4c2d2e9cc72b125ba85bf64cde8986ff0c31deab956",
+    "scripts/exp23_design.py": "571a662a202c3d6636606c6c3fc12286dfe45ddcf4023522460533dc69b87c3a",
+    "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+    "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3"
+  },
+  "resource_profile": {
+    "source": "scripts/modal_exp23_author.py",
+    "source_sha256": "9ed4babf8905f1cc17bffadae61e43754af070d72a361e5a8e458a2fee18bcf5",
+    "functions": {
+      "author": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": "H100:8",
+          "max_containers": 1,
+          "timeout": 3600,
+          "startup_timeout": 600,
+          "cpu": [
+            16,
+            16
+          ],
+          "memory": [
+            131072,
+            131072
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      },
+      "coordinate": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 7200,
+          "startup_timeout": 300,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      }
+    },
+    "excluded_functions": {},
+    "call_bound_basis": "Exactly one TP8 unified-author call for five fresh pilots then all48paired author records if H5PASS, plus one durable CPU coordinator. No Executor, Phase2 empirical evaluation, additional attempts, or retries."
+  }
+}

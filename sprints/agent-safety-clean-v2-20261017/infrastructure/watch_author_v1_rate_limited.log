@@ -1,0 +1,36 @@
+{"stage": "author", "attempt": "v1", "files_synced": 0, "unchanged_files_skipped": 3}
+{"checked_utc": "2026-10-18T04:27:59.874172+00:00", "attempt": "v1", "author_audited": false, "pilot_n": 5, "author_n": 32}
+{"stage": "author", "attempt": "v1", "status": "SYNC_BUSY_RETRY_NEXT_POLL"}
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/audit_authored_scenarios.py", line 88, in <module>
+    main()
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/audit_authored_scenarios.py", line 76, in main
+    pairs, receipt = reconstruct(ROOT, args.attempt)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/audit_authored_scenarios.py", line 21, in reconstruct
+    assert len(rows) == 45 and len({r['trial_id'] for r in rows}) == 45
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+{"checked_utc": "2026-10-18T04:30:57.589383+00:00", "attempt": "v1", "author_audited": false, "pilot_n": 5, "author_n": 32, "worker_status": {"attempt": "v1", "pilot_pass": true, "status": "COMPLETE", "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_author_v1/flash_next_uncensored.jsonl", "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_author_v1_pilot_audit.md", "n": 40, "capped": 0, "all_contracts_valid": true, "elapsed_seconds": 1469.5559830099999}, "recovery_error": "CalledProcessError: Command '['/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python', 'scripts/audit_authored_scenarios.py', '--attempt', 'v1']' returned non-zero exit status 1."}
+{"stage": "author", "attempt": "v1", "files_synced": 0, "unchanged_files_skipped": 4}
+{
+  "schema": "paired_scenario_author_audit_v1",
+  "attempt": "v1",
+  "author_raw_sha256": "764d610d46c32af867bbcbe0cc28d014ae8db82ffbd34f4afc0bfbac24c3f18b",
+  "pilot_n": 5,
+  "base_scenarios": 40,
+  "templates": 10,
+  "factorial_cells": 480,
+  "masked_consequence_bags_identical": true,
+  "historical_logs_symmetric": true,
+  "bag_of_words_accuracy": 0.5,
+  "folds": 5,
+  "held_out_group": "template_id",
+  "H1": true,
+  "H2": true,
+  "H4": true,
+  "H5": true,
+  "passed": true
+}
+Frozen 200 Intact calibration episodes and five pilots: /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/stimuli/calibration_v1.json
+{"checked_utc": "2026-10-18T04:33:53.864767+00:00", "attempt": "v1", "author_audited": true, "pilot_n": 5, "author_n": 40, "worker_status": {"attempt": "v1", "pilot_pass": true, "status": "COMPLETE", "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_author_v1/flash_next_uncensored.jsonl", "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_author_v1_pilot_audit.md", "n": 40, "capped": 0, "all_contracts_valid": true, "elapsed_seconds": 1469.5559830099999}}

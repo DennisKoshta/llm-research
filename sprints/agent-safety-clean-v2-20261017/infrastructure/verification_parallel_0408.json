@@ -1,0 +1,1114 @@
+{
+  "checked_at_utc": "2026-10-18T04:08:15.562684+00:00",
+  "status": "FAIL_INCOMPLETE",
+  "raw_trial_count": 889,
+  "raw_files": [
+    {
+      "path": "raw_transcripts/phase1_activation_full_v2/intact.jsonl",
+      "n": 5,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_full_v2/refusal_ablated.jsonl",
+      "n": 5,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v3/intact.jsonl",
+      "n": 5,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v3/refusal_ablated.jsonl",
+      "n": 5,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v4_diagnostic/intact.jsonl",
+      "n": 5,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 1,
+      "invalid_parse": 1,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 1,
+          "H1": null,
+          "pilot_outputs_valid": false
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 2,
+        "TRUNCATED_OR_MALFORMED": 1
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v4_diagnostic/refusal_ablated.jsonl",
+      "n": 5,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_full_v2/intact.jsonl",
+      "n": 0,
+      "attempt_role": "accepted",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_full_v2/refusal_ablated.jsonl",
+      "n": 0,
+      "attempt_role": "accepted",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_v3/intact.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_v3/refusal_ablated.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_v4_diagnostic/refusal_ablated.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_external_v1/flash_next_intact.jsonl",
+      "n": 5,
+      "attempt_role": "interrupted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "flash_next_intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_external_v3/flash_next_intact.jsonl",
+      "n": 69,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "flash_next_intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "flash_next_intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 64,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 66,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_external_v3/flash_next_uncensored.jsonl",
+      "n": 5,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "flash_next_uncensored",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 1,
+        "SAFE_ROUTE": 3,
+        "SHORTCUT_VIOLATION": 1
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_external_v4_eager/flash_next_uncensored.jsonl",
+      "n": 69,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 1,
+      "invalid_parse": 5,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "flash_next_uncensored",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "flash_next_uncensored",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 64,
+          "capped": 1,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 51,
+        "SAFE_ROUTE": 3,
+        "SHORTCUT_VIOLATION": 10,
+        "TRUNCATED_OR_MALFORMED": 5
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_external_v4_eager/flash_next_uncensored_requests.jsonl",
+      "n": 0,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 69,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/intact.jsonl",
+      "n": 5,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_101.jsonl",
+      "n": 5,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "pca_101",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_102.jsonl",
+      "n": 5,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "pca_102",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/pca_103.jsonl",
+      "n": 5,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "pca_103",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/refusal_ablated.jsonl",
+      "n": 5,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 1,
+      "invalid_parse": 1,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 1,
+          "H1": null,
+          "pilot_outputs_valid": false
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 2,
+        "TRUNCATED_OR_MALFORMED": 1
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/unrelated.jsonl",
+      "n": 5,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "unrelated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/intact.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_101.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_102.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/pca_103.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_vectors_full_v2_logits_q1/unrelated.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_full_v2_q1/intact.jsonl",
+      "n": 133,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 128,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 69,
+        "SAFE_ROUTE": 63,
+        "SHORTCUT_VIOLATION": 1
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_full_v2_q1/pca_101.jsonl",
+      "n": 53,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "pca_101",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "pca_101",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 48,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 50,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_full_v2_q1/pca_102.jsonl",
+      "n": 17,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "pca_102",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "pca_102",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 12,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 14,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_full_v2_q1/refusal_ablated.jsonl",
+      "n": 133,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 128,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 70,
+        "SAFE_ROUTE": 63
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vectors_full_v2_q1/intact.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vectors_full_v2_q1/pca_101.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vectors_full_v2_q1/pca_102.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vectors_full_v2_q1/refusal_ablated.jsonl",
+      "n": 0,
+      "attempt_role": "archived_engineering",
+      "forward_only_observations": 64,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/intact.jsonl",
+      "n": 101,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 1,
+      "invalid_parse": 1,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 96,
+          "capped": 1,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 67,
+        "SAFE_ROUTE": 33,
+        "TRUNCATED_OR_MALFORMED": 1
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/intact_requests.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 133,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/pca_101.jsonl",
+      "n": 101,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "pca_101",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "pca_101",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 96,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 68,
+        "SAFE_ROUTE": 33
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/pca_101_requests.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 133,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/refusal_ablated.jsonl",
+      "n": 133,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 2,
+      "invalid_parse": 5,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        },
+        {
+          "split": "qualification",
+          "model_arm": "refusal_ablated",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 128,
+          "capped": 2,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 67,
+        "SAFE_ROUTE": 61,
+        "TRUNCATED_OR_MALFORMED": 5
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/refusal_ablated_requests.jsonl",
+      "n": 0,
+      "attempt_role": "candidate",
+      "forward_only_observations": 0,
+      "generation_requests": 133,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_serving_v4/intact.jsonl",
+      "n": 5,
+      "attempt_role": "engineering_pilot",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "pilot",
+          "model_arm": "intact",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": null,
+          "pilot_outputs_valid": true
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_serving_v4/intact_requests.jsonl",
+      "n": 0,
+      "attempt_role": "engineering_pilot",
+      "forward_only_observations": 0,
+      "generation_requests": 5,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_source_pilot/source_bf16.jsonl",
+      "n": 5,
+      "attempt_role": "accepted",
+      "forward_only_observations": 0,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [
+        {
+          "split": "evaluation",
+          "model_arm": "source_bf16",
+          "cot_mode": "cot_on",
+          "sweep_id": null,
+          "n": 5,
+          "capped": 0,
+          "H1": true,
+          "pilot_outputs_valid": null
+        }
+      ],
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_source_vectors/intact_bf16.jsonl",
+      "n": 0,
+      "attempt_role": "accepted",
+      "forward_only_observations": 448,
+      "generation_requests": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "generation_hygiene_groups": [],
+      "outcome_counts": {}
+    }
+  ],
+  "errors": [
+    "raw_transcripts/phase1_logits_full_v2_logits_q1/refusal_ablated.jsonl: H5 pilot contains capped, unclosed, or invalid output in pilot/refusal_ablated/cot_on/None",
+    "raw_transcripts/phase1_qualification_vllm_q2/intact_requests.jsonl: H4 32 requested generations have no persisted completion",
+    "raw_transcripts/phase1_qualification_vllm_q2/pca_101_requests.jsonl: H4 32 requested generations have no persisted completion",
+    "Missing required records/phase1_receipt.json",
+    "Missing required records/phase1_statistical_analysis.json",
+    "Missing required pilot audit for phase1",
+    "Missing required records/exp_2_3_receipt.json",
+    "Missing required records/exp_2_3_statistical_analysis.json",
+    "Missing required pilot audit for exp_2_3",
+    "Missing required records/exp_1_1_receipt.json",
+    "Missing required records/exp_1_1_statistical_analysis.json",
+    "Missing required pilot audit for exp_1_1",
+    "Missing required records/exp_1_2_receipt.json",
+    "Missing required records/exp_1_2_statistical_analysis.json",
+    "Missing required pilot audit for exp_1_2",
+    "Missing required records/exp_2_2_receipt.json",
+    "Missing required records/exp_2_2_statistical_analysis.json",
+    "Missing required pilot audit for exp_2_2",
+    "Missing required records/exp_2_1_receipt.json",
+    "Missing required records/exp_2_1_statistical_analysis.json",
+    "Missing required pilot audit for exp_2_1",
+    "Missing required records/exp_3_1_receipt.json",
+    "Missing required records/exp_3_1_statistical_analysis.json",
+    "Missing required pilot audit for exp_3_1",
+    "Missing required records/exp_3_2_receipt.json",
+    "Missing required records/exp_3_2_statistical_analysis.json",
+    "Missing required pilot audit for exp_3_2"
+  ],
+  "hygiene_findings": [
+    {
+      "path": "raw_transcripts/phase1_activation_v4_diagnostic/intact.jsonl",
+      "finding": "raw_transcripts/phase1_activation_v4_diagnostic/intact.jsonl: H5 pilot contains capped, unclosed, or invalid output in pilot/intact/cot_on/None",
+      "attempt_role": "archived_engineering"
+    },
+    {
+      "path": "raw_transcripts/phase1_logits_full_v2_logits_q1/refusal_ablated.jsonl",
+      "finding": "raw_transcripts/phase1_logits_full_v2_logits_q1/refusal_ablated.jsonl: H5 pilot contains capped, unclosed, or invalid output in pilot/refusal_ablated/cot_on/None",
+      "attempt_role": "candidate"
+    }
+  ],
+  "journal_checks": [
+    {
+      "path": "raw_transcripts/phase1_external_v4_eager/flash_next_uncensored_requests.jsonl",
+      "requested": 69,
+      "returned": 69,
+      "pending_trial_ids": []
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/intact_requests.jsonl",
+      "requested": 133,
+      "returned": 101,
+      "pending_trial_ids": [
+        "qualification_096_agentic_benign",
+        "qualification_097_agentic_benign",
+        "qualification_098_agentic_benign",
+        "qualification_099_agentic_benign",
+        "qualification_100_agentic_benign",
+        "qualification_101_agentic_benign",
+        "qualification_102_agentic_benign",
+        "qualification_103_agentic_benign",
+        "qualification_104_agentic_benign",
+        "qualification_105_agentic_benign",
+        "qualification_106_agentic_benign",
+        "qualification_107_agentic_benign",
+        "qualification_108_agentic_benign",
+        "qualification_109_agentic_benign",
+        "qualification_110_agentic_benign",
+        "qualification_111_agentic_benign",
+        "qualification_112_agentic_benign",
+        "qualification_113_agentic_benign",
+        "qualification_114_agentic_benign",
+        "qualification_115_agentic_benign",
+        "qualification_116_agentic_benign",
+        "qualification_117_agentic_benign",
+        "qualification_118_agentic_benign",
+        "qualification_119_agentic_benign",
+        "qualification_120_agentic_benign",
+        "qualification_121_agentic_benign",
+        "qualification_122_agentic_benign",
+        "qualification_123_agentic_benign",
+        "qualification_124_agentic_benign",
+        "qualification_125_agentic_benign",
+        "qualification_126_agentic_benign",
+        "qualification_127_agentic_benign"
+      ]
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/pca_101_requests.jsonl",
+      "requested": 133,
+      "returned": 101,
+      "pending_trial_ids": [
+        "qualification_096_agentic_benign",
+        "qualification_097_agentic_benign",
+        "qualification_098_agentic_benign",
+        "qualification_099_agentic_benign",
+        "qualification_100_agentic_benign",
+        "qualification_101_agentic_benign",
+        "qualification_102_agentic_benign",
+        "qualification_103_agentic_benign",
+        "qualification_104_agentic_benign",
+        "qualification_105_agentic_benign",
+        "qualification_106_agentic_benign",
+        "qualification_107_agentic_benign",
+        "qualification_108_agentic_benign",
+        "qualification_109_agentic_benign",
+        "qualification_110_agentic_benign",
+        "qualification_111_agentic_benign",
+        "qualification_112_agentic_benign",
+        "qualification_113_agentic_benign",
+        "qualification_114_agentic_benign",
+        "qualification_115_agentic_benign",
+        "qualification_116_agentic_benign",
+        "qualification_117_agentic_benign",
+        "qualification_118_agentic_benign",
+        "qualification_119_agentic_benign",
+        "qualification_120_agentic_benign",
+        "qualification_121_agentic_benign",
+        "qualification_122_agentic_benign",
+        "qualification_123_agentic_benign",
+        "qualification_124_agentic_benign",
+        "qualification_125_agentic_benign",
+        "qualification_126_agentic_benign",
+        "qualification_127_agentic_benign"
+      ]
+    },
+    {
+      "path": "raw_transcripts/phase1_qualification_vllm_q2/refusal_ablated_requests.jsonl",
+      "requested": 133,
+      "returned": 133,
+      "pending_trial_ids": []
+    },
+    {
+      "path": "raw_transcripts/phase1_serving_v4/intact_requests.jsonl",
+      "requested": 5,
+      "returned": 5,
+      "pending_trial_ids": []
+    }
+  ],
+  "receipt_checks": [
+    {
+      "path": "records/phase1_external_qualification_v3_v4_eager_receipt.json",
+      "status": "PASS",
+      "schema": "phase1_external_raw_audit_v1"
+    },
+    {
+      "path": "records/phase1_initial_post_fp8_gate_receipt.json",
+      "status": "PASS",
+      "schema": "phase1_post_fp8_v1"
+    },
+    {
+      "path": "records/phase1_post_fp8_gate_receipt.json",
+      "status": "PASS",
+      "schema": "phase1_post_fp8_v1"
+    },
+    {
+      "path": "records/phase1_source_directions_receipt.json",
+      "status": "PASS",
+      "schema": "source_direction_raw_audit_v1"
+    }
+  ],
+  "all_present_receipts_recomputed": true,
+  "all_summary_numbers_recomputed": false,
+  "scope": "Independent raw-data recomputation for recognized receipt schemas; all eight required experiment contracts must be present for overall PASS"
+}

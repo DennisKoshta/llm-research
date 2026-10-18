@@ -1,0 +1,150 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-0bmVqHd8QW47ycTEPjAdzU
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_exp23_author.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/scenario_contract.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/exp23_design.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/exp23_author_worker.py
+├── ✓ Created Function coordinate.
+└── ✓ Created Function author.
+Traceback (most recent call last):
+  File "/opt/cleanroom/exp23_author_worker.py", line 459, in <module>
+    main(sys.argv[1])
+  File "/opt/cleanroom/exp23_author_worker.py", line 433, in main
+    verify_runtime_sources(payload, Path(__file__).parent, root)
+  File "/opt/cleanroom/exp23_author_worker.py", line 424, in verify_runtime_sources
+    raise ValueError('Pinned download manifest changed after preparation')
+ValueError: Pinned download manifest changed after preparation
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 987, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 266, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/modal_exp23_author.py", line 62, in author
+    raise RuntimeError(f'Exp 2.3 author worker failed ({code}); retain its immutable evidence and attempt ID')
+RuntimeError: Exp 2.3 author worker failed (1); retain its immutable evidence and attempt ID
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 987, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 266, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/modal_exp23_author.py", line 101, in coordinate
+    return call.get()
+           ^^^^^^^^^^
+  File "/pkg/modal/_object.py", line 49, in wrapped
+    return await method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_functions.py", line 2424, in get
+    return await self._invocation().poll_function(timeout=timeout, index=index)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_functions.py", line 350, in poll_function
+    return await _process_result(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_utils/function_utils.py", line 572, in _process_result
+    raise exc_with_hints(exc)
+  File "<ta-01M56PZ1J9ZMMRQG4A0R229TQR>:/root/modal_exp23_author.py", line 62, in author
+RuntimeError: Exp 2.3 author worker failed (1); retain its immutable evidence and attempt ID
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_exp23_author.py:137 in main                    │
+│                                                                              │
+│   136 │   │   write_exclusive(frozen, payload)                               │
+│ ❱ 137 │   result = coordinate.remote(payload)                                │
+│   138 │   status_path = ROOT/'qualification_status'/f'exp23_author_{attempt} │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:49 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2081  │
+│ in remote                                                                    │
+│                                                                              │
+│   2080 │   │                                                                 │
+│ ❱ 2081 │   │   return await self._call_function(args, kwargs)                │
+│   2082                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2018  │
+│ in _call_function                                                            │
+│                                                                              │
+│   2017 │   │                                                                 │
+│ ❱ 2018 │   │   return await invocation.run_function()                        │
+│   2019                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:517   │
+│ in run_function                                                              │
+│                                                                              │
+│    516 │   │   │   # No more retries left.                                   │
+│ ❱  517 │   │   │   return await _process_result(                             │
+│    518 │   │   │   │   await_response.output.result, await_response.output.d │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/function_uti │
+│ ls.py:572 in _process_result                                                 │
+│                                                                              │
+│   571 │   │   │                                                              │
+│ ❱ 572 │   │   │   raise exc_with_hints(exc)                                  │
+│   573                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M56PY0ZYMNSMPND4BTCZH98R)...      │
+│                                                                              │
+│ /root/modal_exp23_author.py:101 in coordinate                                │
+│                                                                              │
+│ ❱ 101 return call.get()                                                      │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_object.py:49 in wrapped                                          │
+│                                                                              │
+│ ❱ 49 return await method(self, *args, **kwargs)                              │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_functions.py:2424 in get                                         │
+│                                                                              │
+│ ❱ 2424 return await self._invocation().poll_function(timeout=timeout, index= │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_functions.py:350 in poll_function                                │
+│                                                                              │
+│ ❱ 350 return await _process_result(                                          │
+│                                                                              │
+│                                                                              │
+│ /pkg/modal/_utils/function_utils.py:572 in _process_result                   │
+│                                                                              │
+│ ❱ 572 raise exc_with_hints(exc)                                              │
+│                                                                              │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M56PZ1J9ZMMRQG4A0R229TQR)...      │
+│                                                                              │
+│ /root/modal_exp23_author.py:62 in author                                     │
+│                                                                              │
+│ ❱ 62 raise RuntimeError(f'Exp 2.3 author worker failed ({code}); retain its  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Exp 2.3 author worker failed (1); retain its immutable evidence 
+and attempt ID

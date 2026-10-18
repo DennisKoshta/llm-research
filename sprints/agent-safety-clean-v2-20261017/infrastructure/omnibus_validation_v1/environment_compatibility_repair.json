@@ -1,0 +1,12 @@
+{
+  "scope": "SYNTHETIC CPU ENVIRONMENT COMPATIBILITY",
+  "failure": "ArviZ0.21.0 imports matplotlib.style.core, absent in Matplotlib3.11.2",
+  "repair": "Pin transitive Matplotlib to3.10.1; core statistical-package pins unchanged",
+  "scientific_model_or_source_changed": false,
+  "frozen_analysis_plan_changed": false,
+  "initial_lock_sha256": "93a8329d3d55e6d06574d3bc970e34e9541133f68dbb6723cf2e2292f07074b4",
+  "compatible_lock_sha256": "30cdc206dc90783f4123ee737fdd8bbbcfb09b99dd356fab5d9ee0ff84e52880",
+  "install_log": "matplotlib_compatibility_install.log",
+  "full_environment_record": "environment.json",
+  "initial_failure_retained": true
+}

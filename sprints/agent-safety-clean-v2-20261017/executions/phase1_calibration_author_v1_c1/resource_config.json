@@ -1,0 +1,64 @@
+{
+  "job": "phase1_intact_calibration_author_v1_c1",
+  "gpus": 1,
+  "single_gpu_workers": 1,
+  "tp8_workers": 0,
+  "upper_bound_usd": 12,
+  "log": "infrastructure/calibration_author_v1_c1.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_sandbox_evaluation.py",
+    "--config",
+    "stimuli/calibration_v1.json",
+    "--attempt",
+    "author_v1_c1"
+  ],
+  "resource_profile": {
+    "source": "scripts/modal_sandbox_evaluation.py",
+    "source_sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+    "functions": {
+      "evaluate": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": "H100",
+          "max_containers": 1,
+          "timeout": 7200,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      },
+      "coordinate": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 14400,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 14400
+        }
+      }
+    },
+    "excluded_functions": {},
+    "call_bound_basis": "One fixed Intact payload; one durable coordinate call and one evaluate FunctionCall; no retries or other model arms."
+  }
+}

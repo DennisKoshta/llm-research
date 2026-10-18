@@ -1,0 +1,89 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-aBgeWxgAdXW1zuqydK38gb
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_materialize_doses.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/checkpoint_math.py
+├── ✓ Created Function materialize_dose.
+└── ✓ Created Function coordinate.
+alpha_m0_5: 1/18 committed shards
+alpha_m0_5: 2/18 committed shards
+alpha_m0_5: 3/18 committed shards
+alpha_m0_5: 4/18 committed shards
+alpha_m0_5: 5/18 committed shards
+alpha_m0_5: 6/18 committed shards
+alpha_m0_5: 7/18 committed shards
+alpha_m0_5: 8/18 committed shards
+alpha_m0_5: 9/18 committed shards
+alpha_m0_5: 10/18 committed shards
+alpha_m0_5: 11/18 committed shards
+alpha_m0_5: 12/18 committed shards
+alpha_m0_5: 13/18 committed shards
+alpha_m0_5: 14/18 committed shards
+alpha_m0_5: 15/18 committed shards
+alpha_m0_5: 16/18 committed shards
+alpha_m0_5: 17/18 committed shards
+alpha_m0_5: 18/18 committed shards
+alpha_p0_5: 1/18 committed shards
+alpha_p0_5: 2/18 committed shards
+alpha_p0_5: 3/18 committed shards
+alpha_p0_5: 4/18 committed shards
+alpha_p0_5: 5/18 committed shards
+alpha_p0_5: 6/18 committed shards
+alpha_p0_5: 7/18 committed shards
+alpha_p0_5: 8/18 committed shards
+alpha_p0_5: 9/18 committed shards
+alpha_p0_5: 10/18 committed shards
+alpha_p0_5: 11/18 committed shards
+alpha_p0_5: 12/18 committed shards
+alpha_p0_5: 13/18 committed shards
+alpha_p0_5: 14/18 committed shards
+alpha_p0_5: 15/18 committed shards
+alpha_p0_5: 16/18 committed shards
+alpha_p0_5: 17/18 committed shards
+alpha_p0_5: 18/18 committed shards
+alpha_p1_5: 1/18 committed shards
+alpha_p1_5: 2/18 committed shards
+alpha_p1_5: 3/18 committed shards
+alpha_p1_5: 4/18 committed shards
+alpha_p1_5: 5/18 committed shards
+alpha_p1_5: 6/18 committed shards
+alpha_p1_5: 7/18 committed shards
+alpha_p1_5: 8/18 committed shards
+alpha_p1_5: 9/18 committed shards
+alpha_p1_5: 10/18 committed shards
+alpha_p1_5: 11/18 committed shards
+alpha_p1_5: 12/18 committed shards
+alpha_p1_5: 13/18 committed shards
+alpha_p1_5: 14/18 committed shards
+alpha_p1_5: 15/18 committed shards
+alpha_p1_5: 16/18 committed shards
+alpha_p1_5: 17/18 committed shards
+alpha_p1_5: 18/18 committed shards
+{
+  "schema": "phase1_alpha_materialization_set_v1",
+  "alpha_grid": [
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "new_checkpoint_paths": {
+    "alpha_m0_5": "/weights/agent-safety-clean-v2-20261017/checkpoint_doses_v1/alpha_m0_5",
+    "alpha_p0_5": "/weights/agent-safety-clean-v2-20261017/checkpoint_doses_v1/alpha_p0_5",
+    "alpha_p1_5": "/weights/agent-safety-clean-v2-20261017/checkpoint_doses_v1/alpha_p1_5"
+  },
+  "reused_checkpoint_paths": {
+    "alpha_0_0": "/weights/agent-safety-clean-v2-20261017/checkpoints_full_residual_v2/intact",
+    "alpha_1_0": "/weights/agent-safety-clean-v2-20261017/checkpoints_full_residual_v2/refusal_ablated"
+  },
+  "evaluation_complete": false,
+  "local_manifest_writer": "admit_phase1_doses.py recovery supervisor"
+}
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-aBgeWxgAdXW1zuqydK38gb

@@ -1,0 +1,69 @@
+{
+  "attempt": "author_v1_d3_cap8192_descriptive",
+  "author_attempt": "v1",
+  "authorization_basis": "Complete the independently specified descriptive Phase1 measurement under the recorded administrative scope. Apply the mandatory H1 larger-budget rule and prospective uniform dose retry ladder; every new GPU call still requires separate frozen central resource and budget admission.",
+  "dose_results_may_replace_qualification": false,
+  "fixed_inputs_sha256": "6e24733fb62d75305052fb8127552774e5294ba100269f43ef8de48b258e465a",
+  "interpretation": "Retain the full failed attempt separately. Report the unchanged five-alpha descriptive curve only if the fresh attempt passes hygiene. No pooling, dose selection, qualification rescue, or Phase2/3 authorization.",
+  "known_result_timing": "Primary scientific qualification failure and complete prior dose H1 failure are known. Prior dose effects do not select the cap, checkpoints, prompts, pilots, seeds or analysis. No new-attempt evaluation has run.",
+  "original_attempt": "author_v1_d1",
+  "original_design_sha256": "675f8f0df61f4dfc4d5cc12da61a901e439932e986de06816f4f2493f726f26a",
+  "original_guard_source_path": "executions/phase1_dose_supervisor_author_v1_d1/materialization/source_files/scripts/admit_phase1_doses.py",
+  "original_guard_source_sha256": "399f19b6a0996628382304ca7c0dd3e950eee7103aeaf68c7b4235dba5ad9e88",
+  "outcome_based_selection_allowed": false,
+  "phase2_authorized": false,
+  "primary_qualification_passed": false,
+  "primary_receipt_path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+  "primary_receipt_sha256": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d",
+  "runtime": {
+    "cap": 8192,
+    "context_limit": 65536,
+    "forced_prefix": null,
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 4,
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "schema": "phase1_descriptive_dose_uniform_retry_amendment_v1",
+  "scientific_thresholds_changed": false,
+  "scope": "phase1_descriptive_after_failed_qualification",
+  "specification_section": "1.2 Step 4: Qualification Gate Across All 6 Checkpoints & Dose-Response",
+  "specification_sha256": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+  "unchanged": [
+    "All five alpha values and immutable checkpoint paths",
+    "All48 original evaluation scenarios and five fresh pilot templates peralpha",
+    "Every rendered prompt/tool order, greedy seed and strict parser",
+    "Every H1-H5 threshold and original scientific qualification threshold",
+    "Originalauthor_v1_d1 remains qualified-only"
+  ],
+  "previous_descriptive_amendment": {
+    "path": "infrastructure/phase1_descriptive_dose_amendment_v1.json",
+    "sha256": "1a2ff155f9f8561d54ae1adea4e19a781988ad50698ad9f9a3423d6f56e845f7"
+  },
+  "mechanical_retry": {
+    "policy": {
+      "path": "infrastructure/dose_uniform_budget_retry_rule_v1.json",
+      "sha256": "ac8de189e43908578651c130a6fed8cb6b7ba9b5b9012fc55f7e3c1286cae208"
+    },
+    "previous_receipt": {
+      "path": "records/phase1_dose_response_author_v1_d2_descriptive_receipt.json",
+      "sha256": "7116350b9c2cf7e29261e2987d8a388218c1afa4aacc5114ada8d27368ddd0ac"
+    },
+    "previous_config": {
+      "path": "stimuli/dose_evaluation_v1_author_v1_d2_descriptive.json",
+      "sha256": "66521ca1db385abeacd39e9465a9e92e10a4d8f3e54dc3553c0fea424e3f797b"
+    },
+    "previous_attempt": "author_v1_d2_descriptive",
+    "old_cap": 4096,
+    "new_cap": 8192,
+    "unchanged_design_sha256": "54c7f15be6be6ad76a3580bcfe0ad68927c295bed9e84964eeba983132a196b8",
+    "pooling_allowed": false,
+    "scientific_effect_used_for_retry_selection": false
+  },
+  "maximum_gpu_workers": 4,
+  "parallelism_condition": "Central admission must verify capacity; no overlap with the eight-GPU author app.",
+  "changed": [
+    "Uniform output cap4096 to8192 on all five alphas",
+    "Maximum independent dedicated-GPU workers2 to4 after resource release"
+  ]
+}

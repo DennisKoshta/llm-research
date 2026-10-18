@@ -1,0 +1,60 @@
+{
+  "before_usd": 262,
+  "after_usd": 241,
+  "change": {
+    "job": "six_arm_batched_qualification_vllm_q3_cap8192",
+    "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+    "previous_upper_bound_usd": 35,
+    "new_upper_bound_usd": 14,
+    "app_lifetime_seconds": 2312.0,
+    "shutdown_allowance_seconds": 120,
+    "extra_contingency_usd": 1,
+    "full_app_max_rate_usd_per_second": 0.00518124,
+    "frozen_source": "executions/phase1_batched_qualification_vllm_q3_cap8192/modal_primary_qualification_vllm.py",
+    "source_sha256": "ae8843fa10fc4f1a6647312fae1e82a21468a3400431fcfcdf2fdfc2650f817f",
+    "effective_functions": {
+      "qualify": {
+        "gpu": "H100",
+        "max_containers": 4,
+        "timeout": 3600,
+        "startup_timeout": 300,
+        "cpu": [
+          4,
+          4
+        ],
+        "memory": [
+          65536,
+          65536
+        ],
+        "retries": 0,
+        "scaledown_window": 2
+      },
+      "run_group": {
+        "gpu": null,
+        "max_containers": 1,
+        "timeout": 14400,
+        "startup_timeout": 300,
+        "cpu": [
+          1,
+          1
+        ],
+        "memory": [
+          1024,
+          1024
+        ],
+        "retries": 0,
+        "scaledown_window": 2
+      }
+    },
+    "override_proof": "infrastructure/q3_concurrency_expansion.json",
+    "observed_app": {
+      "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+      "description": "agent-safety-clean-v2-20261017-batched-qualification",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 21:32:39-07:00",
+      "stopped_at": "2026-10-17 22:11:11-07:00"
+    },
+    "basis": "Stopped full lifetime at effective maximum FOUR workers plus full CPU parent, shutdown allowance and contingency; not an invoice."
+  }
+}

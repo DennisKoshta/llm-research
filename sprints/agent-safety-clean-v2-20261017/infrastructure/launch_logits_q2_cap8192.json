@@ -1,0 +1,83 @@
+{
+  "job": "ablated_forward_logits_q2_cap8192",
+  "gpus": 1,
+  "single_gpu_workers": 1,
+  "tp8_workers": 0,
+  "upper_bound_usd": 8,
+  "log": "infrastructure/forward_logits_q2_cap8192.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_qualify.py",
+    "--stage",
+    "logits",
+    "--arms",
+    "refusal_ablated",
+    "--cap",
+    "8192",
+    "--attempt",
+    "full_v2_logits_q2_cap8192",
+    "--family",
+    "checkpoints_full_residual_v2"
+  ],
+  "resource_profile": {
+    "source": "scripts/modal_qualify.py",
+    "source_sha256": "6eace62b96d34dc77b0109a1f8d5ad5fb0402ae6780b52c37e1fd2eb9b71670a",
+    "functions": {
+      "capture_logits": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": [
+            "H100",
+            "H200"
+          ],
+          "max_containers": 1,
+          "timeout": 3600,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      },
+      "run_group": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 25200,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 25200
+        }
+      }
+    },
+    "excluded_functions": {
+      "qualify": "stage logits uses capture_logits.spawn; qualify.local executes in the bounded capture worker, not a separate GPU call."
+    },
+    "call_bound_basis": "One selected arm and one durable call ID, stage logits; five fresh pilots at8192 then unchanged64forward observations; no behavioral qualification rerun."
+  },
+  "frozen_files": {
+    "scripts/modal_qualify.py": "6eace62b96d34dc77b0109a1f8d5ad5fb0402ae6780b52c37e1fd2eb9b71670a",
+    "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+    "stimuli/phase1_pilot.jsonl": "4c2ac48f756a83c505e895466da178fb09b5a9bfb8414b1ef32a5570f095892d",
+    "stimuli/phase1_qualification.jsonl": "0d41de8e6f49e4d2d2d9e96a752ed2b18feea090df630f65e31a4e426ce726be",
+    "activations/phase1_directions.npz": "7c902625e47e2d630ef777a10993694bb0d2d83353ceaffe2e0a9bc530b27384",
+    "checkpoints_full_residual_v2/refusal_ablated_materialization.json": "a95eb1bc615ae040d7a8acbae3f657095c67adf7948588136b76b23f2bfd0f52"
+  }
+}

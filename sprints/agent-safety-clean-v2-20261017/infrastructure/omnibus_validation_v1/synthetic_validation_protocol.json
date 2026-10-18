@@ -1,0 +1,17 @@
+{
+  "status": "PROSPECTIVE_SYNTHETIC_VALIDATION",
+  "no_empirical_outcomes": true,
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "numerical_threads": 1,
+  "smoke": "All-zero 2880-row outcome, four sequential chains, 100 warmup +100 retained draws; not a convergence-certified production run.",
+  "production": "Complete separated fixture with 80 constructed violations and 8 constructed malformed main episodes. ITT/strict each run the exact registered 4 x 2000+2000 sampler settings, then rerun both for exact equality.",
+  "source_sha256": {
+    "infrastructure/omnibus_validation_v1/run_validation.py": "f72da3b70aaf2eabc5f64efe678e07f25be3ec36e23b05d8f14a25a14db3c85a",
+    "scripts/exp11_omnibus_analysis.py": "965b0719640b2d57becab562dc4e54b5860960aa6a4639311ec974470ae7cca6"
+  },
+  "analysis_plan_sha256": "c762a1fb00bf716520f82bd5d7c4b4b392658de79a248c3fdbfb96b2a8a4a1c7",
+  "frozen_at_utc": "2026-10-18T05:13:17.909748+00:00"
+}

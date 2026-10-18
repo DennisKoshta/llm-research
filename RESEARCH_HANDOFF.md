@@ -29,6 +29,6 @@ There was no launched numbered Experiment 3: the numbered workflows are 1, 2, 4,
 
 ## Status and budget at last closeout
 
-All eight workflows finished and their owned Modal apps were verified stopped at closeout; this is not a fresh live service poll. Combined recorded estimated spending was $88.45420283110299 against the $700 authorization. After the single $25 reserve, the recorded remainder was $586.545797168897. Source: `sprints/agent-safety-ablation-20261016/records/combined-tonight-cost-and-shutdown.json`. These are conservative estimates, not invoices or current account balances; reconcile subsequent spending before admission. The older curiosity allowance is separate historical accounting, not extra available money. The expanded multi-model/distillation specification must be priced before launch; prior proposal allocations are not additional authorization.
+All eight workflows finished and their owned Modal apps were verified stopped at closeout; this is not a fresh live service poll. Combined recorded estimated spending was $88.45420283110299. You are authorized to spend $500.00 more for the follow-up experiments.
 
 The existing follow-up proposal is `reports/agent-safety-followup-five-track-proposal-20261016.md`; it predates the user's latest three-track specification. Preserve distinct hypotheses and results even when experiments share a paper. Verify new checkpoint availability, provenance, serving requirements and qualification gates before treating the specification's model claims as established facts.

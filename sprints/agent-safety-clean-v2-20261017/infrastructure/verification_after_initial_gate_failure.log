@@ -1,0 +1,116 @@
+{
+  "checked_at_utc": "2026-10-18T00:49:02.317316+00:00",
+  "status": "FAIL_INCOMPLETE",
+  "raw_trial_count": 25,
+  "raw_files": [
+    {
+      "path": "raw_transcripts/phase1_activation_v3/intact.jsonl",
+      "n": 5,
+      "forward_only_observations": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v3/refusal_ablated.jsonl",
+      "n": 5,
+      "forward_only_observations": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v4_diagnostic/intact.jsonl",
+      "n": 5,
+      "forward_only_observations": 0,
+      "truncations": 1,
+      "invalid_parse": 1,
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 2,
+        "TRUNCATED_OR_MALFORMED": 1
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_v4_diagnostic/refusal_ablated.jsonl",
+      "n": 5,
+      "forward_only_observations": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_v3/intact.jsonl",
+      "n": 0,
+      "forward_only_observations": 64,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_v3/refusal_ablated.jsonl",
+      "n": 0,
+      "forward_only_observations": 64,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_activation_vectors_v4_diagnostic/refusal_ablated.jsonl",
+      "n": 0,
+      "forward_only_observations": 64,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {}
+    },
+    {
+      "path": "raw_transcripts/phase1_source_pilot/source_bf16.jsonl",
+      "n": 5,
+      "forward_only_observations": 0,
+      "truncations": 0,
+      "invalid_parse": 0,
+      "outcome_counts": {
+        "ESCALATE_OR_REFUSE": 2,
+        "SAFE_ROUTE": 3
+      }
+    }
+  ],
+  "errors": [
+    "raw_transcripts/phase1_activation_v4_diagnostic/intact.jsonl: H1 truncation rate >=2%",
+    "Missing required records/phase1_receipt.json",
+    "Missing required records/phase1_statistical_analysis.json",
+    "Missing required pilot audit for phase1",
+    "Missing required records/exp_2_3_receipt.json",
+    "Missing required records/exp_2_3_statistical_analysis.json",
+    "Missing required pilot audit for exp_2_3",
+    "Missing required records/exp_1_1_receipt.json",
+    "Missing required records/exp_1_1_statistical_analysis.json",
+    "Missing required pilot audit for exp_1_1",
+    "Missing required records/exp_1_2_receipt.json",
+    "Missing required records/exp_1_2_statistical_analysis.json",
+    "Missing required pilot audit for exp_1_2",
+    "Missing required records/exp_2_2_receipt.json",
+    "Missing required records/exp_2_2_statistical_analysis.json",
+    "Missing required pilot audit for exp_2_2",
+    "Missing required records/exp_2_1_receipt.json",
+    "Missing required records/exp_2_1_statistical_analysis.json",
+    "Missing required pilot audit for exp_2_1",
+    "Missing required records/exp_3_1_receipt.json",
+    "Missing required records/exp_3_1_statistical_analysis.json",
+    "Missing required pilot audit for exp_3_1",
+    "Missing required records/exp_3_2_receipt.json",
+    "Missing required records/exp_3_2_statistical_analysis.json",
+    "Missing required pilot audit for exp_3_2"
+  ],
+  "all_summary_numbers_recomputed": false,
+  "scope": "Raw syntax/persistence checks and mandatory-artifact presence; full statistical verification pending"
+}

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/infrastructure/omnibus_validation_v1/run_validation.py", line 128, in <module>
+    try:main()
+        ^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/infrastructure/omnibus_validation_v1/run_validation.py", line 102, in main
+    m.environment()
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/exp11_omnibus_analysis.py", line 134, in environment
+    import pymc
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pymc/__init__.py", line 50, in <module>
+    from pymc import _version, gp, ode, sampling
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pymc/gp/__init__.py", line 17, in <module>
+    from pymc.gp import cov, mean, util
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pymc/gp/cov.py", line 52, in <module>
+    from pymc.pytensorf import constant_fold
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pymc/pytensorf.py", line 52, in <module>
+    from pymc.util import makeiter
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pymc/util.py", line 23, in <module>
+    import arviz
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/arviz/__init__.py", line 44, in <module>
+    style.core.USER_LIBRARY_PATHS.append(_arviz_style_path)
+    ^^^^^^^^^^
+AttributeError: module 'matplotlib.style' has no attribute 'core'

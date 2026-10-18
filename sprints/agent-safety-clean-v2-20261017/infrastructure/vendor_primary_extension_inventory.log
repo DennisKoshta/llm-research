@@ -1,0 +1,77 @@
+vllm 0.31.0
+extensions ['_flashmla_C.abi3.so', '_C_stable_libtorch.abi3.so', '_moe_C_stable_libtorch.abi3.so', '_deepselect_C.abi3.so', 'spinloop.abi3.so', 'cumem_allocator.abi3.so', 'fs_io_C.abi3.so', '_qutlass_C.abi3.so', '_flashkda_C.abi3.so', '_flashmla_extension_C.abi3.so', '_rust_tool_parser.abi3.so']
+packages [('vllm', '0.31.0')]
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+
+from enum import IntEnum
+from functools import cache
+from typing import TYPE_CHECKING, Literal
+
+import torch
+
+import vllm.envs as envs
+from vllm.logger import init_logger
+from vllm.platforms import current_platform
+from vllm.scalar_type import ScalarType
+from vllm.utils.flashinfer import (
+    flashinfer_quant_nvfp4_8x4_sf_layout,
+)
+from vllm.utils.math_utils import cdiv
+
+logger = init_logger(__name__)
+
+current_platform.import_kernels()
+
+if TYPE_CHECKING:
+
+    def register_fake(fn):
+        return lambda name: fn
+else:
+    try:
+        from torch.library import register_fake
+    except ImportError:
+        from torch.library import impl_abstract as register_fake
+
+
+# scaled_fp4_quant functional + out variant for torch.compile buffer management
+
+
+def create_fp4_scale_tensor(
+    m: int,
+    n: int,
+    device: torch.device,
+    is_sf_swizzled_layout: bool,
+) -> torch.Tensor:
+    """Allocate the output scale tensor for scaled_fp4_quant.
+
+    When is_sf_swizzled_layout=True, we use rounded values to store the
+    swizzled scales. Due to the requirement of the Tensor Core, the minimum
+    tile is 128x4 for the scales. So, we first pad the scales to multiples
+    of 128 (rows) and 4 (cols). Then, the scales (in float8_e4m3fn) are
+    packed into an int32 for every 4 values. More:
+    https://docs.nvidia.com/cuda/parallel-thread-execution/
+    #tcgen05-mma-scale-factor-b-layout-4x
+    """
+    from vllm.utils.math_utils import round_up
+
+    block_size = 16
+    if is_sf_swizzled_layout:
+        rounded_m = round_up(m, 128)
+        scale_n = n // block_size
+        rounded_n = round_up(scale_n, 4)
+        # The NVFP4 quant kernel explicitly zeroes every padded scale entry,
+        # so no separate zero-initialization kernel is required here.
+        return torch.empty(
+            (rounded_m, rounded_n // 4), device=device, dtype=torch.int32
+        )
+    else:
+        return torch.empty((m, n // block_size), device=device, dtype=torch.uint8)
+
+
+def create_fp4_output_tensors(
+    m: int,
+    n: int,
+    device: torch.device,
+    is_sf_swizzled_layout: bool,
+    padde

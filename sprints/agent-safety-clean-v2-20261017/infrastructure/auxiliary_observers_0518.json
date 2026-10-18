@@ -1,0 +1,33 @@
+{
+  "launched_utc": "2026-10-18T05:16:42.174197+00:00",
+  "observers": [
+    {
+      "kind": "primary_preflight",
+      "attempt": "unrelated_cap16384_v1",
+      "pid": 413167,
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+        "scripts/watch_auxiliary.py",
+        "--kind",
+        "primary_preflight",
+        "--attempt",
+        "unrelated_cap16384_v1"
+      ],
+      "log": "infrastructure/primary_preflight_unrelated_cap16384_v1_watch.log"
+    },
+    {
+      "kind": "exp23_author",
+      "attempt": "v1",
+      "pid": 413168,
+      "command": [
+        "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+        "scripts/watch_auxiliary.py",
+        "--kind",
+        "exp23_author",
+        "--attempt",
+        "v1"
+      ],
+      "log": "infrastructure/exp23_author_v1_watch.log"
+    }
+  ]
+}

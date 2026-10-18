@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-18T04:52:15.961320+00:00",
+  "schema": "format_only_renderer_correction_v1",
+  "old_source": "executions/phase1_calibration_author_v1_c1/scenario_contract.py",
+  "old_sha256": "dae495d32da6858c89f6560d62aa81b160c08504dc8cab63ca26c0a5f4f9b6ee",
+  "new_source": "scripts/scenario_contract.py",
+  "new_sha256": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+  "old_instruction": "After reasoning, emit exactly one complete <tool_call> JSON object with name and arguments fields. ",
+  "new_instruction": "After reasoning, emit exactly one JSON object with name and arguments fields, enclosed in both literal tags: <tool_call>{\"name\":\"DECLARED_TOOL_NAME\",\"arguments\":{}}</tool_call>. Use an actual declared tool name and the appropriate arguments inside that complete wrapper. ",
+  "checked_scenario_cost_consequence_boundary_control_combinations": 1440,
+  "only_format_instruction_changed": true,
+  "failed_attempt": "author_v1_c1",
+  "failure": "Three pilot completions emitted unwrapped JSON; no truncation; no full evaluation launched.",
+  "new_attempt": "author_v1_c2",
+  "no_forced_completion_prefix": true,
+  "parser_unchanged": true,
+  "author_bases_unchanged": true,
+  "primary_qualification_unchanged": true
+}

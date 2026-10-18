@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-18T07:11:05.755072+00:00",
+  "local_recovery_wrapper": "BOUNDED_APPEND_RACE_RETRIES_EXHAUSTED",
+  "gpu_job_restarted": false,
+  "known_terminal_arms": [
+    "dose_m0_5",
+    "dose_0_0",
+    "dose_p0_5"
+  ],
+  "pending_terminal_arms": [
+    "dose_1_0",
+    "dose_p1_5"
+  ],
+  "cloud_episode_counts": {
+    "dose_m0_5": 48,
+    "dose_0_0": 48,
+    "dose_p0_5": 48,
+    "dose_1_0": 16
+  },
+  "next_action": "Read-only terminal status checks, then restart unchanged existing-job supervisor after all five workers stop writing. Preserve all failed observer logs."
+}

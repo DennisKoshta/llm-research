@@ -1,0 +1,117 @@
+{
+  "before_usd": 278,
+  "after_usd": 260,
+  "changes": [
+    {
+      "job": "phase1_intact_calibration_author_v1_c1",
+      "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+      "previous_upper_bound_usd": 12,
+      "new_upper_bound_usd": 2,
+      "app_lifetime_seconds": 509.0,
+      "shutdown_allowance_seconds": 120,
+      "extra_contingency_usd": 1,
+      "full_app_max_rate_usd_per_second": 0.0013068,
+      "frozen_source": "executions/phase1_calibration_author_v1_c1/modal_sandbox_evaluation.py",
+      "source_sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+      "functions": {
+        "evaluate": {
+          "gpu": "H100",
+          "max_containers": 1,
+          "timeout": 7200,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        },
+        "coordinate": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 14400,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 14400
+        }
+      },
+      "observed_app": {
+        "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+        "description": "agent-safety-clean-v2-20261017-sandbox-evaluation",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 21:39:49-07:00",
+        "stopped_at": "2026-10-17 21:48:18-07:00"
+      },
+      "basis": "Verified stopped app lifetime including queues, times every frozen maximum concurrent allocation plus shutdown allowance and contingency; not invoiced spending."
+    },
+    {
+      "job": "phase1_dose_materialization_checkpoint_doses_v1",
+      "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+      "previous_upper_bound_usd": 12,
+      "new_upper_bound_usd": 4,
+      "app_lifetime_seconds": 1841.0,
+      "shutdown_allowance_seconds": 120,
+      "extra_contingency_usd": 1,
+      "full_app_max_rate_usd_per_second": 0.00130902,
+      "frozen_source": "executions/phase1_dose_supervisor_author_v1_d1/materialization/source_files/scripts/modal_materialize_doses.py",
+      "source_sha256": "31c919635c6375e67675dfd2f59ed02a787b2267594980fc10d61d536de22c87",
+      "functions": {
+        "materialize_dose": {
+          "gpu": "H100",
+          "max_containers": 1,
+          "timeout": 1800,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        },
+        "coordinate": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 7200,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            2048,
+            2048
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 7200
+        }
+      },
+      "observed_app": {
+        "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+        "description": "agent-safety-clean-v2-20261017-materialize-doses",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 21:24:28-07:00",
+        "stopped_at": "2026-10-17 21:55:09-07:00"
+      },
+      "basis": "Verified stopped app lifetime including queues, times every frozen maximum concurrent allocation plus shutdown allowance and contingency; not invoiced spending."
+    }
+  ],
+  "billing_status": "estimates_not_invoices"
+}

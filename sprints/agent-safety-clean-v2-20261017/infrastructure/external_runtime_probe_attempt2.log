@@ -1,0 +1,77 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-EloOLATODhWUcJcgD6Vuve
+Building image im-kagNonVrP144J0RPfR0PhG
+
+=> Step 0: FROM vllm/vllm-openai:qwen38-flash-next-x86_64-cu130
+Getting image source signatures
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:de66fc90c55d156d6760975acf0904d151017e48c9cfc68beedb51af31dc792e
+Copying blob sha256:6f83f69ef174764148c6a129184e5de92b32d275e38b1aeea59713e888827db6
+Copying blob sha256:2aaa27641ce10a0eaba75dcf3fb0972676fb9feec5a22e2f1875988c59392093
+Copying blob sha256:f4f325a97c3e4739640b0e472a818bb299e7ce8e585bdbfe5586e9d3b5a2c475
+Copying blob sha256:401d11fb2a0945d50e4cbfd2cca983a3686804bd0f2f6ea8c088452bf7f203f9
+Copying blob sha256:bfc212660d14c7ae078710e38e43d5464ab2f8a143894e59f14aaf4da0bb17fa
+Copying blob sha256:a7c730ea38d1d76797ec38826a1de40b99eeca5b84ac5c9f8221012eada54269
+Copying blob sha256:ab7341a40ee7a7ada312ea6e9ee4a4841239b34a65c90bcbd75e7913dc9b73bf
+Copying blob sha256:c03b8ec8dd332435fbc4c1fe6eeb6f0e8e8da2dd9d5ddcb50ad14c4a7ebf8939
+Copying blob sha256:08f741fdf16254987c9273d1a350ca5b4ac7362f3fca2dd562f15017efb36df5
+Copying blob sha256:9ee77af410d3b0ded348313b2df7e73cfc00e576bfe9cf5cf40a06f9b1083422
+Copying blob sha256:d43388d1e1adcdb7e8c140c75414c633797e7c2bb9080b2918806081cde7ce12
+Copying blob sha256:b8fa3c11e60676e21fd834d8f6e8f427b90c0ea3f43a2fe412e6ad6f93e73e18
+Copying blob sha256:d7913b78456aa0d9d7509d36fedb86528095b092d7e2a855b6fd6ac598459e84
+Copying blob sha256:2f775a572827106784e0a5c97bebec7f0ae57376671073b7168b5e3f4575116e
+Copying blob sha256:c18ed70256463bfe0790b2f65d766c3e9e0f729d2bd06a9df0c8b01debc0dc6f
+Copying blob sha256:a5881cf32fc46f24318a6fc7015ccae863706075d4434d186b8b1b4e5bafb36e
+Copying blob sha256:692ea0d28a87e9cea6db254c830f650f29804522045c9201f8ea63f30471b33b
+Copying blob sha256:9b514bd8f61021a850adac2b06b989db1274fd2b1e4c46fb35e8cf2b0f35d819
+Copying blob sha256:4c24a36e2f98a0c5ada15e33d9a4ebade0c7a5df59dd80cb4f48aa8d43fe1023
+Copying blob sha256:651e9c6638c77d15bf671d9264badcba80ea551f84109de486427b87d2ddbf75
+Copying blob sha256:cbb345eeac5add02b423fd0c655b9988beb11661b2ddf1c598188b2857032dd3
+Copying blob sha256:4db6ae8a2849e835a872f02fb8e6464044f46ae6352b8d8e79a07fd56bedc6f3
+Copying blob sha256:10dce885652a53a2e644a75d256b90830663330988b8599c3c0e56cd6c8a4675
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:8f3cab398a1f03bbdb1efdf3437dec34b70632f6cbc509c575a6fa24ca6f37bf
+Copying blob sha256:49a63ac9d116f92e5a8b006ae5665b940fcbc3d22d53aa7c01a3753ef341c53e
+Copying blob sha256:32fa3d071f9cef6074d21bf2902a4e1caf6a435815138510de608ae95e679b9d
+Copying blob sha256:b309b30564cb2e5603d487a22c737e51a491dd9af60437bae333c11c5d0ae0ac
+Copying blob sha256:28b17315792fec1a280b8438b6cbec7744918729d4e28b37a235eea87882ef39
+Copying blob sha256:b1eb910ee6ffcb444e82335e8794423c5cdc048604e22ac56472481c77bf3d89
+Copying config sha256:52f2299ef2b681c39d3b182a8e7845a1de930f7afd9795537138d66d69913a37
+Writing manifest to image destination
+Unpacking OCI image
+   • unpacking rootfs ...     
+   • ... done                 
+   • unpacked image rootfs: /tmp/task-data/ta-01M566SS4WPHRWDQ3177J2GJEB/registry-unpack0crBqU
+Copied image in 27.56s
+
+=> Step 1: COPY /python/. /usr/local
+
+=> Step 2: RUN ln -s /usr/local/bin/python3 /usr/local/bin/python
+
+=> Step 3: ENV TERMINFO_DIRS=/etc/terminfo:/lib/terminfo:/usr/share/terminfo:/usr/lib/terminfo
+Saving image...
+Image saved, took 28.11s
+
+Built image im-kagNonVrP144J0RPfR0PhG in 190.87s
+
+
+Building image im-Sj5iZ77SjhyuQsswYvJk95
+
+=> Step 0: FROM base
+
+=> Step 1: ENTRYPOINT []
+Saving image...
+Image saved, took 2.27s
+
+Built image im-Sj5iZ77SjhyuQsswYvJk95 in 4.47s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_external_runtime_probe.py
+└── ✓ Created Function probe.
+{'python': '3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]', 'executable': '/usr/local/bin/python', 'candidates': [{'executable': '/usr/bin/python3', 'returncode': 1, 'stdout': 'INFO 10-18 00:36:44 [importing.py:53] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.\nINFO 10-18 00:36:44 [importing.py:88] Triton not installed or not compatible; certain GPU-related functions will not be available.\n', 'stderr': 'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\nAttributeError: \'_ModelRegistry\' object has no attribute \'is_model_supported\'\n'}, {'executable': '/usr/bin/python3-config', 'returncode': 1, 'stdout': 'Usage: /usr/bin/python3-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed\n', 'stderr': ''}, {'executable': '/usr/bin/python3.12', 'returncode': 1, 'stdout': 'INFO 10-18 00:36:56 [importing.py:53] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.\nINFO 10-18 00:36:56 [importing.py:88] Triton not installed or not compatible; certain GPU-related functions will not be available.\n', 'stderr': 'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\nAttributeError: \'_ModelRegistry\' object has no attribute \'is_model_supported\'\n'}, {'executable': '/usr/bin/python3.12-config', 'returncode': 1, 'stdout': 'Usage: /usr/bin/python3.12-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed\n', 'stderr': ''}, {'executable': '/usr/local/bin/python', 'returncode': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'torch\'\n'}, {'executable': '/usr/local/bin/python3', 'returncode': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'torch\'\n'}, {'executable': '/usr/local/bin/python3-config', 'returncode': 1, 'stdout': 'Usage: /usr/local/bin/python3-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed\n', 'stderr': ''}, {'executable': '/usr/local/bin/python3.12', 'returncode': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'torch\'\n'}, {'executable': '/usr/local/bin/python3.12-config', 'returncode': 1, 'stdout': 'Usage: /usr/local/bin/python3.12-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir|--embed\n', 'stderr': ''}], 'gpu_allocated': False}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-EloOLATODhWUcJcgD6Vuve

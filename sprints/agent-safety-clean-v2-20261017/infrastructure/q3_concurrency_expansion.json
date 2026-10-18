@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-18T04:46:42.256283+00:00",
+  "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+  "function_id": "fu-dc6mdp0uUnZZS2MVZCZrTk",
+  "max_containers_before": 2,
+  "max_containers_after": 4,
+  "resource_totals_before": {
+    "gpus": 4,
+    "single_gpu_workers": 4,
+    "tp8_workers": 0
+  },
+  "resource_totals_after": {
+    "gpus": 6,
+    "single_gpu_workers": 6,
+    "tp8_workers": 0
+  },
+  "budget_reservations_usd_unchanged": 266,
+  "maximum_gpu_calls_unchanged": 6,
+  "before_settings": {
+    "current_settings": {
+      "min_containers": null,
+      "max_containers": 2,
+      "scaledown_window": 2,
+      "buffer_containers": null
+    },
+    "override_events": []
+  },
+  "source_manifest": "executions/phase1_batched_qualification_vllm_q3_cap8192/source_manifest.json",
+  "scientific_payload_changed": false,
+  "phase2_authorized": false,
+  "status": "REMOTE_OVERRIDE_VERIFIED",
+  "reason": "Use released TP8 capacity for already queued independent arms; exact same six durable calls, checkpoints, prompts, worker resources, decoding and distinct arm outputs. Existing reservation bounds all six calls independent of concurrency.",
+  "after_settings": {
+    "current_settings": {
+      "min_containers": null,
+      "max_containers": 4,
+      "scaledown_window": 2,
+      "buffer_containers": null
+    },
+    "override_events": [
+      {
+        "setting": "max_containers",
+        "updated_at": "1792298803.951264",
+        "actor_name": "denniskoshta",
+        "actor_id": "us-I1Ih3iby18hFvr7SBjPkpv",
+        "actor_type": "user"
+      }
+    ]
+  },
+  "update_output": "\u2713 Updated autoscaler settings for Function qualify"
+}

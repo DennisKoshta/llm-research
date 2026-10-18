@@ -1,0 +1,102 @@
+{
+  "schema": "research_final_incomplete_disposition_v1",
+  "recorded_utc": "2026-10-18T08:19:35.945667+00:00",
+  "program_complete": false,
+  "primary_qualification_passed": false,
+  "phase1_measurement_completion_passed": false,
+  "phase2_authorized": false,
+  "phase3_authorized": false,
+  "phase3_confidence_interval_gate": "NOT_EVALUABLE_WITHOUT_PHASE2_DATA",
+  "descriptive_dose_status": "NO_ACCEPTED_CURVE_D2_H1_FAILED_D4_H5_FAILED",
+  "exp23_input_authoring_status": "FAILED_AUTHORING_GATE",
+  "experiments": {
+    "exp_2_3": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_1_1": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_1_2": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_2_2": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_2_1": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_3_1": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_3_2": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    }
+  },
+  "verification_status": "FAIL_INCOMPLETE",
+  "all_present_numerical_receipts_recomputed": true,
+  "no_further_paid_work_queued": true,
+  "active_registered_gpu_allocation": 0,
+  "interpretation": "The qualification and mechanical gates remain binding. Completed negative qualification is not a null estimate for downstream hypotheses that were not run. No threshold waiver, further wording search, effect-based selection or missing-data success is claimed.",
+  "source_bindings": [
+    {
+      "path": "verification/upstream_failure_disposition.json",
+      "sha256": "13fdabb454feeec6e08a8ed6e8024a717ba41f20a1d3f8343deb66a6cc583cfb"
+    },
+    {
+      "path": "verification/verification_status.json",
+      "sha256": "0a61e085027660c07ddf04eea5c7d270dba15eab62a839b9e22c1f90a6d82045"
+    },
+    {
+      "path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+      "sha256": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d"
+    },
+    {
+      "path": "records/phase1_dose_response_author_v1_d2_descriptive_receipt.json",
+      "sha256": "7116350b9c2cf7e29261e2987d8a388218c1afa4aacc5114ada8d27368ddd0ac"
+    },
+    {
+      "path": "infrastructure/dose_d4_terminal_failure_provenance.json",
+      "sha256": "794206dcdb417f711786b3fe45248cd3291ff7494e3aa28470557b44120e53e7"
+    },
+    {
+      "path": "infrastructure/exp23_author_v3_cap16384_terminal_failure_provenance.json",
+      "sha256": "fe8ef6fc25d5f0876a90a4dd1fecb00c9fc231375695f954124ecbb11928b0cf"
+    },
+    {
+      "path": "infrastructure/resource_final_reconciliation.json",
+      "sha256": "5d2daea15e7abb7cd2c2405539f2cfc84d6c22356b7523a355cb50d851cbfddb"
+    },
+    {
+      "path": "infrastructure/final_sprint_app_list_status.json",
+      "sha256": "a2ed1650439696f2e87bfa329ec91c431a8b408d7b71ea07d028af2c642fa15f"
+    }
+  ]
+}

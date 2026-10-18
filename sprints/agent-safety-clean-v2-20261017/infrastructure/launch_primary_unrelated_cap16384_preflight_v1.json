@@ -1,0 +1,79 @@
+{
+  "job": "primary_unrelated_cap16384_preflight_v1",
+  "gpus": 1,
+  "single_gpu_workers": 1,
+  "tp8_workers": 0,
+  "upper_bound_usd": 8,
+  "log": "infrastructure/primary_unrelated_cap16384_preflight_v1.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_primary_serving_pilot.py",
+    "--attempt",
+    "unrelated_cap16384_v1",
+    "--arm",
+    "unrelated",
+    "--cap",
+    "16384"
+  ],
+  "frozen_files": {
+    "scripts/modal_primary_serving_pilot.py": "c2555a56714dab7b1da23f2055a793fc72d4c27704b1b019690e571ae12250ca",
+    "scripts/primary_serving_worker.py": "afee980cdb04b019d06c87b8d5af55f1bf58561ed7881fa0394b0088c682f19f",
+    "scripts/primary_fp8_inventory.py": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+    "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+    "stimuli/phase1_pilot.jsonl": "4c2ac48f756a83c505e895466da178fb09b5a9bfb8414b1ef32a5570f095892d",
+    "raw_transcripts/phase1_activation_full_v2/intact.jsonl": "858e089d0e3d89d8f910b6eee3bbdfcefa02c64790f2f6094928fa3f06c3ad24",
+    "checkpoints_full_residual_v2/unrelated_materialization.json": "bd66256e6534e52a86d3df900343572b8b5112ecce078341600a55bfc9902a20",
+    "infrastructure/primary_uniform_cap16384_rule.json": "92402e7301b2a8c159dd4e955b27001f97a4f490bc1bcd5bb66ff67006b0d202"
+  },
+  "resource_profile": {
+    "source": "scripts/modal_primary_serving_pilot.py",
+    "source_sha256": "c2555a56714dab7b1da23f2055a793fc72d4c27704b1b019690e571ae12250ca",
+    "functions": {
+      "pilot": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": [
+            "H200",
+            "H100"
+          ],
+          "max_containers": 1,
+          "timeout": 3600,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      },
+      "run_pilot": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 7200,
+          "startup_timeout": 300,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      }
+    },
+    "excluded_functions": {},
+    "call_bound_basis": "One fixed five-pilot Unrelated engineering preflight at uniform planned cap16384, one durable coordinator; no heldout qualification, no repeat calls or retries."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "pinned_tokenizer_metadata_capture_v1",
+  "captured_utc": "2026-10-18T05:32:06.680205+00:00",
+  "model_id": "nvidia/Llama-3.3-70B-Instruct-FP8",
+  "revision": "fde04ee76a27704c88f569542ef023b57d4d0362",
+  "volume": "curiosity-study-weights",
+  "files": {
+    "generation_config.json": {
+      "sha256": "f62859b817ec0ad72540dfb2e2ae64fb70b3a8ffd7fad503193fa76e64b80227",
+      "size_bytes": 184,
+      "volume_path": "agent-safety-clean-v2-20261017/source_models/nvidia__Llama-3.3-70B-Instruct-FP8/generation_config.json"
+    },
+    "special_tokens_map.json": {
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "size_bytes": 325,
+      "volume_path": "agent-safety-clean-v2-20261017/source_models/nvidia__Llama-3.3-70B-Instruct-FP8/special_tokens_map.json"
+    },
+    "tokenizer.json": {
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "size_bytes": 17209920,
+      "volume_path": "agent-safety-clean-v2-20261017/source_models/nvidia__Llama-3.3-70B-Instruct-FP8/tokenizer.json"
+    },
+    "tokenizer_config.json": {
+      "sha256": "cf9caa6e3956c24f5787bff455fccb25532afa5091d6b8cbee01a5b7235a1362",
+      "size_bytes": 55406,
+      "volume_path": "agent-safety-clean-v2-20261017/source_models/nvidia__Llama-3.3-70B-Instruct-FP8/tokenizer_config.json"
+    }
+  },
+  "optional_files_absent": [
+    "added_tokens.json",
+    "chat_template.jinja",
+    "merges.txt",
+    "vocab.json"
+  ],
+  "scope": "Prospective preparation capture; runtime exact bytes must independently match this capture before future inference."
+}

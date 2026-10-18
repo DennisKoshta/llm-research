@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/exp11_omnibus_subprocess.py", line 155, in recompute
+    require(code == 0, 'Isolated sampler replay exited with code '+str(code))
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/exp11_omnibus_subprocess.py", line 28, in require
+    raise ValueError(message)
+ValueError: Isolated sampler replay exited with code 1

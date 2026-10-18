@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-10-18T06:13:27.250375+00:00",
+  "requested_author_gpu": "H100:8",
+  "observed_author_gpu": "8 x NVIDIA H200",
+  "author_app": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+  "author_container": "ta-01M56RJE9S5MWGD4GF2KX3X2CR",
+  "author_gpu_utilization_percent": [
+    8,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "author_memory_mib_per_gpu": [
+    128579,
+    128579,
+    128579,
+    128579,
+    128579,
+    128579,
+    128579,
+    128579
+  ],
+  "qualification_container": "ta-01M56QTEZ00M9W4V268QQJF2FR",
+  "qualification_observed_gpu": "NVIDIA H100 80GB HBM3",
+  "qualification_utilization_percent": 41,
+  "qualification_memory_mib": 71699,
+  "source": "Read-only modal container exec nvidia-smi and ps; no model process modified",
+  "hardware_upgrade_policy_url": "https://modal.com/docs/guide/gpu#automatic-upgrades-to-h200s",
+  "hardware_upgrade_policy_paraphrase": "Modal documents that an automatic H100 to H200 upgrade keeps the requested GPU price.",
+  "pricing_url": "https://modal.com/pricing",
+  "reservation_changed": false,
+  "is_invoice": false,
+  "no_inference_outputs_examined": true
+}

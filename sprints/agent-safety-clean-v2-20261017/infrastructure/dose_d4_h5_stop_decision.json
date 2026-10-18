@@ -1,0 +1,47 @@
+{
+  "recorded_utc": "2026-10-18T08:10:12.676183+00:00",
+  "attempt": "author_v1_d4_cap8192_format_v1",
+  "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+  "action": "STOP_FAILED_H5_ATTEMPT_NO_FURTHER_WORDING_SEARCH",
+  "reason": "All five alpha0.5 pilots contain uncapped malformed decisions; failed H5 forbids its full sweep. Higher caps cannot target these stop-completed envelope errors. Preserve every committed record; do not spend on remaining unusable full arms.",
+  "pilot_failure_evidence": {
+    "path": "infrastructure/dose_d4_first_pilot_failure.json",
+    "sha256": "981c81e75ac8cdb6fc89d464000fd2eaf80b2040993c2048ab784ab3dfc99f57"
+  },
+  "before_stop": {
+    "description": "agent-safety-clean-v2-20261017-dose-evaluation-d4",
+    "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+    "lifecycle": {
+      "state": "ephemeral (detached)",
+      "created_at": "2026-10-18 00:56:47-07:00",
+      "created_by": "denniskoshta",
+      "deployed_at": null,
+      "deployed_by": null,
+      "version": null,
+      "stopped_at": null,
+      "stopped_by": null
+    },
+    "functions": {
+      "coordinate": {
+        "id": "fu-XVhkUFmNtfDvQix6LDYSb3",
+        "summary": {}
+      },
+      "evaluate": {
+        "id": "fu-8okb2uo2bK2eYNSNlHN3Tu",
+        "summary": {
+          "gpu_config": [
+            {
+              "count": 1,
+              "gpu_type": "H100"
+            }
+          ]
+        }
+      }
+    },
+    "servers": {}
+  },
+  "supervisor_pid": 501764,
+  "phase2_authorized": false,
+  "phase3_authorized": false,
+  "scientific_effect_used_for_stopping": false
+}

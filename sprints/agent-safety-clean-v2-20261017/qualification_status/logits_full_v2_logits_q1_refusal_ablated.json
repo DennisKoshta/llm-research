@@ -1,0 +1,22 @@
+{
+  "arm": "refusal_ablated",
+  "stage": "logits",
+  "attempt": "full_v2_logits_q1",
+  "pilot_pass": false,
+  "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_logits_full_v2_logits_q1/refusal_ablated.jsonl",
+  "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_logits_full_v2_logits_q1_refusal_ablated_pilot_audit.md",
+  "fp8_modules": 400,
+  "checkpoint_family": "checkpoints_full_residual_v2",
+  "status": "H5_FAILED",
+  "gpu_name": "NVIDIA H100 80GB HBM3",
+  "runtime_versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.1",
+    "flash-linear-attention": "0.5.2",
+    "causal-conv1d": "1.7.0",
+    "kernels": "0.17.2"
+  },
+  "elapsed_seconds": 938.8669936809999,
+  "input_sha256": "ed2dfb4d0899f26667896d9368e9d12260ab424feb6894afa863ed253e16a638",
+  "max_new_tokens": 4096
+}

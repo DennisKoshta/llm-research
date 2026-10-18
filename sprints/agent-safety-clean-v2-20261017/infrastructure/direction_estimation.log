@@ -1,0 +1,131 @@
+{
+  "selected_layer": 48,
+  "candidate_layers": [
+    {
+      "layer": 20,
+      "masked_channels": [
+        253,
+        310,
+        1726,
+        2560,
+        3456,
+        3994,
+        4382
+      ],
+      "validation_standardized_separation": 1.1883699327875408
+    },
+    {
+      "layer": 24,
+      "masked_channels": [
+        253,
+        310,
+        1726,
+        2560,
+        3456,
+        3994,
+        4110
+      ],
+      "validation_standardized_separation": 1.1269927580208525
+    },
+    {
+      "layer": 28,
+      "masked_channels": [
+        56,
+        253,
+        310,
+        736,
+        2560,
+        3456,
+        3842,
+        3994,
+        4110
+      ],
+      "validation_standardized_separation": 1.1286225814926079
+    },
+    {
+      "layer": 32,
+      "masked_channels": [
+        56,
+        253,
+        310,
+        736,
+        2560,
+        3842,
+        3986,
+        3994
+      ],
+      "validation_standardized_separation": 1.1290650767262844
+    },
+    {
+      "layer": 36,
+      "masked_channels": [
+        56,
+        253,
+        310,
+        599,
+        736,
+        2560,
+        3586,
+        3842,
+        3986,
+        3994
+      ],
+      "validation_standardized_separation": 1.4012952417225653
+    },
+    {
+      "layer": 40,
+      "masked_channels": [
+        253,
+        310,
+        3842,
+        3986,
+        3994
+      ],
+      "validation_standardized_separation": 1.3433420626220511
+    },
+    {
+      "layer": 44,
+      "masked_channels": [
+        253,
+        310,
+        599,
+        3994
+      ],
+      "validation_standardized_separation": 1.4216645056371684
+    },
+    {
+      "layer": 48,
+      "masked_channels": [
+        3994
+      ],
+      "validation_standardized_separation": 1.73414579450245
+    }
+  ],
+  "variance_matching": [
+    {
+      "seed": 101,
+      "reference_variance": 56.545970528356754,
+      "control_variance": 56.54597052835614,
+      "pc_count": 63,
+      "reference_cosine": -0.5026313326580454
+    },
+    {
+      "seed": 102,
+      "reference_variance": 56.545970528356754,
+      "control_variance": 56.545970528356065,
+      "pc_count": 63,
+      "reference_cosine": 0.5926351993205943
+    },
+    {
+      "seed": 103,
+      "reference_variance": 56.545970528356754,
+      "control_variance": 56.54597052835717,
+      "pc_count": 63,
+      "reference_cosine": -0.2766879228394626
+    }
+  ],
+  "outlier_rule": "RMS > 10 * median channel RMS on estimation subset",
+  "selection_rule": "maximum validation standardized projection separation",
+  "unrelated_control_status": "FORMAL_MINUS_CASUAL_ESTIMATED",
+  "unrelated_refusal_cosine": -0.03183149853626214
+}

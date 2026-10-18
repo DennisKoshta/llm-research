@@ -1,0 +1,22 @@
+# Preserve the clean-room sprint's numerical evidence and frozen source snapshots.
+!/activations/
+!/activations/**/*.npz
+!/executions/
+!/executions/**
+
+# Local environments, downloaded utilities, and caches are not research artifacts.
+.venv/
+.author-audit-venv/
+.omnibus-venv/
+.cache/
+.omnibus-cache/
+.tools/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.pyo
+
+# Credentials must remain local, including inside execution snapshots.
+.env
+.env.*

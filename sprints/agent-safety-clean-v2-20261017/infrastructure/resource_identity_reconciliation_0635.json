@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-18T06:32:09.999253+00:00",
+  "scope": "Resource identity reconciliation only; no launch or budget mutation",
+  "source": "infrastructure/modal_apps_status_0635.json",
+  "source_sha256": "fc02dca74f78ad84f16b6efe26f7f65b7c287347c8386bf3a4194c8f821b2aab",
+  "changes": [
+    {
+      "job": "exp23_unified_author_v3_cap16384",
+      "before": {
+        "app_id": null,
+        "allocation_status": "launched_pending_app_id"
+      },
+      "after": {
+        "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+        "allocation_status": "active_app_confirmed"
+      },
+      "modal_observation": {
+        "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+        "description": "agent-safety-clean-v2-20261017-exp23-author",
+        "state": "ephemeral (detached)",
+        "tasks": "2",
+        "created_at": "2026-10-17 22:42:43-07:00",
+        "stopped_at": null
+      }
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q4_cap16384",
+      "before": {
+        "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+        "allocation_status": "launched_pending_app_id"
+      },
+      "after": {
+        "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+        "allocation_status": "released_after_modal_stop"
+      },
+      "modal_observation": {
+        "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 22:29:47-07:00",
+        "stopped_at": "2026-10-17 23:25:28-07:00"
+      }
+    }
+  ]
+}

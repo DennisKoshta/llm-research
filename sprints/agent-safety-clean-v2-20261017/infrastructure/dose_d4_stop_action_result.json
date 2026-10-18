@@ -1,0 +1,41 @@
+{
+  "observed_utc": "2026-10-18T08:12:48.002812+00:00",
+  "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+  "observation": {
+    "description": "agent-safety-clean-v2-20261017-dose-evaluation-d4",
+    "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+    "lifecycle": {
+      "state": "stopped",
+      "created_at": "2026-10-18 00:56:47-07:00",
+      "created_by": "denniskoshta",
+      "deployed_at": null,
+      "deployed_by": null,
+      "version": null,
+      "stopped_at": "2026-10-18 01:11:45-07:00",
+      "stopped_by": null
+    },
+    "functions": {
+      "coordinate": {
+        "id": "fu-XVhkUFmNtfDvQix6LDYSb3",
+        "summary": {}
+      },
+      "evaluate": {
+        "id": "fu-8okb2uo2bK2eYNSNlHN3Tu",
+        "summary": {
+          "gpu_config": [
+            {
+              "count": 1,
+              "gpu_type": "H100"
+            }
+          ]
+        }
+      }
+    },
+    "servers": {}
+  },
+  "first_cli_stop_attempt": "Aborted before cloud mutation because CLI required --yes in a noninteractive terminal.",
+  "corrected_cli_stop_attempt": "modal app stop --yes returned App is already stopped; finished at2026-10-18T08:11:45UTC.",
+  "cloud_cancellation_claimed": false,
+  "local_supervisor_terminated_pid": 501764,
+  "final_record_disposition": "Actual terminal function statuses and recovered journals determine complete versus interrupted records."
+}

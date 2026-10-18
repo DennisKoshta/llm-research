@@ -1,0 +1,202 @@
+{
+  "frozen_at_utc": "2026-10-18T05:09:51.997514+00:00",
+  "status": "PREPARED_NOT_EXECUTED",
+  "plan": {
+    "schema": "exp11_omnibus_plan_v1",
+    "method": "Full posterior CPU PyMC NUTS; no MAP, Laplace, variational or Firth approximation",
+    "formula": "SHORTCUT_VIOLATION ~ model_arm * consequence * cost_regime + explicit_centered + (1|template_id) + (1|scenario_id)",
+    "scope": "All six checkpoint arms, cot_on main factorial only: 2880 of 4520 complete action episodes. Sanity controls and targeted cot_off contrasts remain separate.",
+    "references": {
+      "model_arm": "intact",
+      "consequence": "harmless",
+      "cost_regime": "low"
+    },
+    "boundary_coding": {
+      "implicit": -0.5,
+      "explicit": 0.5
+    },
+    "boundary_assumption": "One common additive explicit-boundary log-odds effect; all arm x harm x cost interactions retained. No boundary interaction claim.",
+    "fixed_effect_terms": [
+      "Intercept",
+      "cost=high_tedium",
+      "cost=high_friction",
+      "harmful",
+      "harmful:cost=high_tedium",
+      "harmful:cost=high_friction",
+      "arm=refusal_ablated",
+      "arm=refusal_ablated:cost=high_tedium",
+      "arm=refusal_ablated:cost=high_friction",
+      "arm=refusal_ablated:harmful",
+      "arm=refusal_ablated:harmful:cost=high_tedium",
+      "arm=refusal_ablated:harmful:cost=high_friction",
+      "arm=pca_101",
+      "arm=pca_101:cost=high_tedium",
+      "arm=pca_101:cost=high_friction",
+      "arm=pca_101:harmful",
+      "arm=pca_101:harmful:cost=high_tedium",
+      "arm=pca_101:harmful:cost=high_friction",
+      "arm=pca_102",
+      "arm=pca_102:cost=high_tedium",
+      "arm=pca_102:cost=high_friction",
+      "arm=pca_102:harmful",
+      "arm=pca_102:harmful:cost=high_tedium",
+      "arm=pca_102:harmful:cost=high_friction",
+      "arm=pca_103",
+      "arm=pca_103:cost=high_tedium",
+      "arm=pca_103:cost=high_friction",
+      "arm=pca_103:harmful",
+      "arm=pca_103:harmful:cost=high_tedium",
+      "arm=pca_103:harmful:cost=high_friction",
+      "arm=unrelated",
+      "arm=unrelated:cost=high_tedium",
+      "arm=unrelated:cost=high_friction",
+      "arm=unrelated:harmful",
+      "arm=unrelated:harmful:cost=high_tedium",
+      "arm=unrelated:harmful:cost=high_friction",
+      "explicit_centered"
+    ],
+    "fixed_effect_prior": {
+      "distribution": "Normal",
+      "mu": 0.0,
+      "sigma": 2.5,
+      "scope": "Independent priors for every coefficient including intercept; 2.5 denotes standard deviation."
+    },
+    "random_intercepts": {
+      "template_levels": 10,
+      "scenario_levels": 40,
+      "parameterization": "noncentered",
+      "z_prior": "Independent Normal(0,1)",
+      "scale_prior": "Independent HalfNormal(sigma=1)",
+      "nesting": "Scenarios have immutable membership in templates; both random intercepts are fitted."
+    },
+    "denominators": {
+      "itt": "All 2880 main episodes, including malformed/truncated non-events; four-way counts retained.",
+      "strict": "All main episodes outside TRUNCATED_OR_MALFORMED; no success/cell/arm selection. Fixed level maps persist even for an empty cell."
+    },
+    "empty_strict": "UNAVAILABLE, with no posterior or invented null; component cannot be marked diagnostically complete.",
+    "sampler": {
+      "chains": 4,
+      "cores": 1,
+      "blas_cores": 1,
+      "draws": 2000,
+      "tune": 2000,
+      "nuts_sampler": "pymc",
+      "init": "jitter+adapt_diag",
+      "target_accept": 0.95,
+      "max_treedepth": 12,
+      "seeds": {
+        "itt": 2026101701,
+        "strict": 2026101702
+      },
+      "floatX": "float64",
+      "warmup_discarded": true,
+      "automatic_retries": 0
+    },
+    "diagnostic_thresholds": {
+      "rank_normalized_rhat_max": 1.01,
+      "bulk_ess_min": 400.0,
+      "tail_ess_min": 400.0,
+      "divergences_max": 0,
+      "max_tree_depth_hits_max": 0,
+      "bfmi_each_chain_min": 0.3,
+      "all_parameters_finite": true
+    },
+    "summaries": "Posterior mean, sample SD, equal-tailed 95% credible interval, posterior P(coefficient>0), MCSE and diagnostics; credible intervals are not Newcombe intervals or p-values.",
+    "omnibus_interactions": "Report the full ten arm-by-harm-by-cost posterior coefficient vectors; Ablated has two cost-specific three-way interactions. No invented scalar omnibus p-value or Bayes factor.",
+    "predictive_check": {
+      "draws": 1000,
+      "selection": "First 250 retained draws of each of four chains",
+      "seeds": {
+        "itt": 2026101711,
+        "strict": 2026101712
+      },
+      "measure": "Posterior predictive SHORTCUT_VIOLATION counts for each of 72 arm/harm/cost/boundary cells; descriptive, never a result-selection gate."
+    },
+    "reproducibility": "Canonical sorted episode projection; fixed design/level order and seeds; four sequential chains; single BLAS thread; pinned CPU package stack plus full environment fingerprint. Deterministic NPY arrays exclude timing stats. Final raw-to-summary verification reruns sampling and requires exact retained-array equality in the same environment.",
+    "cross_platform_bitwise_claim": false,
+    "required_package_versions": {
+      "pymc": "5.24.1",
+      "arviz": "0.21.0",
+      "pytensor": "2.31.7",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pandas": "2.2.3",
+      "xarray": "2025.4.0"
+    },
+    "required_process_environment": {
+      "PYTHONHASHSEED": "0"
+    },
+    "failure_policy": "Preserve all chains and diagnostic failures. No scientific effect threshold controls sampler acceptance. A diagnostic failure remains incomplete; no silent refit or weakened threshold.",
+    "phase3_authorized": false,
+    "complete_experiment_receipt": false,
+    "primary_sources": {
+      "sampling": "https://www.pymc.io/projects/docs/en/5.24.1/api/generated/pymc.sample.html",
+      "rhat": "https://python.arviz.org/en/v0.21.0/api/generated/arviz.rhat.html",
+      "ess": "https://python.arviz.org/en/v0.21.0/api/generated/arviz.ess.html",
+      "bfmi": "https://python.arviz.org/en/v0.21.0/api/generated/arviz.bfmi.html",
+      "diagnostics": "https://mc-stan.org/learn-stan/diagnostics-warnings.html"
+    }
+  },
+  "source_sha256": {
+    "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+    "scripts/exp11_omnibus_analysis.py": "965b0719640b2d57becab562dc4e54b5860960aa6a4639311ec974470ae7cca6",
+    "tests/test_exp11_omnibus_analysis.py": "535cdbacd0c14cd58ec7fbc7ea73b976b9a47bebcb46bd1cc739384c4146b81d"
+  },
+  "validation": {
+    "offline_tests_passed": 12,
+    "actual_pymc_sampler_executed": false,
+    "empirical_outcomes_consumed": false,
+    "scope": "Synthetic coverage/matrix/priors/diagnostic-threshold/immutable-chain/recompute tests only. Actual PyMC NUTS and ArviZ integration require a separately installed pinned CPU environment."
+  },
+  "dependency_snapshot": {
+    "required": {
+      "pymc": "5.24.1",
+      "arviz": "0.21.0",
+      "pytensor": "2.31.7",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pandas": "2.2.3",
+      "xarray": "2025.4.0"
+    },
+    "installed": {
+      "pymc": null,
+      "arviz": null,
+      "pytensor": null,
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": null,
+      "xarray": null
+    },
+    "ready": false,
+    "mismatches": {
+      "pymc": {
+        "required": "5.24.1",
+        "installed": null
+      },
+      "arviz": {
+        "required": "0.21.0",
+        "installed": null
+      },
+      "pytensor": {
+        "required": "2.31.7",
+        "installed": null
+      },
+      "numpy": {
+        "required": "2.2.6",
+        "installed": "2.5.4"
+      },
+      "scipy": {
+        "required": "1.15.3",
+        "installed": "1.18.1"
+      },
+      "pandas": {
+        "required": "2.2.3",
+        "installed": null
+      },
+      "xarray": {
+        "required": "2025.4.0",
+        "installed": null
+      }
+    }
+  }
+}

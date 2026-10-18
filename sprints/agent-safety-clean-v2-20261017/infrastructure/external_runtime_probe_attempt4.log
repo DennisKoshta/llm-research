@@ -1,0 +1,11 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-66KpkKR0mVyMDmytRsCoRB
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_external_runtime_probe.py
+└── ✓ Created Function probe.
+{'python': '3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]', 'executable': '/usr/local/bin/python', 'candidates': [{'executable': '/usr/bin/python3', 'returncode': 1, 'stdout': 'INFO 10-18 00:40:44 [importing.py:53] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.\nINFO 10-18 00:40:44 [importing.py:88] Triton not installed or not compatible; certain GPU-related functions will not be available.\n', 'stderr': 'n_auto.py", line 107, in __getitem__\n    raise KeyError(key)\nKeyError: \'qwen4_exp\'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "<string>", line 7, in <module>\n  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/configuration_auto.py", line 421, in from_pretrained\n    raise ValueError(\nValueError: The checkpoint you are trying to load has model type `qwen4_exp` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.\n\nYou can update Transformers with the command `pip install --upgrade transformers`. If this does not work, and the checkpoint is very new, then there may not be a release version that supports this model yet. In this case, you can get the most up-to-date code by installing Transformers from source with the command `pip install git+https://github.com/huggingface/transformers.git`\n'}], 'gpu_allocated': False}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-66KpkKR0mVyMDmytRsCoRB

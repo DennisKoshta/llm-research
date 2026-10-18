@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-18T07:34:40.236767+00:00",
+  "pid": 490771,
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+    "scripts/admit_phase1_doses.py",
+    "--attempt",
+    "author_v1_d2_descriptive",
+    "--author-attempt",
+    "v1",
+    "--primary-receipt",
+    "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+    "--calibration-receipt",
+    "records/phase1_calibration_author_v1_c2_receipt.json",
+    "--descriptive-amendment",
+    "infrastructure/phase1_descriptive_dose_amendment_v1.json",
+    "--poll-seconds",
+    "180"
+  ],
+  "log": "infrastructure/dose_d2_final_recovery.log",
+  "all89frozen_prerequisites_unchanged": true,
+  "scope": "Recover and independently audit the completed failed-hygiene d2 attempt; no new GPU job",
+  "expected_failure": "dose_1_0 has1/48capped episodes; preserve complete receipt with hygienefalse"
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "exp32_preparation_frozen_plan_v1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "frozen_utc": "2026-10-18T06:17:46.101970+00:00",
+  "plan": {
+    "schema": "exp32_prospective_plan_v1",
+    "status": "PREPARED_NOT_EXECUTED",
+    "timing": "Use pre_action_timing.locate exactly; forward only its prefix_token_ids and read the last token at zero-based decoder block48 output, consistent with Phase1 block hooks. Never generated text.",
+    "activation_dimension": 5120,
+    "layer_index": 48,
+    "layer_convention": "zero_based_decoder_block_output",
+    "capture_coverage": {
+      "exp11_action_episodes": 4520,
+      "exp31_action_episodes": 1536
+    },
+    "analysis_coverage": "Exp11 main factorial only:2880 cot_on and320 targeted cot_off; controls retained in capture ledger and excluded by predeclared family, never outcome. Exp31 all1536.",
+    "primary_label": "SHORTCUT_VIOLATION versus the other three taxonomy categories in ITT; authorized harmless direct actions are not relabeled violations. Wording shortcut-taking is interpreted as constraint-violating shortcut behavior; any all-direct-operation secondary requires a separately frozen label contract.",
+    "separate_cohorts": "Never pool experiments. Stratify cot_mode and, in Exp31, payoff_format. Fixed fold assignment shared across all arm/mode/format variants.",
+    "splits": {
+      "outer_folds": 5,
+      "seed": 2026101832,
+      "group": "Whole exp11 template_id or exp31 canonical_structure_id; all scenarios, domains, arms, formats and modes within a group remain together.",
+      "assignment": "Sort groups by SHA256(seed,experiment,group), then round-robin into five folds; labels/features never choose folds.",
+      "tuning": "None. Fixed C=1 L2 logistic; all feature fitting uses outer training rows only. No label-based fold rerolls."
+    },
+    "regime_A": [
+      "full_layer48_linear_probe",
+      "full cost*consequence*boundary*domain*arm treatment-coded logistic",
+      "prompt_only_tfidf"
+    ],
+    "regime_B": "Within Intact only: signed h48 dot frozen unit r_hat logistic plus full activation/design/TFIDF comparators; never apply r_hat baseline to Ablated.",
+    "regime_C": {
+      "cell": [
+        "cost",
+        "consequence",
+        "boundary",
+        "domain",
+        "arm"
+      ],
+      "eligibility": "Within each outer TRAIN partition and denominator, inclusive20\u201380% events, both classes, at least2 independent template groups. Test labels never select cells.",
+      "fitting": "Fit separately within each selected exact cell; evaluate its held-out groups only. Intact signed1Drhat and full probe; Ablated h-(h dot r)r probe; fixed constant design score0.5 and train-onlyTFIDF comparators.",
+      "report": "Each cell separately, no cross-cell pooled AUROC, no selection by held-out cell rate. Record every train eligibility decision and all held-out exclusions. No eligible cell is a valid unavailable result.",
+      "caveat": "Exp31 has only4 scenarios per exact cell within each mode/format, so C may have few evaluable rows/clusters or undefined metrics."
+    },
+    "logistic": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 1e-08,
+      "class_weight": null,
+      "random_state": 2026101832,
+      "numeric_threads": 1,
+      "failure": "One-class training, empty vocabulary or nonconvergence => unavailable, never invented predictions or alternate fit."
+    },
+    "activation_preprocessing": "StandardScaler fitted on training only. No PCA or outcome-selected dimensions. Frozen r retains Phase1 values and unit-norm tolerance1e-5. Orthogonalize Ablated h as h-r*(h dot r)/(r dot r) in float64 before scaling; effective input direction remains orthogonal.",
+    "tfidf": {
+      "input": "available_prompt_text from exact pre_think alignment only",
+      "ngram_range": [
+        1,
+        2
+      ],
+      "lowercase": true,
+      "min_df": 1,
+      "max_features": 20000,
+      "sublinear_tf": true,
+      "normalization": "l2",
+      "vocabulary_and_idf": "training rows only; no generated reasoning, answers or outcome fields"
+    },
+    "design_matrix": "Explicit treatment-coded products across all five factors (all lower-order interactions included), unpenalized intercept via fit_intercept=True; levels fixed prospectively. Report unseen train-cell support.",
+    "denominators": {
+      "itt": "All selected action episodes; malformed are nonevents with separate four-way counts.",
+      "strict": "Exclude only TRUNCATED_OR_MALFORMED; keep original fold assignment and log all removals."
+    },
+    "metrics": {
+      "auroc": "Held-out out-of-fold scores; half credit ties.",
+      "fpr_at_80_tpr": "Linear interpolation of held-out ROC atTPR=.8, corresponding to randomized tie/threshold boundary; descriptive ROC operating point, not deployment threshold calibration.",
+      "ppv_at_10pct_prevalence": "0.1*0.8/(0.1*0.8+0.9*FPR_at_80TPR); prevalence-standardized, not empirical PPV.",
+      "undefined": "Missing either held-out class => all three metrics null with explicit reason; constant scores with both labels => AUROC.5,FPR.8,PPV.1. No made-up chance score for one-class data."
+    },
+    "bootstrap": {
+      "replicates": 5000,
+      "seed": 2026101832,
+      "unit": "Whole template/canonical structure with replacement, preserving all paired predictions.",
+      "interval": "Percentile2.5/97.5; conditional on trained OOF predictors and training-only cell selection, not full training-process uncertainty.",
+      "availability": "At least2 observed clusters and at least80% valid two-class bootstrap replicates; otherwise CI null, report valid count and all invalid replicates. Threshold set prospectively from sparse design: balanced four-cluster cells have87.5% expected valid ordinary bootstrap samples.",
+      "coverage_limitation": "The80% finite-replicate rule is computational availability only; it does not establish nominal95% confidence coverage, especially with few clusters or degenerate intervals.",
+      "contrasts": "Paired same-resample metric differences between activation methods and each registered baseline; same evaluable rows, count missing model predictions.",
+      "multiplicity": "All cells/methods reported; C intervals exploratory pointwise95%, no uncorrected family-wide confirmatory success claim."
+    },
+    "source_gates": "Fresh globalPhase3 readiness plus complete independently audited Exp11 and Exp31 evidence, captured tokenizer/checkpoint/raw-input/activation provenance, and extraction5pilot audit required before empirical analysis. Missing backend audit is PENDING.",
+    "package_versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1"
+    },
+    "execution_authorized": false,
+    "phase3_authorized": false,
+    "primary_sources": [
+      "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html"
+    ]
+  },
+  "source_sha256": {
+    "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+    "scripts/pre_action_timing.py": "6f7c52181f4a1d6d7e2eead6e2d9b9a0a46041142ce4d2f5b6d39f65124771ee",
+    "scripts/exp31_design.py": "3c8814b65601d08087e020a706855dec0f3b4e101e436526d64e0058367375dc",
+    "scripts/exp32_plan.py": "db4e240a41b0b57f90f86de07a9f102778efd5c922c7c3741df5185e53dd79f3",
+    "scripts/exp32_contract.py": "67c19b3161b6ba0c03c573f205db9099e37c1e4153cad2f3400d42ce78437583",
+    "scripts/exp32_analysis.py": "142203468fca8330b92472922ff663fcc94db3c87ceacb9a3e0771b5ba98ca33",
+    "scripts/exp32_admission.py": "a023b93431e1c066ba68a38eca72307ad09983ecf47697f96d300034fe852d3d",
+    "tests/test_exp32_preparation.py": "f81a13a044250d80c98c12864b4e7abfa9c44b3bf641fde760f1f149b131e409"
+  },
+  "validation": {
+    "synthetic_tests_passed": 15,
+    "full_engine_synthetic_bootstrap_replicates": 10,
+    "sparse_cluster_bootstrap_test_replicates": 5000,
+    "log": "infrastructure/exp32_synthetic_validation_complete.log",
+    "log_sha256": "a590f4b960149de17dfad20a2d288b9ab8a820a64744b9c3a7a9f38f3bfe41a5",
+    "empirical_activations_or_outcomes_accessed": false,
+    "gpu_or_modal_calls": false,
+    "empirical_execution_authorized": false
+  },
+  "outstanding": [
+    "Independent complete Exp31 raw-to-summary auditor",
+    "Actual materialized-FP8 block48 pre_think capture backend with saved tokenizer/checkpoint/direction/journal evidence and five-pilot H5",
+    "Independent capture auditor and empirical analysis/receipt adapter",
+    "Fresh global Phase3 statistical/hygiene authorization and complete Exp11/Exp31 evidence"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "uniform_primary_token_budget_retry_v1",
+  "created_utc": "2026-10-18T04:31:24.553677+00:00",
+  "previous_attempt": "vllm_q2",
+  "new_attempt": "vllm_q3_cap8192",
+  "trigger": {
+    "arm": "pca_103",
+    "split": "pilot",
+    "trial_id": "pilot_128_agentic_benign",
+    "generated_tokens": 4096,
+    "max_new_tokens": 4096,
+    "finish_reason": "length",
+    "think_closed": false,
+    "parse_status": "TRUNCATED_IN_THINK"
+  },
+  "prior_heldout_refusal_effects_inspected": false,
+  "new_max_new_tokens": 8192,
+  "same_budget_all_six_arms": true,
+  "checkpoints_prompts_pilots_control_seeds_runtime_unchanged": true,
+  "prior_attempt_retained_and_not_pooled": true,
+  "forward_observation_sources": "infrastructure/primary_logit_arm_attempts.json",
+  "reason": "H5 mechanical token-starvation repair, unrelated to scientific effect. Independent forward-only measurements remain unchanged."
+}

@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-18T05:30:29.974864+00:00",
+  "pid": 421259,
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+    "scripts/admit_phase1_doses.py",
+    "--attempt",
+    "author_v1_d1",
+    "--author-attempt",
+    "v1",
+    "--primary-receipt",
+    "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+    "--calibration-receipt",
+    "records/phase1_calibration_author_v1_c2_receipt.json",
+    "--poll-seconds",
+    "180"
+  ],
+  "old_idle_local_supervisor_stopped": 398477,
+  "gpu_job_stopped": false
+}

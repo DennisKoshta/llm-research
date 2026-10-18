@@ -1,0 +1,27 @@
+{
+  "schema": "phase2_program_selection_v1",
+  "program_id": "p2v1",
+  "components_path": "infrastructure/phase1_component_paths_q4.json",
+  "author_attempt": "v3_cap16384",
+  "author_payload_path": "stimuli/exp23_author_v3_cap16384_input.json",
+  "structured_payload_paths": [],
+  "executor_payload_paths": [],
+  "exp11_batch_paths": [],
+  "qa_judge_payload_paths": [],
+  "exp23_start_evidence": null,
+  "runtime_metadata_path": "infrastructure/runtime_metadata/stock_vllm031_v1.json",
+  "tokenizer_sources": {
+    "primary": {
+      "folder": "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit",
+      "capture_path": "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture.json"
+    },
+    "llama": {
+      "folder": "infrastructure/tokenizer_metadata/llama_pinned_v1",
+      "capture_path": "infrastructure/tokenizer_metadata/llama_pinned_v1/capture.json"
+    }
+  },
+  "exp11_sources": {
+    "bases_path": "stimuli/authored_scenarios_v1.jsonl",
+    "design_path": "stimuli/exp11_design_v1.json"
+  }
+}

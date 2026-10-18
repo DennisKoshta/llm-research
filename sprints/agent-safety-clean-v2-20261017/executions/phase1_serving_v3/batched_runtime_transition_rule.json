@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-18T02:40:18.887611+00:00",
+  "status": "AWAITING_SERVING_PILOT",
+  "candidate_attempt": "v3",
+  "decision_basis": "Mechanical validity and throughput only; held-out refusal differences have not been computed or used.",
+  "required_checks": [
+    "exact mapping of all 400 stored primary FP8 modules to fused runtime modules",
+    "identical rendered pilot prompt bytes",
+    "5/5 closed-think, valid JSON, uncapped pilot responses",
+    "pilot generation time below 180 seconds"
+  ],
+  "if_pass": "Use fresh vLLM qualification for every arm, same frozen stimuli, checkpoints and 4096 cap. Preserve all prior Transformers generations as superseded engineering data; do not pool or select arm-specific backends. Recompute benign logits for all six arms using the same verified Transformers forward-pass implementation.",
+  "if_fail": "Retain current Transformers qualification; diagnose loader/hygiene issues only.",
+  "scientific_outcomes": "All pre-specified qualification thresholds unchanged. No direction, control seed, or prompt selection based on refusal outcomes.",
+  "updated_utc": "2026-10-18T02:58:48.086859+00:00",
+  "retry_reason": "v2 canceled during kernel warmup after local DNS failure; zero pilot outputs, no outcome inspection or criterion changes."
+}

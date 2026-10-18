@@ -1,0 +1,231 @@
+{
+  "changes": [
+    {
+      "job": "primary_serving_v3_durable_retry",
+      "app_id": "ap-igf2GvJTHYepkcI9K4HmxG",
+      "previous_upper_bound_usd": 4,
+      "new_upper_bound_usd": 3,
+      "app_lifetime_seconds": 1840.0,
+      "shutdown_allowance_seconds": 120,
+      "full_app_max_rate_usd_per_second": 0.0014708,
+      "frozen_source": "executions/phase1_serving_v3/modal_primary_serving_pilot.py",
+      "source_sha256": "f89782f028f1ae954c9e96acdcef0f8d573b10b8103276bb9a1cb7cc5d9f5b11",
+      "functions": {
+        "pilot": {
+          "gpu": [
+            "H200",
+            "H100"
+          ],
+          "max_containers": 1,
+          "timeout": 1800,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        },
+        "run_pilot": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 3600,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 3600
+        }
+      },
+      "observed_app": {
+        "app_id": "ap-igf2GvJTHYepkcI9K4HmxG",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:58:49-07:00",
+        "stopped_at": "2026-10-17 20:29:29-07:00"
+      },
+      "basis": "Verified stopped lifetime including queue time, multiplied by frozen maximum concurrent GPU/CPU/RAM resources. H200 price used for all single GPUs. Separate image/storage/network contingency retained. Estimate, not invoice."
+    },
+    {
+      "job": "primary_serving_v4_named_rpc",
+      "app_id": "ap-ru3rGZwY5JxqoIzirpmXE2",
+      "previous_upper_bound_usd": 4,
+      "new_upper_bound_usd": 1,
+      "app_lifetime_seconds": 403.0,
+      "shutdown_allowance_seconds": 120,
+      "full_app_max_rate_usd_per_second": 0.0014708,
+      "frozen_source": "executions/phase1_serving_v4/modal_primary_serving_pilot.py",
+      "source_sha256": "a7d86499671ed3cbe6f560ad65755030c5ced89849ac3b239500546baff89417",
+      "functions": {
+        "pilot": {
+          "gpu": [
+            "H200",
+            "H100"
+          ],
+          "max_containers": 1,
+          "timeout": 1800,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        },
+        "run_pilot": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 3600,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 3600
+        }
+      },
+      "observed_app": {
+        "app_id": "ap-ru3rGZwY5JxqoIzirpmXE2",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:31:23-07:00",
+        "stopped_at": "2026-10-17 20:38:06-07:00"
+      },
+      "basis": "Verified stopped lifetime including queue time, multiplied by frozen maximum concurrent GPU/CPU/RAM resources. H200 price used for all single GPUs. Separate image/storage/network contingency retained. Estimate, not invoice."
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q1",
+      "app_id": "ap-qPVOwhKSoEtFdMbh4c2M1W",
+      "previous_upper_bound_usd": 20,
+      "new_upper_bound_usd": 2,
+      "app_lifetime_seconds": 262.0,
+      "shutdown_allowance_seconds": 120,
+      "full_app_max_rate_usd_per_second": 0.00292628,
+      "frozen_source": "executions/phase1_batched_transition_vllm_q1/modal_primary_qualification_vllm.py",
+      "source_sha256": "253e6fdb2c648f111c3fce86fdd19cbedb4567fcc302ad83ea77e4b477d0a47f",
+      "functions": {
+        "qualify": {
+          "gpu": "H100",
+          "max_containers": 2,
+          "timeout": 1800,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        },
+        "run_group": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 7200,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 7200
+        }
+      },
+      "observed_app": {
+        "app_id": "ap-qPVOwhKSoEtFdMbh4c2M1W",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:38:57-07:00",
+        "stopped_at": "2026-10-17 20:43:19-07:00"
+      },
+      "basis": "Verified stopped lifetime including queue time, multiplied by frozen maximum concurrent GPU/CPU/RAM resources. H200 price used for all single GPUs. Separate image/storage/network contingency retained. Estimate, not invoice."
+    },
+    {
+      "job": "six_arm_forward_logits_full_v2_logits_q1",
+      "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+      "previous_upper_bound_usd": 20,
+      "new_upper_bound_usd": 5,
+      "app_lifetime_seconds": 1582.0,
+      "shutdown_allowance_seconds": 120,
+      "full_app_max_rate_usd_per_second": 0.00292628,
+      "frozen_source": "executions/phase1_batched_transition_vllm_q1/modal_qualify.py",
+      "source_sha256": "29891e6b978969bbe48e5a8fc918e8dfcf6d196636eb9b3fd6e2f44d5d2381e1",
+      "functions": {
+        "capture_logits": {
+          "gpu": [
+            "H100",
+            "H200"
+          ],
+          "max_containers": 2,
+          "timeout": 1800,
+          "startup_timeout": 300,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            65536,
+            65536
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        },
+        "run_group": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 25200,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 25200
+        }
+      },
+      "observed_app": {
+        "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:38:57-07:00",
+        "stopped_at": "2026-10-17 21:05:19-07:00"
+      },
+      "basis": "Verified stopped lifetime including queue time, multiplied by frozen maximum concurrent GPU/CPU/RAM resources. H200 price used for all single GPUs. Separate image/storage/network contingency retained. Estimate, not invoice."
+    }
+  ],
+  "reserved_usd": 294,
+  "billing_status": "estimates_not_invoices"
+}

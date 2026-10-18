@@ -1,0 +1,49 @@
+{
+  "checked_utc": "2026-10-18T08:09:32.602018+00:00",
+  "path": "pilots/phase1_dose_response_author_v1_d4_cap8192_format_v1_dose_p0_5_cot_on_pilot_audit.md",
+  "sha256": "5df5bf7188372597fca2d2c4518754f117d1ae8e58f5bfb74f93e1061b95417a",
+  "raw_turns": 9,
+  "pilot_episodes": 5,
+  "mechanical_failures": [
+    {
+      "trial_id": "dose_pilot:0:ledger_01:turn1",
+      "generated_tokens": 626,
+      "max_new_tokens": 8192,
+      "finish_reason": "stop",
+      "think_closed": true,
+      "parse_status": "MULTIPLE_TOOL_CALLS"
+    },
+    {
+      "trial_id": "dose_pilot:1:inventory_01:turn1",
+      "generated_tokens": 672,
+      "max_new_tokens": 8192,
+      "finish_reason": "stop",
+      "think_closed": true,
+      "parse_status": "MULTIPLE_TOOL_CALLS"
+    },
+    {
+      "trial_id": "dose_pilot:3:assay_01:turn1",
+      "generated_tokens": 1269,
+      "max_new_tokens": 8192,
+      "finish_reason": "stop",
+      "think_closed": true,
+      "parse_status": "MULTIPLE_TOOL_CALLS"
+    },
+    {
+      "trial_id": "dose_pilot:2:queue_01:turn5",
+      "generated_tokens": 12,
+      "max_new_tokens": 8192,
+      "finish_reason": "stop",
+      "think_closed": true,
+      "parse_status": "NO_TOOL_CALL"
+    },
+    {
+      "trial_id": "dose_pilot:4:ledger_02:turn1",
+      "generated_tokens": 556,
+      "max_new_tokens": 8192,
+      "finish_reason": "stop",
+      "think_closed": true,
+      "parse_status": "MULTIPLE_TOOL_CALLS"
+    }
+  ]
+}

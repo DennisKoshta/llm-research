@@ -1,0 +1,212 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-bpbsZBsfCWOlqtIutnHgPK
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_qualify.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+└── ✓ Created Function qualify.
+Stopping app - user stopped from CLI.
+Runner terminated.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_qualify.py:151 in main                         │
+│                                                                              │
+│   150 │   direction=np.load(ROOT/'activations/phase1_directions.npz')['refus │
+│ ❱ 151 │   selected=arms.split(',');assert all(a in ARMS for a in selected)   │
+│   152 │   for result in qualify.starmap([(a,read('pilot'),validation,read('q │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:858 in __iter__                                                           │
+│                                                                              │
+│    857 │   │   │   with Runner() as runner:                                  │
+│ ❱  858 │   │   │   │   yield from run_async_gen(runner, self._async_iterable │
+│    859 │   │   except NestedEventLoops:                                      │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:940 in run_async_gen                                                      │
+│                                                                              │
+│    939 │   │   │   else:                                                     │
+│ ❱  940 │   │   │   │   next_yield = runner.run(gen.asend(next_send))  # type │
+│    941 │   │   except KeyboardInterrupt as e:                                │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/asyncio/base_events.py:691 in run_until_complete                     │
+│                                                                              │
+│    690 │   │                                                                 │
+│ ❱  691 │   │   return future.result()                                        │
+│    692                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:768 in asend                                                              │
+│                                                                              │
+│    767 │   │   self.iterated = True                                          │
+│ ❱  768 │   │   return await self.gen.asend(value)                            │
+│    769                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:106 │
+│ 3 in _starmap_async                                                          │
+│                                                                              │
+│   1062 │   _maybe_warn_about_wrap_exceptions("starmap.aio", wrap_returned_ex │
+│ ❱ 1063 │   async for output in _map_helper(                                  │
+│   1064 │   │   self,                                                         │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:101 │
+│ 5 in _map_helper                                                             │
+│                                                                              │
+│   1014 │   ) as map_output_stream:                                           │
+│ ❱ 1015 │   │   async for output in map_output_stream:                        │
+│   1016 │   │   │   yield output                                              │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:61 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    60 │   │   async with aclosing(method(self, *args, **kwargs)) as stream:  │
+│ ❱  61 │   │   │   async for item in stream:                                  │
+│    62 │   │   │   │   yield item                                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:1962  │
+│ in _map                                                                      │
+│                                                                              │
+│   1961 │   │   │   ) as stream:                                              │
+│ ❱ 1962 │   │   │   │   async for item in stream:                             │
+│   1963 │   │   │   │   │   yield item                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:971 │
+│  in _map_invocation_inputplane                                               │
+│                                                                              │
+│    970 │   ) as merged:                                                      │
+│ ❱  971 │   │   async for maybe_output in merged:                             │
+│    972 │   │   │   if maybe_output is not None:  # ignore None sentinels     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1131 in async_merge                                                       │
+│                                                                              │
+│   1130 │   │   │   │   assert_type(item, ExceptionWrapper)                   │
+│ ❱ 1131 │   │   │   │   raise item.value                                      │
+│   1132                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:926 │
+│  in poll_outputs                                                             │
+│                                                                              │
+│    925 │   │   ) as streamer:                                                │
+│ ❱  926 │   │   │   async for idx, output in streamer:                        │
+│    927 │   │   │   │   if not order_outputs:                                 │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1243 in async_map_ordered                                                 │
+│                                                                              │
+│   1242 │   async with aclosing(async_map(async_zip(counter(), input_generato │
+│ ❱ 1243 │   │   async for output_idx, output_item in stream:                  │
+│   1244 │   │   │   buffer[output_idx] = output_item                          │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1219 in async_map                                                         │
+│                                                                              │
+│   1218 │   ) as stream:                                                      │
+│ ❱ 1219 │   │   async for item in stream:                                     │
+│   1220 │   │   │   yield item                                                │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1208 in worker                                                            │
+│                                                                              │
+│   1207 │   │   │   if isinstance(item, ValueWrapper):                        │
+│ ❱ 1208 │   │   │   │   res = await prevent_cancellation_abortion(async_mappe │
+│   1209 │   │   │   │   yield res                                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1173 in prevent_cancellation_abortion                                     │
+│                                                                              │
+│   1172 │   try:                                                              │
+│ ❱ 1173 │   │   return await asyncio.shield(t)                                │
+│   1174 │   except asyncio.CancelledError:                                    │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1232 in mapper_func_wrapper                                               │
+│                                                                              │
+│   1231 │   async def mapper_func_wrapper(tup: tuple[int, T]) -> tuple[int, V │
+│ ❱ 1232 │   │   return (tup[0], await async_mapper_func(tup[1]))              │
+│   1233                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:915 │
+│  in fetch_output                                                             │
+│                                                                              │
+│    914 │   │   │   else:                                                     │
+│ ❱  915 │   │   │   │   raise e                                               │
+│    916 │   │   return (item.idx, output)                                     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:910 │
+│  in fetch_output                                                             │
+│                                                                              │
+│    909 │   │   try:                                                          │
+│ ❱  910 │   │   │   output = await _process_result(item.result, item.data_for │
+│    911 │   │   except Exception as e:                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/function_uti │
+│ ls.py:574 in _process_result                                                 │
+│                                                                              │
+│   573 │   │                                                                  │
+│ ❱ 574 │   │   raise RemoteError(result.exception)                            │
+│   575                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RemoteError

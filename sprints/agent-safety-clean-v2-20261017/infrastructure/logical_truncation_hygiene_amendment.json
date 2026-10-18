@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-18T05:07:17.321109+00:00",
+  "scope": "Stronger independent H1 verification before primary effect computation or dependent dose admission",
+  "rule": "A cot_on output missing </think> counts as truncated even with finish_reason=stop and generated_tokens below cap. Both turn and episode fractions must be strictly below2%.",
+  "unchanged": [
+    "Frozen evaluation workers and prompts",
+    "All raw outputs and worker cap-only counters",
+    "Scientific effect definitions and qualification thresholds"
+  ],
+  "primary_observer": "infrastructure/q3_observer_full_truncation_launch.json",
+  "tests": [
+    "primary mechanics4/4",
+    "calibration provenance9/9",
+    "dose raw replay9/9"
+  ],
+  "capture": "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture.json"
+}

@@ -1,0 +1,26 @@
+{
+  "arm": "refusal_ablated",
+  "stage": "activation",
+  "attempt": "full_v2",
+  "pilot_pass": true,
+  "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_activation_full_v2/refusal_ablated.jsonl",
+  "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_activation_full_v2_refusal_ablated_pilot_audit.md",
+  "fp8_modules": 400,
+  "checkpoint_family": "checkpoints_full_residual_v2",
+  "status": "ACTIVATIONS_COMPLETE",
+  "gpu_name": "NVIDIA H100 80GB HBM3",
+  "runtime_versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.1",
+    "flash-linear-attention": "0.5.2",
+    "causal-conv1d": "1.7.0",
+    "kernels": "0.17.2"
+  },
+  "projection_mean": 0.001184753492946219,
+  "mean_absolute_entry_projection": 0.003736204142492538,
+  "mean_absolute_late_projection": 0.09021986074571003,
+  "mean_absolute_entry_to_late_projection_change": 0.09381646632122391,
+  "activation_count": 64,
+  "activation_path": "/artifacts/agent-safety-clean-v2-20261017/activations/phase1_activation_full_v2/refusal_ablated.npz",
+  "elapsed_seconds": 363.128235448
+}

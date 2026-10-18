@@ -1,0 +1,299 @@
+{
+  "changes": [
+    {
+      "job": "post_fp8_two_arm_validation",
+      "previous_upper_bound_usd": 24,
+      "new_upper_bound_usd": 4,
+      "per_app": [
+        {
+          "app": {
+            "app_id": "ap-CFTtAj9sZRW3INAs7AvQIS",
+            "description": "agent-safety-clean-v2-20261017-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:14:45-07:00",
+            "stopped_at": "2026-10-17 17:16:44-07:00"
+          },
+          "snapshot": "infrastructure/modal_apps_resume.json",
+          "launch_log": "infrastructure/fp8_activation_intact_v1.log",
+          "frozen_source": "executions/phase1_materialize_v1/modal_qualify.py",
+          "source_sha256": "1ed4dee3612eb015c582ce6305ae54f8f65f7414e2857831637432690cf011ba",
+          "resource_limits": {
+            "gpu": [
+              "H100",
+              "H200"
+            ],
+            "max_containers": 2,
+            "timeout": 7200,
+            "startup_timeout": 300,
+            "cpu": [
+              4,
+              4
+            ],
+            "memory": [
+              65536,
+              65536
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 0.6999114999999999
+        },
+        {
+          "app": {
+            "app_id": "ap-bpbsZBsfCWOlqtIutnHgPK",
+            "description": "agent-safety-clean-v2-20261017-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:16:40-07:00",
+            "stopped_at": "2026-10-17 17:18:03-07:00"
+          },
+          "snapshot": "infrastructure/modal_apps_resume.json",
+          "launch_log": "infrastructure/fp8_activation_ablated_v1.log",
+          "frozen_source": "executions/phase1_materialize_v1/modal_qualify.py",
+          "source_sha256": "1ed4dee3612eb015c582ce6305ae54f8f65f7414e2857831637432690cf011ba",
+          "resource_limits": {
+            "gpu": [
+              "H100",
+              "H200"
+            ],
+            "max_containers": 2,
+            "timeout": 7200,
+            "startup_timeout": 300,
+            "cpu": [
+              4,
+              4
+            ],
+            "memory": [
+              65536,
+              65536
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 0.5944854999999999
+        },
+        {
+          "app": {
+            "app_id": "ap-SHdJ73l4GrHChixkIbJRRR",
+            "description": "agent-safety-clean-v2-20261017-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:17:58-07:00",
+            "stopped_at": "2026-10-17 17:23:26-07:00"
+          },
+          "snapshot": "infrastructure/apps_before_pilot_reallocation.json",
+          "launch_log": "infrastructure/fp8_activation_v2.log",
+          "frozen_source": "executions/phase1_activation_v2/modal_qualify.py",
+          "source_sha256": "d4eb41a045e58bb51ebc700ee53f406fe75c304f451092c59dd963a96f27f0a1",
+          "resource_limits": {
+            "gpu": [
+              "H100",
+              "H200"
+            ],
+            "max_containers": 2,
+            "timeout": 7200,
+            "startup_timeout": 300,
+            "cpu": [
+              4,
+              4
+            ],
+            "memory": [
+              65536,
+              65536
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 1.3119679999999998
+        }
+      ],
+      "group_contingency_usd": 1,
+      "basis": "Verified historical stopped lifetimes and hashed frozen resource limits for every attributed attempt. Conservative H200 single-GPU price plus CPU parent allowance even where no parent existed. Broad image/storage/network and recovery contingency retained; not billed spend."
+    },
+    {
+      "job": "post_fp8_diagnostic_and_repaired_validation",
+      "previous_upper_bound_usd": 24,
+      "new_upper_bound_usd": 8,
+      "per_app": [
+        {
+          "app": {
+            "app_id": "ap-tnLqRzPC5KfipdxVRycFVT",
+            "description": "agent-safety-clean-v2-20261017-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:28:21-07:00",
+            "stopped_at": "2026-10-17 17:35:04-07:00"
+          },
+          "snapshot": "infrastructure/apps_before_pilot_reallocation.json",
+          "launch_log": "infrastructure/fp8_activation_v3.log",
+          "frozen_source": "executions/phase1_activation_v3/modal_qualify.py",
+          "source_sha256": "3a8e1739ec2273303523a8f8217543f0e8643be54c957c4dc6e7e2fe2def3561",
+          "resource_limits": {
+            "gpu": [
+              "H100",
+              "H200"
+            ],
+            "max_containers": 2,
+            "timeout": 7200,
+            "startup_timeout": 300,
+            "cpu": [
+              4,
+              4
+            ],
+            "memory": [
+              65536,
+              65536
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 1.5316054999999997
+        },
+        {
+          "app": {
+            "app_id": "ap-clr7KvRgsv48vGTDesc4cI",
+            "description": "agent-safety-clean-v2-20261017-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:36:42-07:00",
+            "stopped_at": "2026-10-17 17:45:57-07:00"
+          },
+          "snapshot": "infrastructure/apps_before_pilot_reallocation.json",
+          "launch_log": "infrastructure/fp8_activation_v4_diagnostic.log",
+          "frozen_source": "executions/phase1_activation_v4_diagnostic/modal_qualify.py",
+          "source_sha256": "8d30b744c1613f5d5b6190bb6a0df86e5045d934c0e016063254baa79409cf4e",
+          "resource_limits": {
+            "gpu": [
+              "H100",
+              "H200"
+            ],
+            "max_containers": 2,
+            "timeout": 7200,
+            "startup_timeout": 300,
+            "cpu": [
+              4,
+              4
+            ],
+            "memory": [
+              65536,
+              65536
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 1.9767374999999998
+        },
+        {
+          "app": {
+            "app_id": "ap-wYYW5GfoTFkYTxpyKgxugM",
+            "description": "agent-safety-clean-v2-20261017-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:54:43-07:00",
+            "stopped_at": "2026-10-17 18:10:57-07:00"
+          },
+          "snapshot": "infrastructure/apps_before_pilot_reallocation.json",
+          "launch_log": "infrastructure/post_fp8_full_v2.log",
+          "frozen_source": "executions/phase1_full_residual_v2/modal_qualify.py",
+          "source_sha256": "10735b2c972544852dff0dc314be48c9f082e5cd385fe4439072227cbc1ec0c4",
+          "resource_limits": {
+            "gpu": [
+              "H100",
+              "H200"
+            ],
+            "max_containers": 2,
+            "timeout": 7200,
+            "startup_timeout": 300,
+            "cpu": [
+              4,
+              4
+            ],
+            "memory": [
+              65536,
+              65536
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 3.2037789999999995
+        }
+      ],
+      "group_contingency_usd": 1,
+      "basis": "Verified historical stopped lifetimes and hashed frozen resource limits for every attributed attempt. Conservative H200 single-GPU price plus CPU parent allowance even where no parent existed. Broad image/storage/network and recovery contingency retained; not billed spend."
+    },
+    {
+      "job": "external_pair_qualification_two_bounded_tp8_jobs",
+      "previous_upper_bound_usd": 40,
+      "new_upper_bound_usd": 15,
+      "per_app": [
+        {
+          "app": {
+            "app_id": "ap-xNqXtf9em7piLTxqdfPX5u",
+            "description": "agent-safety-clean-v2-20261017-external-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 17:47:22-07:00",
+            "stopped_at": "2026-10-17 17:57:24-07:00"
+          },
+          "snapshot": "infrastructure/apps_before_pilot_reallocation.json",
+          "launch_log": "infrastructure/external_qualification_v1.log",
+          "frozen_source": "executions/phase1_external_v1/modal_external_qualification.py",
+          "source_sha256": "95f3d9e566dda52f4a53c0f7edf997d7ba25e6550238af22e562020fa16e8878",
+          "resource_limits": {
+            "gpu": "H100:8",
+            "max_containers": 1,
+            "timeout": 1800,
+            "startup_timeout": 600,
+            "cpu": [
+              16,
+              16
+            ],
+            "memory": [
+              131072,
+              131072
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 6.7054306000000015
+        },
+        {
+          "app": {
+            "app_id": "ap-c6Q4wQ66vhGd3Cgta7Jgb9",
+            "description": "agent-safety-clean-v2-20261017-external-qualification",
+            "state": "stopped",
+            "tasks": "0",
+            "created_at": "2026-10-17 18:01:46-07:00",
+            "stopped_at": "2026-10-17 18:11:07-07:00"
+          },
+          "snapshot": "infrastructure/apps_before_pilot_reallocation.json",
+          "launch_log": "infrastructure/external_qualification_v2.log",
+          "frozen_source": "executions/phase1_external_v2/modal_external_qualification.py",
+          "source_sha256": "95f3d9e566dda52f4a53c0f7edf997d7ba25e6550238af22e562020fa16e8878",
+          "resource_limits": {
+            "gpu": "H100:8",
+            "max_containers": 1,
+            "timeout": 1800,
+            "startup_timeout": 600,
+            "cpu": [
+              16,
+              16
+            ],
+            "memory": [
+              131072,
+              131072
+            ],
+            "retries": 0,
+            "scaledown_window": 2
+          },
+          "compute_bound_usd": 6.324651300000001
+        }
+      ],
+      "group_contingency_usd": 1,
+      "basis": "Verified historical stopped lifetimes and hashed frozen resource limits for every attributed attempt. Conservative H200 single-GPU price plus CPU parent allowance even where no parent existed. Broad image/storage/network and recovery contingency retained; not billed spend."
+    }
+  ],
+  "reserved_usd": 250,
+  "billing_status": "bounds_not_invoices"
+}

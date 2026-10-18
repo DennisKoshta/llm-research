@@ -1,0 +1,194 @@
+{
+  "bound_preparation_sources": {
+    "infrastructure/phase1_component_paths_q4.json": "7a09f45713bb3396fa54feffc99cc6c153a25490e6aef29cd5e0950682b09281"
+  },
+  "external_scope": {
+    "llama_cross_family_excluded": false,
+    "llama_note": "Llama remains a required executor/judge with its own pinned runtime, task pilots and raw audits.",
+    "pool_with_primary": false,
+    "role1_comparison_authorized": false,
+    "role1_comparison_checkpoints": [
+      "flash_next_intact",
+      "flash_next_uncensored"
+    ],
+    "role2_note": "Requires its own pinned-model mechanical qualification and task-specific H5; the Role 1 refusal gap is not an author gate.",
+    "role2_unified_author_excluded": false,
+    "status": "EXCLUDED_ROLE1_FAILED_QUALIFICATION"
+  },
+  "launch_authorized": false,
+  "paid_launch_authority": "root via scripts/launch_bounded_job.py only",
+  "pending": [],
+  "phase1_readiness": {
+    "all_required_phase1_gates_passed": false,
+    "component_sources": {
+      "author": {
+        "pending_paths": [],
+        "receipt_path": "records/phase1_author_v1_receipt.json"
+      },
+      "calibration": {
+        "pending_paths": [
+          "infrastructure/calibration_format_v2_correction.json"
+        ],
+        "receipt_path": "records/phase1_calibration_author_v1_c2_receipt.json"
+      },
+      "dose": {
+        "pending_paths": [
+          "infrastructure/phase1_doses_author_v1_d1_supervisor_status.json"
+        ],
+        "receipt_path": "records/phase1_dose_response_author_v1_d1_receipt.json"
+      },
+      "external": {
+        "pending_paths": [],
+        "receipt_path": "records/phase1_external_qualification_v3_v4_eager_receipt.json"
+      },
+      "post_fp8": {
+        "pending_paths": [],
+        "receipt_path": "records/phase1_post_fp8_gate_receipt.json"
+      },
+      "primary": {
+        "pending_paths": [
+          "infrastructure/q4_observer_launch.json"
+        ],
+        "receipt_path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json"
+      },
+      "source": {
+        "pending_paths": [],
+        "receipt_path": "records/phase1_source_directions_receipt.json"
+      }
+    },
+    "components": {
+      "author": {
+        "existing_pending_evidence": [],
+        "gate_checks": {
+          "all_author_hygiene": true,
+          "author_passed": true,
+          "forty_bases_ten_templates_480_cells": true,
+          "masked_boilerplate_unpredictive": true,
+          "symmetric_histories": true
+        },
+        "gate_passed": true,
+        "reason": "Independent raw recomputation and required gates pass.",
+        "receipt_path": "records/phase1_author_v1_receipt.json",
+        "receipt_sha256": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+        "recomputed": true,
+        "status": "PASS"
+      },
+      "calibration": {
+        "existing_pending_evidence": [
+          "infrastructure/calibration_format_v2_correction.json"
+        ],
+        "gate_checks": {
+          "all_calibration_hygiene": true,
+          "intact_calibration_passed": true
+        },
+        "gate_passed": true,
+        "reason": "Independent raw recomputation and required gates pass.",
+        "receipt_path": "records/phase1_calibration_author_v1_c2_receipt.json",
+        "receipt_sha256": "cd3fbd58738110cc7a43e2841f4c0cba848a0838fb63e2e460c87dc43ad94f4d",
+        "recomputed": true,
+        "status": "PASS"
+      },
+      "dose": {
+        "existing_pending_evidence": [
+          "infrastructure/phase1_doses_author_v1_d1_supervisor_status.json"
+        ],
+        "gate_checks": {},
+        "gate_passed": false,
+        "reason": "Evidence artifacts exist, but the designated completed receipt is absent; running-job status is not inferred.",
+        "receipt_path": "records/phase1_dose_response_author_v1_d1_receipt.json",
+        "receipt_sha256": null,
+        "recomputed": false,
+        "status": "PENDING"
+      },
+      "external": {
+        "existing_pending_evidence": [],
+        "gate_checks": {
+          "external_hygiene": true,
+          "external_pair_qualified": false,
+          "itt_gap_at_least_50_percentage_points": false,
+          "strict_gap_at_least_50_percentage_points": false
+        },
+        "gate_passed": false,
+        "reason": "Numerical receipt reproduces, but at least one required gate fails; thresholds are unchanged.",
+        "receipt_path": "records/phase1_external_qualification_v3_v4_eager_receipt.json",
+        "receipt_sha256": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+        "recomputed": true,
+        "status": "FAIL"
+      },
+      "post_fp8": {
+        "existing_pending_evidence": [],
+        "gate_checks": {
+          "projection_reduction_strictly_above_95_percent": true,
+          "registered_full_residual_checkpoint_family": true
+        },
+        "gate_passed": true,
+        "reason": "Independent raw recomputation and required gates pass.",
+        "receipt_path": "records/phase1_post_fp8_gate_receipt.json",
+        "receipt_sha256": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+        "recomputed": true,
+        "status": "PASS"
+      },
+      "primary": {
+        "existing_pending_evidence": [
+          "infrastructure/q4_observer_launch.json"
+        ],
+        "gate_checks": {},
+        "gate_passed": false,
+        "reason": "Evidence artifacts exist, but the designated completed receipt is absent; running-job status is not inferred.",
+        "receipt_path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+        "receipt_sha256": null,
+        "recomputed": false,
+        "status": "PENDING"
+      },
+      "source": {
+        "existing_pending_evidence": [],
+        "gate_checks": {
+          "frozen_vectors_recomputed_exactly": true,
+          "npz_crosscheck_exact": true
+        },
+        "gate_passed": true,
+        "reason": "Independent raw recomputation and required gates pass.",
+        "receipt_path": "records/phase1_source_directions_receipt.json",
+        "receipt_sha256": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+        "recomputed": true,
+        "status": "PASS"
+      }
+    },
+    "external_pair_qualified": false,
+    "external_slices_complete": false,
+    "external_validity_authorized": false,
+    "full_program_complete": false,
+    "phase2_experiments_complete": false,
+    "primary_phase2_authorized": false,
+    "primary_required_components": [
+      "source",
+      "post_fp8",
+      "primary",
+      "author",
+      "calibration",
+      "dose"
+    ],
+    "provenance": {
+      "reason": "All primary component gates must pass before aggregate identity admission.",
+      "status": "NOT_EVALUATED"
+    },
+    "schema": "phase1_readiness_raw_audit_v1",
+    "scope": "Phase 1 prerequisite admission only. A failed external pair excludes qualified external comparisons without disabling independently qualified primary work. Failed primary gates remain mandatory. No experiment-specific pilot, Phase 2 result, Phase 3 CI gate, external slice, or full-program completion is certified.",
+    "status": "INCOMPLETE_PRIMARY_PREREQUISITES"
+  },
+  "phase2_complete": false,
+  "phase3_authorized": false,
+  "program_id": "p2v1",
+  "proposed_files": [],
+  "queue": [],
+  "remaining_completion_contracts": [
+    "All required Exp2.3 conditions and full raw audits",
+    "All Exp1.1 action/QA/semantic-grading data",
+    "Independent binary/clustered/omnibus statistics",
+    "Complete final-verifier registration; no current component grants Phase3"
+  ],
+  "schema": "phase2_program_state_v1",
+  "scientific_filters_applied": false,
+  "selection_sha256": "28a394709d7de3a64119c1221bf723eb1b12246ca4b3135a149f9b21fbbcc96d",
+  "state": "WAITING_PHASE1_COMPLETE_EVIDENCE"
+}

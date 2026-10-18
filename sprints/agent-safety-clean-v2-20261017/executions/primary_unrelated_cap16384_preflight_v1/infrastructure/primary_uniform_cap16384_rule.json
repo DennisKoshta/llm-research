@@ -1,0 +1,32 @@
+{
+  "schema": "uniform_primary_token_budget_retry_v2",
+  "created_utc": "2026-10-18T05:14:03.797563+00:00",
+  "previous_attempt": "vllm_q3_cap8192",
+  "planned_new_attempt": "vllm_q4_cap16384",
+  "trigger": {
+    "arm": "unrelated",
+    "trial_id": "pilot_128_agentic_benign",
+    "split": "pilot",
+    "generated_tokens": 8192,
+    "max_new_tokens": 8192,
+    "finish_reason": "length",
+    "think_closed": false,
+    "parse_status": "TRUNCATED_IN_THINK"
+  },
+  "prior_heldout_refusal_effects_inspected": false,
+  "new_max_new_tokens": 16384,
+  "new_context_limit": 32768,
+  "same_budget_all_six_arms": true,
+  "preflight": "Run only five fixed Unrelated pilots at new cap before admitting any full six-arm retry. No selective pilot replacement. If it passes, rerun all six arms uniformly with fresh pilots and all128qualification requests.",
+  "unchanged": [
+    "materialized checkpoints",
+    "prompt bytes",
+    "five pilot identities",
+    "qualification requests",
+    "control seeds",
+    "greedy seed0",
+    "strict parser and thresholds"
+  ],
+  "prior_attempt_retained_and_not_pooled": true,
+  "forward_observation_sources": "infrastructure/primary_logit_arm_attempts.json"
+}

@@ -1,0 +1,42 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-Nl3ExCp9CTx2mpTfNofZia
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_preflight.py
+├── ✓ Created Function probe.
+└── ✓ Created Function download.
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{
+  "checked_at_utc": "2026-10-17T20:53:26.817739+00:00",
+  "models": [
+    {
+      "repo_id": "Qwen/Qwen3.8-27B",
+      "status": "FAIL",
+      "error_type": "ImportError",
+      "error_message": "apply_chat_template requires jinja2 to be installed. Please install it using `pip install jinja2`."
+    },
+    {
+      "repo_id": "Qwen/Qwen3.8-27B-FP8",
+      "status": "FAIL",
+      "error_type": "ImportError",
+      "error_message": "apply_chat_template requires jinja2 to be installed. Please install it using `pip install jinja2`."
+    },
+    {
+      "repo_id": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "status": "FAIL",
+      "error_type": "ImportError",
+      "error_message": "apply_chat_template requires jinja2 to be installed. Please install it using `pip install jinja2`."
+    },
+    {
+      "repo_id": "orcarouter/Qwen3.8-Flash-Next-Uncensored-FP8",
+      "status": "FAIL",
+      "error_type": "ImportError",
+      "error_message": "apply_chat_template requires jinja2 to be installed. Please install it using `pip install jinja2`."
+    }
+  ],
+  "elapsed_seconds": 3.9696162040000003
+}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-Nl3ExCp9CTx2mpTfNofZia

@@ -1,0 +1,28 @@
+{
+  "recorded_utc": "2026-10-18T07:37:12.604179+00:00",
+  "source": "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit",
+  "destination": "checkpoint_doses_v1/tokenizer_audit",
+  "sha256": {
+    "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "copied_missing_files": [
+    "generation_config.json",
+    "merges.txt",
+    "tokenizer.json",
+    "vocab.json"
+  ],
+  "uploaded_missing_files": [
+    "generation_config.json",
+    "merges.txt",
+    "tokenizer.json",
+    "vocab.json"
+  ],
+  "payload_hashes_matched": true,
+  "frozen_source_changed": false,
+  "scope": "Complete exact tokenizer metadata recovery for independent prompt-token replay; bytes already verified in calibration provenance and actual dose payloads"
+}

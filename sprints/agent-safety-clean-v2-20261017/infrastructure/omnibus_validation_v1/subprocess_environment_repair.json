@@ -1,0 +1,17 @@
+{
+  "scope": "SYNTHETIC CPU SUBPROCESS COMPATIBILITY ONLY",
+  "failed_attempt": "subprocess_replay_v1",
+  "corrected_attempt": "subprocess_replay_v2",
+  "cause": "Initial threadpool library inventory exposes setuptools bundled package metadata after the first package enumeration. The validated driver deliberately performs environment preflight before fit/recompute.",
+  "initial_metadata_entries": 38,
+  "initialized_metadata_entries": 49,
+  "first_initialization_matches": false,
+  "second_and_third_initializations_exactly_match_saved_invocation": true,
+  "repair": "Perform the same explicit environment preflight in the new bridge, require exact full initialized environment equality, then call unchanged scientific replay.",
+  "scientific_source_unchanged": true,
+  "frozen_analysis_plan_unchanged": true,
+  "no_fingerprint_field_omitted": true,
+  "no_package_installation_for_this_repair": true,
+  "failed_wrapper_exact_source_preserved": true,
+  "final_wrapper_replay_pending": true
+}

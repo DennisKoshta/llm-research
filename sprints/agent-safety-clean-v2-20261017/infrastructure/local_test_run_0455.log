@@ -1,0 +1,72 @@
+Frozen 200 Intact calibration episodes and five pilots: /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/tests/tmpsg3pxa15/stimuli/calibration_author_format_v2.json
+Frozen 200 Intact calibration episodes and five pilots: /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/tests/tmpsg3pxa15/stimuli/calibration_author_format_v2.json
+{"checked_utc": "2026-10-18T04:53:23.385493+00:00", "author_attempt": "author", "attempt": "fixture", "phase2_authorized": false, "state": "ALREADY_RESERVED_OR_LAUNCHED_INSPECT_LEDGER", "existing": {"job": "phase1_intact_calibration_fixture", "allocation_status": "reserved_pending_launch"}, "observer": {"state": "fixture_recovery"}}
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: pilot 5/5
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 5/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 10/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 15/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 20/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 25/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 30/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 35/39
+structured_grading_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 39/39
+exp23_author_unit_fixture pilot: 5/5
+exp23_author_unit_fixture artifact_generation: 16/48
+exp23_author_unit_fixture artifact_generation: 32/48
+exp23_author_unit_fixture artifact_generation: 48/48
+exp23_author_unit_fixture pilot: 5/5
+exp23_author_unit_fixture artifact_generation: 16/48
+exp23_author_unit_fixture artifact_generation: 32/48
+exp23_author_unit_fixture artifact_generation: 48/48
+exp23_author_unit_fixture pilot: 5/5
+exp23_author_unit_fixture artifact_generation: 16/48
+exp23_author_unit_fixture artifact_generation: 32/48
+exp23_author_unit_fixture artifact_generation: 48/48
+exp23_author_unit_fixture pilot: 5/5
+structured_qa_fixture_independent_qa_judge_consequence_awareness_cot_on: pilot 5/5
+structured_qa_fixture_independent_qa_judge_consequence_awareness_cot_on: qa_grading 5/5
+structured_unit_fixture_llama_paraphraser_paraphrase_cot_off: pilot 5/5
+structured_unit_fixture_llama_paraphraser_paraphrase_cot_off: artifact_generation 5/7
+structured_unit_fixture_llama_paraphraser_paraphrase_cot_off: artifact_generation 7/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: pilot 5/5
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 5/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 7/7
+structured_unit_fixture_independent_semantic_judge_author_judge_cot_on: pilot 5/5
+structured_unit_fixture_independent_semantic_judge_author_judge_cot_on: artifact_generation 5/7
+structured_unit_fixture_independent_semantic_judge_author_judge_cot_on: artifact_generation 7/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: pilot 5/5
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 5/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 7/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: pilot 5/5
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 5/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 7/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: pilot 5/5
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 5/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: artifact_generation 7/7
+structured_unit_fixture_intact_reviewer_natural_review_cot_on: pilot 5/5
+======================================================================
+ERROR: test_watcher_recovers_unique_sources_and_passes_mapping_to_receipt (test_logit_arm_provenance.ForwardProvenanceTests.test_watcher_recovers_unique_sources_and_passes_mapping_to_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/watch_phase1.py", line 118, in main
+    assert mechanics['passed'], 'Mechanical gates must pass before held-out effect computation'
+           ~~~~~~~~~^^^^^^^^^^
+AssertionError: Mechanical gates must pass before held-out effect computation
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/tests/test_logit_arm_provenance.py", line 69, in test_watcher_recovers_unique_sources_and_passes_mapping_to_receipt
+    watch_phase1.main()
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/scripts/watch_phase1.py", line 142, in main
+    with (ROOT/'infrastructure/watch_recovery_errors.jsonl').open('a') as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/tests/tmpniodgn4q/infrastructure/watch_recovery_errors.jsonl'
+
+----------------------------------------------------------------------
+Ran 198 tests in 73.242s
+
+FAILED (errors=1)

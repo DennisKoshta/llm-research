@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-18T02:51:25.411449+00:00",
+  "arm": "flash_next_uncensored",
+  "cap": 4096,
+  "load_strategy": "eager",
+  "worker_timeout_seconds": 3600,
+  "retained_counterpart": "phase1_external_v3/flash_next_intact.jsonl",
+  "reason": "v3 Uncensored pilot passed but total worker time exhausted during qualification; no scientific threshold change",
+  "sha256": {
+    "phase1_stimuli.py": "880f892575da965b97a5d6496bd1873c3ec47fa39b96b76c2d292a29b719ff8b",
+    "strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+    "external_qualification_worker.py": "b55263872bc6d381a79189f8270d6bf669714fa9dab8f95b1f01deb34467dacc",
+    "modal_external_qualification.py": "de7e90920ff87eab7650155f98b5cb44fec969cd414faaf7fa39615ebdb5ab5f"
+  }
+}

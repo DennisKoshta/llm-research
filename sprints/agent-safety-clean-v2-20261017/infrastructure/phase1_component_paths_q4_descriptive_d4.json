@@ -1,0 +1,25 @@
+{
+  "source": "records/phase1_source_directions_receipt.json",
+  "post_fp8": "records/phase1_post_fp8_gate_receipt.json",
+  "primary": {
+    "receipt_path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+    "pending_paths": [
+      "infrastructure/q4_observer_launch.json"
+    ]
+  },
+  "external": "records/phase1_external_qualification_v3_v4_eager_receipt.json",
+  "author": "records/phase1_author_v1_receipt.json",
+  "calibration": {
+    "receipt_path": "records/phase1_calibration_author_v1_c2_receipt.json",
+    "pending_paths": [
+      "infrastructure/calibration_format_v2_correction.json"
+    ]
+  },
+  "dose": {
+    "receipt_path": "records/phase1_dose_response_author_v1_d4_cap8192_format_v1_receipt.json",
+    "pending_paths": [
+      "infrastructure/phase1_descriptive_dose_format_retry_v1.json",
+      "infrastructure/phase1_doses_author_v1_d4_cap8192_format_v1_supervisor_status.json"
+    ]
+  }
+}

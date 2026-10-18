@@ -1,0 +1,2175 @@
+{
+  "schema": "read_only_budget_mapping_review_v1",
+  "observed_at_utc": "2026-10-18T04:10:55.965416+00:00",
+  "scope": "Only current sprint infrastructure logs and snapshots, plus a read-only Modal app listing; no changes to budget or resource registries and no paid job launches.",
+  "budget_snapshot_sha256": "3abf4d6b5ec11cf0a56804574979695a5b1d1ae01803fdd7d57a0210bf116a08",
+  "budget_updated_at_utc": "2026-10-18T04:10:26.846916+00:00",
+  "resource_snapshot_sha256": "c0dc182005aeb9fe4c4578ff34ab992cc89d0a7eb40217e4987391bd2838113f",
+  "current_reservation_total_usd": 331,
+  "ceiling_usd": 500,
+  "unreserved_headroom_usd": 169,
+  "pending_ablated_retry_reservation_usd": 0,
+  "billing_status": "No invoices or billing report were accessed; all dollar calculations are reservation arithmetic or conditional compute bounds, not actual billed spend.",
+  "price_basis": "Reuse the worker/parent rates already recorded in current-sprint reconciliation snapshots. No assertion that a new price quote was retrieved.",
+  "rate_templates": {
+    "single_worker_worst_case": {
+      "H200_gpus": 1,
+      "cpu_cores": 4,
+      "memory_GiB": 64,
+      "usd_per_second": 0.00145548
+    },
+    "tp8_worker": {
+      "H100_gpus": 8,
+      "cpu_cores": 16,
+      "memory_GiB": 128,
+      "usd_per_second": 0.00926976
+    },
+    "cpu_parent": {
+      "cpu_cores": 1,
+      "memory_GiB": 1,
+      "usd_per_second": 1.532e-05
+    }
+  },
+  "current_sprint_apps_live_query": [
+    {
+      "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+      "description": "agent-safety-clean-v2-20261017-qualification",
+      "state": "ephemeral (detached)",
+      "tasks": "2",
+      "created_at": "2026-10-17 21:10:27-07:00",
+      "stopped_at": null
+    },
+    {
+      "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+      "description": "agent-safety-clean-v2-20261017-scenario-author",
+      "state": "ephemeral (detached)",
+      "tasks": "2",
+      "created_at": "2026-10-17 20:48:41-07:00",
+      "stopped_at": null
+    },
+    {
+      "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+      "description": "agent-safety-clean-v2-20261017-batched-qualification",
+      "state": "ephemeral (detached)",
+      "tasks": "2",
+      "created_at": "2026-10-17 20:44:08-07:00",
+      "stopped_at": null
+    },
+    {
+      "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+      "description": "agent-safety-clean-v2-20261017-preflight",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 20:55:32-07:00",
+      "stopped_at": "2026-10-17 21:00:36-07:00"
+    },
+    {
+      "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+      "description": "agent-safety-clean-v2-20261017-qualification",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 20:38:57-07:00",
+      "stopped_at": "2026-10-17 21:05:19-07:00"
+    },
+    {
+      "app_id": "ap-qPVOwhKSoEtFdMbh4c2M1W",
+      "description": "agent-safety-clean-v2-20261017-batched-qualification",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 20:38:57-07:00",
+      "stopped_at": "2026-10-17 20:43:19-07:00"
+    },
+    {
+      "app_id": "ap-ru3rGZwY5JxqoIzirpmXE2",
+      "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 20:31:23-07:00",
+      "stopped_at": "2026-10-17 20:38:06-07:00"
+    },
+    {
+      "app_id": "ap-igf2GvJTHYepkcI9K4HmxG",
+      "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 19:58:49-07:00",
+      "stopped_at": "2026-10-17 20:29:29-07:00"
+    },
+    {
+      "app_id": "ap-9Rsae0kx5hoxmQmM29wDfv",
+      "description": "agent-safety-clean-v2-20261017-external-qualification",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 19:51:25-07:00",
+      "stopped_at": "2026-10-17 20:23:54-07:00"
+    },
+    {
+      "app_id": "ap-RzpNSN7UJunHDgas0x0uvu",
+      "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 19:20:47-07:00",
+      "stopped_at": "2026-10-17 19:54:31-07:00"
+    },
+    {
+      "app_id": "ap-JHtXbLtxZdZsQdns9nZQqm",
+      "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 19:18:47-07:00",
+      "stopped_at": "2026-10-17 19:20:59-07:00"
+    },
+    {
+      "app_id": "ap-79l9YPN3v5Fl7RRdvLKlRM",
+      "description": "agent-safety-clean-v2-20261017-primary-serving-probe",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 19:15:30-07:00",
+      "stopped_at": "2026-10-17 19:16:13-07:00"
+    },
+    {
+      "app_id": "ap-mzOfPz2pIOPscQpAe2xFBK",
+      "description": "agent-safety-clean-v2-20261017-qualification",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 19:03:02-07:00",
+      "stopped_at": "2026-10-17 20:39:03-07:00"
+    },
+    {
+      "app_id": "ap-z3pMmUSCIFgiUKpDpyJWrU",
+      "description": "agent-safety-clean-v2-20261017-external-qualification",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-17 18:55:30-07:00",
+      "stopped_at": "2026-10-17 19:48:16-07:00"
+    }
+  ],
+  "reservation_app_mapping": [
+    {
+      "job": "setup_and_cpu_probes",
+      "reserved_upper_bound_usd": 5,
+      "app_ids": [
+        "ap-7AhnkGXAI8rsbzsC43itXT",
+        "ap-awSbhVc0bxHhadiBtXBV0z",
+        "ap-FDNzo16i2eNZ5WJ1Y2dpNd",
+        "ap-MTvLgoCHlpNNMkftXNXNI4",
+        "ap-Nl3ExCp9CTx2mpTfNofZia",
+        "ap-Bt5rErSG8htqNgz8xPpBv1",
+        "ap-hToFEeKqi0g9g4rYFONVkY",
+        "ap-EloOLATODhWUcJcgD6Vuve",
+        "ap-xyj7Ff7TAqZWjVNTgqaUmk",
+        "ap-66KpkKR0mVyMDmytRsCoRB",
+        "ap-dqSpviZnTPJmhcySB8Rnah",
+        "ap-79l9YPN3v5Fl7RRdvLKlRM"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/modal_preflight.log",
+        "infrastructure/modal_preflight_attempt2.log",
+        "infrastructure/modal_preflight_attempt3.log",
+        "infrastructure/modal_preflight_attempt4.log",
+        "infrastructure/modal_preflight_attempt5.log",
+        "infrastructure/modal_preflight_attempt6.log",
+        "infrastructure/external_runtime_probe.log",
+        "infrastructure/external_runtime_probe_attempt2.log",
+        "infrastructure/external_runtime_probe_attempt3.log",
+        "infrastructure/external_runtime_probe_attempt4.log",
+        "infrastructure/external_runtime_probe_attempt5.log",
+        "infrastructure/primary_serving_runtime_probe.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "source_checkpoint_download",
+      "reserved_upper_bound_usd": 1,
+      "app_ids": [
+        "ap-Co2NUzPtMbzH4XxOYj4P5h",
+        "ap-tYsEUSb22bjHlvZeX5sHYS"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/download_primary.log",
+        "infrastructure/download_primary_attempt2.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "author_checkpoint_download",
+      "reserved_upper_bound_usd": 1,
+      "app_ids": [
+        "ap-fCrUA0I9kxN6WhwzRc6VyE"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/download_author.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "h200_hardware_probe",
+      "reserved_upper_bound_usd": 1,
+      "app_ids": [
+        "ap-4unbeXukvqhwQfUy8O56JZ"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/modal_gpu_probe.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "phase1_image_builds",
+      "reserved_upper_bound_usd": 10,
+      "app_ids": [
+        "ap-NWE4BwYvKVF2dUjFnirwe6",
+        "ap-MpPBKwfGbl4nWf4L18F5pJ",
+        "ap-SkN2dM7t0BU8r75HeHt4s1",
+        "ap-Osrt5siW8W0Ej2oRf9WXli"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/phase1_image_build.log",
+        "infrastructure/optimized_kernel_build.log",
+        "infrastructure/optimized_kernel_attempt2.log",
+        "infrastructure/optimized_kernel_attempt3.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "phase1_source_pilot_extraction",
+      "reserved_upper_bound_usd": 5,
+      "app_ids": [
+        "ap-OtIwl8gwwai27aaxxbg6lQ",
+        "ap-W2pP7rlV09pCiiBydeJH0u",
+        "ap-DTihPDjSpShOsVS2X2JMnI"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/phase1_source_run.log",
+        "infrastructure/phase1_source_attempt2.log",
+        "infrastructure/phase1_source_attempt3.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "six_checkpoint_materialization",
+      "reserved_upper_bound_usd": 5,
+      "app_ids": [
+        "ap-7XLa4BOlrBz395fXis7hOW"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/materialization_attempt1.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "post_fp8_two_arm_validation",
+      "reserved_upper_bound_usd": 24,
+      "app_ids": [
+        "ap-CFTtAj9sZRW3INAs7AvQIS",
+        "ap-bpbsZBsfCWOlqtIutnHgPK",
+        "ap-SHdJ73l4GrHChixkIbJRRR"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/fp8_activation_intact_v1.log",
+        "infrastructure/fp8_activation_ablated_v1.log",
+        "infrastructure/fp8_activation_v2.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "post_fp8_diagnostic_and_repaired_validation",
+      "reserved_upper_bound_usd": 24,
+      "app_ids": [
+        "ap-tnLqRzPC5KfipdxVRycFVT",
+        "ap-clr7KvRgsv48vGTDesc4cI",
+        "ap-wYYW5GfoTFkYTxpyKgxugM"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/fp8_activation_v3.log",
+        "infrastructure/fp8_activation_v4_diagnostic.log",
+        "infrastructure/post_fp8_full_v2.log"
+      ],
+      "resource_bound_evidence": null,
+      "unresolved": "Assignment includes the later full-residual activation run; confirm these three apps belong to this reservation before reducing."
+    },
+    {
+      "job": "external_pair_qualification_two_bounded_tp8_jobs",
+      "reserved_upper_bound_usd": 40,
+      "app_ids": [
+        "ap-xNqXtf9em7piLTxqdfPX5u",
+        "ap-c6Q4wQ66vhGd3Cgta7Jgb9"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/external_qualification_v1.log",
+        "infrastructure/external_qualification_v2.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "complete_residual_writer_rematerialization",
+      "reserved_upper_bound_usd": 5,
+      "app_ids": [
+        "ap-PohUip67rHdxOUKntNJ2n0",
+        "ap-L47NsNzFcAFYe5uL1QGjHP"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/materialization_full_residual_v2.log",
+        "infrastructure/materialization_full_residual_v2_resume.log"
+      ],
+      "resource_bound_evidence": null,
+      "unresolved": "Two runs plausibly share this reservation; network-recovery allowance may overlap. No automatic reduction until attribution is confirmed."
+    },
+    {
+      "job": "network_interruption_recovery_allowance",
+      "reserved_upper_bound_usd": 15,
+      "app_ids": [],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [],
+      "resource_bound_evidence": null,
+      "unresolved": "Shared allowance or unmapped reservation; do not release based on missing app mapping."
+    },
+    {
+      "job": "final_corrected_materialization_resume",
+      "reserved_upper_bound_usd": 5,
+      "app_ids": [
+        "ap-qqdWZodX9C94JNBUqBTJ52"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/materialization_full_residual_v2_resume3.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "six_arm_heldout_qualification_full_v2_q1",
+      "reserved_upper_bound_usd": 18,
+      "app_ids": [
+        "ap-mzOfPz2pIOPscQpAe2xFBK"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "explicit_existing_reconciliation",
+      "evidence_logs": [
+        "infrastructure/qualification_full_v2_q1.log"
+      ],
+      "resource_bound_evidence": {
+        "maximum_worker_count": 2,
+        "worker_rate_usd_per_second": 0.0014554799999999999,
+        "parent_rate_usd_per_second": 1.532e-05,
+        "shutdown_allowance_seconds": 120,
+        "source": "infrastructure/budget_reservations.json reconciliations"
+      }
+    },
+    {
+      "job": "external_pair_cloud_parent_v3",
+      "reserved_upper_bound_usd": 31,
+      "app_ids": [
+        "ap-z3pMmUSCIFgiUKpDpyJWrU"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "explicit_existing_reconciliation",
+      "evidence_logs": [
+        "infrastructure/external_qualification_v3.log"
+      ],
+      "resource_bound_evidence": {
+        "maximum_worker_count": 1,
+        "worker_rate_usd_per_second": 0.009269760000000002,
+        "parent_rate_usd_per_second": 1.532e-05,
+        "shutdown_allowance_seconds": 120,
+        "source": "infrastructure/budget_reservations.json reconciliations"
+      }
+    },
+    {
+      "job": "primary_serving_loader_and_throughput_pilot",
+      "reserved_upper_bound_usd": 4,
+      "app_ids": [
+        "ap-JHtXbLtxZdZsQdns9nZQqm",
+        "ap-RzpNSN7UJunHDgas0x0uvu"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "historical_thematic_mapping_requires_owner_confirmation",
+      "evidence_logs": [
+        "infrastructure/primary_serving_pilot_v1.log",
+        "infrastructure/primary_serving_pilot_v2.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "external_uncensored_v4_eager_recovery",
+      "reserved_upper_bound_usd": 20,
+      "app_ids": [
+        "ap-9Rsae0kx5hoxmQmM29wDfv"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "explicit_existing_reconciliation",
+      "evidence_logs": [
+        "infrastructure/external_qualification_v4_eager.log"
+      ],
+      "resource_bound_evidence": {
+        "maximum_worker_count": 1,
+        "worker_rate_usd_per_second": 0.009269760000000002,
+        "parent_rate_usd_per_second": 1.532e-05,
+        "shutdown_allowance_seconds": 120,
+        "source": "infrastructure/budget_reservations.json reconciliations"
+      }
+    },
+    {
+      "job": "primary_serving_v3_durable_retry",
+      "reserved_upper_bound_usd": 4,
+      "app_ids": [
+        "ap-igf2GvJTHYepkcI9K4HmxG"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/primary_serving_pilot_v3.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "primary_serving_v4_named_rpc",
+      "reserved_upper_bound_usd": 4,
+      "app_ids": [
+        "ap-ru3rGZwY5JxqoIzirpmXE2"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/primary_serving_pilot_v4.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q1",
+      "reserved_upper_bound_usd": 20,
+      "app_ids": [
+        "ap-qPVOwhKSoEtFdMbh4c2M1W"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/batched_qualification_vllm_q1.log"
+      ],
+      "resource_bound_evidence": null
+    },
+    {
+      "job": "six_arm_forward_logits_full_v2_logits_q1",
+      "reserved_upper_bound_usd": 20,
+      "app_ids": [
+        "ap-qW8cuPKr2ma5WIN3qpSQkv"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/forward_logits_full_v2_logits_q1.log"
+      ],
+      "resource_bound_evidence": null,
+      "whole_app_resources_recorded": {
+        "gpus": 2,
+        "single_gpu_workers": 2,
+        "tp8_workers": 0
+      }
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q2",
+      "reserved_upper_bound_usd": 20,
+      "app_ids": [
+        "ap-ZFESgZ6zkI4eQtEaTBhrpq"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/batched_qualification_vllm_q2.log"
+      ],
+      "resource_bound_evidence": null,
+      "whole_app_resources_recorded": {
+        "gpus": 1,
+        "single_gpu_workers": 1,
+        "tp8_workers": 0
+      }
+    },
+    {
+      "job": "paired_scenario_author_v1",
+      "reserved_upper_bound_usd": 40,
+      "app_ids": [
+        "ap-inKz0tSDm1SE0qqnYx10iO"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/scenario_author_v1.log"
+      ],
+      "resource_bound_evidence": null,
+      "whole_app_resources_recorded": {
+        "gpus": 8,
+        "single_gpu_workers": 0,
+        "tp8_workers": 1
+      }
+    },
+    {
+      "job": "llama_checkpoint_download_v1",
+      "reserved_upper_bound_usd": 1,
+      "app_ids": [
+        "ap-mpRMqHJMj9heqflL7Mgo4Y"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/llama_checkpoint_download_v1.log"
+      ],
+      "resource_bound_evidence": {
+        "source": "scripts/modal_preflight.py",
+        "source_sha256": "a336a2e38ae9611558f7a24b4043be8cb4864736c0053c3e7129ac98c98ce548",
+        "functions": {
+          "download": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 1800,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                16384,
+                16384
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 1800
+            }
+          }
+        },
+        "excluded_functions": {
+          "probe": "Download entrypoint branch calls only download.remote(row), once."
+        },
+        "call_bound_basis": "The selected download_repo entrypoint calls download.remote exactly once; retry=0; no GPU function or spawned children."
+      },
+      "whole_app_resources_recorded": {
+        "gpus": 0,
+        "single_gpu_workers": 0,
+        "tp8_workers": 0
+      }
+    },
+    {
+      "job": "ablated_forward_logits_q2_cap8192",
+      "reserved_upper_bound_usd": 8,
+      "app_ids": [
+        "ap-DrJZuJfJ7SXSyLlEaZkBGp"
+      ],
+      "mapping_basis": "Exact job label and launch log, or explicitly marked thematic historical allocation.",
+      "mapping_certainty": "exact_launch_label",
+      "evidence_logs": [
+        "infrastructure/forward_logits_q2_cap8192.log"
+      ],
+      "resource_bound_evidence": {
+        "source": "scripts/modal_qualify.py",
+        "source_sha256": "6eace62b96d34dc77b0109a1f8d5ad5fb0402ae6780b52c37e1fd2eb9b71670a",
+        "functions": {
+          "capture_logits": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": [
+                "H100",
+                "H200"
+              ],
+              "max_containers": 1,
+              "timeout": 3600,
+              "startup_timeout": 300,
+              "cpu": [
+                4,
+                4
+              ],
+              "memory": [
+                65536,
+                65536
+              ],
+              "retries": 0,
+              "scaledown_window": 2
+            }
+          },
+          "run_group": {
+            "max_calls": 1,
+            "limits": {
+              "gpu": null,
+              "max_containers": 1,
+              "timeout": 25200,
+              "cpu": [
+                1,
+                1
+              ],
+              "memory": [
+                1024,
+                1024
+              ],
+              "retries": 0,
+              "scaledown_window": 2,
+              "startup_timeout": 25200
+            }
+          }
+        },
+        "excluded_functions": {
+          "qualify": "stage logits uses capture_logits.spawn; qualify.local executes in the bounded capture worker, not a separate GPU call."
+        },
+        "call_bound_basis": "One selected arm and one durable call ID, stage logits; five fresh pilots at8192 then unchanged64forward observations; no behavioral qualification rerun."
+      },
+      "whole_app_resources_recorded": {
+        "gpus": 1,
+        "single_gpu_workers": 1,
+        "tp8_workers": 0
+      }
+    }
+  ],
+  "app_evidence_inventory": [
+    {
+      "app_id": "ap-3gpAfmk7ysNw5NFOReTbN7",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_external_intact.log",
+          "app_id_lines": [
+            2
+          ]
+        }
+      ],
+      "app_observation": null,
+      "state_caveat": "No matching app-list timestamp snapshot found; log completion markers, if any, establish no exact lifetime."
+    },
+    {
+      "app_id": "ap-4unbeXukvqhwQfUy8O56JZ",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_gpu_probe.log",
+          "app_id_lines": [
+            2,
+            39
+          ],
+          "completed_marker_lines": [
+            38
+          ],
+          "stopping_marker_lines": [
+            37
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-4unbeXukvqhwQfUy8O56JZ",
+        "description": "agent-safety-clean-v2-20261017-gpu-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:52:16-07:00",
+        "stopped_at": "2026-10-17 13:52:35-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-66KpkKR0mVyMDmytRsCoRB",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_runtime_probe_attempt4.log",
+          "app_id_lines": [
+            2,
+            11
+          ],
+          "completed_marker_lines": [
+            10
+          ],
+          "stopping_marker_lines": [
+            9
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-66KpkKR0mVyMDmytRsCoRB",
+        "description": "agent-safety-clean-v2-20261017-external-runtime-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:40:11-07:00",
+        "stopped_at": "2026-10-17 17:40:48-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-79l9YPN3v5Fl7RRdvLKlRM",
+      "log_evidence": [
+        {
+          "path": "infrastructure/primary_serving_runtime_probe.log",
+          "app_id_lines": [
+            2,
+            16
+          ],
+          "completed_marker_lines": [
+            15
+          ],
+          "stopping_marker_lines": [
+            14
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-79l9YPN3v5Fl7RRdvLKlRM",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:15:30-07:00",
+        "stopped_at": "2026-10-17 19:16:13-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-7AhnkGXAI8rsbzsC43itXT",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_preflight.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            110
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-7AhnkGXAI8rsbzsC43itXT",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:51:16-07:00",
+        "stopped_at": "2026-10-17 13:51:34-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-7XLa4BOlrBz395fXis7hOW",
+      "log_evidence": [
+        {
+          "path": "infrastructure/materialization_attempt1.log",
+          "app_id_lines": [
+            2,
+            32
+          ],
+          "completed_marker_lines": [
+            31
+          ],
+          "stopping_marker_lines": [
+            29
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-7XLa4BOlrBz395fXis7hOW",
+        "description": "agent-safety-clean-v2-20261017-materialize",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:10:30-07:00",
+        "stopped_at": "2026-10-17 17:23:58-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-9Rsae0kx5hoxmQmM29wDfv",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_qualification_v4_eager.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-9Rsae0kx5hoxmQmM29wDfv",
+        "description": "agent-safety-clean-v2-20261017-external-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:51:25-07:00",
+        "stopped_at": "2026-10-17 20:23:54-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-BHqxZGqh4mNTRw74V3Fevn",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_config_repair.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            11
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-BHqxZGqh4mNTRw74V3Fevn",
+        "description": "agent-safety-clean-v2-20261017-fp8-config-repair",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:24:18-07:00",
+        "stopped_at": "2026-10-17 17:26:27-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-Bt5rErSG8htqNgz8xPpBv1",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_preflight_attempt6.log",
+          "app_id_lines": [
+            2,
+            159
+          ],
+          "completed_marker_lines": [
+            158
+          ],
+          "stopping_marker_lines": [
+            157
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-Bt5rErSG8htqNgz8xPpBv1",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:54:52-07:00",
+        "stopped_at": "2026-10-17 13:55:30-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-CFTtAj9sZRW3INAs7AvQIS",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_activation_intact_v1.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            202
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-CFTtAj9sZRW3INAs7AvQIS",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:14:45-07:00",
+        "stopped_at": "2026-10-17 17:16:44-07:00",
+        "state_evidence": "infrastructure/modal_apps_resume.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-Co2NUzPtMbzH4XxOYj4P5h",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_primary.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            244
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-Co2NUzPtMbzH4XxOYj4P5h",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "ephemeral",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:52:44-07:00",
+        "stopped_at": null,
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      },
+      "state_caveat": "Old nonterminal snapshot is stale; absence from current recently-stopped listing does not prove when the app stopped."
+    },
+    {
+      "app_id": "ap-DTihPDjSpShOsVS2X2JMnI",
+      "log_evidence": [
+        {
+          "path": "infrastructure/phase1_source_attempt3.log",
+          "app_id_lines": [
+            2,
+            140
+          ],
+          "completed_marker_lines": [
+            139
+          ],
+          "stopping_marker_lines": [
+            138
+          ]
+        }
+      ],
+      "app_observation": null,
+      "state_caveat": "No matching app-list timestamp snapshot found; log completion markers, if any, establish no exact lifetime."
+    },
+    {
+      "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+      "log_evidence": [
+        {
+          "path": "infrastructure/forward_logits_q2_cap8192.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "ephemeral (detached)",
+        "tasks": "2",
+        "created_at": "2026-10-17 21:10:27-07:00",
+        "stopped_at": null,
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-EloOLATODhWUcJcgD6Vuve",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_runtime_probe_attempt2.log",
+          "app_id_lines": [
+            2,
+            77
+          ],
+          "completed_marker_lines": [
+            76
+          ],
+          "stopping_marker_lines": [
+            75
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-EloOLATODhWUcJcgD6Vuve",
+        "description": "agent-safety-clean-v2-20261017-external-runtime-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:32:46-07:00",
+        "stopped_at": "2026-10-17 17:36:59-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-FDNzo16i2eNZ5WJ1Y2dpNd",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_preflight_attempt3.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            243
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-FDNzo16i2eNZ5WJ1Y2dpNd",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "ephemeral",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:52:24-07:00",
+        "stopped_at": null,
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      },
+      "state_caveat": "Old nonterminal snapshot is stale; absence from current recently-stopped listing does not prove when the app stopped."
+    },
+    {
+      "app_id": "ap-JHtXbLtxZdZsQdns9nZQqm",
+      "log_evidence": [
+        {
+          "path": "infrastructure/primary_serving_pilot_v1.log",
+          "app_id_lines": [
+            3
+          ],
+          "stopping_marker_lines": [
+            32
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-JHtXbLtxZdZsQdns9nZQqm",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:18:47-07:00",
+        "stopped_at": "2026-10-17 19:20:59-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-L47NsNzFcAFYe5uL1QGjHP",
+      "log_evidence": [
+        {
+          "path": "infrastructure/materialization_full_residual_v2_resume.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-L47NsNzFcAFYe5uL1QGjHP",
+        "description": "agent-safety-clean-v2-20261017-materialize",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 18:00:26-07:00",
+        "stopped_at": "2026-10-17 18:11:02-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-MTvLgoCHlpNNMkftXNXNI4",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_preflight_attempt4.log",
+          "app_id_lines": [
+            2,
+            38
+          ],
+          "completed_marker_lines": [
+            37
+          ],
+          "stopping_marker_lines": [
+            36
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-MTvLgoCHlpNNMkftXNXNI4",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:52:52-07:00",
+        "stopped_at": "2026-10-17 13:53:07-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-MpPBKwfGbl4nWf4L18F5pJ",
+      "log_evidence": [
+        {
+          "path": "infrastructure/optimized_kernel_build.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            258
+          ]
+        }
+      ],
+      "app_observation": null,
+      "state_caveat": "No matching app-list timestamp snapshot found; log completion markers, if any, establish no exact lifetime."
+    },
+    {
+      "app_id": "ap-NWE4BwYvKVF2dUjFnirwe6",
+      "log_evidence": [
+        {
+          "path": "infrastructure/phase1_image_build.log",
+          "app_id_lines": [
+            2,
+            331
+          ],
+          "completed_marker_lines": [
+            330
+          ],
+          "stopping_marker_lines": [
+            329
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-NWE4BwYvKVF2dUjFnirwe6",
+        "description": "agent-safety-clean-v2-20261017-phase1",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:55:15-07:00",
+        "stopped_at": "2026-10-17 14:00:22-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-Nl3ExCp9CTx2mpTfNofZia",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_preflight_attempt5.log",
+          "app_id_lines": [
+            2,
+            42
+          ],
+          "completed_marker_lines": [
+            41
+          ],
+          "stopping_marker_lines": [
+            40
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-Nl3ExCp9CTx2mpTfNofZia",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:53:18-07:00",
+        "stopped_at": "2026-10-17 13:53:33-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-Osrt5siW8W0Ej2oRf9WXli",
+      "log_evidence": [
+        {
+          "path": "infrastructure/optimized_kernel_attempt3.log",
+          "app_id_lines": [
+            2,
+            72
+          ],
+          "completed_marker_lines": [
+            71
+          ],
+          "stopping_marker_lines": [
+            70
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-Osrt5siW8W0Ej2oRf9WXli",
+        "description": "agent-safety-clean-v2-20261017-kernel-build",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:21:50-07:00",
+        "stopped_at": "2026-10-17 17:30:38-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-OtIwl8gwwai27aaxxbg6lQ",
+      "log_evidence": [
+        {
+          "path": "infrastructure/phase1_source_run.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            333
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-OtIwl8gwwai27aaxxbg6lQ",
+        "description": "agent-safety-clean-v2-20261017-phase1",
+        "state": "ephemeral",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:56:54-07:00",
+        "stopped_at": null,
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      },
+      "state_caveat": "Old nonterminal snapshot is stale; absence from current recently-stopped listing does not prove when the app stopped."
+    },
+    {
+      "app_id": "ap-PohUip67rHdxOUKntNJ2n0",
+      "log_evidence": [
+        {
+          "path": "infrastructure/materialization_full_residual_v2.log",
+          "app_id_lines": [
+            2
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-PohUip67rHdxOUKntNJ2n0",
+        "description": "agent-safety-clean-v2-20261017-materialize",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:48:19-07:00",
+        "stopped_at": "2026-10-17 17:57:05-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-RzpNSN7UJunHDgas0x0uvu",
+      "log_evidence": [
+        {
+          "path": "infrastructure/primary_serving_pilot_v2.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-RzpNSN7UJunHDgas0x0uvu",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:20:47-07:00",
+        "stopped_at": "2026-10-17 19:54:31-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-SHdJ73l4GrHChixkIbJRRR",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_activation_v2.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            343
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-SHdJ73l4GrHChixkIbJRRR",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:17:58-07:00",
+        "stopped_at": "2026-10-17 17:23:26-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-SkN2dM7t0BU8r75HeHt4s1",
+      "log_evidence": [
+        {
+          "path": "infrastructure/optimized_kernel_attempt2.log",
+          "app_id_lines": [
+            2
+          ]
+        }
+      ],
+      "app_observation": null,
+      "state_caveat": "No matching app-list timestamp snapshot found; log completion markers, if any, establish no exact lifetime."
+    },
+    {
+      "app_id": "ap-W2pP7rlV09pCiiBydeJH0u",
+      "log_evidence": [
+        {
+          "path": "infrastructure/phase1_source_attempt2.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            277
+          ]
+        }
+      ],
+      "app_observation": null,
+      "state_caveat": "No matching app-list timestamp snapshot found; log completion markers, if any, establish no exact lifetime."
+    },
+    {
+      "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+      "log_evidence": [
+        {
+          "path": "infrastructure/batched_qualification_vllm_q2.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "state": "ephemeral (detached)",
+        "tasks": "2",
+        "created_at": "2026-10-17 20:44:08-07:00",
+        "stopped_at": null,
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-aCnEvZfdjX8P9EN98mQkbs",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_config_repair_attempt2.log",
+          "app_id_lines": [
+            2,
+            11
+          ],
+          "completed_marker_lines": [
+            10
+          ],
+          "stopping_marker_lines": [
+            9
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-aCnEvZfdjX8P9EN98mQkbs",
+        "description": "agent-safety-clean-v2-20261017-fp8-config-repair",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:27:16-07:00",
+        "stopped_at": "2026-10-17 17:27:34-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-awSbhVc0bxHhadiBtXBV0z",
+      "log_evidence": [
+        {
+          "path": "infrastructure/modal_preflight_attempt2.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            334
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-awSbhVc0bxHhadiBtXBV0z",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "ephemeral",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:51:48-07:00",
+        "stopped_at": null,
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      },
+      "state_caveat": "Old nonterminal snapshot is stale; absence from current recently-stopped listing does not prove when the app stopped."
+    },
+    {
+      "app_id": "ap-bpbsZBsfCWOlqtIutnHgPK",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_activation_ablated_v1.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            11
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-bpbsZBsfCWOlqtIutnHgPK",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:16:40-07:00",
+        "stopped_at": "2026-10-17 17:18:03-07:00",
+        "state_evidence": "infrastructure/modal_apps_resume.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-c6Q4wQ66vhGd3Cgta7Jgb9",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_qualification_v2.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-c6Q4wQ66vhGd3Cgta7Jgb9",
+        "description": "agent-safety-clean-v2-20261017-external-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 18:01:46-07:00",
+        "stopped_at": "2026-10-17 18:11:07-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-clr7KvRgsv48vGTDesc4cI",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_activation_v4_diagnostic.log",
+          "app_id_lines": [
+            2,
+            317
+          ],
+          "completed_marker_lines": [
+            316
+          ],
+          "stopping_marker_lines": [
+            315
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-clr7KvRgsv48vGTDesc4cI",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:36:42-07:00",
+        "stopped_at": "2026-10-17 17:45:57-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-dqSpviZnTPJmhcySB8Rnah",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_runtime_probe_attempt5.log",
+          "app_id_lines": [
+            2,
+            74
+          ],
+          "completed_marker_lines": [
+            73
+          ],
+          "stopping_marker_lines": [
+            72
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-dqSpviZnTPJmhcySB8Rnah",
+        "description": "agent-safety-clean-v2-20261017-external-runtime-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:42:23-07:00",
+        "stopped_at": "2026-10-17 17:43:30-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-fCrUA0I9kxN6WhwzRc6VyE",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_author.log",
+          "app_id_lines": [
+            2,
+            300
+          ],
+          "completed_marker_lines": [
+            299
+          ],
+          "stopping_marker_lines": [
+            298
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-fCrUA0I9kxN6WhwzRc6VyE",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "ephemeral",
+        "tasks": "1",
+        "created_at": "2026-10-17 13:58:17-07:00",
+        "stopped_at": null,
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      },
+      "state_caveat": "Old nonterminal snapshot is stale; absence from current recently-stopped listing does not prove when the app stopped."
+    },
+    {
+      "app_id": "ap-hToFEeKqi0g9g4rYFONVkY",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_runtime_probe.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            63
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-hToFEeKqi0g9g4rYFONVkY",
+        "description": "agent-safety-clean-v2-20261017-external-runtime-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:28:57-07:00",
+        "stopped_at": "2026-10-17 17:31:24-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-igf2GvJTHYepkcI9K4HmxG",
+      "log_evidence": [
+        {
+          "path": "infrastructure/primary_serving_pilot_v3.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-igf2GvJTHYepkcI9K4HmxG",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:58:49-07:00",
+        "stopped_at": "2026-10-17 20:29:29-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+      "log_evidence": [
+        {
+          "path": "infrastructure/scenario_author_v1.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+        "description": "agent-safety-clean-v2-20261017-scenario-author",
+        "state": "ephemeral (detached)",
+        "tasks": "2",
+        "created_at": "2026-10-17 20:48:41-07:00",
+        "stopped_at": null,
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+      "log_evidence": [
+        {
+          "path": "infrastructure/llama_checkpoint_download_v1.log",
+          "app_id_lines": [
+            3,
+            61
+          ],
+          "completed_marker_lines": [
+            60
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:55:32-07:00",
+        "stopped_at": "2026-10-17 21:00:36-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-mzOfPz2pIOPscQpAe2xFBK",
+      "log_evidence": [
+        {
+          "path": "infrastructure/qualification_full_v2_q1.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-mzOfPz2pIOPscQpAe2xFBK",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 19:03:02-07:00",
+        "stopped_at": "2026-10-17 20:39:03-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-qPVOwhKSoEtFdMbh4c2M1W",
+      "log_evidence": [
+        {
+          "path": "infrastructure/batched_qualification_vllm_q1.log",
+          "app_id_lines": [
+            3
+          ],
+          "stopping_marker_lines": [
+            345
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-qPVOwhKSoEtFdMbh4c2M1W",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:38:57-07:00",
+        "stopped_at": "2026-10-17 20:43:19-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+      "log_evidence": [
+        {
+          "path": "infrastructure/forward_logits_full_v2_logits_q1.log",
+          "app_id_lines": [
+            3,
+            574
+          ],
+          "completed_marker_lines": [
+            573
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:38:57-07:00",
+        "stopped_at": "2026-10-17 21:05:19-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-qqdWZodX9C94JNBUqBTJ52",
+      "log_evidence": [
+        {
+          "path": "infrastructure/materialization_full_residual_v2_resume3.log",
+          "app_id_lines": [
+            3,
+            22
+          ],
+          "completed_marker_lines": [
+            21
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-qqdWZodX9C94JNBUqBTJ52",
+        "description": "agent-safety-clean-v2-20261017-materialize",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 18:55:29-07:00",
+        "stopped_at": "2026-10-17 19:01:36-07:00",
+        "state_evidence": "infrastructure/apps_parallel_live.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-rfhnRYeVc1v3APbYn67eQR",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_external_intact_attempt2.log",
+          "app_id_lines": [
+            2,
+            262
+          ],
+          "completed_marker_lines": [
+            261
+          ],
+          "stopping_marker_lines": [
+            260
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-rfhnRYeVc1v3APbYn67eQR",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:13:25-07:00",
+        "stopped_at": "2026-10-17 17:19:55-07:00",
+        "state_evidence": "infrastructure/modal_apps_resume.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-ru3rGZwY5JxqoIzirpmXE2",
+      "log_evidence": [
+        {
+          "path": "infrastructure/primary_serving_pilot_v4.log",
+          "app_id_lines": [
+            3,
+            462
+          ],
+          "completed_marker_lines": [
+            461
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-ru3rGZwY5JxqoIzirpmXE2",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 20:31:23-07:00",
+        "stopped_at": "2026-10-17 20:38:06-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    },
+    {
+      "app_id": "ap-tYsEUSb22bjHlvZeX5sHYS",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_primary_attempt2.log",
+          "app_id_lines": [
+            2,
+            78
+          ],
+          "completed_marker_lines": [
+            77
+          ],
+          "stopping_marker_lines": [
+            76
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-tYsEUSb22bjHlvZeX5sHYS",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 13:52:53-07:00",
+        "stopped_at": "2026-10-17 13:56:35-07:00",
+        "state_evidence": "infrastructure/modal_apps_phase1.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-tnLqRzPC5KfipdxVRycFVT",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_activation_v3.log",
+          "app_id_lines": [
+            2,
+            182
+          ],
+          "completed_marker_lines": [
+            181
+          ],
+          "stopping_marker_lines": [
+            180
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-tnLqRzPC5KfipdxVRycFVT",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:28:21-07:00",
+        "stopped_at": "2026-10-17 17:35:04-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-wYYW5GfoTFkYTxpyKgxugM",
+      "log_evidence": [
+        {
+          "path": "infrastructure/post_fp8_full_v2.log",
+          "app_id_lines": [
+            2
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-wYYW5GfoTFkYTxpyKgxugM",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:54:43-07:00",
+        "stopped_at": "2026-10-17 18:10:57-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-xNqXtf9em7piLTxqdfPX5u",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_qualification_v1.log",
+          "app_id_lines": [
+            2
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-xNqXtf9em7piLTxqdfPX5u",
+        "description": "agent-safety-clean-v2-20261017-external-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:47:22-07:00",
+        "stopped_at": "2026-10-17 17:57:24-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-xyj7Ff7TAqZWjVNTgqaUmk",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_runtime_probe_attempt3.log",
+          "app_id_lines": [
+            2,
+            11
+          ],
+          "completed_marker_lines": [
+            10
+          ],
+          "stopping_marker_lines": [
+            9
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-xyj7Ff7TAqZWjVNTgqaUmk",
+        "description": "agent-safety-clean-v2-20261017-external-runtime-probe",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:37:36-07:00",
+        "stopped_at": "2026-10-17 17:38:13-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-z3pMmUSCIFgiUKpDpyJWrU",
+      "log_evidence": [
+        {
+          "path": "infrastructure/external_qualification_v3.log",
+          "app_id_lines": [
+            3
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-z3pMmUSCIFgiUKpDpyJWrU",
+        "description": "agent-safety-clean-v2-20261017-external-qualification",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 18:55:30-07:00",
+        "stopped_at": "2026-10-17 19:48:16-07:00",
+        "state_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00",
+        "state_observation_kind": "current_app_list"
+      }
+    }
+  ],
+  "apps_without_unambiguous_dedicated_reservation": [
+    {
+      "app_id": "ap-3gpAfmk7ysNw5NFOReTbN7",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_external_intact.log",
+          "app_id_lines": [
+            2
+          ]
+        }
+      ],
+      "app_observation": null,
+      "state_caveat": "No matching app-list timestamp snapshot found; log completion markers, if any, establish no exact lifetime."
+    },
+    {
+      "app_id": "ap-BHqxZGqh4mNTRw74V3Fevn",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_config_repair.log",
+          "app_id_lines": [
+            2
+          ],
+          "stopping_marker_lines": [
+            11
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-BHqxZGqh4mNTRw74V3Fevn",
+        "description": "agent-safety-clean-v2-20261017-fp8-config-repair",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:24:18-07:00",
+        "stopped_at": "2026-10-17 17:26:27-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-aCnEvZfdjX8P9EN98mQkbs",
+      "log_evidence": [
+        {
+          "path": "infrastructure/fp8_config_repair_attempt2.log",
+          "app_id_lines": [
+            2,
+            11
+          ],
+          "completed_marker_lines": [
+            10
+          ],
+          "stopping_marker_lines": [
+            9
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-aCnEvZfdjX8P9EN98mQkbs",
+        "description": "agent-safety-clean-v2-20261017-fp8-config-repair",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:27:16-07:00",
+        "stopped_at": "2026-10-17 17:27:34-07:00",
+        "state_evidence": "infrastructure/apps_before_pilot_reallocation.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    },
+    {
+      "app_id": "ap-rfhnRYeVc1v3APbYn67eQR",
+      "log_evidence": [
+        {
+          "path": "infrastructure/download_external_intact_attempt2.log",
+          "app_id_lines": [
+            2,
+            262
+          ],
+          "completed_marker_lines": [
+            261
+          ],
+          "stopping_marker_lines": [
+            260
+          ]
+        }
+      ],
+      "app_observation": {
+        "app_id": "ap-rfhnRYeVc1v3APbYn67eQR",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "state": "stopped",
+        "tasks": "0",
+        "created_at": "2026-10-17 17:13:25-07:00",
+        "stopped_at": "2026-10-17 17:19:55-07:00",
+        "state_evidence": "infrastructure/modal_apps_resume.json",
+        "state_observation_kind": "historical_snapshot"
+      }
+    }
+  ],
+  "conditional_tightening_candidates": [
+    {
+      "job": "post_fp8_two_arm_validation",
+      "current_reservation_usd": 24,
+      "conditional_replacement_usd": 3,
+      "conditional_releasable_usd": 21,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 2,
+      "assumed_worker_rate_usd_per_second": 0.00145548,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-CFTtAj9sZRW3INAs7AvQIS",
+          "app_lifetime_seconds": 119.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 0.6993809200000001,
+          "timestamp_evidence": "infrastructure/modal_apps_resume.json"
+        },
+        {
+          "app_id": "ap-bpbsZBsfCWOlqtIutnHgPK",
+          "app_lifetime_seconds": 83.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 0.5940348400000001,
+          "timestamp_evidence": "infrastructure/modal_apps_resume.json"
+        },
+        {
+          "app_id": "ap-SHdJ73l4GrHChixkIbJRRR",
+          "app_lifetime_seconds": 328.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 1.3109734400000002,
+          "timestamp_evidence": "infrastructure/apps_before_pilot_reallocation.json"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    },
+    {
+      "job": "post_fp8_diagnostic_and_repaired_validation",
+      "current_reservation_usd": 24,
+      "conditional_replacement_usd": 7,
+      "conditional_releasable_usd": 17,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 2,
+      "assumed_worker_rate_usd_per_second": 0.00145548,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-tnLqRzPC5KfipdxVRycFVT",
+          "app_lifetime_seconds": 403.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 1.5304444400000001,
+          "timestamp_evidence": "infrastructure/apps_before_pilot_reallocation.json"
+        },
+        {
+          "app_id": "ap-clr7KvRgsv48vGTDesc4cI",
+          "app_lifetime_seconds": 555.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 1.9752390000000002,
+          "timestamp_evidence": "infrastructure/apps_before_pilot_reallocation.json"
+        },
+        {
+          "app_id": "ap-wYYW5GfoTFkYTxpyKgxugM",
+          "app_lifetime_seconds": 974.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 3.2013503200000004,
+          "timestamp_evidence": "infrastructure/apps_before_pilot_reallocation.json"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    },
+    {
+      "job": "external_pair_qualification_two_bounded_tp8_jobs",
+      "current_reservation_usd": 40,
+      "conditional_replacement_usd": 14,
+      "conditional_releasable_usd": 26,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 1,
+      "assumed_worker_rate_usd_per_second": 0.00926976,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-xNqXtf9em7piLTxqdfPX5u",
+          "app_lifetime_seconds": 602.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 6.703827759999999,
+          "timestamp_evidence": "infrastructure/apps_before_pilot_reallocation.json"
+        },
+        {
+          "app_id": "ap-c6Q4wQ66vhGd3Cgta7Jgb9",
+          "app_lifetime_seconds": 561.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 6.323139479999999,
+          "timestamp_evidence": "infrastructure/apps_before_pilot_reallocation.json"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    },
+    {
+      "job": "primary_serving_v3_durable_retry",
+      "current_reservation_usd": 4,
+      "conditional_replacement_usd": 3,
+      "conditional_releasable_usd": 1,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 1,
+      "assumed_worker_rate_usd_per_second": 0.00145548,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-igf2GvJTHYepkcI9K4HmxG",
+          "app_lifetime_seconds": 1840.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 2.8827680000000004,
+          "timestamp_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    },
+    {
+      "job": "primary_serving_v4_named_rpc",
+      "current_reservation_usd": 4,
+      "conditional_replacement_usd": 1,
+      "conditional_releasable_usd": 3,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 1,
+      "assumed_worker_rate_usd_per_second": 0.00145548,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-ru3rGZwY5JxqoIzirpmXE2",
+          "app_lifetime_seconds": 403.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 0.7692284000000001,
+          "timestamp_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    },
+    {
+      "job": "six_arm_batched_qualification_vllm_q1",
+      "current_reservation_usd": 20,
+      "conditional_replacement_usd": 2,
+      "conditional_releasable_usd": 18,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 2,
+      "assumed_worker_rate_usd_per_second": 0.00145548,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-qPVOwhKSoEtFdMbh4c2M1W",
+          "app_lifetime_seconds": 262.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 1.11783896,
+          "timestamp_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    },
+    {
+      "job": "six_arm_forward_logits_full_v2_logits_q1",
+      "current_reservation_usd": 20,
+      "conditional_replacement_usd": 5,
+      "conditional_releasable_usd": 15,
+      "status": "NOT_ADMISSIBLE_UNTIL_FROZEN_RESOURCE_AND_ATTRIBUTION_CONFIRMATION",
+      "assumed_max_simultaneous_workers_per_app": 2,
+      "assumed_worker_rate_usd_per_second": 0.00145548,
+      "assumed_parent_rate_usd_per_second": 1.532e-05,
+      "per_app": [
+        {
+          "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+          "app_lifetime_seconds": 1582.0,
+          "shutdown_allowance_seconds": 120,
+          "conditional_compute_bound_usd": 4.980528560000001,
+          "timestamp_evidence": "read-only modal app list --json at 2026-10-18T04:10:55.965416+00:00"
+        }
+      ],
+      "verification_needed": "Confirm every original app had no more than this many workers and no larger GPU/CPU/RAM resource caps; confirm all attempts are attributed; preserve image/storage/network contingency."
+    }
+  ],
+  "conditional_total_release_usd": 101,
+  "additional_release_fully_proven_from_allowed_evidence_usd": 0,
+  "interpretation": [
+    "Existing three lifetime reconciliations remain confirmed historical reservation bounds; no new reduction was applied.",
+    "The original per-function frozen CPU/RAM/max-container profiles are absent from allowed snapshots for several old apps. Candidate reductions cannot be treated as available budget until the sole coordinator checks them.",
+    "The failed batched q1 log shows repeated import failure before coordinator logic. A CPU-only bound may be tighter, but absence of GPU log lines alone is not proof of zero GPU allocation.",
+    "The logits q1 app is confirmed stopped. Its GPU count is recorded as two; original frozen CPU/RAM limits must still be matched before its conditional lifetime bound is adopted.",
+    "Image build, persistent volume/storage and network charges are outside these compute formulas. Preserve broad contingency until those costs and ambiguous mappings are reconciled.",
+    "Early source/download attempts lack exact stopped timestamps in available snapshots. Their absence from the current recently-stopped listing does not justify releasing their reservations.",
+    "The active author TP8 and primary q2 reservations remain reserved. A stopped app does not imply its prior spend was zero."
+  ]
+}

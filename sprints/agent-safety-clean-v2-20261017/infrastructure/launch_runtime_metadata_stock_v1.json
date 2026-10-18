@@ -1,0 +1,44 @@
+{
+  "job": "stock_runtime_metadata_v1",
+  "gpus": 0,
+  "single_gpu_workers": 0,
+  "tp8_workers": 0,
+  "upper_bound_usd": 1,
+  "log": "infrastructure/runtime_metadata_stock_v1.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_runtime_versions.py"
+  ],
+  "frozen_files": {
+    "scripts/modal_runtime_versions.py": "e7ba8fba9ebecfbe99b33684d9038b21ef876c68a1bbeb232d1b2dda38cce46d"
+  },
+  "resource_profile": {
+    "source": "scripts/modal_runtime_versions.py",
+    "source_sha256": "e7ba8fba9ebecfbe99b33684d9038b21ef876c68a1bbeb232d1b2dda38cce46d",
+    "functions": {
+      "capture": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 300,
+          "startup_timeout": 300,
+          "cpu": [
+            1,
+            1
+          ],
+          "memory": [
+            1024,
+            1024
+          ],
+          "retries": 0,
+          "scaledown_window": 2
+        }
+      }
+    },
+    "excluded_functions": {},
+    "call_bound_basis": "Exactly one CPU metadata capture, one subprocess reads seven installed package versions; zero model inference/GPU; retries0; exclusive immutable output path."
+  }
+}

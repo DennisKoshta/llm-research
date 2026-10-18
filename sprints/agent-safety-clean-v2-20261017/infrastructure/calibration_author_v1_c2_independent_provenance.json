@@ -1,0 +1,52 @@
+{
+  "schema": "calibration_provenance_audit_v1",
+  "attempt": "author_v1_c2",
+  "author_attempt": "v1",
+  "capture_id": "cpu_v1",
+  "status": "PASS",
+  "provenance_passed": true,
+  "exact_prompt_history_replay": true,
+  "request_raw_source_trial_match": true,
+  "immutable_intact_checkpoint_bound": true,
+  "worker_fp8_inventory_verified": true,
+  "generation_time_tokenizer_attestation": false,
+  "prompt_token_ids_available_rows": 0,
+  "prompt_rows_replayed": 691,
+  "hygiene": {
+    "H1": true,
+    "H2": true,
+    "H5": true,
+    "n_pilots": 5,
+    "n_evaluation_episodes": 200,
+    "n_evaluation_turns": 674,
+    "capped_turns": 1,
+    "truncated_turns": 1,
+    "truncated_episodes": 1,
+    "H1_all_truncations": true
+  },
+  "limitations": [
+    "Tokenizer bytes were captured after launch; no generation-time tokenizer digest was recorded.",
+    "Input token IDs were optional and are audited only where recorded."
+  ],
+  "artifact_sha256": {
+    "checkpoints_full_residual_v2/intact_materialization.json": "3e0446ef917781d5b73cf218305c1addda864a034d453a90a00cc3076f42d511",
+    "evaluation_status/phase1_calibration_author_v1_c2_intact_cot_on.json": "1ee784907df5cfaccb8ee2c90b7744ba3b4546911de20c941d4ff536b27a01dc",
+    "group_calls/phase1_calibration_author_v1_c2_intact_cot_on.json": "d20395402d69ce8947d0b0fc5a684870b7707eaddf5f43b3a350bf3848160ac9",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture.json": "c68179a74db98874ce924150eb4d3e6b1e03b96d2f15b83be6e3dd21233feb3f",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/checkpoint_doses_v1/tokenizer_audit/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/config.json": "f44b36b1459995510599a79a054bd8b9bfcc3efe132f85169802dd9f62b45b8d",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/execution/group_calls/phase1_calibration_author_v1_c2_intact_cot_on.json": "d20395402d69ce8947d0b0fc5a684870b7707eaddf5f43b3a350bf3848160ac9",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/execution/sandbox_inputs/phase1_calibration_author_v1_c2_intact_cot_on.json": "c7a931bbf8aa2bcd8c3c9b491ba5db35059c69f5dbe2fa7cdc28c1ec0e3a0951",
+    "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/model.safetensors.index.json": "bfeb453b103f4ec54b2ec502ca6e3a2c22bcc90db08889fe2cf9abcebff79fa7",
+    "pilots/phase1_calibration_author_v1_c2_intact_cot_on_pilot_audit.md": "02f61dc5705ce9df761ffb280b10914675a7372b011a9003b8bed471e4106798",
+    "raw_transcripts/phase1_calibration_author_v1_c2/intact_cot_on.jsonl": "e17cefc2e02c61e0d02753a6af562adbf866ce4d37d33b193e844f6136238c5e",
+    "raw_transcripts/phase1_calibration_author_v1_c2/intact_cot_on_requests.jsonl": "0b9a4428ba7bcb414617e9df255d28a1dec06183c460e4b997b271e74de5dcba",
+    "sandbox_inputs/phase1_calibration_author_v1_c2_intact_cot_on.json": "c7a931bbf8aa2bcd8c3c9b491ba5db35059c69f5dbe2fa7cdc28c1ec0e3a0951",
+    "trajectories/phase1_calibration_author_v1_c2/intact_cot_on.jsonl": "87ca498b325d5de575d3a5a109d273b3a87d5de97a499c61c69039a416c805b3"
+  }
+}

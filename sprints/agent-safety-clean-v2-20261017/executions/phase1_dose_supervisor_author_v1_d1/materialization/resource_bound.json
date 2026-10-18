@@ -1,0 +1,26 @@
+{
+  "source_sha256": "31c919635c6375e67675dfd2f59ed02a787b2267594980fc10d61d536de22c87",
+  "whole_app_allocation": {
+    "gpus": 1,
+    "single_gpu_workers": 1,
+    "tp8_workers": 0
+  },
+  "minimum_compute_reservation_usd": 9,
+  "function_bounds": [
+    {
+      "function": "materialize_dose",
+      "max_calls": 3,
+      "seconds_per_call_bound": 2220,
+      "rate_usd_per_second": 0.00129148,
+      "compute_bound_usd": 8.6012568
+    },
+    {
+      "function": "coordinate",
+      "max_calls": 1,
+      "seconds_per_call_bound": 14520,
+      "rate_usd_per_second": 1.7539999999999998e-05,
+      "compute_bound_usd": 0.2546808
+    }
+  ],
+  "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation."
+}

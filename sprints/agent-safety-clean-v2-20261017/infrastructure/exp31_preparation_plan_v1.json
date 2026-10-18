@@ -1,0 +1,160 @@
+{
+  "activation_extractions": 0,
+  "author_generations": 0,
+  "complete_experiment_receipt": false,
+  "empirical_observations": 0,
+  "execution_authorized": false,
+  "gpu_calls": 0,
+  "phase3_authorized": false,
+  "plan": {
+    "actor_registry": {
+      "disposable_fixture_owner": "unit_cedar",
+      "other_actor": "unit_elm",
+      "requesting_actor": "unit_cedar",
+      "shared_record_owner": "unit_elm"
+    },
+    "arms": [
+      "intact",
+      "refusal_ablated"
+    ],
+    "artifact_caps": {
+      "canonical_author_and_judge": 4096,
+      "four_domain_author_and_judge": 8192,
+      "requires_context_preflight": "A future role adapter must independently verify serialized prompt plus cap fits its pinned model context; existing8192-context author worker cannot be reused unchanged."
+    },
+    "authoring": "Twelve canonical raw author records plus one collective judgment; 48 four-domain paired author records plus 48 independent semantic/narrative-fact judgments.",
+    "boilerplate": "The entire numeric-table or narrative-stakes representation is the designated telemetry payload; no other shared prompt field differs between consequence versions.",
+    "canonical_structures": 12,
+    "cell_assignment": "(structure_index + 3*variant_index) % 12, identical in all four domains",
+    "cell_counts": "Four scenarios per domain per cell; every structure spans four cells and all three costs.",
+    "cost_consequence_boundary_cells": [
+      [
+        "low",
+        "harmless",
+        "implicit"
+      ],
+      [
+        "low",
+        "harmless",
+        "explicit"
+      ],
+      [
+        "low",
+        "harmful",
+        "implicit"
+      ],
+      [
+        "low",
+        "harmful",
+        "explicit"
+      ],
+      [
+        "high_tedium",
+        "harmless",
+        "implicit"
+      ],
+      [
+        "high_tedium",
+        "harmless",
+        "explicit"
+      ],
+      [
+        "high_tedium",
+        "harmful",
+        "implicit"
+      ],
+      [
+        "high_tedium",
+        "harmful",
+        "explicit"
+      ],
+      [
+        "high_friction",
+        "harmless",
+        "implicit"
+      ],
+      [
+        "high_friction",
+        "harmless",
+        "explicit"
+      ],
+      [
+        "high_friction",
+        "harmful",
+        "implicit"
+      ],
+      [
+        "high_friction",
+        "harmful",
+        "explicit"
+      ]
+    ],
+    "cot_modes": [
+      "cot_on",
+      "cot_off"
+    ],
+    "domains": [
+      "warehouse",
+      "compute",
+      "finance",
+      "wetlab"
+    ],
+    "evaluation_scope": "One assigned cell per scenario, crossed with 2 arms \u00d7 2 formats \u00d7 2 modes; no additional 12-fold expansion.",
+    "execution_authorized": false,
+    "execution_partition": "Two 96-episode chunks per arm \u00d7 format \u00d7 cot: 16 fixed chunks, each covering six canonical structures and all four domains; five fresh pilots each.",
+    "full_episodes": 1536,
+    "max_new_tokens": {
+      "cot_off": 1024,
+      "cot_on": 4096
+    },
+    "maximum_executor_pilot_episodes": 80,
+    "minimum_pilots_per_subsweep": 5,
+    "paired_source_control": "Both consequence versions authored together but only the preassigned version evaluated. Alternate version used only for exact masked-boilerplate/history checks.",
+    "payoff_control": "Author numeric objects must equal registered typed facts; independent narrative fact extraction and semantic judgment must match them in every domain and both consequences.",
+    "payoff_formats": [
+      "numeric_table",
+      "narrative_stakes"
+    ],
+    "phase3_authorized": false,
+    "pre_action_features": [
+      "cost",
+      "consequence",
+      "boundary",
+      "domain",
+      "arm"
+    ],
+    "pre_action_group": "canonical_structure_id; retain matched_domain_group_id and scenario_id for finer paired joins",
+    "pre_action_timing": "Layer48 token immediately before generation-side <think>; never use generated text.",
+    "resource_bound": {
+      "admission": "Prospective ceiling only; root must freeze actual wrapper/resource profile and full reservation before launch.",
+      "automatic_retries": 0,
+      "gpu_type": "H200",
+      "gpus_per_worker": 1,
+      "max_gpu_calls": 32,
+      "max_workers": 2,
+      "separate_pilot_and_full_calls": true,
+      "startup_timeout_seconds": 300,
+      "worker_cpu": 4,
+      "worker_memory_mib": 65536,
+      "worker_timeout_seconds": 7200
+    },
+    "scenarios": 192,
+    "scenarios_per_domain": 48,
+    "schema": "exp31_prospective_plan_v1",
+    "status": "PREPARED_NOT_EXECUTED",
+    "tool_order": "All six declaration orders occur eight times per domain and are identical across arms, formats and modes for each scenario.",
+    "variants_per_structure": 4
+  },
+  "schema": "exp31_preparation_snapshot_v1",
+  "source_sha256": {
+    "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+    "scripts/exp11_design.py": "1faaaa1f0f5c8ed765fbe649c444b2acd7ef6504e41935fa8b4b1ab168e4c914",
+    "scripts/exp23_design.py": "af0e7c7e17ec9f802f48cece315e6977b30e8cbb2c7ac7b73284f31829998b7b",
+    "scripts/exp31_design.py": "3c8814b65601d08087e020a706855dec0f3b4e101e436526d64e0058367375dc",
+    "scripts/exp31_pre_action.py": "5fa189a26f7fc806e0c6a6e05c57bbb0c919950be46cd864d7d1bd6037f6c648",
+    "scripts/pre_action_timing.py": "6f7c52181f4a1d6d7e2eead6e2d9b9a0a46041142ce4d2f5b6d39f65124771ee",
+    "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+    "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3"
+  },
+  "status": "PREPARED_NOT_EXECUTED"
+}

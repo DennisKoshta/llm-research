@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-18T04:03:46.957818+00:00",
+  "reason": "Author TP8 queued while four single-GPU workers run; conservative account-level admission now assumes Starter-compatible 10-GPU limit until a higher workspace limit is confirmed. Environment API exposes no explicit override; this is not a verified subscription-plan claim.",
+  "source": "https://modal.com/pricing",
+  "updates": [
+    {
+      "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+      "function_id": "fu-X1TdDIzXiZM91YFEhRIobL",
+      "max_containers_before": 2,
+      "max_containers_after": 1
+    },
+    {
+      "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+      "function_id": "fu-oZDA5VEvuMyvIXR3OBR7BZ",
+      "max_containers_before": 2,
+      "max_containers_after": 1
+    }
+  ],
+  "policy": "Autoscaler scheduling update only, no app stop/redeploy or trial cancellation. In-flight calls finish; pending arm calls retain same IDs/payloads. Old resource reservations remain until reduced live worker counts are verified."
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "prospective_uniform_dose_hygiene_retry_v1",
+  "created_utc": "2026-10-18T05:55:39.537332+00:00",
+  "stage": "before_any_dose_evaluation_launch",
+  "alpha_grid": [
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "initial_cap": 4096,
+  "hygiene_requirement": "Exactly five fresh pilots peralpha and zero capped/unclosed/malformed pilotcompletions; fullturn AND full48episode logicaltruncationfraction<.02.",
+  "on_H1_or_H5_truncation_failure": "Retain entirefailedattempt and rawstatus; newuniformcap across allfivealphas with exactsamemodels,48evaluationrequests,pilotidentities,greedyseed andstrictparser. No pooling oldfailedsweeps.",
+  "retry_cap_ladder": [
+    8192,
+    16384
+  ],
+  "automatic_gpu_launch_authorized_by_this_file": false,
+  "additional_launch_requires": "Separate frozen payload/contextbudget, successfulprimary/calibrationgates and freshcentralbudget/resourceadmission.",
+  "scientific_effect_used_for_retry_selection": false
+}

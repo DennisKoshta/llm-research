@@ -1,0 +1,608 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-CFTtAj9sZRW3INAs7AvQIS
+Building image im-OdIbU0b9tUg3Gf8zW5GbSF
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HUB_OFFLINE=1
+
+=> Step 2: ENV HF_HOME=/weights/agent-safety-clean-v2-20261017/huggingface
+
+=> Step 3: ENV TRANSFORMERS_DISABLE_DEEPGEMM_LINEAR=1
+Saving image...
+Image saved, took 5.25s
+
+Built image im-OdIbU0b9tUg3Gf8zW5GbSF in 7.22s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_qualify.py
+└── ✓ Created Function qualify.
+
+[1ALoading weights:   0%|          | 0/1520 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1520 [00:05<2:31:48,  6.00s/it]
+[1ALoading weights:   0%|          | 2/1520 [00:06<1:15:29,  2.98s/it]
+[1ALoading weights:   1%|          | 18/1520 [00:07<05:28,  4.57it/s] 
+[1ALoading weights:   2%|▏         | 37/1520 [00:07<02:11, 11.26it/s]
+[1ALoading weights:   4%|▎         | 56/1520 [00:07<01:13, 19.81it/s]
+[1ALoading weights:   6%|▌         | 88/1520 [00:07<00:36, 39.11it/s]
+[1ALoading weights:   7%|▋         | 106/1520 [00:07<00:29, 47.70it/s]
+[1ALoading weights:   9%|▊         | 130/1520 [00:07<00:23, 60.00it/s]
+[1ALoading weights:  11%|█         | 162/1520 [00:07<00:15, 88.92it/s]
+[1ALoading weights:  12%|█▏        | 181/1520 [00:08<00:14, 92.96it/s]
+[1ALoading weights:  13%|█▎        | 204/1520 [00:08<00:13, 96.69it/s]
+[1ALoading weights:  16%|█▌        | 236/1520 [00:08<00:12, 103.13it/s]
+[1ALoading weights:  16%|█▋        | 250/1520 [00:08<00:12, 104.19it/s]
+[1ALoading weights:  17%|█▋        | 263/1520 [00:08<00:13, 96.26it/s] 
+[1ALoading weights:  19%|█▉        | 285/1520 [00:09<00:11, 107.50it/s]
+[1ALoading weights:  21%|██        | 314/1520 [00:09<00:09, 126.13it/s]
+[1ALoading weights:  22%|██▏       | 333/1520 [00:09<00:08, 134.78it/s]
+[1ALoading weights:  23%|██▎       | 352/1520 [00:09<00:12, 97.31it/s] 
+[1ALoading weights:  26%|██▌       | 388/1520 [00:09<00:10, 111.34it/s]
+[1ALoading weights:  28%|██▊       | 426/1520 [00:10<00:08, 130.51it/s]
+[1ALoading weights:  30%|███       | 460/1520 [00:10<00:06, 163.49it/s]
+[1ALoading weights:  32%|███▏      | 480/1520 [00:10<00:08, 117.68it/s]
+[1ALoading weights:  33%|███▎      | 496/1520 [00:10<00:08, 113.97it/s]
+[1ALoading weights:  34%|███▎      | 510/1520 [00:10<00:09, 107.91it/s]
+[1ALoading weights:  35%|███▌      | 536/1520 [00:11<00:08, 112.68it/s]
+[1ALoading weights:  38%|███▊      | 574/1520 [00:11<00:07, 134.54it/s]
+[1ALoading weights:  39%|███▉      | 589/1520 [00:11<00:09, 99.25it/s] 
+[1ALoading weights:  40%|████      | 610/1520 [00:11<00:09, 98.57it/s]
+[1ALoading weights:  42%|████▎     | 646/1520 [00:12<00:06, 135.05it/s]
+[1ALoading weights:  44%|████▎     | 663/1520 [00:12<00:07, 122.35it/s]
+[1ALoading weights:  45%|████▌     | 684/1520 [00:12<00:06, 120.29it/s]
+[1ALoading weights:  48%|████▊     | 722/1520 [00:12<00:07, 113.62it/s]
+[1ALoading weights:  48%|████▊     | 735/1520 [00:12<00:06, 114.07it/s]
+[1ALoading weights:  50%|████▉     | 758/1520 [00:12<00:05, 127.45it/s]
+[1ALoading weights:  51%|█████     | 777/1520 [00:13<00:05, 135.97it/s]
+[1ALoading weights:  52%|█████▏    | 796/1520 [00:13<00:05, 144.64it/s]
+[1ALoading weights:  55%|█████▍    | 829/1520 [00:13<00:03, 184.07it/s]
+[1ALoading weights:  56%|█████▌    | 850/1520 [00:13<00:05, 116.35it/s]
+[1ALoading weights:  57%|█████▋    | 870/1520 [00:13<00:05, 110.03it/s]
+[1ALoading weights:  58%|█████▊    | 884/1520 [00:14<00:06, 105.53it/s]
+[1ALoading weights:  61%|██████    | 925/1520 [00:14<00:04, 131.15it/s]
+[1ALoading weights:  62%|██████▏   | 944/1520 [00:14<00:04, 136.41it/s]
+[1ALoading weights:  63%|██████▎   | 959/1520 [00:14<00:05, 101.67it/s]
+[1ALoading weights:  64%|██████▍   | 980/1520 [00:14<00:04, 110.33it/s]
+[1ALoading weights:  66%|██████▌   | 999/1520 [00:14<00:04, 118.63it/s]
+[1ALoading weights:  67%|██████▋   | 1018/1520 [00:15<00:03, 127.25it/s]
+[1ALoading weights:  69%|██████▉   | 1051/1520 [00:15<00:02, 166.38it/s]
+[1ALoading weights:  70%|███████   | 1070/1520 [00:15<00:02, 160.13it/s]
+[1ALoading weights:  72%|███████▏  | 1088/1520 [00:15<00:02, 158.52it/s]
+[1ALoading weights:  73%|███████▎  | 1105/1520 [00:15<00:04, 99.73it/s] 
+[1ALoading weights:  74%|███████▍  | 1128/1520 [00:15<00:03, 105.64it/s]
+[1ALoading weights:  77%|███████▋  | 1166/1520 [00:16<00:02, 132.86it/s]
+[1ALoading weights:  78%|███████▊  | 1181/1520 [00:16<00:02, 132.93it/s]
+[1ALoading weights:  85%|████████▍ | 1285/1520 [00:16<00:00, 312.21it/s]
+[1ALoading weights:  91%|█████████ | 1384/1520 [00:16<00:00, 457.14it/s]
+[1ALoading weights: 100%|█████████▉| 1515/1520 [00:16<00:00, 648.56it/s]Loading weights: 100%|██████████| 1520/1520 [00:16<00:00, 91.58it/s] 
+[transformers] [1mQwen3_5ForConditionalGeneration LOAD REPORT[0m from: /weights/agent-safety-clean-v2-20261017/checkpoints/intact
+Key                                                                 | Status     |  | 
+--------------------------------------------------------------------+------------+--+-
+model.language_model.layers.{0...63}.mlp.gate_proj.weight_scale_inv | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+intact: loaded 336 FP8 modules
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 987, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 266, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/modal_qualify.py", line 83, in qualify
+    pilot=generate(pilots,'pilot')
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/modal_qualify.py", line 56, in generate
+    output=model.generate(**inputs,max_new_tokens=cap,do_sample=False,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/generation/utils.py", line 2989, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/generation/utils.py", line 3189, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/generation/utils.py", line 4300, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1848, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1641, in forward
+    outputs = self.language_model(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/utils/generic.py", line 1081, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1278, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/modeling_layers.py", line 111, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 875, in forward
+    hidden_states = self.linear_attn(
+                    ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/integrations/accelerate.py", line 1010, in wrapped
+    output = forward_func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 551, in forward
+    mixed_qkv = self.in_proj_qkv(hidden_states)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/integrations/finegrained_fp8.py", line 333, in forward
+    return fp8_linear(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/integrations/finegrained_fp8.py", line 282, in fp8_linear
+    return finegrained_fp8_linear(input, weight, weight_scale_inv, block_size, bias, activation_scale)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/integrations/finegrained_fp8.py", line 194, in finegrained_fp8_linear
+    finegrained_fp8 = load_finegrained_fp8_kernel()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/transformers/integrations/finegrained_fp8.py", line 142, in load_finegrained_fp8_kernel
+    _load_finegrained_fp8_kernel()
+  File "/usr/local/lib/python3.12/site-packages/transformers/integrations/finegrained_fp8.py", line 107, in _load_finegrained_fp8_kernel
+    raise ImportError(f"finegrained-fp8 kernel unavailable: {_MISSING_KERNELS_MESSAGE}")
+ImportError: finegrained-fp8 kernel unavailable: `kernels` is either not installed or uses an incompatible version. Please install a compatible version (0.17.2 <= version < 0.18.0), e.g. `pip install kernels==0.17.2`
+Stopping app - uncaught exception raised locally: ImportError('finegrained-fp8 kernel unavailable: `kernels` is either not installed or uses an incompatible version. Please install a compatible version (0.17.2 <= version < 0.18.0), e.g. `pip install kernels==0.17.2`').
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_qualify.py:151 in main                         │
+│                                                                              │
+│   150 │   selected=arms.split(',');assert all(a in ARMS for a in selected)   │
+│ ❱ 151 │   for result in qualify.starmap([(a,read('pilot'),validation,read('q │
+│   152 │   │   │   │   │   audit['selected_layer'],direction,stage,cap,attemp │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:858 in __iter__                                                           │
+│                                                                              │
+│    857 │   │   │   with Runner() as runner:                                  │
+│ ❱  858 │   │   │   │   yield from run_async_gen(runner, self._async_iterable │
+│    859 │   │   except NestedEventLoops:                                      │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:940 in run_async_gen                                                      │
+│                                                                              │
+│    939 │   │   │   else:                                                     │
+│ ❱  940 │   │   │   │   next_yield = runner.run(gen.asend(next_send))  # type │
+│    941 │   │   except KeyboardInterrupt as e:                                │
+│                                                                              │
+│ /home/dennis/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/asyncio/base_events.py:691 in run_until_complete                     │
+│                                                                              │
+│    690 │   │                                                                 │
+│ ❱  691 │   │   return future.result()                                        │
+│    692                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:768 in asend                                                              │
+│                                                                              │
+│    767 │   │   self.iterated = True                                          │
+│ ❱  768 │   │   return await self.gen.asend(value)                            │
+│    769                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:106 │
+│ 3 in _starmap_async                                                          │
+│                                                                              │
+│   1062 │   _maybe_warn_about_wrap_exceptions("starmap.aio", wrap_returned_ex │
+│ ❱ 1063 │   async for output in _map_helper(                                  │
+│   1064 │   │   self,                                                         │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:101 │
+│ 5 in _map_helper                                                             │
+│                                                                              │
+│   1014 │   ) as map_output_stream:                                           │
+│ ❱ 1015 │   │   async for output in map_output_stream:                        │
+│   1016 │   │   │   yield output                                              │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:61 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    60 │   │   async with aclosing(method(self, *args, **kwargs)) as stream:  │
+│ ❱  61 │   │   │   async for item in stream:                                  │
+│    62 │   │   │   │   yield item                                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:1962  │
+│ in _map                                                                      │
+│                                                                              │
+│   1961 │   │   │   ) as stream:                                              │
+│ ❱ 1962 │   │   │   │   async for item in stream:                             │
+│   1963 │   │   │   │   │   yield item                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:971 │
+│  in _map_invocation_inputplane                                               │
+│                                                                              │
+│    970 │   ) as merged:                                                      │
+│ ❱  971 │   │   async for maybe_output in merged:                             │
+│    972 │   │   │   if maybe_output is not None:  # ignore None sentinels     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1131 in async_merge                                                       │
+│                                                                              │
+│   1130 │   │   │   │   assert_type(item, ExceptionWrapper)                   │
+│ ❱ 1131 │   │   │   │   raise item.value                                      │
+│   1132                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:926 │
+│  in poll_outputs                                                             │
+│                                                                              │
+│    925 │   │   ) as streamer:                                                │
+│ ❱  926 │   │   │   async for idx, output in streamer:                        │
+│    927 │   │   │   │   if not order_outputs:                                 │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1243 in async_map_ordered                                                 │
+│                                                                              │
+│   1242 │   async with aclosing(async_map(async_zip(counter(), input_generato │
+│ ❱ 1243 │   │   async for output_idx, output_item in stream:                  │
+│   1244 │   │   │   buffer[output_idx] = output_item                          │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1219 in async_map                                                         │
+│                                                                              │
+│   1218 │   ) as stream:                                                      │
+│ ❱ 1219 │   │   async for item in stream:                                     │
+│   1220 │   │   │   yield item                                                │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1114 in async_merge                                                       │
+│                                                                              │
+│   1113 │   │   │   │   │   assert_type(item, ExceptionWrapper)               │
+│ ❱ 1114 │   │   │   │   │   raise item.value                                  │
+│   1115                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1093 in producer                                                          │
+│                                                                              │
+│   1092 │   │   │   async with aclosing(generator) as stream:                 │
+│ ❱ 1093 │   │   │   │   async for item in stream:                             │
+│   1094 │   │   │   │   │   await queue.put(ValueWrapper(item))               │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1208 in worker                                                            │
+│                                                                              │
+│   1207 │   │   │   if isinstance(item, ValueWrapper):                        │
+│ ❱ 1208 │   │   │   │   res = await prevent_cancellation_abortion(async_mappe │
+│   1209 │   │   │   │   yield res                                             │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1173 in prevent_cancellation_abortion                                     │
+│                                                                              │
+│   1172 │   try:                                                              │
+│ ❱ 1173 │   │   return await asyncio.shield(t)                                │
+│   1174 │   except asyncio.CancelledError:                                    │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/async_utils. │
+│ py:1232 in mapper_func_wrapper                                               │
+│                                                                              │
+│   1231 │   async def mapper_func_wrapper(tup: tuple[int, T]) -> tuple[int, V │
+│ ❱ 1232 │   │   return (tup[0], await async_mapper_func(tup[1]))              │
+│   1233                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:915 │
+│  in fetch_output                                                             │
+│                                                                              │
+│    914 │   │   │   else:                                                     │
+│ ❱  915 │   │   │   │   raise e                                               │
+│    916 │   │   return (item.idx, output)                                     │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/parallel_map.py:910 │
+│  in fetch_output                                                             │
+│                                                                              │
+│    909 │   │   try:                                                          │
+│ ❱  910 │   │   │   output = await _process_result(item.result, item.data_for │
+│    911 │   │   except Exception as e:                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/function_uti │
+│ ls.py:572 in _process_result                                                 │
+│                                                                              │
+│   571 │   │   │                                                              │
+│ ❱ 572 │   │   │   raise exc_with_hints(exc)                                  │
+│   573                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M565S4DPWD4FD234EZ9P1BDR)...      │
+│                                                                              │
+│ /root/modal_qualify.py:83 in qualify                                         │
+│                                                                              │
+│ ❱ 83 pilot=generate(pilots,'pilot')                                          │
+│                                                                              │
+│                                                                              │
+│ /root/modal_qualify.py:56 in generate                                        │
+│                                                                              │
+│ ❱ 56 output=model.generate(**inputs,max_new_tokens=cap,do_sample=False,      │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/utils/_contextlib.py:124 in    │
+│ decorate_context                                                             │
+│                                                                              │
+│ ❱ 124 return func(*args, **kwargs)                                           │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/generation/utils.py:298 │
+│ 9 in generate                                                                │
+│                                                                              │
+│ ❱ 2989 result = decoding_method(                                             │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/generation/utils.py:318 │
+│ 9 in _sample                                                                 │
+│                                                                              │
+│ ❱ 3189 outputs = self._prefill(                                              │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/generation/utils.py:430 │
+│ 0 in _prefill                                                                │
+│                                                                              │
+│ ❱ 4300 return self(**model_inputs, return_dict=True)                         │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1783 in   │
+│ _wrapped_call_impl                                                           │
+│                                                                              │
+│ ❱ 1783 return self._call_impl(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1794 in   │
+│ _call_impl                                                                   │
+│                                                                              │
+│ ❱ 1794 return forward_call(*args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/utils/generic.py:943 in │
+│ wrapper                                                                      │
+│                                                                              │
+│ ❱ 943 output = func(self, *args, **kwargs)                                   │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling │
+│ _qwen3_5.py:1848 in forward                                                  │
+│                                                                              │
+│ ❱ 1848 outputs = self.model(                                                 │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1783 in   │
+│ _wrapped_call_impl                                                           │
+│                                                                              │
+│ ❱ 1783 return self._call_impl(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1794 in   │
+│ _call_impl                                                                   │
+│                                                                              │
+│ ❱ 1794 return forward_call(*args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/utils/generic.py:943 in │
+│ wrapper                                                                      │
+│                                                                              │
+│ ❱ 943 output = func(self, *args, **kwargs)                                   │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling │
+│ _qwen3_5.py:1641 in forward                                                  │
+│                                                                              │
+│ ❱ 1641 outputs = self.language_model(                                        │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1783 in   │
+│ _wrapped_call_impl                                                           │
+│                                                                              │
+│ ❱ 1783 return self._call_impl(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1794 in   │
+│ _call_impl                                                                   │
+│                                                                              │
+│ ❱ 1794 return forward_call(*args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/utils/generic.py:1081   │
+│ in wrapper                                                                   │
+│                                                                              │
+│ ❱ 1081 output = func(self, *args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/utils/output_capturing. │
+│ py:287 in wrapper                                                            │
+│                                                                              │
+│ ❱ 287 outputs = func(self, *args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling │
+│ _qwen3_5.py:1278 in forward                                                  │
+│                                                                              │
+│ ❱ 1278 hidden_states = decoder_layer(                                        │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/modeling_layers.py:111  │
+│ in __call__                                                                  │
+│                                                                              │
+│ ❱ 111 return super().__call__(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1783 in   │
+│ _wrapped_call_impl                                                           │
+│                                                                              │
+│ ❱ 1783 return self._call_impl(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1794 in   │
+│ _call_impl                                                                   │
+│                                                                              │
+│ ❱ 1794 return forward_call(*args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling │
+│ _qwen3_5.py:875 in forward                                                   │
+│                                                                              │
+│ ❱ 875 hidden_states = self.linear_attn(                                      │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1783 in   │
+│ _wrapped_call_impl                                                           │
+│                                                                              │
+│ ❱ 1783 return self._call_impl(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1794 in   │
+│ _call_impl                                                                   │
+│                                                                              │
+│ ❱ 1794 return forward_call(*args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/integrations/accelerate │
+│ .py:1010 in wrapped                                                          │
+│                                                                              │
+│ ❱ 1010 output = forward_func(self, *args, **kwargs)                          │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling │
+│ _qwen3_5.py:551 in forward                                                   │
+│                                                                              │
+│ ❱ 551 mixed_qkv = self.in_proj_qkv(hidden_states)                            │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1783 in   │
+│ _wrapped_call_impl                                                           │
+│                                                                              │
+│ ❱ 1783 return self._call_impl(*args, **kwargs)                               │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/torch/nn/modules/module.py:1794 in   │
+│ _call_impl                                                                   │
+│                                                                              │
+│ ❱ 1794 return forward_call(*args, **kwargs)                                  │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/integrations/finegraine │
+│ d_fp8.py:333 in forward                                                      │
+│                                                                              │
+│ ❱ 333 return fp8_linear(                                                     │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/integrations/finegraine │
+│ d_fp8.py:282 in fp8_linear                                                   │
+│                                                                              │
+│ ❱ 282 return finegrained_fp8_linear(input, weight, weight_scale_inv, block_s │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/integrations/finegraine │
+│ d_fp8.py:194 in finegrained_fp8_linear                                       │
+│                                                                              │
+│ ❱ 194 finegrained_fp8 = load_finegrained_fp8_kernel()                        │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/integrations/finegraine │
+│ d_fp8.py:142 in load_finegrained_fp8_kernel                                  │
+│                                                                              │
+│ ❱ 142 _load_finegrained_fp8_kernel()                                         │
+│                                                                              │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/transformers/integrations/finegraine │
+│ d_fp8.py:107 in _load_finegrained_fp8_kernel                                 │
+│                                                                              │
+│ ❱ 107 raise ImportError(f"finegrained-fp8 kernel unavailable: {_MISSING_KERN │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ImportError: finegrained-fp8 kernel unavailable: `kernels` is either not 
+installed or uses an incompatible version. Please install a compatible version 
+(0.17.2 <= version < 0.18.0), e.g. `pip install kernels==0.17.2`

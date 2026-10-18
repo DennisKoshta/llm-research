@@ -1,0 +1,292 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-FDNzo16i2eNZ5WJ1Y2dpNd
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_preflight.py
+└── ✓ Created Function probe.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b29150e9580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b821d0ed580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b45e86d5580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2ac347ebd580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b78b7849580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2af0e1079580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b6bb103d580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b1e09361580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2aecee851580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2abf6295d580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b35750c1580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2add2d179580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Runner failed with exit code: 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/pkg/modal/_container_entrypoint.py", line 484, in <module>
+    main(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 466, in main
+    run_function(container_args, client)
+  File "/pkg/modal/_container_entrypoint.py", line 438, in run_function
+    service: Service = hydrate_function(
+                       ^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_container_entrypoint.py", line 380, in hydrate_function
+    raise ExecutionError(
+modal.exception.ExecutionError: Function has 3 dependencies but container got 4 object ids.
+Code deps: [Image(<function _Image.pip_install.<locals>.build_dockerfile at 0x2b7bc8f5d580>), modal.Volume.from_name('curiosity-study-weights'), modal.Volume.from_name('curiosity-study-artifacts')]
+Object ids: ['st-fFFcsG1Gtd3zLXw1qfMywI', 'im-Zs0nH4Drocjs62AbFnsFNe', 'vo-DgyRr7ilD8IfkF1wyi3hkv', 'vo-tRsYy3N5JZIeh1fevyhjmN']
+
+This can happen if you are defining Modal objects under a conditional statement that evaluates differently in the local and remote environments.
+Function modal_preflight.probe is crash-looping: containers are repeatedly failing to start.
+Runner failed with exit code: 1
+Stopping app - user stopped from CLI.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/scripts/modal_preflight.py:61 in main                        │
+│                                                                              │
+│   60 @app.function(image=image, cpu=(4, 4), memory=(16384, 16384), ephemeral │
+│ ❱ 61 │   │   │     timeout=1800, max_containers=1, retries=0, scaledown_wind │
+│   62 │   │   │     volumes={'/weights': weights, '/artifacts': artifacts}, s │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_object.py:49 in    │
+│ wrapped                                                                      │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2081  │
+│ in remote                                                                    │
+│                                                                              │
+│   2080 │   │                                                                 │
+│ ❱ 2081 │   │   return await self._call_function(args, kwargs)                │
+│   2082                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:2018  │
+│ in _call_function                                                            │
+│                                                                              │
+│   2017 │   │                                                                 │
+│ ❱ 2018 │   │   return await invocation.run_function()                        │
+│   2019                                                                       │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_functions.py:498   │
+│ in run_function                                                              │
+│                                                                              │
+│    497 │   │   │   if await_response.output.result.status in TERMINAL_STATUS │
+│ ❱  498 │   │   │   │   return await _process_result(                         │
+│    499 │   │   │   │   │   await_response.output.result, await_response.outp │
+│                                                                              │
+│ /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl │
+│ ean-v2-20261017/.venv/lib/python3.12/site-packages/modal/_utils/function_uti │
+│ ls.py:574 in _process_result                                                 │
+│                                                                              │
+│   573 │   │                                                                  │
+│ ❱ 574 │   │   raise RemoteError(result.exception)                            │
+│   575                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RemoteError

@@ -1,0 +1,72 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-Osrt5siW8W0Ej2oRf9WXli
+Building image im-c8qhzTn4EmJFobfr3G42lg
+
+=> Step 0: FROM base
+
+=> Step 1: RUN pip install causal-conv1d==1.7.0 --no-build-isolation
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting causal-conv1d==1.7.0
+  Downloading http://pypi-mirror.modal.local:5555/simple/causal-conv1d/causal_conv1d-1.7.0.tar.gz (30 kB)
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: torch in /usr/local/lib/python3.12/site-packages (from causal-conv1d==1.7.0) (2.14.1)
+Requirement already satisfied: packaging in /usr/local/lib/python3.12/site-packages (from causal-conv1d==1.7.0) (26.3)
+Requirement already satisfied: ninja in /usr/local/lib/python3.12/site-packages (from causal-conv1d==1.7.0) (1.13.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (4.2.1)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (4.16.0)
+Requirement already satisfied: setuptools>=77.0.3 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (3.7)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (2026.9.0)
+Requirement already satisfied: cuda-toolkit==13.0.3 in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.0.3.0)
+Requirement already satisfied: cuda-bindings<14,>=13.0.3 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (13.4.4)
+Requirement already satisfied: nvidia-cudnn-cu13==9.24.0.43 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (9.24.0.43)
+Requirement already satisfied: nvidia-cusparselt-cu13==0.8.1 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (0.8.1)
+Requirement already satisfied: nvidia-nccl-cu13==2.30.7 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (2.30.7)
+Requirement already satisfied: nvidia-nvshmem-cu13==3.4.5 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (3.4.5)
+Requirement already satisfied: triton~=3.8.0 in /usr/local/lib/python3.12/site-packages (from torch->causal-conv1d==1.7.0) (3.8.0)
+Requirement already satisfied: nvidia-cublas==13.1.1.3.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.1.1.3)
+Requirement already satisfied: nvidia-cuda-nvrtc==13.0.88.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.0.88)
+Requirement already satisfied: nvidia-cuda-runtime==13.0.96.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.0.96)
+Requirement already satisfied: nvidia-cufft==12.0.0.61.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (12.0.0.61)
+Requirement already satisfied: nvidia-nvjitlink<14,>=13.0.88 in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.4.92)
+Requirement already satisfied: nvidia-cufile==1.15.1.6.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (1.15.1.6)
+Requirement already satisfied: nvidia-cuda-cupti==13.0.85.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.0.85)
+Requirement already satisfied: nvidia-curand==10.4.0.35.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (10.4.0.35)
+Requirement already satisfied: nvidia-cusolver==12.0.4.66.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (12.0.4.66)
+Requirement already satisfied: nvidia-cusparse==12.6.3.3.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (12.6.3.3)
+Requirement already satisfied: nvidia-nvtx==13.0.85.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->causal-conv1d==1.7.0) (13.0.85)
+Requirement already satisfied: cuda-pathfinder>=1.4.2 in /usr/local/lib/python3.12/site-packages (from cuda-bindings<14,>=13.0.3->torch->causal-conv1d==1.7.0) (1.8.3)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/site-packages (from sympy>=1.13.3->torch->causal-conv1d==1.7.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/site-packages (from jinja2->torch->causal-conv1d==1.7.0) (3.0.4)
+Building wheels for collected packages: causal-conv1d
+  Building wheel for causal-conv1d (pyproject.toml): started
+  Building wheel for causal-conv1d (pyproject.toml): still running...
+  Building wheel for causal-conv1d (pyproject.toml): finished with status 'done'
+  Created wheel for causal-conv1d: filename=causal_conv1d-1.7.0-cp312-cp312-linux_x86_64.whl size=203925316 sha256=38dabe295f96b07e2c0599d7953af216f4e3cf68c708e53596822d1bb236c21f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ggi8b0nq/wheels/e3/88/73/0b9644738469eb031462419cb274bf6878eb07249e9766fc97
+Successfully built causal-conv1d
+Installing collected packages: causal-conv1d
+Successfully installed causal-conv1d-1.7.0
+
+[notice] A new release of pip is available: 23.3.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 3.95s
+
+Built image im-c8qhzTn4EmJFobfr3G42lg in 494.96s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_optimized_image.py
+└── ✓ Created Function probe.
+/usr/local/lib/python3.12/site-packages/fla/utils/_device.py:100: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  _cpu_device_warning()
+{'torch': '2.14.1', 'transformers': '5.20.1', 'flash-linear-attention': '0.5.2', 'causal-conv1d': '1.7.0'}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-Osrt5siW8W0Ej2oRf9WXli

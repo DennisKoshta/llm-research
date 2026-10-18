@@ -1,0 +1,14 @@
+/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pytensor/link/c/cmodule.py:2968: UserWarning: PyTensor could not link to a BLAS installation. Operations that might benefit from BLAS will be severely degraded.
+This usually happens when PyTensor is installed via pip. We recommend it be installed via conda/mamba/pixi instead.
+Alternatively, you can use an experimental backend such as Numba or JAX that perform their own BLAS optimizations, by setting `pytensor.config.mode == 'NUMBA'` or passing `mode='NUMBA'` when compiling a PyTensor function.
+For more options and details see https://pytensor.readthedocs.io/en/latest/troubleshooting.html#how-do-i-configure-test-my-blas-library
+  warnings.warn(
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (4 chains in 1 job)
+NUTS: [beta, sigma_template, sigma_scenario, z_template, z_scenario]
+Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 350 seconds.
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (4 chains in 1 job)
+NUTS: [beta, sigma_template, sigma_scenario, z_template, z_scenario]
+Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 336 seconds.
+{"scope": "SYNTHETIC INFRASTRUCTURE VALIDATION ONLY", "operation": "replay", "destination": "infrastructure/omnibus_validation_v1/separated_full_v1", "summary": {"raw_to_sampler_replay_verified": true, "saved_chain_summary_recomputed": true}, "elapsed_seconds": 721.7037001110002, "phase3_authorized": false, "empirical_study_completed": false}

@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-18T06:40:36.690196+00:00",
+  "pid": 461362,
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/python",
+    "scripts/admit_phase1_doses.py",
+    "--attempt",
+    "author_v1_d2_descriptive",
+    "--author-attempt",
+    "v1",
+    "--primary-receipt",
+    "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+    "--calibration-receipt",
+    "records/phase1_calibration_author_v1_c2_receipt.json",
+    "--descriptive-amendment",
+    "infrastructure/phase1_descriptive_dose_amendment_v1.json",
+    "--poll-seconds",
+    "180"
+  ],
+  "log": "infrastructure/admit_phase1_doses_author_v1_d2_descriptive.log",
+  "phase2_authorized": false,
+  "primary_qualification_passed": false,
+  "scope": "Fixed descriptive Phase1 dose measurement only; actualGPUadmission remains bounded and independently gated by supervisor",
+  "source_sha256": {
+    "scripts/admit_phase1_doses.py": "91103fff5c03527cf9c93450f4aebfe93f1729678711b93de331e98990000acb",
+    "scripts/modal_dose_evaluation.py": "312422e524a901303ed11e0aa0db36fe3e74c3617f991402acd7e423563975b5",
+    "scripts/prepare_dose_evaluation.py": "170be26d94178f5f825f89f028dc588d522c42e177873d1333f899cf224b00eb",
+    "scripts/audit_dose_response.py": "5da29760da4abf6f203d0c90a4b03a60dee5c67811c7906176300abaed80ef95",
+    "scripts/sandbox_evaluation_worker.py": "23dd716fbe7bc05e30d1b43c861021f7f8b4b87c8f82abcfa351105ae9bd9836",
+    "scripts/primary_model_loader.py": "c4dfd47358a7394d43a2c7b06168f4744c251fc301c7a14afb6f8976d0e7e943",
+    "infrastructure/phase1_descriptive_dose_amendment_v1.json": "1a2ff155f9f8561d54ae1adea4e19a781988ad50698ad9f9a3423d6f56e845f7"
+  }
+}

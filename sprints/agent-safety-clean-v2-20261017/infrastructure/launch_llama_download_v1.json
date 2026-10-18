@@ -1,0 +1,45 @@
+{
+  "job": "llama_checkpoint_download_v1",
+  "gpus": 0,
+  "single_gpu_workers": 0,
+  "tp8_workers": 0,
+  "upper_bound_usd": 1,
+  "log": "infrastructure/llama_checkpoint_download_v1.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_preflight.py",
+    "--download-repo",
+    "nvidia/Llama-3.3-70B-Instruct-FP8"
+  ],
+  "resource_profile": {
+    "source": "scripts/modal_preflight.py",
+    "source_sha256": "a336a2e38ae9611558f7a24b4043be8cb4864736c0053c3e7129ac98c98ce548",
+    "functions": {
+      "download": {
+        "max_calls": 1,
+        "limits": {
+          "gpu": null,
+          "max_containers": 1,
+          "timeout": 1800,
+          "cpu": [
+            4,
+            4
+          ],
+          "memory": [
+            16384,
+            16384
+          ],
+          "retries": 0,
+          "scaledown_window": 2,
+          "startup_timeout": 1800
+        }
+      }
+    },
+    "excluded_functions": {
+      "probe": "Download entrypoint branch calls only download.remote(row), once."
+    },
+    "call_bound_basis": "The selected download_repo entrypoint calls download.remote exactly once; retry=0; no GPU function or spawned children."
+  }
+}

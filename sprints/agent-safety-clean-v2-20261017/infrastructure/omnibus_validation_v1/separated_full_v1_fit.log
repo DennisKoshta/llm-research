@@ -1,0 +1,14 @@
+/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.omnibus-venv/lib/python3.12/site-packages/pytensor/link/c/cmodule.py:2968: UserWarning: PyTensor could not link to a BLAS installation. Operations that might benefit from BLAS will be severely degraded.
+This usually happens when PyTensor is installed via pip. We recommend it be installed via conda/mamba/pixi instead.
+Alternatively, you can use an experimental backend such as Numba or JAX that perform their own BLAS optimizations, by setting `pytensor.config.mode == 'NUMBA'` or passing `mode='NUMBA'` when compiling a PyTensor function.
+For more options and details see https://pytensor.readthedocs.io/en/latest/troubleshooting.html#how-do-i-configure-test-my-blas-library
+  warnings.warn(
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (4 chains in 1 job)
+NUTS: [beta, sigma_template, sigma_scenario, z_template, z_scenario]
+Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 343 seconds.
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (4 chains in 1 job)
+NUTS: [beta, sigma_template, sigma_scenario, z_template, z_scenario]
+Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 306 seconds.
+{"scope": "SYNTHETIC INFRASTRUCTURE VALIDATION ONLY", "operation": "fit", "destination": "infrastructure/omnibus_validation_v1/separated_full_v1", "summary": {"itt": {"status": "CONVERGED", "n": 2880, "rhat_max": 1.0027635028526172, "bulk_ess_min": 6228.63873089572, "tail_ess_min": 3831.663040375787, "divergences": 0, "depth_hits": 0, "bfmi": [0.9835919622401375, 0.9338128714239496, 0.9596120687345729, 0.9681104853642866]}, "strict": {"status": "CONVERGED", "n": 2872, "rhat_max": 1.0029939838553927, "bulk_ess_min": 6583.248572845364, "tail_ess_min": 3783.7389273464946, "divergences": 0, "depth_hits": 0, "bfmi": [0.9051127345116126, 1.0259100475754641, 0.9311708514809873, 0.9254989414142899]}}, "elapsed_seconds": 682.6324919690014, "phase3_authorized": false, "empirical_study_completed": false}

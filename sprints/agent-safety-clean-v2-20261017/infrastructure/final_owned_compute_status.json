@@ -1,0 +1,902 @@
+{
+  "all_owned_apps_verified_stopped": true,
+  "budget_reservation": {
+    "ceiling_usd": 500,
+    "is_invoice_or_actual_spend": false,
+    "meaning": "Existing central reservation bound; actual billed spend and persistent storage charges are not established by this audit.",
+    "reservation_count_at_end": 39,
+    "reservation_count_at_start": 39,
+    "reserved_usd_at_end": 396,
+    "reserved_usd_at_start": 396
+  },
+  "completed_utc": "2026-10-18T08:15:14.900232+00:00",
+  "local_process_scan": {
+    "checked_utc": "2026-10-18T08:15:14.900610+00:00",
+    "limitations": "Process metadata is an instantaneous observation; detached remote execution is determined separately from Modal app lifecycle.",
+    "matching_live_registered_launchers": [],
+    "matching_live_sprint_modal_run_processes": [],
+    "registered_jobs_without_launch_pid": [
+      "six_arm_batched_qualification_vllm_q2",
+      "six_arm_forward_logits_full_v2_logits_q1"
+    ],
+    "root_reported_supervisor_pid_501764": {
+      "matching_live_launch_process": false,
+      "pid": 501764,
+      "state": "ABSENT"
+    }
+  },
+  "owned_app_count": 19,
+  "owned_apps": [
+    {
+      "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+      "check_finished_utc": "2026-10-18T08:15:09.308781+00:00",
+      "checked_utc": "2026-10-18T08:15:07.706215+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "six_arm_batched_qualification_vllm_q2",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": null,
+        "pid": null,
+        "state": "NO_LEDGER_PID"
+      },
+      "modal_stdout_sha256": "cf97704b0806685eb063cff37db21e733f038e892f15d2d990be604fb1ae7954",
+      "observation": {
+        "app_id": "ap-ZFESgZ6zkI4eQtEaTBhrpq",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "functions": {
+          "qualify": {
+            "id": "fu-X1TdDIzXiZM91YFEhRIobL",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "run_group": {
+            "id": "fu-b3IwjClEPEPeYzy9G5B2ZX",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 20:44:08-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:34:31-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+      "check_finished_utc": "2026-10-18T08:15:09.307208+00:00",
+      "checked_utc": "2026-10-18T08:15:07.707082+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "six_arm_forward_logits_full_v2_logits_q1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 2,
+      "local_registered_launcher": {
+        "matching_live_launch_process": null,
+        "pid": null,
+        "state": "NO_LEDGER_PID"
+      },
+      "modal_stdout_sha256": "0a20969a81c7cab0361995388975a0fe8c7241f39fbd794bc3b83d76de0b2a39",
+      "observation": {
+        "app_id": "ap-qW8cuPKr2ma5WIN3qpSQkv",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "functions": {
+          "capture_logits": {
+            "id": "fu-oZDA5VEvuMyvIXR3OBR7BZ",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                },
+                {
+                  "count": 1,
+                  "gpu_type": "H200"
+                }
+              ]
+            }
+          },
+          "qualify": {
+            "id": "fu-YFOpFGqL1ab6RLDqz4Ocob",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                },
+                {
+                  "count": 1,
+                  "gpu_type": "H200"
+                }
+              ]
+            }
+          },
+          "run_group": {
+            "id": "fu-WFCuMN8e4NmFuk83WfgkY4",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 20:38:57-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:05:19-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+      "check_finished_utc": "2026-10-18T08:15:09.306006+00:00",
+      "checked_utc": "2026-10-18T08:15:07.707564+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "paired_scenario_author_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 8,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 360955,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "95144390689f9f9f7c4da005cbcc170bcf1f85c8c0c134c886fb5d1d399a6fe6",
+      "observation": {
+        "app_id": "ap-inKz0tSDm1SE0qqnYx10iO",
+        "description": "agent-safety-clean-v2-20261017-scenario-author",
+        "functions": {
+          "author": {
+            "id": "fu-NTz7a0mD95lTblXnAvOdYJ",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 8,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "coordinate": {
+            "id": "fu-n09sXSpaxbY71X5uBT9JMQ",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 20:48:41-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:31:04-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+      "check_finished_utc": "2026-10-18T08:15:09.312720+00:00",
+      "checked_utc": "2026-10-18T08:15:07.708307+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "llama_checkpoint_download_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 0,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 365102,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "9090d36fec58287b3ca5c94478437e694d0c31a33e9e62914c345a12223ea83a",
+      "observation": {
+        "app_id": "ap-mpRMqHJMj9heqflL7Mgo4Y",
+        "description": "agent-safety-clean-v2-20261017-preflight",
+        "functions": {
+          "download": {
+            "id": "fu-mIriDJpADIEJUlbvWYsDWZ",
+            "summary": {}
+          },
+          "probe": {
+            "id": "fu-QiMpuFlCSYj8MxLLWSQ6fi",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 20:55:32-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:00:36-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+      "check_finished_utc": "2026-10-18T08:15:10.720014+00:00",
+      "checked_utc": "2026-10-18T08:15:09.306572+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "ablated_forward_logits_q2_cap8192",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 373749,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "d1051292f0e8ed1415582ce7d9553163ee886b557ef7d18f57a07937eb4a4ab6",
+      "observation": {
+        "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+        "description": "agent-safety-clean-v2-20261017-qualification",
+        "functions": {
+          "capture_logits": {
+            "id": "fu-yCWbsveealdyJkhKc3r7W9",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                },
+                {
+                  "count": 1,
+                  "gpu_type": "H200"
+                }
+              ]
+            }
+          },
+          "qualify": {
+            "id": "fu-vdwG3NFo9PqXVcJLGxucX8",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                },
+                {
+                  "count": 1,
+                  "gpu_type": "H200"
+                }
+              ]
+            }
+          },
+          "run_group": {
+            "id": "fu-w3oQu6o2h8ZGlDWsN7jdup",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 21:10:27-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:16:56-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-aTtYCFNtxQ7SR2AiI5724x",
+      "check_finished_utc": "2026-10-18T08:15:10.712223+00:00",
+      "checked_utc": "2026-10-18T08:15:09.307325+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "llama_serving_pilot_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 378129,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "596c81e464fbd15454106a49f44cd33973133a3d0ee062f42454d698af980ef9",
+      "observation": {
+        "app_id": "ap-aTtYCFNtxQ7SR2AiI5724x",
+        "description": "agent-safety-clean-v2-20261017-llama-serving-pilot",
+        "functions": {
+          "pilot": {
+            "id": "fu-ysyI5vVQ9RBVcg4TJ4NVxP",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H200"
+                }
+              ]
+            }
+          },
+          "run_pilot": {
+            "id": "fu-GNOljEId5RdJ76N4MqRCD0",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 21:17:45-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:22:01-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+      "check_finished_utc": "2026-10-18T08:15:10.676198+00:00",
+      "checked_utc": "2026-10-18T08:15:09.308926+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "phase1_dose_materialization_checkpoint_doses_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 382051,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "5df6680089b2e473669cb52ee824d72a1a16613f8c128b1430c874c138e821fc",
+      "observation": {
+        "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+        "description": "agent-safety-clean-v2-20261017-materialize-doses",
+        "functions": {
+          "coordinate": {
+            "id": "fu-QhRJnSwkSsoAkHEHcNmVlG",
+            "summary": {}
+          },
+          "materialize_dose": {
+            "id": "fu-7bCbdKnVW4r7WnQv3fbrzO",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 21:24:28-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:55:09-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+      "check_finished_utc": "2026-10-18T08:15:10.705713+00:00",
+      "checked_utc": "2026-10-18T08:15:09.312959+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "six_arm_batched_qualification_vllm_q3_cap8192",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 4,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 386947,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "23cea4bdd59c82fbbc8729306f361d56dc2ebaa2c48910784c266c0aa90c2072",
+      "observation": {
+        "app_id": "ap-kK5A7gHwNG4C5TvLCHFYj6",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "functions": {
+          "qualify": {
+            "id": "fu-dc6mdp0uUnZZS2MVZCZrTk",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "run_group": {
+            "id": "fu-TzyAE0gmVxcf5twg1ilfOp",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 21:32:39-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:11:11-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+      "check_finished_utc": "2026-10-18T08:15:12.189618+00:00",
+      "checked_utc": "2026-10-18T08:15:10.676463+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "phase1_intact_calibration_author_v1_c1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 391326,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "f17118c8c3f9a0a1c44e26aa34a2420b3ee7b1e77dd529e062e6ce3c15768cdc",
+      "observation": {
+        "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+        "description": "agent-safety-clean-v2-20261017-sandbox-evaluation",
+        "functions": {
+          "coordinate": {
+            "id": "fu-Q1Mb1Ks0HQSJgsnvH1tKKg",
+            "summary": {}
+          },
+          "evaluate": {
+            "id": "fu-7Xu0iKHLzzwSX1QhbdviLp",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 21:39:49-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 21:48:18-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-GPD13FtfZozkyKkcIGig87",
+      "check_finished_utc": "2026-10-18T08:15:12.127384+00:00",
+      "checked_utc": "2026-10-18T08:15:10.706002+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "phase1_intact_calibration_author_v1_c2",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 400753,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "9856c72ed416b7410653d553dd17c777b295691ad76f9665002448ca60f4d0d2",
+      "observation": {
+        "app_id": "ap-GPD13FtfZozkyKkcIGig87",
+        "description": "agent-safety-clean-v2-20261017-sandbox-evaluation",
+        "functions": {
+          "coordinate": {
+            "id": "fu-MpIZOHIKAB5PS2vZLovz2h",
+            "summary": {}
+          },
+          "evaluate": {
+            "id": "fu-Iacwduj2CobXThBAmScRzQ",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 21:56:12-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:22:15-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-kbaL8cCtKq8Oqvem0WFN2F",
+      "check_finished_utc": "2026-10-18T08:15:12.100507+00:00",
+      "checked_utc": "2026-10-18T08:15:10.712422+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "phase1_calibration_provenance_author_v1_c2_cpu_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 0,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 404761,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "2e6d7e54d0049bfbd335d2ff2fb45a9623120fc954de1a01f68f546a04698f5e",
+      "observation": {
+        "app_id": "ap-kbaL8cCtKq8Oqvem0WFN2F",
+        "description": "agent-safety-clean-v2-20261017-calibration-provenance-capture",
+        "functions": {
+          "capture": {
+            "id": "fu-sf3gCcx6heGkrwHQSzpQGd",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:03:14-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:04:45-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-K0TINySiamQqfTbI4jHF3Q",
+      "check_finished_utc": "2026-10-18T08:15:12.136732+00:00",
+      "checked_utc": "2026-10-18T08:15:10.720292+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "stock_runtime_metadata_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 0,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 408120,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "617c2e992c4966b98d02b0d4f9e4d9940696b0455291152c9b0c41c4e57e258b",
+      "observation": {
+        "app_id": "ap-K0TINySiamQqfTbI4jHF3Q",
+        "description": "agent-safety-clean-v2-20261017-runtime-metadata",
+        "functions": {
+          "capture": {
+            "id": "fu-pIFKQnlIL9MKFY4ebF3AhU",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:08:54-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:09:22-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-mibAtkLNQJ2vWrrXs5xuSV",
+      "check_finished_utc": "2026-10-18T08:15:13.475397+00:00",
+      "checked_utc": "2026-10-18T08:15:12.100770+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "primary_unrelated_cap16384_preflight_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 1,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 411815,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "be66e5bdf4653a7de7b6db3e82044526b72df5c601fd4ed2dc6baaa0854f037d",
+      "observation": {
+        "app_id": "ap-mibAtkLNQJ2vWrrXs5xuSV",
+        "description": "agent-safety-clean-v2-20261017-primary-serving-pilot",
+        "functions": {
+          "pilot": {
+            "id": "fu-cKBhqrLPZ5IrrcftnnCXcD",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H200"
+                },
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "run_pilot": {
+            "id": "fu-CtT7mrWfN6P6RMOFBlr6XI",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:14:38-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:25:48-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-0bmVqHd8QW47ycTEPjAdzU",
+      "check_finished_utc": "2026-10-18T08:15:13.509998+00:00",
+      "checked_utc": "2026-10-18T08:15:12.127620+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "exp23_unified_author_v1",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 8,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 411855,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "008a28d6222e6171b21a92c07ab4a84843f518c555d52aec04900743e8baf14b",
+      "observation": {
+        "app_id": "ap-0bmVqHd8QW47ycTEPjAdzU",
+        "description": "agent-safety-clean-v2-20261017-exp23-author",
+        "functions": {
+          "author": {
+            "id": "fu-OawuEWNuv7KdhYNxKfYDm5",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 8,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "coordinate": {
+            "id": "fu-HoWIRKcEElYL87QSrFLfyK",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:14:39-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:15:31-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-f4D78r1ham77oSqcjTsH3D",
+      "check_finished_utc": "2026-10-18T08:15:13.477358+00:00",
+      "checked_utc": "2026-10-18T08:15:12.136902+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "exp23_unified_author_v2",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 8,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 416037,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "83377fd6c5cb7e4e433eaa570bfb56b6cbdad886aedab66a73255567cc4439bc",
+      "observation": {
+        "app_id": "ap-f4D78r1ham77oSqcjTsH3D",
+        "description": "agent-safety-clean-v2-20261017-exp23-author",
+        "functions": {
+          "author": {
+            "id": "fu-O2P8VOu9JjMeEJtX7HoAna",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 8,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "coordinate": {
+            "id": "fu-ASywc5uI7bVw58PvIay3gF",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:21:54-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 22:37:12-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+      "check_finished_utc": "2026-10-18T08:15:13.584866+00:00",
+      "checked_utc": "2026-10-18T08:15:12.189884+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "six_arm_batched_qualification_vllm_q4_cap16384",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 2,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 420803,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "e5e3b71fe1d7a2d383b62461dcbfc535bb376b7e20d9a932ffef49e52cc1c983",
+      "observation": {
+        "app_id": "ap-Uwfjw8TtHgyEteFQffywOb",
+        "description": "agent-safety-clean-v2-20261017-batched-qualification",
+        "functions": {
+          "qualify": {
+            "id": "fu-kNEcOoijf3eWIm9l0Fh7tw",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "run_group": {
+            "id": "fu-TpqnUKout0HDDPKJ73Rm4z",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:29:47-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-17 23:25:28-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+      "check_finished_utc": "2026-10-18T08:15:14.804115+00:00",
+      "checked_utc": "2026-10-18T08:15:13.475765+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "exp23_unified_author_v3_cap16384",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 8,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 428210,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "7c9afef6f51ce44ce292311cbee59c9458094147335a8600312199af9e6d931b",
+      "observation": {
+        "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+        "description": "agent-safety-clean-v2-20261017-exp23-author",
+        "functions": {
+          "author": {
+            "id": "fu-PssMwvUk06Bo2tHIamKWXA",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 8,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          },
+          "coordinate": {
+            "id": "fu-mYrQU2y2q7QoQtT8rwYpYZ",
+            "summary": {}
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 22:42:43-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-18 00:35:52-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-3gme0uZ8Zr8MLH3vQnfmO2",
+      "check_finished_utc": "2026-10-18T08:15:14.825482+00:00",
+      "checked_utc": "2026-10-18T08:15:13.477515+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "phase1_dose_evaluation_author_v1_d2_descriptive",
+      "ledger_allocation_status": "released_after_modal_stop",
+      "ledger_gpu_allocation": 2,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 464756,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "0934b5d2161432bbe6e40d2951279cb499e36e80ee14ca7944b59ccf6c8040be",
+      "observation": {
+        "app_id": "ap-3gme0uZ8Zr8MLH3vQnfmO2",
+        "description": "agent-safety-clean-v2-20261017-dose-evaluation",
+        "functions": {
+          "coordinate": {
+            "id": "fu-Wq1UoLhJIqhMrUoM9JXNIb",
+            "summary": {}
+          },
+          "evaluate": {
+            "id": "fu-ZJ5sDSta6qKdreJPM2xdYs",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-17 23:46:36-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-18 00:34:07-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    },
+    {
+      "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+      "check_finished_utc": "2026-10-18T08:15:14.894686+00:00",
+      "checked_utc": "2026-10-18T08:15:13.510425+00:00",
+      "identity_matches_ledger_and_sprint_prefix": true,
+      "job": "phase1_dose_evaluation_author_v1_d4_cap8192_format_v1",
+      "ledger_allocation_status": "launched_pending_app_id",
+      "ledger_gpu_allocation": 4,
+      "local_registered_launcher": {
+        "matching_live_launch_process": false,
+        "pid": 503523,
+        "state": "ABSENT"
+      },
+      "modal_stdout_sha256": "a52ac34c50cdc1447ba655f3e2631f22834d4c7a91eae42d0c839211387eb5f3",
+      "observation": {
+        "app_id": "ap-VC17PiSHqn38pWtc4RQuA4",
+        "description": "agent-safety-clean-v2-20261017-dose-evaluation-d4",
+        "functions": {
+          "coordinate": {
+            "id": "fu-XVhkUFmNtfDvQix6LDYSb3",
+            "summary": {}
+          },
+          "evaluate": {
+            "id": "fu-8okb2uo2bK2eYNSNlHN3Tu",
+            "summary": {
+              "gpu_config": [
+                {
+                  "count": 1,
+                  "gpu_type": "H100"
+                }
+              ]
+            }
+          }
+        },
+        "lifecycle": {
+          "created_at": "2026-10-18 00:56:47-07:00",
+          "state": "stopped",
+          "stopped_at": "2026-10-18 01:11:45-07:00"
+        },
+        "servers": {}
+      },
+      "source": "modal app info --json",
+      "stopped_verified": true
+    }
+  ],
+  "read_only_remote_operations": true,
+  "root_reconciliation_pending": true,
+  "schema": "final_owned_compute_status_v1",
+  "scientific_outcomes_inspected": false,
+  "scope": "Every app ID bound to a job in the current sprint central resource ledger at the audited snapshot. No inference about unregistered apps, billing invoices, function success, cancellation, scientific completion, or raw artifact recovery.",
+  "source_snapshots": {
+    "budget_ledger": {
+      "path": "infrastructure/budget_reservations.json",
+      "sha256_at_end": "8c716ec232ab955d0262ae98fea87a6667f303268fcf614e7b68b1aa70b7049a",
+      "sha256_at_start": "8c716ec232ab955d0262ae98fea87a6667f303268fcf614e7b68b1aa70b7049a"
+    },
+    "resource_ledger": {
+      "owned_bindings_stable": true,
+      "path": "infrastructure/resource_allocations.json",
+      "sha256_at_end": "edfefbe5b14948d4e4f96e9f26d8eefd66f020d90dcd2fa20089f2022baefad1",
+      "sha256_at_start": "edfefbe5b14948d4e4f96e9f26d8eefd66f020d90dcd2fa20089f2022baefad1"
+    }
+  },
+  "sprint": "agent-safety-clean-v2-20261017",
+  "started_utc": "2026-10-18T08:15:07.702150+00:00",
+  "stops_or_launches_performed_by_this_audit": false,
+  "verified_stopped_count": 19
+}

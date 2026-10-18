@@ -1,0 +1,234 @@
+{
+  "H1_pass": true,
+  "H5_pass": true,
+  "accepted_records": 52,
+  "all_author_contracts_valid": false,
+  "authoring_gate_passed": false,
+  "backend_call": {
+    "call_id": "fc-01M56RHHZ1265CH6X9M9CARHVV",
+    "function_name": "author",
+    "module_name": "modal_exp23_author",
+    "status": "SUCCESS"
+  },
+  "capture_timing": "POST_LAUNCH",
+  "central_admission": {
+    "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+    "job": "exp23_unified_author_v3_cap16384",
+    "profile_audit": {
+      "admitted_upper_bound_usd": 77,
+      "job": "exp23_unified_author_v3_cap16384",
+      "reconciliation_chain_verified": true,
+      "resource_profile_audit": {
+        "bound_conditions": "Maximum total calls are reviewed declarations, not statically proven. Bound excludes persistent volume/storage, image-build and network charges. Repeated starts/retries beyond declared max_calls require a new reservation.",
+        "function_bounds": [
+          {
+            "compute_bound_usd": 73.41649920000002,
+            "function": "author",
+            "max_calls": 1,
+            "rate_usd_per_second": 0.009269760000000002,
+            "seconds_per_call_bound": 7920
+          },
+          {
+            "compute_bound_usd": 0.1718904,
+            "function": "coordinate",
+            "max_calls": 1,
+            "rate_usd_per_second": 1.532e-05,
+            "seconds_per_call_bound": 11220
+          }
+        ],
+        "minimum_compute_reservation_usd": 74,
+        "source_sha256": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+        "whole_app_allocation": {
+          "gpus": 8,
+          "single_gpu_workers": 0,
+          "tp8_workers": 1
+        }
+      },
+      "schema": "historical_resource_admission_audit_v1"
+    },
+    "source_sha256": {
+      "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+      "infrastructure/exp23_author_v3_cap16384_volume_download_manifest.json": "82aec17efceed24de401ad3ffa632557470d8fb4e641acdffec49e90daecc80d",
+      "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_download.json": "9160305b398cca92ded311b666413ee5790fb4fc6dfb613b751e4cbb9ee88234",
+      "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+      "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+      "scripts/exp23_author_worker.py": "fd889d584b1bec5719bacc6bfe8a64c8355e0c6c8bd4ff7156987f799b2debc4",
+      "scripts/exp23_design.py": "af0e7c7e17ec9f802f48cece315e6977b30e8cbb2c7ac7b73284f31829998b7b",
+      "scripts/modal_exp23_author.py": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+      "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+      "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+      "stimuli/exp23_author_v3_cap16384_input.json": "a7d2fda040e31d61eea5f978f7893adfd7226a3dc4a9c069be08ba36df8e4cc1"
+    }
+  },
+  "complete_data": true,
+  "created_utc": "2026-10-18T07:40:57.109082+00:00",
+  "experiment": "exp23_author_v3_cap16384",
+  "failed_record_salvaged_or_excluded": false,
+  "failures": [
+    {
+      "complete_nongreedy_spans": [
+        {
+          "body_chars": 3,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+          "index": 0,
+          "span": [
+            360,
+            386
+          ],
+          "strict_json_valid": false
+        },
+        {
+          "body_chars": 24501,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+          "index": 1,
+          "span": [
+            546,
+            25070
+          ],
+          "strict_json_valid": false
+        },
+        {
+          "body_chars": 13355,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+          "index": 2,
+          "span": [
+            25307,
+            38685
+          ],
+          "strict_json_valid": false
+        }
+      ],
+      "finish_reason": "stop",
+      "fresh_independent_call_error": "ValueError: Require exactly one complete post-think record",
+      "fresh_json_envelope_check": "ValueError: MULTIPLE_OR_INCOMPLETE_TOOL_CALL_ENVELOPE",
+      "generated_tokens": 9639,
+      "generation_return_record_sha256": "699deec20bfe035c5c1a44f977c04d2f359d4a57b29b53f765218cab3a48da4f",
+      "parse_status": "MULTIPLE_TOOL_CALLS",
+      "post_think_close_tags": 3,
+      "post_think_open_tags": 7,
+      "raw_record_chain_sha256": "10def76be2a1ffbdf4f74d4966e519704258166bbced0aba0f57e6f87fb7cba7",
+      "request_record_sha256": "ec0fa1ab449d2535f8f6b3e2fc42abe18b2750c79560088f2fc0b482d33558c2",
+      "saved_contract_error": "ValueError: Require exactly one complete post-think record",
+      "split": "artifact_generation",
+      "think_closed": true,
+      "trial_id": "exp23:author:exp23_wetlab_07"
+    }
+  ],
+  "four_model_return_batches": [
+    5,
+    16,
+    16,
+    16
+  ],
+  "full_author_records": 48,
+  "full_capped": 0,
+  "full_logical_truncations": 0,
+  "full_strict_parse_valid": 47,
+  "full_unclosed_think": 0,
+  "generation_time_package_versions_attested": false,
+  "generation_time_token_ids_attested": false,
+  "independent_validity_agreement": true,
+  "invalid_full_records": 1,
+  "invalid_pilot_records": 0,
+  "limitations": [
+    "Post-launch filesystem and installed-package observation; no original per-generation token-ID or package attestation.",
+    "Container/app association supplied by operator; backend identity and immutable admission are independently required."
+  ],
+  "phase2_execution_authorized": false,
+  "pilot_records": 5,
+  "postlaunch_exact_prompt_and_count_replay": {
+    "capture_path": "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/capture.json",
+    "packages": {
+      "Jinja2": "3.1.6",
+      "huggingface-hub": "2.2.0",
+      "tokenizers": "0.23.3",
+      "transformers": "5.20.1"
+    },
+    "requests": 53,
+    "verified": true
+  },
+  "raw_records_preserved": 53,
+  "recomputation_entrypoints": [
+    "exp23_author_worker.audit_streams",
+    "audit_exp23_author_provenance.central_admission",
+    "audit_exp23_author_provenance.isolated_replay",
+    "audit_exp23_launch.lookup_backend",
+    "strict_parser.parse_output",
+    "json.loads on exactly one post-think tool-call envelope with duplicate-key/nonfinite rejection"
+  ],
+  "retry_launched": false,
+  "schema": "exp23_author_terminal_failure_provenance_v1",
+  "semantic_review_completed": false,
+  "source_sha256": {
+    "FINAL_RESEARCH_SPECIFICATION.md": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+    "author_artifacts/exp23_author_v3_cap16384/model_returns.jsonl": "e15a5c086a9abe7a8306f69ede932996e7c470f810609bcb6e9e527e33b4dbe3",
+    "group_calls/exp23_author_v3_cap16384.json": "0acd5ae46b3d2fb95e63f67778067775dffce457af9bf0d83cb4c44c2cb7e860",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/capture.json": "220cd15cb1d6e670bc4fe08f1c2aa20ce3fff48a9d5bb0864fdc3a2ffb0eba80",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/config.json": "18edaeca2cb37ee8ad01885c10446c72816db3d81db0ff629cc2a8c014d1a550",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/tokenizer/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+    "infrastructure/exp23_author_v3_cap16384_volume_download_manifest.json": "82aec17efceed24de401ad3ffa632557470d8fb4e641acdffec49e90daecc80d",
+    "infrastructure/orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8_download.json": "9160305b398cca92ded311b666413ee5790fb4fc6dfb613b751e4cbb9ee88234",
+    "infrastructure/preflight.json": "b71847e25739acad22c4af1a0246d9d706336ca389c461113e4bf8019e00e72c",
+    "pilots/exp23_author_v3_cap16384_pilot_audit.md": "924ec8fbdfebcf7243818187ef14164d913bcf012815110a5daa11d4c2b43dec",
+    "qualification_status/exp23_author_v3_cap16384_flash_next_uncensored.json": "d2bacc2c462e29895629074348c1a7e74e91096a1fed057ebfe59e9105637d37",
+    "raw_transcripts/exp23_author_v3_cap16384/attempt_claim.json": "f586b0a76f299938d1ae5ee26d4f5d6df75d3589493eef0a94c9db01bffc8ffa",
+    "raw_transcripts/exp23_author_v3_cap16384/flash_next_uncensored.jsonl": "b274eac29d12a6820db302d7aa03eff5c911043e3786508c6d9922f1e493faeb",
+    "raw_transcripts/exp23_author_v3_cap16384/flash_next_uncensored_requests.jsonl": "a64f2993b3c94939c79750350ed97b13e5f277ddff88b2144531cb14203effcd",
+    "raw_transcripts/exp23_author_v3_cap16384/frozen_input.json": "a7d2fda040e31d61eea5f978f7893adfd7226a3dc4a9c069be08ba36df8e4cc1",
+    "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+    "scripts/audit_exp23_author_provenance.py": "85529fd94aba60c9037af86cc491b349d5fd7067fa83faf8497bf0ec8490f162",
+    "scripts/audit_exp23_launch.py": "77be45acd27ed0217a66c1d5ae9f40992d6088a689a72e2c47ab05316894dac5",
+    "scripts/capture_exp23_author_provenance.py": "0248e93b4fd12b742a20f605e930e00a7c310e110607d2b7739fc7734fccbe02",
+    "scripts/exp23_author_worker.py": "fd889d584b1bec5719bacc6bfe8a64c8355e0c6c8bd4ff7156987f799b2debc4",
+    "scripts/exp23_design.py": "af0e7c7e17ec9f802f48cece315e6977b30e8cbb2c7ac7b73284f31829998b7b",
+    "scripts/modal_exp23_author.py": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+    "scripts/raw_generation_evidence.py": "89b193c391cb4b1f3c0d58d57e717d3425d1085ee57b60073182102ffd0141e8",
+    "scripts/replay_exp23_author_tokenizer.py": "3e32fe196c3df09b3eb12cb5471e93ab25b4422a968b5ec0107d0163804b9267",
+    "scripts/scenario_contract.py": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+    "scripts/strict_parser.py": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+    "stimuli/exp23_author_v3_cap16384_input.json": "a7d2fda040e31d61eea5f978f7893adfd7226a3dc4a9c069be08ba36df8e4cc1"
+  },
+  "source_stream_audit": {
+    "all_author_contracts_valid": false,
+    "authoring_H1_pass": true,
+    "authoring_n": 48,
+    "capped_authoring_n": 0,
+    "independent_parser_agreement": false,
+    "masked_pair_boilerplate_identical": null,
+    "model_returns_chain_head": "699deec20bfe035c5c1a44f977c04d2f359d4a57b29b53f765218cab3a48da4f",
+    "model_returns_sha256": "e15a5c086a9abe7a8306f69ede932996e7c470f810609bcb6e9e527e33b4dbe3",
+    "payload_sha256": "703ca5e8d0e82bb4c924d781b7ff2f3afe3d584c5c9c14ba65fbe9a7f8d96730",
+    "pending_writeahead_trial_ids": [],
+    "phase2_empirical_execution_authorized": false,
+    "pilot_n": 5,
+    "pilot_pass": true,
+    "raw_chain_head": "d639503b258071c22fc84b32aba2e4840fb4ac24a28c0278668b9a730acb0161",
+    "raw_sha256": "b274eac29d12a6820db302d7aa03eff5c911043e3786508c6d9922f1e493faeb",
+    "schema": "exp23_author_stream_audit_v1",
+    "semantic_review_completed": false,
+    "truncated_authoring_n": 0,
+    "unclosed_think_authoring_n": 0,
+    "writeahead_chain_head": "652e134fbd7f5deb33279fadd9f70ee06499394b8a56cc89d26e19b08109df56",
+    "writeahead_sha256": "a64f2993b3c94939c79750350ed97b13e5f277ddff88b2144531cb14203effcd"
+  },
+  "stopped_app_observation": {
+    "app_id": "ap-WWcFWmAVhCF7Z1lX2cZiLx",
+    "created_at": "2026-10-17 22:42:43-07:00",
+    "description": "agent-safety-clean-v2-20261017-exp23-author",
+    "state": "stopped",
+    "stopped_at": "2026-10-18 00:35:52-07:00",
+    "tasks": "0"
+  },
+  "stored_parser_agreement_explanation": "The single rejected envelope has independent_parser_agreement=False because independent_call raises before accepted-call comparison; both decoder paths reject it. This is not one decoder accepting a record rejected by the other.",
+  "strict_parse_status_counts": {
+    "MULTIPLE_TOOL_CALLS": 1,
+    "VALID": 52
+  },
+  "worker_status": "AUTHORING_GATE_FAILED",
+  "worker_status_stream_audit_identical": true
+}

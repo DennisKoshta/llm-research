@@ -1,0 +1,102 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-DrJZuJfJ7SXSyLlEaZkBGp
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_qualify.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+├── ✓ Created Function run_group.
+├── ✓ Created Function qualify.
+└── ✓ Created Function capture_logits.
+
+[1ALoading weights:   0%|          | 0/1584 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1584 [00:00<20:04,  1.31it/s]
+[1ALoading weights:   0%|          | 2/1584 [00:01<22:35,  1.17it/s]
+[1ALoading weights:   1%|          | 18/1584 [00:01<01:43, 15.09it/s]
+[1ALoading weights:   2%|▏         | 36/1584 [00:01<00:47, 32.89it/s]
+[1ALoading weights:   3%|▎         | 54/1584 [00:02<00:29, 52.25it/s]
+[1ALoading weights:   4%|▍         | 67/1584 [00:02<00:25, 60.64it/s]
+[1ALoading weights:   5%|▌         | 84/1584 [00:02<00:19, 77.33it/s]
+[1ALoading weights:   6%|▌         | 98/1584 [00:02<00:17, 85.79it/s]
+[1ALoading weights:   7%|▋         | 116/1584 [00:02<00:14, 104.72it/s]
+[1ALoading weights:   8%|▊         | 132/1584 [00:02<00:12, 117.07it/s]
+[1ALoading weights:   9%|▉         | 147/1584 [00:02<00:13, 105.58it/s]
+[1ALoading weights:  11%|█         | 172/1584 [00:02<00:10, 129.22it/s]
+[1ALoading weights:  12%|█▏        | 190/1584 [00:03<00:10, 137.90it/s]
+[1ALoading weights:  13%|█▎        | 207/1584 [00:03<00:09, 144.36it/s]
+[1ALoading weights:  14%|█▍        | 223/1584 [00:03<00:10, 126.55it/s]
+[1ALoading weights:  15%|█▌        | 245/1584 [00:03<00:09, 147.04it/s]
+[1ALoading weights:  16%|█▋        | 261/1584 [00:03<00:09, 144.14it/s]
+[1ALoading weights:  17%|█▋        | 277/1584 [00:03<00:09, 135.88it/s]
+[1ALoading weights:  19%|█▊        | 294/1584 [00:03<00:09, 129.51it/s]
+[1ALoading weights:  19%|█▉        | 308/1584 [00:03<00:09, 129.06it/s]
+[1ALoading weights:  21%|██        | 330/1584 [00:04<00:08, 143.10it/s]
+[1ALoading weights:  22%|██▏       | 348/1584 [00:04<00:08, 145.06it/s]
+[1ALoading weights:  23%|██▎       | 366/1584 [00:04<00:08, 151.97it/s]
+[1ALoading weights:  24%|██▍       | 382/1584 [00:04<00:09, 128.35it/s]
+[1ALoading weights:  26%|██▌       | 406/1584 [00:04<00:07, 147.56it/s]
+[1ALoading weights:  27%|██▋       | 424/1584 [00:04<00:07, 154.92it/s]
+[1ALoading weights:  28%|██▊       | 441/1584 [00:04<00:07, 152.72it/s]
+[1ALoading weights:  29%|██▉       | 457/1584 [00:04<00:08, 134.67it/s]
+[1ALoading weights:  30%|███       | 476/1584 [00:05<00:07, 147.28it/s]
+[1ALoading weights:  31%|███       | 492/1584 [00:05<00:07, 145.51it/s]
+[1ALoading weights:  32%|███▏      | 507/1584 [00:05<00:07, 145.75it/s]
+[1ALoading weights:  33%|███▎      | 524/1584 [00:05<00:07, 144.10it/s]
+[1ALoading weights:  34%|███▍      | 539/1584 [00:05<00:08, 129.98it/s]
+[1ALoading weights:  35%|███▌      | 560/1584 [00:05<00:06, 148.25it/s]
+[1ALoading weights:  36%|███▋      | 576/1584 [00:05<00:07, 143.55it/s]
+[1ALoading weights:  37%|███▋      | 591/1584 [00:05<00:07, 135.68it/s]
+[1ALoading weights:  38%|███▊      | 606/1584 [00:06<00:07, 130.36it/s]
+[1ALoading weights:  39%|███▉      | 620/1584 [00:06<00:07, 132.75it/s]
+[1ALoading weights:  41%|████      | 642/1584 [00:06<00:06, 149.15it/s]
+[1ALoading weights:  42%|████▏     | 660/1584 [00:06<00:06, 152.87it/s]
+[1ALoading weights:  43%|████▎     | 676/1584 [00:06<00:05, 152.46it/s]
+[1ALoading weights:  44%|████▎     | 692/1584 [00:06<00:07, 125.39it/s]
+[1ALoading weights:  45%|████▌     | 718/1584 [00:06<00:05, 151.06it/s]
+[1ALoading weights:  46%|████▋     | 736/1584 [00:06<00:05, 158.13it/s]
+[1ALoading weights:  48%|████▊     | 753/1584 [00:06<00:05, 154.74it/s]
+[1ALoading weights:  49%|████▊     | 769/1584 [00:07<00:06, 135.21it/s]
+[1ALoading weights:  50%|████▉     | 791/1584 [00:07<00:05, 153.53it/s]
+[1ALoading weights:  51%|█████     | 808/1584 [00:07<00:05, 150.12it/s]
+[1ALoading weights:  52%|█████▏    | 824/1584 [00:07<00:05, 141.67it/s]
+[1ALoading weights:  53%|█████▎    | 839/1584 [00:07<00:05, 127.57it/s]
+[1ALoading weights:  54%|█████▍    | 853/1584 [00:07<00:06, 119.69it/s]
+[1ALoading weights:  55%|█████▌    | 874/1584 [00:07<00:05, 136.84it/s]
+[1ALoading weights:  56%|█████▋    | 892/1584 [00:07<00:04, 144.23it/s]
+[1ALoading weights:  57%|█████▋    | 907/1584 [00:08<00:04, 141.34it/s]
+[1ALoading weights:  58%|█████▊    | 922/1584 [00:08<00:05, 125.26it/s]
+[1ALoading weights:  60%|█████▉    | 945/1584 [00:08<00:04, 150.05it/s]
+[1ALoading weights:  61%|██████    | 961/1584 [00:08<00:04, 142.31it/s]
+[1ALoading weights:  62%|██████▏   | 976/1584 [00:08<00:04, 130.24it/s]
+[1ALoading weights:  63%|██████▎   | 994/1584 [00:08<00:04, 138.95it/s]
+[1ALoading weights:  64%|██████▎   | 1009/1584 [00:08<00:04, 136.04it/s]
+[1ALoading weights:  65%|██████▌   | 1030/1584 [00:08<00:03, 143.70it/s]
+[1ALoading weights:  66%|██████▌   | 1048/1584 [00:09<00:03, 150.59it/s]
+[1ALoading weights:  67%|██████▋   | 1064/1584 [00:09<00:03, 143.95it/s]
+[1ALoading weights:  68%|██████▊   | 1079/1584 [00:09<00:04, 117.25it/s]
+[1ALoading weights:  70%|██████▉   | 1106/1584 [00:09<00:03, 145.60it/s]
+[1ALoading weights:  71%|███████   | 1122/1584 [00:09<00:03, 143.98it/s]
+[1ALoading weights:  72%|███████▏  | 1138/1584 [00:09<00:03, 129.50it/s]
+[1ALoading weights:  73%|███████▎  | 1152/1584 [00:09<00:03, 126.26it/s]
+[1ALoading weights:  74%|███████▎  | 1166/1584 [00:10<00:03, 127.81it/s]
+[1ALoading weights:  75%|███████▌  | 1188/1584 [00:10<00:02, 144.52it/s]
+[1ALoading weights:  76%|███████▌  | 1206/1584 [00:10<00:02, 143.81it/s]
+[1ALoading weights:  77%|███████▋  | 1224/1584 [00:10<00:02, 148.97it/s]
+[1ALoading weights:  78%|███████▊  | 1240/1584 [00:10<00:02, 121.48it/s]
+[1ALoading weights:  81%|████████▏ | 1290/1584 [00:10<00:01, 208.86it/s]
+[1ALoading weights:  87%|████████▋ | 1377/1584 [00:10<00:00, 365.93it/s]
+[1ALoading weights:  94%|█████████▍| 1487/1584 [00:10<00:00, 553.98it/s]
+[1ALoading weights: 100%|█████████▉| 1583/1584 [00:10<00:00, 662.07it/s]
+[1ALoading weights: 100%|██████████| 1584/1584 [00:10<00:00, 144.20it/s]
+refusal_ablated: loaded 400 FP8 modules
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]
+[1AFetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1032.83it/s]
+refusal_ablated pilot: 4/5
+refusal_ablated pilot: 5/5
+{"arm": "refusal_ablated", "stage": "logits", "attempt": "full_v2_logits_q2_cap8192", "pilot_pass": true, "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_logits_full_v2_logits_q2_cap8192/refusal_ablated.jsonl", "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_logits_full_v2_logits_q2_cap8192_refusal_ablated_pilot_audit.md", "fp8_modules": 400, "checkpoint_family": "checkpoints_full_residual_v2", "status": "ACTIVATIONS_COMPLETE", "gpu_name": "NVIDIA H100 80GB HBM3", "runtime_versions": {"torch": "2.14.1", "transformers": "5.20.1", "flash-linear-attention": "0.5.2", "causal-conv1d": "1.7.0", "kernels": "0.17.2"}, "projection_mean": 0.001450221485318494, "mean_absolute_entry_projection": 0.0026658592167072438, "mean_absolute_late_projection": 0.10826906914725902, "mean_absolute_entry_to_late_projection_change": 0.11081718788534083, "activation_count": 64, "activation_path": "/artifacts/agent-safety-clean-v2-20261017/activations/phase1_logits_full_v2_logits_q2_cap8192/refusal_ablated.npz", "elapsed_seconds": 346.456968726, "input_sha256": "29b99885c9703fe1569da34e124a3de5879ba5335d82fd8155b61445de6da2db", "max_new_tokens": 8192}
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-DrJZuJfJ7SXSyLlEaZkBGp

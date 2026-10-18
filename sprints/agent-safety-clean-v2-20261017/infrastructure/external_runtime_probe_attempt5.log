@@ -1,0 +1,74 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-dqSpviZnTPJmhcySB8Rnah
+Building image im-TBIfsn8joS2eeVcWnSpizZ
+
+=> Step 0: FROM base
+
+=> Step 1: RUN /usr/bin/python3 -m pip install --break-system-packages transformers==5.20.1
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting transformers==5.20.1
+  Downloading transformers-5.20.1-py3-none-any.whl.metadata (31 kB)
+Collecting huggingface-hub<3.0,>=1.31.0 (from transformers==5.20.1)
+  Downloading huggingface_hub-2.2.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (2.2.6)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (26.3)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (2026.7.19)
+Collecting tokenizers<0.24.0,>=0.23.1 (from transformers==5.20.1)
+  Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (0.27.1)
+Requirement already satisfied: safetensors>=0.8.0 in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (0.8.0)
+Requirement already satisfied: tqdm>=4.60 in /usr/local/lib/python3.12/dist-packages (from transformers==5.20.1) (4.70.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (3.32.4)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (2026.7.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (1.6.0)
+Requirement already satisfied: httpx2<3,>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (2.12.0)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (4.16.0)
+Requirement already satisfied: anyio>=4.10 in /usr/local/lib/python3.12/dist-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (4.14.2)
+Requirement already satisfied: httpcore2==2.12.0 in /usr/local/lib/python3.12/dist-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (2.12.0)
+Requirement already satisfied: idna>=3.18 in /usr/local/lib/python3.12/dist-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (3.19)
+Requirement already satisfied: truststore>=0.10 in /usr/local/lib/python3.12/dist-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (0.10.4)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore2==2.12.0->httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.1) (0.16.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers==5.20.1) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers==5.20.1) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers==5.20.1) (0.0.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers==5.20.1) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers==5.20.1) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers==5.20.1) (0.1.2)
+Downloading transformers-5.20.1-py3-none-any.whl (12.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 263.0 MB/s  0:00:00
+Downloading huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 452.9 MB/s  0:00:00
+Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 278.2 MB/s  0:00:00
+Installing collected packages: huggingface-hub, tokenizers, transformers
+  Attempting uninstall: huggingface-hub
+    Found existing installation: huggingface_hub 1.28.0
+    Uninstalling huggingface_hub-1.28.0:
+      Successfully uninstalled huggingface_hub-1.28.0
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.22.2
+    Uninstalling tokenizers-0.22.2:
+      Successfully uninstalled tokenizers-0.22.2
+  Attempting uninstall: transformers
+    Found existing installation: transformers 5.15.1
+    Uninstalling transformers-5.15.1:
+      Successfully uninstalled transformers-5.15.1
+
+Successfully installed huggingface-hub-2.2.0 tokenizers-0.23.3 transformers-5.20.1
+Saving image...
+Image saved, took 4.85s
+
+Built image im-TBIfsn8joS2eeVcWnSpizZ in 21.05s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_external_runtime_probe.py
+└── ✓ Created Function probe.
+{'python': '3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]', 'executable': '/usr/local/bin/python', 'candidates': [{'executable': '/usr/bin/python3', 'returncode': 0, 'stdout': 'INFO 10-18 00:43:21 [importing.py:53] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.\nINFO 10-18 00:43:21 [importing.py:88] Triton not installed or not compatible; certain GPU-related functions will not be available.\n{"torch": "2.13.0+cu130", "vllm": "0.1.dev20073+g8e685d198", "transformers": "5.20.1", "registry_supported": true, "models": [{"repo": "Qwen__Qwen3.8-Flash-Next-FP8", "architecture": ["Qwen4ExpForConditionalGeneration"], "template_characters": 326}, {"repo": "orcarouter__Qwen3.8-Flash-Next-Uncensored-FP8", "architecture": ["Qwen4ExpForConditionalGeneration"], "template_characters": 326}]}\n', 'stderr': ''}], 'gpu_allocated': False}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-dqSpviZnTPJmhcySB8Rnah

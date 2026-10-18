@@ -1,0 +1,39 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-4unbeXukvqhwQfUy8O56JZ
+Building image im-FS32B9lsNxMH59HolVeFJw
+
+=> Step 0: FROM nvidia/cuda:13.0.2-base-ubuntu24.04
+Getting image source signatures
+Copying blob sha256:526d5438c009ab7178af1646fed10ff6f47a73f5a1ae7b9f49e63e4ade7e3ae6
+Copying blob sha256:4b3ffd8ccb5201a0fc03585952effb4ed2d1ea5e704d2e7330212fb8b16c86a3
+Copying blob sha256:0b3b5bd928240da4156c41fcfb400c1f4f8674acd2faee0413ab5a032dfb5f76
+Copying blob sha256:70f87b6ed43e1cbbe67ce74c7877fb771bf352b25d602a82ee4f840f2e265155
+Copying blob sha256:c567a87f21d2f8e46feb4f6c427eb5559d45a1a222f73d601352403d13af1ada
+Copying config sha256:3365a4ccbcd0dec3928de0d9f238fde087fa0febc8b3d5282b851b6e64b9f3de
+Writing manifest to image destination
+Unpacking OCI image
+   • unpacking rootfs ...     
+   • ... done                 
+   • unpacked image rootfs: /tmp/task-data/ta-01M55T60VR9PPKWNT5T28XX5JB/registry-unpackWfT8AY
+Copied image in 589.72ms
+
+=> Step 1: COPY /python/. /usr/local
+
+=> Step 2: RUN ln -s /usr/local/bin/python3 /usr/local/bin/python
+
+=> Step 3: ENV TERMINFO_DIRS=/etc/terminfo:/lib/terminfo:/usr/share/terminfo:/usr/lib/terminfo
+Saving image...
+Image saved, took 4.30s
+
+Built image im-FS32B9lsNxMH59HolVeFJw in 11.67s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_gpu_probe.py
+└── ✓ Created Function probe.
+{"checked_at_utc": "2026-10-17T20:52:33.336422+00:00", "gpu": "NVIDIA H200, 143771 MiB, 610.57.04", "status": "PASS"}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-4unbeXukvqhwQfUy8O56JZ

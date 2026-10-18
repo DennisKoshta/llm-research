@@ -1,0 +1,152 @@
+{
+  "schema": "attempt_registry_v1",
+  "datasets": {
+    "phase1_source_pilot": {
+      "role": "accepted",
+      "reason": "Source BF16 stack pilot; no behavioral experiment estimate."
+    },
+    "phase1_activation_v3": {
+      "role": "archived_engineering",
+      "reason": "Initial layer-20 onward materialization failed post-FP8 gate; all evidence retained. See ENGINEERING_CORRECTIONS.md."
+    },
+    "phase1_activation_vectors_v3": {
+      "role": "archived_engineering",
+      "reason": "Initial layer-20 onward materialization failed post-FP8 gate; all evidence retained. See ENGINEERING_CORRECTIONS.md."
+    },
+    "phase1_activation_v4_diagnostic": {
+      "role": "archived_engineering",
+      "reason": "Read-only layer-19 diagnostic; Intact pilot at 2048 tokens failed H5, so no full sweep was launched for that arm."
+    },
+    "phase1_activation_vectors_v4_diagnostic": {
+      "role": "archived_engineering",
+      "reason": "Read-only layer-19 diagnostic; Intact pilot at 2048 tokens failed H5, so no full sweep was launched for that arm."
+    },
+    "phase1_activation_full_v2": {
+      "role": "accepted",
+      "reason": "Corrected complete-residual family; both pilots and paired >95% post-FP8 gate pass."
+    },
+    "phase1_activation_vectors_full_v2": {
+      "role": "accepted",
+      "reason": "Corrected complete-residual family; both pilots and paired >95% post-FP8 gate pass."
+    },
+    "phase1_external_v1": {
+      "role": "interrupted",
+      "reason": "Client connectivity interruption after Intact pilot; no qualification rows persisted."
+    },
+    "phase1_external_v3": {
+      "role": "accepted",
+      "reason": "Retained external qualification evidence: Intact v3 plus Uncensored v4_eager. H1/H2/H4/H5 pass; >=50 pp scientific qualification fails (23.4375 pp ITT, 16.94915 pp strict). Interrupted Uncensored v3 pilot is not pooled. No external validity comparison is authorized by this failed gate."
+    },
+    "phase1_qualification_full_v2_q1": {
+      "role": "archived_engineering",
+      "reason": "Uniform prospective backend transition after serving pilot passed frozen mechanical/throughput rule; partial generations retained and never pooled with replacement six-arm run."
+    },
+    "phase1_qualification_vectors_full_v2_q1": {
+      "role": "archived_engineering",
+      "reason": "Uniform prospective backend transition after serving pilot passed frozen mechanical/throughput rule; partial generations retained and never pooled with replacement six-arm run."
+    },
+    "phase1_serving_v2": {
+      "role": "interrupted",
+      "reason": "Canceled during DeepGEMM warmup after client DNS failure; no generation or readiness result."
+    },
+    "phase1_external_v4_eager": {
+      "role": "accepted",
+      "reason": "Retained external qualification evidence: Intact v3 plus Uncensored v4_eager. H1/H2/H4/H5 pass; >=50 pp scientific qualification fails (23.4375 pp ITT, 16.94915 pp strict). Interrupted Uncensored v3 pilot is not pooled. No external validity comparison is authorized by this failed gate."
+    },
+    "phase1_serving_v3": {
+      "role": "archived_engineering",
+      "reason": "Failed before generation at function-callback serialization; no scientific trials or effect inspection."
+    },
+    "phase1_source_vectors": {
+      "role": "accepted",
+      "reason": "Lossless JSONL export of all 448 measured BF16 forward observations, cross-checked exactly against original NPZ; no generated completions invented."
+    },
+    "phase1_serving_v4": {
+      "role": "engineering_pilot",
+      "reason": "Retry identical module inventory and five prompts using named RPC instead of function callback; criteria unchanged."
+    },
+    "phase1_qualification_vllm_q1": {
+      "role": "archived_engineering",
+      "reason": "Cloud coordinator failed sibling-module import before spawning GPU calls; no ledger or raw trial directory exists. App stopped. Frozen failure log retained."
+    },
+    "phase1_logits_full_v2_logits_q1": {
+      "role": "candidate",
+      "reason": "Five arms complete forward observations after passing pilots; refusal_ablated pilot capped4096/unclosed and produced no forward observations. Preserve failed pilot; use explicit separate cap8192retry onlyforitsforward source, never pool pilot or generation attempts.",
+      "arms": {
+        "refusal_ablated": {
+          "role": "archived_engineering",
+          "reason": "Five-trial pilot at cap 4096 failed H5 because one output was capped with unclosed reasoning. No forward observations were generated for this arm. Explicit forward-source map selects a fresh cap-8192 pilot attempt; other five arms remain separately eligible. Failed raw pilot and pending requests are retained."
+        }
+      }
+    },
+    "phase1_logits_vectors_full_v2_logits_q1": {
+      "role": "candidate",
+      "reason": "Fresh matched six-arm qualification after prospective serving validation; unchanged frozen checkpoints, stimuli, control seeds and 4096-token budgets."
+    },
+    "phase1_qualification_vllm_q2": {
+      "role": "archived_engineering",
+      "reason": "PCA103 five-trial pilot failed H5: one capped4096 with unclosed reasoning. Entire behavioral attempt retained, never pooled. Uniform8192 retry across allsix arms declared before heldoutrefusal effects inspected; same prompts/checkpoints/runtime."
+    },
+    "phase1_author_v1": {
+      "role": "candidate",
+      "reason": "Independent Phase1 paired authoring Role2 with fixed requests, fresh five pilots, immutable raw outputs; external comparison remains disqualified."
+    },
+    "phase1_logits_full_v2_logits_q2_cap8192": {
+      "role": "candidate",
+      "reason": "Mechanical H5retry only: five samepilots withlargercap8192, then identicalforward-onlyprompts/weights; priorfailedpilot retained."
+    },
+    "phase1_logits_vectors_full_v2_logits_q2_cap8192": {
+      "role": "candidate",
+      "reason": "Explicitmappedforward-onlyAblatedretry; independentlyauditedpilot and64exactmatchingpromptbytesrequired."
+    },
+    "phase1_llama_serving_v1": {
+      "role": "engineering_pilot",
+      "reason": "Cross-family stack readiness: pinned Llama ModelOpt FP8 on one H200, fixed five pilots, cap4096 and model-emitted reasoning closure. No Phase2/3 experimental data."
+    },
+    "phase1_qualification_vllm_q3_cap8192": {
+      "role": "archived_engineering",
+      "reason": "Unrelated H5 failed on the fixed benign pilot at8192tokens, unclosed reasoning; no full Unrelated sweep. Entire six-arm attempt retained, never pooled; no heldout refusal effects inspected. Uniform16384retry planned after a five-pilot-only engineering preflight."
+    },
+    "phase1_calibration_author_v1_c1": {
+      "role": "archived_engineering",
+      "reason": "H5 failed: three of five initial pilot decisions were bare JSON without required XML wrapper. Zero capped outputs and no full evaluation. All raw evidence retained. New format-only instruction independently audited across1440render combinations before freshattempt author_v1_c2."
+    },
+    "phase1_calibration_author_v1_c2": {
+      "role": "candidate",
+      "reason": "Fresh five-pilot and fixed 200-episode Intact-only calibration after prospectively audited literal tool-call wrapper clarification. H5 independently passed; c1 retained separately as failed engineering evidence. No outcome selection or treatment-data calibration."
+    },
+    "phase1_serving_unrelated_cap16384_v1": {
+      "role": "engineering_pilot",
+      "reason": "Exactly five unchanged Unrelated pilots independently pass H2/H4/H5 atcap16384; no qualification estimate."
+    },
+    "exp23_author_v1": {
+      "role": "archived_engineering",
+      "reason": "Stopped before model initialization/generation because local and volume manifest JSON serialization bytes differed. Identical parsed metadata independently confirmed; original files/snapshots retained. Fresh v2 binds both exact serializations."
+    },
+    "exp23_author_v2": {
+      "role": "archived_engineering",
+      "reason": "Allfiveauthorpilots hit4096tokens;fourunclosedthink and oneincompletepostthinkJSON. Zero fullauthoredrecords. Preservedraw/frozeninput/returnchains; nosemantic/executorresult."
+    },
+    "phase1_qualification_vllm_q4_cap16384": {
+      "role": "accepted",
+      "reason": "Complete mechanically valid negative qualification evidence:768fulltrials and30freshpilots; zero truncations. Independently recomputed exactly. Primary refusal qualification FAIL:64/64Intact versus63/64AblatedITT,63/63strict; malformed-only1.5625ppITTdrop and0ppstrictdrop, belowrequired>70pp. No downstream authorization. Priorattemptsremainseparate."
+    },
+    "exp23_author_v3_cap16384": {
+      "role": "archived_engineering",
+      "reason": "All53authorrawrecords preserved;5pilots pass,47/48fullvalid,1MULTIPLE_TOOL_CALLS malformed envelope rejected by both strict parsers. Authoring gate failed; no evaluator outcomes. Terminal failure provenance preserved; no retry."
+    },
+    "phase1_dose_response_author_v1_d2_descriptive": {
+      "role": "archived_engineering",
+      "reason": "All240full+25pilots collected and independently reconstructed. H1 fails:alpha0.5uncapped unclosedthink1/48;alpha1.0cap/unclosed1/48. Preserve all raw; never pool with amended retry. Primary qualification remains false."
+    },
+    "phase1_dose_response_author_v1_d3_cap8192_descriptive": {
+      "role": "prepared_unlaunched",
+      "reason": "Uniform cap-only design prepared; never launched. Full mechanical audit also found uncapped think-closure failure; separate one-format-repair D4 prepared with disclosed behavior confound."
+    },
+    "phase1_dose_response_author_v1_d4_cap8192_format_v1": {
+      "role": "archived_engineering",
+      "reason": "All25pilotepisodes and53generationturns completed and independently reconciled; all5armsH5_FAILED; zeroevaluationepisodes, pendingrequests, caps or unclosedthinking. Appcompletednaturally. Exactprompts/tokens/parser/trajectoriesreplayed;149frozenfilesunchanged. No acceptedcurve, pooling, furtherwordingsearch or qualificationrescue.",
+      "terminal_provenance": "infrastructure/dose_d4_terminal_failure_provenance.json"
+    }
+  }
+}

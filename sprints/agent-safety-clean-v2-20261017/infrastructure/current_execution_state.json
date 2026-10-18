@@ -1,0 +1,30 @@
+{
+  "phase": "Phase 1 engineering correction and independent external qualification",
+  "failed_gate": {
+    "attempt": "v3",
+    "fraction_reduction": 0.8566887737888725,
+    "required": ">0.95",
+    "diagnosis": "residual projection inherited before layer20"
+  },
+  "completed": [
+    "six initial FP8 checkpoints",
+    "initial FP8 pilots",
+    "64 paired post-FP8 activation observations",
+    "layer19 diagnosis",
+    "external runtime CPU check"
+  ],
+  "active_jobs": [
+    {
+      "purpose": "complete residual coverage materialization, six arms",
+      "session_id": 87852,
+      "app_id": "ap-PohUip67rHdxOUKntNJ2n0",
+      "log": "infrastructure/materialization_full_residual_v2.log"
+    },
+    {
+      "purpose": "external pair qualification sequential TP8 workers",
+      "session_id": 30086,
+      "log": "infrastructure/external_qualification_v1.log"
+    }
+  ],
+  "next": "After full-residual Intact/Ablated are materialized, run modal_qualify --stage activation --attempt full_v2 --family checkpoints_full_residual_v2 --cap 4096. Then export activation JSONL and recompute >95% gate. Only after pass run all six held-out behavioral qualification arms at matched 4096 cap. No Phase 2 or Phase 3 data yet."
+}

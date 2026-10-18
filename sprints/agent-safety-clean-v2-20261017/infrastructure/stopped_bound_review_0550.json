@@ -1,0 +1,47 @@
+[
+  {
+    "job": "ablated_forward_logits_q2_cap8192",
+    "app_id": "ap-DrJZuJfJ7SXSyLlEaZkBGp",
+    "old": 4,
+    "new": 1,
+    "seconds": 389.0,
+    "rate": 0.0014708,
+    "source": "scripts/modal_qualify.py"
+  },
+  {
+    "job": "llama_serving_pilot_v1",
+    "app_id": "ap-aTtYCFNtxQ7SR2AiI5724x",
+    "old": 2,
+    "new": 1,
+    "seconds": 256.0,
+    "rate": 0.0014708,
+    "source": "scripts/modal_llama_serving_pilot.py"
+  },
+  {
+    "job": "phase1_dose_materialization_checkpoint_doses_v1",
+    "app_id": "ap-aBgeWxgAdXW1zuqydK38gb",
+    "old": 4,
+    "new": 3,
+    "seconds": 1841.0,
+    "rate": 0.00130902,
+    "source": "scripts/modal_materialize_doses.py"
+  },
+  {
+    "job": "phase1_intact_calibration_author_v1_c1",
+    "app_id": "ap-7QpW4svbcs1yvhXfhbceYQ",
+    "old": 2,
+    "new": 1,
+    "seconds": 509.0,
+    "rate": 0.0013068,
+    "source": "scripts/modal_sandbox_evaluation.py"
+  },
+  {
+    "job": "exp23_unified_author_v1",
+    "app_id": "ap-0bmVqHd8QW47ycTEPjAdzU",
+    "old": 3,
+    "new": 2,
+    "seconds": 52.0,
+    "rate": 0.009285080000000001,
+    "source": "scripts/modal_exp23_author.py"
+  }
+]

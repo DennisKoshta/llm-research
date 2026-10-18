@@ -1,0 +1,1950 @@
+{
+  "explicit_extra_paths": [
+    "infrastructure/dose_d4_first_pilot_failure.json",
+    "infrastructure/dose_d4_h5_stop_decision.json",
+    "infrastructure/dose_d4_stop_action_result.json",
+    "infrastructure/exp23_author_uniform_cap16384_rule.json",
+    "infrastructure/final_closeout_plan.json",
+    "infrastructure/final_forward_exports_persistence.json",
+    "infrastructure/phase1_component_paths_q4_descriptive.json",
+    "infrastructure/phase1_component_paths_q4_descriptive_d3.json",
+    "infrastructure/phase1_component_paths_q4_descriptive_d4.json",
+    "infrastructure/primary_logit_arm_attempts.json",
+    "infrastructure/primary_uniform_cap16384_rule.json",
+    "infrastructure/primary_uniform_cap8192_rule.json"
+  ],
+  "files": [
+    {
+      "path": "ENGINEERING_CORRECTIONS.md",
+      "sha256": "40f2201a4d4cf25c7698d5d95158288a537e712056435dd9d2284122a267fa02",
+      "size_bytes": 4439
+    },
+    {
+      "path": "ENGINEERING_CORRECTIONS_COMPLETED_STATUS.md",
+      "sha256": "760b55d7a3c40270c7c088fa65ac0cf1dfc927f7ef56e605d0d37de9a0e9efa0",
+      "size_bytes": 5618
+    },
+    {
+      "path": "FINAL_RESEARCH_SPECIFICATION.md",
+      "sha256": "ae77cb20a58000e88b464359c1264aa7547df63b4dae7eb4c67b77fab316e4a4",
+      "size_bytes": 33108
+    },
+    {
+      "path": "FINAL_RESULTS_FOR_REVIEW.md",
+      "sha256": "2c8655701f0a9ec0b2f501753966624c95613e609d7ecad7b115b03544acb9ad",
+      "size_bytes": 16461
+    },
+    {
+      "path": "PROGRESS_AND_GATES.md",
+      "sha256": "fd3675218bd46bfcb564fa4f4b644fbc49341f943838fde7a73adc41c363275b",
+      "size_bytes": 45616
+    },
+    {
+      "path": "STAGE0_HYGIENE_REPORT.md",
+      "sha256": "caf6ce1b746ca30f9d76a20cb578a11ab7cbff29d0c19a70a40a7302119da6e8",
+      "size_bytes": 32108
+    },
+    {
+      "path": "attempt_registry.json",
+      "sha256": "75b9fbd31195de041e0c61d597495657b8a11ea012f2fbb972f9da2aec951934",
+      "size_bytes": 10170
+    },
+    {
+      "path": "executions/exp23_author_v3_cap16384/source_manifest.json",
+      "sha256": "ac0003d8d12c0f5ef02ffb7e1ad1e9d0f1c70b6580d82d8fb2ab334bb51524ee",
+      "size_bytes": 1614
+    },
+    {
+      "path": "executions/llama_checkpoint_download_v1/source_manifest.json",
+      "sha256": "45ec7427959df2ae330c711c0404d9564887076eb5a962026a5ec7f7dc0aa4f5",
+      "size_bytes": 212
+    },
+    {
+      "path": "executions/phase1_author_v1/source_manifest.json",
+      "sha256": "da384060d17e4773addab7d854251217ac502e7d34d5a78b5ff23ea067dff399",
+      "size_bytes": 755
+    },
+    {
+      "path": "executions/phase1_batched_qualification_vllm_q2/source_manifest.json",
+      "sha256": "ecdbdd9c1ac1c80d9c9c4278d13a3f3498ea139afd655ac469c9eae8f9bec790",
+      "size_bytes": 431
+    },
+    {
+      "path": "executions/phase1_batched_qualification_vllm_q3_cap8192/source_manifest.json",
+      "sha256": "f5f25f24f2a2893ae5ae23d3393db8a3ea2159a17c6bb76a6e0feff3f38d9a6c",
+      "size_bytes": 1123
+    },
+    {
+      "path": "executions/phase1_batched_qualification_vllm_q4_cap16384/source_manifest.json",
+      "sha256": "416ad140c0ab8cadebd995c5f0a7ce0e47018949ce7dd646b2e2472665148672",
+      "size_bytes": 2105
+    },
+    {
+      "path": "executions/phase1_batched_transition_vllm_q1/source_manifest.json",
+      "sha256": "e6ad4a31e1cebfaa8ad8b04a7e2810265e6eed4e8abee8a1a1029efd3688f2c2",
+      "size_bytes": 877
+    },
+    {
+      "path": "executions/phase1_calibration_author_v1_c1/authorization_cache.json",
+      "sha256": "012a54744b536d7b428a0c57134e3e5af835e93587a709e49c7878fb91bedbda",
+      "size_bytes": 7807
+    },
+    {
+      "path": "executions/phase1_calibration_author_v1_c1/resource_config.json",
+      "sha256": "0977ad3a20ff06072642d6d83b7c4deffd17bc8232d7b7f31bc1af9e85b1a3b4",
+      "size_bytes": 1635
+    },
+    {
+      "path": "executions/phase1_calibration_author_v1_c1/source_manifest.json",
+      "sha256": "b33b0e09349002394cb900f68fe81f8638fba5a1eb79e416c2a63fb3cb82ac7d",
+      "size_bytes": 1797
+    },
+    {
+      "path": "executions/phase1_calibration_author_v1_c2/authorization_cache.json",
+      "sha256": "f72cfdebede870f908c63a25c1b0ff3936acffc1277abbdf15b8841163130920",
+      "size_bytes": 7875
+    },
+    {
+      "path": "executions/phase1_calibration_author_v1_c2/resource_config.json",
+      "sha256": "9d7a70929c4c083e06ece563b65a54a6e7c782e2c81e5c525b0c119a0b333eae",
+      "size_bytes": 1645
+    },
+    {
+      "path": "executions/phase1_calibration_author_v1_c2/source_manifest.json",
+      "sha256": "becb5cdb99ac90680e3e8e7d6a0a7a555d63303b79ac362efefce2e389af46fe",
+      "size_bytes": 1807
+    },
+    {
+      "path": "executions/phase1_calibration_provenance_author_v1_c2_cpu_v1/source_manifest.json",
+      "sha256": "894f3830f561ed7d0e43156c23022cda23726511afaffe1da2c8c3d30ff0e320",
+      "size_bytes": 367
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d1/materialization/authorization_cache.json",
+      "sha256": "fc320790912f51b919934adf8504cce78ea818de13a89562481ebb56f6f3e9e0",
+      "size_bytes": 2931
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d1/materialization/resource_config.json",
+      "sha256": "de1962a85ecb907f77c514d3c060ebe2c59c28c591a210e37014ba9131e603a7",
+      "size_bytes": 3768
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d1/materialization/source_manifest.json",
+      "sha256": "364f378ab850b4e8660e9a65eb1c2525bff45a4e61ab7f8d4147882ee68f4833",
+      "size_bytes": 944
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation/authorization_cache.json",
+      "sha256": "1f49d0dc4b7117f71d51b685ac59e4b6fa4cb7cb22aa1a37882cb399877b2e71",
+      "size_bytes": 36490
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation/frozen_authorization.json",
+      "sha256": "30988774145c81c0456f60cebcb6dcbd1f3a44943f8612649229c9f3b3213638",
+      "size_bytes": 22715
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation/resource_config.json",
+      "sha256": "d83d7e058cf710b00af4dcf68d758ddfebb6b509f5a32558526e88df1a5e4fe2",
+      "size_bytes": 13843
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation/source_manifest.json",
+      "sha256": "95b517fd2af7325ab7b867f7d447da27029d3674fb5bcc2492d09edb2b24b30a",
+      "size_bytes": 2216
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation_prelaunch_app_listing_failure_v1/authorization_cache.json",
+      "sha256": "b678c82a175a4b334951e1ecdaac5f47e2a5b5c30c800789364041f9dbc7e8a6",
+      "size_bytes": 36490
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation_prelaunch_app_listing_failure_v1/frozen_authorization.json",
+      "sha256": "30988774145c81c0456f60cebcb6dcbd1f3a44943f8612649229c9f3b3213638",
+      "size_bytes": 22715
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation_prelaunch_app_listing_failure_v1/resource_config.json",
+      "sha256": "346fa6be2bf1fc92e054a5cec48b7447feb95b495b38fafaf593b08a3215b02b",
+      "size_bytes": 13843
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d2_descriptive/evaluation_prelaunch_app_listing_failure_v1/source_manifest.json",
+      "sha256": "31a3db3aa7e5e8a8002b583980accedf6ff2767b337454ff6534556cbe1a3a16",
+      "size_bytes": 2216
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d4_cap8192_format_v1/evaluation/authorization_cache.json",
+      "sha256": "369f17eea4bd58dd247eeceae0c7c0075a9c8450164535d8cab97a938a54c951",
+      "size_bytes": 51313
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d4_cap8192_format_v1/evaluation/frozen_authorization.json",
+      "sha256": "e7dfc43998171254d0496a56b1022e1ed2ad5e670434a3abbadc298f3fea86e9",
+      "size_bytes": 28414
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d4_cap8192_format_v1/evaluation/resource_config.json",
+      "sha256": "c3f143c2a8ccb1b7e523c3fe67cd1e38f5f4316e189b511bba773fd9d66aba20",
+      "size_bytes": 22619
+    },
+    {
+      "path": "executions/phase1_dose_supervisor_author_v1_d4_cap8192_format_v1/evaluation/source_manifest.json",
+      "sha256": "5a8143d81c50231ad9a46d61589402cd066a689cc8aaabcc20dd0bbef55a2f47",
+      "size_bytes": 3082
+    },
+    {
+      "path": "executions/phase1_external_raw_audit_v3_v4_eager/source_manifest.json",
+      "sha256": "ce7c7f9ae47422c5554eb457d3cb8c97777e573a01dfef1353bcf8d8be7319b3",
+      "size_bytes": 303
+    },
+    {
+      "path": "executions/phase1_llama_serving_v1/source_manifest.json",
+      "sha256": "52ff3b4e8977d1222c2d5bbe236dc744436d0861c226efc0fe18a7d9f44bcf6d",
+      "size_bytes": 525
+    },
+    {
+      "path": "executions/phase1_logits_q2_cap8192/source_manifest.json",
+      "sha256": "d6103c04ef0513e24cf9a436b0862c493039940424a32876571935c78e39b22e",
+      "size_bytes": 653
+    },
+    {
+      "path": "executions/phase1_serving_v3/source_manifest.json",
+      "sha256": "6df1fae2cfede23feae54c1c0f8346f2808388c26048f775ec47d87107e90e57",
+      "size_bytes": 445
+    },
+    {
+      "path": "executions/phase1_serving_v4/source_manifest.json",
+      "sha256": "f2f8a2c9db4fb9f1c5157a0b4784dc26cf561d5f6376d9ce9bd34f8e15ef5327",
+      "size_bytes": 551
+    },
+    {
+      "path": "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/capture.json",
+      "sha256": "220cd15cb1d6e670bc4fe08f1c2aa20ce3fff48a9d5bb0864fdc3a2ffb0eba80",
+      "size_bytes": 3845
+    },
+    {
+      "path": "infrastructure/author_provenance/v3_cap16384/postlaunch_v1/fixed_prompt_replay.json",
+      "sha256": "e3ed397d6b9a49c09ebabaeee5e3205a8d77b16d69103c65bc77bd9cb2b68d43",
+      "size_bytes": 178397
+    },
+    {
+      "path": "infrastructure/author_v1_watch_status.json",
+      "sha256": "b1fdd4085f9cc6ef449305cbe957f61b163ff49974e0ed28a8c9f8205a1c01f3",
+      "size_bytes": 561
+    },
+    {
+      "path": "infrastructure/budget_mapping_review.json",
+      "sha256": "f0695c6b258a1bc218161adbcf03bb57b4729ea9d6f2a5e1cd77a7cd09d38b04",
+      "size_bytes": 74506
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0319.json",
+      "sha256": "eab7d5750c6de3a77ff0dc48748540bfc1e01a105731d0cee7ef41ba6b5374fe",
+      "size_bytes": 884
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0325.json",
+      "sha256": "c8406baebccc01ebc6ed88df86dcd142f156feb315edc931906e8acd8d23b583",
+      "size_bytes": 892
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0339.json",
+      "sha256": "616f4ecf7865f4bcea641198e98f301b111bb3b20549d30da1a9b261367703a4",
+      "size_bytes": 887
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0418.json",
+      "sha256": "e17022e91968ec7073566e31a3c26d9997afcb489fcfc900dd16dd0e965af999",
+      "size_bytes": 7220
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0428.json",
+      "sha256": "db9210ce2ebbcb118ebd658cb61f7ebaa20ce294e6fb5bb471279238cb7fe5cf",
+      "size_bytes": 10665
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0444.json",
+      "sha256": "a6121136ba7981ba1dcbd8e766039873f509785aa80b0203d3714936d266c3b3",
+      "size_bytes": 7487
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0502.json",
+      "sha256": "cc0e4d5513336dc2fa74e51caa5266eecb28065eec276fb9bbc11fdf71b640c6",
+      "size_bytes": 3623
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0515.json",
+      "sha256": "6032ebbd7716a15709496a9064f96254391c4a293ad4fa886e7ff7d9b7ae1d6c",
+      "size_bytes": 1752
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_0533.json",
+      "sha256": "2b1a0d3459eb5fca49aa8c3e45d69d1bfd8894566093d3e9d0c86c41585ac1b8",
+      "size_bytes": 2110
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_exp23_author_v1.json",
+      "sha256": "391364dc0f9640310ebaf50de9abf11aa3704b3a95c2f0b78e8cec94bbf09dab",
+      "size_bytes": 1610
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_exp23_author_v2.json",
+      "sha256": "a358397fe2e9a47459d4b982991270f326b27b40bde787ab405e632d25ca62b3",
+      "size_bytes": 809
+    },
+    {
+      "path": "infrastructure/budget_reconciliation_q4_terminal.json",
+      "sha256": "594e3c53fdc276fdd57ae41ee6c618aa9f360912dea8d9751172bf5f48c115ec",
+      "size_bytes": 743
+    },
+    {
+      "path": "infrastructure/budget_reservations.json",
+      "sha256": "8c716ec232ab955d0262ae98fea87a6667f303268fcf614e7b68b1aa70b7049a",
+      "size_bytes": 63536
+    },
+    {
+      "path": "infrastructure/calibration_author_v1_c1_watch_status.json",
+      "sha256": "c4bb97c5550bf9e3682d442a6f02d2f15efcec38fe844ead8ae5cd8052182cb2",
+      "size_bytes": 17404
+    },
+    {
+      "path": "infrastructure/calibration_author_v1_c2_independent_provenance.json",
+      "sha256": "a06fd8167b8574bc9d1208ce8bcf4c5a21f31ae1d944c160b8d556b34c7cf983",
+      "size_bytes": 4071
+    },
+    {
+      "path": "infrastructure/calibration_author_v1_c2_watch_status.json",
+      "sha256": "6c9e04d9392da522f8b8f31194b32c6999a10023f89b93369e050d4e94f9fce2",
+      "size_bytes": 17750
+    },
+    {
+      "path": "infrastructure/calibration_format_v2_correction.json",
+      "sha256": "c41bece5a115c68b540552178fba1c40dd620b0fe317f6726b803494d3586a47",
+      "size_bytes": 1262
+    },
+    {
+      "path": "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture.json",
+      "sha256": "c68179a74db98874ce924150eb4d3e6b1e03b96d2f15b83be6e3dd21233feb3f",
+      "size_bytes": 5552
+    },
+    {
+      "path": "infrastructure/calibration_provenance/author_v1_c2/cpu_v1/capture_request.json",
+      "sha256": "a4b6f658d8247111de367eb821a4e9f38783fb4033424482e1d59e6c9d0228bc",
+      "size_bytes": 2215
+    },
+    {
+      "path": "infrastructure/dose_d3_unlaunched_disposition.json",
+      "sha256": "25e41f96def97758b0754026c624818b9f505c00592963dcf35deddb9388d059",
+      "size_bytes": 699
+    },
+    {
+      "path": "infrastructure/dose_d4_first_pilot_failure.json",
+      "sha256": "981c81e75ac8cdb6fc89d464000fd2eaf80b2040993c2048ab784ab3dfc99f57",
+      "size_bytes": 1441
+    },
+    {
+      "path": "infrastructure/dose_d4_h5_stop_decision.json",
+      "sha256": "642dc3f81aae5364bac633a4913f113bfa26dfc56473ce513e033b99ad5e7486",
+      "size_bytes": 1563
+    },
+    {
+      "path": "infrastructure/dose_d4_stop_action_result.json",
+      "sha256": "5a19170cc11f083f3e17bd237c4968f7092bccb501562c9b692c0fa1af1625dd",
+      "size_bytes": 1355
+    },
+    {
+      "path": "infrastructure/dose_d4_terminal_failure_provenance.json",
+      "sha256": "794206dcdb417f711786b3fe45248cd3291ff7494e3aa28470557b44120e53e7",
+      "size_bytes": 92321
+    },
+    {
+      "path": "infrastructure/dose_d4_terminal_failure_provenance.md",
+      "sha256": "8e17970cdb09e8215fef401fa33cdcf73702332e5833c0eacc49ce146796a015",
+      "size_bytes": 1434
+    },
+    {
+      "path": "infrastructure/dose_tokenizer_metadata_recovery_v1.json",
+      "sha256": "a0f8adc965ea5c480f3a8eb67c562e4f93e99b0ccd8ccc39e74876a0e2dfdf24",
+      "size_bytes": 1270
+    },
+    {
+      "path": "infrastructure/dose_uniform_budget_retry_rule_v1.json",
+      "sha256": "ac8de189e43908578651c130a6fed8cb6b7ba9b5b9012fc55f7e3c1286cae208",
+      "size_bytes": 968
+    },
+    {
+      "path": "infrastructure/exp23_author_uniform_cap16384_rule.json",
+      "sha256": "c4f6087403eb5f6226e59b0b1e4f568a355501a18636817d930f0f0a473a7604",
+      "size_bytes": 663
+    },
+    {
+      "path": "infrastructure/exp23_author_v1_watch_status.json",
+      "sha256": "b54353d6de1c58e74e5994ea27fbefe6a8f6202d6a1ecb22d0dfba81fc088ac5",
+      "size_bytes": 447
+    },
+    {
+      "path": "infrastructure/exp23_author_v2_watch_status.json",
+      "sha256": "4be62373466b04b134cbc90292ddd8baa92cc4e9c0af6401e418778bfe744336",
+      "size_bytes": 3664
+    },
+    {
+      "path": "infrastructure/exp23_author_v3_cap16384_pilot_independent_audit.json",
+      "sha256": "3a11cb24e0935f073c3ab7de921797bd7b4c9420e4efbf75c8b6bedecbda638a",
+      "size_bytes": 2002
+    },
+    {
+      "path": "infrastructure/exp23_author_v3_cap16384_terminal_failure_provenance.json",
+      "sha256": "fe8ef6fc25d5f0876a90a4dd1fecb00c9fc231375695f954124ecbb11928b0cf",
+      "size_bytes": 12724
+    },
+    {
+      "path": "infrastructure/exp23_author_v3_cap16384_terminal_failure_provenance.md",
+      "sha256": "5af7ff2bf8ff5414c7d0d3b1ff3feee863f800744a929623a4a3bc16f5125e91",
+      "size_bytes": 2179
+    },
+    {
+      "path": "infrastructure/exp23_author_v3_cap16384_watch_status.json",
+      "sha256": "282d6ed9e4b71bc08aae4235f63ee26d632a9db9f002adce7bf9b25f518f0527",
+      "size_bytes": 3729
+    },
+    {
+      "path": "infrastructure/final_closeout_plan.json",
+      "sha256": "3636b6564d5fddf183c008e3c275d402fedec58f09dfcf95d9d6faa1f5344a38",
+      "size_bytes": 342
+    },
+    {
+      "path": "infrastructure/final_forward_exports_persistence.json",
+      "sha256": "202bf8eaee547c0b58f911d85245bf79fdbb1641ed55ff6e48ad82989cdcb229",
+      "size_bytes": 1645
+    },
+    {
+      "path": "infrastructure/final_owned_compute_status.json",
+      "sha256": "9ea4236550d964470cc358c72907dba18eb0e5e2651ff8e097f072ef131a21ac",
+      "size_bytes": 30424
+    },
+    {
+      "path": "infrastructure/final_sprint_app_list_status.json",
+      "sha256": "a2ed1650439696f2e87bfa329ec91c431a8b408d7b71ea07d028af2c642fa15f",
+      "size_bytes": 2881
+    },
+    {
+      "path": "infrastructure/materialization_full_residual_v2_status.json",
+      "sha256": "56b7b177ca9e7c9a2ee4dfbaf92367ac0e8b3fa1ca7ced99c946e70fb8a729c0",
+      "size_bytes": 202995
+    },
+    {
+      "path": "infrastructure/materialization_status.json",
+      "sha256": "dab716f852d0061c63b3611c07d1d510e5b107f9060b988abeb2089e3f4ba85f",
+      "size_bytes": 186765
+    },
+    {
+      "path": "infrastructure/modal_apps_user_status.json",
+      "sha256": "5a32f577f69a5338996dd14295ebc7eabc4d408b80997ad8cdeb7640251c76ad",
+      "size_bytes": 7047
+    },
+    {
+      "path": "infrastructure/modal_environment_resource_limits.json",
+      "sha256": "92cf9dd3ff88d506041ee4d36cf13c94dba02fcbb0a3340a9f3d765c1579ee41",
+      "size_bytes": 317
+    },
+    {
+      "path": "infrastructure/phase1_batched_watch_status.json",
+      "sha256": "5f78c4701a1be29561df34c3a85ce77cccbb4b8b629cc0368b40866031547a8b",
+      "size_bytes": 1438
+    },
+    {
+      "path": "infrastructure/phase1_cap16384_watch_status.json",
+      "sha256": "ceab8508457eea22486e666de009dc6cebf0034ac1feedfa98ee25ab48c4ab51",
+      "size_bytes": 3306
+    },
+    {
+      "path": "infrastructure/phase1_cap8192_watch_status.json",
+      "sha256": "3c1b3a1463fc2c2ce6cf546692834adedd54fd86a6f0bc1495602e44b211de15",
+      "size_bytes": 3306
+    },
+    {
+      "path": "infrastructure/phase1_component_paths_q4_descriptive.json",
+      "sha256": "29004c8458283e2e26cf98f9c138b6deed484ccf27f50f4bafad98f58ca91cb5",
+      "size_bytes": 918
+    },
+    {
+      "path": "infrastructure/phase1_component_paths_q4_descriptive_d3.json",
+      "sha256": "cf2d5387b43c9aa24025121e8f19f64a22210fb7b44c9621f02fc0a3320171a7",
+      "size_bytes": 938
+    },
+    {
+      "path": "infrastructure/phase1_component_paths_q4_descriptive_d4.json",
+      "sha256": "8c72f8569f6f1b3bd71f031dd9712f3b6f13b78189a97bcb29cf522986b99738",
+      "size_bytes": 933
+    },
+    {
+      "path": "infrastructure/phase1_descriptive_dose_amendment_v1.json",
+      "sha256": "1a2ff155f9f8561d54ae1adea4e19a781988ad50698ad9f9a3423d6f56e845f7",
+      "size_bytes": 2547
+    },
+    {
+      "path": "infrastructure/phase1_descriptive_dose_format_retry_v1.json",
+      "sha256": "6184a65528543e1c639c30c60ee3767018e7a1f18cafd0cf35c7bb42f94da163",
+      "size_bytes": 6241
+    },
+    {
+      "path": "infrastructure/phase1_descriptive_dose_retry_cap8192_v1.json",
+      "sha256": "7164631e825f484a10a14b08e3f671b6fdea55d22393899b105c6cdb96b6db0d",
+      "size_bytes": 3971
+    },
+    {
+      "path": "infrastructure/phase1_doses_author_v1_d1_supervisor_status.json",
+      "sha256": "177cf9c5629211b3180f36d2324ea6e67149efa416405ee27dc7eb77750cd87b",
+      "size_bytes": 406
+    },
+    {
+      "path": "infrastructure/phase1_doses_author_v1_d2_descriptive_supervisor_status.json",
+      "sha256": "82d7bde24d7c1ae46e2c27d8a8d36dde4c633e5f38fc1c30da1185f94e77a228",
+      "size_bytes": 210028
+    },
+    {
+      "path": "infrastructure/phase1_doses_author_v1_d4_cap8192_format_v1_pre_stop_supervisor_status.json",
+      "sha256": "5d49a3e5a3f6c347e1e75e11f23cc5aa21b27250066daeb43da2ac877af973d7",
+      "size_bytes": 692
+    },
+    {
+      "path": "infrastructure/phase1_doses_author_v1_d4_cap8192_format_v1_supervisor_status.json",
+      "sha256": "811253a990ecb33586bea4baa35457095416de1f6161eea439b2690a86837bab",
+      "size_bytes": 1196
+    },
+    {
+      "path": "infrastructure/phase1_source_status.json",
+      "sha256": "6100846da38908da3a2ee6a316d4d6a70aa7c908aebde1cd59cc9809b57732b8",
+      "size_bytes": 90661
+    },
+    {
+      "path": "infrastructure/phase1_watch_status.json",
+      "sha256": "191dc6b3d2f483dc5b0129f94d09c1dcbf8902e510af954cb582b6ac01bc42f3",
+      "size_bytes": 1162
+    },
+    {
+      "path": "infrastructure/primary_logit_arm_attempts.json",
+      "sha256": "2ab8219f6b432e37eef3304a78b41a1c75357320edb8fc0837e235735749ef68",
+      "size_bytes": 224
+    },
+    {
+      "path": "infrastructure/primary_preflight_unrelated_cap16384_v1_watch_status.json",
+      "sha256": "b68f667e39a204b8ff0b3b1159457d47c1b1382d1f17557514d2ddc472e5fa2a",
+      "size_bytes": 17337
+    },
+    {
+      "path": "infrastructure/primary_q4_independent_failure_audit.json",
+      "sha256": "0315ac11dd7c718d2d2773e5fb7c0a80f5ffa14bcdc23a1aeb3f47d36c50b23f",
+      "size_bytes": 41701
+    },
+    {
+      "path": "infrastructure/primary_q4_independent_failure_audit.md",
+      "sha256": "5da5a2e4eecaa01c23deef323dfc08fa8be92724fce758be74ab3862d3910bdb",
+      "size_bytes": 3919
+    },
+    {
+      "path": "infrastructure/primary_uniform_cap16384_rule.json",
+      "sha256": "92402e7301b2a8c159dd4e955b27001f97a4f490bc1bcd5bb66ff67006b0d202",
+      "size_bytes": 1186
+    },
+    {
+      "path": "infrastructure/primary_uniform_cap8192_rule.json",
+      "sha256": "3c17176ddc3eda5ab262bad7a20ea9faff2c9960484e4c482b3bc8044574f612",
+      "size_bytes": 905
+    },
+    {
+      "path": "infrastructure/resource_allocations.json",
+      "sha256": "af9c33dbe7cafda4ebfaa9bc6ee665397b335bd5202123468ab50264afad122d",
+      "size_bytes": 131069
+    },
+    {
+      "path": "infrastructure/resource_allocations_before_final_reconciliation.json",
+      "sha256": "edfefbe5b14948d4e4f96e9f26d8eefd66f020d90dcd2fa20089f2022baefad1",
+      "size_bytes": 124113
+    },
+    {
+      "path": "infrastructure/resource_final_reconciliation.json",
+      "sha256": "5d2daea15e7abb7cd2c2405539f2cfc84d6c22356b7523a355cb50d851cbfddb",
+      "size_bytes": 742
+    },
+    {
+      "path": "infrastructure/resource_identity_reconciliation_0635.json",
+      "sha256": "af0ea2244b21f74b9e4c9beb28f4668c24f272d173425299fbcb34ab768b1c3a",
+      "size_bytes": 1539
+    },
+    {
+      "path": "pilots/exp23_author_v2_pilot_audit.md",
+      "sha256": "d972f73b702d7959e9fd6e3eb1ecb1f0e72c7a886c233e92cb1ca55ddaaf3da9",
+      "size_bytes": 458808
+    },
+    {
+      "path": "pilots/exp23_author_v3_cap16384_pilot_audit.md",
+      "sha256": "924ec8fbdfebcf7243818187ef14164d913bcf012815110a5daa11d4c2b43dec",
+      "size_bytes": 661180
+    },
+    {
+      "path": "pilots/phase1_activation_full_v2_intact_pilot_audit.md",
+      "sha256": "2143ff743d6146c158104c6a530b80c8c39113b0b7786970807f689d51c92e91",
+      "size_bytes": 101132
+    },
+    {
+      "path": "pilots/phase1_activation_full_v2_refusal_ablated_pilot_audit.md",
+      "sha256": "a82807052abcbae62db423682852ac283674992c10432ab7027e518c98cc07d7",
+      "size_bytes": 60493
+    },
+    {
+      "path": "pilots/phase1_activation_v3_intact_pilot_audit.md",
+      "sha256": "b673e172852f3b49b48b270b5d9a2a7e43767f0ac7cc0469054fe88d5587b7dd",
+      "size_bytes": 63705
+    },
+    {
+      "path": "pilots/phase1_activation_v3_refusal_ablated_pilot_audit.md",
+      "sha256": "3f5590576d0161ecbfdd23fbc2c8b599aa4c2942dc6b7acb579c5fd801c7ccba",
+      "size_bytes": 72762
+    },
+    {
+      "path": "pilots/phase1_activation_v4_diagnostic_intact_pilot_audit.md",
+      "sha256": "e890a81ead0096459a9ad16ee2c3102e63caef706592326ac7251ba0634888fd",
+      "size_bytes": 93283
+    },
+    {
+      "path": "pilots/phase1_activation_v4_diagnostic_refusal_ablated_pilot_audit.md",
+      "sha256": "3335c746a373202e04d785fada5fc1dd27a44b42eff55199e9b980512447f6ec",
+      "size_bytes": 91119
+    },
+    {
+      "path": "pilots/phase1_author_v1_pilot_audit.md",
+      "sha256": "8e8932108710f8bd052c9537598d7765b001b07120fb86248d70f1fd65b4e460",
+      "size_bytes": 230109
+    },
+    {
+      "path": "pilots/phase1_calibration_author_v1_c1_intact_cot_on_pilot_audit.md",
+      "sha256": "d17e3ef2aef7c0a2c3df92e4a652e5b8b8b7bfe45bdbee7ade9e361576798c92",
+      "size_bytes": 165712
+    },
+    {
+      "path": "pilots/phase1_calibration_author_v1_c2_intact_cot_on_pilot_audit.md",
+      "sha256": "02f61dc5705ce9df761ffb280b10914675a7372b011a9003b8bed471e4106798",
+      "size_bytes": 165895
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_0_0_cot_on_pilot_audit.md",
+      "sha256": "d097721acdbc498663fb43344939aa210f73a197834bca972ca5f8d30ebadf7c",
+      "size_bytes": 307944
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_1_0_cot_on_pilot_audit.md",
+      "sha256": "70a534a0122e5a4b65b0e3e2b43be170e84b253eae470bfb44d9f1d05a7e5184",
+      "size_bytes": 300971
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_m0_5_cot_on_pilot_audit.md",
+      "sha256": "5ddf87eddec9da8bb5272371b73ce15b027b407c41ab166bf0037059d2a3223f",
+      "size_bytes": 318693
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_p0_5_cot_on_pilot_audit.md",
+      "sha256": "07cb7c065bd3b1f40291f869ee678e97f95af1bf70240ec7fbd5a87af86abbfc",
+      "size_bytes": 302121
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d2_descriptive_dose_p1_5_cot_on_pilot_audit.md",
+      "sha256": "d84e2884f948891412e2e509d825653abb3d7e1dc94f6e0b79b72fe4a27601d3",
+      "size_bytes": 615780
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d4_cap8192_format_v1_dose_0_0_cot_on_pilot_audit.md",
+      "sha256": "2a6e4babc9544d9eddb01d1416882e7e93763ca6da186b258a11bc5c756fd0b2",
+      "size_bytes": 297439
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d4_cap8192_format_v1_dose_1_0_cot_on_pilot_audit.md",
+      "sha256": "1ddf5fcb940ac8d8b50a4568390dc9753f16d9b22680033be042b9c94b6eef1a",
+      "size_bytes": 288382
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d4_cap8192_format_v1_dose_m0_5_cot_on_pilot_audit.md",
+      "sha256": "8f5a23639d587725b565382a7b672801ef5400fc2240e4f7381ad6965402149e",
+      "size_bytes": 301198
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d4_cap8192_format_v1_dose_p0_5_cot_on_pilot_audit.md",
+      "sha256": "5df5bf7188372597fca2d2c4518754f117d1ae8e58f5bfb74f93e1061b95417a",
+      "size_bytes": 202019
+    },
+    {
+      "path": "pilots/phase1_dose_response_author_v1_d4_cap8192_format_v1_dose_p1_5_cot_on_pilot_audit.md",
+      "sha256": "67a6ed5501657e8703154ea9067e4ee0996bc827e5264fdbb9f91051e8e09c58",
+      "size_bytes": 233125
+    },
+    {
+      "path": "pilots/phase1_external_v1_flash_next_intact_pilot_audit.md",
+      "sha256": "ede586ba7d10f8d27707b682f5ab7991ff3bdefc0320d64b961af91ef3fcc221",
+      "size_bytes": 80427
+    },
+    {
+      "path": "pilots/phase1_external_v3_flash_next_intact_pilot_audit.md",
+      "sha256": "db43f48e4a688c62d11b1a19c2ce62e6c2dd813e68f95ce88a1780310108db2f",
+      "size_bytes": 80650
+    },
+    {
+      "path": "pilots/phase1_external_v3_flash_next_uncensored_pilot_audit.md",
+      "sha256": "cd61107e288100717316abb18c4796692166f94c59daa3d2f4ecd29995c84123",
+      "size_bytes": 128097
+    },
+    {
+      "path": "pilots/phase1_external_v4_eager_flash_next_uncensored_pilot_audit.md",
+      "sha256": "37a8e7ef04430fe759afd61807fc2c15ce92440363e17b71c243f91cddafbcbb",
+      "size_bytes": 96190
+    },
+    {
+      "path": "pilots/phase1_llama_serving_v1_llama_intact_pilot_audit.md",
+      "sha256": "70483734b0f0b221e13c2497424ca518f078544eeef61d756fc276d4e0662919",
+      "size_bytes": 65253
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q1_intact_pilot_audit.md",
+      "sha256": "7c74c61862cae9be2b10a790cd0ffa3c450b30be29341c24d560164f4b742009",
+      "size_bytes": 91607
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q1_pca_101_pilot_audit.md",
+      "sha256": "95edde7fdefbb93ee63479d39534bb5770a715d4702847e9c5b4214363494a71",
+      "size_bytes": 57412
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q1_pca_102_pilot_audit.md",
+      "sha256": "755058973e7a271574985752fe695dd39cfae4209f390716c8ecc251a1bbad18",
+      "size_bytes": 92598
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q1_pca_103_pilot_audit.md",
+      "sha256": "176da86a225a64fb54b0e8fbb99fbcfa0b8f49c015fc0c82bc3ac87b2d310e6f",
+      "size_bytes": 74942
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q1_refusal_ablated_pilot_audit.md",
+      "sha256": "5e4f9eb36f827ac0915e8bcf104d8c175af5eb18a952bbd0b43d678423f037c1",
+      "size_bytes": 141055
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q1_unrelated_pilot_audit.md",
+      "sha256": "f2efb6dc9d0de7aba2649c700ffdc08a08f9bf65870eab83292652b929871642",
+      "size_bytes": 85133
+    },
+    {
+      "path": "pilots/phase1_logits_full_v2_logits_q2_cap8192_refusal_ablated_pilot_audit.md",
+      "sha256": "6ed5bc4071d3ccc134cf77dc2c0fa8c56efe4045eedbc3d828340632d11234ce",
+      "size_bytes": 76075
+    },
+    {
+      "path": "pilots/phase1_qualification_full_v2_q1_intact_pilot_audit.md",
+      "sha256": "c65417665fe9506a32ade2f8ac6975131f1b8f6216aff3a95ea697c332cac714",
+      "size_bytes": 66749
+    },
+    {
+      "path": "pilots/phase1_qualification_full_v2_q1_pca_101_pilot_audit.md",
+      "sha256": "c556a937fccafcd8b3d4e19b569fd40b45714922b5bbbb79fc4863208c8ecf7b",
+      "size_bytes": 61618
+    },
+    {
+      "path": "pilots/phase1_qualification_full_v2_q1_pca_102_pilot_audit.md",
+      "sha256": "b366cad3ab8ba72cfa091b20ebe27417a78dbae47ef3c646cd4b45018b626e22",
+      "size_bytes": 75465
+    },
+    {
+      "path": "pilots/phase1_qualification_full_v2_q1_refusal_ablated_pilot_audit.md",
+      "sha256": "0aeb3ba56b323e5430497e46849eabecaa5446993c35d153692d53069859a011",
+      "size_bytes": 73308
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q2_intact_pilot_audit.md",
+      "sha256": "0d0b5875cbff05880c3ad58d7f65aeb150f42e4ab63c9f28b3a074ec3f33551c",
+      "size_bytes": 89021
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q2_pca_101_pilot_audit.md",
+      "sha256": "05ddf3168cf6515e67d4e9d0ec790a8c08e5cf9bf21d7b0fb21f58f39c642bc1",
+      "size_bytes": 56792
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q2_pca_102_pilot_audit.md",
+      "sha256": "6ec73fd08a6e94b9a7a0aad01f6f6011637deae021efd359f80e9410235a192f",
+      "size_bytes": 70992
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q2_pca_103_pilot_audit.md",
+      "sha256": "b2d39574d6e843d10d52e099098e67a0774bc53115e4032cf29dbffae3f9a894",
+      "size_bytes": 157980
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q2_refusal_ablated_pilot_audit.md",
+      "sha256": "ffa3e2b85f632df3163f6e1ce4cfca76ce2598b9c74f0a61ab42ff6aff27cb13",
+      "size_bytes": 93688
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q2_unrelated_pilot_audit.md",
+      "sha256": "832fb6a1a6081fd9bd6a7361e1300836a8682e38d54d97c394036c77023b74eb",
+      "size_bytes": 142044
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q3_cap8192_intact_pilot_audit.md",
+      "sha256": "3c3ce0fb940038453e4fce9f6580be7034ab6814bcf9b246730df3ceab70bedd",
+      "size_bytes": 89061
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q3_cap8192_pca_101_pilot_audit.md",
+      "sha256": "5b41dcf61ade9152abbf63f37b453303f909b8895f36e7ae94b0a31ebb0314d2",
+      "size_bytes": 56832
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q3_cap8192_pca_102_pilot_audit.md",
+      "sha256": "c0d260ec036b7e41b30f1aabafcc0faf6128d2a2c6c325c68de0e1c342c913c2",
+      "size_bytes": 71032
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q3_cap8192_pca_103_pilot_audit.md",
+      "sha256": "0b9dbade05df08c99d68b313bc9801d44925a3452d8ef416e74a3640e5f0e25c",
+      "size_bytes": 176268
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q3_cap8192_refusal_ablated_pilot_audit.md",
+      "sha256": "e06b2d0e76da31fec03f28fa19fed4a7a31bfad05765df7faf583439768e3c85",
+      "size_bytes": 93728
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q3_cap8192_unrelated_pilot_audit.md",
+      "sha256": "0c033edec44a7fe5353c1ce8d18b82321878dc6d8415a2c75789a857dd2eeafc",
+      "size_bytes": 223145
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q4_cap16384_intact_pilot_audit.md",
+      "sha256": "86bc69fd0e4607f022785dc4418322869f7407b27f221c8ac4650d450bac0794",
+      "size_bytes": 89071
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q4_cap16384_pca_101_pilot_audit.md",
+      "sha256": "1f08bcfd0ca4e3140396df81a8cc85712109ddd5f3c5647564f9e0ee2a0edcfb",
+      "size_bytes": 56842
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q4_cap16384_pca_102_pilot_audit.md",
+      "sha256": "e562fb7a1e7245f6f2f383b412890178e668f446a334da820725895c4c8f6673",
+      "size_bytes": 71042
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q4_cap16384_pca_103_pilot_audit.md",
+      "sha256": "f8f070b754843ef4f41cc757dc020bc44cb439338da32252ef839952e5ef9666",
+      "size_bytes": 176278
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q4_cap16384_refusal_ablated_pilot_audit.md",
+      "sha256": "a583feca47f8ae9bc1b63f73f9374dbfc76c49ce19978963f7c7aace66eed7ff",
+      "size_bytes": 93738
+    },
+    {
+      "path": "pilots/phase1_qualification_vllm_q4_cap16384_unrelated_pilot_audit.md",
+      "sha256": "7b8eed3abeca2aade1f9125a80f1016c00ce5f3d0ca8f3a0be643be515d9d4e9",
+      "size_bytes": 232569
+    },
+    {
+      "path": "pilots/phase1_serving_unrelated_cap16384_v1_unrelated_pilot_audit.md",
+      "sha256": "5c086a3c02414c6a36ffb8a6c8613889fa8f63756d2a74f6430ae00d9930d0b5",
+      "size_bytes": 106302
+    },
+    {
+      "path": "pilots/phase1_serving_v4_intact_pilot_audit.md",
+      "sha256": "31e44b67b7628bafa6d8c9fb8ee0eafb040b6ea11024d168c19e942b218c82ec",
+      "size_bytes": 88996
+    },
+    {
+      "path": "pilots/phase1_source_pilot_audit.md",
+      "sha256": "644d100f648dbf2596c1bcce1b2c4ccc2ebb6b184008800eb0da7549cfc1b7e5",
+      "size_bytes": 77831
+    },
+    {
+      "path": "records/phase1_author_v1_receipt.json",
+      "sha256": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+      "size_bytes": 482
+    },
+    {
+      "path": "records/phase1_calibration_author_v1_c2_receipt.json",
+      "sha256": "cd3fbd58738110cc7a43e2841f4c0cba848a0838fb63e2e460c87dc43ad94f4d",
+      "size_bytes": 1571
+    },
+    {
+      "path": "records/phase1_dose_response_author_v1_d2_descriptive_receipt.json",
+      "sha256": "7116350b9c2cf7e29261e2987d8a388218c1afa4aacc5114ada8d27368ddd0ac",
+      "size_bytes": 184479
+    },
+    {
+      "path": "records/phase1_external_qualification_v3_v4_eager_receipt.json",
+      "sha256": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+      "size_bytes": 2214
+    },
+    {
+      "path": "records/phase1_initial_post_fp8_gate_receipt.json",
+      "sha256": "365f1b377958ddb18196db80030f05071cec9dcf867e29fde3199b1ab983b90c",
+      "size_bytes": 439
+    },
+    {
+      "path": "records/phase1_post_fp8_gate_receipt.json",
+      "sha256": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+      "size_bytes": 443
+    },
+    {
+      "path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+      "sha256": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d",
+      "size_bytes": 14145
+    },
+    {
+      "path": "records/phase1_source_directions_receipt.json",
+      "sha256": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c",
+      "size_bytes": 3721
+    },
+    {
+      "path": "scripts/admit_parallel_calibration.py",
+      "sha256": "7f45db7119408cc1f37f616e573d8f701e1c4789ad7e6b6ad8ec86112147947b",
+      "size_bytes": 21525
+    },
+    {
+      "path": "scripts/admit_phase1_doses.py",
+      "sha256": "91103fff5c03527cf9c93450f4aebfe93f1729678711b93de331e98990000acb",
+      "size_bytes": 31470
+    },
+    {
+      "path": "scripts/admit_phase1_doses_d3.py",
+      "sha256": "2d5f94a30a461813ec50635300a84152483464c1cab3950f398cf12818083a40",
+      "size_bytes": 32839
+    },
+    {
+      "path": "scripts/admit_phase1_doses_d4.py",
+      "sha256": "ca175915ecab8c8926e1d72d3b7ca9afb401f8f52fade04dd2947447fa64a275",
+      "size_bytes": 33101
+    },
+    {
+      "path": "scripts/admit_phase2_program.py",
+      "sha256": "89b3b751ed361a1674634dc525c77f9824043a1edfc347ec7087396d06c3eec1",
+      "size_bytes": 65585
+    },
+    {
+      "path": "scripts/audit_authored_scenarios.py",
+      "sha256": "63b6645e33c9524f56533aaf9a92f8d72806b2ae5cce57c405913738d6bf7a53",
+      "size_bytes": 5101
+    },
+    {
+      "path": "scripts/audit_calibration_provenance.py",
+      "sha256": "d0eece871620fc3ea0281553330882922b37b9898656ca8a1b4f76e66cb24983",
+      "size_bytes": 12212
+    },
+    {
+      "path": "scripts/audit_dose_response.py",
+      "sha256": "5da29760da4abf6f203d0c90a4b03a60dee5c67811c7906176300abaed80ef95",
+      "size_bytes": 22565
+    },
+    {
+      "path": "scripts/audit_dose_response_d3.py",
+      "sha256": "ceb871ab0b5c380f14b2f5289f0c07e5c719ecf7ce7c781bf585977b1579ef1e",
+      "size_bytes": 26209
+    },
+    {
+      "path": "scripts/audit_dose_response_d4.py",
+      "sha256": "28ec3bdc89943181c22f8aa80854e58c6b21aa3c7f458e99fb4c840633712c36",
+      "size_bytes": 29752
+    },
+    {
+      "path": "scripts/audit_exp23_author_provenance.py",
+      "sha256": "85529fd94aba60c9037af86cc491b349d5fd7067fa83faf8497bf0ec8490f162",
+      "size_bytes": 9172
+    },
+    {
+      "path": "scripts/audit_exp23_launch.py",
+      "sha256": "77be45acd27ed0217a66c1d5ae9f40992d6088a689a72e2c47ab05316894dac5",
+      "size_bytes": 17490
+    },
+    {
+      "path": "scripts/audit_prompt_boilerplate.py",
+      "sha256": "500c411e3d17eb60cce21db8f7e7608ac1b1d7824cb5add404de6d0d383b3b4a",
+      "size_bytes": 1708
+    },
+    {
+      "path": "scripts/audit_sandbox_episodes.py",
+      "sha256": "d833573c857f27dfc0e753b5f40b17e606a742310cef562fe1159b3e1abf5370",
+      "size_bytes": 8334
+    },
+    {
+      "path": "scripts/audit_source_directions.py",
+      "sha256": "edb992c9e09fb72c5c2ba4977072b24d17210a00cd02470810c2442fbefca23f",
+      "size_bytes": 4067
+    },
+    {
+      "path": "scripts/build_phase1_pilot_index.py",
+      "sha256": "aa2583d5fd1bbace1e7198681aa293e2e478a31f2a2da8a8f6a81ebaf8a8341a",
+      "size_bytes": 11287
+    },
+    {
+      "path": "scripts/capture_exp23_author_provenance.py",
+      "sha256": "0248e93b4fd12b742a20f605e930e00a7c310e110607d2b7739fc7734fccbe02",
+      "size_bytes": 6630
+    },
+    {
+      "path": "scripts/check_phase1_activation_gate.py",
+      "sha256": "e3e67ed04b3c8bd10cb05a228dfa60ab877ac69c07384392c08ed6423a58e93e",
+      "size_bytes": 2185
+    },
+    {
+      "path": "scripts/checkpoint_math.py",
+      "sha256": "bd697815de21509758a5ea6d04712287e103ad7d9e01af50d38acb2ac6a5ecf7",
+      "size_bytes": 1537
+    },
+    {
+      "path": "scripts/complete_experiment_receipts.py",
+      "sha256": "0021325a04e9d316ff6ce9bdfd2f5a8bc5867fb4a3d644477cb30562df760909",
+      "size_bytes": 14458
+    },
+    {
+      "path": "scripts/exp11_action_worker.py",
+      "sha256": "7151b4d7f060614b2176b77561be7b3351af3d54f293e8782f532ab6d566c171",
+      "size_bytes": 31695
+    },
+    {
+      "path": "scripts/exp11_admission.py",
+      "sha256": "18d34ae3eb8b90f0abe665519dd55d40f4d7a0849f5e0943d01d88ba2e3b5eb3",
+      "size_bytes": 6124
+    },
+    {
+      "path": "scripts/exp11_binary_analysis.py",
+      "sha256": "11ea06f904a03b94e2b2ef667dc96a156212ebec24a2c48c46f11c76a3e4089c",
+      "size_bytes": 12844
+    },
+    {
+      "path": "scripts/exp11_design.py",
+      "sha256": "1faaaa1f0f5c8ed765fbe649c444b2acd7ef6504e41935fa8b4b1ab168e4c914",
+      "size_bytes": 16245
+    },
+    {
+      "path": "scripts/exp11_evidence.py",
+      "sha256": "70556409aea2d2dc3624454f14136fb3ccd20ef19aaeda68e5d578ec7c3c7808",
+      "size_bytes": 10826
+    },
+    {
+      "path": "scripts/exp11_omnibus_analysis.py",
+      "sha256": "965b0719640b2d57becab562dc4e54b5860960aa6a4639311ec974470ae7cca6",
+      "size_bytes": 27069
+    },
+    {
+      "path": "scripts/exp11_omnibus_subprocess.py",
+      "sha256": "002d7e4614a3756037b5582b2fdc630ded961806b16b01df100a6885e8511f23",
+      "size_bytes": 11467
+    },
+    {
+      "path": "scripts/exp11_probe_worker.py",
+      "sha256": "c74fcc8a3ed0684b963e60960aa906fae882d37d1cabe19b6f707777b9d7c73d",
+      "size_bytes": 29058
+    },
+    {
+      "path": "scripts/exp12_corpus_contract.py",
+      "sha256": "788ff57f1d6e05f0e42b424584be7f98eeed1fa8cbdfc94589c60414c374ff6d",
+      "size_bytes": 26174
+    },
+    {
+      "path": "scripts/exp12_design.py",
+      "sha256": "a4cfa9ee21f949523df64376dc06294a27e4f9e4f03316dd232f38281c2e2252",
+      "size_bytes": 16410
+    },
+    {
+      "path": "scripts/exp12_training_contract.py",
+      "sha256": "78e479a48fe965e16307763d69bbc210ddff6e0fbe171dda825e8d4f41fc6ccd",
+      "size_bytes": 7019
+    },
+    {
+      "path": "scripts/exp21_design.py",
+      "sha256": "eb8381b84ec46587ae37f9c727ed6b2f624c8a1c12eb08700309c5940acc9594",
+      "size_bytes": 10236
+    },
+    {
+      "path": "scripts/exp21_fabrication_validation.py",
+      "sha256": "7c4480d74dce4b9bc6ba4d9b9ec49fcc14d227a4f841612044883c91a9d5136f",
+      "size_bytes": 4514
+    },
+    {
+      "path": "scripts/exp22_analysis.py",
+      "sha256": "9707dfcda364a70971dcad0c440ca6420c66e5c8d2ef03d115ae135bf4063806",
+      "size_bytes": 14074
+    },
+    {
+      "path": "scripts/exp22_design.py",
+      "sha256": "ae7e672408b8e705ecb1f30eda7e9ac2f982590079d7dc61314e18e52fcdaf9b",
+      "size_bytes": 22286
+    },
+    {
+      "path": "scripts/exp22_evaluation.py",
+      "sha256": "9155eed813855081fb047594453c4ac148bb983ac6d8fccf25a4a40bf128b84e",
+      "size_bytes": 12489
+    },
+    {
+      "path": "scripts/exp22_monitor_evidence.py",
+      "sha256": "329c561f7cb1c3efe9df027c264552a7f882dd24b5688b1923ef0befb2193f43",
+      "size_bytes": 12020
+    },
+    {
+      "path": "scripts/exp22_monitor_worker.py",
+      "sha256": "ba1fc285f7e7198f6a31f56e483899fe15ff070652639ec520925a5387810467",
+      "size_bytes": 20303
+    },
+    {
+      "path": "scripts/exp23_author_worker.py",
+      "sha256": "fd889d584b1bec5719bacc6bfe8a64c8355e0c6c8bd4ff7156987f799b2debc4",
+      "size_bytes": 30030
+    },
+    {
+      "path": "scripts/exp23_design.py",
+      "sha256": "af0e7c7e17ec9f802f48cece315e6977b30e8cbb2c7ac7b73284f31829998b7b",
+      "size_bytes": 30768
+    },
+    {
+      "path": "scripts/exp23_executor_worker.py",
+      "sha256": "1baa48680fa04007886094d4c268ce33b853bba5d4af09b83b176cf431f6931d",
+      "size_bytes": 26474
+    },
+    {
+      "path": "scripts/exp23_statistical_analysis.py",
+      "sha256": "a5a7fa587885fae62d49a9cbcdd96e86c2a1ee05415479ea8baa2ee8f8a16697",
+      "size_bytes": 21577
+    },
+    {
+      "path": "scripts/exp31_design.py",
+      "sha256": "3c8814b65601d08087e020a706855dec0f3b4e101e436526d64e0058367375dc",
+      "size_bytes": 25667
+    },
+    {
+      "path": "scripts/exp31_pre_action.py",
+      "sha256": "5fa189a26f7fc806e0c6a6e05c57bbb0c919950be46cd864d7d1bd6037f6c648",
+      "size_bytes": 5417
+    },
+    {
+      "path": "scripts/exp32_admission.py",
+      "sha256": "a023b93431e1c066ba68a38eca72307ad09983ecf47697f96d300034fe852d3d",
+      "size_bytes": 3179
+    },
+    {
+      "path": "scripts/exp32_analysis.py",
+      "sha256": "142203468fca8330b92472922ff663fcc94db3c87ceacb9a3e0771b5ba98ca33",
+      "size_bytes": 16584
+    },
+    {
+      "path": "scripts/exp32_contract.py",
+      "sha256": "67c19b3161b6ba0c03c573f205db9099e37c1e4153cad2f3400d42ce78437583",
+      "size_bytes": 15115
+    },
+    {
+      "path": "scripts/exp32_plan.py",
+      "sha256": "db4e240a41b0b57f90f86de07a9f102778efd5c922c7c3741df5185e53dd79f3",
+      "size_bytes": 7542
+    },
+    {
+      "path": "scripts/export_activation_observations.py",
+      "sha256": "ddd88059c7f22490dada6554c1f6f583db73677dc9ff5cd7c8adc26855468138",
+      "size_bytes": 2097
+    },
+    {
+      "path": "scripts/external_qualification_worker.py",
+      "sha256": "b55263872bc6d381a79189f8270d6bf669714fa9dab8f95b1f01deb34467dacc",
+      "size_bytes": 5405
+    },
+    {
+      "path": "scripts/historical_admission.py",
+      "sha256": "5ba1e3debb9ad466467677a7dccbdd4d9d8988d1d3efdcf6e5a9425f21f7dfca",
+      "size_bytes": 2278
+    },
+    {
+      "path": "scripts/launch_bounded_job.py",
+      "sha256": "d075676aa919111efe8a6ca946aa8cab3bbaee29ad19d6f88f1674ba353bb0ac",
+      "size_bytes": 15888
+    },
+    {
+      "path": "scripts/llama_model_loader.py",
+      "sha256": "3425255b01f37185bcfe5e0f4c187543bdd1f0e0faf7fad3cd35b7672a862aa4",
+      "size_bytes": 1459
+    },
+    {
+      "path": "scripts/llama_serving_worker.py",
+      "sha256": "d5798f529c4f20619ae7395530aca3be928079ec7bfe47105a04803de00a5570",
+      "size_bytes": 13452
+    },
+    {
+      "path": "scripts/modal_capture_calibration_provenance.py",
+      "sha256": "b0159c508c1d28a2150ac99ee70201f1ff25cbdeaeefae8a3d01cdddb652ae49",
+      "size_bytes": 8047
+    },
+    {
+      "path": "scripts/modal_dose_evaluation.py",
+      "sha256": "312422e524a901303ed11e0aa0db36fe3e74c3617f991402acd7e423563975b5",
+      "size_bytes": 15128
+    },
+    {
+      "path": "scripts/modal_dose_evaluation_d3.py",
+      "sha256": "87d02ae07ba27ea09549c452c73117124815e49d3176a16cb96f253059a84689",
+      "size_bytes": 16720
+    },
+    {
+      "path": "scripts/modal_dose_evaluation_d4.py",
+      "sha256": "446733dfdbf381af65aba49ff338764b2e57992a5394ec1c24f185ced51f7bdb",
+      "size_bytes": 19221
+    },
+    {
+      "path": "scripts/modal_exp11_evaluation.py",
+      "sha256": "9682e4ed98bf894fb7b4bb98e618968aac14e14e2769181ceaecf5d58178d136",
+      "size_bytes": 17898
+    },
+    {
+      "path": "scripts/modal_exp22_monitor.py",
+      "sha256": "59c0fc4bab83709eeeefac2e7c14a467bacf227c64b75b08336e444beb8ad982",
+      "size_bytes": 12581
+    },
+    {
+      "path": "scripts/modal_exp23_author.py",
+      "sha256": "06a9f07f128b978bc9097fc693163f19121690e7e921ba0b434cef9cf7063a4e",
+      "size_bytes": 9029
+    },
+    {
+      "path": "scripts/modal_exp23_executor.py",
+      "sha256": "0a558605c9882ca510f1fbc0f10c21fad47c4e963e4a6f66359cf0f3c2672ffc",
+      "size_bytes": 11158
+    },
+    {
+      "path": "scripts/modal_external_qualification.py",
+      "sha256": "de7e90920ff87eab7650155f98b5cb44fec969cd414faaf7fa39615ebdb5ab5f",
+      "size_bytes": 5378
+    },
+    {
+      "path": "scripts/modal_external_runtime_probe.py",
+      "sha256": "7f815a0bfed5bddf803f3d168b38a749154e54c0644f59fd6b68f290b87415f7",
+      "size_bytes": 2605
+    },
+    {
+      "path": "scripts/modal_gpu_probe.py",
+      "sha256": "c730e226b0fc1b5f023f6c26bf2b44045763ad2d614c6e42195253dbac82db58",
+      "size_bytes": 1110
+    },
+    {
+      "path": "scripts/modal_llama_serving_pilot.py",
+      "sha256": "5ebee7019581533bb934652a656385d795894d3c4162c636e149f855afabc988",
+      "size_bytes": 4563
+    },
+    {
+      "path": "scripts/modal_materialize.py",
+      "sha256": "63c9141a8642056ce01e040f456855aaee3d3f7dc2f8347015c309c6856b8804",
+      "size_bytes": 9579
+    },
+    {
+      "path": "scripts/modal_materialize_doses.py",
+      "sha256": "31c919635c6375e67675dfd2f59ed02a787b2267594980fc10d61d536de22c87",
+      "size_bytes": 17644
+    },
+    {
+      "path": "scripts/modal_optimized_image.py",
+      "sha256": "a0e5811e2b7c0ca0b63e910a6132b1697a2ce52f1b7524403c628f3cab5e0f12",
+      "size_bytes": 1007
+    },
+    {
+      "path": "scripts/modal_phase1.py",
+      "sha256": "99affd63a31fe394bea2119ecdb341ea17e717aeab8efc787df1123b7e937c74",
+      "size_bytes": 8719
+    },
+    {
+      "path": "scripts/modal_preflight.py",
+      "sha256": "a336a2e38ae9611558f7a24b4043be8cb4864736c0053c3e7129ac98c98ce548",
+      "size_bytes": 5160
+    },
+    {
+      "path": "scripts/modal_primary_qualification_vllm.py",
+      "sha256": "9747d53e89df97810ff50b7ad70e0bdb259124f5500afeb38dd2d895dc227b7c",
+      "size_bytes": 6439
+    },
+    {
+      "path": "scripts/modal_primary_runtime_probe.py",
+      "sha256": "c7f7f3cc9eab9dd8cef0a62127f1cf6821c5c08cd34bf0d82068c0fd3a682ca1",
+      "size_bytes": 2201
+    },
+    {
+      "path": "scripts/modal_primary_serving_pilot.py",
+      "sha256": "c2555a56714dab7b1da23f2055a793fc72d4c27704b1b019690e571ae12250ca",
+      "size_bytes": 4013
+    },
+    {
+      "path": "scripts/modal_qualify.py",
+      "sha256": "6eace62b96d34dc77b0109a1f8d5ad5fb0402ae6780b52c37e1fd2eb9b71670a",
+      "size_bytes": 14498
+    },
+    {
+      "path": "scripts/modal_repair_fp8_config.py",
+      "sha256": "70164a050c584ae6da9fc589c4ba1a8821696b1450eb20a7bb9556d5cb4f4993",
+      "size_bytes": 3649
+    },
+    {
+      "path": "scripts/modal_runtime_versions.py",
+      "sha256": "e7ba8fba9ebecfbe99b33684d9038b21ef876c68a1bbeb232d1b2dda38cce46d",
+      "size_bytes": 1934
+    },
+    {
+      "path": "scripts/modal_sandbox_evaluation.py",
+      "sha256": "012a5b0483420b6ec450fb7175aeda600c8ebc058e7677ebdc180d3c88e2d9b0",
+      "size_bytes": 9640
+    },
+    {
+      "path": "scripts/modal_scenario_author.py",
+      "sha256": "d355e67b0095f112e1401a88695b1f9bcdca44f4c631762e2b64cf5ec6eaaf51",
+      "size_bytes": 5016
+    },
+    {
+      "path": "scripts/modal_structured_records.py",
+      "sha256": "19f83b3ce9f006028baf8722bc49cdae3ddef3cd4d22756ba19560cbb00e7778",
+      "size_bytes": 15086
+    },
+    {
+      "path": "scripts/paired_statistics.py",
+      "sha256": "dd23ab9443c119592b3d962a4d89020773f6ef74f551689a2e40f023b03b08a0",
+      "size_bytes": 2467
+    },
+    {
+      "path": "scripts/persist_review_closeout.py",
+      "sha256": "b42f16c6345efa1b3364bfab4a67b397d84683314f498c124abfbd5cd4a715cb",
+      "size_bytes": 17643
+    },
+    {
+      "path": "scripts/phase1_analysis.py",
+      "sha256": "c7b1d20f89608a1fe518e4c4afc4fc24ba94e014af8aba720e08bf7a80eec0fb",
+      "size_bytes": 4030
+    },
+    {
+      "path": "scripts/phase1_evidence.py",
+      "sha256": "c53bdddcd10c4d9faf3a786b92da054743cbe3d1b45c79f351b9ca6a24114c94",
+      "size_bytes": 16416
+    },
+    {
+      "path": "scripts/phase1_readiness.py",
+      "sha256": "5ddaecf5d3cecc86bb7bc8e9c3bfc3d31c20ce28e4714deadc2373a7ad8836d1",
+      "size_bytes": 20458
+    },
+    {
+      "path": "scripts/phase1_stimuli.py",
+      "sha256": "880f892575da965b97a5d6496bd1873c3ec47fa39b96b76c2d292a29b719ff8b",
+      "size_bytes": 7210
+    },
+    {
+      "path": "scripts/phase2_admission.py",
+      "sha256": "72f3b7cd987daa490695f347830f4a36eb81bf38d37787ddaa24811185e7af3e",
+      "size_bytes": 11805
+    },
+    {
+      "path": "scripts/phase3_readiness.py",
+      "sha256": "4b6b9a6bd9d3954d4094a303ba508097eb5a5c0918fbf268717615db03170840",
+      "size_bytes": 9542
+    },
+    {
+      "path": "scripts/pre_action_timing.py",
+      "sha256": "6f7c52181f4a1d6d7e2eead6e2d9b9a0a46041142ce4d2f5b6d39f65124771ee",
+      "size_bytes": 3214
+    },
+    {
+      "path": "scripts/preflight.py",
+      "sha256": "e58ffa620298959571efc2f4c7abea778f0f518316573d2bb07d6ca595dfa277",
+      "size_bytes": 3306
+    },
+    {
+      "path": "scripts/prepare_calibration.py",
+      "sha256": "02540c6be638754bcc210feafc408ed4e3540fc34b3be7f9ccc21d3652d27b22",
+      "size_bytes": 3586
+    },
+    {
+      "path": "scripts/prepare_directions.py",
+      "sha256": "23a8db9487bcbc31a7e528dc48d08eb19d58c0525adb2aad7755b5fae2e0e62b",
+      "size_bytes": 4701
+    },
+    {
+      "path": "scripts/prepare_dose_evaluation.py",
+      "sha256": "170be26d94178f5f825f89f028dc588d522c42e177873d1333f899cf224b00eb",
+      "size_bytes": 9161
+    },
+    {
+      "path": "scripts/prepare_dose_evaluation_d3.py",
+      "sha256": "dae29826ef0d289934ad07de0bd30fd846545b81efa803afdadeb034ce7950ab",
+      "size_bytes": 6724
+    },
+    {
+      "path": "scripts/prepare_dose_evaluation_d4.py",
+      "sha256": "d7ccbeb9b94cdde8de47681291d88d71e29182318213ccacbbdaf382bf82cb28",
+      "size_bytes": 8833
+    },
+    {
+      "path": "scripts/primary_fp8_inventory.py",
+      "sha256": "d777fc9f71887a2e1930711cbac9d2623f74e01a32136bcda424edb79bf6df3b",
+      "size_bytes": 1065
+    },
+    {
+      "path": "scripts/primary_mechanics.py",
+      "sha256": "6897820b04f8492773ca547e0fd9157955ea74716b3b7c1ae5e03d5ae6e35839",
+      "size_bytes": 2918
+    },
+    {
+      "path": "scripts/primary_model_loader.py",
+      "sha256": "c4dfd47358a7394d43a2c7b06168f4744c251fc301c7a14afb6f8976d0e7e943",
+      "size_bytes": 3606
+    },
+    {
+      "path": "scripts/primary_serving_worker.py",
+      "sha256": "afee980cdb04b019d06c87b8d5af55f1bf58561ed7881fa0394b0088c682f19f",
+      "size_bytes": 8869
+    },
+    {
+      "path": "scripts/qa_semantic_protocol.py",
+      "sha256": "1f5dac4089f34198be431380c8e0642b136206a4090682abf862090e71350050",
+      "size_bytes": 14249
+    },
+    {
+      "path": "scripts/raw_generation_evidence.py",
+      "sha256": "89b193c391cb4b1f3c0d58d57e717d3425d1085ee57b60073182102ffd0141e8",
+      "size_bytes": 5281
+    },
+    {
+      "path": "scripts/reconcile_stopped_job_bounds.py",
+      "sha256": "3e08d6f6b783322f14d6e6c65e08ba455923df6bdb7e41ff12f5463012a9a079",
+      "size_bytes": 3149
+    },
+    {
+      "path": "scripts/recover_dose_d4_terminal_failure.py",
+      "sha256": "8e5eeac6876dca8e8d95e845ff7985ba81e602313f383387bb9b5067d8c3bc8e",
+      "size_bytes": 18532
+    },
+    {
+      "path": "scripts/recover_existing_dose_observer.py",
+      "sha256": "b0fc09a7099ba292962b9922bcbeb36fa5a7d3a78841d69693d78b5fb31651ec",
+      "size_bytes": 5184
+    },
+    {
+      "path": "scripts/replay_exp23_author_tokenizer.py",
+      "sha256": "3e32fe196c3df09b3eb12cb5471e93ab25b4422a968b5ec0107d0163804b9267",
+      "size_bytes": 3852
+    },
+    {
+      "path": "scripts/sandbox_evaluation_worker.py",
+      "sha256": "23dd716fbe7bc05e30d1b43c861021f7f8b4b87c8f82abcfa351105ae9bd9836",
+      "size_bytes": 10423
+    },
+    {
+      "path": "scripts/sandbox_runtime.py",
+      "sha256": "44aa769ef3ab4cb9c9d1628880beb763555165fe5ff5995ffaf48de5a4afa480",
+      "size_bytes": 2486
+    },
+    {
+      "path": "scripts/scenario_author_worker.py",
+      "sha256": "f31e32cf9a3212b46a0f37b5890c44788a40fe82a1ae19b739561a418b268528",
+      "size_bytes": 6158
+    },
+    {
+      "path": "scripts/scenario_contract.py",
+      "sha256": "1c19726c8efa754654cdfff44f129d3d95cadfe84433d8567d8e3948c4423385",
+      "size_bytes": 8933
+    },
+    {
+      "path": "scripts/strict_parser.py",
+      "sha256": "ac5c2159cc748de7e98f9357fbb188ec43d38b31d91c958a56b855f54a26c9c3",
+      "size_bytes": 2966
+    },
+    {
+      "path": "scripts/structured_records_evidence.py",
+      "sha256": "1b1082c3b7c429312c70615d4897770c37404eabd8d935ae228b9ad287115da1",
+      "size_bytes": 10917
+    },
+    {
+      "path": "scripts/structured_records_worker.py",
+      "sha256": "d49ee4dd5c1d16d2ec786ecb5491f3a9d1b2ab21c048f5dd17a83e90f8c15a3a",
+      "size_bytes": 39828
+    },
+    {
+      "path": "scripts/sync_phase1_artifacts.py",
+      "sha256": "74c9383c1dd1879eb328f3cbd5888a7190ee2720d06966e76fd5d3f135b6e1a5",
+      "size_bytes": 4160
+    },
+    {
+      "path": "scripts/transition_primary_runtime.py",
+      "sha256": "8435385d70edcedfbb25a19b43dd546e78d137732362e6bd481ed9f0509fa037",
+      "size_bytes": 9431
+    },
+    {
+      "path": "scripts/verify_all_receipts.py",
+      "sha256": "3f1bf3855f3a3e0bc34743981836bc86109f08375dc037556abbdb42c6ba6369",
+      "size_bytes": 31668
+    },
+    {
+      "path": "scripts/watch_author.py",
+      "sha256": "49caaa79f249f190e93228e4cdb3b4df77dc0fd774d14c861302998549643427",
+      "size_bytes": 2569
+    },
+    {
+      "path": "scripts/watch_auxiliary.py",
+      "sha256": "5e94f9b2c82113cf102ff56c3f40bf2a9d743907d36205840b630f6768c088da",
+      "size_bytes": 5767
+    },
+    {
+      "path": "scripts/watch_calibration.py",
+      "sha256": "f335a09984033572955c2b2db84d98784c677bcd45957c2554ce25b4e995cdc9",
+      "size_bytes": 12151
+    },
+    {
+      "path": "scripts/watch_phase1.py",
+      "sha256": "8f0e30ed35c77accb4aa283804c66deac9c5e4eed8f70205a9e504d0a1c9b339",
+      "size_bytes": 9572
+    },
+    {
+      "path": "scripts/write_research_review.py",
+      "sha256": "ca2682ca5ce96d3fbc4cd1512cbb29ca3107b84c04608d17f2de9b824b1b44a6",
+      "size_bytes": 45440
+    },
+    {
+      "path": "tests/test_arm_dispositions.py",
+      "sha256": "7e8067fc64f33a82b8172e098574d3ae49dffd44be545e6a30a791f22945c8d1",
+      "size_bytes": 5948
+    },
+    {
+      "path": "tests/test_audit_dose_response.py",
+      "sha256": "74f88bf9b1c31ba5c76b977ca5d026f2cc7be87cda8de8951875cfc17b53b258",
+      "size_bytes": 15672
+    },
+    {
+      "path": "tests/test_audit_dose_response_d3.py",
+      "sha256": "b34205fb21d147353ab9a785b531363535429bd8faf437d9461cf8f260e9bf48",
+      "size_bytes": 20131
+    },
+    {
+      "path": "tests/test_audit_dose_response_d4.py",
+      "sha256": "fe2a8c299e7d32104619a64ce46d36e112f233588e93a2c2c580fd2bec285253",
+      "size_bytes": 26206
+    },
+    {
+      "path": "tests/test_audit_sweep_hygiene.py",
+      "sha256": "4505348ac91ff492e921db0c8a4276a01acbd57e31cc98278c8852e1b01f5506",
+      "size_bytes": 6855
+    },
+    {
+      "path": "tests/test_build_phase1_pilot_index.py",
+      "sha256": "c9ce879874d130f6b26ff1bf874e72c11051ffcf50837c17bc95048b0647fa08",
+      "size_bytes": 9931
+    },
+    {
+      "path": "tests/test_calibration_admission_recovery.py",
+      "sha256": "ba89af5702a99599a471a9b60c80f7dd1218f84e35e048526698ed27e33c18c5",
+      "size_bytes": 9928
+    },
+    {
+      "path": "tests/test_calibration_authorization.py",
+      "sha256": "f0bc6b27c6fff2701fbf9e7c111aaf650ca86c0cfbfb6d229d07b99d96d0f575",
+      "size_bytes": 4219
+    },
+    {
+      "path": "tests/test_calibration_provenance.py",
+      "sha256": "73a000ade6a8fe29e4803621f7f3b5deac50d3cf3a061d5c5cb592d632f15c5c",
+      "size_bytes": 11102
+    },
+    {
+      "path": "tests/test_complete_experiment_receipts.py",
+      "sha256": "6edc3033b5e1e5dae2df8652725db58de54d4f25cd58207c50a55e589b1f746c",
+      "size_bytes": 7297
+    },
+    {
+      "path": "tests/test_descriptive_dose_eligibility.py",
+      "sha256": "4b125a33fa445c5832ed532dc6d1b41e97363f196e33ab16389d449b8f8fbb3a",
+      "size_bytes": 11621
+    },
+    {
+      "path": "tests/test_directions.py",
+      "sha256": "ad42770838fa000dca8238e622b009713923cdcf55232ae188ed0a12e08c0669",
+      "size_bytes": 956
+    },
+    {
+      "path": "tests/test_dose_context_budget.py",
+      "sha256": "ded8210758f34db93310ef9df35f4b02532e0324d62ffe0f2c46b7ea768586a5",
+      "size_bytes": 7256
+    },
+    {
+      "path": "tests/test_dose_d3_dispatch.py",
+      "sha256": "52acfeec967c12f07ff86f4af4cdeb692b9566808ac83281b31d595724e761a5",
+      "size_bytes": 6178
+    },
+    {
+      "path": "tests/test_dose_d4_dispatch.py",
+      "sha256": "458b19b5089517e17cbc6600048f2aebbc6ac31f5a79faadccdf8a15f0c5c6a1",
+      "size_bytes": 6176
+    },
+    {
+      "path": "tests/test_dose_evaluation.py",
+      "sha256": "4d8b8bbeaf58aa13117c6c43d99cfa417d561e696f885803d7075dd0a2a8594d",
+      "size_bytes": 5682
+    },
+    {
+      "path": "tests/test_dose_evaluation_d3.py",
+      "sha256": "da505cab8722ecb7783ff3f9636e0fc77a3b8c21ad79016ee4552b39397666b4",
+      "size_bytes": 13403
+    },
+    {
+      "path": "tests/test_dose_evaluation_d4.py",
+      "sha256": "dcb4b3c69582bf78ddf06cc82052f5cae0fd820b324aaf704b528731a4f89037",
+      "size_bytes": 17770
+    },
+    {
+      "path": "tests/test_dose_receipt_upload.py",
+      "sha256": "e24197d5603c1583eb60be2b0a8f346525e7027a4e27cae15ff68cdbbd66f2e1",
+      "size_bytes": 1947
+    },
+    {
+      "path": "tests/test_dose_retry_d3_admission.py",
+      "sha256": "101a1fe3f24ecbf3575c0020fa0789c190608fdb5c9fc937beae4a181e2ccc08",
+      "size_bytes": 16180
+    },
+    {
+      "path": "tests/test_dose_retry_d4_admission.py",
+      "sha256": "fe8b29c54b14d76e65963a6a464e5765da909ffd41a2bdf124e75d218cb9a83c",
+      "size_bytes": 13883
+    },
+    {
+      "path": "tests/test_exp11_action_execution.py",
+      "sha256": "8d6a6e2bc02344a84932e2cd3ede2aaa571f000d3095ec60c75c85f4eda34648",
+      "size_bytes": 13591
+    },
+    {
+      "path": "tests/test_exp11_admission.py",
+      "sha256": "984aace3bff618381f64074251a6d281d503d5290e044f73066201b1de612e4c",
+      "size_bytes": 6476
+    },
+    {
+      "path": "tests/test_exp11_binary_analysis.py",
+      "sha256": "d0b520cdd6bbe29f6c973a993f6ce0c781efd8d87660517f0c2c6a1de7a4ffb9",
+      "size_bytes": 7021
+    },
+    {
+      "path": "tests/test_exp11_design.py",
+      "sha256": "dd244fa43404a58fbfe383fc215d0fb7e444ecea0abb53dd7876524d5aac86a0",
+      "size_bytes": 8228
+    },
+    {
+      "path": "tests/test_exp11_evidence.py",
+      "sha256": "3b742dea57dd1eba22c1018a78c268387160ee2fdbe6a57229bfbba93b874b7b",
+      "size_bytes": 9184
+    },
+    {
+      "path": "tests/test_exp11_omnibus_analysis.py",
+      "sha256": "535cdbacd0c14cd58ec7fbc7ea73b976b9a47bebcb46bd1cc739384c4146b81d",
+      "size_bytes": 11433
+    },
+    {
+      "path": "tests/test_exp11_omnibus_subprocess.py",
+      "sha256": "2c3f054ecfbbe13f7040ed40b5d66148d9421c1462ea19253918f2c0fc18d3b4",
+      "size_bytes": 9433
+    },
+    {
+      "path": "tests/test_exp11_probe_worker.py",
+      "sha256": "40440f7dd303ddfab9f9534b41df622401631104b2c92a6325479ce6afc6a8f3",
+      "size_bytes": 12546
+    },
+    {
+      "path": "tests/test_exp12_contracts.py",
+      "sha256": "3172b195cafe39616aef76967ba6a346ca48ecfbc367915748dd11d6eca4303f",
+      "size_bytes": 24114
+    },
+    {
+      "path": "tests/test_exp21_preparation.py",
+      "sha256": "bbf6420657c842d728404eb7db0137a6ef9ca6811d0b54a74f4fc24d62e1622c",
+      "size_bytes": 6074
+    },
+    {
+      "path": "tests/test_exp22_analysis.py",
+      "sha256": "0a88c70058b16d478d4b224e06c3ee2a74c20e1c7ba44212a8c469f45ed8eb05",
+      "size_bytes": 5130
+    },
+    {
+      "path": "tests/test_exp22_design.py",
+      "sha256": "7b35853dffa792cb0904593f0e6496c1c34b8f5bc462622e95b68f23ad516423",
+      "size_bytes": 7834
+    },
+    {
+      "path": "tests/test_exp22_evaluation.py",
+      "sha256": "f3a435f546362326ac9cc78cf76e5055aab05f8137f73ba257afb57bae597b76",
+      "size_bytes": 7593
+    },
+    {
+      "path": "tests/test_exp22_monitor_execution.py",
+      "sha256": "d921fcb18c77dc2b7dfdebf378e4dc559a301d4089047cf2666b22549e9cc4b6",
+      "size_bytes": 17134
+    },
+    {
+      "path": "tests/test_exp23_analysis_evidence_binding.py",
+      "sha256": "f95f1f80af93baee4950739a1751b98861330a202eb7d5b891c5f2b0eb502e49",
+      "size_bytes": 7845
+    },
+    {
+      "path": "tests/test_exp23_author_budget.py",
+      "sha256": "87b18a268af04a152537ec420b8b4903e11a045f3d7c672f316b30e864a2b3c0",
+      "size_bytes": 1439
+    },
+    {
+      "path": "tests/test_exp23_author_execution.py",
+      "sha256": "c87a0b1c07ff2bdafbc06b627dd59f1f351674ed13928a8ef72745de21e57cd8",
+      "size_bytes": 12807
+    },
+    {
+      "path": "tests/test_exp23_author_manifest_provenance.py",
+      "sha256": "4b5076e3c18ac5b023752d31fc27185a646b7565cee6fda6762e33c24079c9f2",
+      "size_bytes": 2722
+    },
+    {
+      "path": "tests/test_exp23_author_provenance.py",
+      "sha256": "f55f2cf88873710d60121e974af452f688135dfebcd0b2f7894fa8bc4911e432",
+      "size_bytes": 8053
+    },
+    {
+      "path": "tests/test_exp23_completion_evidence.py",
+      "sha256": "6efa2496fd4825e6992a324065ea5d4cf4638762a7818d224861d2e573e08b60",
+      "size_bytes": 4386
+    },
+    {
+      "path": "tests/test_exp23_design.py",
+      "sha256": "3b3e3232122e79c3a236981d5c3ca6af0a4c8f1f84535fbcb3a26b380ee6475f",
+      "size_bytes": 9742
+    },
+    {
+      "path": "tests/test_exp23_executor_execution.py",
+      "sha256": "7a51f6513ec40fe14fa993e0e3048974fe86a63b6c244125fccb92a4e10518b9",
+      "size_bytes": 16186
+    },
+    {
+      "path": "tests/test_exp23_statistical_analysis.py",
+      "sha256": "a5dd1fa8a02b3c0c91782eaaeb134bfc0b660ad6b11c19e5ef4641a651732e06",
+      "size_bytes": 10891
+    },
+    {
+      "path": "tests/test_exp31_design.py",
+      "sha256": "1b2344fac7159c19a7d4a309bd4362164bacd61200a38d7fcb6cfa7365508f27",
+      "size_bytes": 9874
+    },
+    {
+      "path": "tests/test_exp31_pre_action.py",
+      "sha256": "fd37455eb676657f348ca335210a8de26324742463d131fc6d13650ab5d50dd9",
+      "size_bytes": 3619
+    },
+    {
+      "path": "tests/test_exp32_preparation.py",
+      "sha256": "f81a13a044250d80c98c12864b4e7abfa9c44b3bf641fde760f1f149b131e409",
+      "size_bytes": 15240
+    },
+    {
+      "path": "tests/test_historical_admission.py",
+      "sha256": "37b52a8d583db0f9d659092a8d30f0bbe08bf034982ac4c1a69a755576bf0c78",
+      "size_bytes": 3456
+    },
+    {
+      "path": "tests/test_launch_bounded_job.py",
+      "sha256": "cf44af9eaf69a5a178a944c047a08b4dfc781bb28eb9a94616618ad334cade39",
+      "size_bytes": 10779
+    },
+    {
+      "path": "tests/test_launcher_app_visibility.py",
+      "sha256": "ff971bdde059f82bbebda6b293b36b941872ede03c7493f3e1eaa601ad26fd4b",
+      "size_bytes": 8603
+    },
+    {
+      "path": "tests/test_llama_serving_pilot.py",
+      "sha256": "78626705dc8951c9dc2a5518c50a02a95994a203a8cf9f61169c3c087a6f3552",
+      "size_bytes": 3463
+    },
+    {
+      "path": "tests/test_logit_arm_provenance.py",
+      "sha256": "7dc3e1fa4a84ec75e1ff65610fbb2b90474a73a75c77cdf61c4ea64d25b13546",
+      "size_bytes": 5138
+    },
+    {
+      "path": "tests/test_materialize_doses.py",
+      "sha256": "9f11c097ca642c03fb6ce0b57f90afa00a6c7b6f4ef4d02e14de4865823d1c38",
+      "size_bytes": 4520
+    },
+    {
+      "path": "tests/test_paired_statistics.py",
+      "sha256": "b6334ff90503e5ad63fc26ad769546b5a063739633ee6d1e8b94b93bfc09fdff",
+      "size_bytes": 1879
+    },
+    {
+      "path": "tests/test_persist_review_closeout.py",
+      "sha256": "c6468b9ee766b2b9071efebcbfb5862efecb63b2d300393aa02f2d29706747c4",
+      "size_bytes": 10789
+    },
+    {
+      "path": "tests/test_phase1_evidence.py",
+      "sha256": "d8f44408a83c65c5f3212ff40f22dd83daaafc78d901ec23f36e956056928428",
+      "size_bytes": 2975
+    },
+    {
+      "path": "tests/test_phase1_negative_measurement_completion.py",
+      "sha256": "d0294111fb1928560bcbfa6709043f1dec2588b9176f1caef01c35a5949fab29",
+      "size_bytes": 10602
+    },
+    {
+      "path": "tests/test_phase1_readiness.py",
+      "sha256": "353f8a0a4b14dc3cca0da2eb61d95b3f8a3157e9d452db3b025c84e4dc251970",
+      "size_bytes": 17323
+    },
+    {
+      "path": "tests/test_phase2_admission.py",
+      "sha256": "0ebb1cba8a8a376ef65ae613b2ee53fa3b00f929eb75b2cfc6d102ff360d883c",
+      "size_bytes": 11209
+    },
+    {
+      "path": "tests/test_phase2_program.py",
+      "sha256": "7f01515c671061abb4acc0deedaa16f778558a11c9b28beaa9106306eeb44518",
+      "size_bytes": 38502
+    },
+    {
+      "path": "tests/test_phase3_readiness.py",
+      "sha256": "aa91d12627b357afc2d50c41db831e3675c3d3d21b979c1faf2d1ecda0d508e4",
+      "size_bytes": 9552
+    },
+    {
+      "path": "tests/test_pre_action_timing.py",
+      "sha256": "94b671335c747d1c06985071a2ae5efe1912af91233d6a8fe68d04a47a6f5698",
+      "size_bytes": 2204
+    },
+    {
+      "path": "tests/test_prepare_dose_evaluation_d4.py",
+      "sha256": "cf3b12224a0041280b661df8002fac6221f703a121a324973e4b17550d60f7fd",
+      "size_bytes": 10527
+    },
+    {
+      "path": "tests/test_primary_mechanics.py",
+      "sha256": "e304cdc8f2ca3f764c7b9be895b9fd0d1bc747ded8e80c95c150daeb45c14655",
+      "size_bytes": 3266
+    },
+    {
+      "path": "tests/test_qa_semantic_protocol.py",
+      "sha256": "c9a255f4a2f419232bc8a9b7e07796014d7fdcd5742ca9b995d1fc764b53fa53",
+      "size_bytes": 10478
+    },
+    {
+      "path": "tests/test_request_journal.py",
+      "sha256": "1cf0966652cfc5892fe4f6cd24808722d6b11259523026232bc321f8e82f7ae1",
+      "size_bytes": 1674
+    },
+    {
+      "path": "tests/test_sandbox_audit.py",
+      "sha256": "6efc7f4ab661ffc3d0c64bda42aa60f5d0aa17a0e87be599d924909e0e973e83",
+      "size_bytes": 2472
+    },
+    {
+      "path": "tests/test_sandbox_runtime.py",
+      "sha256": "cecb24c60a15d47b1186491c74d2468567e21ab23388986880e0c56bffa44875",
+      "size_bytes": 2452
+    },
+    {
+      "path": "tests/test_scenario_contract.py",
+      "sha256": "6c1955f2a0d69095df4bf1bcd76254ebb2286ac8dcab56fb200b38ff84e832a7",
+      "size_bytes": 3011
+    },
+    {
+      "path": "tests/test_serving_preflight_audit.py",
+      "sha256": "829160baf9cfca989548b2c3524761a347524f67924cc1b1fec8af3303e07634",
+      "size_bytes": 2314
+    },
+    {
+      "path": "tests/test_strict_parser.py",
+      "sha256": "d3f48e4537ea2bda50c7bb92d920b7ca42b60f39772b414d04bd9aa3cf618dd2",
+      "size_bytes": 2414
+    },
+    {
+      "path": "tests/test_structured_records_evidence.py",
+      "sha256": "af2dc714d133a6fc1fda3b2b183dc3e5ed11e7d4fd61539dd7d8520677d3c16b",
+      "size_bytes": 9758
+    },
+    {
+      "path": "tests/test_structured_records_execution.py",
+      "sha256": "01606a566b0f75f8ccc347ab8b0fd76a41dedb70c8e671e20473e968caa17997",
+      "size_bytes": 21266
+    },
+    {
+      "path": "tests/test_verifier_component_dispatch.py",
+      "sha256": "04e6cce39413a4c6fd4928c98f5e7aad495fa37a0fc8ff6fe239cdd8b3b03188",
+      "size_bytes": 9455
+    },
+    {
+      "path": "tests/test_verifier_prepared_formats.py",
+      "sha256": "ea81c667efe3eb0609d7e39e7c68280d6da0c30c0c8d548df26ec1d7e8db587a",
+      "size_bytes": 8126
+    },
+    {
+      "path": "tests/test_verifier_receipt_bytes.py",
+      "sha256": "5def43a0e283399b64352502ccf5ae1e6fb74eeca623f096983ceb5f51d72ead",
+      "size_bytes": 3447
+    },
+    {
+      "path": "tests/test_write_research_review.py",
+      "sha256": "b02aef0ed24ce6b73c6a5f6af55283c8ab36d16371494f4e39cca982648f12e2",
+      "size_bytes": 21162
+    },
+    {
+      "path": "verification/current_partial_audit.json",
+      "sha256": "476ef6904780cacda92d7828b51442f4f21bd4cd857fdf0d756f45a07c7a7160",
+      "size_bytes": 7765
+    },
+    {
+      "path": "verification/final_program_disposition.json",
+      "sha256": "4ea2617ece943115d182bbbec25c0378e8cc8c1b352c0c9660cb469c59d61ced",
+      "size_bytes": 3860
+    },
+    {
+      "path": "verification/latest_incomplete_audit.json",
+      "sha256": "4e5be6ac3cdf79b40b1736bdded429c9b9bf81c319e2146980fbaa02790a0346",
+      "size_bytes": 5169
+    },
+    {
+      "path": "verification/partial_receipt_audit.json",
+      "sha256": "ff783e12150aab6149bf02bcd92aca3a28f5c587b10a7ec365ef80dd184b623c",
+      "size_bytes": 5410
+    },
+    {
+      "path": "verification/review_report_sources.json",
+      "sha256": "4c8b9a7b18327468e7a137c5e60d67144f7da05c858230a119923eb9acb5d09a",
+      "size_bytes": 33560
+    },
+    {
+      "path": "verification/upstream_failure_disposition.json",
+      "sha256": "13fdabb454feeec6e08a8ed6e8024a717ba41f20a1d3f8343deb66a6cc583cfb",
+      "size_bytes": 2374
+    },
+    {
+      "path": "verification/verification_status.json",
+      "sha256": "0a61e085027660c07ddf04eea5c7d270dba15eab62a839b9e22c1f90a6d82045",
+      "size_bytes": 134466
+    }
+  ],
+  "namespace": "agent-safety-clean-v2-20261017",
+  "program_completion_claim": false,
+  "schema": "review_closeout_manifest_v1",
+  "scope": "Review snapshot only; raw streams, activations, models, adapters and environments are excluded and retain their original volume paths.",
+  "source_snapshot_included": true,
+  "timestamp_utc": "20261018T082021Z",
+  "verification": {
+    "checked_at_utc": "2026-10-18T08:17:02.258839+00:00",
+    "overall_status": "FAIL_INCOMPLETE",
+    "path": "verification/verification_status.json",
+    "receipt_sha256": {
+      "records/phase1_author_v1_receipt.json": "50552066f132487796ba9b8bf00d93be041690067ca94c01610227ef0a17ef97",
+      "records/phase1_calibration_author_v1_c2_receipt.json": "cd3fbd58738110cc7a43e2841f4c0cba848a0838fb63e2e460c87dc43ad94f4d",
+      "records/phase1_dose_response_author_v1_d2_descriptive_receipt.json": "7116350b9c2cf7e29261e2987d8a388218c1afa4aacc5114ada8d27368ddd0ac",
+      "records/phase1_external_qualification_v3_v4_eager_receipt.json": "8b1c87a1cadbe0fcdb9a3710f0e68f0d0b1668013292cf98b5f2f4308c4d87b2",
+      "records/phase1_initial_post_fp8_gate_receipt.json": "365f1b377958ddb18196db80030f05071cec9dcf867e29fde3199b1ab983b90c",
+      "records/phase1_post_fp8_gate_receipt.json": "1a7401c317bfd4ba5773291d220dac3f21a1ae60d987e8a36576ed0eed42ecbf",
+      "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d",
+      "records/phase1_source_directions_receipt.json": "6a694eaf5880ddab6e954b48eaaa2e818e9c853280602d53e6588ca46ef87e9c"
+    },
+    "sha256": "0a61e085027660c07ddf04eea5c7d270dba15eab62a839b9e22c1f90a6d82045"
+  }
+}

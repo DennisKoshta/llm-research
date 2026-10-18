@@ -1,0 +1,317 @@
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-clr7KvRgsv48vGTDesc4cI
+Building image im-3htPdvUVvAYMb9RGHVC6eg
+
+=> Step 0: FROM base
+
+=> Step 1: RUN python -m pip install kernels==0.17.2
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting kernels==0.17.2
+  Downloading http://pypi-mirror.modal.local:5555/simple/kernels/kernels-0.17.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.1 kB)
+Requirement already satisfied: huggingface-hub>=1.10.0 in /usr/local/lib/python3.12/site-packages (from kernels==0.17.2) (2.2.0)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/site-packages (from kernels==0.17.2) (26.3)
+Requirement already satisfied: pyyaml>=6 in /usr/local/lib/python3.12/site-packages (from kernels==0.17.2) (6.0.3)
+Collecting sigstore<5,>=4 (from kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sigstore/sigstore-4.5.0-py3-none-any.whl.metadata (17 kB)
+Collecting tomlkit>=0.13.3 (from kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/tomlkit/tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (8.5.0)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (4.2.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (2026.9.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (1.7.0)
+Requirement already satisfied: httpx2<3,>=2.0.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (2.13.1)
+Requirement already satisfied: tqdm>=4.42.1 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (4.70.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub>=1.10.0->kernels==0.17.2) (4.16.0)
+Collecting cryptography>=42 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/cryptography/cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+Collecting id>=1.1.0 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/id/id-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting pyasn1~=0.6 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyasn1/pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+Collecting pydantic<3,>=2 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pydantic/pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.0/133.0 kB 151.8 MB/s eta 0:00:00
+Collecting pyjwt>=2.1 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyjwt/pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyOpenSSL>=23.0.0 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pyopenssl/pyopenssl-26.4.0-py3-none-any.whl.metadata (22 kB)
+Collecting requests (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: rich<16,>=13 in /usr/local/lib/python3.12/site-packages (from sigstore<5,>=4->kernels==0.17.2) (15.0.0)
+Collecting rfc8785~=0.1.2 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/rfc8785/rfc8785-0.1.4-py3-none-any.whl.metadata (3.4 kB)
+Collecting rfc3161-client<1.1.0,>=1.0.3 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/rfc3161-client/rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting sigstore-models==0.0.6 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-models/sigstore_models-0.0.6-py3-none-any.whl.metadata (1.3 kB)
+Collecting sigstore-rekor-types==0.0.18 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-rekor-types/sigstore_rekor_types-0.0.18-py3-none-any.whl.metadata (13 kB)
+Collecting tuf<8,>=6 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/tuf/tuf-7.0.1-py3-none-any.whl.metadata (8.1 kB)
+Collecting platformdirs~=4.2 (from sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/platformdirs/platformdirs-4.13.4-py3-none-any.whl.metadata (5.5 kB)
+Collecting cffi>=2.0.0 (from cryptography>=42->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/cffi/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Requirement already satisfied: anyio>=4.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (4.15.1)
+Requirement already satisfied: httpcore2==2.13.1 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (2.13.1)
+Requirement already satisfied: idna>=3.18 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (3.20)
+Requirement already satisfied: truststore>=0.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (0.10.5)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/site-packages (from httpcore2==2.13.1->httpx2<3,>=2.0.0->huggingface-hub>=1.10.0->kernels==0.17.2) (0.16.0)
+Collecting urllib3<3,>=2 (from id>=1.1.0->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3,>=2->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/annotated-types/annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.1 (from pydantic<3,>=2->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pydantic-core/pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Collecting typing-inspection>=0.4.4 (from pydantic<3,>=2->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/typing-inspection/typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/site-packages (from rich<16,>=13->sigstore<5,>=4->kernels==0.17.2) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/site-packages (from rich<16,>=13->sigstore<5,>=4->kernels==0.17.2) (2.21.0)
+Collecting securesystemslib~=1.0 (from tuf<8,>=6->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/securesystemslib/securesystemslib-1.5.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting charset_normalizer<4,>=2 (from requests->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 121.8 MB/s eta 0:00:00
+Collecting certifi>=2023.5.7 (from requests->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=42->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/pycparser/pycparser-3.11-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich<16,>=13->sigstore<5,>=4->kernels==0.17.2) (0.1.2)
+Collecting email-validator>=2.0.0 (from pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/email-validator/email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore<5,>=4->kernels==0.17.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/dnspython/dnspython-2.9.0-py3-none-any.whl.metadata (5.7 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/kernels/kernels-0.17.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 117.7 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/sigstore/sigstore-4.5.0-py3-none-any.whl (111 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.7/111.7 kB 159.2 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-models/sigstore_models-0.0.6-py3-none-any.whl (13 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/sigstore-rekor-types/sigstore_rekor_types-0.0.18-py3-none-any.whl (20 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/tomlkit/tomlkit-0.15.2-py3-none-any.whl (52 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.2/52.2 kB 144.6 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/cryptography/cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 156.6 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/id/id-1.6.1-py3-none-any.whl (14 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/platformdirs/platformdirs-4.13.4-py3-none-any.whl (32 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pyasn1/pyasn1-0.6.4-py3-none-any.whl (84 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.4/84.4 kB 150.6 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pydantic/pydantic-2.14.1-py3-none-any.whl (488 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 488.1/488.1 kB 162.4 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pydantic-core/pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 164.2 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/pyjwt/pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pyopenssl/pyopenssl-26.4.0-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 140.1 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/rfc3161-client/rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 162.0 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/rfc8785/rfc8785-0.1.4-py3-none-any.whl (9.2 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/tuf/tuf-7.0.1-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 kB 146.5 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 152.7 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/annotated-types/annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.7.22-py3-none-any.whl (136 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 160.6 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/cffi/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.8/221.8 kB 160.1 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 257.6/257.6 kB 159.4 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/securesystemslib/securesystemslib-1.5.1-py3-none-any.whl (876 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.4/876.4 kB 166.8 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/typing-inspection/typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.8.0-py3-none-any.whl (135 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 159.0 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/email-validator/email_validator-2.3.0-py3-none-any.whl (35 kB)
+Downloading http://pypi-mirror.modal.local:5555/simple/pycparser/pycparser-3.11-py3-none-any.whl (51 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.2/51.2 kB 153.1 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/dnspython/dnspython-2.9.0-py3-none-any.whl (354 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 354.8/354.8 kB 164.2 MB/s eta 0:00:00
+Installing collected packages: urllib3, typing-inspection, tomlkit, securesystemslib, rfc8785, pyjwt, pydantic-core, pycparser, pyasn1, platformdirs, dnspython, charset_normalizer, certifi, annotated-types, tuf, requests, pydantic, id, email-validator, cffi, sigstore-models, cryptography, sigstore-rekor-types, rfc3161-client, pyOpenSSL, sigstore, kernels
+Successfully installed annotated-types-0.8.0 certifi-2026.7.22 cffi-2.1.1 charset_normalizer-3.5.2 cryptography-50.0.2 dnspython-2.9.0 email-validator-2.3.0 id-1.6.1 kernels-0.17.2 platformdirs-4.13.4 pyOpenSSL-26.4.0 pyasn1-0.6.4 pycparser-3.11 pydantic-2.14.1 pydantic-core-2.50.1 pyjwt-2.15.1 requests-2.34.2 rfc3161-client-1.0.9 rfc8785-0.1.4 securesystemslib-1.5.1 sigstore-4.5.0 sigstore-models-0.0.6 sigstore-rekor-types-0.0.18 tomlkit-0.15.2 tuf-7.0.1 typing-inspection-0.4.4 urllib3-2.8.0
+
+[notice] A new release of pip is available: 23.3.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 2.83s
+
+Built image im-3htPdvUVvAYMb9RGHVC6eg in 13.03s
+
+
+Building image im-cYI4raGMiV2TTY6eh229o4
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HUB_OFFLINE=0
+
+=> Step 2: ENV HF_HOME=/weights/agent-safety-clean-v2-20261017/huggingface
+
+=> Step 3: ENV TRANSFORMERS_DISABLE_DEEPGEMM_LINEAR=1
+Saving image...
+Image saved, took 4.01s
+
+Built image im-cYI4raGMiV2TTY6eh229o4 in 5.51s
+
+
+✓ Created objects.
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/modal_qualify.py
+├── ✓ Uploaded 
+│   /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-cl
+│   ean-v2-20261017/scripts/strict_parser.py
+└── ✓ Created Function qualify.
+
+[1ALoading weights:   0%|          | 0/1584 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/1584 [00:00<19:16,  1.37it/s]
+[1ALoading weights:   0%|          | 2/1584 [00:01<20:35,  1.28it/s]
+[1ALoading weights:   1%|          | 18/1584 [00:01<01:34, 16.64it/s]
+[1ALoading weights:   2%|▏         | 32/1584 [00:01<00:51, 30.15it/s]
+[1ALoading weights:   3%|▎         | 47/1584 [00:01<00:34, 44.69it/s]
+[1ALoading weights:   5%|▌         | 86/1584 [00:02<00:15, 99.60it/s]
+[1ALoading weights:   7%|▋         | 107/1584 [00:02<00:12, 119.63it/s]
+[1ALoading weights:   8%|▊         | 127/1584 [00:02<00:11, 124.97it/s]
+[1ALoading weights:   9%|▉         | 145/1584 [00:02<00:11, 121.95it/s]
+[1ALoading weights:  11%|█         | 170/1584 [00:02<00:09, 141.94it/s]
+[1ALoading weights:  12%|█▏        | 188/1584 [00:02<00:11, 122.15it/s]
+[1ALoading weights:  14%|█▎        | 216/1584 [00:02<00:09, 148.63it/s]
+[1ALoading weights:  15%|█▍        | 234/1584 [00:02<00:08, 155.32it/s]
+[1ALoading weights:  16%|█▌        | 252/1584 [00:03<00:08, 155.48it/s]
+[1ALoading weights:  17%|█▋        | 269/1584 [00:03<00:09, 136.43it/s]
+[1ALoading weights:  18%|█▊        | 288/1584 [00:03<00:08, 148.40it/s]
+[1ALoading weights:  19%|█▉        | 305/1584 [00:03<00:10, 126.46it/s]
+[1ALoading weights:  22%|██▏       | 341/1584 [00:03<00:06, 177.78it/s]
+[1ALoading weights:  23%|██▎       | 362/1584 [00:03<00:07, 160.09it/s]
+[1ALoading weights:  24%|██▍       | 380/1584 [00:04<00:09, 129.96it/s]
+[1ALoading weights:  26%|██▌       | 404/1584 [00:04<00:07, 151.46it/s]
+[1ALoading weights:  27%|██▋       | 424/1584 [00:04<00:07, 159.06it/s]
+[1ALoading weights:   0%|          | 0/1584 [00:00<?, ?it/s]
+[1ALoading weights:  28%|██▊       | 442/1584 [00:04<00:07, 147.54it/s]
+[1ALoading weights:  29%|██▉       | 459/1584 [00:04<00:08, 136.40it/s]
+[1ALoading weights:  30%|██▉       | 474/1584 [00:04<00:08, 129.31it/s]
+[1ALoading weights:  31%|███       | 489/1584 [00:04<00:09, 119.55it/s]
+[1ALoading weights:  33%|███▎      | 524/1584 [00:04<00:06, 166.51it/s]
+[1ALoading weights:   0%|          | 1/1584 [00:00<20:52,  1.26it/s]
+[1ALoading weights:  34%|███▍      | 542/1584 [00:05<00:07, 144.13it/s]
+[1ALoading weights:  35%|███▌      | 558/1584 [00:05<00:07, 137.49it/s]
+[1ALoading weights:  37%|███▋      | 586/1584 [00:05<00:06, 165.72it/s]
+[1ALoading weights:  38%|███▊      | 604/1584 [00:05<00:07, 127.49it/s]
+[1ALoading weights:  41%|████      | 644/1584 [00:05<00:05, 170.68it/s]
+[1ALoading weights:  42%|████▏     | 663/1584 [00:05<00:05, 173.15it/s]
+[1ALoading weights:  43%|████▎     | 682/1584 [00:05<00:05, 168.77it/s]
+[1ALoading weights:  44%|████▍     | 700/1584 [00:06<00:05, 160.57it/s]
+[1ALoading weights:   0%|          | 2/1584 [00:01<23:58,  1.10it/s]
+[1ALoading weights:  45%|████▌     | 718/1584 [00:06<00:05, 161.04it/s]
+[1ALoading weights:   1%|          | 18/1584 [00:01<01:49, 14.28it/s]
+[1ALoading weights:   2%|▏         | 34/1584 [00:02<00:52, 29.66it/s]
+[1ALoading weights:  47%|████▋     | 738/1584 [00:06<00:05, 164.74it/s]
+[1ALoading weights:  48%|████▊     | 755/1584 [00:06<00:05, 160.39it/s]
+[1ALoading weights:   3%|▎         | 45/1584 [00:02<00:38, 39.53it/s]
+[1ALoading weights:   4%|▍         | 60/1584 [00:02<00:28, 54.18it/s]
+[1ALoading weights:  49%|████▊     | 772/1584 [00:06<00:06, 133.69it/s]
+[1ALoading weights:   5%|▍         | 77/1584 [00:02<00:20, 72.38it/s]
+[1ALoading weights:   6%|▌         | 94/1584 [00:02<00:16, 89.25it/s]
+[1ALoading weights:  50%|████▉     | 790/1584 [00:06<00:07, 103.87it/s]
+[1ALoading weights:   7%|▋         | 116/1584 [00:02<00:13, 110.67it/s]
+[1ALoading weights:  53%|█████▎    | 838/1584 [00:06<00:04, 176.66it/s]
+[1ALoading weights:   8%|▊         | 134/1584 [00:02<00:11, 122.08it/s]
+[1ALoading weights:  54%|█████▍    | 861/1584 [00:07<00:04, 177.28it/s]
+[1ALoading weights:   9%|▉         | 149/1584 [00:02<00:12, 115.49it/s]
+[1ALoading weights:  56%|█████▌    | 883/1584 [00:07<00:04, 175.14it/s]
+[1ALoading weights:  10%|█         | 165/1584 [00:02<00:11, 125.02it/s]
+[1ALoading weights:  57%|█████▋    | 903/1584 [00:07<00:03, 180.33it/s]
+[1ALoading weights:  11%|█▏        | 179/1584 [00:03<00:11, 127.50it/s]
+[1ALoading weights:  12%|█▏        | 194/1584 [00:03<00:10, 132.41it/s]
+[1ALoading weights:  58%|█████▊    | 923/1584 [00:07<00:04, 159.40it/s]
+[1ALoading weights:  60%|█████▉    | 945/1584 [00:07<00:03, 171.06it/s]
+[1ALoading weights:  13%|█▎        | 211/1584 [00:03<00:10, 134.44it/s]
+[1ALoading weights:  61%|██████    | 964/1584 [00:07<00:03, 157.84it/s]
+[1ALoading weights:  14%|█▍        | 226/1584 [00:03<00:11, 122.74it/s]
+[1ALoading weights:  16%|█▌        | 250/1584 [00:03<00:08, 150.53it/s]
+[1ALoading weights:  17%|█▋        | 268/1584 [00:03<00:08, 149.70it/s]
+[1ALoading weights:  62%|██████▏   | 981/1584 [00:07<00:04, 123.18it/s]
+[1ALoading weights:  18%|█▊        | 284/1584 [00:03<00:08, 144.95it/s]
+[1ALoading weights:  64%|██████▎   | 1006/1584 [00:08<00:03, 147.65it/s]
+[1ALoading weights:  65%|██████▍   | 1025/1584 [00:08<00:03, 144.57it/s]
+[1ALoading weights:  19%|█▉        | 299/1584 [00:03<00:10, 118.88it/s]
+[1ALoading weights:  66%|██████▌   | 1048/1584 [00:08<00:03, 160.11it/s]
+[1ALoading weights:  20%|██        | 322/1584 [00:04<00:08, 143.62it/s]
+[1ALoading weights:  68%|██████▊   | 1070/1584 [00:08<00:03, 151.64it/s]
+[1ALoading weights:  21%|██▏       | 338/1584 [00:04<00:08, 142.26it/s]
+[1ALoading weights:  70%|██████▉   | 1101/1584 [00:08<00:02, 186.50it/s]
+[1ALoading weights:  22%|██▏       | 354/1584 [00:04<00:08, 137.03it/s]
+[1ALoading weights:  23%|██▎       | 372/1584 [00:04<00:09, 133.44it/s]
+[1ALoading weights:  71%|███████   | 1122/1584 [00:08<00:03, 146.21it/s]
+[1ALoading weights:  24%|██▍       | 386/1584 [00:04<00:08, 134.84it/s]
+[1ALoading weights:  72%|███████▏  | 1146/1584 [00:08<00:02, 163.21it/s]
+[1ALoading weights:  26%|██▌       | 408/1584 [00:04<00:07, 149.64it/s]
+[1ALoading weights:  74%|███████▎  | 1165/1584 [00:09<00:02, 148.72it/s]
+[1ALoading weights:  27%|██▋       | 425/1584 [00:04<00:07, 152.26it/s]
+[1ALoading weights:  75%|███████▌  | 1190/1584 [00:09<00:02, 163.14it/s]
+[1ALoading weights:  28%|██▊       | 444/1584 [00:04<00:07, 158.44it/s]
+[1ALoading weights:  76%|███████▋  | 1210/1584 [00:09<00:02, 169.69it/s]
+[1ALoading weights:  29%|██▉       | 461/1584 [00:05<00:08, 139.56it/s]
+[1ALoading weights:  78%|███████▊  | 1229/1584 [00:09<00:02, 160.87it/s]
+[1ALoading weights:  31%|███       | 484/1584 [00:05<00:06, 157.87it/s]
+[1ALoading weights:  79%|███████▊  | 1246/1584 [00:09<00:02, 150.70it/s]
+[1ALoading weights:  32%|███▏      | 502/1584 [00:05<00:06, 162.14it/s]
+[1ALoading weights:  33%|███▎      | 519/1584 [00:05<00:06, 160.89it/s]
+[1ALoading weights:  85%|████████▍ | 1340/1584 [00:09<00:00, 334.70it/s]
+[1ALoading weights:  95%|█████████▌| 1506/1584 [00:09<00:00, 633.45it/s]
+[1ALoading weights:  34%|███▍      | 536/1584 [00:05<00:07, 133.97it/s]Loading weights: 100%|██████████| 1584/1584 [00:09<00:00, 160.42it/s]
+
+[1ALoading weights:  35%|███▌      | 562/1584 [00:05<00:06, 159.84it/s]
+[1ALoading weights:  37%|███▋      | 580/1584 [00:05<00:06, 163.31it/s]
+[1ALoading weights:  38%|███▊      | 598/1584 [00:05<00:06, 157.67it/s]
+intact: loaded 400 FP8 modules
+[1ALoading weights:  39%|███▉      | 615/1584 [00:06<00:07, 129.25it/s]
+[1ALoading weights:  40%|████      | 640/1584 [00:06<00:06, 154.27it/s]
+[1ALoading weights:  42%|████▏     | 658/1584 [00:06<00:05, 159.39it/s]
+[1ALoading weights:  43%|████▎     | 675/1584 [00:06<00:05, 155.07it/s]
+[1ALoading weights:  44%|████▎     | 692/1584 [00:06<00:06, 133.76it/s]
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]
+[1ALoading weights:  45%|████▌     | 718/1584 [00:06<00:05, 155.56it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1309.12it/s]
+
+[1ALoading weights:  46%|████▋     | 736/1584 [00:06<00:05, 161.51it/s]
+[1ALoading weights:  48%|████▊     | 753/1584 [00:06<00:05, 159.95it/s]
+[1ALoading weights:  49%|████▊     | 770/1584 [00:07<00:06, 133.07it/s]
+[1ALoading weights:  50%|█████     | 798/1584 [00:07<00:05, 147.20it/s]
+[1ALoading weights:  52%|█████▏    | 818/1584 [00:07<00:04, 154.72it/s]
+[1ALoading weights:  53%|█████▎    | 836/1584 [00:07<00:04, 159.46it/s]
+[1ALoading weights:  54%|█████▍    | 853/1584 [00:07<00:05, 141.49it/s]
+[1ALoading weights:  55%|█████▌    | 876/1584 [00:07<00:04, 144.99it/s]
+[1ALoading weights:  57%|█████▋    | 898/1584 [00:07<00:04, 153.90it/s]
+[1ALoading weights:  58%|█████▊    | 918/1584 [00:08<00:04, 153.34it/s]
+[1ALoading weights:  59%|█████▉    | 934/1584 [00:08<00:04, 150.70it/s]
+[1ALoading weights:  60%|██████    | 954/1584 [00:08<00:03, 160.03it/s]
+[1ALoading weights:  61%|██████▏   | 971/1584 [00:08<00:03, 159.51it/s]
+[1ALoading weights:  62%|██████▏   | 988/1584 [00:08<00:03, 155.31it/s]
+[1ALoading weights:  63%|██████▎   | 1004/1584 [00:08<00:04, 130.96it/s]
+[1ALoading weights:  65%|██████▍   | 1028/1584 [00:08<00:03, 155.81it/s]
+[1ALoading weights:  66%|██████▌   | 1047/1584 [00:08<00:03, 157.07it/s]
+[1ALoading weights:  67%|██████▋   | 1064/1584 [00:09<00:03, 154.32it/s]
+[1ALoading weights:  68%|██████▊   | 1080/1584 [00:09<00:03, 138.24it/s]
+[1ALoading weights:  70%|██████▉   | 1104/1584 [00:09<00:03, 155.92it/s]
+[1ALoading weights:  71%|███████   | 1123/1584 [00:09<00:02, 161.21it/s]
+[1ALoading weights:  72%|███████▏  | 1140/1584 [00:09<00:02, 160.43it/s]
+[1ALoading weights:  73%|███████▎  | 1157/1584 [00:09<00:03, 132.53it/s]
+[1ALoading weights:  75%|███████▍  | 1181/1584 [00:09<00:02, 157.08it/s]
+[1ALoading weights:  76%|███████▌  | 1198/1584 [00:09<00:02, 158.75it/s]
+[1ALoading weights:  77%|███████▋  | 1215/1584 [00:10<00:02, 154.43it/s]
+[1ALoading weights:  78%|███████▊  | 1232/1584 [00:10<00:02, 145.94it/s]
+[1ALoading weights:  79%|███████▉  | 1248/1584 [00:10<00:02, 144.11it/s]
+[1ALoading weights:  83%|████████▎ | 1317/1584 [00:10<00:00, 285.47it/s]
+[1ALoading weights:  88%|████████▊ | 1401/1584 [00:10<00:00, 434.87it/s]
+[1ALoading weights:  95%|█████████▌| 1511/1584 [00:10<00:00, 617.65it/s]
+[1ALoading weights: 100%|██████████| 1584/1584 [00:10<00:00, 149.04it/s]
+refusal_ablated: loaded 400 FP8 modules
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 615.54it/s]
+refusal_ablated pilot: 4/5
+intact pilot: 4/5
+refusal_ablated pilot: 5/5
+intact pilot: 5/5
+{"arm": "intact", "stage": "activation", "attempt": "v4_diagnostic", "pilot_pass": false, "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_activation_v4_diagnostic/intact.jsonl", "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_activation_v4_diagnostic_intact_pilot_audit.md", "fp8_modules": 400, "status": "H5_FAILED", "elapsed_seconds": 485.727142043}
+{"arm": "refusal_ablated", "stage": "activation", "attempt": "v4_diagnostic", "pilot_pass": true, "raw_path": "/artifacts/agent-safety-clean-v2-20261017/raw_transcripts/phase1_activation_v4_diagnostic/refusal_ablated.jsonl", "audit_path": "/artifacts/agent-safety-clean-v2-20261017/pilots/phase1_activation_v4_diagnostic_refusal_ablated_pilot_audit.md", "fp8_modules": 400, "status": "ACTIVATIONS_COMPLETE", "projection_mean": 0.012384929217656994, "mean_absolute_entry_projection": 0.8487341793234346, "mean_absolute_late_projection": 0.9426039289468466, "mean_absolute_entry_to_late_projection_change": 0.09386974962341192, "activation_count": 64, "activation_path": "/artifacts/agent-safety-clean-v2-20261017/activations/phase1_activation_v4_diagnostic/refusal_ablated.npz", "elapsed_seconds": 511.67571151899995}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-clr7KvRgsv48vGTDesc4cI

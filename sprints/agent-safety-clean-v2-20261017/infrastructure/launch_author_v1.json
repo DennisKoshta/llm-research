@@ -1,0 +1,20 @@
+{
+  "job": "paired_scenario_author_v1",
+  "gpus": 8,
+  "single_gpu_workers": 0,
+  "tp8_workers": 1,
+  "upper_bound_usd": 40,
+  "log": "infrastructure/scenario_author_v1.log",
+  "command": [
+    "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-clean-v2-20261017/.venv/bin/modal",
+    "run",
+    "--detach",
+    "scripts/modal_scenario_author.py",
+    "--attempt",
+    "v1",
+    "--external-receipt",
+    "records/phase1_external_qualification_v3_v4_eager_receipt.json",
+    "--cap",
+    "4096"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "research_upstream_failure_disposition_v1",
+  "created_utc": "2026-10-18T06:42:12.034472+00:00",
+  "program_complete": false,
+  "primary_receipt_path": "records/phase1_primary_qualification_vllm_q4_cap16384_receipt.json",
+  "primary_receipt_sha256": "d9f65ec4d0721e1de9fad6b9f86a8d46e50cd11ac69a20a2dc41c0f4ea66781d",
+  "primary_qualification_passed": false,
+  "phase1_dose_status": "AUTHORIZED_FIXED_DESCRIPTIVE_MEASUREMENT_ONLY",
+  "phase2_authorized": false,
+  "phase3_authorized": false,
+  "phase3_confidence_interval_gate": "NOT_EVALUABLE_WITHOUT_PHASE2_DATA",
+  "experiments": {
+    "exp_2_3": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_1_1": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_1_2": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_2_2": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_2_1": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_3_1": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    },
+    "exp_3_2": {
+      "empirical_status": "NOT_RUN_UPSTREAM_QUALIFICATION_FAILED",
+      "effect_estimate": null,
+      "confidence_interval": null,
+      "p_value": null,
+      "completion_claimed": false
+    }
+  },
+  "interpretation": "A clean negative qualification is an observed result. It is not a null result for unrun downstream hypotheses. Descriptive dose results cannot replace or waive the primary qualification. No downstream success, CI failure, or zero effect is imputed."
+}
