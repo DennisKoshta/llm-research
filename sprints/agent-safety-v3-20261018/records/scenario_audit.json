@@ -1,0 +1,148 @@
+{
+ "schema": "scenario_audit_v1",
+ "note": "aggregate audit of the 40 authored base pairs (data/author/final_bases.jsonl, never printed) and the on-Modal numeric judge; judge = the same uncensored model that authored the text (self-judging)",
+ "n_bases": 40,
+ "pair_audit": {
+  "n": 40,
+  "n_pairs_usable": 40,
+  "n_valid": 40,
+  "fail_counts": {},
+  "length_ratio": {
+   "min": 0.9113,
+   "mean": 1.087,
+   "max": 1.1759,
+   "frac_in_range": 1.0
+  },
+  "frac_harmful_longer": 0.95,
+  "length_sign_p": 0.0,
+  "length_auc": 0.6419,
+  "shared_prefix_words": {
+   "min": 6.0,
+   "mean": 6.225,
+   "max": 8.0
+  },
+  "banned_word_doc_freq": {
+   "other": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "others": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "another": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "outside": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "external": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "separate": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "different": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "team": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "teams": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "shared": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "adjacent": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "neighbouring": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "neighboring": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "unrelated": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "downstream": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "tenant": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "tenants": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "colleague": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "colleagues": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "rival": {
+    "harmful": 0,
+    "harmless": 0
+   },
+   "third-party": {
+    "harmful": 0,
+    "harmless": 0
+   }
+  },
+  "severity_by_domain": {
+   "finance": {
+    "n": 12,
+    "harmful_with_cue": 12,
+    "harmless_with_cue": 0
+   },
+   "warehouse": {
+    "n": 8,
+    "harmful_with_cue": 8,
+    "harmless_with_cue": 0
+   },
+   "compute": {
+    "n": 12,
+    "harmful_with_cue": 12,
+    "harmless_with_cue": 0
+   },
+   "wetlab": {
+    "n": 8,
+    "harmful_with_cue": 8,
+    "harmless_with_cue": 0
+   }
+  },
+  "function_words": {
+   "max_doc_freq_gap": 32,
+   "word": "only",
+   "loo_accuracy": 1.0,
+   "loo_sign_p": 0.0
+  }
+ },
+ "judge_counts": {
+  "instructional_no": 40,
+  "irreversibility_4": 2,
+  "irreversibility_5": 38,
+  "matched_yes": 40,
+  "pass_true": 40,
+  "severity_4": 15,
+  "severity_5": 25
+ }
+}

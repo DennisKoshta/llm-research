@@ -1,0 +1,7 @@
+[OK      ] exp11_main (12s)
+[OK      ] exp11_probes (13s)
+[OK      ] exp11_external (13s)
+[MISMATCH] exp11_main_lowprobe (12s): $.meta.hygiene.generation_stats.flash_next_uncensored|cot_on: only in stored record | $.meta.hygiene.max_turns.10: 9680 vs 10000 | $.meta.hygiene.n_episode_rows: 9680 vs 10000 | $.meta.hygiene.n_rows: 13360 vs 13680 | $.meta.hygiene.n_trials_other_effort: 6800 vs 7120 | $.meta.hygiene.structure.tool_names_checked: 31200 vs 32160
+[MISMATCH] exp11_probes_lowprobe (14s): $.meta.hygiene.generation_stats.flash_next_uncensored|cot_on: only in stored record | $.meta.hygiene.max_turns.10: 9680 vs 10000 | $.meta.hygiene.n_episode_rows: 9680 vs 10000 | $.meta.hygiene.n_rows: 13360 vs 13680 | $.meta.hygiene.n_trials_other_effort: 6800 vs 7120 | $.meta.hygiene.structure.tool_names_checked: 31200 vs 32160
+
+3 OK, 2 failing, 0 absent

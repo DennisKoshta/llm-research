@@ -1,0 +1,215 @@
+NOTE: phase1_family_decision.json records reasoning effort 'default' for Phase 2; Exp 1.2 runs at 'low'. Teachers, students and the floor must all use one effort, and its generation lengths decide the cap.
+0 adapters + 1 floors on 1 shards; corpora x ranks []
+teachers ['intact', 'refusal_ablated', 'pca_101'] seeds [0, 1, 2] epochs 3 max_prompts 48 later_turns 2
+  shard 0: 1 jobs  base.f0
+estimate: $5.38 total (1.0 GPU-h; students $1.05, ~0.2 h wall per shard); generations 6896, tokens 3.32e+06
+    teacher_greedy_and_cot   $   1.45    0.27 GPU-h  gens 2376
+    teacher_sampled          $   2.17    0.40 GPU-h  gens 3456
+    llama_paraphrase         $   0.72    0.13 GPU-h  gens 432
+    students                 $   1.05    0.19 GPU-h  gens 632
+largest preset within $10: smoke ($2.99); assumptions {'train_tok_per_s': 1500.0, 'decode_step_s': 0.06, 'prefill_tok_s': 5000.0, 'hf_load_s': 240.0, 'teacher_tok_s': 2000.0}
+this launch (students stage): $1.05
+bundle 05159e20ed3a11cb: 2 files; 1 payloads
+bundle 05159e20ed3a11cb already on the volume
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-g1l0rBlroGUVSnqWKIQIRo
+Building image im-pvJvQOyRJlO1soFBywRcI3
+
+=> Step 0: FROM base
+
+=> Step 1: RUN python -m pip install flash-linear-attention==0.5.2
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting flash-linear-attention==0.5.2
+  Downloading http://pypi-mirror.modal.local:5555/simple/flash-linear-attention/flash_linear_attention-0.5.2-py3-none-any.whl.metadata (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 178.3 MB/s eta 0:00:00
+Collecting fla-core==0.5.2 (from flash-linear-attention==0.5.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/fla-core/fla_core-0.5.2-py3-none-any.whl.metadata (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 76.1 MB/s eta 0:00:00
+Requirement already satisfied: transformers>=4.45.0 in /usr/local/lib/python3.12/site-packages (from flash-linear-attention==0.5.2) (5.20.1)
+Collecting einops (from fla-core==0.5.2->flash-linear-attention==0.5.2)
+  Downloading http://pypi-mirror.modal.local:5555/simple/einops/einops-0.8.2-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: huggingface-hub<3.0,>=1.31.0 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (2.2.0)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (2.5.4)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (26.3)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (2026.9.29)
+Requirement already satisfied: tokenizers<0.24.0,>=0.23.1 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (0.23.3)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (0.27.3)
+Requirement already satisfied: safetensors>=0.8.0 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (0.8.0)
+Requirement already satisfied: tqdm>=4.60 in /usr/local/lib/python3.12/site-packages (from transformers>=4.45.0->flash-linear-attention==0.5.2) (4.70.1)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (8.5.0)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (4.2.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (2026.9.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (1.7.0)
+Requirement already satisfied: httpx2<3,>=2.0.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (2.13.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (4.16.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/site-packages (from typer->transformers>=4.45.0->flash-linear-attention==0.5.2) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/site-packages (from typer->transformers>=4.45.0->flash-linear-attention==0.5.2) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/site-packages (from typer->transformers>=4.45.0->flash-linear-attention==0.5.2) (0.0.5)
+Requirement already satisfied: anyio>=4.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (4.15.1)
+Requirement already satisfied: httpcore2==2.13.1 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (2.13.1)
+Requirement already satisfied: idna>=3.18 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (3.20)
+Requirement already satisfied: truststore>=0.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (0.10.5)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/site-packages (from httpcore2==2.13.1->httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers>=4.45.0->flash-linear-attention==0.5.2) (0.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers>=4.45.0->flash-linear-attention==0.5.2) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers>=4.45.0->flash-linear-attention==0.5.2) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers>=4.45.0->flash-linear-attention==0.5.2) (0.1.2)
+Downloading http://pypi-mirror.modal.local:5555/simple/flash-linear-attention/flash_linear_attention-0.5.2-py3-none-any.whl (399 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 399.6/399.6 kB 85.8 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/fla-core/fla_core-0.5.2-py3-none-any.whl (819 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.2/819.2 kB 163.7 MB/s eta 0:00:00
+Downloading http://pypi-mirror.modal.local:5555/simple/einops/einops-0.8.2-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.6/65.6 kB 362.2 MB/s eta 0:00:00
+Installing collected packages: einops, fla-core, flash-linear-attention
+Successfully installed einops-0.8.2 fla-core-0.5.2 flash-linear-attention-0.5.2
+
+[notice] A new release of pip is available: 23.3.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 5.38s
+
+Built image im-pvJvQOyRJlO1soFBywRcI3 in 13.33s
+
+
+Building image im-4rhd6OnfLOvXN8LGZqR3EO
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HUB_OFFLINE=1
+
+=> Step 2: ENV TOKENIZERS_PARALLELISM=false
+
+=> Step 3: ENV PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Saving image...
+Image saved, took 9.87s
+
+Built image im-4rhd6OnfLOvXN8LGZqR3EO in 11.95s
+
+
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+└── ✓ Created Function train_eval_shard.
+[launched] 1 shards, call ids in /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp12_floor_fla.json
+[shard 0      0s] bundle ok: {} eval=112 refusal=128
+
+[1ALoading weights:   0%|          | 0/851 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/851 [00:00<11:26,  1.24it/s]
+[1ALoading weights:   0%|          | 2/851 [00:01<12:11,  1.16it/s]
+[1ALoading weights:   2%|▏         | 13/851 [00:01<01:25,  9.78it/s]
+[1ALoading weights:   3%|▎         | 23/851 [00:02<00:45, 18.23it/s]
+[1ALoading weights:   3%|▎         | 28/851 [00:02<00:38, 21.22it/s]
+[1ALoading weights:   4%|▍         | 36/851 [00:02<00:27, 29.49it/s]
+[1ALoading weights:   5%|▍         | 42/851 [00:02<00:25, 31.44it/s]
+[1ALoading weights:   6%|▌         | 47/851 [00:02<00:26, 30.51it/s]
+[1ALoading weights:   6%|▌         | 53/851 [00:02<00:23, 33.89it/s]
+[1ALoading weights:   8%|▊         | 66/851 [00:02<00:16, 48.96it/s]
+[1ALoading weights:   8%|▊         | 72/851 [00:03<00:16, 46.25it/s]
+[1ALoading weights:   9%|▉         | 80/851 [00:03<00:15, 51.36it/s]
+[1ALoading weights:  10%|█         | 86/851 [00:03<00:15, 48.28it/s]
+[1ALoading weights:  11%|█         | 94/851 [00:03<00:13, 54.60it/s]
+[1ALoading weights:  12%|█▏        | 100/851 [00:03<00:18, 41.14it/s]
+[1ALoading weights:  12%|█▏        | 106/851 [00:03<00:17, 43.15it/s]
+[1ALoading weights:  14%|█▍        | 119/851 [00:03<00:13, 55.26it/s]
+[1ALoading weights:  15%|█▍        | 125/851 [00:04<00:14, 51.73it/s]
+[1ALoading weights:  15%|█▌        | 131/851 [00:04<00:14, 49.33it/s]
+[1ALoading weights:  16%|█▌        | 137/851 [00:04<00:14, 49.39it/s]
+[1ALoading weights:  17%|█▋        | 147/851 [00:04<00:13, 50.93it/s]
+[1ALoading weights:  18%|█▊        | 153/851 [00:04<00:15, 45.28it/s]
+[1ALoading weights:  19%|█▊        | 158/851 [00:04<00:17, 40.45it/s]
+[1ALoading weights:  20%|██        | 172/851 [00:05<00:14, 46.85it/s]
+[1ALoading weights:  22%|██▏       | 186/851 [00:05<00:10, 60.48it/s]
+[1ALoading weights:  23%|██▎       | 193/851 [00:05<00:11, 56.38it/s]
+[1ALoading weights:  24%|██▎       | 200/851 [00:05<00:11, 58.22it/s]
+[1ALoading weights:  24%|██▍       | 207/851 [00:05<00:15, 41.29it/s]
+[1ALoading weights:  26%|██▌       | 222/851 [00:05<00:11, 57.02it/s]
+[1ALoading weights:  27%|██▋       | 229/851 [00:06<00:12, 51.71it/s]
+[1ALoading weights:  28%|██▊       | 239/851 [00:06<00:10, 58.29it/s]
+[1ALoading weights:  29%|██▉       | 246/851 [00:06<00:10, 56.63it/s]
+[1ALoading weights:  30%|██▉       | 253/851 [00:06<00:10, 56.48it/s]
+[1ALoading weights:  30%|███       | 259/851 [00:06<00:13, 42.58it/s]
+[1ALoading weights:  31%|███       | 265/851 [00:06<00:13, 43.29it/s]
+[1ALoading weights:  33%|███▎      | 278/851 [00:07<00:11, 50.16it/s]
+[1ALoading weights:  34%|███▍      | 288/851 [00:07<00:09, 58.36it/s]
+[1ALoading weights:  35%|███▍      | 295/851 [00:07<00:11, 49.78it/s]
+[1ALoading weights:  36%|███▌      | 306/851 [00:07<00:09, 57.03it/s]
+[1ALoading weights:  37%|███▋      | 313/851 [00:07<00:13, 40.16it/s]
+[1ALoading weights:  39%|███▊      | 328/851 [00:08<00:09, 57.59it/s]
+[1ALoading weights:  39%|███▉      | 336/851 [00:08<00:09, 52.74it/s]
+[1ALoading weights:  41%|████      | 345/851 [00:08<00:09, 56.15it/s]
+[1ALoading weights:  41%|████▏     | 352/851 [00:08<00:09, 54.97it/s]
+[1ALoading weights:  42%|████▏     | 359/851 [00:08<00:09, 53.63it/s]
+[1ALoading weights:  43%|████▎     | 365/851 [00:08<00:11, 41.72it/s]
+[1ALoading weights:  43%|████▎     | 370/851 [00:09<00:11, 40.98it/s]
+[1ALoading weights:  44%|████▍     | 378/851 [00:09<00:10, 47.28it/s]
+[1ALoading weights:  45%|████▌     | 385/851 [00:09<00:10, 44.55it/s]
+[1ALoading weights:  47%|████▋     | 398/851 [00:09<00:09, 47.28it/s]
+[1ALoading weights:  48%|████▊     | 409/851 [00:09<00:07, 58.10it/s]
+[1ALoading weights:  49%|████▉     | 416/851 [00:09<00:08, 49.57it/s]
+[1ALoading weights:  50%|████▉     | 422/851 [00:10<00:09, 45.35it/s]
+[1ALoading weights:  51%|█████     | 433/851 [00:10<00:07, 53.22it/s]
+[1ALoading weights:  52%|█████▏    | 439/851 [00:10<00:09, 45.50it/s]
+[1ALoading weights:  53%|█████▎    | 451/851 [00:10<00:08, 49.57it/s]
+[1ALoading weights:  54%|█████▍    | 459/851 [00:10<00:07, 49.79it/s]
+[1ALoading weights:  55%|█████▍    | 465/851 [00:10<00:07, 49.53it/s]
+[1ALoading weights:  55%|█████▌    | 471/851 [00:11<00:08, 43.82it/s]
+[1ALoading weights:  56%|█████▌    | 476/851 [00:11<00:08, 42.61it/s]
+[1ALoading weights:  57%|█████▋    | 488/851 [00:11<00:06, 52.61it/s]
+[1ALoading weights:  58%|█████▊    | 494/851 [00:11<00:06, 51.72it/s]
+[1ALoading weights:  59%|█████▉    | 504/851 [00:11<00:06, 53.27it/s]
+[1ALoading weights:  60%|██████    | 513/851 [00:11<00:05, 60.73it/s]
+[1ALoading weights:  61%|██████    | 520/851 [00:11<00:06, 49.06it/s]
+[1ALoading weights:  62%|██████▏   | 526/851 [00:12<00:08, 40.20it/s]
+[1ALoading weights:  63%|██████▎   | 539/851 [00:12<00:05, 55.60it/s]
+[1ALoading weights:  64%|██████▍   | 546/851 [00:12<00:06, 45.29it/s]
+[1ALoading weights:  65%|██████▍   | 552/851 [00:12<00:06, 46.65it/s]
+[1ALoading weights:  66%|██████▌   | 558/851 [00:12<00:06, 47.69it/s]
+[1ALoading weights:  66%|██████▋   | 565/851 [00:12<00:05, 49.18it/s]
+[1ALoading weights:  67%|██████▋   | 571/851 [00:13<00:05, 50.31it/s]
+[1ALoading weights:  68%|██████▊   | 577/851 [00:13<00:07, 35.75it/s]
+[1ALoading weights:  68%|██████▊   | 582/851 [00:13<00:07, 34.75it/s]
+[1ALoading weights:  70%|██████▉   | 595/851 [00:13<00:04, 53.06it/s]
+[1ALoading weights:  71%|███████   | 602/851 [00:13<00:05, 44.19it/s]
+[1ALoading weights:  71%|███████▏  | 608/851 [00:13<00:05, 46.19it/s]
+[1ALoading weights:  72%|███████▏  | 614/851 [00:14<00:06, 38.65it/s]
+[1ALoading weights:  73%|███████▎  | 624/851 [00:14<00:04, 47.61it/s]
+[1ALoading weights:  74%|███████▍  | 630/851 [00:14<00:06, 32.53it/s]
+[1ALoading weights:  76%|███████▌  | 644/851 [00:14<00:04, 48.98it/s]
+[1ALoading weights:  76%|███████▋  | 651/851 [00:15<00:04, 43.31it/s]
+[1ALoading weights:  78%|███████▊  | 662/851 [00:15<00:03, 54.86it/s]
+[1ALoading weights:  79%|███████▊  | 670/851 [00:15<00:03, 48.81it/s]
+[1ALoading weights:  80%|███████▉  | 677/851 [00:15<00:03, 49.96it/s]
+[1ALoading weights:  80%|████████  | 683/851 [00:15<00:04, 37.69it/s]
+[1ALoading weights:  81%|████████  | 688/851 [00:15<00:04, 37.61it/s]
+[1ALoading weights:  82%|████████▏ | 700/851 [00:16<00:02, 51.03it/s]
+[1ALoading weights:  83%|████████▎ | 707/851 [00:16<00:03, 45.86it/s]
+[1ALoading weights:  84%|████████▍ | 714/851 [00:16<00:02, 50.26it/s]
+[1ALoading weights:  85%|████████▍ | 720/851 [00:16<00:03, 42.14it/s]
+[1ALoading weights:  86%|████████▌ | 729/851 [00:16<00:02, 51.71it/s]
+[1ALoading weights:  86%|████████▋ | 736/851 [00:16<00:03, 36.92it/s]
+[1ALoading weights:  87%|████████▋ | 741/851 [00:17<00:03, 35.59it/s]
+[1ALoading weights:  88%|████████▊ | 753/851 [00:17<00:01, 49.46it/s]
+[1ALoading weights:  89%|████████▉ | 760/851 [00:17<00:02, 44.10it/s]
+[1ALoading weights:  90%|█████████ | 769/851 [00:17<00:01, 48.91it/s]
+[1ALoading weights:  91%|█████████ | 775/851 [00:17<00:01, 42.75it/s]
+[1ALoading weights:  92%|█████████▏| 784/851 [00:17<00:01, 47.37it/s]
+[1ALoading weights:  93%|█████████▎| 790/851 [00:18<00:01, 35.30it/s]
+[1ALoading weights:  94%|█████████▍| 804/851 [00:18<00:00, 49.41it/s]
+[1ALoading weights:  95%|█████████▌| 810/851 [00:18<00:01, 39.57it/s]
+[1ALoading weights:  97%|█████████▋| 822/851 [00:18<00:00, 50.22it/s]
+[1ALoading weights:  97%|█████████▋| 829/851 [00:18<00:00, 44.34it/s]
+[1ALoading weights:  98%|█████████▊| 836/851 [00:19<00:00, 47.82it/s]
+[1ALoading weights:  99%|█████████▉| 842/851 [00:19<00:00, 36.57it/s]
+[1ALoading weights: 100%|█████████▉| 849/851 [00:19<00:00, 40.56it/s]Loading weights: 100%|██████████| 851/851 [00:19<00:00, 43.64it/s]
+[shard 0     27s] model loaded Qwen3_5ForCausalLM 50.1 GiB
+[shard 0     28s] [base.f0] start
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[shard 0    873s]   eval {'gen_s': 733.4, 'proj_s': 38.3, 'eval_s': 771.8, 'n_episodes': 112, 'n_refusal': 128, 'generated_tokens': 107446, 'n_aborted_turns': 0}
+[shard 0    875s] [base.f0] done in 847s
+[shard 0] done in 875s: 1 adapters
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-g1l0rBlroGUVSnqWKIQIRo
+[ledger] wall 15.6 min, estimated cost $1.55 (reserved $5.00, estimate $5.38)
+fetched 1 adapters of exp12_floor_fla into /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/raw_transcripts/exp12_smoke
+  base.f0                  primary shortcut 0/32  harmful refused 64/64  (floor)
+missing adapters: none; failed shards: none

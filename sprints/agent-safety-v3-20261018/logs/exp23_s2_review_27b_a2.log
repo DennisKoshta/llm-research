@@ -1,0 +1,19 @@
+[plan] arm=intact rows=1 path=/weights/models/Qwen3.8-27B-FP8-Intact-Requant
+[plan] arm=refusal_ablated rows=1 path=/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated
+[plan] gpu=H200 x2 arms, reservation $2.99
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-398tYOl00ttSaLWqgkJc2n
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp23_s2_review_27b_a2.json
+[modal-client] 2026-10-19T00:25:14-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-398tYOl00ttSaLWqgkJc2n
+[done] intact: meta={"arm": "intact", "model_path": "/weights/models/Qwen3.8-27B-FP8-Intact-Requant", "n_rows": 1, "boot_s": 206.2, "gen_s": 6.3, "total_generated_tokens": 483, "n_generate_calls": 1, "sampling": {"temperature": 0.6, "top_p": 0.95, "seed_base": 2}}
+[summary] intact: {"n": 1, "counts": {"finish:stop": 1, "status:OK": 1, "tool:record_review": 1}, "tokens_p50": 483, "tokens_p90": 483, "tokens_max": 483}
+[done] refusal_ablated: meta={"arm": "refusal_ablated", "model_path": "/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated", "n_rows": 1, "boot_s": 221.3, "gen_s": 8.3, "total_generated_tokens": 697, "n_generate_calls": 1, "sampling": {"temperature": 0.6, "top_p": 0.95, "seed_base": 2}}
+[summary] refusal_ablated: {"n": 1, "counts": {"finish:stop": 1, "status:OK": 1, "tool:record_review": 1}, "tokens_p50": 697, "tokens_p90": 697, "tokens_max": 697}
+[ledger] wall 7.9 min, est actual $1.32

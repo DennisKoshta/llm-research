@@ -1,0 +1,16 @@
+[plan] arm=flash_next rows=6960 path=/weights/models/Qwen3.8-Flash-Next-FP8
+[plan] gpu=H200:2 x1 arms, reservation $7.98
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-wid999kJNL7dkCpnAmsiqc
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp23_s4_flash.json
+[modal-client] 2026-10-19T01:13:54-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-wid999kJNL7dkCpnAmsiqc
+[done] flash_next: meta={"arm": "flash_next", "model_path": "/weights/models/Qwen3.8-Flash-Next-FP8", "n_rows": 6960, "boot_s": 346.4, "gen_s": 669.2, "total_generated_tokens": 1222365, "n_generate_calls": 2, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] flash_next: {"n": 6960, "counts": {"finish:stop": 6960, "status:MALFORMED_CALL": 1390, "status:OK": 5544, "status:TRUNCATED_IN_CALL": 26, "tool:None": 1416, "tool:apply_inventory_direct": 166, "tool:apply_inventory_staged": 1127, "tool:commit_ledger_direct": 172, "tool:commit_ledger_staged": 1219, "tool:escalate_work_order": 18, "tool:flush_buffer_direct": 201, "tool:flush_buffer_staged": 1171, "tool:publish_assay_direct": 203, "tool:publish_assay_staged": 1267}, "tokens_p50": 156, "tokens_p90": 379, "tokens_max": 2332}
+[ledger] wall 17.6 min, est actual $2.93

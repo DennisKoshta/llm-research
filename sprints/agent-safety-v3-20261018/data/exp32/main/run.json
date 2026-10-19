@@ -1,0 +1,147 @@
+{
+ "args": {
+  "tag": "main",
+  "family": "r1",
+  "arms": "intact,refusal_ablated,pca_101,pca_102,pca_103,unrelated",
+  "effort": null,
+  "layer": 48,
+  "batch_size": 1,
+  "shards": 3,
+  "scale": 1.5,
+  "bases_per_domain": null,
+  "orders": null,
+  "cells": "all12",
+  "no_exp31": false,
+  "cot_off_arms": "intact,refusal_ablated,pca_101",
+  "no_return_arrays": false,
+  "bases": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/data/author/final_bases.jsonl",
+  "verdicts": "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/data/author/judge_verdicts.json",
+  "placeholder": false,
+  "job": null,
+  "dry_run": false,
+  "effort_label": "default"
+ },
+ "counts": {
+  "exp11_instances": 480,
+  "exp31_instances": 1536,
+  "unique_prompts": 1632,
+  "exp31_prompts_shared_with_exp11": 384
+ },
+ "position_check": {
+  "n_prompts": 1632,
+  "think_id": 248068,
+  "last_pre_ids": [
+   198
+  ],
+  "next_ids": [
+   248068
+  ],
+  "relation": "effort_block",
+  "effort": null,
+  "n_pre_tokens_cot_on": [
+   324,
+   584
+  ],
+  "n_pre_tokens_cot_off": [
+   286,
+   546
+  ]
+ },
+ "r_hat": {
+  "file": "/artifacts/agent-safety-three-track-20261016/phase1/phase1_directions.npz",
+  "key": "r_hat",
+  "dim": 5120,
+  "sha256": "4f6a6336da42d17868a3a17ba4044ad05f3a79e141d00613f199d04d594bf253"
+ },
+ "versions": {
+  "torch": "2.14.1+cu130",
+  "transformers": "5.20.1",
+  "numpy": "2.5.4",
+  "safetensors": "0.8.0",
+  "gpu": "NVIDIA H200"
+ },
+ "batch_check": {
+  "batch_size": 1,
+  "alt_batch_size": 8,
+  "n_prompts": 4,
+  "agreement": {
+   "in": {
+    "min_cos": 0.9999207065972718,
+    "mean_rel_l2": 0.011359841148415562,
+    "max_rel_l2": 0.013136542859421894
+   },
+   "out": {
+    "min_cos": 0.9999124980919366,
+    "mean_rel_l2": 0.011692296352148203,
+    "max_rel_l2": 0.01323737700984349
+   }
+  }
+ },
+ "shards": [
+  {
+   "shard_id": 0,
+   "elapsed_s": 671.5,
+   "arms": [
+    "intact",
+    "pca_102"
+   ]
+  },
+  {
+   "shard_id": 1,
+   "elapsed_s": 622.7,
+   "arms": [
+    "refusal_ablated",
+    "pca_103"
+   ]
+  },
+  {
+   "shard_id": 2,
+   "elapsed_s": 651.1,
+   "arms": [
+    "pca_101",
+    "unrelated"
+   ]
+  }
+ ],
+ "sha256": {
+  "intact": {
+   "volume_sha256": "520be02eb4aaf05407d5d26c506a531893acbbd8e5419c4d4b6c33a4288e0cee",
+   "local_sha256": "520be02eb4aaf05407d5d26c506a531893acbbd8e5419c4d4b6c33a4288e0cee",
+   "arrays_returned": false,
+   "cot_off": "separate"
+  },
+  "pca_102": {
+   "volume_sha256": "06caed6ee4c03de5ecd9c5d931d050d54b0c70960ed8ffdfbcbb0792830c9b5a",
+   "local_sha256": "06caed6ee4c03de5ecd9c5d931d050d54b0c70960ed8ffdfbcbb0792830c9b5a",
+   "arrays_returned": false,
+   "cot_off": "absent"
+  },
+  "refusal_ablated": {
+   "volume_sha256": "729257d1c1326589410cee4eaf38da66d0c8fe9b79b08417e07b6d53a4cb620d",
+   "local_sha256": "729257d1c1326589410cee4eaf38da66d0c8fe9b79b08417e07b6d53a4cb620d",
+   "arrays_returned": false,
+   "cot_off": "separate"
+  },
+  "pca_103": {
+   "volume_sha256": "88dee2fbb1981813f7182af43046c51de8274b24df8487ecd6a22b0d4b9a80a7",
+   "local_sha256": "88dee2fbb1981813f7182af43046c51de8274b24df8487ecd6a22b0d4b9a80a7",
+   "arrays_returned": false,
+   "cot_off": "absent"
+  },
+  "pca_101": {
+   "volume_sha256": "241cb0bf72295dfe59680ec2903d42ecac615a2a7d017ba6aa70f7bec45217ec",
+   "local_sha256": "241cb0bf72295dfe59680ec2903d42ecac615a2a7d017ba6aa70f7bec45217ec",
+   "arrays_returned": false,
+   "cot_off": "separate"
+  },
+  "unrelated": {
+   "volume_sha256": "6109b1baac2965af0961ab9a524e9730aa4fab4493a38ca88a67adc2c94e30b6",
+   "local_sha256": "6109b1baac2965af0961ab9a524e9730aa4fab4493a38ca88a67adc2c94e30b6",
+   "arrays_returned": false,
+   "cot_off": "absent"
+  }
+ },
+ "wall_s": 1607.5,
+ "est_cost_usd": 3.48,
+ "flags": []
+}

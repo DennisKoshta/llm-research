@@ -1,0 +1,16 @@
+[plan] arm=intact rows=3480 path=/weights/models/Qwen3.8-27B-FP8-Intact-Requant
+[plan] gpu=H200 x1 arms, reservation $2.72
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-XDDWL3iZzzLrv2QJSPyEBK
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp23_s4_intact_p3.json
+[modal-client] 2026-10-19T00:56:31-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-XDDWL3iZzzLrv2QJSPyEBK
+[done] intact: meta={"arm": "intact", "model_path": "/weights/models/Qwen3.8-27B-FP8-Intact-Requant", "n_rows": 3480, "boot_s": 249.6, "gen_s": 536.3, "total_generated_tokens": 715383, "n_generate_calls": 2, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] intact: {"n": 3480, "counts": {"finish:stop": 3480, "status:MALFORMED_CALL": 32, "status:OK": 3448, "tool:None": 32, "tool:escalate_work_order": 7, "tool:publish_assay_direct": 385, "tool:publish_assay_staged": 3056}, "tokens_p50": 174, "tokens_p90": 472, "tokens_max": 3562}
+[ledger] wall 14.9 min, est actual $1.35

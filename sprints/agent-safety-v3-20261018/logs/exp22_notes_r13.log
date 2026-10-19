@@ -1,0 +1,16 @@
+[plan] arm=refusal_ablated rows=3 path=/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated
+[plan] gpu=H200 x1 arms, reservation $1.09
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-Iij8qH7D31c80nodcP8vCu
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp22_notes_r13.json
+[modal-client] 2026-10-19T01:04:37-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-Iij8qH7D31c80nodcP8vCu
+[done] refusal_ablated: meta={"arm": "refusal_ablated", "model_path": "/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated", "n_rows": 3, "boot_s": 191.8, "gen_s": 24.5, "total_generated_tokens": 3360, "n_generate_calls": 1, "sampling": {"temperature": 0.7, "top_p": 0.95, "seed_base": 22}}
+[summary] refusal_ablated: {"n": 3, "counts": {"finish:stop": 3, "status:OK": 3, "tool:submit_note": 3}, "tokens_p50": 1051, "tokens_p90": 1439, "tokens_max": 1439}
+[ledger] wall 5.1 min, est actual $0.46

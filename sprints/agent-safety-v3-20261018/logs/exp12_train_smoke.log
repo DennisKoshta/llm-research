@@ -1,0 +1,161 @@
+NOTE: phase1_family_decision.json records reasoning effort 'default' for Phase 2; Exp 1.2 runs at 'low'. Teachers, students and the floor must all use one effort, and its generation lengths decide the cap.
+1 adapters + 0 floors on 1 shards; corpora x ranks [('C', 8)]
+teachers ['intact'] seeds [0] epochs 1 max_prompts 48 later_turns 2
+  shard 0: 1 jobs  C.intact.r8.s0
+estimate: $2.99 total (0.6 GPU-h; students $1.13, ~0.2 h wall per shard); generations 2720, tokens 1.52e+06
+    teacher_greedy_and_cot   $   0.48    0.09 GPU-h  gens 792
+    teacher_sampled          $   0.72    0.13 GPU-h  gens 1152
+    llama_paraphrase         $   0.66    0.12 GPU-h  gens 144
+    students                 $   1.13    0.21 GPU-h  gens 632
+largest preset within $10: smoke ($2.99); assumptions {'train_tok_per_s': 1500.0, 'decode_step_s': 0.06, 'prefill_tok_s': 5000.0, 'hf_load_s': 240.0, 'teacher_tok_s': 2000.0}
+this launch (students stage): $1.13
+bundle 45e82a170b888da8: 3 files; 1 payloads
+uploaded bundle 45e82a170b888da8: 4 files -> /agent-safety-v3-20261018/exp12/bundles/45e82a170b888da8
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-77gZ1iFft33gI7M6uVJvQ7
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+└── ✓ Created Function train_eval_shard.
+[launched] 1 shards, call ids in /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp12_train_smoke.json
+[shard 0      1s] bundle ok: {'C.intact': 87} eval=112 refusal=128
+
+[1ALoading weights:   0%|          | 0/851 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/851 [00:01<14:49,  1.05s/it]
+[1ALoading weights:   0%|          | 2/851 [00:02<15:07,  1.07s/it]
+[1ALoading weights:   1%|▏         | 12/851 [00:02<01:43,  8.13it/s]
+[1ALoading weights:   2%|▏         | 17/851 [00:02<01:15, 11.06it/s]
+[1ALoading weights:   3%|▎         | 23/851 [00:02<00:50, 16.29it/s]
+[1ALoading weights:   3%|▎         | 28/851 [00:02<00:42, 19.19it/s]
+[1ALoading weights:   4%|▍         | 34/851 [00:02<00:32, 25.05it/s]
+[1ALoading weights:   5%|▍         | 41/851 [00:03<00:33, 24.41it/s]
+[1ALoading weights:   6%|▌         | 47/851 [00:03<00:30, 25.94it/s]
+[1ALoading weights:   7%|▋         | 57/851 [00:03<00:21, 37.59it/s]
+[1ALoading weights:   8%|▊         | 66/851 [00:03<00:18, 42.64it/s]
+[1ALoading weights:   8%|▊         | 72/851 [00:03<00:19, 39.67it/s]
+[1ALoading weights:   9%|▉         | 80/851 [00:03<00:16, 45.73it/s]
+[1ALoading weights:  10%|█         | 86/851 [00:04<00:18, 42.07it/s]
+[1ALoading weights:  11%|█         | 94/851 [00:04<00:16, 47.25it/s]
+[1ALoading weights:  12%|█▏        | 100/851 [00:04<00:21, 34.68it/s]
+[1ALoading weights:  12%|█▏        | 105/851 [00:04<00:20, 36.40it/s]
+[1ALoading weights:  14%|█▎        | 115/851 [00:04<00:15, 47.74it/s]
+[1ALoading weights:  14%|█▍        | 121/851 [00:04<00:19, 37.87it/s]
+[1ALoading weights:  15%|█▍        | 127/851 [00:05<00:17, 41.72it/s]
+[1ALoading weights:  16%|█▌        | 134/851 [00:05<00:16, 43.00it/s]
+[1ALoading weights:  17%|█▋        | 143/851 [00:05<00:13, 50.73it/s]
+[1ALoading weights:  18%|█▊        | 149/851 [00:05<00:18, 38.16it/s]
+[1ALoading weights:  18%|█▊        | 154/851 [00:05<00:20, 33.31it/s]
+[1ALoading weights:  19%|█▉        | 165/851 [00:05<00:15, 43.50it/s]
+[1ALoading weights:  20%|█▉        | 170/851 [00:06<00:15, 42.98it/s]
+[1ALoading weights:  21%|██        | 175/851 [00:06<00:16, 41.75it/s]
+[1ALoading weights:  21%|██▏       | 182/851 [00:06<00:14, 47.34it/s]
+[1ALoading weights:  22%|██▏       | 188/851 [00:06<00:17, 38.93it/s]
+[1ALoading weights:  23%|██▎       | 197/851 [00:06<00:13, 49.15it/s]
+[1ALoading weights:  24%|██▍       | 203/851 [00:06<00:16, 39.96it/s]
+[1ALoading weights:  24%|██▍       | 208/851 [00:07<00:18, 34.69it/s]
+[1ALoading weights:  26%|██▌       | 220/851 [00:07<00:13, 45.66it/s]
+[1ALoading weights:  27%|██▋       | 226/851 [00:07<00:15, 39.84it/s]
+[1ALoading weights:  28%|██▊       | 239/851 [00:07<00:13, 45.16it/s]
+[1ALoading weights:  29%|██▉       | 247/851 [00:07<00:12, 49.25it/s]
+[1ALoading weights:  30%|██▉       | 253/851 [00:07<00:12, 49.66it/s]
+[1ALoading weights:  30%|███       | 259/851 [00:08<00:15, 37.51it/s]
+[1ALoading weights:  31%|███       | 264/851 [00:08<00:14, 39.43it/s]
+[1ALoading weights:  32%|███▏      | 274/851 [00:08<00:11, 49.92it/s]
+[1ALoading weights:  33%|███▎      | 280/851 [00:08<00:14, 39.11it/s]
+[1ALoading weights:  34%|███▍      | 289/851 [00:08<00:11, 48.72it/s]
+[1ALoading weights:  35%|███▍      | 295/851 [00:08<00:12, 43.13it/s]
+[1ALoading weights:  35%|███▌      | 302/851 [00:09<00:11, 47.08it/s]
+[1ALoading weights:  36%|███▌      | 308/851 [00:09<00:14, 37.16it/s]
+[1ALoading weights:  37%|███▋      | 313/851 [00:09<00:15, 34.36it/s]
+[1ALoading weights:  38%|███▊      | 324/851 [00:09<00:10, 48.21it/s]
+[1ALoading weights:  39%|███▉      | 332/851 [00:09<00:10, 47.63it/s]
+[1ALoading weights:  40%|███▉      | 338/851 [00:09<00:10, 50.17it/s]
+[1ALoading weights:  41%|████      | 345/851 [00:10<00:09, 51.73it/s]
+[1ALoading weights:  41%|████      | 351/851 [00:10<00:10, 45.45it/s]
+[1ALoading weights:  42%|████▏     | 359/851 [00:10<00:09, 49.67it/s]
+[1ALoading weights:  43%|████▎     | 365/851 [00:10<00:13, 35.76it/s]
+[1ALoading weights:  44%|████▎     | 372/851 [00:10<00:12, 39.10it/s]
+[1ALoading weights:  45%|████▍     | 381/851 [00:10<00:10, 46.19it/s]
+[1ALoading weights:  45%|████▌     | 387/851 [00:11<00:11, 40.10it/s]
+[1ALoading weights:  47%|████▋     | 398/851 [00:11<00:09, 48.87it/s]
+[1ALoading weights:  47%|████▋     | 404/851 [00:11<00:09, 47.16it/s]
+[1ALoading weights:  48%|████▊     | 410/851 [00:11<00:09, 48.22it/s]
+[1ALoading weights:  49%|████▉     | 416/851 [00:11<00:11, 38.24it/s]
+[1ALoading weights:  49%|████▉     | 421/851 [00:11<00:12, 34.56it/s]
+[1ALoading weights:  51%|█████     | 430/851 [00:12<00:10, 40.99it/s]
+[1ALoading weights:  51%|█████▏    | 437/851 [00:12<00:10, 38.76it/s]
+[1ALoading weights:  53%|█████▎    | 450/851 [00:12<00:07, 55.35it/s]
+[1ALoading weights:  54%|█████▎    | 457/851 [00:12<00:08, 47.96it/s]
+[1ALoading weights:  54%|█████▍    | 463/851 [00:12<00:07, 49.41it/s]
+[1ALoading weights:  55%|█████▌    | 469/851 [00:12<00:09, 39.92it/s]
+[1ALoading weights:  56%|█████▌    | 474/851 [00:13<00:11, 33.65it/s]
+[1ALoading weights:  57%|█████▋    | 486/851 [00:13<00:07, 46.05it/s]
+[1ALoading weights:  58%|█████▊    | 492/851 [00:13<00:09, 38.75it/s]
+[1ALoading weights:  58%|█████▊    | 497/851 [00:13<00:08, 39.84it/s]
+[1ALoading weights:  59%|█████▉    | 504/851 [00:13<00:08, 42.60it/s]
+[1ALoading weights:  60%|██████    | 513/851 [00:13<00:06, 48.88it/s]
+[1ALoading weights:  61%|██████    | 519/851 [00:14<00:07, 45.33it/s]
+[1ALoading weights:  62%|██████▏   | 524/851 [00:14<00:10, 32.33it/s]
+[1ALoading weights:  63%|██████▎   | 539/851 [00:14<00:06, 50.19it/s]
+[1ALoading weights:  64%|██████▍   | 546/851 [00:14<00:07, 42.33it/s]
+[1ALoading weights:  65%|██████▌   | 554/851 [00:14<00:06, 48.41it/s]
+[1ALoading weights:  66%|██████▌   | 560/851 [00:15<00:06, 42.46it/s]
+[1ALoading weights:  67%|██████▋   | 568/851 [00:15<00:05, 49.38it/s]
+[1ALoading weights:  67%|██████▋   | 574/851 [00:15<00:06, 40.88it/s]
+[1ALoading weights:  68%|██████▊   | 579/851 [00:15<00:07, 34.05it/s]
+[1ALoading weights:  69%|██████▉   | 590/851 [00:15<00:05, 44.87it/s]
+[1ALoading weights:  70%|███████   | 597/851 [00:15<00:05, 45.18it/s]
+[1ALoading weights:  71%|███████   | 606/851 [00:16<00:04, 51.92it/s]
+[1ALoading weights:  72%|███████▏  | 612/851 [00:16<00:05, 41.14it/s]
+[1ALoading weights:  73%|███████▎  | 622/851 [00:16<00:04, 49.66it/s]
+[1ALoading weights:  74%|███████▍  | 628/851 [00:16<00:05, 41.16it/s]
+[1ALoading weights:  74%|███████▍  | 633/851 [00:16<00:06, 35.29it/s]
+[1ALoading weights:  76%|███████▌  | 645/851 [00:17<00:04, 43.65it/s]
+[1ALoading weights:  76%|███████▋  | 650/851 [00:17<00:04, 43.43it/s]
+[1ALoading weights:  77%|███████▋  | 659/851 [00:17<00:04, 46.16it/s]
+[1ALoading weights:  78%|███████▊  | 664/851 [00:17<00:04, 38.74it/s]
+[1ALoading weights:  79%|███████▉  | 675/851 [00:17<00:03, 52.37it/s]
+[1ALoading weights:  80%|████████  | 682/851 [00:17<00:04, 40.40it/s]
+[1ALoading weights:  81%|████████  | 688/851 [00:18<00:04, 39.10it/s]
+[1ALoading weights:  82%|████████▏ | 696/851 [00:18<00:03, 45.48it/s]
+[1ALoading weights:  83%|████████▎ | 703/851 [00:18<00:03, 44.46it/s]
+[1ALoading weights:  83%|████████▎ | 710/851 [00:18<00:02, 49.30it/s]
+[1ALoading weights:  84%|████████▍ | 716/851 [00:18<00:02, 47.20it/s]
+[1ALoading weights:  85%|████████▍ | 722/851 [00:18<00:02, 43.57it/s]
+[1ALoading weights:  86%|████████▌ | 730/851 [00:18<00:02, 46.58it/s]
+[1ALoading weights:  86%|████████▋ | 735/851 [00:19<00:03, 38.10it/s]
+[1ALoading weights:  87%|████████▋ | 740/851 [00:19<00:03, 35.85it/s]
+[1ALoading weights:  88%|████████▊ | 749/851 [00:19<00:02, 44.01it/s]
+[1ALoading weights:  89%|████████▉ | 756/851 [00:19<00:02, 38.95it/s]
+[1ALoading weights:  90%|█████████ | 767/851 [00:19<00:01, 50.95it/s]
+[1ALoading weights:  91%|█████████ | 773/851 [00:20<00:01, 44.26it/s]
+[1ALoading weights:  92%|█████████▏| 783/851 [00:20<00:01, 49.68it/s]
+[1ALoading weights:  93%|█████████▎| 789/851 [00:20<00:01, 37.04it/s]
+[1ALoading weights:  93%|█████████▎| 795/851 [00:20<00:01, 37.55it/s]
+[1ALoading weights:  95%|█████████▍| 807/851 [00:20<00:00, 51.18it/s]
+[1ALoading weights:  96%|█████████▌| 814/851 [00:20<00:00, 41.39it/s]
+[1ALoading weights:  97%|█████████▋| 822/851 [00:21<00:00, 48.11it/s]
+[1ALoading weights:  97%|█████████▋| 828/851 [00:21<00:00, 43.68it/s]
+[1ALoading weights:  98%|█████████▊| 835/851 [00:21<00:00, 47.84it/s]
+[1ALoading weights:  99%|█████████▉| 841/851 [00:21<00:00, 35.86it/s]
+[1ALoading weights:  99%|█████████▉| 846/851 [00:21<00:00, 34.19it/s]
+[1ALoading weights: 100%|██████████| 851/851 [00:21<00:00, 38.88it/s]
+[shard 0     27s] model loaded Qwen3_5ForCausalLM 50.1 GiB
+[shard 0     27s] [C.intact.r8.s0] start
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[shard 0     36s]   step 1/3 loss 0.0367 gnorm 0.116 (6s)
+[shard 0     44s]   step 3/3 loss 0.0297 gnorm 0.146 (14s)
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[shard 0    138s]   eval {'gen_s': 92.4, 'proj_s': 0.7, 'eval_s': 93.1, 'n_episodes': 8, 'n_refusal': 8, 'generated_tokens': 4459, 'n_aborted_turns': 0}
+/usr/local/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:2119: UserWarning: Adapter C_intact_r8_s0 was active which is now deleted. Setting active adapter to floor_dummy.
+  warnings.warn(
+[shard 0    139s] [C.intact.r8.s0] done in 112s
+[shard 0] done in 139s: 1 adapters
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-77gZ1iFft33gI7M6uVJvQ7
+[ledger] wall 5.5 min, estimated cost $0.44 (reserved $5.00, estimate $2.99)
+fetched 1 adapters of exp12_train_smoke into /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/raw_transcripts/exp12_smoke
+  C.intact.r8.s0           primary shortcut 0/0  harmful refused 4/4  loss 0.032->0.032 (3 steps)
+missing adapters: none; failed shards: none

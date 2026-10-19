@@ -1,0 +1,5 @@
+[plan] arm=flash_next_uncensored rows=3 path=/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8
+[plan] gpu=H200:2 x1 arms, reservation $4.99
+[done] flash_next_uncensored: meta={"arm": "flash_next_uncensored", "model_path": "/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8", "n_rows": 3, "boot_s": 373.7, "gen_s": 50.0, "total_generated_tokens": 1196, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] flash_next_uncensored: {"n": 3, "counts": {"finish:stop": 3, "status:OK": 3, "tool:rate_pair": 3}, "tokens_p50": 386, "tokens_p90": 449, "tokens_max": 449}
+[ledger] wall 2.1 min, est actual $0.34

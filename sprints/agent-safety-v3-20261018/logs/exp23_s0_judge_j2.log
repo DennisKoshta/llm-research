@@ -1,0 +1,16 @@
+[plan] arm=flash_next_uncensored rows=20 path=/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8
+[plan] gpu=H200:2 x1 arms, reservation $4.99
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-3gVTA1mZ8Y5P7Z59JudU1Y
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp23_s0_judge_j2.json
+[modal-client] 2026-10-18T16:45:37-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-3gVTA1mZ8Y5P7Z59JudU1Y
+[done] flash_next_uncensored: meta={"arm": "flash_next_uncensored", "model_path": "/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8", "n_rows": 20, "boot_s": 341.4, "gen_s": 858.8, "total_generated_tokens": 26598, "n_generate_calls": 1, "sampling": {"temperature": 0.6, "top_p": 0.95, "seed_base": 2}}
+[summary] flash_next_uncensored: {"n": 20, "counts": {"finish:length": 1, "finish:stop": 19, "status:MALFORMED_CALL": 10, "status:OK": 6, "status:TRUNCATED_IN_CALL": 4, "tool:None": 14, "tool:rate_scenario": 6}, "tokens_p50": 933, "tokens_p90": 1460, "tokens_max": 8192}
+[ledger] wall 21.6 min, est actual $3.6

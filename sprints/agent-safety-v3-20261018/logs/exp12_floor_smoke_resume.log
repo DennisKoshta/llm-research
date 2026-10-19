@@ -1,0 +1,25 @@
+NOTE: phase1_family_decision.json records reasoning effort 'default' for Phase 2; Exp 1.2 runs at 'low'. Teachers, students and the floor must all use one effort, and its generation lengths decide the cap.
+0 adapters + 1 floors on 1 shards; corpora x ranks []
+teachers ['intact', 'refusal_ablated', 'pca_101'] seeds [0, 1, 2] epochs 3 max_prompts 48 later_turns 2
+  shard 0: 1 jobs  base.f0
+estimate: $5.38 total (1.0 GPU-h; students $1.05, ~0.2 h wall per shard); generations 6896, tokens 3.32e+06
+    teacher_greedy_and_cot   $   1.45    0.27 GPU-h  gens 2376
+    teacher_sampled          $   2.17    0.40 GPU-h  gens 3456
+    llama_paraphrase         $   0.72    0.13 GPU-h  gens 432
+    students                 $   1.05    0.19 GPU-h  gens 632
+largest preset within $10: smoke ($2.99); assumptions {'train_tok_per_s': 1500.0, 'decode_step_s': 0.06, 'prefill_tok_s': 5000.0, 'hf_load_s': 240.0, 'teacher_tok_s': 2000.0}
+this launch (students stage): $1.05
+bundle 05159e20ed3a11cb: 2 files; 1 payloads
+bundle 05159e20ed3a11cb already on the volume
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-AlaJ1n7BB1oIlhWqTLlZpr
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+└── ✓ Created Function train_eval_shard.
+[shard 0] done in 966s: 1 adapters
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-AlaJ1n7BB1oIlhWqTLlZpr
+[ledger] wall 10.6 min, estimated cost $1.68 (reserved $5.00, estimate $5.38)
+fetched 1 adapters of exp12_floor_smoke into /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/raw_transcripts/exp12_smoke
+  base.f0                  primary shortcut 0/32  harmful refused 64/64  (floor)
+missing adapters: none; failed shards: none

@@ -1,0 +1,256 @@
+NOTE: phase1_family_decision.json records reasoning effort 'default' for Phase 2; Exp 1.2 runs at 'low'. Teachers, students and the floor must all use one effort, and its generation lengths decide the cap.
+0 adapters + 1 floors on 1 shards; corpora x ranks []
+teachers ['intact', 'refusal_ablated', 'pca_101'] seeds [0, 1, 2] epochs 3 max_prompts 48 later_turns 2
+  shard 0: 1 jobs  base.f0
+estimate: $5.38 total (1.0 GPU-h; students $1.05, ~0.2 h wall per shard); generations 6896, tokens 3.32e+06
+    teacher_greedy_and_cot   $   1.45    0.27 GPU-h  gens 2376
+    teacher_sampled          $   2.17    0.40 GPU-h  gens 3456
+    llama_paraphrase         $   0.72    0.13 GPU-h  gens 432
+    students                 $   1.05    0.19 GPU-h  gens 632
+largest preset within $10: smoke ($2.99); assumptions {'train_tok_per_s': 1500.0, 'decode_step_s': 0.06, 'prefill_tok_s': 5000.0, 'hf_load_s': 240.0, 'teacher_tok_s': 2000.0}
+this launch (students stage): $1.05
+bundle 05159e20ed3a11cb: 2 files; 1 payloads
+uploaded bundle 05159e20ed3a11cb: 3 files -> /agent-safety-v3-20261018/exp12/bundles/05159e20ed3a11cb
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-bSPhmt9YiaK8EdU9LuYwLQ
+Building image im-C0yXK84nkZxcYZjrHb3dRz
+
+=> Step 0: FROM base
+
+=> Step 1: RUN python -m pip install peft==0.21.2
+Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+Collecting peft==0.21.2
+  Downloading http://pypi-mirror.modal.local:5555/simple/peft/peft-0.21.2-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (2.5.4)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (26.3)
+Requirement already satisfied: psutil in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (7.2.2)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (6.0.3)
+Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (2.14.1)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (5.20.1)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (4.70.1)
+Requirement already satisfied: accelerate>=0.21.0 in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (1.15.0)
+Requirement already satisfied: safetensors in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (0.8.0)
+Requirement already satisfied: huggingface_hub>=0.25.0 in /usr/local/lib/python3.12/site-packages (from peft==0.21.2) (2.2.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/site-packages (from huggingface_hub>=0.25.0->peft==0.21.2) (8.5.0)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/site-packages (from huggingface_hub>=0.25.0->peft==0.21.2) (4.2.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/site-packages (from huggingface_hub>=0.25.0->peft==0.21.2) (2026.9.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/lib/python3.12/site-packages (from huggingface_hub>=0.25.0->peft==0.21.2) (1.7.0)
+Requirement already satisfied: httpx2<3,>=2.0.0 in /usr/local/lib/python3.12/site-packages (from huggingface_hub>=0.25.0->peft==0.21.2) (2.13.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/site-packages (from huggingface_hub>=0.25.0->peft==0.21.2) (4.16.0)
+Requirement already satisfied: setuptools>=77.0.3 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (3.7)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (3.1.6)
+Requirement already satisfied: cuda-toolkit==13.0.3 in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.0.3.0)
+Requirement already satisfied: cuda-bindings<14,>=13.0.3 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (13.4.4)
+Requirement already satisfied: nvidia-cudnn-cu13==9.24.0.43 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (9.24.0.43)
+Requirement already satisfied: nvidia-cusparselt-cu13==0.8.1 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (0.8.1)
+Requirement already satisfied: nvidia-nccl-cu13==2.30.7 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (2.30.7)
+Requirement already satisfied: nvidia-nvshmem-cu13==3.4.5 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (3.4.5)
+Requirement already satisfied: triton~=3.8.0 in /usr/local/lib/python3.12/site-packages (from torch>=1.13.0->peft==0.21.2) (3.8.0)
+Requirement already satisfied: nvidia-cublas==13.1.1.3.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.1.1.3)
+Requirement already satisfied: nvidia-cuda-nvrtc==13.0.88.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.0.88)
+Requirement already satisfied: nvidia-cuda-runtime==13.0.96.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.0.96)
+Requirement already satisfied: nvidia-cufft==12.0.0.61.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (12.0.0.61)
+Requirement already satisfied: nvidia-nvjitlink<14,>=13.0.88 in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.4.92)
+Requirement already satisfied: nvidia-cufile==1.15.1.6.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (1.15.1.6)
+Requirement already satisfied: nvidia-cuda-cupti==13.0.85.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.0.85)
+Requirement already satisfied: nvidia-curand==10.4.0.35.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (10.4.0.35)
+Requirement already satisfied: nvidia-cusolver==12.0.4.66.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (12.0.4.66)
+Requirement already satisfied: nvidia-cusparse==12.6.3.3.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (12.6.3.3)
+Requirement already satisfied: nvidia-nvtx==13.0.85.* in /usr/local/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.13.0->peft==0.21.2) (13.0.85)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/site-packages (from transformers->peft==0.21.2) (2026.9.29)
+Requirement already satisfied: tokenizers<0.24.0,>=0.23.1 in /usr/local/lib/python3.12/site-packages (from transformers->peft==0.21.2) (0.23.3)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/site-packages (from transformers->peft==0.21.2) (0.27.3)
+Requirement already satisfied: cuda-pathfinder>=1.4.2 in /usr/local/lib/python3.12/site-packages (from cuda-bindings<14,>=13.0.3->torch>=1.13.0->peft==0.21.2) (1.8.3)
+Requirement already satisfied: anyio>=4.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface_hub>=0.25.0->peft==0.21.2) (4.15.1)
+Requirement already satisfied: httpcore2==2.13.1 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface_hub>=0.25.0->peft==0.21.2) (2.13.1)
+Requirement already satisfied: idna>=3.18 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface_hub>=0.25.0->peft==0.21.2) (3.20)
+Requirement already satisfied: truststore>=0.10 in /usr/local/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface_hub>=0.25.0->peft==0.21.2) (0.10.5)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/site-packages (from httpcore2==2.13.1->httpx2<3,>=2.0.0->huggingface_hub>=0.25.0->peft==0.21.2) (0.16.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=1.13.0->peft==0.21.2) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/site-packages (from jinja2->torch>=1.13.0->peft==0.21.2) (3.0.4)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/site-packages (from typer->transformers->peft==0.21.2) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/site-packages (from typer->transformers->peft==0.21.2) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/site-packages (from typer->transformers->peft==0.21.2) (0.0.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers->peft==0.21.2) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers->peft==0.21.2) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->peft==0.21.2) (0.1.2)
+Downloading http://pypi-mirror.modal.local:5555/simple/peft/peft-0.21.2-py3-none-any.whl (835 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 525.3 MB/s eta 0:00:00
+Installing collected packages: peft
+Successfully installed peft-0.21.2
+
+[notice] A new release of pip is available: 23.3.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Saving image...
+Image saved, took 5.32s
+
+Built image im-C0yXK84nkZxcYZjrHb3dRz in 11.79s
+
+
+Building image im-itKS8dB0qORcMj77DLoZaI
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HUB_OFFLINE=1
+
+=> Step 2: ENV TOKENIZERS_PARALLELISM=false
+
+=> Step 3: ENV PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Saving image...
+Image saved, took 2.68s
+
+Built image im-itKS8dB0qORcMj77DLoZaI in 4.57s
+
+
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+└── ✓ Created Function train_eval_shard.
+[launched] 1 shards, call ids in /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp12_floor_smoke.json
+[shard 0      2s] bundle ok: {} eval=112 refusal=128
+
+[1ALoading weights:   0%|          | 0/851 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/851 [00:01<27:12,  1.92s/it]
+[1ALoading weights:   1%|          | 7/851 [00:02<03:02,  4.62it/s]
+[1ALoading weights:   2%|▏         | 14/851 [00:02<01:26,  9.73it/s]
+[1ALoading weights:   3%|▎         | 27/851 [00:02<00:38, 21.40it/s]
+[1ALoading weights:   4%|▍         | 33/851 [00:02<00:32, 25.30it/s]
+[1ALoading weights:   5%|▍         | 39/851 [00:02<00:27, 29.90it/s]
+[1ALoading weights:   5%|▌         | 45/851 [00:02<00:27, 28.97it/s]
+[1ALoading weights:   6%|▌         | 50/851 [00:03<00:28, 28.53it/s]
+[1ALoading weights:   7%|▋         | 63/851 [00:03<00:17, 45.63it/s]
+[1ALoading weights:   8%|▊         | 70/851 [00:03<00:19, 40.55it/s]
+[1ALoading weights:   9%|▉         | 80/851 [00:03<00:16, 47.35it/s]
+[1ALoading weights:  10%|█         | 86/851 [00:03<00:16, 47.47it/s]
+[1ALoading weights:  11%|█         | 94/851 [00:03<00:15, 49.00it/s]
+[1ALoading weights:  12%|█▏        | 100/851 [00:04<00:21, 35.06it/s]
+[1ALoading weights:  14%|█▎        | 115/851 [00:04<00:14, 51.89it/s]
+[1ALoading weights:  14%|█▍        | 122/851 [00:04<00:16, 45.00it/s]
+[1ALoading weights:  16%|█▌        | 133/851 [00:04<00:13, 53.86it/s]
+[1ALoading weights:  16%|█▋        | 140/851 [00:04<00:13, 52.75it/s]
+[1ALoading weights:  17%|█▋        | 147/851 [00:04<00:13, 53.84it/s]
+[1ALoading weights:  18%|█▊        | 153/851 [00:05<00:16, 41.48it/s]
+[1ALoading weights:  19%|█▊        | 159/851 [00:05<00:16, 42.88it/s]
+[1ALoading weights:  20%|██        | 172/851 [00:05<00:12, 55.45it/s]
+[1ALoading weights:  21%|██        | 179/851 [00:05<00:12, 53.85it/s]
+[1ALoading weights:  22%|██▏       | 186/851 [00:05<00:12, 54.03it/s]
+[1ALoading weights:  23%|██▎       | 192/851 [00:05<00:12, 50.71it/s]
+[1ALoading weights:  23%|██▎       | 198/851 [00:05<00:12, 52.43it/s]
+[1ALoading weights:  24%|██▍       | 204/851 [00:06<00:14, 45.20it/s]
+[1ALoading weights:  25%|██▍       | 209/851 [00:06<00:16, 38.93it/s]
+[1ALoading weights:  25%|██▌       | 217/851 [00:06<00:13, 45.53it/s]
+[1ALoading weights:  26%|██▋       | 224/851 [00:06<00:14, 42.37it/s]
+[1ALoading weights:  28%|██▊       | 239/851 [00:06<00:10, 59.51it/s]
+[1ALoading weights:  29%|██▉       | 246/851 [00:06<00:10, 56.69it/s]
+[1ALoading weights:  30%|██▉       | 253/851 [00:07<00:12, 49.46it/s]
+[1ALoading weights:  30%|███       | 259/851 [00:07<00:13, 43.60it/s]
+[1ALoading weights:  31%|███       | 264/851 [00:07<00:13, 42.34it/s]
+[1ALoading weights:  33%|███▎      | 278/851 [00:07<00:09, 58.10it/s]
+[1ALoading weights:  33%|███▎      | 285/851 [00:07<00:09, 57.26it/s]
+[1ALoading weights:  34%|███▍      | 292/851 [00:07<00:13, 42.94it/s]
+[1ALoading weights:  36%|███▌      | 304/851 [00:08<00:09, 56.19it/s]
+[1ALoading weights:  37%|███▋      | 311/851 [00:08<00:11, 46.53it/s]
+[1ALoading weights:  37%|███▋      | 317/851 [00:08<00:11, 45.58it/s]
+[1ALoading weights:  38%|███▊      | 324/851 [00:08<00:10, 48.79it/s]
+[1ALoading weights:  39%|███▉      | 331/851 [00:08<00:11, 46.31it/s]
+[1ALoading weights:  40%|███▉      | 338/851 [00:08<00:10, 51.16it/s]
+[1ALoading weights:  41%|████      | 345/851 [00:08<00:09, 53.84it/s]
+[1ALoading weights:  41%|████      | 351/851 [00:09<00:09, 50.03it/s]
+[1ALoading weights:  42%|████▏     | 359/851 [00:09<00:09, 52.10it/s]
+[1ALoading weights:  43%|████▎     | 365/851 [00:09<00:12, 40.44it/s]
+[1ALoading weights:  44%|████▎     | 372/851 [00:09<00:11, 43.46it/s]
+[1ALoading weights:  45%|████▌     | 384/851 [00:09<00:08, 55.51it/s]
+[1ALoading weights:  46%|████▌     | 390/851 [00:09<00:08, 53.74it/s]
+[1ALoading weights:  47%|████▋     | 398/851 [00:09<00:08, 56.34it/s]
+[1ALoading weights:  47%|████▋     | 404/851 [00:10<00:08, 51.41it/s]
+[1ALoading weights:  48%|████▊     | 412/851 [00:10<00:07, 56.13it/s]
+[1ALoading weights:  49%|████▉     | 418/851 [00:10<00:10, 42.35it/s]
+[1ALoading weights:  50%|████▉     | 424/851 [00:10<00:09, 43.60it/s]
+[1ALoading weights:  51%|█████     | 434/851 [00:10<00:07, 55.86it/s]
+[1ALoading weights:  52%|█████▏    | 441/851 [00:10<00:08, 48.78it/s]
+[1ALoading weights:  53%|█████▎    | 448/851 [00:10<00:07, 52.87it/s]
+[1ALoading weights:  53%|█████▎    | 454/851 [00:11<00:08, 46.08it/s]
+[1ALoading weights:  55%|█████▍    | 465/851 [00:11<00:08, 48.21it/s]
+[1ALoading weights:  55%|█████▌    | 471/851 [00:11<00:08, 43.92it/s]
+[1ALoading weights:  56%|█████▌    | 477/851 [00:11<00:08, 45.38it/s]
+[1ALoading weights:  57%|█████▋    | 485/851 [00:11<00:06, 52.75it/s]
+[1ALoading weights:  58%|█████▊    | 491/851 [00:11<00:07, 45.30it/s]
+[1ALoading weights:  59%|█████▉    | 501/851 [00:12<00:06, 54.88it/s]
+[1ALoading weights:  60%|█████▉    | 507/851 [00:12<00:07, 48.54it/s]
+[1ALoading weights:  61%|██████    | 518/851 [00:12<00:05, 55.81it/s]
+[1ALoading weights:  62%|██████▏   | 524/851 [00:12<00:07, 42.95it/s]
+[1ALoading weights:  62%|██████▏   | 531/851 [00:12<00:06, 46.02it/s]
+[1ALoading weights:  64%|██████▍   | 543/851 [00:12<00:06, 50.29it/s]
+[1ALoading weights:  65%|██████▍   | 553/851 [00:13<00:05, 57.60it/s]
+[1ALoading weights:  66%|██████▌   | 560/851 [00:13<00:05, 48.71it/s]
+[1ALoading weights:  67%|██████▋   | 571/851 [00:13<00:04, 56.54it/s]
+[1ALoading weights:  68%|██████▊   | 578/851 [00:13<00:06, 41.12it/s]
+[1ALoading weights:  70%|██████▉   | 592/851 [00:13<00:04, 56.43it/s]
+[1ALoading weights:  71%|███████   | 600/851 [00:14<00:04, 51.01it/s]
+[1ALoading weights:  72%|███████▏  | 609/851 [00:14<00:04, 57.82it/s]
+[1ALoading weights:  72%|███████▏  | 616/851 [00:14<00:04, 50.79it/s]
+[1ALoading weights:  73%|███████▎  | 624/851 [00:14<00:04, 54.24it/s]
+[1ALoading weights:  74%|███████▍  | 631/851 [00:14<00:05, 38.72it/s]
+[1ALoading weights:  76%|███████▌  | 646/851 [00:14<00:03, 55.94it/s]
+[1ALoading weights:  77%|███████▋  | 654/851 [00:15<00:03, 51.92it/s]
+[1ALoading weights:  78%|███████▊  | 663/851 [00:15<00:03, 54.45it/s]
+[1ALoading weights:  79%|███████▊  | 670/851 [00:15<00:03, 50.92it/s]
+[1ALoading weights:  80%|███████▉  | 677/851 [00:15<00:03, 49.60it/s]
+[1ALoading weights:  80%|████████  | 683/851 [00:15<00:04, 39.33it/s]
+[1ALoading weights:  82%|████████▏ | 696/851 [00:15<00:02, 55.19it/s]
+[1ALoading weights:  83%|████████▎ | 703/851 [00:16<00:03, 47.97it/s]
+[1ALoading weights:  84%|████████▍ | 716/851 [00:16<00:02, 47.77it/s]
+[1ALoading weights:  86%|████████▌ | 730/851 [00:16<00:02, 52.60it/s]
+[1ALoading weights:  86%|████████▋ | 736/851 [00:16<00:02, 47.90it/s]
+[1ALoading weights:  87%|████████▋ | 742/851 [00:16<00:02, 48.41it/s]
+[1ALoading weights:  89%|████████▊ | 755/851 [00:17<00:01, 49.10it/s]
+[1ALoading weights:  90%|████████▉ | 764/851 [00:17<00:01, 56.23it/s]
+[1ALoading weights:  91%|█████████ | 771/851 [00:17<00:01, 50.73it/s]
+[1ALoading weights:  92%|█████████▏| 783/851 [00:17<00:01, 60.29it/s]
+[1ALoading weights:  93%|█████████▎| 790/851 [00:17<00:01, 43.40it/s]
+[1ALoading weights:  94%|█████████▍| 804/851 [00:17<00:00, 58.92it/s]
+[1ALoading weights:  95%|█████████▌| 812/851 [00:18<00:00, 50.88it/s]
+[1ALoading weights:  97%|█████████▋| 822/851 [00:18<00:00, 56.80it/s]
+[1ALoading weights:  97%|█████████▋| 829/851 [00:18<00:00, 50.98it/s]
+[1ALoading weights:  98%|█████████▊| 837/851 [00:18<00:00, 52.60it/s]
+[1ALoading weights:  99%|█████████▉| 843/851 [00:18<00:00, 40.91it/s]
+[1ALoading weights: 100%|██████████| 851/851 [00:18<00:00, 44.85it/s]
+[shard 0     25s] model loaded Qwen3_5ForCausalLM 50.1 GiB
+[shard 0     25s] [base.f0] start
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[shard 0] FAILED ConnectionError: Deadline exceeded
+[modal-client] 2026-10-18T15:30:20-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-bSPhmt9YiaK8EdU9LuYwLQ
+[ledger] wall 4.2 min, estimated cost $0.38 (reserved $5.00, estimate $5.38)
+Traceback (most recent call last):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/scripts/run_exp12.py", line 388, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/scripts/run_exp12.py", line 384, in main
+    return {"plan": cmd_plan, "run": cmd_run, "fetch": cmd_fetch}[a.cmd](a)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/scripts/run_exp12.py", line 349, in cmd_run
+    got = fetch(a.tag, out_dir)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/scripts/run_exp12.py", line 227, in fetch
+    names = {e.path.rsplit("/", 1)[-1] for e in vol.listdir(base)}
+                                                ^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_object.py", line 49, in wrapped
+    return await method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/volume.py", line 975, in listdir
+    return [entry async for entry in self.iterdir(path, recursive=recursive)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_object.py", line 61, in wrapped
+    async for item in stream:
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/volume.py", line 958, in iterdir
+    async for batch in self.client._stub.VolumeListFiles.unary_stream(req):
+  File "/home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_grpc_client.py", line 195, in unary_stream
+    with grpc_error_converter():
+         ^^^^^^^^^^^^^^^^^^^^^^
+modal.exception.NotFoundError: No such file or directory

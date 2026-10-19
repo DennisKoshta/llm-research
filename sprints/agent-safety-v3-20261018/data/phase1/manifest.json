@@ -1,0 +1,88 @@
+{
+ "defaults": {
+  "cot_mode": "cot_on",
+  "kind": "single",
+  "max_new_tokens": {
+   "A": 16384,
+   "B": 8192,
+   "C": 16384
+  },
+  "reasoning_effort": null
+ },
+ "donor_inputs": {
+  "set_a": {
+   "n_items": 128,
+   "path": "agent-safety-clean-v2-20261017/stimuli/phase1_qualification.jsonl",
+   "sha256": "0d41de8e6f49e4d2d2d9e96a752ed2b18feea090df630f65e31a4e426ce726be"
+  },
+  "set_b": {
+   "n_items": 60,
+   "path": "agent-safety-three-track-20261016/data/exp1_1/direct_instruction_60_controls.json",
+   "sha256": "7683015863d6def944a61ad4b97fcdc8202e3208c4d6ea8ddcc9a34733802086"
+  },
+  "set_c": {
+   "n_items": 128,
+   "path": "agent-safety-three-track-20261016/data/phase1_ablation/qualification_heldout_prompts.json",
+   "sha256": "dbc1f387259b41d40d0465e3ecf4434de9c0cce4c7dc4a7834fac62a5bcb2db8"
+  }
+ },
+ "exp_id": "phase1",
+ "files": {
+  "requests_set_a0.jsonl": {
+   "consequence": {
+    "harmful": 32,
+    "harmless": 64
+   },
+   "max_new_tokens": 16384,
+   "n_rows": 96,
+   "set_name": "A",
+   "sha256": "0decf77a53f0382460398fa43697f5e1099ce07bb38964bf0e9fcc8f8b55ff7c",
+   "variant": "A0"
+  },
+  "requests_set_a1.jsonl": {
+   "consequence": {
+    "harmful": 32,
+    "harmless": 64
+   },
+   "max_new_tokens": 16384,
+   "n_rows": 96,
+   "set_name": "A",
+   "sha256": "cd54819479b60ff858e54a9335e5335026c5a737ccfa0ca6e42d956440419ce7",
+   "variant": "A1"
+  },
+  "requests_set_a2.jsonl": {
+   "consequence": {
+    "harmful": 32,
+    "harmless": 64
+   },
+   "max_new_tokens": 16384,
+   "n_rows": 96,
+   "set_name": "A",
+   "sha256": "9fa9f80e1cd10c9ede5764b5e44331cdb002a93e4db05716699fbcc0f9e0112a",
+   "variant": "A2"
+  },
+  "requests_set_b.jsonl": {
+   "consequence": {
+    "harmful": 30
+   },
+   "max_new_tokens": 8192,
+   "n_rows": 30,
+   "set_name": "B",
+   "sha256": "39e9468f1ccb3c93a603622d6eaa7e90d8bce45d3f8942b107830211908e1a74",
+   "variant": "B"
+  },
+  "requests_set_c.jsonl": {
+   "consequence": {
+    "harmful": 64,
+    "harmless": 64
+   },
+   "max_new_tokens": 16384,
+   "n_rows": 128,
+   "set_name": "C",
+   "sha256": "34c3304777398e4b2e303eca97c48aa6aeeadc5932222287b7fdc0aee6138fdd",
+   "variant": "C"
+  }
+ },
+ "include_text": false,
+ "n_rows_total": 446
+}

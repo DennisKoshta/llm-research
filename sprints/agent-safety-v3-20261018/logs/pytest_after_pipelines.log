@@ -1,0 +1,16 @@
+    warnings.warn(
+
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_body_on_cpu_kl_matches_independent_scipy
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_body_without_r2_trajectory_and_subset_of_references
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_uses_first_checkpoints_ids_when_a_tokenizer_differs
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_falls_back_to_own_logits_when_the_float32_head_check_fails
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_rejects_bad_prompts_and_missing_r1
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_raises_on_non_finite_logprobs
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_launcher_main_reserves_runs_releases_writes_record_and_prints_aggregates
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_launcher_already_reserved_and_job_name
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_sanity_flags_detect_each_failure_mode
+  /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_functions.py:2153: UserWarning: The kl_checkpoints function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+done

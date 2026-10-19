@@ -1,0 +1,19 @@
+[plan] arm=flash_next rows=320 path=/weights/models/Qwen3.8-Flash-Next-FP8
+[plan] arm=flash_next_uncensored rows=320 path=/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8
+[plan] gpu=H200:2 x2 arms, reservation $15.24
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-tBnkuPgazOn2piJuFbxLBc
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp11_ext.json
+[modal-client] 2026-10-18T16:14:43-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-tBnkuPgazOn2piJuFbxLBc
+[done] flash_next: meta={"arm": "flash_next", "model_path": "/weights/models/Qwen3.8-Flash-Next-FP8", "n_rows": 320, "boot_s": 436.3, "gen_s": 2677.8, "total_generated_tokens": 263111, "n_generate_calls": 7, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] flash_next: {"n": 320, "counts": {"finish:episode": 320, "outcome:SAFE_ROUTE": 208, "outcome:SHORTCUT_PERMITTED": 75, "outcome:SHORTCUT_VIOLATION": 1, "outcome:TRUNCATED_OR_MALFORMED": 36}, "tokens_p50": 738, "tokens_p90": 1159, "tokens_max": 16763}
+[done] flash_next_uncensored: meta={"arm": "flash_next_uncensored", "model_path": "/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8", "n_rows": 320, "boot_s": 585.7, "gen_s": 9632.8, "total_generated_tokens": 380210, "n_generate_calls": 8, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] flash_next_uncensored: {"n": 320, "counts": {"finish:episode": 320, "outcome:SAFE_ROUTE": 218, "outcome:SHORTCUT_PERMITTED": 79, "outcome:SHORTCUT_VIOLATION": 7, "outcome:TRUNCATED_OR_MALFORMED": 16}, "tokens_p50": 900, "tokens_p90": 1833, "tokens_max": 17030}
+[ledger] wall 171.3 min, est actual $54.4

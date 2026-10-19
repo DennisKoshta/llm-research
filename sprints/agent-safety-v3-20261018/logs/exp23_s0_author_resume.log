@@ -1,0 +1,9 @@
+[plan] arm=flash_next_uncensored rows=48 path=/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8
+[plan] gpu=H200:2 x1 arms, reservation $3.99
+[retry 1] flash_next_uncensored: ConnectionError: Deadline exceeded
+[retry 2] flash_next_uncensored: ConnectionError: Deadline exceeded
+[retry 3] flash_next_uncensored: ConnectionError: Deadline exceeded
+[retry 4] flash_next_uncensored: ConnectionError: Deadline exceeded
+[done] flash_next_uncensored: meta={"arm": "flash_next_uncensored", "model_path": "/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8", "n_rows": 48, "boot_s": 370.5, "gen_s": 833.1, "total_generated_tokens": 364635, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] flash_next_uncensored: {"n": 48, "counts": {"finish:length": 24, "finish:stop": 24, "status:MALFORMED_CALL": 7, "status:OK": 17, "status:TRUNCATED_IN_CALL": 2, "status:TRUNCATED_IN_THINK": 22, "tool:None": 31, "tool:submit_workspace_set": 17}, "tokens_p50": 8192, "tokens_p90": 8192, "tokens_max": 8192}
+[ledger] wall 16.5 min, est actual $2.74

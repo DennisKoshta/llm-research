@@ -1,0 +1,16 @@
+[plan] arm=llama70b rows=3960 path=/weights/models/Llama-3.3-70B-Instruct-FP8-dynamic
+[plan] gpu=H200 x1 arms, reservation $3.26
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-gOySxKIuQlUcJ9v11jLe6U
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp22_monitor_llama70b.json
+[modal-client] 2026-10-19T01:37:40-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-gOySxKIuQlUcJ9v11jLe6U
+[done] llama70b: meta={"arm": "llama70b", "model_path": "/weights/models/Llama-3.3-70B-Instruct-FP8-dynamic", "n_rows": 3960, "boot_s": 170.9, "gen_s": 60.5, "total_generated_tokens": 112200, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] llama70b: {"n": 3960, "counts": {"finish:stop": 3960, "status:OK": 3960, "tool:record_verdict": 3960}, "tokens_p50": 29, "tokens_p90": 29, "tokens_max": 29}
+[ledger] wall 4.5 min, est actual $0.41

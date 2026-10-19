@@ -1,0 +1,197 @@
+{
+ "experiment": "1.1",
+ "placeholder": false,
+ "scale": 1.0,
+ "n_bases": 40,
+ "n_bases_available": 40,
+ "scenario_ids": [
+  "ledger_00",
+  "ledger_01",
+  "ledger_02",
+  "ledger_03",
+  "inventory_00",
+  "inventory_01",
+  "inventory_02",
+  "inventory_03",
+  "queue_00",
+  "queue_01",
+  "queue_02",
+  "queue_03",
+  "assay_00",
+  "assay_01",
+  "assay_02",
+  "assay_03",
+  "archive_00",
+  "archive_01",
+  "archive_02",
+  "archive_03",
+  "billing_00",
+  "billing_01",
+  "billing_02",
+  "billing_03",
+  "shipping_00",
+  "shipping_01",
+  "shipping_02",
+  "shipping_03",
+  "registry_00",
+  "registry_01",
+  "registry_02",
+  "registry_03",
+  "snapshot_00",
+  "snapshot_01",
+  "snapshot_02",
+  "snapshot_03",
+  "forecast_00",
+  "forecast_01",
+  "forecast_02",
+  "forecast_03"
+ ],
+ "selection_sha256": "e279d2644e305650af6a8f7404a87b137ccfb061d6a49cb6b3212686414ff545",
+ "effort": "default",
+ "cot_on_cap": 16384,
+ "cot_off_cap": 1024,
+ "max_turns": 10,
+ "skip": [],
+ "files": {
+  "main_cot_on": {
+   "rows": 480,
+   "sha256": "0e25888be2edd5d8464a571b03b5b3677883299b7ee6e0e56c64404f5036da0f"
+  },
+  "forced_safe_cot_on": {
+   "rows": 120,
+   "sha256": "8c63b0d27106facc9b6c879e58f848c46dfba899da0e39a035c9889efe39d460"
+  },
+  "unlisted_cot_on": {
+   "rows": 80,
+   "sha256": "a56624773b2d74e434a3dc76c430c46c82b760732a2d252f80952ffcaa6c5f50"
+  },
+  "direct_solo_cot_on": {
+   "rows": 80,
+   "sha256": "0760cdbd9b2e03134475ced630fb58db1cc76e0e19d61900b981451d99adf50d"
+  },
+  "direct_esc_cot_on": {
+   "rows": 80,
+   "sha256": "b63122c79976b54cda54c91476d1a9e98baf385dd7267b9c1fa69b07094eeccf"
+  },
+  "probes_cot_on": {
+   "rows": 240,
+   "sha256": "f221d443f1eaf69046f29f434bb6fd97806bf9f05a16f5e60abb4fd9bbf7d2e4"
+  },
+  "main_cot_off": {
+   "rows": 480,
+   "sha256": "37b4ae2ff3b81a638e6f9e07e2b27c6deb8bdbdb0870cf4f9064d34307f3c874"
+  },
+  "forced_safe_cot_off": {
+   "rows": 120,
+   "sha256": "b1c87cb01ba54254289db187fe2f360477535f6e985228949eeb1430324aee8d"
+  },
+  "direct_solo_cot_off": {
+   "rows": 80,
+   "sha256": "55c58b4e65ae70b1efbb1d55f331b21133bfc6a8dd6f7f6d913fd3bd2cbc9acb"
+  },
+  "direct_esc_cot_off": {
+   "rows": 80,
+   "sha256": "88a63ac406593ea0120c79087d9038e219dded17773c2dff2f0cf7de62a83a87"
+  },
+  "external": {
+   "rows": 320,
+   "sha256": "69266d6e97cb2343525d420dfc2e53851b5de077642be2e70e328e7b35ff496d"
+  }
+ },
+ "estimate": {
+  "scale": 1.0,
+  "n_bases": 40,
+  "request_rows": {
+   "main_cot_on": 480,
+   "forced_safe_cot_on": 120,
+   "unlisted_cot_on": 80,
+   "direct_solo_cot_on": 80,
+   "direct_esc_cot_on": 80,
+   "probes_cot_on": 240,
+   "main_cot_off": 480,
+   "forced_safe_cot_off": 120,
+   "direct_solo_cot_off": 80,
+   "direct_esc_cot_off": 80,
+   "external": 320
+  },
+  "launches": {
+   "exp11": {
+    "arms": [
+     "intact",
+     "refusal_ablated",
+     "pca_101",
+     "pca_102",
+     "pca_103",
+     "unrelated"
+    ],
+    "gpus_per_arm": 1,
+    "hours_per_arm": 0.266,
+    "hours_per_arm_worst": 0.463,
+    "generations": 21710,
+    "decode_tokens": 4866432,
+    "prompt_tokens": 19989103,
+    "usd": 8.64,
+    "usd_worst": 15.12
+   },
+   "exp11_cotoff": {
+    "arms": [
+     "intact",
+     "refusal_ablated"
+    ],
+    "gpus_per_arm": 1,
+    "hours_per_arm": 0.189,
+    "hours_per_arm_worst": 0.266,
+    "generations": 5429,
+    "decode_tokens": 380016,
+    "prompt_tokens": 4815770,
+    "usd": 2.06,
+    "usd_worst": 2.9
+   },
+   "exp11_ext": {
+    "arms": [
+     "flash_next",
+     "flash_next_uncensored"
+    ],
+    "gpus_per_arm": 2,
+    "hours_per_arm": 0.363,
+    "hours_per_arm_worst": 0.557,
+    "generations": 3501,
+    "decode_tokens": 612864,
+    "prompt_tokens": 3389475,
+    "usd": 7.22,
+    "usd_worst": 11.1
+   }
+  },
+  "generations": 30640,
+  "decode_tokens": 5859312,
+  "prompt_tokens": 28194348,
+  "gpu_hours": 3.42,
+  "usd": 17.92,
+  "usd_worst": 29.12,
+  "assumptions": {
+   "decode_tok_s": 2700.0,
+   "external_decode_tok_s": 900.0,
+   "prefill_tok_s": 20000.0,
+   "boot_s": 250.0,
+   "boot_s_external": 700.0,
+   "tail_first_s": 60.0,
+   "tail_later_s": 15.0,
+   "seq_tok_s": 100.0,
+   "cot_on_cap": 16384,
+   "prompt_tokens": 700,
+   "history_tokens_per_turn": 120,
+   "cot_on_first_tokens": 600,
+   "cot_on_later_tokens": 80,
+   "cot_off_tokens": 70,
+   "single_cot_on_tokens": 500,
+   "p_safe_high_cost": 0.7,
+   "retry_turns": 0.3,
+   "worst_factor": 1.5
+  }
+ },
+ "launch_commands": [
+  "PYTHONPATH=src .venv/bin/python scripts/run_requests.py --exp-id exp11 --requests data/exp11/requests_main_cot_on.jsonl,data/exp11/requests_forced_safe_cot_on.jsonl,data/exp11/requests_unlisted_cot_on.jsonl,data/exp11/requests_direct_solo_cot_on.jsonl,data/exp11/requests_direct_esc_cot_on.jsonl,data/exp11/requests_probes_cot_on.jsonl --arms intact,refusal_ablated,pca_101,pca_102,pca_103,unrelated --gpu H200 --max-num-seqs 384 --eager 0 --est-hours 0.5",
+  "PYTHONPATH=src .venv/bin/python scripts/run_requests.py --exp-id exp11_cotoff --requests data/exp11/requests_main_cot_off.jsonl,data/exp11/requests_forced_safe_cot_off.jsonl,data/exp11/requests_direct_solo_cot_off.jsonl,data/exp11/requests_direct_esc_cot_off.jsonl --arms intact,refusal_ablated --gpu H200 --max-num-seqs 384 --eager 0 --est-hours 0.3",
+  "PYTHONPATH=src .venv/bin/python scripts/run_requests.py --exp-id exp11_ext --requests data/exp11/requests_external.jsonl --arms flash_next,flash_next_uncensored --gpu H200:2 --max-num-seqs 64 --max-model-len 24576 --eager 1 --extra-json '{\"safetensors_load_strategy\":\"eager\"}' --est-hours 0.6"
+ ]
+}

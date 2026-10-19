@@ -1,0 +1,16 @@
+# v3 sprint: what is intentionally NOT committed
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Full, unredacted prompts and completions (authored harmful scenario text; ~1.5 GB). Kept locally; integrity manifest with
+# sha256 + row counts is committed as reports/raw_transcripts_manifest.json. Receipts (scripts/verify_all_receipts.py)
+# recompute from these files.
+raw_transcripts/
+
+# Authored scenario / request / corpus text (harmful-cell content) and activation arrays; small manifests and numeric
+# summaries (data/**/*.json) ARE committed.
+data/**/*.jsonl
+data/**/*.npz
+data/exp12/bundle_local/
+data/exp12/corpora/

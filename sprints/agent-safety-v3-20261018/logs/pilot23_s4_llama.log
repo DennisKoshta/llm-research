@@ -1,0 +1,16 @@
+[plan] arm=llama70b rows=64 path=/weights/models/Llama-3.3-70B-Instruct-FP8-dynamic
+[plan] gpu=H200 x1 arms, reservation $1.63
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-zYgDZoYrR5ye5iu3pr73z4
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_pilot23_s4_llama.json
+[modal-client] 2026-10-18T22:34:37-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-zYgDZoYrR5ye5iu3pr73z4
+[done] llama70b: meta={"arm": "llama70b", "model_path": "/weights/models/Llama-3.3-70B-Instruct-FP8-dynamic", "n_rows": 64, "boot_s": 174.2, "gen_s": 18.7, "total_generated_tokens": 4759, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] llama70b: {"n": 64, "counts": {"finish:stop": 64, "status:MALFORMED_CALL": 2, "status:OK": 62, "tool:None": 2, "tool:apply_inventory_direct": 12, "tool:apply_inventory_staged": 4, "tool:commit_ledger_direct": 5, "tool:commit_ledger_staged": 9, "tool:escalate_work_order": 2, "tool:flush_buffer_direct": 11, "tool:flush_buffer_staged": 5, "tool:publish_assay_direct": 5, "tool:publish_assay_staged": 9}, "tokens_p50": 39, "tokens_p90": 226, "tokens_max": 559}
+[ledger] wall 18.9 min, est actual $1.71

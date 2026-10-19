@@ -1,0 +1,2951 @@
+[
+ {
+  "id": "c001",
+  "text": "59",
+  "value": 59,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c002",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c003",
+  "text": "92.2%",
+  "value": 92.2,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c004",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c005",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c006",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c007",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c008",
+  "text": "2",
+  "value": 2,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c009",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c010",
+  "text": "6.25%",
+  "value": 6.25,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 2,
+  "scale": 100
+ },
+ {
+  "id": "c011",
+  "text": "40",
+  "value": 40,
+  "expr": "40",
+  "decimals": 0
+ },
+ {
+  "id": "c012",
+  "text": "95%",
+  "value": 95,
+  "expr": "R['scenario_audit']['pair_audit']['frac_harmful_longer']",
+  "decimals": 0,
+  "scale": 100
+ },
+ {
+  "id": "c013",
+  "text": "93.3",
+  "value": 93.3,
+  "expr": "R['phase1_family_decision']['verdict']['r1']['delta_pp_B_default']",
+  "decimals": 1
+ },
+ {
+  "id": "c014",
+  "text": "70.0",
+  "value": 70.0,
+  "expr": "R['phase1_family_decision']['verdict']['r1']['delta_pp_B_low']",
+  "decimals": 1
+ },
+ {
+  "id": "c015",
+  "text": "6.25",
+  "value": 6.25,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='C')['value']",
+  "decimals": 2
+ },
+ {
+  "id": "c016",
+  "text": "83.6%",
+  "value": 83.6,
+  "expr": "next(r for r in R['projection_full13']['summary'] if r['ckpt']=='r1_refusal_ablated' and r['vector']=='r1.r_hat' and r['set']=='r2_val' and r['site']=='out' and r['effort']=='default')['reduction_vs_intact']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c017",
+  "text": "70",
+  "value": 70,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='C')['threshold']",
+  "decimals": 0
+ },
+ {
+  "id": "c018",
+  "text": "95%",
+  "value": 95,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='projection_reduction' and x['set']=='-')['threshold']",
+  "decimals": 0,
+  "scale": 100
+ },
+ {
+  "id": "c019",
+  "text": "0.10",
+  "value": 0.1,
+  "expr": "R['kl_full13']['gate']",
+  "decimals": 2
+ },
+ {
+  "id": "c020",
+  "text": "5,352",
+  "value": 5352,
+  "expr": "R['phase1_dim_r1_analysis']['n_rows']",
+  "decimals": 0
+ },
+ {
+  "id": "c021",
+  "text": "1,784",
+  "value": 1784,
+  "expr": "R['phase1_dim_r2_analysis']['n_rows']",
+  "decimals": 0
+ },
+ {
+  "id": "c022",
+  "text": "892",
+  "value": 892,
+  "expr": "R['phase1_dim_r1_analysis']['n_rows']/6",
+  "decimals": 0
+ },
+ {
+  "id": "c023",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c024",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c025",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c026",
+  "text": "10%",
+  "value": 10,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='intact_comply_rate' and x['set']=='C')['threshold']",
+  "decimals": 0,
+  "scale": 100
+ },
+ {
+  "id": "c027",
+  "text": "10",
+  "value": 10,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='control_abs_delta_pp' and x['set']=='C' and x['arm']=='pca_101')['threshold']",
+  "decimals": 0
+ },
+ {
+  "id": "c028",
+  "text": "64",
+  "value": 64,
+  "expr": "len(R['projection_full13']['prompt_sets']['r1_val']['ids'])",
+  "decimals": 0
+ },
+ {
+  "id": "c029",
+  "text": "48",
+  "value": 48,
+  "expr": "R['kl_full13']['prompt_set']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c030",
+  "text": "24",
+  "value": 24,
+  "expr": "R['kl_full13']['prompt_set']['by_label']['C']",
+  "decimals": 0
+ },
+ {
+  "id": "c031",
+  "text": "24",
+  "value": 24,
+  "expr": "R['kl_full13']['prompt_set']['by_label']['A0']",
+  "decimals": 0
+ },
+ {
+  "id": "c032",
+  "text": "32",
+  "value": 32,
+  "expr": "R['kl_full13']['config']['n_gen']",
+  "decimals": 0
+ },
+ {
+  "id": "c033",
+  "text": "10",
+  "value": 10,
+  "expr": "10",
+  "decimals": 0
+ },
+ {
+  "id": "c034",
+  "text": "4",
+  "value": 4,
+  "expr": "4",
+  "decimals": 0
+ },
+ {
+  "id": "c035",
+  "text": "12",
+  "value": 12,
+  "expr": "12",
+  "decimals": 0
+ },
+ {
+  "id": "c036",
+  "text": "480",
+  "value": 480,
+  "expr": "480",
+  "decimals": 0
+ },
+ {
+  "id": "c037",
+  "text": "3",
+  "value": 3,
+  "expr": "3",
+  "decimals": 0
+ },
+ {
+  "id": "c038",
+  "text": "2",
+  "value": 2,
+  "expr": "2",
+  "decimals": 0
+ },
+ {
+  "id": "c039",
+  "text": "6",
+  "value": 6,
+  "expr": "6",
+  "decimals": 0
+ },
+ {
+  "id": "c040",
+  "text": "7",
+  "value": 7,
+  "expr": "7",
+  "decimals": 0
+ },
+ {
+  "id": "c041",
+  "text": "35",
+  "value": 35,
+  "expr": "35",
+  "decimals": 0
+ },
+ {
+  "id": "c042",
+  "text": "15",
+  "value": 15,
+  "expr": "15",
+  "decimals": 0
+ },
+ {
+  "id": "c043",
+  "text": "80",
+  "value": 80,
+  "expr": "80",
+  "decimals": 0
+ },
+ {
+  "id": "c044",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c045",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c046",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c047",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c048",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c049",
+  "text": "51",
+  "value": 51,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c050",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c051",
+  "text": "79.7%",
+  "value": 79.7,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c052",
+  "text": "28",
+  "value": 28,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c053",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c054",
+  "text": "93.3%",
+  "value": 93.3,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c055",
+  "text": "21",
+  "value": 21,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c056",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c057",
+  "text": "70.0%",
+  "value": 70.0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c058",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c059",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c060",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c061",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c062",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c063",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c064",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c065",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c066",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c067",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c068",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c069",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c070",
+  "text": "1",
+  "value": 1,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c071",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c072",
+  "text": "3.3%",
+  "value": 3.3,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c073",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c074",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c075",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c076",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c077",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c078",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c079",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c080",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c081",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c082",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c083",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c084",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c085",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c086",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c087",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c088",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c089",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c090",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c091",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c092",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c093",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c094",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c095",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c096",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c097",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c098",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c099",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c100",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c101",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c102",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c103",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c104",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c105",
+  "text": "92.2",
+  "value": 92.2,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['delta_pp']",
+  "decimals": 1
+ },
+ {
+  "id": "c106",
+  "text": "81.4",
+  "value": 81.4,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['ci95_pp'][0]",
+  "decimals": 1
+ },
+ {
+  "id": "c107",
+  "text": "96.6",
+  "value": 96.6,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['ci95_pp'][1]",
+  "decimals": 1
+ },
+ {
+  "id": "c108",
+  "text": "3.5e-18",
+  "value": 3.5,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['mcnemar_p']",
+  "decimals": 1,
+  "scale": 1e+18
+ },
+ {
+  "id": "c109",
+  "text": "59",
+  "value": 59,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['only_a']",
+  "decimals": 0
+ },
+ {
+  "id": "c110",
+  "text": "0",
+  "value": 0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['only_b']",
+  "decimals": 0
+ },
+ {
+  "id": "c111",
+  "text": "79.7",
+  "value": 79.7,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['delta_pp']",
+  "decimals": 1
+ },
+ {
+  "id": "c112",
+  "text": "67.0",
+  "value": 67.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['ci95_pp'][0]",
+  "decimals": 1
+ },
+ {
+  "id": "c113",
+  "text": "87.7",
+  "value": 87.7,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['ci95_pp'][1]",
+  "decimals": 1
+ },
+ {
+  "id": "c114",
+  "text": "8.9e-16",
+  "value": 8.9,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmful')['mcnemar_p']",
+  "decimals": 1,
+  "scale": 1e+16
+ },
+ {
+  "id": "c115",
+  "text": "0",
+  "value": 0,
+  "expr": "R['phase1_family_decision']['verdict']['r2']['delta_pp_C_default']",
+  "decimals": 0
+ },
+ {
+  "id": "c116",
+  "text": "58",
+  "value": 58,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c117",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c118",
+  "text": "90.6%",
+  "value": 90.6,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c119",
+  "text": "56",
+  "value": 56,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c120",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c121",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c122",
+  "text": "62",
+  "value": 62,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c123",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c124",
+  "text": "96.9%",
+  "value": 96.9,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c125",
+  "text": "56",
+  "value": 56,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c126",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c127",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c128",
+  "text": "60",
+  "value": 60,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c129",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c130",
+  "text": "93.8%",
+  "value": 93.8,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c131",
+  "text": "56",
+  "value": 56,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c132",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c133",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c134",
+  "text": "58",
+  "value": 58,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c135",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c136",
+  "text": "90.6%",
+  "value": 90.6,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c137",
+  "text": "56",
+  "value": 56,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c138",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c139",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c140",
+  "text": "57",
+  "value": 57,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c141",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c142",
+  "text": "89.1%",
+  "value": 89.1,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c143",
+  "text": "56",
+  "value": 56,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c144",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c145",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c146",
+  "text": "60",
+  "value": 60,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c147",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c148",
+  "text": "93.8%",
+  "value": 93.8,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c149",
+  "text": "56",
+  "value": 56,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c150",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c151",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmless' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c152",
+  "text": "0.22",
+  "value": 0.22,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['deltas'] if x['arm_a']=='refusal_ablated' and x['arm_b']=='intact' and x['set_name']=='C' and x['variant']=='C' and x['consequence']=='harmless')['mcnemar_p']",
+  "decimals": 2
+ },
+ {
+  "id": "c153",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='C')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c154",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c155",
+  "text": "2",
+  "value": 2,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c156",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c157",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c158",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c159",
+  "text": "27",
+  "value": 27,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c160",
+  "text": "20",
+  "value": 20,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c161",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c162",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c163",
+  "text": "9",
+  "value": 9,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c164",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c165",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c166",
+  "text": "4",
+  "value": 4,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c167",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c168",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c169",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c170",
+  "text": "25",
+  "value": 25,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_101' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c171",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c172",
+  "text": "1",
+  "value": 1,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c173",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c174",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c175",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c176",
+  "text": "26",
+  "value": 26,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_102' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c177",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c178",
+  "text": "4",
+  "value": 4,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c179",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c180",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c181",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c182",
+  "text": "26",
+  "value": 26,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='pca_103' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c183",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c184",
+  "text": "5",
+  "value": 5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c185",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c186",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c187",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c188",
+  "text": "25",
+  "value": 25,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='unrelated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c189",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c190",
+  "text": "3",
+  "value": 3,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c191",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c192",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c193",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c194",
+  "text": "26",
+  "value": 26,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c195",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c196",
+  "text": "3",
+  "value": 3,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c197",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c198",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c199",
+  "text": "0",
+  "value": 0,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c200",
+  "text": "27",
+  "value": 27,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']",
+  "decimals": 0
+ },
+ {
+  "id": "c201",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c202",
+  "text": "62.5%",
+  "value": 62.5,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c203",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c204",
+  "text": "6.25%",
+  "value": 6.25,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 2,
+  "scale": 100
+ },
+ {
+  "id": "c205",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c206",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] is None)['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c207",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] is None)['counts']['ESCALATE']",
+  "decimals": 0
+ },
+ {
+  "id": "c208",
+  "text": "64",
+  "value": 64,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='C' and c['variant']=='C' and c['consequence']=='harmful' and c['effort'] is None)['counts']['TEXT_NO_CALL']",
+  "decimals": 0
+ },
+ {
+  "id": "c209",
+  "text": "30",
+  "value": 30,
+  "expr": "next(c for c in R['phase1_dim_r2_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None)['counts']['TEXT_NO_CALL']",
+  "decimals": 0
+ },
+ {
+  "id": "c210",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c211",
+  "text": "28.1%",
+  "value": 28.1,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['itt_comply_rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c212",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='A' and c['variant']=='A1' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c213",
+  "text": "32",
+  "value": 32,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A0' and c['consequence']=='harmful' and c['effort'] == 'low')['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c214",
+  "text": "5",
+  "value": 5,
+  "expr": "sum(c['counts']['MALFORMED'] for c in R['phase1_dim_r1_analysis']['cells'])",
+  "decimals": 0
+ },
+ {
+  "id": "c215",
+  "text": "1",
+  "value": 1,
+  "expr": "sum(c['counts']['MALFORMED'] for c in R['phase1_dim_r2_analysis']['cells'])",
+  "decimals": 0
+ },
+ {
+  "id": "c216",
+  "text": "92.2",
+  "value": 92.2,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c217",
+  "text": "79.7",
+  "value": 79.7,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c218",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c219",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['low']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c220",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "R['phase1_family_decision']['verdict']['r2']['delta_pp_B_default']",
+  "decimals": 1
+ },
+ {
+  "id": "c221",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "R['phase1_family_decision']['verdict']['r2']['delta_pp_B_low']",
+  "decimals": 1
+ },
+ {
+  "id": "c222",
+  "text": "98.7%",
+  "value": 98.7,
+  "expr": "R['phase1_family_decision']['verdict']['r1']['min_own_vector_reduction_projection']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c223",
+  "text": "95.8%",
+  "value": 95.8,
+  "expr": "R['phase1_family_decision']['verdict']['r2']['min_own_vector_reduction_projection']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c224",
+  "text": "0.0066",
+  "value": 0.0066,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_unrelated']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c225",
+  "text": "0.0779",
+  "value": 0.0779,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_unrelated']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c226",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "R['phase1_family_decision']['verdict']['r1']['max_control_abs_delta_pp_C_default']",
+  "decimals": 1
+ },
+ {
+  "id": "c227",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "max(next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='control_abs_delta_pp' and x['set']=='C' and x['arm']=='pca_101')['value'], next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='control_abs_delta_pp' and x['set']=='C' and x['arm']=='pca_102')['value'], next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='control_abs_delta_pp' and x['set']=='C' and x['arm']=='pca_103')['value'], next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='control_abs_delta_pp' and x['set']=='C' and x['arm']=='unrelated')['value'])",
+  "decimals": 1
+ },
+ {
+  "id": "c228",
+  "text": "6.25",
+  "value": 6.25,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 2
+ },
+ {
+  "id": "c229",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c230",
+  "text": "1.6",
+  "value": 1.6,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['default']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c231",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['low']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='C' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c232",
+  "text": "6.25",
+  "value": 6.25,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 2
+ },
+ {
+  "id": "c233",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c234",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c235",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['low']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c236",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c237",
+  "text": "21.9",
+  "value": 21.9,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['low']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c238",
+  "text": "1.6",
+  "value": 1.6,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['default']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c239",
+  "text": "14.1",
+  "value": 14.1,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r2']['gate']['low']['criteria'] if x['criterion']=='harmless_twin_abs_delta_pp' and x['set']=='A0' and x['arm']=='refusal_ablated')['value']",
+  "decimals": 1
+ },
+ {
+  "id": "c240",
+  "text": "6.25",
+  "value": 6.25,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0')['value']",
+  "decimals": 2
+ },
+ {
+  "id": "c241",
+  "text": "98.7%",
+  "value": 98.7,
+  "expr": "R['phase1_family_decision']['families']['r1']['projection']['ablated_reduction_by_effort_site']['default|out']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c242",
+  "text": "98.7%",
+  "value": 98.7,
+  "expr": "R['phase1_family_decision']['families']['r2']['projection']['ablated_reduction_by_effort_site']['default|out']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c243",
+  "text": "1.0%",
+  "value": 1.0,
+  "expr": "R['phase1_family_decision']['families']['r1']['projection']['control_reduction_of_own_vector_default_out']['r1_pca_101']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c244",
+  "text": "63.4%",
+  "value": 63.4,
+  "expr": "R['phase1_family_decision']['families']['r2']['projection']['control_reduction_of_own_vector_default_out']['r2_pca_101']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c245",
+  "text": "0.4%",
+  "value": 0.4,
+  "expr": "R['phase1_family_decision']['families']['r1']['projection']['control_reduction_of_own_vector_default_out']['r1_pca_102']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c246",
+  "text": "55.5%",
+  "value": 55.5,
+  "expr": "R['phase1_family_decision']['families']['r2']['projection']['control_reduction_of_own_vector_default_out']['r2_pca_102']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c247",
+  "text": "-0.8%",
+  "value": -0.8,
+  "expr": "R['phase1_family_decision']['families']['r1']['projection']['control_reduction_of_own_vector_default_out']['r1_pca_103']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c248",
+  "text": "-6.3%",
+  "value": -6.3,
+  "expr": "R['phase1_family_decision']['families']['r2']['projection']['control_reduction_of_own_vector_default_out']['r2_pca_103']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c249",
+  "text": "-3.4%",
+  "value": -3.4,
+  "expr": "R['phase1_family_decision']['families']['r1']['projection']['control_reduction_of_own_vector_default_out']['r1_unrelated']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c250",
+  "text": "43.2%",
+  "value": 43.2,
+  "expr": "R['phase1_family_decision']['families']['r2']['projection']['control_reduction_of_own_vector_default_out']['r2_unrelated']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c251",
+  "text": "0.087",
+  "value": 0.087,
+  "expr": "R['phase1_family_decision']['cos_r1_rhat_vs_r2_refusal']",
+  "decimals": 3
+ },
+ {
+  "id": "c252",
+  "text": "47.0%",
+  "value": 47.0,
+  "expr": "next(r for r in R['projection_full13']['summary'] if r['ckpt']=='r1_refusal_ablated' and r['vector']=='r2.refusal' and r['set']=='r1_val' and r['site']=='out' and r['effort']=='default')['reduction_vs_intact']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c253",
+  "text": "6.8%",
+  "value": 6.8,
+  "expr": "next(r for r in R['projection_full13']['summary'] if r['ckpt']=='r2_refusal_ablated' and r['vector']=='r1.r_hat' and r['set']=='r1_val' and r['site']=='out' and r['effort']=='default')['reduction_vs_intact']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c254",
+  "text": "95.8%",
+  "value": 95.8,
+  "expr": "R['phase1_family_decision']['families']['r2']['projection']['ablated_reduction_by_effort_site']['low|in']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c255",
+  "text": "0.0006",
+  "value": 0.0006,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_refusal_ablated']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c256",
+  "text": "0.0039",
+  "value": 0.0039,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_refusal_ablated']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c257",
+  "text": "0.0008",
+  "value": 0.0008,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_pca_101']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c258",
+  "text": "0.0023",
+  "value": 0.0023,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_pca_101']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c259",
+  "text": "0.0013",
+  "value": 0.0013,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_pca_102']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c260",
+  "text": "0.0029",
+  "value": 0.0029,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_pca_102']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c261",
+  "text": "0.0007",
+  "value": 0.0007,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_pca_103']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c262",
+  "text": "0.0026",
+  "value": 0.0026,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_pca_103']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c263",
+  "text": "0.0011",
+  "value": 0.0011,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r1_unrelated']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c264",
+  "text": "0.0005",
+  "value": 0.0005,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_refusal_ablated']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c265",
+  "text": "0.0019",
+  "value": 0.0019,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_refusal_ablated']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c266",
+  "text": "0.0020",
+  "value": 0.002,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_pca_101']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c267",
+  "text": "0.0268",
+  "value": 0.0268,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_pca_101']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c268",
+  "text": "0.0014",
+  "value": 0.0014,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_pca_102']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c269",
+  "text": "0.0057",
+  "value": 0.0057,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_pca_102']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c270",
+  "text": "0.0016",
+  "value": 0.0016,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_pca_103']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c271",
+  "text": "0.0049",
+  "value": 0.0049,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_pca_103']['kl_teacher_forced_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c272",
+  "text": "0.0049",
+  "value": 0.0049,
+  "expr": "R['phase1_family_decision']['benign_kl']['checkpoints']['r2_unrelated']['kl_prompt_last_mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c273",
+  "text": "0.0794",
+  "value": 0.0794,
+  "expr": "R['kl_full13']['checkpoints']['r2_unrelated']['vs']['r2_intact']['kl_teacher_forced_own']['mean']",
+  "decimals": 4
+ },
+ {
+  "id": "c274",
+  "text": "40",
+  "value": 40,
+  "expr": "R['scenario_audit']['pair_audit']['n_valid']",
+  "decimals": 0
+ },
+ {
+  "id": "c275",
+  "text": "40",
+  "value": 40,
+  "expr": "R['scenario_audit']['pair_audit']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c276",
+  "text": "12",
+  "value": 12,
+  "expr": "R['scenario_audit']['pair_audit']['severity_by_domain']['finance']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c277",
+  "text": "12",
+  "value": 12,
+  "expr": "R['scenario_audit']['pair_audit']['severity_by_domain']['compute']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c278",
+  "text": "8",
+  "value": 8,
+  "expr": "R['scenario_audit']['pair_audit']['severity_by_domain']['warehouse']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c279",
+  "text": "8",
+  "value": 8,
+  "expr": "R['scenario_audit']['pair_audit']['severity_by_domain']['wetlab']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c280",
+  "text": "40",
+  "value": 40,
+  "expr": "sum(v['harmful_with_cue'] for v in R['scenario_audit']['pair_audit']['severity_by_domain'].values())",
+  "decimals": 0
+ },
+ {
+  "id": "c281",
+  "text": "0",
+  "value": 0,
+  "expr": "sum(v['harmless_with_cue'] for v in R['scenario_audit']['pair_audit']['severity_by_domain'].values())",
+  "decimals": 0
+ },
+ {
+  "id": "c282",
+  "text": "21",
+  "value": 21,
+  "expr": "len(R['scenario_audit']['pair_audit']['banned_word_doc_freq'])",
+  "decimals": 0
+ },
+ {
+  "id": "c283",
+  "text": "0",
+  "value": 0,
+  "expr": "sum(v['harmful']+v['harmless'] for v in R['scenario_audit']['pair_audit']['banned_word_doc_freq'].values())",
+  "decimals": 0
+ },
+ {
+  "id": "c284",
+  "text": "1.087",
+  "value": 1.087,
+  "expr": "R['scenario_audit']['pair_audit']['length_ratio']['mean']",
+  "decimals": 3
+ },
+ {
+  "id": "c285",
+  "text": "0.911",
+  "value": 0.911,
+  "expr": "R['scenario_audit']['pair_audit']['length_ratio']['min']",
+  "decimals": 3
+ },
+ {
+  "id": "c286",
+  "text": "1.176",
+  "value": 1.176,
+  "expr": "R['scenario_audit']['pair_audit']['length_ratio']['max']",
+  "decimals": 3
+ },
+ {
+  "id": "c287",
+  "text": "0.0",
+  "value": 0.0,
+  "expr": "R['scenario_audit']['pair_audit']['length_sign_p']",
+  "decimals": 1
+ },
+ {
+  "id": "c288",
+  "text": "0.64",
+  "value": 0.64,
+  "expr": "R['scenario_audit']['pair_audit']['length_auc']",
+  "decimals": 2
+ },
+ {
+  "id": "c289",
+  "text": "6.2",
+  "value": 6.2,
+  "expr": "R['scenario_audit']['pair_audit']['shared_prefix_words']['mean']",
+  "decimals": 1
+ },
+ {
+  "id": "c290",
+  "text": "32",
+  "value": 32,
+  "expr": "R['scenario_audit']['pair_audit']['function_words']['max_doc_freq_gap']",
+  "decimals": 0
+ },
+ {
+  "id": "c291",
+  "text": "1.0",
+  "value": 1.0,
+  "expr": "R['scenario_audit']['pair_audit']['function_words']['loo_accuracy']",
+  "decimals": 1
+ },
+ {
+  "id": "c292",
+  "text": "28",
+  "value": 28,
+  "expr": "28",
+  "decimals": 0
+ },
+ {
+  "id": "c293",
+  "text": "25",
+  "value": 25,
+  "expr": "R['scenario_audit']['judge_counts']['severity_5']",
+  "decimals": 0
+ },
+ {
+  "id": "c294",
+  "text": "15",
+  "value": 15,
+  "expr": "R['scenario_audit']['judge_counts']['severity_4']",
+  "decimals": 0
+ },
+ {
+  "id": "c295",
+  "text": "38",
+  "value": 38,
+  "expr": "R['scenario_audit']['judge_counts']['irreversibility_5']",
+  "decimals": 0
+ },
+ {
+  "id": "c296",
+  "text": "2",
+  "value": 2,
+  "expr": "R['scenario_audit']['judge_counts']['irreversibility_4']",
+  "decimals": 0
+ },
+ {
+  "id": "c297",
+  "text": "40",
+  "value": 40,
+  "expr": "R['scenario_audit']['judge_counts']['instructional_no']",
+  "decimals": 0
+ },
+ {
+  "id": "c298",
+  "text": "40",
+  "value": 40,
+  "expr": "R['scenario_audit']['judge_counts']['matched_yes']",
+  "decimals": 0
+ },
+ {
+  "id": "c299",
+  "text": "40",
+  "value": 40,
+  "expr": "R['scenario_audit']['judge_counts']['pass_true']",
+  "decimals": 0
+ },
+ {
+  "id": "c300",
+  "text": "40",
+  "value": 40,
+  "expr": "round(R['scenario_audit']['pair_audit']['function_words']['loo_accuracy']*R['scenario_audit']['pair_audit']['n_pairs_usable'])",
+  "decimals": 0
+ },
+ {
+  "id": "c301",
+  "text": "0",
+  "value": 0,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['harmful_implicit_shortcut_lt_10pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c302",
+  "text": "120",
+  "value": 120,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['harmful_implicit_shortcut_lt_10pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c303",
+  "text": "0.0%",
+  "value": 0.0,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['harmful_implicit_shortcut_lt_10pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c304",
+  "text": "35",
+  "value": 35,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c305",
+  "text": "40",
+  "value": 40,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c306",
+  "text": "87.5%",
+  "value": 87.5,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c307",
+  "text": "29",
+  "value": 29,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['low_cost_shortcut_lt_15pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c308",
+  "text": "40",
+  "value": 40,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['low_cost_shortcut_lt_15pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c309",
+  "text": "72.5%",
+  "value": 72.5,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['low_cost_shortcut_lt_15pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c310",
+  "text": "116",
+  "value": 116,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['forced_safe_competence_ge_80pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c311",
+  "text": "120",
+  "value": 120,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['forced_safe_competence_ge_80pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c312",
+  "text": "96.7%",
+  "value": 96.7,
+  "expr": "R['calibration_history']['versions']['v1']['criteria']['forced_safe_competence_ge_80pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c313",
+  "text": "0",
+  "value": 0,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['harmful_implicit_shortcut_lt_10pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c314",
+  "text": "120",
+  "value": 120,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['harmful_implicit_shortcut_lt_10pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c315",
+  "text": "0.0%",
+  "value": 0.0,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['harmful_implicit_shortcut_lt_10pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c316",
+  "text": "37",
+  "value": 37,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c317",
+  "text": "40",
+  "value": 40,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c318",
+  "text": "92.5%",
+  "value": 92.5,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c319",
+  "text": "15",
+  "value": 15,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['low_cost_shortcut_lt_15pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c320",
+  "text": "40",
+  "value": 40,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['low_cost_shortcut_lt_15pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c321",
+  "text": "37.5%",
+  "value": 37.5,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['low_cost_shortcut_lt_15pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c322",
+  "text": "114",
+  "value": 114,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['forced_safe_competence_ge_80pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c323",
+  "text": "120",
+  "value": 120,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['forced_safe_competence_ge_80pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c324",
+  "text": "95.0%",
+  "value": 95.0,
+  "expr": "R['calibration_history']['versions']['v2']['criteria']['forced_safe_competence_ge_80pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c325",
+  "text": "0",
+  "value": 0,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmful_implicit_shortcut_lt_10pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c326",
+  "text": "120",
+  "value": 120,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmful_implicit_shortcut_lt_10pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c327",
+  "text": "0.0%",
+  "value": 0.0,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmful_implicit_shortcut_lt_10pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c328",
+  "text": "38",
+  "value": 38,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c329",
+  "text": "40",
+  "value": 40,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c330",
+  "text": "95.0%",
+  "value": 95.0,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c331",
+  "text": "0",
+  "value": 0,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['low_cost_shortcut_lt_15pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c332",
+  "text": "40",
+  "value": 40,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['low_cost_shortcut_lt_15pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c333",
+  "text": "0.0%",
+  "value": 0.0,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['low_cost_shortcut_lt_15pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c334",
+  "text": "111",
+  "value": 111,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['forced_safe_competence_ge_80pct']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c335",
+  "text": "120",
+  "value": 120,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['forced_safe_competence_ge_80pct']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c336",
+  "text": "92.5%",
+  "value": 92.5,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['forced_safe_competence_ge_80pct']['rate']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c337",
+  "text": "1,080",
+  "value": 1080,
+  "expr": "R['calibration_history']['versions']['v1']['n_rows']",
+  "decimals": 0
+ },
+ {
+  "id": "c338",
+  "text": "440",
+  "value": 440,
+  "expr": "R['calibration_history']['versions']['v2']['n_rows']",
+  "decimals": 0
+ },
+ {
+  "id": "c339",
+  "text": "3.1%",
+  "value": 3.1,
+  "expr": "R['calibration_exp11_calib_v3_construct_validity_intact']['harmful_implicit_shortcut_lt_10pct']['value']['wilson'][1]",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "c340",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['harmful_implicit_shortcut_lt_10pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c341",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['harmful_implicit_shortcut_lt_10pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c342",
+  "text": "37",
+  "value": 37,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c343",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c344",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['low_cost_shortcut_lt_15pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c345",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['low_cost_shortcut_lt_15pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c346",
+  "text": "115",
+  "value": 115,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c347",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c348",
+  "text": "2",
+  "value": 2,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['harmful_implicit_shortcut_lt_10pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c349",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['harmful_implicit_shortcut_lt_10pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c350",
+  "text": "38",
+  "value": 38,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c351",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c352",
+  "text": "7",
+  "value": 7,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['low_cost_shortcut_lt_15pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c353",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['low_cost_shortcut_lt_15pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c354",
+  "text": "114",
+  "value": 114,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['forced_safe_competence_ge_80pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c355",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main']['construct_validity']['cot_off']['forced_safe_competence_ge_80pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c356",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['harmful_implicit_shortcut_lt_10pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c357",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['harmful_implicit_shortcut_lt_10pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c358",
+  "text": "34",
+  "value": 34,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c359",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c360",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['low_cost_shortcut_lt_15pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c361",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['low_cost_shortcut_lt_15pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c362",
+  "text": "99",
+  "value": 99,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c363",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c364",
+  "text": "28",
+  "value": 28,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['by_cost']['high_friction']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "c365",
+  "text": "40",
+  "value": 40,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['by_cost']['high_friction']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "c366",
+  "text": "32,160",
+  "value": 32160,
+  "expr": "R['exp11_main']['meta']['hygiene']['structure']['tool_names_checked']",
+  "decimals": 0
+ },
+ {
+  "id": "c367",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main']['meta']['hygiene']['structure']['tool_names_not_neutral']",
+  "decimals": 0
+ },
+ {
+  "id": "c368",
+  "text": "120",
+  "value": 120,
+  "expr": "R['exp11_main']['meta']['hygiene']['structure']['log_groups']",
+  "decimals": 0
+ },
+ {
+  "id": "c369",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main']['meta']['hygiene']['structure']['log_groups_asymmetric']",
+  "decimals": 0
+ },
+ {
+  "id": "c370",
+  "text": "1,680",
+  "value": 1680,
+  "expr": "R['exp11_main']['meta']['hygiene']['structure']['forced_safe_rows']",
+  "decimals": 0
+ },
+ {
+  "id": "c371",
+  "text": "0",
+  "value": 0,
+  "expr": "R['exp11_main']['meta']['hygiene']['structure']['forced_safe_rows_naming_shortcut']",
+  "decimals": 0
+ },
+ {
+  "id": "c372",
+  "text": "2,048",
+  "value": 2048,
+  "expr": "R['exp12_corpora']['summary']['cap']",
+  "decimals": 0
+ },
+ {
+  "id": "c373",
+  "text": "8",
+  "value": 8,
+  "expr": "round(R['exp11_main']['contrasts']['P1.1']['rate_a']*R['exp11_main']['contrasts']['P1.1']['n_pairs'])",
+  "decimals": 0
+ },
+ {
+  "id": "c374",
+  "text": "24",
+  "value": 24,
+  "expr": "round(R['exp11_main_lowprobe']['contrasts']['P1.1']['rate_a']*R['exp11_main_lowprobe']['contrasts']['P1.1']['n_pairs'])",
+  "decimals": 0
+ },
+ {
+  "id": "c375",
+  "text": "80",
+  "value": 80,
+  "expr": "R['exp11_main']['contrasts']['P1.1']['n_pairs']",
+  "decimals": 0
+ },
+ {
+  "id": "c376",
+  "text": "0",
+  "value": 0,
+  "expr": "round(R['exp11_main']['contrasts']['P1.1']['rate_b']*R['exp11_main']['contrasts']['P1.1']['n_pairs'])",
+  "decimals": 0
+ },
+ {
+  "id": "c377",
+  "text": "0.0078",
+  "value": 0.0078,
+  "expr": "R['exp11_main']['contrasts']['P1.1']['p_mcnemar']",
+  "decimals": 4
+ },
+ {
+  "id": "c378",
+  "text": "0.0547",
+  "value": 0.0547,
+  "expr": "R['exp11_main']['contrasts']['P1.1']['p_holm']",
+  "decimals": 4
+ },
+ {
+  "id": "c379",
+  "text": "1.2e-7",
+  "value": 1.2,
+  "expr": "R['exp11_main_lowprobe']['contrasts']['P1.1']['p_mcnemar']",
+  "decimals": 1,
+  "scale": 10000000.0
+ },
+ {
+  "id": "c380",
+  "text": "100%",
+  "value": 100,
+  "expr": "next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='A' and c['variant']=='A2' and c['consequence']=='harmful' and c['effort'] is None)['itt_comply_rate']",
+  "decimals": 0,
+  "scale": 100
+ },
+ {
+  "id": "c381",
+  "text": "16,384",
+  "value": 16384,
+  "expr": "16384",
+  "decimals": 0
+ },
+ {
+  "id": "c382",
+  "text": "8,192",
+  "value": 8192,
+  "expr": "8192",
+  "decimals": 0
+ },
+ {
+  "id": "c383",
+  "text": "4,096",
+  "value": 4096,
+  "expr": "4096",
+  "decimals": 0
+ },
+ {
+  "id": "c384",
+  "text": "1,024",
+  "value": 1024,
+  "expr": "1024",
+  "decimals": 0
+ },
+ {
+  "id": "c385",
+  "text": "13",
+  "value": 13,
+  "expr": "len(R['projection_full13']['checkpoints'])",
+  "decimals": 0
+ },
+ {
+  "id": "c386",
+  "text": "0.85",
+  "value": 0.85,
+  "expr": "0.85",
+  "decimals": 2
+ },
+ {
+  "id": "c387",
+  "text": "1.18",
+  "value": 1.18,
+  "expr": "1.18",
+  "decimals": 2
+ },
+ {
+  "id": "r001",
+  "text": "446",
+  "value": 446,
+  "expr": "R['phase1_dim_r1_analysis']['n_rows']/12",
+  "decimals": 0
+ },
+ {
+  "id": "r002",
+  "text": "144",
+  "value": 144,
+  "expr": "len(R['phase1_dim_r1_analysis']['cells'])+len(R['phase1_dim_r2_analysis']['cells'])",
+  "decimals": 0
+ },
+ {
+  "id": "r003",
+  "text": "none (native XML restricted calls)",
+  "value": 0,
+  "expr": "sum(c['n_xml_restricted'] for c in R['phase1_dim_r1_analysis']['cells'])+sum(c['n_xml_restricted'] for c in R['phase1_dim_r2_analysis']['cells'])",
+  "decimals": 0
+ },
+ {
+  "id": "r004",
+  "text": "7.5e-9",
+  "value": 7.5,
+  "expr": "2*0.5**next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None )['n_comply'] if next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] is None )['n_comply']==0 else None",
+  "decimals": 1,
+  "scale": 1000000000.0
+ },
+ {
+  "id": "r005",
+  "text": "9.5e-7",
+  "value": 9.5,
+  "expr": "2*0.5**next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='refusal_ablated' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply'] if next(c for c in R['phase1_dim_r1_analysis']['cells'] if c['arm']=='intact' and c['set_name']=='B' and c['variant']=='B' and c['consequence']=='harmful' and c['effort'] == 'low')['n_comply']==0 else None",
+  "decimals": 1,
+  "scale": 10000000.0
+ },
+ {
+  "id": "r006",
+  "text": "16 templates",
+  "value": 16,
+  "expr": "16",
+  "decimals": 0
+ },
+ {
+  "id": "r007",
+  "text": "16.8%",
+  "value": 16.8,
+  "expr": "min([r['reduction_vs_intact'] for r in R['projection_full13']['summary'] if r['ckpt']=='r1_refusal_ablated' and r['vector']=='r2.refusal'])",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "r008",
+  "text": "47.0% (max over combos)",
+  "value": 47.0,
+  "expr": "max([r['reduction_vs_intact'] for r in R['projection_full13']['summary'] if r['ckpt']=='r1_refusal_ablated' and r['vector']=='r2.refusal'])",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "r009",
+  "text": "2.5%",
+  "value": 2.5,
+  "expr": "min([r['reduction_vs_intact'] for r in R['projection_full13']['summary'] if r['ckpt']=='r2_refusal_ablated' and r['vector']=='r1.r_hat'])",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "r010",
+  "text": "67.6%",
+  "value": 67.6,
+  "expr": "max([r['reduction_vs_intact'] for r in R['projection_full13']['summary'] if r['ckpt']=='r2_refusal_ablated' and r['vector']=='r1.r_hat'])",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "r011",
+  "text": "eight combinations (r1 abl vs r2 dir)",
+  "value": 8,
+  "expr": "len([r['reduction_vs_intact'] for r in R['projection_full13']['summary'] if r['ckpt']=='r1_refusal_ablated' and r['vector']=='r2.refusal'])",
+  "decimals": 0
+ },
+ {
+  "id": "r012",
+  "text": "eight combinations (r2 abl vs r1 dir)",
+  "value": 8,
+  "expr": "len([r['reduction_vs_intact'] for r in R['projection_full13']['summary'] if r['ckpt']=='r2_refusal_ablated' and r['vector']=='r1.r_hat'])",
+  "decimals": 0
+ },
+ {
+  "id": "r013",
+  "text": "8.3e-7",
+  "value": 8.3,
+  "expr": "R['exp11_main_lowprobe']['contrasts']['P1.1']['p_holm']",
+  "decimals": 1,
+  "scale": 10000000.0
+ },
+ {
+  "id": "r014",
+  "text": "0.0625",
+  "value": 0.0625,
+  "expr": "R['exp11_main']['contrasts']['P1.1']['cluster_boot']['p_signflip']",
+  "decimals": 4
+ },
+ {
+  "id": "r015",
+  "text": "seven contrasts",
+  "value": 7,
+  "expr": "len(R['exp11_main']['contrasts']['holm_family'])",
+  "decimals": 0
+ },
+ {
+  "id": "r016",
+  "text": "7 contrasts (evidence table, default)",
+  "value": 7,
+  "expr": "len(R['exp11_main']['contrasts']['holm_family'])",
+  "decimals": 0
+ },
+ {
+  "id": "r017",
+  "text": "7 contrasts (evidence table, low)",
+  "value": 7,
+  "expr": "len(R['exp11_main_lowprobe']['contrasts']['holm_family'])",
+  "decimals": 0
+ },
+ {
+  "id": "r018",
+  "text": "A0 CI low -5.4",
+  "value": -5.4,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0')['ci95_pp'][0]",
+  "decimals": 1
+ },
+ {
+  "id": "r019",
+  "text": "A0 CI high 20.1",
+  "value": 20.1,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0')['ci95_pp'][1]",
+  "decimals": 1
+ },
+ {
+  "id": "r020",
+  "text": "A0 McNemar p 0.5",
+  "value": 0.5,
+  "expr": "next(x for x in R['phase1_family_decision']['families']['r1']['gate']['default']['criteria'] if x['criterion']=='delta_comply_pp' and x['set']=='A0')['mcnemar_p']",
+  "decimals": 1
+ },
+ {
+  "id": "r021",
+  "text": "82.5% (99 of 120 low effort forced-safe)",
+  "value": 82.5,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['k']/R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['n']",
+  "decimals": 1,
+  "scale": 100
+ },
+ {
+  "id": "r022",
+  "text": "99 of 120 (low effort forced-safe)",
+  "value": 99,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "r023",
+  "text": "120 (low effort forced-safe n)",
+  "value": 120,
+  "expr": "R['exp11_main_lowprobe']['construct_validity']['cot_on']['forced_safe_competence_ge_80pct']['value']['n']",
+  "decimals": 0
+ },
+ {
+  "id": "r024",
+  "text": "37 of 40 (main run high-tedium)",
+  "value": 37,
+  "expr": "R['exp11_main']['construct_validity']['cot_on']['harmless_implicit_high_tedium_shortcut_ge_35pct']['value']['k']",
+  "decimals": 0
+ },
+ {
+  "id": "r025",
+  "text": "38 of 40 (calibration v3 high-tedium)",
+  "value": 38,
+  "expr": "R['calibration_history']['versions']['v3']['criteria']['harmless_implicit_high_tedium_shortcut_ge_35pct']['k']",
+  "decimals": 0
+ }
+]

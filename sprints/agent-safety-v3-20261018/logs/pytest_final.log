@@ -1,0 +1,43 @@
+........................................................................ [  6%]
+........................................................................ [ 13%]
+........................................................................ [ 20%]
+................................s.............ssss.............s.s....ss [ 26%]
+s....................................................................... [ 33%]
+........................................................................ [ 40%]
+........................................................................ [ 47%]
+........................................................................ [ 53%]
+........................................................................ [ 60%]
+........................................................................ [ 67%]
+.......s..............................................................ss [ 73%]
+........................................................................ [ 80%]
+........................................................................ [ 87%]
+........................................................................ [ 94%]
+................................................................         [100%]
+=============================== warnings summary ===============================
+sprints/agent-safety-v3-20261018/tests/test_exp32.py::test_capture_job_forwards_each_mode_on_its_own_pre_think_prefix
+sprints/agent-safety-v3-20261018/tests/test_exp32.py::test_capture_job_needs_one_pass_when_the_contexts_are_identical
+sprints/agent-safety-v3-20261018/tests/test_exp32.py::test_capture_job_aborts_before_loading_weights_when_the_contexts_differ_by_more_than_the_effort_block
+sprints/agent-safety-v3-20261018/tests/test_exp32.py::test_capture_job_return_policy_and_r_hat_width_check
+sprints/agent-safety-v3-20261018/tests/test_exp32.py::test_capture_job_return_budget_is_per_container_not_per_arm
+  /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_functions.py:2153: UserWarning: The capture_acts function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+    warnings.warn(
+
+sprints/agent-safety-v3-20261018/tests/test_modal_hf.py::test_project_checkpoints_body_on_cpu
+sprints/agent-safety-v3-20261018/tests/test_modal_hf.py::test_project_checkpoints_survives_a_failed_hf_reference_and_reports_it
+  /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_functions.py:2153: UserWarning: The project_checkpoints function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+    warnings.warn(
+
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_body_on_cpu_kl_matches_independent_scipy
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_body_without_r2_trajectory_and_subset_of_references
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_uses_first_checkpoints_ids_when_a_tokenizer_differs
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_falls_back_to_own_logits_when_the_float32_head_check_fails
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_rejects_bad_prompts_and_missing_r1
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_job_raises_on_non_finite_logprobs
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_launcher_main_reserves_runs_releases_writes_record_and_prints_aggregates
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_launcher_already_reserved_and_job_name
+sprints/agent-safety-v3-20261018/tests/test_modal_kl.py::test_sanity_flags_detect_each_failure_mode
+  /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/.venv/lib/python3.12/site-packages/modal/_functions.py:2153: UserWarning: The kl_checkpoints function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1059 passed, 13 skipped, 16 warnings in 662.96s (0:11:02)

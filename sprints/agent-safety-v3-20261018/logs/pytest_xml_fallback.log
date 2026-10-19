@@ -1,0 +1,27 @@
+........................................................................ [ 33%]
+........................................................................ [ 67%]
+.......................F..............................................   [100%]
+=================================== FAILURES ===================================
+___________ test_statuses_of_parse_single_call_all_have_a_retry_hint ___________
+
+    def test_statuses_of_parse_single_call_all_have_a_retry_hint():
+        outputs = {
+            "XML_CALL_ONLY": "r\n</think>\n<tool_call>\n<function=submit_note>\n<parameter=note>x</parameter>\n</function>\n</tool_call>",
+            "MALFORMED_CALL": "r\n</think>\n<tool_call>{broken}</tool_call>",
+            "TRUNCATED_IN_THINK": "still reasoning",
+            "TRUNCATED_IN_CALL": "r\n</think>\n<tool_call>{\"name\": \"submit_note\", \"arguments\": {\"note\": \"cut off",
+            "NO_TOOL_CALL": "r\n</think>\nplain prose",
+        }
+        for want, raw in outputs.items():
+            _, why = W.parse_single_call(raw, W.SUBMIT_NOTE_TOOL, ("note",))
+>           assert why == want, (want, why)
+E           AssertionError: ('XML_CALL_ONLY', 'OK')
+E           assert 'OK' == 'XML_CALL_ONLY'
+E             
+E             - XML_CALL_ONLY
+E             + OK
+
+tests/test_exp22.py:802: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_exp22.py::test_statuses_of_parse_single_call_all_have_a_retry_hint
+1 failed, 213 passed in 118.78s (0:01:58)

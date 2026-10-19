@@ -1,0 +1,22 @@
+[plan] arm=intact rows=48 path=/weights/models/Qwen3.8-27B-FP8-Intact-Requant
+[plan] arm=pca_101 rows=48 path=/weights/models/Qwen3.8-27B-FP8-PCA-Control-Seed101
+[plan] arm=refusal_ablated rows=48 path=/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated
+[plan] gpu=H200 x3 arms, reservation $5.8
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-07NyLwnCsmDIOh3gRBCvDZ
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp23_s2_review_27b.json
+[modal-client] 2026-10-18T23:57:41-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-07NyLwnCsmDIOh3gRBCvDZ
+[done] intact: meta={"arm": "intact", "model_path": "/weights/models/Qwen3.8-27B-FP8-Intact-Requant", "n_rows": 48, "boot_s": 217.0, "gen_s": 34.3, "total_generated_tokens": 36102, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] intact: {"n": 48, "counts": {"finish:stop": 48, "status:MALFORMED_CALL": 1, "status:OK": 47, "tool:None": 1, "tool:record_review": 47}, "tokens_p50": 703, "tokens_p90": 1029, "tokens_max": 1458}
+[done] pca_101: meta={"arm": "pca_101", "model_path": "/weights/models/Qwen3.8-27B-FP8-PCA-Control-Seed101", "n_rows": 48, "boot_s": 216.0, "gen_s": 43.3, "total_generated_tokens": 37796, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] pca_101: {"n": 48, "counts": {"finish:stop": 48, "status:OK": 48, "tool:record_review": 48}, "tokens_p50": 699, "tokens_p90": 1157, "tokens_max": 2266}
+[done] refusal_ablated: meta={"arm": "refusal_ablated", "model_path": "/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated", "n_rows": 48, "boot_s": 213.9, "gen_s": 38.0, "total_generated_tokens": 36638, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] refusal_ablated: {"n": 48, "counts": {"finish:stop": 48, "status:MALFORMED_CALL": 1, "status:OK": 47, "tool:None": 1, "tool:record_review": 47}, "tokens_p50": 664, "tokens_p90": 1229, "tokens_max": 1784}
+[ledger] wall 15.7 min, est actual $3.79

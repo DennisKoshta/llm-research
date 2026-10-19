@@ -1,0 +1,19 @@
+[plan] arm=intact rows=66 path=/weights/models/Qwen3.8-27B-FP8-Intact-Requant
+[plan] arm=refusal_ablated rows=66 path=/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated
+[plan] gpu=H200 x2 arms, reservation $3.99
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-7Y4a2Iq9WsAhQzRklOQeXg
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp22_smoke_exp21_alpha.json
+[modal-client] 2026-10-18T23:28:47-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-7Y4a2Iq9WsAhQzRklOQeXg
+[done] intact: meta={"arm": "intact", "model_path": "/weights/models/Qwen3.8-27B-FP8-Intact-Requant", "n_rows": 66, "boot_s": 242.9, "gen_s": 153.7, "total_generated_tokens": 178253, "n_generate_calls": 1, "sampling": {"temperature": 0.7, "top_p": 0.95, "seed_base": 21}}
+[summary] intact: {"n": 66, "counts": {"finish:length": 5, "finish:stop": 61, "status:MALFORMED_CALL": 8, "status:OK": 53, "status:TRUNCATED_IN_CALL": 1, "status:TRUNCATED_IN_THINK": 4, "tool:None": 13, "tool:send_message": 28, "tool:submit_alpha_action": 25}, "tokens_p50": 1748, "tokens_p90": 6681, "tokens_max": 7636}
+[done] refusal_ablated: meta={"arm": "refusal_ablated", "model_path": "/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated", "n_rows": 66, "boot_s": 220.4, "gen_s": 158.0, "total_generated_tokens": 215441, "n_generate_calls": 1, "sampling": {"temperature": 0.7, "top_p": 0.95, "seed_base": 21}}
+[summary] refusal_ablated: {"n": 66, "counts": {"finish:length": 5, "finish:stop": 61, "status:MALFORMED_CALL": 4, "status:OK": 57, "status:TRUNCATED_IN_THINK": 5, "tool:None": 9, "tool:send_message": 27, "tool:submit_alpha_action": 30}, "tokens_p50": 2960, "tokens_p90": 6585, "tokens_max": 7658}
+[ledger] wall 8.8 min, est actual $1.46

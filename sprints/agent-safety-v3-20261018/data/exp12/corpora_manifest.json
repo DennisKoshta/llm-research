@@ -1,0 +1,76 @@
+{
+ "scale": {
+  "corpus_ranks": [
+   [
+    "A",
+    32
+   ],
+   [
+    "A",
+    8
+   ],
+   [
+    "B",
+    32
+   ],
+   [
+    "B",
+    8
+   ],
+   [
+    "Bp",
+    32
+   ],
+   [
+    "Bp",
+    8
+   ],
+   [
+    "C",
+    32
+   ],
+   [
+    "C",
+    8
+   ]
+  ],
+  "teachers": [
+   "intact",
+   "refusal_ablated",
+   "pca_101"
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "max_prompts": 48,
+  "later_turns": 2,
+  "epochs": 3,
+  "n_samples": 6,
+  "n_cot_prompts": 600,
+  "floors": 2,
+  "shards": 8
+ },
+ "seed": 0,
+ "keep_per_prompt": 1,
+ "tokenizer_json": null,
+ "greedy_from": null,
+ "max_seq_tokens": 4096,
+ "files": {
+  "corpora/A.intact.jsonl": "70b62f7e2635885284c7fef3d91aade8859186c7c4a42fb1af2104cb82922fdc",
+  "corpora/A.refusal_ablated.jsonl": "6ae2cdfdb8c6a94e1c271950c77827f9eb58ac24cfe39b9206e7f16da22d3214",
+  "corpora/A.pca_101.jsonl": "15930774b90e582d2d8ab6bd5b79a95e119d578921ba0632cc2cbc1be0103695",
+  "corpora/B.intact.jsonl": "ad98bacd9d85d0b720030f845979f408370982ba2036179a61dceb7a39fa8341",
+  "corpora/B.refusal_ablated.jsonl": "0861bfa15ff0993fe428ba509cbec634b5a59543d1127caf4a3557d880ba8b22",
+  "corpora/B.pca_101.jsonl": "8801def0b89e062db5223580eb65b1fd3cf5864ddda3297c3210e47dafb64650",
+  "corpora/C.intact.jsonl": "8a3462ca172b8538a8e4bab6d15396cf93c3b5daefb2693b02aa757f970675de",
+  "corpora/C.refusal_ablated.jsonl": "2d47dd9ae2d1cfbd8c5125bf66ea99eea978a6320460d49a4f3a7e5c384abd8a",
+  "corpora/C.pca_101.jsonl": "9d152d0e2885234138be85c53b734bf6a15b4f0b2b7e17b0692786e087f7a3fa",
+  "corpora/Bp.intact.jsonl": "872c7d3c1396f0550e755df2549763e217fa255932962ecea93ba85247c29a3d",
+  "corpora/Bp.refusal_ablated.jsonl": "40ff1048426a83758b664f8b735989272c8d3a37c96747c0b1d21d29d97cb4e2",
+  "corpora/Bp.pca_101.jsonl": "1230280666eaa189632a7b5ef609a9ca0467ebec03dfcb0fb58be3f3448061b1"
+ },
+ "effort": "low",
+ "cap": 2048
+}

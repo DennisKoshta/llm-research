@@ -1,0 +1,30 @@
+[plan] arm=flash_next_uncensored rows=36 path=/weights/models/Qwen3.8-Flash-Next-Uncensored-FP8
+[plan] gpu=H200:2 x1 arms, reservation $10.97
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-f8s1YJzVXFVHSVMpuaCV6K
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp22_worlds_r1.json
+[modal-client] 2026-10-18T15:29:00-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-f8s1YJzVXFVHSVMpuaCV6K
+[retry 1] flash_next_uncensored: ConnectionError: Deadline exceeded
+[retry 2] flash_next_uncensored: ConnectionError: Deadline exceeded
+[retry 3] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 4] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 5] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 6] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 7] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 8] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 9] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 10] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 11] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 12] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 13] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 14] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 15] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 16] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+[retry 17] flash_next_uncensored: RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}

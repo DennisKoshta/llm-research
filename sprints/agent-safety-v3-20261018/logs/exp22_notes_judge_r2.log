@@ -1,0 +1,16 @@
+[plan] arm=intact rows=180 path=/weights/models/Qwen3.8-27B-FP8-Intact-Requant
+[plan] gpu=H200 x1 arms, reservation $2.72
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-zLAx3wEZhSt2uYdVbAnlyB
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp22_notes_judge_r2.json
+[modal-client] 2026-10-18T23:00:25-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-zLAx3wEZhSt2uYdVbAnlyB
+[done] intact: meta={"arm": "intact", "model_path": "/weights/models/Qwen3.8-27B-FP8-Intact-Requant", "n_rows": 180, "boot_s": 232.6, "gen_s": 27.8, "total_generated_tokens": 75247, "n_generate_calls": 1, "sampling": {"temperature": 0.0, "top_p": 1.0, "seed_base": 0}}
+[summary] intact: {"n": 180, "counts": {"finish:stop": 180, "status:OK": 180, "tool:record_note_audit": 180}, "tokens_p50": 407, "tokens_p90": 509, "tokens_max": 603}
+[ledger] wall 5.0 min, est actual $0.45

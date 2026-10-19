@@ -1,0 +1,19 @@
+[plan] arm=intact rows=1020 path=/weights/models/Qwen3.8-27B-FP8-Intact-Requant
+[plan] arm=refusal_ablated rows=1020 path=/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated
+[plan] gpu=H200 x2 arms, reservation $7.98
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-U0MHp6UdJ4ZETZfP3mDlNO
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+├── ✓ Created Function serve_h200.
+├── ✓ Created Function serve_h100.
+└── ✓ Created Function serve_h200x2.
+[launched] call ids saved to /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/ledger/calls_exp21_alpha.json
+[modal-client] 2026-10-19T00:45:47-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-U0MHp6UdJ4ZETZfP3mDlNO
+[done] intact: meta={"arm": "intact", "model_path": "/weights/models/Qwen3.8-27B-FP8-Intact-Requant", "n_rows": 1020, "boot_s": 238.5, "gen_s": 979.6, "total_generated_tokens": 2802859, "n_generate_calls": 1, "sampling": {"temperature": 0.7, "top_p": 0.95, "seed_base": 21}}
+[summary] intact: {"n": 1020, "counts": {"finish:length": 1, "finish:stop": 1019, "status:MALFORMED_CALL": 60, "status:NO_TOOL_CALL": 2, "status:OK": 956, "status:TRUNCATED_IN_THINK": 2, "tool:None": 63, "tool:send_message": 496, "tool:submit_alpha_action": 461}, "tokens_p50": 1401, "tokens_p90": 6632, "tokens_max": 16384}
+[done] refusal_ablated: meta={"arm": "refusal_ablated", "model_path": "/weights/models/Qwen3.8-27B-FP8-Refusal-Ablated", "n_rows": 1020, "boot_s": 340.9, "gen_s": 1113.4, "total_generated_tokens": 3396830, "n_generate_calls": 1, "sampling": {"temperature": 0.7, "top_p": 0.95, "seed_base": 21}}
+[summary] refusal_ablated: {"n": 1020, "counts": {"finish:stop": 1020, "status:MALFORMED_CALL": 44, "status:OK": 975, "status:TRUNCATED_IN_THINK": 1, "tool:None": 45, "tool:send_message": 509, "tool:submit_alpha_action": 466}, "tokens_p50": 1873, "tokens_p90": 7963, "tokens_max": 14229}
+[ledger] wall 24.8 min, est actual $4.13

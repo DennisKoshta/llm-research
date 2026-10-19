@@ -1,0 +1,1954 @@
+{
+ "schema": "exp12_corpora_v1",
+ "params": {
+  "scale": {
+   "corpus_ranks": [
+    [
+     "A",
+     32
+    ],
+    [
+     "A",
+     8
+    ],
+    [
+     "B",
+     32
+    ],
+    [
+     "B",
+     8
+    ],
+    [
+     "Bp",
+     32
+    ],
+    [
+     "Bp",
+     8
+    ],
+    [
+     "C",
+     32
+    ],
+    [
+     "C",
+     8
+    ]
+   ],
+   "teachers": [
+    "intact",
+    "refusal_ablated",
+    "pca_101"
+   ],
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "max_prompts": 48,
+   "later_turns": 2,
+   "epochs": 3,
+   "n_samples": 6,
+   "n_cot_prompts": 600,
+   "floors": 2,
+   "shards": 8
+  },
+  "seed": 0,
+  "keep_per_prompt": 1,
+  "tokenizer_json": null,
+  "greedy_from": null,
+  "max_seq_tokens": 4096
+ },
+ "summary": {
+  "scale": {
+   "corpus_ranks": [
+    [
+     "A",
+     32
+    ],
+    [
+     "A",
+     8
+    ],
+    [
+     "B",
+     32
+    ],
+    [
+     "B",
+     8
+    ],
+    [
+     "Bp",
+     32
+    ],
+    [
+     "Bp",
+     8
+    ],
+    [
+     "C",
+     32
+    ],
+    [
+     "C",
+     8
+    ]
+   ],
+   "teachers": [
+    "intact",
+    "refusal_ablated",
+    "pca_101"
+   ],
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "max_prompts": 48,
+   "later_turns": 2,
+   "epochs": 3,
+   "n_samples": 6,
+   "n_cot_prompts": 600,
+   "floors": 2,
+   "shards": 8
+  },
+  "seed": 0,
+  "keep_per_prompt": 1,
+  "max_seq_tokens": 4096,
+  "effort": "low",
+  "cap": 2048,
+  "A": {
+   "teachers": {
+    "intact": {
+     "n_episodes": 48,
+     "n_examples": 124,
+     "outcomes": {
+      "SAFE_ROUTE": 38,
+      "SHORTCUT_PERMITTED": 10
+     },
+     "dropped_turns": {
+      "not_sampled": 152
+     },
+     "target_tokens": 23545,
+     "n_text_only_turns": 0,
+     "replay_mismatch": 0
+    },
+    "refusal_ablated": {
+     "n_episodes": 48,
+     "n_examples": 104,
+     "outcomes": {
+      "SAFE_ROUTE": 25,
+      "SHORTCUT_PERMITTED": 12,
+      "SHORTCUT_VIOLATION": 10,
+      "TRUNCATED_OR_MALFORMED": 1
+     },
+     "dropped_turns": {
+      "not_sampled": 104
+     },
+     "target_tokens": 29570,
+     "n_text_only_turns": 0,
+     "replay_mismatch": 0
+    },
+    "pca_101": {
+     "n_episodes": 48,
+     "n_examples": 125,
+     "outcomes": {
+      "SAFE_ROUTE": 38,
+      "SHORTCUT_PERMITTED": 10
+     },
+     "dropped_turns": {
+      "not_sampled": 152
+     },
+     "target_tokens": 24484,
+     "n_text_only_turns": 0,
+     "replay_mismatch": 0
+    }
+   },
+   "n_prompts_common": 192,
+   "n_prompts_selected": 48
+  },
+  "B": {
+   "teachers": {
+    "intact": {
+     "n_prompts": 192,
+     "n_samples": 1152,
+     "n_clean_samples": 886,
+     "n_clean_turn1_invalid": 0,
+     "sample_acceptance": 0.7690972222222222,
+     "n_prompts_with_clean": 160,
+     "prompt_acceptance": 0.8333333333333334,
+     "outcomes": {
+      "ESCALATE_OR_REFUSE": 1,
+      "SAFE_ROUTE": 886,
+      "SHORTCUT_PERMITTED": 235,
+      "SHORTCUT_VIOLATION": 7,
+      "TRUNCATED_OR_MALFORMED": 23
+     },
+     "clean_by_cell": {
+      "high_friction|harmful|explicit": {
+       "clean": 139,
+       "samples": 144
+      },
+      "high_friction|harmful|implicit": {
+       "clean": 141,
+       "samples": 144
+      },
+      "high_friction|harmless|explicit": {
+       "clean": 141,
+       "samples": 144
+      },
+      "high_friction|harmless|implicit": {
+       "clean": 24,
+       "samples": 144
+      },
+      "high_tedium|harmful|explicit": {
+       "clean": 139,
+       "samples": 144
+      },
+      "high_tedium|harmful|implicit": {
+       "clean": 142,
+       "samples": 144
+      },
+      "high_tedium|harmless|explicit": {
+       "clean": 134,
+       "samples": 144
+      },
+      "high_tedium|harmless|implicit": {
+       "clean": 26,
+       "samples": 144
+      }
+     },
+     "replay_mismatch": 0,
+     "n_examples": 144,
+     "dropped_turns": {
+      "not_sampled": 192
+     },
+     "target_tokens": 30885
+    },
+    "refusal_ablated": {
+     "n_prompts": 192,
+     "n_samples": 1152,
+     "n_clean_samples": 719,
+     "n_clean_turn1_invalid": 0,
+     "sample_acceptance": 0.6241319444444444,
+     "n_prompts_with_clean": 154,
+     "prompt_acceptance": 0.8020833333333334,
+     "outcomes": {
+      "ESCALATE_OR_REFUSE": 4,
+      "SAFE_ROUTE": 720,
+      "SHORTCUT_PERMITTED": 255,
+      "SHORTCUT_VIOLATION": 163,
+      "TRUNCATED_OR_MALFORMED": 10
+     },
+     "clean_by_cell": {
+      "high_friction|harmful|explicit": {
+       "clean": 130,
+       "samples": 144
+      },
+      "high_friction|harmful|implicit": {
+       "clean": 92,
+       "samples": 144
+      },
+      "high_friction|harmless|explicit": {
+       "clean": 123,
+       "samples": 144
+      },
+      "high_friction|harmless|implicit": {
+       "clean": 11,
+       "samples": 144
+      },
+      "high_tedium|harmful|explicit": {
+       "clean": 124,
+       "samples": 144
+      },
+      "high_tedium|harmful|implicit": {
+       "clean": 95,
+       "samples": 144
+      },
+      "high_tedium|harmless|explicit": {
+       "clean": 123,
+       "samples": 144
+      },
+      "high_tedium|harmless|implicit": {
+       "clean": 21,
+       "samples": 144
+      }
+     },
+     "replay_mismatch": 0,
+     "n_examples": 144,
+     "dropped_turns": {
+      "not_sampled": 192
+     },
+     "target_tokens": 36987
+    },
+    "pca_101": {
+     "n_prompts": 192,
+     "n_samples": 1152,
+     "n_clean_samples": 860,
+     "n_clean_turn1_invalid": 0,
+     "sample_acceptance": 0.7465277777777778,
+     "n_prompts_with_clean": 155,
+     "prompt_acceptance": 0.8072916666666666,
+     "outcomes": {
+      "ESCALATE_OR_REFUSE": 5,
+      "SAFE_ROUTE": 861,
+      "SHORTCUT_PERMITTED": 246,
+      "SHORTCUT_VIOLATION": 12,
+      "TRUNCATED_OR_MALFORMED": 28
+     },
+     "clean_by_cell": {
+      "high_friction|harmful|explicit": {
+       "clean": 144,
+       "samples": 144
+      },
+      "high_friction|harmful|implicit": {
+       "clean": 138,
+       "samples": 144
+      },
+      "high_friction|harmless|explicit": {
+       "clean": 135,
+       "samples": 144
+      },
+      "high_friction|harmless|implicit": {
+       "clean": 18,
+       "samples": 144
+      },
+      "high_tedium|harmful|explicit": {
+       "clean": 140,
+       "samples": 144
+      },
+      "high_tedium|harmful|implicit": {
+       "clean": 133,
+       "samples": 144
+      },
+      "high_tedium|harmless|explicit": {
+       "clean": 132,
+       "samples": 144
+      },
+      "high_tedium|harmless|implicit": {
+       "clean": 20,
+       "samples": 144
+      }
+     },
+     "replay_mismatch": 0,
+     "n_examples": 144,
+     "dropped_turns": {
+      "not_sampled": 192
+     },
+     "target_tokens": 29448
+    }
+   },
+   "intersection": {
+    "n_prompts_all_teachers": 192,
+    "n_prompts": 152,
+    "fraction": 0.7916666666666666,
+    "gate_ge_50pct": true,
+    "by_cell": {
+     "high_friction|harmful|explicit": 24,
+     "high_friction|harmful|implicit": 24,
+     "high_friction|harmless|explicit": 24,
+     "high_friction|harmless|implicit": 4,
+     "high_tedium|harmful|explicit": 24,
+     "high_tedium|harmful|implicit": 24,
+     "high_tedium|harmless|explicit": 24,
+     "high_tedium|harmless|implicit": 4
+    },
+    "n_selected": 48
+   }
+  },
+  "C": {
+   "teachers": {
+    "intact": {
+     "n_rows": 600,
+     "n_valid": 599,
+     "dropped": {
+      "finish_length": 1
+     },
+     "n_examples": 87,
+     "target_tokens": 30863,
+     "b_target_tokens": 30885,
+     "match": {
+      "total": 30863,
+      "target": 30885,
+      "abs_error": 22,
+      "tol": 77,
+      "within_tol": true,
+      "n_pool": 599,
+      "n": 87
+     },
+     "answer_accuracy": 1.0,
+     "ledger": [
+      [
+       "cot0_00399",
+       130,
+       130
+      ],
+      [
+       "cot0_00563",
+       253,
+       383
+      ],
+      [
+       "cot0_00514",
+       247,
+       630
+      ],
+      [
+       "cot0_00297",
+       229,
+       859
+      ],
+      [
+       "cot0_00328",
+       187,
+       1046
+      ],
+      [
+       "cot0_00267",
+       159,
+       1205
+      ],
+      [
+       "cot0_00262",
+       221,
+       1426
+      ],
+      [
+       "cot0_00317",
+       1147,
+       2573
+      ],
+      [
+       "cot0_00030",
+       429,
+       3002
+      ],
+      [
+       "cot0_00400",
+       182,
+       3184
+      ],
+      [
+       "cot0_00054",
+       434,
+       3618
+      ],
+      [
+       "cot0_00182",
+       162,
+       3780
+      ],
+      [
+       "cot0_00531",
+       237,
+       4017
+      ],
+      [
+       "cot0_00185",
+       230,
+       4247
+      ],
+      [
+       "cot0_00041",
+       292,
+       4539
+      ],
+      [
+       "cot0_00268",
+       140,
+       4679
+      ],
+      [
+       "cot0_00416",
+       242,
+       4921
+      ],
+      [
+       "cot0_00198",
+       740,
+       5661
+      ],
+      [
+       "cot0_00197",
+       143,
+       5804
+      ],
+      [
+       "cot0_00487",
+       255,
+       6059
+      ],
+      [
+       "cot0_00498",
+       193,
+       6252
+      ],
+      [
+       "cot0_00556",
+       243,
+       6495
+      ],
+      [
+       "cot0_00313",
+       502,
+       6997
+      ],
+      [
+       "cot0_00096",
+       398,
+       7395
+      ],
+      [
+       "cot0_00382",
+       366,
+       7761
+      ],
+      [
+       "cot0_00461",
+       135,
+       7896
+      ],
+      [
+       "cot0_00082",
+       789,
+       8685
+      ],
+      [
+       "cot0_00102",
+       255,
+       8940
+      ],
+      [
+       "cot0_00107",
+       1197,
+       10137
+      ],
+      [
+       "cot0_00525",
+       149,
+       10286
+      ],
+      [
+       "cot0_00111",
+       133,
+       10419
+      ],
+      [
+       "cot0_00369",
+       760,
+       11179
+      ],
+      [
+       "cot0_00205",
+       1142,
+       12321
+      ],
+      [
+       "cot0_00162",
+       152,
+       12473
+      ],
+      [
+       "cot0_00007",
+       161,
+       12634
+      ],
+      [
+       "cot0_00066",
+       263,
+       12897
+      ],
+      [
+       "cot0_00275",
+       1276,
+       14173
+      ],
+      [
+       "cot0_00424",
+       201,
+       14374
+      ],
+      [
+       "cot0_00533",
+       159,
+       14533
+      ],
+      [
+       "cot0_00027",
+       212,
+       14745
+      ],
+      [
+       "cot0_00146",
+       212,
+       14957
+      ],
+      [
+       "cot0_00394",
+       972,
+       15929
+      ],
+      [
+       "cot0_00087",
+       264,
+       16193
+      ],
+      [
+       "cot0_00181",
+       212,
+       16405
+      ],
+      [
+       "cot0_00040",
+       707,
+       17112
+      ],
+      [
+       "cot0_00100",
+       1094,
+       18206
+      ],
+      [
+       "cot0_00321",
+       209,
+       18415
+      ],
+      [
+       "cot0_00532",
+       130,
+       18545
+      ],
+      [
+       "cot0_00125",
+       292,
+       18837
+      ],
+      [
+       "cot0_00079",
+       934,
+       19771
+      ],
+      [
+       "cot0_00436",
+       230,
+       20001
+      ],
+      [
+       "cot0_00028",
+       163,
+       20164
+      ],
+      [
+       "cot0_00219",
+       854,
+       21018
+      ],
+      [
+       "cot0_00356",
+       193,
+       21211
+      ],
+      [
+       "cot0_00013",
+       292,
+       21503
+      ],
+      [
+       "cot0_00581",
+       145,
+       21648
+      ],
+      [
+       "cot0_00342",
+       187,
+       21835
+      ],
+      [
+       "cot0_00323",
+       207,
+       22042
+      ],
+      [
+       "cot0_00384",
+       158,
+       22200
+      ],
+      [
+       "cot0_00011",
+       152,
+       22352
+      ],
+      [
+       "cot0_00192",
+       277,
+       22629
+      ],
+      [
+       "cot0_00019",
+       547,
+       23176
+      ],
+      [
+       "cot0_00037",
+       142,
+       23318
+      ],
+      [
+       "cot0_00230",
+       209,
+       23527
+      ],
+      [
+       "cot0_00021",
+       168,
+       23695
+      ],
+      [
+       "cot0_00044",
+       160,
+       23855
+      ],
+      [
+       "cot0_00236",
+       561,
+       24416
+      ],
+      [
+       "cot0_00500",
+       248,
+       24664
+      ],
+      [
+       "cot0_00025",
+       180,
+       24844
+      ],
+      [
+       "cot0_00229",
+       446,
+       25290
+      ],
+      [
+       "cot0_00466",
+       179,
+       25469
+      ],
+      [
+       "cot0_00357",
+       150,
+       25619
+      ],
+      [
+       "cot0_00320",
+       322,
+       25941
+      ],
+      [
+       "cot0_00088",
+       330,
+       26271
+      ],
+      [
+       "cot0_00001",
+       187,
+       26458
+      ],
+      [
+       "cot0_00355",
+       339,
+       26797
+      ],
+      [
+       "cot0_00444",
+       260,
+       27057
+      ],
+      [
+       "cot0_00330",
+       158,
+       27215
+      ],
+      [
+       "cot0_00175",
+       164,
+       27379
+      ],
+      [
+       "cot0_00171",
+       269,
+       27648
+      ],
+      [
+       "cot0_00009",
+       1473,
+       29121
+      ],
+      [
+       "cot0_00136",
+       247,
+       29368
+      ],
+      [
+       "cot0_00112",
+       149,
+       29517
+      ],
+      [
+       "cot0_00345",
+       840,
+       30357
+      ],
+      [
+       "cot0_00239",
+       239,
+       30596
+      ],
+      [
+       "cot0_00204",
+       164,
+       30760
+      ],
+      [
+       "cot0_00483",
+       103,
+       30863
+      ]
+     ]
+    },
+    "refusal_ablated": {
+     "n_rows": 600,
+     "n_valid": 600,
+     "dropped": {},
+     "n_examples": 96,
+     "target_tokens": 36981,
+     "b_target_tokens": 36987,
+     "match": {
+      "total": 36981,
+      "target": 36987,
+      "abs_error": 6,
+      "tol": 92,
+      "within_tol": true,
+      "n_pool": 600,
+      "n": 96
+     },
+     "answer_accuracy": 1.0,
+     "ledger": [
+      [
+       "cot0_00399",
+       171,
+       171
+      ],
+      [
+       "cot0_00563",
+       233,
+       404
+      ],
+      [
+       "cot0_00513",
+       979,
+       1383
+      ],
+      [
+       "cot0_00297",
+       260,
+       1643
+      ],
+      [
+       "cot0_00328",
+       152,
+       1795
+      ],
+      [
+       "cot0_00267",
+       153,
+       1948
+      ],
+      [
+       "cot0_00262",
+       243,
+       2191
+      ],
+      [
+       "cot0_00317",
+       1023,
+       3214
+      ],
+      [
+       "cot0_00030",
+       476,
+       3690
+      ],
+      [
+       "cot0_00400",
+       192,
+       3882
+      ],
+      [
+       "cot0_00054",
+       507,
+       4389
+      ],
+      [
+       "cot0_00182",
+       159,
+       4548
+      ],
+      [
+       "cot0_00530",
+       433,
+       4981
+      ],
+      [
+       "cot0_00185",
+       225,
+       5206
+      ],
+      [
+       "cot0_00041",
+       279,
+       5485
+      ],
+      [
+       "cot0_00268",
+       124,
+       5609
+      ],
+      [
+       "cot0_00415",
+       324,
+       5933
+      ],
+      [
+       "cot0_00198",
+       1107,
+       7040
+      ],
+      [
+       "cot0_00197",
+       128,
+       7168
+      ],
+      [
+       "cot0_00486",
+       257,
+       7425
+      ],
+      [
+       "cot0_00497",
+       103,
+       7528
+      ],
+      [
+       "cot0_00556",
+       243,
+       7771
+      ],
+      [
+       "cot0_00313",
+       511,
+       8282
+      ],
+      [
+       "cot0_00096",
+       438,
+       8720
+      ],
+      [
+       "cot0_00382",
+       428,
+       9148
+      ],
+      [
+       "cot0_00460",
+       530,
+       9678
+      ],
+      [
+       "cot0_00082",
+       850,
+       10528
+      ],
+      [
+       "cot0_00102",
+       213,
+       10741
+      ],
+      [
+       "cot0_00107",
+       1196,
+       11937
+      ],
+      [
+       "cot0_00524",
+       161,
+       12098
+      ],
+      [
+       "cot0_00111",
+       170,
+       12268
+      ],
+      [
+       "cot0_00369",
+       585,
+       12853
+      ],
+      [
+       "cot0_00205",
+       1073,
+       13926
+      ],
+      [
+       "cot0_00162",
+       125,
+       14051
+      ],
+      [
+       "cot0_00007",
+       193,
+       14244
+      ],
+      [
+       "cot0_00066",
+       245,
+       14489
+      ],
+      [
+       "cot0_00275",
+       1600,
+       16089
+      ],
+      [
+       "cot0_00423",
+       266,
+       16355
+      ],
+      [
+       "cot0_00532",
+       121,
+       16476
+      ],
+      [
+       "cot0_00027",
+       319,
+       16795
+      ],
+      [
+       "cot0_00146",
+       319,
+       17114
+      ],
+      [
+       "cot0_00394",
+       896,
+       18010
+      ],
+      [
+       "cot0_00087",
+       251,
+       18261
+      ],
+      [
+       "cot0_00181",
+       319,
+       18580
+      ],
+      [
+       "cot0_00040",
+       576,
+       19156
+      ],
+      [
+       "cot0_00100",
+       752,
+       19908
+      ],
+      [
+       "cot0_00321",
+       299,
+       20207
+      ],
+      [
+       "cot0_00531",
+       277,
+       20484
+      ],
+      [
+       "cot0_00125",
+       279,
+       20763
+      ],
+      [
+       "cot0_00079",
+       1341,
+       22104
+      ],
+      [
+       "cot0_00435",
+       251,
+       22355
+      ],
+      [
+       "cot0_00028",
+       165,
+       22520
+      ],
+      [
+       "cot0_00219",
+       972,
+       23492
+      ],
+      [
+       "cot0_00356",
+       217,
+       23709
+      ],
+      [
+       "cot0_00013",
+       279,
+       23988
+      ],
+      [
+       "cot0_00581",
+       191,
+       24179
+      ],
+      [
+       "cot0_00342",
+       152,
+       24331
+      ],
+      [
+       "cot0_00323",
+       207,
+       24538
+      ],
+      [
+       "cot0_00384",
+       239,
+       24777
+      ],
+      [
+       "cot0_00011",
+       153,
+       24930
+      ],
+      [
+       "cot0_00192",
+       259,
+       25189
+      ],
+      [
+       "cot0_00019",
+       496,
+       25685
+      ],
+      [
+       "cot0_00037",
+       140,
+       25825
+      ],
+      [
+       "cot0_00230",
+       299,
+       26124
+      ],
+      [
+       "cot0_00021",
+       166,
+       26290
+      ],
+      [
+       "cot0_00044",
+       155,
+       26445
+      ],
+      [
+       "cot0_00236",
+       560,
+       27005
+      ],
+      [
+       "cot0_00499",
+       1136,
+       28141
+      ],
+      [
+       "cot0_00025",
+       180,
+       28321
+      ],
+      [
+       "cot0_00229",
+       434,
+       28755
+      ],
+      [
+       "cot0_00465",
+       263,
+       29018
+      ],
+      [
+       "cot0_00357",
+       166,
+       29184
+      ],
+      [
+       "cot0_00320",
+       437,
+       29621
+      ],
+      [
+       "cot0_00088",
+       363,
+       29984
+      ],
+      [
+       "cot0_00001",
+       141,
+       30125
+      ],
+      [
+       "cot0_00355",
+       387,
+       30512
+      ],
+      [
+       "cot0_00443",
+       1157,
+       31669
+      ],
+      [
+       "cot0_00330",
+       206,
+       31875
+      ],
+      [
+       "cot0_00175",
+       173,
+       32048
+      ],
+      [
+       "cot0_00171",
+       256,
+       32304
+      ],
+      [
+       "cot0_00009",
+       936,
+       33240
+      ],
+      [
+       "cot0_00136",
+       249,
+       33489
+      ],
+      [
+       "cot0_00112",
+       179,
+       33668
+      ],
+      [
+       "cot0_00345",
+       809,
+       34477
+      ],
+      [
+       "cot0_00239",
+       192,
+       34669
+      ],
+      [
+       "cot0_00204",
+       164,
+       34833
+      ],
+      [
+       "cot0_00078",
+       111,
+       34944
+      ],
+      [
+       "cot0_00469",
+       117,
+       35061
+      ],
+      [
+       "cot0_00490",
+       217,
+       35278
+      ],
+      [
+       "cot0_00287",
+       163,
+       35441
+      ],
+      [
+       "cot0_00298",
+       164,
+       35605
+      ],
+      [
+       "cot0_00194",
+       394,
+       35999
+      ],
+      [
+       "cot0_00057",
+       163,
+       36162
+      ],
+      [
+       "cot0_00516",
+       377,
+       36539
+      ],
+      [
+       "cot0_00528",
+       241,
+       36780
+      ],
+      [
+       "cot0_00501",
+       201,
+       36981
+      ]
+     ]
+    },
+    "pca_101": {
+     "n_rows": 600,
+     "n_valid": 599,
+     "dropped": {
+      "finish_length": 1
+     },
+     "n_examples": 86,
+     "target_tokens": 29448,
+     "b_target_tokens": 29448,
+     "match": {
+      "total": 29448,
+      "target": 29448,
+      "abs_error": 0,
+      "tol": 73,
+      "within_tol": true,
+      "n_pool": 599,
+      "n": 86
+     },
+     "answer_accuracy": 1.0,
+     "ledger": [
+      [
+       "cot0_00399",
+       166,
+       166
+      ],
+      [
+       "cot0_00563",
+       261,
+       427
+      ],
+      [
+       "cot0_00514",
+       256,
+       683
+      ],
+      [
+       "cot0_00297",
+       269,
+       952
+      ],
+      [
+       "cot0_00328",
+       158,
+       1110
+      ],
+      [
+       "cot0_00267",
+       166,
+       1276
+      ],
+      [
+       "cot0_00262",
+       259,
+       1535
+      ],
+      [
+       "cot0_00317",
+       1010,
+       2545
+      ],
+      [
+       "cot0_00030",
+       401,
+       2946
+      ],
+      [
+       "cot0_00400",
+       250,
+       3196
+      ],
+      [
+       "cot0_00054",
+       455,
+       3651
+      ],
+      [
+       "cot0_00182",
+       160,
+       3811
+      ],
+      [
+       "cot0_00531",
+       325,
+       4136
+      ],
+      [
+       "cot0_00185",
+       231,
+       4367
+      ],
+      [
+       "cot0_00041",
+       312,
+       4679
+      ],
+      [
+       "cot0_00268",
+       145,
+       4824
+      ],
+      [
+       "cot0_00416",
+       255,
+       5079
+      ],
+      [
+       "cot0_00198",
+       733,
+       5812
+      ],
+      [
+       "cot0_00197",
+       144,
+       5956
+      ],
+      [
+       "cot0_00487",
+       255,
+       6211
+      ],
+      [
+       "cot0_00498",
+       253,
+       6464
+      ],
+      [
+       "cot0_00556",
+       227,
+       6691
+      ],
+      [
+       "cot0_00313",
+       526,
+       7217
+      ],
+      [
+       "cot0_00096",
+       396,
+       7613
+      ],
+      [
+       "cot0_00382",
+       425,
+       8038
+      ],
+      [
+       "cot0_00461",
+       208,
+       8246
+      ],
+      [
+       "cot0_00082",
+       564,
+       8810
+      ],
+      [
+       "cot0_00102",
+       255,
+       9065
+      ],
+      [
+       "cot0_00107",
+       1152,
+       10217
+      ],
+      [
+       "cot0_00525",
+       149,
+       10366
+      ],
+      [
+       "cot0_00111",
+       149,
+       10515
+      ],
+      [
+       "cot0_00369",
+       706,
+       11221
+      ],
+      [
+       "cot0_00205",
+       882,
+       12103
+      ],
+      [
+       "cot0_00162",
+       125,
+       12228
+      ],
+      [
+       "cot0_00007",
+       162,
+       12390
+      ],
+      [
+       "cot0_00066",
+       261,
+       12651
+      ],
+      [
+       "cot0_00275",
+       933,
+       13584
+      ],
+      [
+       "cot0_00424",
+       200,
+       13784
+      ],
+      [
+       "cot0_00533",
+       165,
+       13949
+      ],
+      [
+       "cot0_00027",
+       161,
+       14110
+      ],
+      [
+       "cot0_00146",
+       161,
+       14271
+      ],
+      [
+       "cot0_00394",
+       859,
+       15130
+      ],
+      [
+       "cot0_00087",
+       262,
+       15392
+      ],
+      [
+       "cot0_00181",
+       161,
+       15553
+      ],
+      [
+       "cot0_00040",
+       876,
+       16429
+      ],
+      [
+       "cot0_00100",
+       1152,
+       17581
+      ],
+      [
+       "cot0_00321",
+       370,
+       17951
+      ],
+      [
+       "cot0_00532",
+       116,
+       18067
+      ],
+      [
+       "cot0_00125",
+       312,
+       18379
+      ],
+      [
+       "cot0_00079",
+       598,
+       18977
+      ],
+      [
+       "cot0_00436",
+       221,
+       19198
+      ],
+      [
+       "cot0_00028",
+       165,
+       19363
+      ],
+      [
+       "cot0_00219",
+       519,
+       19882
+      ],
+      [
+       "cot0_00356",
+       137,
+       20019
+      ],
+      [
+       "cot0_00013",
+       312,
+       20331
+      ],
+      [
+       "cot0_00581",
+       164,
+       20495
+      ],
+      [
+       "cot0_00342",
+       158,
+       20653
+      ],
+      [
+       "cot0_00323",
+       243,
+       20896
+      ],
+      [
+       "cot0_00384",
+       158,
+       21054
+      ],
+      [
+       "cot0_00011",
+       154,
+       21208
+      ],
+      [
+       "cot0_00192",
+       277,
+       21485
+      ],
+      [
+       "cot0_00019",
+       527,
+       22012
+      ],
+      [
+       "cot0_00037",
+       140,
+       22152
+      ],
+      [
+       "cot0_00230",
+       370,
+       22522
+      ],
+      [
+       "cot0_00021",
+       167,
+       22689
+      ],
+      [
+       "cot0_00044",
+       160,
+       22849
+      ],
+      [
+       "cot0_00236",
+       469,
+       23318
+      ],
+      [
+       "cot0_00500",
+       250,
+       23568
+      ],
+      [
+       "cot0_00025",
+       180,
+       23748
+      ],
+      [
+       "cot0_00229",
+       447,
+       24195
+      ],
+      [
+       "cot0_00466",
+       180,
+       24375
+      ],
+      [
+       "cot0_00357",
+       149,
+       24524
+      ],
+      [
+       "cot0_00320",
+       322,
+       24846
+      ],
+      [
+       "cot0_00088",
+       328,
+       25174
+      ],
+      [
+       "cot0_00001",
+       233,
+       25407
+      ],
+      [
+       "cot0_00355",
+       408,
+       25815
+      ],
+      [
+       "cot0_00444",
+       266,
+       26081
+      ],
+      [
+       "cot0_00330",
+       166,
+       26247
+      ],
+      [
+       "cot0_00175",
+       164,
+       26411
+      ],
+      [
+       "cot0_00171",
+       270,
+       26681
+      ],
+      [
+       "cot0_00009",
+       1313,
+       27994
+      ],
+      [
+       "cot0_00136",
+       254,
+       28248
+      ],
+      [
+       "cot0_00112",
+       179,
+       28427
+      ],
+      [
+       "cot0_00345",
+       681,
+       29108
+      ],
+      [
+       "cot0_00239",
+       244,
+       29352
+      ],
+      [
+       "cot0_00420",
+       96,
+       29448
+      ]
+     ]
+    }
+   }
+  },
+  "Bp": {
+   "teachers": {
+    "intact": {
+     "n_in": 144,
+     "n_examples": 138,
+     "dropped": {
+      "parse:MALFORMED_CALL": 5,
+      "parse:WRONG_CALLS": 1
+     },
+     "target_tokens_est": 24344,
+     "retention_by_cell": {
+      "high_friction|harmful|explicit": {
+       "in": 21,
+       "kept": 19
+      },
+      "high_friction|harmful|implicit": {
+       "in": 24,
+       "kept": 24
+      },
+      "high_friction|harmless|explicit": {
+       "in": 18,
+       "kept": 18
+      },
+      "high_friction|harmless|implicit": {
+       "in": 12,
+       "kept": 11
+      },
+      "high_tedium|harmful|explicit": {
+       "in": 18,
+       "kept": 15
+      },
+      "high_tedium|harmful|implicit": {
+       "in": 18,
+       "kept": 18
+      },
+      "high_tedium|harmless|explicit": {
+       "in": 21,
+       "kept": 21
+      },
+      "high_tedium|harmless|implicit": {
+       "in": 12,
+       "kept": 12
+      }
+     }
+    },
+    "refusal_ablated": {
+     "n_in": 144,
+     "n_examples": 136,
+     "dropped": {
+      "para:too_short": 1,
+      "parse:MALFORMED_CALL": 7
+     },
+     "target_tokens_est": 26184,
+     "retention_by_cell": {
+      "high_friction|harmful|explicit": {
+       "in": 21,
+       "kept": 19
+      },
+      "high_friction|harmful|implicit": {
+       "in": 24,
+       "kept": 24
+      },
+      "high_friction|harmless|explicit": {
+       "in": 18,
+       "kept": 16
+      },
+      "high_friction|harmless|implicit": {
+       "in": 12,
+       "kept": 12
+      },
+      "high_tedium|harmful|explicit": {
+       "in": 18,
+       "kept": 18
+      },
+      "high_tedium|harmful|implicit": {
+       "in": 18,
+       "kept": 17
+      },
+      "high_tedium|harmless|explicit": {
+       "in": 21,
+       "kept": 18
+      },
+      "high_tedium|harmless|implicit": {
+       "in": 12,
+       "kept": 12
+      }
+     }
+    },
+    "pca_101": {
+     "n_in": 144,
+     "n_examples": 140,
+     "dropped": {
+      "parse:MALFORMED_CALL": 4
+     },
+     "target_tokens_est": 24272,
+     "retention_by_cell": {
+      "high_friction|harmful|explicit": {
+       "in": 21,
+       "kept": 20
+      },
+      "high_friction|harmful|implicit": {
+       "in": 24,
+       "kept": 23
+      },
+      "high_friction|harmless|explicit": {
+       "in": 18,
+       "kept": 17
+      },
+      "high_friction|harmless|implicit": {
+       "in": 12,
+       "kept": 12
+      },
+      "high_tedium|harmful|explicit": {
+       "in": 18,
+       "kept": 17
+      },
+      "high_tedium|harmful|implicit": {
+       "in": 18,
+       "kept": 18
+      },
+      "high_tedium|harmless|explicit": {
+       "in": 21,
+       "kept": 21
+      },
+      "high_tedium|harmless|implicit": {
+       "in": 12,
+       "kept": 12
+      }
+     }
+    }
+   }
+  },
+  "digests": {
+   "A": {
+    "intact": "70b62f7e2635885284c7fef3d91aade8859186c7c4a42fb1af2104cb82922fdc",
+    "pca_101": "15930774b90e582d2d8ab6bd5b79a95e119d578921ba0632cc2cbc1be0103695",
+    "refusal_ablated": "6ae2cdfdb8c6a94e1c271950c77827f9eb58ac24cfe39b9206e7f16da22d3214"
+   },
+   "B": {
+    "intact": "ad98bacd9d85d0b720030f845979f408370982ba2036179a61dceb7a39fa8341",
+    "pca_101": "8801def0b89e062db5223580eb65b1fd3cf5864ddda3297c3210e47dafb64650",
+    "refusal_ablated": "0861bfa15ff0993fe428ba509cbec634b5a59543d1127caf4a3557d880ba8b22"
+   },
+   "Bp": {
+    "intact": "872c7d3c1396f0550e755df2549763e217fa255932962ecea93ba85247c29a3d",
+    "pca_101": "1230280666eaa189632a7b5ef609a9ca0467ebec03dfcb0fb58be3f3448061b1",
+    "refusal_ablated": "40ff1048426a83758b664f8b735989272c8d3a37c96747c0b1d21d29d97cb4e2"
+   },
+   "C": {
+    "intact": "8a3462ca172b8538a8e4bab6d15396cf93c3b5daefb2693b02aa757f970675de",
+    "pca_101": "9d152d0e2885234138be85c53b734bf6a15b4f0b2b7e17b0692786e087f7a3fa",
+    "refusal_ablated": "2d47dd9ae2d1cfbd8c5125bf66ea99eea978a6320460d49a4f3a7e5c384abd8a"
+   }
+  },
+  "empty": [],
+  "token_counter": "approx_chars/3"
+ },
+ "files": {
+  "corpora/A.intact.jsonl": "70b62f7e2635885284c7fef3d91aade8859186c7c4a42fb1af2104cb82922fdc",
+  "corpora/A.refusal_ablated.jsonl": "6ae2cdfdb8c6a94e1c271950c77827f9eb58ac24cfe39b9206e7f16da22d3214",
+  "corpora/A.pca_101.jsonl": "15930774b90e582d2d8ab6bd5b79a95e119d578921ba0632cc2cbc1be0103695",
+  "corpora/B.intact.jsonl": "ad98bacd9d85d0b720030f845979f408370982ba2036179a61dceb7a39fa8341",
+  "corpora/B.refusal_ablated.jsonl": "0861bfa15ff0993fe428ba509cbec634b5a59543d1127caf4a3557d880ba8b22",
+  "corpora/B.pca_101.jsonl": "8801def0b89e062db5223580eb65b1fd3cf5864ddda3297c3210e47dafb64650",
+  "corpora/C.intact.jsonl": "8a3462ca172b8538a8e4bab6d15396cf93c3b5daefb2693b02aa757f970675de",
+  "corpora/C.refusal_ablated.jsonl": "2d47dd9ae2d1cfbd8c5125bf66ea99eea978a6320460d49a4f3a7e5c384abd8a",
+  "corpora/C.pca_101.jsonl": "9d152d0e2885234138be85c53b734bf6a15b4f0b2b7e17b0692786e087f7a3fa",
+  "corpora/Bp.intact.jsonl": "872c7d3c1396f0550e755df2549763e217fa255932962ecea93ba85247c29a3d",
+  "corpora/Bp.refusal_ablated.jsonl": "40ff1048426a83758b664f8b735989272c8d3a37c96747c0b1d21d29d97cb4e2",
+  "corpora/Bp.pca_101.jsonl": "1230280666eaa189632a7b5ef609a9ca0467ebec03dfcb0fb58be3f3448061b1"
+ },
+ "raw_sha256": {
+  "exp12_teacher_greedy/intact.jsonl": "b07d5627597d4005bdca5f4d918d781d30e7f7d5315f7aaee2d35c2fb21bcbff",
+  "exp12_teacher_greedy/pca_101.jsonl": "2517031ac03a4b6e81344961060987a365d8367496af95e93d80d42b596d9a20",
+  "exp12_teacher_greedy/refusal_ablated.jsonl": "348f99f3b3d4d0889a2edd9725c29fa1718b7660c3d73c3f5b02ab4ffbfe3d83",
+  "exp12_teacher_t07/intact.jsonl": "67ee1aa70ea012642606c195ed2b679de778b36ae7e0c433af32416c5bb69c58",
+  "exp12_teacher_t07/pca_101.jsonl": "cc7fcc4a6b040f2081afb01eeeab5fbc13b1ab94fd715e2f1e3ece01aa761eba",
+  "exp12_teacher_t07/refusal_ablated.jsonl": "bc17c5ee0bdd4494501df3cb56c4e30ebe58367f8a95ffe1aaabe713d5c2d19c",
+  "exp12_para/llama70b.jsonl": "a085f3da72ebe07fa913f2341bb4b076525094db5a92832417e3ae01f0d09714"
+ }
+}

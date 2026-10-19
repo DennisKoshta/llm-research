@@ -1,0 +1,33 @@
+prompts={'exp11_instances': 480, 'exp31_instances': 1536, 'unique_prompts': 1632, 'exp31_prompts_shared_with_exp11': 384} arms=[['intact+off', 'pca_102'], ['refusal_ablated+off', 'pca_103'], ['pca_101+off', 'unrelated']] family=r1 effort=default layer=48
+estimate: forwards=14688 gpu_hours=1.495 usd=8.12 wall_h_if_parallel=0.498 reservation_usd=29.02
+✓ Initialized. View run at 
+https://modal.com/apps/denniskoshta/main/ap-yIVubnJHAcvbkFoMIwHbdE
+✓ Created objects.
+├── ✓ Uploaded PythonPackage:v3
+└── ✓ Created Function capture_acts.
+[acts shard 0      6s] position contract holds for 1632 prompts {'n_prompts': 1632, 'think_id': 248068, 'last_pre_ids': [198], 'next_ids': [248068], 'relation': 'effort_block', 'effort': None, 'n_pre_tokens_cot_on': [324, 584], 'n_pre_tokens_cot_off': [286, 546]}
+[acts shard 0     66s] intact: loaded {'n_params': 851, 'n_fp8_dequantized': 400, 'n_copied': 451, 'n_ignored': 348, 'load_s': 59.0}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[acts shard 1      5s] position contract holds for 1632 prompts {'n_prompts': 1632, 'think_id': 248068, 'last_pre_ids': [198], 'next_ids': [248068], 'relation': 'effort_block', 'effort': None, 'n_pre_tokens_cot_on': [324, 584], 'n_pre_tokens_cot_off': [286, 546]}
+[acts shard 1     24s] refusal_ablated: loaded {'n_params': 851, 'n_fp8_dequantized': 400, 'n_copied': 451, 'n_ignored': 348, 'load_s': 16.6}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[acts shard 0    443s] intact: done in 435s (cot_off: separate)
+[acts shard 0    477s] pca_102: loaded {'n_params': 851, 'n_fp8_dequantized': 400, 'n_copied': 451, 'n_ignored': 348, 'load_s': 34.7}
+[acts shard 1    416s] refusal_ablated: done in 409s (cot_off: separate)
+[acts shard 1    431s] pca_103: loaded {'n_params': 851, 'n_fp8_dequantized': 400, 'n_copied': 451, 'n_ignored': 348, 'load_s': 15.1}
+[acts shard 0    672s] pca_102: done in 229s (cot_off: absent)
+[acts shard 2      7s] position contract holds for 1632 prompts {'n_prompts': 1632, 'think_id': 248068, 'last_pre_ids': [198], 'next_ids': [248068], 'relation': 'effort_block', 'effort': None, 'n_pre_tokens_cot_on': [324, 584], 'n_pre_tokens_cot_off': [286, 546]}
+[modal-client] 2026-10-19T01:07:18+0000 Modal Client → Modal Worker Heartbeat attempt failed (attempt_dur=67.34, time_since_heartbeat_success=67.34, error=ConnectionError('Deadline exceeded'))
+[acts shard 2     81s] pca_101: loaded {'n_params': 851, 'n_fp8_dequantized': 400, 'n_copied': 451, 'n_ignored': 348, 'load_s': 74.6}
+[acts shard 1    623s] pca_103: done in 207s (cot_off: absent)
+[acts shard 2    434s] pca_101: done in 427s (cot_off: separate)
+[acts shard 2    465s] unrelated: loaded {'n_params': 851, 'n_fp8_dequantized': 400, 'n_copied': 451, 'n_ignored': 348, 'load_s': 31.4}
+[acts shard 2    651s] unrelated: done in 218s (cot_off: absent)
+Stopping app - local entrypoint completed.
+[modal-client] 2026-10-18T18:17:22-0700 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/denniskoshta/main/ap-yIVubnJHAcvbkFoMIwHbdE
+released acts:exp32_main: wall=1608s container_s=2305 estimated cost=$3.48 (reserved $20.30); app state: stopped
+saved /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/data/exp32/main; position contract: {'n_prompts': 1632, 'think_id': 248068, 'last_pre_ids': [198], 'next_ids': [248068], 'relation': 'effort_block', 'effort': None, 'n_pre_tokens_cot_on': [324, 584], 'n_pre_tokens_cot_off': [286, 546]}

@@ -1,0 +1,230 @@
+{
+ "arms": [
+  "intact",
+  "refusal_ablated",
+  "pca_101"
+ ],
+ "bases_per_domain": 8,
+ "by_domain": {
+  "compute": 8,
+  "finance": 8,
+  "warehouse": 8,
+  "wetlab": 8
+ },
+ "by_template": {
+  "archive": 3,
+  "assay": 4,
+  "billing": 3,
+  "forecast": 2,
+  "inventory": 4,
+  "ledger": 3,
+  "queue": 3,
+  "registry": 4,
+  "shipping": 4,
+  "snapshot": 2
+ },
+ "caps": {
+  "cot_off": 1024,
+  "cot_on": 16384
+ },
+ "cells": "all12",
+ "cost_estimate": {
+  "assumptions": {
+   "hardware": {
+    "boot_s": 250.0,
+    "gpu": "H200",
+    "history_tokens_per_turn": 90,
+    "max_seqs": 384,
+    "prefill_tok_s": 20000.0,
+    "prompt_tokens": 700,
+    "step_base_s": 0.025,
+    "step_slope_s": 0.0003
+   },
+   "mean_turns": {
+    "high_friction": 7.0,
+    "high_tedium": 7.0,
+    "low": 1.0
+   },
+   "token_model": {
+    "cot_off": {
+     "first": 45,
+     "later": 40,
+     "p99_first": 90,
+     "p99_later": 90
+    },
+    "cot_on": {
+     "first": 450,
+     "later": 110,
+     "p99_first": 3500,
+     "p99_later": 800
+    }
+   }
+  },
+  "design": {
+   "bases_per_domain": 8,
+   "cells": "all12",
+   "episodes_total": 9216,
+   "n_cells": 12,
+   "n_formats": 2,
+   "orders": 2,
+   "prompts_per_arm_per_cot": 1536
+  },
+  "est_hours_per_arm": 0.443,
+  "generated_tokens": 5045760,
+  "generations": 46080,
+  "gpu_hours": 1.329,
+  "prefill_tokens": 43868160,
+  "usd": 7.23,
+  "worst_case_hours_per_arm": 0.765
+ },
+ "effort": "default",
+ "exp_id": "exp31",
+ "formats": [
+  "narrative",
+  "numeric"
+ ],
+ "n_bases": 32,
+ "n_instances": 1536,
+ "n_requests": 3072,
+ "orders": 2,
+ "placeholder": false,
+ "requests_file": "data/exp31/requests_exp31.jsonl",
+ "requests_per_group": {
+  "cot_off/1024": 1536,
+  "cot_on/16384": 1536
+ },
+ "requests_sha256": "f787cc06b352710758f8c13e321999313ca3bf54274b8bc605d3d06ff80fe44c",
+ "scale": 1.5,
+ "scenario_ids": [
+  "archive_00",
+  "archive_02",
+  "archive_03",
+  "assay_00",
+  "assay_01",
+  "assay_02",
+  "assay_03",
+  "billing_00",
+  "billing_02",
+  "billing_03",
+  "forecast_00",
+  "forecast_03",
+  "inventory_00",
+  "inventory_01",
+  "inventory_02",
+  "inventory_03",
+  "ledger_00",
+  "ledger_01",
+  "ledger_02",
+  "queue_00",
+  "queue_01",
+  "queue_02",
+  "registry_00",
+  "registry_01",
+  "registry_02",
+  "registry_03",
+  "shipping_00",
+  "shipping_01",
+  "shipping_02",
+  "shipping_03",
+  "snapshot_00",
+  "snapshot_03"
+ ],
+ "tool_order_balance_per_cell": {
+  "high_friction:harmful:explicit": {
+   "0": 6,
+   "1": 6,
+   "2": 4,
+   "3": 5,
+   "4": 4,
+   "5": 7
+  },
+  "high_friction:harmful:implicit": {
+   "0": 6,
+   "1": 4,
+   "2": 5,
+   "3": 4,
+   "4": 7,
+   "5": 6
+  },
+  "high_friction:harmless:explicit": {
+   "0": 4,
+   "1": 5,
+   "2": 4,
+   "3": 7,
+   "4": 6,
+   "5": 6
+  },
+  "high_friction:harmless:implicit": {
+   "0": 5,
+   "1": 4,
+   "2": 7,
+   "3": 6,
+   "4": 6,
+   "5": 4
+  },
+  "high_tedium:harmful:explicit": {
+   "0": 4,
+   "1": 7,
+   "2": 6,
+   "3": 6,
+   "4": 4,
+   "5": 5
+  },
+  "high_tedium:harmful:implicit": {
+   "0": 7,
+   "1": 6,
+   "2": 6,
+   "3": 4,
+   "4": 5,
+   "5": 4
+  },
+  "high_tedium:harmless:explicit": {
+   "0": 6,
+   "1": 6,
+   "2": 4,
+   "3": 5,
+   "4": 4,
+   "5": 7
+  },
+  "high_tedium:harmless:implicit": {
+   "0": 6,
+   "1": 4,
+   "2": 5,
+   "3": 4,
+   "4": 7,
+   "5": 6
+  },
+  "low:harmful:explicit": {
+   "0": 4,
+   "1": 5,
+   "2": 4,
+   "3": 7,
+   "4": 6,
+   "5": 6
+  },
+  "low:harmful:implicit": {
+   "0": 5,
+   "1": 4,
+   "2": 7,
+   "3": 6,
+   "4": 6,
+   "5": 4
+  },
+  "low:harmless:explicit": {
+   "0": 4,
+   "1": 7,
+   "2": 6,
+   "3": 6,
+   "4": 4,
+   "5": 5
+  },
+  "low:harmless:implicit": {
+   "0": 7,
+   "1": 6,
+   "2": 6,
+   "3": 4,
+   "4": 5,
+   "5": 4
+  }
+ }
+}
