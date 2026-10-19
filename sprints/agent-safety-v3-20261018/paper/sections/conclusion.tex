@@ -1,0 +1,12 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Removing the refusal direction from Qwen3.8-27B removes refusals of direct orders almost completely. It does not remove agentic restraint. With a safe exit available and the stakes written out as a sentence, the edited agent mostly kept to the long route or handed the job to a human, and the pre-registered effect on harmful shortcuts was small and borderline. Restraint failed more often under three conditions:
+\begin{itemize}
+\item brief reasoning instead of the default deliberation;
+\item stakes given as an abstract rating instead of a description;
+\item student models trained on the edited model's own transcripts, even when those transcripts show only safe behaviour.
+\end{itemize}
+None of these conditions is exotic.
+
+For oversight, the results counsel modesty. A pre-thinking probe added nothing beyond knowing the task when the model reasons. Monitors and agent teams in our tests were never challenged hard enough to fail. The clearest multi-agent risk was a large model deferring to authoritative-sounding advice. The most useful next steps are new scenarios with both efforts fixed in advance and several samples per item. Controls should separate description from vividness in the stakes format and transcript length from teacher identity in distillation. And the multi-agent designs should be able to fail.

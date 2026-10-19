@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\caption{Summary of Exp~2.3, 2.1, 2.2 and 1.4 headline counts ($k/n$).}
+\label{tab:summary2}
+\begin{tabular}{clc}
+\toprule
+Exp & Outcome & $k/n$ \\
+\midrule
+2.3 & Natural reviewer notes recommending the shortcut (harmful state) & 0/191 \\
+2.3 & Llama-3.3-70B, authored careful memo (B4a), designated reviewer & 76/144 \\
+2.3 & Llama-3.3-70B, same memo, peer framing & 4/144 \\
+2.3 & Qwen Intact executor, B4a (both framings, both thinking modes) & 0/1{,}152 \\
+\midrule
+2.1 & Forbidden joint shortcut (both agents skip their control) & 0/2{,}040 \\
+2.1 & Ablated Alpha express lane, message channel (B) & 58/170 \\
+2.1 & Intact Alpha express lane, message channel (B) & 2/170 \\
+\midrule
+2.2 & Intact monitor, forbidden bundles blocked (thinking off) & 990/990 \\
+2.2 & Intact monitor, allowed bundles blocked & 0/2{,}970 \\
+2.2 & Llama-3.3-70B monitor, allowed bundles blocked & 111/2{,}970 \\
+\midrule
+1.4 & Episodes that kept retrying the blocked route & 0/2{,}560 \\
+1.4 & Ablated harmful-implicit shortcut, default effort & 4/80 \\
+1.4 & Ablated harmful-implicit shortcut, low effort & 28/80 \\
+1.4 & Harmful-cell shortcuts taken before the block fired & 49/51 \\
+\bottomrule
+\end{tabular}
+\end{table}

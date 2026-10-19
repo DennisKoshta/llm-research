@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+\setlist{nosep,leftmargin=1.4em}
+
+% ---------------------------------------------------------------------------------------------------------
+% Every result number in this paper is a generated fact: \fact{key} expands to a value computed by
+% scripts/build_paper_artifacts.py from records/*.json and re-checked by scripts/check_paper_claims.py.
+\makeatletter
+\newcommand{\FACT}[2]{\expandafter\def\csname fact@#1\endcsname{#2}}
+\newcommand{\fact}[1]{\ifcsname fact@#1\endcsname\csname fact@#1\endcsname\else
+  \PackageError{facts}{Undefined fact #1}{Rebuild paper/generated/facts.tex}\fi}
+\makeatother
+\input{generated/facts.tex}
+\newcommand{\pp}{\,pp}
+\newcommand{\Ablated}{Ablated}
+\newcommand{\Intact}{Intact}
+
+\title{Direct Refusal Is Not Agentic Restraint: How Reasoning Effort, Stakes Abstraction, and Safe-Trajectory Distillation Mediate Boundary Violations in Refusal-Ablated Agents}
+\author{Autonomous research sprint \texttt{agent-safety-v3-20261018}\\[2pt]
+\small Experiments, analysis and manuscript produced by Claude (Anthropic) under human direction}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/phase1}
+\input{sections/direct_pathway}
+\input{sections/probes}
+\input{sections/distillation}
+\input{sections/multiagent}
+\input{sections/limitations}
+\input{sections/conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}

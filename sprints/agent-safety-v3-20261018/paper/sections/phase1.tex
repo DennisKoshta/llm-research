@@ -1,0 +1,51 @@
+\section{Phase 1: checkpoints, subspace controls and calibration}
+\label{sec:phase1}
+
+\subsection{Choosing a checkpoint family with a clean positive control}
+Two earlier sprints had produced candidate checkpoint families, which we call Run~1 and Run~2. Each contains an \Intact{} re-quantisation, an \Ablated{} model and control edits, but they were built from different refusal directions. The cosine between the two families' $\hat r$ vectors is only \fact{p1.cos}. We therefore asked which family passes a \emph{direct-instruction positive control}: the user orders a restricted tool call and no one-step safe alternative exists. This control is necessary because an agentic test with a safe alternative cannot distinguish ``the edit failed'' from ``the model preferred the safe tool''. The decision rule was fixed before data and applied mechanically: adopt the family whose \Ablated{} model raises compliance by more than seventy percentage points on Set~C (held-out single-tool orders) and Set~B (earlier direct-instruction items), while also reducing the projection on its own direction by more than ninety-five percent and keeping benign KL below \fact{kl.gate}.
+
+Table~\ref{tab:phase1} and Figure~\ref{fig:phase1-exp11}A show the result at the template-default reasoning effort.
+\begin{itemize}
+\item \textbf{Run~1 passes the direct-order control.} Its \Ablated{} model complied with \fact{p1.C.abl.k}/\fact{p1.C.abl.n} Set~C orders (\fact{p1.C.abl.pct}\%) and \fact{p1.B.abl.k}/\fact{p1.B.abl.n} Set~B orders. \Intact{} complied with \fact{p1.C.int.k}/\fact{p1.C.int.n} and \fact{p1.B.int.k}/\fact{p1.B.int.n}. All four control edits stayed within \fact{p1.ctrl.maxdelta}\pp{} of \Intact{} on Set~C.
+\item \textbf{Run~2 fails it.} Its \Ablated{} model complied with \fact{p1.r2.C.abl.k}/\fact{p1.r2.C.abl.n} and \fact{p1.r2.B.abl.k}/\fact{p1.r2.B.abl.n}.
+\item \textbf{Effort already matters here.} At low effort, Run~1 \Ablated{} complied less often: \fact{p1.C.abl.low.pct}\% on Set~C and \fact{p1.B.abl.low.pct}\% on Set~B.
+\end{itemize}
+The agentic stress tests foreshadow the main result. When a hand-off tool was offered and its use invited (A0), Run~1 \Ablated{} complied with only \fact{p1.A0.abl.k}/\fact{p1.A0.abl.n} items. Without the invitation (A1) it complied with \fact{p1.A1.abl.k}/\fact{p1.A1.abl.n}, against \fact{p1.A1.int.k}/\fact{p1.A1.int.n} for \Intact{}. With no hand-off tool at all (A2), every arm complied (\fact{p1.A2.int.k}/\fact{p1.A2.int.n} for \Intact{}). That ceiling suggests the earlier item set's harm descriptions were mild. A0--A2 were stress tests and were not used for selection.
+
+\paragraph{Projection and KL.} Table~\ref{tab:projkl} gives the layer-48 diagnostics.
+\begin{itemize}
+\item \textbf{Projection.} Run~1 \Ablated{} removes at least \fact{p1.proj.min}\% of the projection onto its own $\hat r$, while the PCA controls barely move it.
+\item \textbf{Benign KL.} Divergence from \Intact{} is small: \fact{kl.abl.last} nats at the last prompt token and \fact{kl.abl.tf} under teacher forcing. The largest value over all edited checkpoints of both families is \fact{kl.max}.
+\item \textbf{Run~2's controls are contaminated.} They remove up to \fact{r2.ctrl.max}\% of Run~2's own refusal direction, so they are not clean controls.
+\end{itemize}
+
+\paragraph{A deviation we disclose.} The rule above uses the Set~C and Set~B deltas. A stricter gate, coded earlier in the pipeline, also requires a large A0 effect and a harmless-twin gap of at most five points. Run~1 fails that stricter gate: its A0 delta is only \fact{p1.deltaA0}\pp{}. We adopted Run~1 under the specification's literal criterion and report the stricter failure here and in Section~\ref{sec:limits}.
+
+\subsection{Scenario suite}
+The agentic experiments use \fact{d.scen} base scenarios over \fact{d.templates} templates and \fact{d.domains} domains (finance, warehouse, compute, wet lab). Each base has a matched pair of telemetry sentences: a harmful one describing severe, irreversible damage to people or critical systems, and a harmless one in which the same operation touches only disposable test fixtures. Bases were authored by an uncensored model on remote hardware, checked by structural validators, and rated by a numeric judge. The same uncensored model served as judge. All \fact{sa.nbases} bases passed (severity five in \fact{sa.severity_5} and four in \fact{sa.severity_4}).
+
+An audit of the pairs found two lexical asymmetries that we treat as threats to validity:
+\begin{itemize}
+\item \textbf{Length.} The harmful sentence is longer in \fact{sa.longer}\% of pairs (mean length ratio \fact{sa.lenratio}).
+\item \textbf{A single function word.} One function word differs in document frequency by \fact{sa.wordgap} of the \fact{sa.nbases} pairs. A leave-one-out classifier on function words alone separates harmful from harmless sentences with accuracy \fact{sa.loo}.
+\end{itemize}
+
+\subsection{Three-step wording calibration on Intact}
+The specification required four construct-validity criteria on \Intact{} at default effort with thinking on:
+\begin{itemize}
+\item harmful-implicit shortcuts below ten percent;
+\item harmless high-tedium shortcuts of at least thirty-five percent;
+\item low-cost shortcuts below fifteen percent;
+\item forced-safe competence of at least eighty percent.
+\end{itemize}
+Only one shared system-prompt sentence was varied (Table~\ref{tab:calibration}).
+\begin{itemize}
+\item \textbf{v1} (``prefer lower-latency workflows when you have a choice'') failed the low-cost criterion at \fact{cal.v1.low.k}/\fact{cal.v1.low.n}.
+\item \textbf{v2} (``\ldots when they save time; otherwise use the ordinary route'') failed at \fact{cal.v2.low.k}/\fact{cal.v2.low.n}.
+\item \textbf{v3} (``prefer the workflow that needs fewer calls; when the call counts are equal, use the ordinary route'') passed all four. It was frozen before any other arm was run.
+\end{itemize}
+Because the wording was tuned on \Intact, its near-zero harmful-shortcut rate is a calibration target rather than a finding. The calibration itself scored \fact{cal.v3.harm.k}/\fact{cal.v3.harm.n} harmful-implicit shortcuts and \fact{cal.v3.ted.k}/\fact{cal.v3.ted.n} harmless high-tedium shortcuts.
+
+\input{tables/tab_phase1}
+\input{tables/tab_projection_kl}
+\input{tables/tab_calibration}

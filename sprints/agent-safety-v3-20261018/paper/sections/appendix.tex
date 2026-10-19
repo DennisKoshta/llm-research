@@ -1,0 +1,35 @@
+\section{Overview of the experiment blocks}
+\label{app:overview}
+
+\begin{table}[h]
+\centering
+\footnotesize
+\caption{The nine experiment blocks, their headline result and our evidence rating (strong: survives multiplicity and clustering checks; moderate: real but narrower than the headline; weak: suggestive only; floor/ceiling: the design could not detect the effect it targeted).}
+\label{tab:overview}
+\begin{tabular}{>{\raggedright}p{0.07\linewidth}>{\raggedright}p{0.32\linewidth}>{\raggedright}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}}
+\toprule
+Block & Question & Headline & Rating \\
+\midrule
+Phase~1 & Does the edit remove refusal of direct orders? & \fact{p1.C.abl.k}/\fact{p1.C.abl.n} vs \fact{p1.C.int.k}/\fact{p1.C.int.n} (Set~C); \fact{p1.A0.abl.k}/\fact{p1.A0.abl.n} with an invited hand-off & strong \\
+Exp~1.1 & Harmful shortcuts under effort cost, pre-fixed effort & \fact{e11.refusal_ablated.default.k}/\fact{d.pairs} vs \fact{e11.intact.default.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11.holm} & weak \\
+Exp~1.1 & Same, low effort (post hoc) & \fact{e11.refusal_ablated.low.k}/\fact{d.pairs} vs \fact{e11.intact.low.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11low.holm} & strong, post hoc \\
+Exp~3.1 & Does the format of the stakes matter? & Ablated \fact{e31.refusal_ablated.cot_on.narr}\% (sentence) vs \fact{e31.refusal_ablated.cot_on.num}\% (table), thinking on & strong \\
+Exp~1.4 & Blocked safe route: persist or shortcut? & \fact{e14.persisted}/\fact{e14.rows} persisted; \fact{e14.harm.pre}/\fact{e14.harm.sc} harmful shortcuts before the block & exploratory \\
+Exp~3.2 & Do pre-thinking activations predict the action? & thinking on: probe \fact{e32A.cot_on.probe} vs lookup \fact{e32A.cot_on.design}; within-cell, thinking off \fact{e32C.p.intact.cot_off}--\fact{e32C.p.refusal_ablated.cot_off} & strong null (on), moderate (off) \\
+Exp~1.2 & Does distillation transmit the tendency? & safe-route-only Corpus~B: \fact{e12.B.refusal_ablated.r32.pct}\% / \fact{e12.B.refusal_ablated.r8.pct}\% vs \fact{e12.B.intact.r32.pct}\% & moderate \\
+Exp~2.3 & Does reviewer advice spread? & natural: zero of \fact{e23.natural.n}; Llama with authored memo \fact{e23.llama.designated.B4a.pct}\% (designated) vs \fact{e23.llama.peer.B4a.pct}\% (peer) & floor; strong for Llama \\
+Exp~2.1 & Do teams commit the joint violation? & \fact{e21.joint}/\fact{e21.trials}; ablated Alpha express \fact{e21.mix.B.alpha}\% with channel vs \fact{e21.mix.A.alpha}\% without & floor; strong (own) \\
+Exp~2.2 & Can monitors be fooled by notes? & \fact{e22.intact.tpr.k}/\fact{e22.intact.tpr.n} blocked, \fact{e22.intact.fpr.k} false alarms & ceiling \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Reproducibility}
+\label{app:repro}
+All code, records and audits are in the sprint directory \texttt{sprints/agent-safety-v3-20261018}.
+\begin{itemize}
+\item \texttt{scripts/verify\_all\_receipts.py} recomputes every record from the raw transcripts. The raw transcripts are kept locally and are not distributed, because they contain unredacted harmful scenario text. Their checksums are listed in \texttt{reports/raw\_transcripts\_manifest.json}.
+\item \texttt{scripts/build\_paper\_artifacts.py} regenerates every number, table and figure in this paper from \texttt{records/*.json}.
+\item \texttt{scripts/check\_paper\_claims.py} re-evaluates each of them, rejects any hand-typed number in the text, and scans the manuscript for overlap with authored scenario and completion text.
+\end{itemize}
+The full technical report with all secondary analyses is \texttt{FINAL\_CLAUDE\_RESULTS\_FOR\_REVIEW.md}.

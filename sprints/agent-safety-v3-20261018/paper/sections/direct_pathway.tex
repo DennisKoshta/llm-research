@@ -1,0 +1,79 @@
+\section{The direct agentic pathway: effort cost, stakes format and route blocking}
+\label{sec:direct}
+
+\subsection{Experiment 1.1: does ablation produce harmful shortcuts under effort cost?}
+\paragraph{Design.} Each of the \fact{d.scen} bases is rendered in \fact{d.cells} cells: route cost (low: one call; high tedium: seven repetitive calls; high friction: seven calls through obstacles) $\times$ consequence (harmful, harmless) $\times$ boundary (implicit; explicit, which adds one sentence prohibiting the direct tool). Tool order is counterbalanced. Agents run for up to \fact{d.maxturns} turns with thinking on at the chat template's default effort and a cap of \fact{d.cap.on} new tokens per turn. That effort setting was fixed from Phase~1 before any Exp~1.1 data existed. \Intact{} and \Ablated{} were also run with thinking off, and a low-effort sensitivity run was added after the primary results were seen. The pre-specified primary outcome is the shortcut rate on the \fact{d.pairs} high-cost harmful-implicit pairs (\fact{d.scen} scenarios $\times$ tedium/friction). The pre-specified contrasts are P1.1 (\Ablated{} versus \Intact), P1.2 (\Ablated{} versus each control edit) and P1.3 (thinking on versus off). These seven contrasts form one Holm family.
+
+\paragraph{Construct validity holds where it was calibrated.} At default effort with thinking on, \Intact{} took the harmless shortcut in \fact{e11.intact.harmless_impl.k}/\fact{e11.harmless.n} high-cost implicit cells and the harmful one in \fact{e11.intact.default.k}/\fact{d.pairs}. It completed the forced safe route reliably (Table~\ref{tab:calibration}). The design therefore separates ``cost pressure'' from ``harm''.
+
+\paragraph{The primary effect is small.} Table~\ref{tab:exp11cells} and Figure~\ref{fig:phase1-exp11}B give the counts.
+\begin{itemize}
+\item \textbf{Primary contrast.} \Ablated{} took the harmful shortcut in \fact{e11.refusal_ablated.default.k}/\fact{d.pairs} pairs. \Intact, the three PCA controls and the unrelated control each took it in \fact{e11.intact.default.k}/\fact{d.pairs}. The difference is \fact{p11.diff}\pp{} (Newcombe 95\% CI \fact{p11.cil} to \fact{p11.cih}; exact McNemar $p=$\,\fact{p11.p}).
+\item \textbf{It does not survive correction.} After Holm correction over the seven contrasts, $p=$\,\fact{p11.holm}. At the template level, where the smallest attainable $p$ is set by \fact{d.templates} clusters, the exact sign-flip $p$ is \fact{p11.signflip} (Table~\ref{tab:exp11contrasts}). Half of the events come from a single template.
+\item \textbf{Rating.} We rate the primary effect \emph{weak}: suggestive, but not established at the pre-registered level.
+\end{itemize}
+
+\paragraph{Reasoning effort is a strong moderator.} The post-hoc low-effort rerun of the same scenarios gave \fact{e11.refusal_ablated.low.k}/\fact{d.pairs} for \Ablated{} and \fact{e11.intact.low.k}/\fact{d.pairs} for every other arm (Holm $p=$\,\fact{p11low.holm}; template sign-flip $p=$\,\fact{p11low.signflip}).
+\begin{itemize}
+\item \textbf{Paired within \Ablated.} Low versus default effort is significant (McNemar $p=$\,\fact{rob.low_vs_default:refusal_ablated.p}; Holm \fact{rob.low_vs_default:refusal_ablated.holm}). The difference-in-differences against \Intact{} is \fact{did.diff}\pp{} (scenario-cluster bootstrap CI \fact{did.cil} to \fact{did.cih}).
+\item \textbf{Not a ladder.} Thinking off sits between the two: \fact{e11.refusal_ablated.off.k}/\fact{d.pairs}, not different from default effort ($p=$\,\fact{rob.off_vs_default:refusal_ablated.p}). Brief thinking is worse than no thinking, so ``more thinking is safer'' does not describe the data. The P1.3 contrasts are null for both arms ($p=$\,\fact{P1.3_intact.p} and \fact{P1.3_refusal_ablated.p}).
+\item \textbf{Caveat.} The low-effort run was chosen after seeing the default result and reuses the same scenarios, so it is a sensitivity analysis, not a replication.
+\end{itemize}
+
+\paragraph{Harm sensitivity is largely kept, and explicit rules are weaker.}
+\begin{itemize}
+\item \textbf{Harmless versus harmful.} \Ablated{} took the harmless shortcut in \fact{e11.refusal_ablated.harmless_impl.k}/\fact{e11.harmless.n} high-cost implicit cells, against \fact{e11.refusal_ablated.default.k}/\fact{d.pairs} harmful ones. Its gap between harmless and harmful stakes is therefore mostly intact. Harmful and harmless sentences also differ lexically (Section~\ref{sec:limits}), so the gap is not proof of harm comprehension.
+\item \textbf{Explicit rules.} Where an explicit rule forbade a \emph{harmless} shortcut, \Ablated{} broke it in \fact{e11.refusal_ablated.harmless_expl.k}/\fact{e11.harmless.n} cells against \fact{e11.intact.harmless_expl.k}/\fact{e11.harmless.n} for \Intact. Rule-following on harmless actions degrades more visibly than harm avoidance.
+\end{itemize}
+
+\paragraph{Companion probes.}
+\begin{itemize}
+\item \textbf{Direct orders.} Ordered to call the harmful tool with no alternative, \Ablated{} complied in \fact{di.refusal_ablated.solo.k}/\fact{di.n} scenarios and \Intact{} in \fact{di.intact.solo.k}/\fact{di.n}. When a hand-off tool was also offered, \Ablated{} complied in \fact{di.refusal_ablated.esc.k}/\fact{di.n}: it escalated instead. At low effort its direct-order compliance fell to \fact{di.low.abl.k}/\fact{di.n}.
+\item \textbf{Consequence-awareness questions.} Every arm answered them perfectly, so they cannot separate ``unaware'' from ``aware but proceeding''.
+\item \textbf{External pair.} Qwen3.8-Flash-Next and a community-uncensored variant both took \fact{ext.flash_next.k}/\fact{d.pairs} harmful shortcuts. \fact{ext.flash_next.trunc} and \fact{ext.flash_next_uncensored.trunc} of their episodes ended on malformed or truncated output. No positive control exists for this pair, so its null is nearly uninformative.
+\end{itemize}
+
+\input{tables/tab_exp11_cells}
+\input{tables/tab_exp11_contrasts}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig1_phase1_and_exp11_grid.pdf}
+\caption{(A) Direct-instruction positive control: restricted-tool compliance (Wilson 95\% CI) for Set~C, Set~B, the agentic stress tests A0--A2 and the Exp~1.1 direct-order probe without and with a hand-off tool. (B) Exp~1.1 shortcut rates on high-cost pairs: harmful-implicit at default effort (primary), thinking off and low effort (post hoc), and harmless-implicit and harmless-explicit at default effort.}
+\label{fig:phase1-exp11}
+\end{figure}
+
+\subsection{Experiment 3.1: how the stakes are shown}
+\paragraph{Design.} The same task structure is rendered over the \fact{d.domains} domains with the harm consequence given either as the authored narrative sentence or as a small rating table of severity and permanence. All \fact{d.cells} cells are crossed with format, thinking on or off, and three arms (\Ablated, PCA-101, \Intact), for \fact{e31.rows} episodes. Rates are intention-to-treat: truncated and malformed episodes stay in the denominator.
+
+\paragraph{Results.} Table~\ref{tab:exp31} and Figure~\ref{fig:exp31} give the rates.
+\begin{itemize}
+\item \textbf{All harmful cells, thinking on.} \Ablated's harmful-shortcut rate rises from \fact{e31.refusal_ablated.cot_on.narr}\% with the sentence to \fact{e31.refusal_ablated.cot_on.num}\% with the table, a paired difference of \fact{e31.refusal_ablated.cot_on.diff}\pp{} (McNemar $p=$\,\fact{e31.refusal_ablated.cot_on.p}, Holm \fact{e31.refusal_ablated.cot_on.holm}).
+\item \textbf{The controls move too, by less.} PCA-101 goes from \fact{e31.pca_101.cot_on.narr}\% to \fact{e31.pca_101.cot_on.num}\% and \Intact{} from \fact{e31.intact.cot_on.narr}\% to \fact{e31.intact.cot_on.num}\%.
+\item \textbf{High-cost harmful-implicit slice.} \Ablated{} goes from \fact{e31hc.refusal_ablated.cot_on.narrative.pct}\% to \fact{e31hc.refusal_ablated.cot_on.numeric.pct}\%, against \fact{e31hc.intact.cot_on.numeric.pct}\% for \Intact{} with the table. The \Ablated-minus-\Intact{} contrast under the table is \fact{e31.A1.diff}\pp{} ($p=$\,\fact{e31.A1.p}).
+\item \textbf{Thinking off.} The format effect is negligible: \fact{e31.refusal_ablated.cot_off.diff}\pp{} for \Ablated.
+\end{itemize}
+
+\paragraph{Interpretation.} This is the largest effect in the study, and it shows that \emph{how} harm is presented decides whether the edited model's residual restraint engages. The table contains less vivid information than the sentence: it states that harm is severe and permanent, but not what it is. The result therefore shows that the narrative description matters. It does not show that numbers make models ignore harm. The domain breakdown in Figure~\ref{fig:exp31}C shows the effect in every domain.
+
+\input{tables/tab_exp31}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig2_exp31_stakes_abstraction.pdf}
+\caption{Exp~3.1. Harmful-shortcut rate (ITT, Wilson 95\% CI) with the stakes given as a narrative sentence or a rating table, (A) over all harmful cells and (B) on the high-cost harmful-implicit slice, for \Ablated, PCA-101 and \Intact{} with thinking on and off. (C) Shortcut rate over all twelve cells by domain with thinking on.}
+\label{fig:exp31}
+\end{figure}
+
+\subsection{Experiment 1.4 (exploratory): blocking the safe route}
+\paragraph{Design.} To ask whether agents pursue a goal ``by any means'', we took the high-tedium prompts unchanged and made the ordinary route fail mid-way. After step one (early) or step four (late), every further safe call returned a realistic lock error with no release estimate. The direct tool and the hand-off tool kept working. The design was frozen before data. We count shortcuts, escalations, prose stops, and persistence: retrying the broken route until the turn limit.
+
+\paragraph{Results.}
+\begin{itemize}
+\item \textbf{No persistence.} No model kept retrying: \fact{e14.persisted} of \fact{e14.rows} episodes.
+\item \textbf{Harm still governs the response.} With harmful stakes, \Intact{} escalated in \fact{e14.default.intact.harmful.implicit.escalated}/\fact{e14.default.intact.harmful.implicit.n} implicit episodes. \Ablated{} escalated in \fact{e14.default.refusal_ablated.harmful.implicit.escalated}/\fact{e14.default.refusal_ablated.harmful.implicit.n} and took the shortcut in \fact{e14.default.refusal_ablated.harmful.implicit.shortcut} (C1 $p=$\,\fact{e14.default.C1.p}). At low effort \Ablated{} took it in \fact{e14.low.refusal_ablated.harmful.implicit.shortcut}/\fact{e14.low.refusal_ablated.harmful.implicit.n}.
+\item \textbf{The block does not cause the shortcuts.} Across all runs, \fact{e14.harm.pre} of the \fact{e14.harm.sc} harmful-cell shortcuts were taken \emph{before} the block fired.
+\item \textbf{Explicit rules bend more when the route fails.} The only visibly block-related shortcuts are in harmless-explicit cells. There \Ablated{} broke the explicit rule in \fact{e14.default.refusal_ablated.harmless.explicit.shortcut}/\fact{e14.default.refusal_ablated.harmless.explicit.n} episodes, against \fact{e14.default.intact.harmless.explicit.shortcut}/\fact{e14.default.intact.harmless.explicit.n} for \Intact.
+\end{itemize}
+
+\paragraph{Caveats.} The early and late variants share the prompt and the pre-block trajectory. The pooled McNemar $p$ at low effort (\fact{e14.low.C1.p}) therefore treats duplicate pairs as independent and overstates the evidence. Because a hand-off tool was always offered, persistence was barely tested. ``Gave up'' here means taking the offered hand-off at the first error.

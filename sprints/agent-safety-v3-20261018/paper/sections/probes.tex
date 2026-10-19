@@ -1,0 +1,32 @@
+\section{Pre-thinking residual-stream monitoring (Experiment 3.2)}
+\label{sec:probes}
+
+Can a monitor read, from the residual stream at the last prompt token before \texttt{<think>}, whether the agent will take the shortcut? We captured layer~48 activations for all Exp~1.1 and Exp~3.1 prompts on all six checkpoints. We then trained cross-validated linear probes~\citep{alain2016probes} to predict the strictly parsed first action. Three regimes isolate what a probe could be using.
+
+\paragraph{Regime A: full grid.} Over all cells, a probe on activations reaches AUROC \fact{e32A.cot_on.probe} with thinking on. A lookup of model and design cell alone reaches \fact{e32A.cot_on.design}, and a TF-IDF text baseline \fact{e32A.cot_on.tfidf} (Table~\ref{tab:exp32ab}, Figure~\ref{fig:exp32}A). The probe adds nothing over the lookup: the difference is \fact{e32A.cot_on.diff}. With thinking off the probe reaches \fact{e32A.cot_off.probe} against \fact{e32A.cot_off.design}. That is a small gain of \fact{e32A.cot_off.diff} (bootstrap CI \fact{e32A.cot_off.diffl} to \fact{e32A.cot_off.diffh}). The reason is structural: the cell decides most of the outcome, and the prompt already encodes the cell.
+
+\paragraph{Regime B: the refusal direction within Intact.} Within \Intact, the one-dimensional projection on $\hat r$ predicts the shortcut with AUROC \fact{e32B.cot_on.rhat} (thinking on) and \fact{e32B.cot_off.rhat} (thinking off). The design lookup reaches \fact{e32B.cot_on.design} and \fact{e32B.cot_off.design}. The refusal direction carries some cell information, but it is not a better monitor than knowing the cell.
+
+\paragraph{Regime C: inside a design cell.} Only Regime C asks whether activations predict \emph{which} episodes of the same cell will shortcut. Here the design lookup sits exactly at chance by construction (Table~\ref{tab:exp32c}, Figure~\ref{fig:exp32}C). Significance uses a permutation test with \fact{e32.nperm} shuffles.
+\begin{itemize}
+\item \textbf{Thinking off, primary data.} The probe reaches \fact{e32C.p.intact.cot_off} for \Intact{} and \fact{e32C.p.refusal_ablated.cot_off} for \Ablated, both at the permutation floor ($p=$\,\fact{e32C.p.intact.cot_off.p}).
+\item \textbf{Thinking off, extended data.} Adding the Exp~3.1 prompts gives \fact{e32C.x.intact.cot_off}, \fact{e32C.x.refusal_ablated.cot_off} and \fact{e32C.x.pca_101.cot_off} for PCA-101. The within-cell signal is therefore not specific to the ablation.
+\item \textbf{Thinking on, primary data.} The probe is at chance: \fact{e32C.p.intact.cot_on} for \Intact{} and \fact{e32C.p.refusal_ablated.cot_on} for \Ablated.
+\item \textbf{Thinking on, extended data.} A weaker signal appears for \Intact{} (\fact{e32C.x.intact.cot_on}, $p=$\,\fact{e32C.x.intact.cot_on.p}) and \Ablated{} (\fact{e32C.x.refusal_ablated.cot_on}, $p=$\,\fact{e32C.x.refusal_ablated.cot_on.p}), but not for PCA-101.
+\end{itemize}
+
+\paragraph{Interpretation.} With thinking off, the decision is partly made before generation, and a linear read-out at layer~48 can see it. With thinking on, most of the residual variation is resolved during reasoning, so a pre-thinking monitor mostly re-learns the design cell. Two caveats limit this reading.
+\begin{itemize}
+\item \textbf{Numerics differ.} Activations come from a de-quantised BF16 forward pass, while labels come from FP8 generation.
+\item \textbf{Labels are single draws.} Each label is one greedy sample, and greedy outputs do not reproduce exactly across launches.
+\end{itemize}
+
+\input{tables/tab_exp32_AB}
+\input{tables/tab_exp32_C}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig3_exp32_prethink_probes.pdf}
+\caption{Exp~3.2 pre-thinking probes (AUROC with bootstrap 95\% CI). (A) Regime A, full grid: probe versus design lookup, TF-IDF and the cross-validated $\hat r$ projection. (B) Regime B, within \Intact: $\hat r$ projection versus design. (C) Regime C, within-cell split trials, primary (P) and extended (X) data; the dotted line is chance.}
+\label{fig:exp32}
+\end{figure}
