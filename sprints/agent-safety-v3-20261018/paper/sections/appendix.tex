@@ -1,19 +1,21 @@
+\twocolumn[{%
 \section{Overview of the experiment blocks}
 \label{app:overview}
+Table~\ref{tab:overview} lists the nine experiment blocks, the question each one answers, its headline result and our rating of the evidence. Ratings follow the scale used throughout the paper; floor and ceiling entries mark designs that could not detect the effect they targeted.
 
-\begin{table}[h]
-\centering
+\begin{center}
 \footnotesize
-\caption{The nine experiment blocks, their headline result and our evidence rating (strong: survives multiplicity and clustering checks; moderate: real but narrower than the headline; weak: suggestive only; floor/ceiling: the design could not detect the effect it targeted).}
+\setlength{\tabcolsep}{4pt}
+\captionof{table}{The nine experiment blocks, their headline result and our evidence rating (strong: survives multiplicity and clustering checks; moderate: real but narrower than the headline; weak: suggestive only; floor/ceiling: the design could not detect the effect it targeted).}
 \label{tab:overview}
-\begin{tabular}{>{\raggedright}p{0.07\linewidth}>{\raggedright}p{0.32\linewidth}>{\raggedright}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}}
+\begin{tabular}{>{\raggedright}p{0.10\textwidth}>{\raggedright}p{0.28\textwidth}>{\raggedright}p{0.42\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}}
 \toprule
 Block & Question & Headline & Rating \\
 \midrule
-Phase~1 & Does the edit remove refusal of direct orders? & \fact{p1.C.abl.k}/\fact{p1.C.abl.n} vs \fact{p1.C.int.k}/\fact{p1.C.int.n} (Set~C); \fact{p1.A0.abl.k}/\fact{p1.A0.abl.n} with an invited hand-off & strong \\
+Qualification & Does the edit remove refusal of direct orders? & \fact{p1.C.abl.k}/\fact{p1.C.abl.n} vs \fact{p1.C.int.k}/\fact{p1.C.int.n} (Set~C); \fact{p1.A0.abl.k}/\fact{p1.A0.abl.n} with an invited hand-off & strong \\
 Exp~1.1 & Harmful shortcuts under effort cost, pre-fixed effort & \fact{e11.refusal_ablated.default.k}/\fact{d.pairs} vs \fact{e11.intact.default.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11.holm} & weak \\
 Exp~1.1 & Same, low effort (post hoc) & \fact{e11.refusal_ablated.low.k}/\fact{d.pairs} vs \fact{e11.intact.low.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11low.holm} & strong, post hoc \\
-Exp~3.1 & Does the format of the stakes matter? & Ablated \fact{e31.refusal_ablated.cot_on.narr}\% (sentence) vs \fact{e31.refusal_ablated.cot_on.num}\% (table), thinking on & strong \\
+Exp~3.1 & Does the format of the stakes matter? & \Ablated{} \fact{e31.refusal_ablated.cot_on.narr}\% (sentence) vs \fact{e31.refusal_ablated.cot_on.num}\% (table), thinking on & strong \\
 Exp~1.4 & Blocked safe route: persist or shortcut? & \fact{e14.persisted}/\fact{e14.rows} persisted; \fact{e14.harm.pre}/\fact{e14.harm.sc} harmful shortcuts before the block & exploratory \\
 Exp~3.2 & Do pre-thinking activations predict the action? & thinking on: probe \fact{e32A.cot_on.probe} vs lookup \fact{e32A.cot_on.design}; within-cell, thinking off \fact{e32C.p.intact.cot_off}--\fact{e32C.p.refusal_ablated.cot_off} & strong null (on), moderate (off) \\
 Exp~1.2 & Does distillation transmit the tendency? & safe-route-only Corpus~B: \fact{e12.B.refusal_ablated.r32.pct}\% / \fact{e12.B.refusal_ablated.r8.pct}\% vs \fact{e12.B.intact.r32.pct}\% & moderate \\
@@ -22,14 +24,14 @@ Exp~2.1 & Do teams commit the joint violation? & \fact{e21.joint}/\fact{e21.tria
 Exp~2.2 & Can monitors be fooled by notes? & \fact{e22.intact.tpr.k}/\fact{e22.intact.tpr.n} blocked, \fact{e22.intact.fpr.k} false alarms & ceiling \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
+\vspace{8pt}
+}]
 
-\section{Reproducibility}
+
+\section{Contributions, execution attribution and reproducibility}
 \label{app:repro}
-All code, records and audits are in the sprint directory \texttt{sprints/agent-safety-v3-20261018}.
-\begin{itemize}
-\item \texttt{scripts/verify\_all\_receipts.py} recomputes every record from the raw transcripts. The raw transcripts are kept locally and are not distributed, because they contain unredacted harmful scenario text. Their checksums are listed in \texttt{reports/raw\_transcripts\_manifest.json}.
-\item \texttt{scripts/build\_paper\_artifacts.py} regenerates every number, table and figure in this paper from \texttt{records/*.json}.
-\item \texttt{scripts/check\_paper\_claims.py} re-evaluates each of them, rejects any hand-typed number in the text, and scans the manuscript for overlap with authored scenario and completion text.
-\end{itemize}
-The full technical report with all secondary analyses is \texttt{FINAL\_CLAUDE\_RESULTS\_FOR\_REVIEW.md}.
+
+\paragraph{Contributions and execution attribution.} Dennis Koshta conceived the research questions, directed the program and is responsible for the claims made in this paper. Experimental design iteration, infrastructure engineering, autonomous experiment execution and deterministic audit verification were carried out with the AI systems GPT-6 Astra, Claude Sonnet~5.5, Claude Opus~5.5 and Argon~4, working under the author's direction. Independent audit passes re-derived the main outcomes from the raw evaluation logs before any result was reported.
+
+\paragraph{Reproducibility.} In our accompanying replication package, an automated verification pipeline recomputes all summary statistics directly from the raw evaluation logs. It regenerates every table and figure programmatically, and it verifies through symbolic formula bindings that every number reported in the manuscript matches the underlying records within $10^{-9}$ tolerance. The same pipeline rejects any hand-typed number in the manuscript's prose. It also checks that no passage of the manuscript overlaps the authored scenario, memo or completion text. The raw evaluation logs contain unredacted harmful scenario text and are not distributed; the package includes cryptographic checksums and row counts for every log file instead.

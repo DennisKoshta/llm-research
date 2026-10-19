@@ -109,6 +109,11 @@ def F1(arm, cot, scope, field, fam="F1_itt"):
             f"x['within']['cot_mode']=={cot!r} and x['scope']=={scope!r})[{field!r}]")
 
 
+def F1D(arm, cot, dom, field):
+    return (f"next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=={arm!r} and "
+            f"x['within']['cot_mode']=={cot!r} and x['scope']=={'harmful:' + dom!r})[{field!r}]")
+
+
 def S31(arm, cot, fmt, field="k", slice_="harmful"):
     cond = (f"c['arm']=={arm!r} and c['cot_mode']=={cot!r} and c['fmt']=={fmt!r} and c['consequence']=='harmful'"
             + (" and c['cost_regime']!='low' and c['boundary']=='implicit'" if slice_ == "hc" else ""))
@@ -267,6 +272,11 @@ def build_facts():
                 fact(f"e31hc.{arm}.{cot}.{fmt}.pct", pct(f"e31hc.{arm}.{cot}.{fmt}.pct", S31(arm, cot, fmt, "rate", "hc")))
                 fact(f"e31hc.{arm}.{cot}.{fmt}.k", cnt(f"e31hc.{arm}.{cot}.{fmt}.k", S31(arm, cot, fmt, "k", "hc")))
                 fact(f"e31hc.{arm}.{cot}.{fmt}.n", cnt(f"e31hc.{arm}.{cot}.{fmt}.n", S31(arm, cot, fmt, "n", "hc")))
+    for arm in ("refusal_ablated", "pca_101", "intact"):
+        for dom in ("warehouse", "compute", "finance", "wetlab"):
+            for fld, tag in (("rate_b", "narr"), ("rate_a", "num")):
+                key = f"e31d.{arm}.{dom}.{tag}"
+                fact(key, pct(key, F1D(arm, "cot_on", dom, fld)))
     a1 = ("next(x for x in R['exp31_multidomain']['contrasts']['A1_itt'] if x['a']=='refusal_ablated' and "
           "x['within']['cot_mode']=='cot_on' and x['within']['fmt']=='numeric' and x['scope']=='hc_harmful_implicit')")
     fact("e31.A1.diff", pct("e31.A1.diff", f"{a1}['diff']"))
@@ -395,15 +405,17 @@ def build_facts():
 
 
 # ============================================================================================ tables
-def tex_table(name, caption, label, colspec, header, rows, notes=None, size="\\small"):
-    lines = ["\\begin{table}[t]", "\\centering", size, f"\\caption{{{caption}}}", f"\\label{{{label}}}",
+def tex_table(name, caption, label, colspec, header, rows, notes=None, size="\\small", wide=False, sep="4pt"):
+    env = "table*" if wide else "table"
+    lines = [f"\\begin{{{env}}}[t]", "\\centering", size, f"\\setlength{{\\tabcolsep}}{{{sep}}}",
+             f"\\caption{{{caption}}}", f"\\label{{{label}}}",
              "\\begin{tabular}{" + colspec + "}", "\\toprule", header + " \\\\", "\\midrule"]
     for r in rows:
         lines.append("\\midrule" if r == "MIDRULE" else " & ".join(r) + " \\\\")
     lines += ["\\bottomrule", "\\end{tabular}"]
     if notes:
         lines.append("\\par\\vspace{2pt}\\parbox{\\linewidth}{\\footnotesize " + notes + "}")
-    lines.append("\\end{table}")
+    lines.append(f"\\end{{{env}}}")
     (PAPER / "tables" / f"{name}.tex").write_text("\n".join(lines) + "\n")
 
 
@@ -420,7 +432,7 @@ def build_tables():
             r.append(kn(f"tab1.{arm}.{var}", P1(arm, var, None, "n_comply"), P1(arm, var, None, "n")))
         rows.append(r)
     rows.append("MIDRULE")
-    r = ["Run 2 Ablated"]
+    r = ["Family 2 Ablated"]
     for var in ("C", "B", "A0", "A1", "A2"):
         r.append(kn(f"tab1.r2abl.{var}", P1("refusal_ablated", var, None, "n_comply", "r2"), P1("refusal_ablated", var, None, "n", "r2")))
     rows.append(r)
@@ -439,10 +451,11 @@ def build_tables():
         rows.append([ARM_LABEL[arm], pct(f"tab1b.{arm}.proj", red),
                      dec(f"tab1b.{arm}.kllast", f"{kl}[{ck!r}]['vs']['r1_intact']['kl_prompt_last']['mean']", 4),
                      dec(f"tab1b.{arm}.kltf", f"{kl}[{ck!r}]['vs']['r1_intact']['kl_teacher_forced']['mean']", 4)])
-    tex_table("tab_projection_kl", "Layer-48 checks for the adopted (Run~1) family: reduction of the projection onto the "
+    tex_table("tab_projection_kl", "Layer-48 checks for the adopted checkpoint family (Family~1): reduction of the projection onto the "
               "family's own refusal direction relative to Intact (output site, default effort, validation prompts), and benign "
               "KL divergence to Intact (nats; gate $<0.10$).", "tab:projkl", "lccc",
-              "Checkpoint & $\\hat r$ projection reduction (\\%) & KL (last prompt token) & KL (teacher-forced)", rows)
+              "Checkpoint & \\shortstack{$\\hat r$ projection\\\\reduction (\\%)} & \\shortstack{KL (last\\\\prompt token)} & \\shortstack{KL (teacher-\\\\forced)}", rows,
+              size="\\footnotesize")
     # T2 calibration
     ch = "R['calibration_history']['versions']"
     rows = []
@@ -452,19 +465,20 @@ def build_tables():
                      "low_cost_shortcut_lt_15pct", "forced_safe_competence_ge_80pct"):
             v = kn(f"tab2.{ver}.{crit}", f"{ch}[{ver!r}]['criteria'][{crit!r}]['k']", f"{ch}[{ver!r}]['criteria'][{crit!r}]['n']")
             ok = ev(f"{ch}[{ver!r}]['criteria'][{crit!r}]['pass']")
-            r.append(v + ("" if ok else " \\textbf{(fail)}"))
+            r.append(v + ("" if ok else "$^{\\dagger}$"))
         rows.append(r)
     tex_table("tab_calibration", "Intact-only calibration of the one shared system-prompt sentence (default effort, "
-              "thinking on). Only v3 passes all four construct-validity criteria; it was frozen before any other arm was run.",
+              "thinking on). $^{\\dagger}$\\,fails the criterion. Only v3 passes all four construct-validity criteria; it was frozen before any other arm was run.",
               "tab:calibration", "lcccc",
-              "Wording & Harmful-implicit $<10\\%$ & Harmless tedium $\\geq35\\%$ & Low-cost $<15\\%$ & Forced-safe $\\geq80\\%$", rows)
+              "Wording & \\shortstack{Harmful impl.\\\\$<10\\%$} & \\shortstack{Harmless\\\\tedium $\\geq35\\%$} & \\shortstack{Low cost\\\\$<15\\%$} & \\shortstack{Forced safe\\\\$\\geq80\\%$}", rows,
+              size="\\footnotesize", sep="3pt")
     # T3 Exp 1.1 effort table
     rows = []
     for arm in ARMS:
         r = [ARM_LABEL[arm]]
         for cond in ("default", "off", "low"):
             if cond == "off" and arm not in ("intact", "refusal_ablated"):
-                r.append("--")
+                r.append("---")
                 continue
             r.append(kn(f"tab3.{arm}.{cond}", RB(arm, cond, "k_shortcut"), RB(arm, cond, "n")))
         r.append(kn(f"tab3.{arm}.hlimpl", E11(arm, "cot_on", HC_HARMLESS_IMPL), E11(arm, "cot_on", HC_HARMLESS_IMPL, "n")))
@@ -472,27 +486,32 @@ def build_tables():
         rows.append(r)
     tex_table("tab_exp11_cells", "Exp~1.1 shortcut counts on the 80 high-cost pairs (40 scenarios $\\times$ tedium/friction). "
               "Harmful-implicit under default-effort thinking (pre-fixed primary), thinking off, and low-effort thinking "
-              "(post hoc); harmless-implicit and harmless-explicit at default effort.", "tab:exp11cells", "lccccc",
-              "Arm & Harmful, default & Harmful, off & Harmful, low & Harmless impl. & Harmless expl.", rows)
+              "(post hoc); harmless-implicit and harmless-explicit at default effort. --- = not run.", "tab:exp11cells", "lccccc",
+              "Arm & \\shortstack{Harmful\\\\default} & \\shortstack{Harmful\\\\think off} & \\shortstack{Harmful\\\\low} & \\shortstack{Harmless\\\\implicit} & \\shortstack{Harmless\\\\explicit}", rows,
+              size="\\footnotesize", sep="3pt")
     # T3b contrasts
     rows = []
-    for name, lab in (("P1.1", "P1.1 Ablated $-$ Intact"), ("P1.2_pca_101", "P1.2 Ablated $-$ PCA-101"),
-                      ("P1.2_pca_102", "P1.2 Ablated $-$ PCA-102"), ("P1.2_pca_103", "P1.2 Ablated $-$ PCA-103"),
-                      ("P1.2_unrelated", "P1.2 Ablated $-$ Unrelated"), ("P1.3_intact", "P1.3 Intact on $-$ off"),
-                      ("P1.3_refusal_ablated", "P1.3 Ablated on $-$ off")):
+    for rec in ("exp11_main", "exp11_main_lowprobe"):      # the four control contrasts are identical (all controls 0/80)
+        ref = ev(f"R[{rec!r}]['contrasts']['P1.2_pca_101']")
+        for other in ("P1.2_pca_102", "P1.2_pca_103", "P1.2_unrelated"):
+            o = ev(f"R[{rec!r}]['contrasts'][{other!r}]")
+            assert all(o[k] == ref[k] for k in ("n_a_only", "n_b_only", "diff", "p_mcnemar", "p_holm")), other
+    for name, lab in (("P1.1", "P1.1 Abl.\\ $-$ Intact"), ("P1.2_pca_101", "P1.2 Abl.\\ $-$ each control"),
+                      ("P1.3_intact", "P1.3 Intact on $-$ off"), ("P1.3_refusal_ablated", "P1.3 Abl.\\ on $-$ off")):
         for rec, tag in (("exp11_main", "def"), ("exp11_main_lowprobe", "low")):
             c = f"R[{rec!r}]['contrasts'][{name!r}]"
-            rows.append([lab + (" (low effort)" if tag == "low" else ""),
+            rows.append([lab + (" (low)" if tag == "low" else ""),
                          pct(f"tab3b.{name}.{tag}.diff", f"{c}['diff']"),
                          f"[{pct(f'tab3b.{name}.{tag}.l', c + chr(91) + repr('ci_low') + chr(93))}, {pct(f'tab3b.{name}.{tag}.h', c + chr(91) + repr('ci_high') + chr(93))}]",
                          "$" + pval(f"tab3b.{name}.{tag}.p", f"{c}['p_mcnemar']") + "$",
                          "$" + pval(f"tab3b.{name}.{tag}.holm", f"{c}['p_holm']") + "$",
                          "$" + pval(f"tab3b.{name}.{tag}.sf", f"{c}['cluster_boot']['p_signflip']") + "$"])
     tex_table("tab_exp11_contrasts", "Exp~1.1 pre-specified contrasts on high-cost harmful-implicit pairs ($n=80$). "
-              "Differences in percentage points with Newcombe 95\\% CI; exact McNemar $p$; Holm over the family of 7; template-level "
+              "Differences in percentage points with Newcombe 95\\% CI; exact McNemar $p$; Holm over the family of seven; template-level "
               "exact sign-flip $p$ (10 templates). P1.3 compares thinking on with thinking off; in its low-effort rows the thinking-on arm "
-              "runs at low effort. Low-effort rows are a post-hoc sensitivity analysis.", "tab:exp11contrasts", "lccccc",
-              "Contrast & $\\Delta$ (pp) & 95\\% CI & $p$ & $p_{\\mathrm{Holm}}$ & $p_{\\text{template}}$", rows, size="\\footnotesize")
+              "runs at low effort. Low-effort rows (low) are a post-hoc sensitivity analysis. All four control edits (PCA-101/102/103, Unrelated) "
+              "scored 0/80, so their four P1.2 contrasts are identical and shown once.", "tab:exp11contrasts", "lccccc",
+              "Contrast & $\\Delta$ & 95\\% CI & $p$ & $p_{\\mathrm{Holm}}$ & $p_{\\mathrm{tmpl}}$", rows, size="\\scriptsize", sep="2.5pt")
     # T4 Exp 3.1
     rows = []
     for arm in ("refusal_ablated", "pca_101", "intact"):
@@ -509,7 +528,7 @@ def build_tables():
               "table. Columns 3--7: all harmful cells, paired format contrast (exact McNemar, Holm within the F1 family). Columns 8--9: "
               "the high-cost harmful-implicit slice.", "tab:exp31", "llccccccc",
               "Arm & Think & Sentence & Table & $\\Delta$ & $p$ & $p_{\\mathrm{Holm}}$ & Slice sent. & Slice table", rows,
-              size="\\footnotesize")
+              size="\\footnotesize", wide=True, sep="6pt")
     # T5 Exp 3.2
     rows = []
     for cot in ("cot_on", "cot_off"):
@@ -531,16 +550,17 @@ def build_tables():
             for g in [g["group"] for g in ev(X32(ds, cot, "C") + "['scopes']['arm_cot']")]:
                 c = C32(ds, cot, g)
                 arm = g.split("|")[0]
-                rows.append([tag, ARM_LABEL[arm], "on" if cot == "cot_on" else "off", cnt(f"tab5C.{tag}.{g}.n", f"{c}['n']"),
+                rows.append(["P" if tag == "primary" else "X", ARM_LABEL[arm], "on" if cot == "cot_on" else "off", cnt(f"tab5C.{tag}.{g}.n", f"{c}['n']"),
                              dec(f"tab5C.{tag}.{g}.probe", f"{c}['pooled']['probe']['auroc']", 3),
                              f"[{dec(f'tab5C.{tag}.{g}.l', c + chr(91) + repr('pooled') + chr(93) + chr(91) + repr('probe') + chr(93) + chr(91) + repr('ci_low') + chr(93), 3)}, "
                              f"{dec(f'tab5C.{tag}.{g}.h', c + chr(91) + repr('pooled') + chr(93) + chr(91) + repr('probe') + chr(93) + chr(91) + repr('ci_high') + chr(93), 3)}]",
                              dec(f"tab5C.{tag}.{g}.od", f"{c}['pooled']['order_domain']['auroc']", 3),
                              dec(f"tab5C.{tag}.{g}.pp", f"{c}['permutation_null']['p_perm']", 4)])
     tex_table("tab_exp32_C", "Exp~3.2 Regime C: within-cell split trials (the design lookup is exactly 0.5 here). Probe AUROC "
-              "with bootstrap 95\\% CI, a tool-order/domain baseline, and a 400-shuffle permutation $p$ (floor $\\approx0.0025$).",
-              "tab:exp32c", "lllccccc", "Data & Arm & Think & $n$ & Probe & 95\\% CI & Order/domain & $p_{\\mathrm{perm}}$", rows,
-              size="\\footnotesize")
+              "with bootstrap 95\\% CI, a tool-order/domain baseline, and a 400-shuffle permutation $p$ (floor $\\approx0.0025$). P = primary "
+              "(Exp~1.1) data, X = extended (Exp~1.1 + Exp~3.1) data.",
+              "tab:exp32c", "lllccccc", "D & Arm & Th. & $n$ & Probe & 95\\% CI & Ord./dom. & $p_{\\mathrm{perm}}$", rows,
+              size="\\scriptsize", sep="2.5pt")
     # T6 Exp 1.2
     rows = []
     for corpus, lab in (("A", "A (unfiltered)"), ("B", "B (safe-route only)"), ("Bp", "B$'$ (paraphrased CoT)"), ("C", "C (math/code CoT)")):
@@ -561,7 +581,7 @@ def build_tables():
               "for LoRA rank 32 and 8; rank-32 harmful-request compliance (\\%), layer-48 refusal projection "
               "$|h\\cdot\\hat r|/\\lVert h\\rVert$ on harmful requests (mean over seeds), and training target tokens.",
               "tab:exp12", "llccccc", "Corpus & Teacher & $r{=}32$ & $r{=}8$ & Comply (\\%) & Projection & Target tokens", rows,
-              size="\\footnotesize")
+              size="\\footnotesize", wide=True, sep="6pt")
     # T7 summary of Exp 2.3 / 2.1 / 2.2 / 1.4
     rows = [
         ["2.3", "Natural reviewer notes recommending the shortcut (harmful state)", "0/" + cnt("tab7.e23.nat", " + ".join(f"R['exp23']['manipulation_check']['reviewers'][{r!r}]['n_valid']" for r in ("B1", "B2", "R1a", "R1b")))],
@@ -583,7 +603,7 @@ def build_tables():
         ["1.4", "Harmful-cell shortcuts taken before the block fired", "{}/{}".format(cnt("tab7.e14.pre", "sum(c['shortcut_before_block'] for a in R['exp14_blocked_route']['analyses'].values() for t in a['tables'].values() for kk, c in t['cells'].items() if kk.startswith('harmful'))"), cnt("tab7.e14.all", "sum(c['counts']['SHORTCUT'] for a in R['exp14_blocked_route']['analyses'].values() for t in a['tables'].values() for kk, c in t['cells'].items() if kk.startswith('harmful'))"))],
     ]
     tex_table("tab_track2_summary", "Summary of Exp~2.3, 2.1, 2.2 and 1.4 headline counts ($k/n$).", "tab:summary2",
-              "clc", "Exp & Outcome & $k/n$", rows, size="\\footnotesize")
+              "c>{\\raggedright\\arraybackslash}p{0.66\\linewidth}c", "Exp & Outcome & $k/n$", rows, size="\\footnotesize", sep="3pt")
 
 
 # ============================================================================================ figures
@@ -633,7 +653,7 @@ def build_figures():
         ax.set_ylabel(ylabel)
 
     # ---- Fig 1
-    fig, axs = plt.subplots(1, 2, figsize=(7.2, 3.0), gridspec_kw={"width_ratios": [1.25, 1]})
+    fig, axs = plt.subplots(1, 2, figsize=(7.0, 3.0), gridspec_kw={"width_ratios": [1.25, 1]})
     groups = ["C", "B", "A0", "A1", "A2", "DI", "DI+esc"]
 
     def g1(g, arm):
@@ -662,7 +682,7 @@ def build_figures():
     plt.close(fig)
 
     # ---- Fig 2
-    fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.4), gridspec_kw={"width_ratios": [1, 1, 1.15]})
+    fig, axs = plt.subplots(1, 3, figsize=(7.0, 2.4), gridspec_kw={"width_ratios": [1, 1, 1.15]})
     arms3 = ["refusal_ablated", "pca_101", "intact"]
     for ax, sl, title in ((axs[0], "harmful", "(A) all harmful cells"), (axs[1], "hc", "(B) high-cost harmful-implicit")):
         groups = [(a, c) for a in arms3 for c in ("cot_on", "cot_off")]
@@ -674,26 +694,27 @@ def build_figures():
         ax.set_xticklabels([f"{ {'refusal_ablated': 'Abl.', 'pca_101': 'PCA', 'intact': 'Int.'}[a]}\n{'on' if c == 'cot_on' else 'off'}" for a, c in groups], fontsize=6)
         ax.set_title(title, loc="left")
     axs[0].legend(fontsize=6, loc="upper right")
-    cube = R["exp31_multidomain"]["cube_arm_cot_format_domain"]
     doms = ["warehouse", "compute", "finance", "wetlab"]
 
-    def gd(dom, s):
-        arm, fmt = s
-        c = next(x for x in cube if x["arm"] == arm and x["cot_mode"] == "cot_on" and x["fmt"] == fmt and x["domain"] == dom)
-        return c["shortcut_itt"]["k"], c["n"]
-    series = [("refusal_ablated", "narrative"), ("refusal_ablated", "numeric"), ("intact", "narrative"), ("intact", "numeric")]
-    bars(axs[2], doms, series, gd, ["#E8A3A5", "#C44E52", "#9DB4D3", "#4C72B0"],
-         ["Ablated sentence", "Ablated table", "Intact sentence", "Intact table"], ylabel="shortcut (all 12 cells, ITT)")
+    def gd(dom, sr):
+        arm, fld = sr
+        x = ev(F1D(arm, "cot_on", dom, "n_pairs"))
+        return round(ev(F1D(arm, "cot_on", dom, fld)) * x), x
+    series = [("refusal_ablated", "rate_b"), ("refusal_ablated", "rate_a"), ("pca_101", "rate_b"), ("pca_101", "rate_a"),
+              ("intact", "rate_b"), ("intact", "rate_a")]
+    bars(axs[2], doms, series, gd, ["#E8A3A5", "#C44E52", "#D0D0D0", "#7F7F7F", "#9DB4D3", "#4C72B0"],
+         ["Abl. sentence", "Abl. table", "PCA sentence", "PCA table", "Int. sentence", "Int. table"],
+         ylabel="harmful shortcut (ITT)")
     axs[2].set_xticklabels(doms, fontsize=6, rotation=15)
     axs[2].set_ylim(0, 0.8)
-    axs[2].set_title("(C) by domain, thinking on", loc="left")
-    axs[2].legend(fontsize=5.5, loc="upper right")
+    axs[2].set_title("(C) harmful cells by domain", loc="left")
+    axs[2].legend(fontsize=5.5, loc="upper right", ncol=2)
     fig.tight_layout()
     fig.savefig(PAPER / "figures" / "fig2_exp31_stakes_abstraction.pdf", metadata=META)
     plt.close(fig)
 
     # ---- Fig 3
-    fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.7), gridspec_kw={"width_ratios": [1.1, 0.7, 1.4]})
+    fig, axs = plt.subplots(1, 3, figsize=(7.0, 2.9), gridspec_kw={"width_ratios": [1.05, 0.65, 1.3]})
     ms = ["probe", "design", "tfidf", "rhat_cv"]
     for j, cot in enumerate(("cot_on", "cot_off")):
         A = ev(X32("exp11", cot, "A"))["auroc"]
@@ -702,7 +723,7 @@ def build_figures():
         err = [[A[m]["auroc"] - A[m]["ci_low"] for m in ms], [A[m]["ci_high"] - A[m]["auroc"] for m in ms]]
         axs[0].bar(xs, ys, 0.36, yerr=err, capsize=1.5, color=["#2F4B7C", "#A0A0A0"][j], label="thinking " + ("on" if j == 0 else "off"))
     axs[0].set_xticks(range(len(ms)))
-    axs[0].set_xticklabels(["probe", "design\nlookup", "TF-IDF", "$\\hat r$ 1-D"])
+    axs[0].set_xticklabels(["probe", "design", "TF-IDF", "$\\hat r$"], fontsize=6.5, rotation=30)
     axs[0].set_ylim(0.4, 1.02)
     axs[0].axhline(0.5, color="k", lw=0.5, ls=":")
     axs[0].set_ylabel("AUROC")
@@ -718,26 +739,35 @@ def build_figures():
     axs[1].set_ylim(0.4, 1.02)
     axs[1].axhline(0.5, color="k", lw=0.5, ls=":")
     axs[1].set_title("(B) Regime B", loc="left")
-    labels, vals, los, his, colsC = [], [], [], [], []
-    for ds, tag in (("exp11", "P"), ("exp11+exp31", "X")):
+    rowsC = []
+    for ds, tag in (("exp11", "primary"), ("exp11+exp31", "extended")):
         for cot in ("cot_on", "cot_off"):
             for g in ev(X32(ds, cot, "C") + "['scopes']['arm_cot']"):
                 pr = g["pooled"]["probe"]
-                labels.append(f"{tag}:{ARM_LABEL[g['group'].split('|')[0]]}\n{'on' if cot == 'cot_on' else 'off'}")
-                vals.append(pr["auroc"]); los.append(pr["auroc"] - pr["ci_low"]); his.append(pr["ci_high"] - pr["auroc"])
-                colsC.append("#2F4B7C" if cot == "cot_on" else "#A0A0A0")
-    axs[2].bar(range(len(vals)), vals, 0.7, yerr=[los, his], capsize=1.2, color=colsC)
-    axs[2].axhline(0.5, color="k", lw=0.5, ls=":")
-    axs[2].set_xticks(range(len(vals)))
-    axs[2].set_xticklabels(labels, fontsize=4.8, rotation=90)
-    axs[2].set_ylim(0, 1.0)
-    axs[2].set_title("(C) Regime C (P primary, X extended)", loc="left")
+                rowsC.append((tag, f"{ARM_LABEL[g['group'].split('|')[0]]}, {'on' if cot == 'cot_on' else 'off'}",
+                              pr["auroc"], pr["ci_low"], pr["ci_high"], cot))
+    ys = list(range(len(rowsC)))[::-1]
+    for y, (tag, lab, v, lo, hi, cot) in zip(ys, rowsC):
+        c = "#2F4B7C" if cot == "cot_on" else "#8C8C8C"
+        axs[2].errorbar(v, y, xerr=[[v - lo], [hi - v]], fmt="o", color=c, ms=3, capsize=1.5, lw=0.8)
+    axs[2].axvline(0.5, color="k", lw=0.5, ls=":")
+    n_primary = sum(1 for r in rowsC if r[0] == "primary")
+    axs[2].axhline(len(rowsC) - n_primary - 0.5, color="k", lw=0.4)
+    axs[2].set_yticks(ys)
+    axs[2].set_yticklabels([r[1] for r in rowsC], fontsize=6)
+    for tag in ("primary", "extended"):
+        yy = [y for y, r in zip(ys, rowsC) if r[0] == tag]
+        axs[2].text(0.98, max(yy), tag, fontsize=6, style="italic", ha="right", va="center")
+    axs[2].set_xlim(0, 1)
+    axs[2].set_ylim(-0.7, len(rowsC) - 0.1)
+    axs[2].set_xlabel("within-cell AUROC (thinking on/off)")
+    axs[2].set_title("(C) Regime C", loc="left")
     fig.tight_layout()
     fig.savefig(PAPER / "figures" / "fig3_exp32_prethink_probes.pdf", metadata=META)
     plt.close(fig)
 
     # ---- Fig 4
-    fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.5), gridspec_kw={"width_ratios": [1, 1, 1]})
+    fig, axs = plt.subplots(1, 3, figsize=(7.0, 2.5), gridspec_kw={"width_ratios": [1, 1, 1]})
     corpora = ["A", "B", "Bp", "C"]
     teachers = ["refusal_ablated", "intact", "pca_101"]
     floor = sum(f["agentic"]["primary"]["shortcut"]["k"] for f in R["exp12_students"]["summary"]["floors"].values()) / \
@@ -777,7 +807,7 @@ def build_figures():
     plt.close(fig)
 
     # ---- Fig 5
-    fig, axs = plt.subplots(1, 2, figsize=(7.2, 2.5))
+    fig, axs = plt.subplots(1, 2, figsize=(7.0, 2.5))
     dc = R["exp23"]["domain_cells"]
     doms = ["warehouse", "compute", "finance", "wetlab"]
 

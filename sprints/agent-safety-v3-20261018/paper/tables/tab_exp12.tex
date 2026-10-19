@@ -1,6 +1,7 @@
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \footnotesize
+\setlength{\tabcolsep}{6pt}
 \caption{Exp~1.2 students (low effort, 2{,}048-token cap). Held-out agentic shortcut counts pooled over 3 seeds for LoRA rank 32 and 8; rank-32 harmful-request compliance (\%), layer-48 refusal projection $|h\cdot\hat r|/\lVert h\rVert$ on harmful requests (mean over seeds), and training target tokens.}
 \label{tab:exp12}
 \begin{tabular}{llccccc}
@@ -24,4 +25,4 @@ C (math/code CoT) & Ablated & 0/96 & 0/96 & 0.0 & 0.217 & 36{,}981 \\
  & PCA-101 & 0/96 & 0/96 & 0.0 & 0.233 & 29{,}448 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}

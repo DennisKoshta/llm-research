@@ -1,11 +1,12 @@
 \begin{table}[t]
 \centering
-\small
-\caption{Layer-48 checks for the adopted (Run~1) family: reduction of the projection onto the family's own refusal direction relative to Intact (output site, default effort, validation prompts), and benign KL divergence to Intact (nats; gate $<0.10$).}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Layer-48 checks for the adopted checkpoint family (Family~1): reduction of the projection onto the family's own refusal direction relative to Intact (output site, default effort, validation prompts), and benign KL divergence to Intact (nats; gate $<0.10$).}
 \label{tab:projkl}
 \begin{tabular}{lccc}
 \toprule
-Checkpoint & $\hat r$ projection reduction (\%) & KL (last prompt token) & KL (teacher-forced) \\
+Checkpoint & \shortstack{$\hat r$ projection\\reduction (\%)} & \shortstack{KL (last\\prompt token)} & \shortstack{KL (teacher-\\forced)} \\
 \midrule
 Ablated & 98.7 & 0.0006 & 0.0039 \\
 PCA-101 & 1.0 & 0.0008 & 0.0023 \\

@@ -2032,6 +2032,198 @@
 "scale": 1.0
 },
 {
+"id": "e31d.refusal_ablated.warehouse.narr",
+"text": "e31d.refusal_ablated.warehouse.narr",
+"value": 5.2,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:warehouse')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.warehouse.num",
+"text": "e31d.refusal_ablated.warehouse.num",
+"value": 38.5,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:warehouse')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.compute.narr",
+"text": "e31d.refusal_ablated.compute.narr",
+"value": 7.3,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:compute')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.compute.num",
+"text": "e31d.refusal_ablated.compute.num",
+"value": 33.3,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:compute')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.finance.narr",
+"text": "e31d.refusal_ablated.finance.narr",
+"value": 1.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:finance')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.finance.num",
+"text": "e31d.refusal_ablated.finance.num",
+"value": 41.7,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:finance')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.wetlab.narr",
+"text": "e31d.refusal_ablated.wetlab.narr",
+"value": 4.2,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:wetlab')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.refusal_ablated.wetlab.num",
+"text": "e31d.refusal_ablated.wetlab.num",
+"value": 35.4,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='refusal_ablated' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:wetlab')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.warehouse.narr",
+"text": "e31d.pca_101.warehouse.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:warehouse')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.warehouse.num",
+"text": "e31d.pca_101.warehouse.num",
+"value": 11.5,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:warehouse')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.compute.narr",
+"text": "e31d.pca_101.compute.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:compute')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.compute.num",
+"text": "e31d.pca_101.compute.num",
+"value": 3.1,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:compute')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.finance.narr",
+"text": "e31d.pca_101.finance.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:finance')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.finance.num",
+"text": "e31d.pca_101.finance.num",
+"value": 10.4,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:finance')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.wetlab.narr",
+"text": "e31d.pca_101.wetlab.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:wetlab')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.pca_101.wetlab.num",
+"text": "e31d.pca_101.wetlab.num",
+"value": 8.3,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='pca_101' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:wetlab')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.warehouse.narr",
+"text": "e31d.intact.warehouse.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:warehouse')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.warehouse.num",
+"text": "e31d.intact.warehouse.num",
+"value": 6.2,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:warehouse')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.compute.narr",
+"text": "e31d.intact.compute.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:compute')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.compute.num",
+"text": "e31d.intact.compute.num",
+"value": 1.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:compute')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.finance.narr",
+"text": "e31d.intact.finance.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:finance')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.finance.num",
+"text": "e31d.intact.finance.num",
+"value": 8.3,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:finance')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.wetlab.narr",
+"text": "e31d.intact.wetlab.narr",
+"value": 0.0,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:wetlab')['rate_b']",
+"decimals": 1,
+"scale": 100.0
+},
+{
+"id": "e31d.intact.wetlab.num",
+"text": "e31d.intact.wetlab.num",
+"value": 2.1,
+"expr": "next(x for x in R['exp31_multidomain']['contrasts']['F1d_itt'] if x['within']['arm']=='intact' and x['within']['cot_mode']=='cot_on' and x['scope']=='harmful:wetlab')['rate_a']",
+"decimals": 1,
+"scale": 100.0
+},
+{
 "id": "e31.A1.diff",
 "text": "e31.A1.diff",
 "value": 64.1,
@@ -6620,294 +6812,6 @@
 "text": "tab3b.P1.2_pca_101.low.sf",
 "value": 0.0039,
 "expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_101']['cluster_boot']['p_signflip']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_102.def.diff",
-"text": "tab3b.P1.2_pca_102.def.diff",
-"value": 10.0,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_102']['diff']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_102.def.l",
-"text": "tab3b.P1.2_pca_102.def.l",
-"value": 3.3,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_102']['ci_low']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_102.def.h",
-"text": "tab3b.P1.2_pca_102.def.h",
-"value": 18.5,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_102']['ci_high']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_102.def.p",
-"text": "tab3b.P1.2_pca_102.def.p",
-"value": 0.0078,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_102']['p_mcnemar']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_102.def.holm",
-"text": "tab3b.P1.2_pca_102.def.holm",
-"value": 0.0547,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_102']['p_holm']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_102.def.sf",
-"text": "tab3b.P1.2_pca_102.def.sf",
-"value": 0.0625,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_102']['cluster_boot']['p_signflip']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_102.low.diff",
-"text": "tab3b.P1.2_pca_102.low.diff",
-"value": 30.0,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_102']['diff']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_102.low.l",
-"text": "tab3b.P1.2_pca_102.low.l",
-"value": 20.0,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_102']['ci_low']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_102.low.h",
-"text": "tab3b.P1.2_pca_102.low.h",
-"value": 40.8,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_102']['ci_high']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_102.low.p",
-"text": "tab3b.P1.2_pca_102.low.p",
-"value": 1.2,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_102']['p_mcnemar']",
-"decimals": 1,
-"scale": 10000000.0
-},
-{
-"id": "tab3b.P1.2_pca_102.low.holm",
-"text": "tab3b.P1.2_pca_102.low.holm",
-"value": 8.3,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_102']['p_holm']",
-"decimals": 1,
-"scale": 10000000.0
-},
-{
-"id": "tab3b.P1.2_pca_102.low.sf",
-"text": "tab3b.P1.2_pca_102.low.sf",
-"value": 0.0039,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_102']['cluster_boot']['p_signflip']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_103.def.diff",
-"text": "tab3b.P1.2_pca_103.def.diff",
-"value": 10.0,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_103']['diff']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_103.def.l",
-"text": "tab3b.P1.2_pca_103.def.l",
-"value": 3.3,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_103']['ci_low']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_103.def.h",
-"text": "tab3b.P1.2_pca_103.def.h",
-"value": 18.5,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_103']['ci_high']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_103.def.p",
-"text": "tab3b.P1.2_pca_103.def.p",
-"value": 0.0078,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_103']['p_mcnemar']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_103.def.holm",
-"text": "tab3b.P1.2_pca_103.def.holm",
-"value": 0.0547,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_103']['p_holm']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_103.def.sf",
-"text": "tab3b.P1.2_pca_103.def.sf",
-"value": 0.0625,
-"expr": "R['exp11_main']['contrasts']['P1.2_pca_103']['cluster_boot']['p_signflip']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_pca_103.low.diff",
-"text": "tab3b.P1.2_pca_103.low.diff",
-"value": 30.0,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_103']['diff']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_103.low.l",
-"text": "tab3b.P1.2_pca_103.low.l",
-"value": 20.0,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_103']['ci_low']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_103.low.h",
-"text": "tab3b.P1.2_pca_103.low.h",
-"value": 40.8,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_103']['ci_high']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_pca_103.low.p",
-"text": "tab3b.P1.2_pca_103.low.p",
-"value": 1.2,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_103']['p_mcnemar']",
-"decimals": 1,
-"scale": 10000000.0
-},
-{
-"id": "tab3b.P1.2_pca_103.low.holm",
-"text": "tab3b.P1.2_pca_103.low.holm",
-"value": 8.3,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_103']['p_holm']",
-"decimals": 1,
-"scale": 10000000.0
-},
-{
-"id": "tab3b.P1.2_pca_103.low.sf",
-"text": "tab3b.P1.2_pca_103.low.sf",
-"value": 0.0039,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_pca_103']['cluster_boot']['p_signflip']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_unrelated.def.diff",
-"text": "tab3b.P1.2_unrelated.def.diff",
-"value": 10.0,
-"expr": "R['exp11_main']['contrasts']['P1.2_unrelated']['diff']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_unrelated.def.l",
-"text": "tab3b.P1.2_unrelated.def.l",
-"value": 3.3,
-"expr": "R['exp11_main']['contrasts']['P1.2_unrelated']['ci_low']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_unrelated.def.h",
-"text": "tab3b.P1.2_unrelated.def.h",
-"value": 18.5,
-"expr": "R['exp11_main']['contrasts']['P1.2_unrelated']['ci_high']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_unrelated.def.p",
-"text": "tab3b.P1.2_unrelated.def.p",
-"value": 0.0078,
-"expr": "R['exp11_main']['contrasts']['P1.2_unrelated']['p_mcnemar']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_unrelated.def.holm",
-"text": "tab3b.P1.2_unrelated.def.holm",
-"value": 0.0547,
-"expr": "R['exp11_main']['contrasts']['P1.2_unrelated']['p_holm']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_unrelated.def.sf",
-"text": "tab3b.P1.2_unrelated.def.sf",
-"value": 0.0625,
-"expr": "R['exp11_main']['contrasts']['P1.2_unrelated']['cluster_boot']['p_signflip']",
-"decimals": 4,
-"scale": 1.0
-},
-{
-"id": "tab3b.P1.2_unrelated.low.diff",
-"text": "tab3b.P1.2_unrelated.low.diff",
-"value": 30.0,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_unrelated']['diff']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_unrelated.low.l",
-"text": "tab3b.P1.2_unrelated.low.l",
-"value": 20.0,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_unrelated']['ci_low']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_unrelated.low.h",
-"text": "tab3b.P1.2_unrelated.low.h",
-"value": 40.8,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_unrelated']['ci_high']",
-"decimals": 1,
-"scale": 100.0
-},
-{
-"id": "tab3b.P1.2_unrelated.low.p",
-"text": "tab3b.P1.2_unrelated.low.p",
-"value": 1.2,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_unrelated']['p_mcnemar']",
-"decimals": 1,
-"scale": 10000000.0
-},
-{
-"id": "tab3b.P1.2_unrelated.low.holm",
-"text": "tab3b.P1.2_unrelated.low.holm",
-"value": 8.3,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_unrelated']['p_holm']",
-"decimals": 1,
-"scale": 10000000.0
-},
-{
-"id": "tab3b.P1.2_unrelated.low.sf",
-"text": "tab3b.P1.2_unrelated.low.sf",
-"value": 0.0039,
-"expr": "R['exp11_main_lowprobe']['contrasts']['P1.2_unrelated']['cluster_boot']['p_signflip']",
 "decimals": 4,
 "scale": 1.0
 },

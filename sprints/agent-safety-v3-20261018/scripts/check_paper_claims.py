@@ -7,7 +7,9 @@
               byte, so every table cell and \\fact value is the current record value.
 3. NO BARE NUMBERS  the hand-written .tex (main.tex, sections/*.tex) contains no digit outside \\fact{...}, references,
               citations, file names and an allowlist of identifiers (Exp~1.1, Phase~1, layer~48, Qwen3.8-27B, $r{=}32$, ...).
-4. TEXT SAFETY  no 50-character window of any paper .tex file occurs in any string of data/**/*.json(l) (authored scenarios,
+4. PATHS      the rendered manuscript (main.tex, sections/, tables/; \\input/\\includegraphics/\\bibliography arguments and
+              comments excluded) contains no local path, filename or internal project token.
+5. TEXT SAFETY  no 50-character window of any paper .tex file occurs in any string of data/**/*.json(l) (authored scenarios,
               memos, notes, worlds, request prompts, SFT targets), except windows inside the three neutral calibration
               sentences stored in records/calibration_history.json. Prints counts and file names only, never matched text.
 Exit status is non-zero if any check fails.
@@ -79,6 +81,7 @@ ALLOW = [
     r"\\[a-zA-Z]+\[[^\]]*\]", r"\[\d+pt\]", r"\d+(\.\d+)?(in|pt|em)\b", r"\{\d\.\d+\\linewidth\}", r"0\.\d+\\linewidth",
     r"agent-safety-v3-\d+", r"\\texttt\{[^}]*\}", r"BF16|FP8", r"blue!\d+!black", r"\b10pt\b", r"October 2026",
     r"\\sectionmark|\\\\\[\d+pt\]", r"\\newcommand\{\\[A-Za-z]+\}\[\d\]",
+    r"GPT-\d", r"(?:Sonnet|Opus)[~ ]?\d\.\d", r"Argon[~ ]?\d", r"Family~?\s?\d", r"0\.\d+\\(?:text|line)width", r"10\^\{-9\}", r"\\footnotetext\[\d\]", r"\[letterpaper[^\]]*\]",
 ]
 ALLOW_RE = re.compile("|".join(f"(?:{a})" for a in ALLOW))
 
@@ -94,6 +97,24 @@ def check_bare_numbers() -> int:
                 bad += 1
                 print(f"[FAIL] bare number '{m.group(0)}' in {f.relative_to(PAPER)}:{i}")
     print(f"[bare-numbers] {bad} hand-typed numbers in {len(files)} hand-written files")
+    return bad
+
+
+FORBIDDEN = re.compile(r"sprints/|scripts/|records/|reports/|agent-safety-|\.(?:py|json|md)\b")
+STRIP = re.compile(r"\\(?:input|include|includegraphics|bibliography|bibliographystyle)(?:\[[^\]]*\])?\{[^}]*\}")
+
+
+def check_paths() -> int:
+    """No local repository path, filename or internal project token may appear in the rendered manuscript text."""
+    files = [PAPER / "main.tex"] + sorted((PAPER / "sections").glob("*.tex")) + sorted((PAPER / "tables").glob("*.tex"))
+    bad = 0
+    for f in files:
+        for i, line in enumerate(f.read_text().splitlines(), 1):
+            text = STRIP.sub(" ", re.sub(r"(?<!\\)%.*", "", line))
+            for m in FORBIDDEN.finditer(text):
+                bad += 1
+                print(f"[FAIL] forbidden path token '{m.group(0)}' in {f.relative_to(PAPER)}:{i}")
+    print(f"[paths] {bad} forbidden path/filename tokens in {len(files)} manuscript files")
     return bad
 
 
@@ -158,7 +179,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--skip-safety", action="store_true")
     a = ap.parse_args(argv)
-    fails = check_claims() + check_freshness() + check_bare_numbers()
+    fails = check_claims() + check_freshness() + check_bare_numbers() + check_paths()
     if not a.skip_safety:
         fails += check_text_safety()
     print("ALL CHECKS PASSED" if fails == 0 else f"{fails} FAILURES")

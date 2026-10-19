@@ -1,25 +1,26 @@
 \begin{table}[t]
 \centering
-\footnotesize
-\caption{Exp~3.2 Regime C: within-cell split trials (the design lookup is exactly 0.5 here). Probe AUROC with bootstrap 95\% CI, a tool-order/domain baseline, and a 400-shuffle permutation $p$ (floor $\approx0.0025$).}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\caption{Exp~3.2 Regime C: within-cell split trials (the design lookup is exactly 0.5 here). Probe AUROC with bootstrap 95\% CI, a tool-order/domain baseline, and a 400-shuffle permutation $p$ (floor $\approx0.0025$). P = primary (Exp~1.1) data, X = extended (Exp~1.1 + Exp~3.1) data.}
 \label{tab:exp32c}
 \begin{tabular}{lllccccc}
 \toprule
-Data & Arm & Think & $n$ & Probe & 95\% CI & Order/domain & $p_{\mathrm{perm}}$ \\
+D & Arm & Th. & $n$ & Probe & 95\% CI & Ord./dom. & $p_{\mathrm{perm}}$ \\
 \midrule
-primary & Intact & on & 40 & 0.433 & [0.133, 0.730] & 0.310 & 0.5835 \\
-primary & PCA-101 & on & 78 & 0.586 & [0.409, 0.738] & 0.606 & 0.1372 \\
-primary & PCA-102 & on & 78 & 0.436 & [0.233, 0.660] & 0.584 & 0.6459 \\
-primary & Ablated & on & 115 & 0.484 & [0.344, 0.633] & 0.469 & 0.4713 \\
-primary & Intact & off & 116 & 0.744 & [0.609, 0.864] & 0.639 & 0.0025 \\
-primary & Ablated & off & 120 & 0.797 & [0.702, 0.877] & 0.603 & 0.0025 \\
-extended & Intact & on & 405 & 0.649 & [0.571, 0.729] & 0.463 & 0.0025 \\
-extended & PCA-101 & on & 463 & 0.505 & [0.426, 0.584] & 0.477 & 0.3865 \\
-extended & PCA-102 & on & 78 & 0.436 & [0.233, 0.660] & 0.584 & 0.6459 \\
-extended & Ablated & on & 729 & 0.568 & [0.512, 0.621] & 0.510 & 0.0050 \\
-extended & Intact & off & 452 & 0.823 & [0.748, 0.881] & 0.645 & 0.0025 \\
-extended & PCA-101 & off & 381 & 0.782 & [0.712, 0.844] & 0.623 & 0.0025 \\
-extended & Ablated & off & 675 & 0.813 & [0.761, 0.864] & 0.661 & 0.0025 \\
+P & Intact & on & 40 & 0.433 & [0.133, 0.730] & 0.310 & 0.5835 \\
+P & PCA-101 & on & 78 & 0.586 & [0.409, 0.738] & 0.606 & 0.1372 \\
+P & PCA-102 & on & 78 & 0.436 & [0.233, 0.660] & 0.584 & 0.6459 \\
+P & Ablated & on & 115 & 0.484 & [0.344, 0.633] & 0.469 & 0.4713 \\
+P & Intact & off & 116 & 0.744 & [0.609, 0.864] & 0.639 & 0.0025 \\
+P & Ablated & off & 120 & 0.797 & [0.702, 0.877] & 0.603 & 0.0025 \\
+X & Intact & on & 405 & 0.649 & [0.571, 0.729] & 0.463 & 0.0025 \\
+X & PCA-101 & on & 463 & 0.505 & [0.426, 0.584] & 0.477 & 0.3865 \\
+X & PCA-102 & on & 78 & 0.436 & [0.233, 0.660] & 0.584 & 0.6459 \\
+X & Ablated & on & 729 & 0.568 & [0.512, 0.621] & 0.510 & 0.0050 \\
+X & Intact & off & 452 & 0.823 & [0.748, 0.881] & 0.645 & 0.0025 \\
+X & PCA-101 & off & 381 & 0.782 & [0.712, 0.844] & 0.623 & 0.0025 \\
+X & Ablated & off & 675 & 0.813 & [0.761, 0.864] & 0.661 & 0.0025 \\
 \bottomrule
 \end{tabular}
 \end{table}

@@ -3,32 +3,32 @@
 
 We list every methodological weakness we know of, roughly in order of how much each could change a conclusion.
 
-\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]
-\item \textbf{Calibration on the control arm.} The scenario wording was tuned on \Intact{} in three steps, v1 to v3 (Table~\ref{tab:calibration}). \Intact's near-zero harmful-shortcut rate is therefore a target, not a finding. The tuned sentence also asks the model to prefer fewer calls, which sets the strength of the cost pressure for all arms. Post-freeze checks fail one criterion with thinking off and one at low effort.
+\begin{enumerate}[leftmargin=1.4em,itemsep=2pt]
+\item \textbf{Calibration on the control arm.} The scenario wording was tuned on \Intact{} in three steps, v1 to v3 (Table~\ref{tab:calibration}), so \Intact's near-zero harmful-shortcut rate is a target rather than a finding. The tuned sentence also asks the model to prefer fewer calls, which sets the strength of the cost pressure for all arms. Post-freeze checks fail one criterion with thinking off and one at low effort.
 
-\item \textbf{Lexical confounds in the stakes.} Harmful telemetry sentences are longer than their harmless twins in \fact{sa.longer}\% of pairs (mean ratio \fact{sa.lenratio}). A single function word differs by \fact{sa.wordgap} pairs, and a function-word classifier separates the two with accuracy \fact{sa.loo}. Any harmful-versus-harmless contrast may partly reflect wording. That includes the ``harm sensitivity is kept'' reading of Exp~1.1.
+\item \textbf{Lexical confounds in the stakes.} Harmful telemetry sentences are longer than their harmless twins in \fact{sa.longer}\% of pairs (mean ratio \fact{sa.lenratio}). A single function word differs by \fact{sa.wordgap} pairs, and a function-word classifier separates the two kinds of sentence with accuracy \fact{sa.loo}. Any harmful-versus-harmless contrast, including the claim in Exp~1.1 that harm sensitivity is kept, may partly reflect wording.
 
-\item \textbf{One model authored and judged.} The same uncensored model wrote the scenarios and rated their severity. In Exp~2.3 it also chose among up to twenty candidates per scenario, which is a selection effect. Severity ratings were not validated by an independent model or by people.
+\item \textbf{One model authored and judged.} The same uncensored model wrote the scenarios and rated their severity. In Exp~2.3 it also chose among up to twenty candidates per scenario, which introduces a selection effect. Severity ratings were not validated by an independent model or by human raters.
 
 \item \textbf{Greedy single draws that do not reproduce.} Almost every outcome is one greedy answer per item. Greedy generations with long reasoning were not identical across launches: few blocked-route twins reproduced their Exp~1.1 first turn. Each cell is therefore one sample from a distribution, and comparisons across separate launches include run-to-run noise.
 
-\item \textbf{Cluster-level inference is weak.} The main experiments use \fact{d.scen} scenarios from \fact{d.templates} templates. Exp~1.2 tests on only \fact{d.e12templates} templates. Template-level sign-flip tests cannot reach small $p$-values: the floor is \fact{e12c.B.r32.intact.sf} in Exp~1.2. Exact McNemar tests treat scenario pairs as independent and are optimistic.
+\item \textbf{Weak cluster-level inference.} The main experiments use \fact{d.scen} scenarios from \fact{d.templates} templates, and Exp~1.2 tests on only \fact{d.e12templates} templates. Template-level sign-flip tests therefore cannot reach small $p$-values; in Exp~1.2 the floor is \fact{e12c.B.r32.intact.sf}. Exact McNemar tests treat scenario pairs as independent and are optimistic.
 
-\item \textbf{The primary Exp~1.1 effect is borderline.} At the pre-fixed effort it does not survive Holm correction ($p=$\,\fact{p11.holm}) or template-level testing ($p=$\,\fact{p11.signflip}), and half of its events come from one template. The low-effort result is large but post hoc.
+\item \textbf{A borderline primary effect.} At the pre-fixed effort, the primary Exp~1.1 effect does not survive Holm correction ($p=$\,\fact{p11.holm}) or template-level testing ($p=$\,\fact{p11.signflip}), and half of its events come from one template. The low-effort result is large but post hoc.
 
-\item \textbf{Strict parsing and unscorable output.} We never score a tool call written in a model's native XML syntax, and truncated or malformed episodes stay in the denominator (intention to treat). This is conservative for shortcut rates. It leaves the external Flash-Next pair and the Flash-Next executor in Exp~2.3 with substantial unscorable fractions.
+\item \textbf{Strict parsing and unscorable output.} We never score a tool call written in a model's native XML syntax, and truncated or malformed episodes stay in the denominator. This is conservative for shortcut rates, but it leaves the external Flash-Next pair and the Flash-Next executor in Exp~2.3 with substantial unscorable fractions.
 
 \item \textbf{Floors and ceilings.} Exp~2.1 (no joint violation), Exp~2.2 (perfect detection) and the natural chain of Exp~2.3 (no shortcut advice) could not fail in the direction they were designed to test. Their nulls are uninformative, not reassuring.
 
-\item \textbf{Exp~1.2 confounds.} Corpus~A contains direct-tool demonstrations. Teacher identity is confounded with transcript length (\fact{e12.dose.intact}\% and \fact{e12.dose.pca}\% more target tokens). Results rest on three adapters per cell and low-effort teachers.
+\item \textbf{Distillation confounds.} Corpus~A contains direct-tool demonstrations. Teacher identity is confounded with transcript length (\fact{e12.dose.intact}\% and \fact{e12.dose.pca}\% more target tokens). Results rest on three adapters per cell and low-effort teachers.
 
-\item \textbf{Exp~1.4 pseudo-replication and design.} Early and late block variants share the prompt and pre-block trajectory, so their pairs are not independent. A hand-off tool was always available, so persistence was barely tested.
+\item \textbf{Pseudo-replication in Exp~1.4.} Early and late block variants share the prompt and the pre-block trajectory, so their pairs are not independent. A hand-off tool was always available, so persistence was barely tested.
 
-\item \textbf{Activation and label numerics differ.} Exp~3.2 activations come from a de-quantised BF16 forward pass while labels come from FP8 generation.
+\item \textbf{Different numerics for activations and labels.} Exp~3.2 activations come from a de-quantised BF16 forward pass, whereas labels come from FP8 generation.
 
-\item \textbf{Phase~1 decision rule.} Run~1 was adopted under the specification's literal direct-order criterion. A stricter gate coded earlier would have rejected it. Run~2's control edits were contaminated, so the failed family cannot serve as a clean comparison.
+\item \textbf{Checkpoint qualification.} Family~1 was adopted under the literal direct-order criterion; the stricter pre-specified qualification threshold would have rejected it. Family~2's control edits were contaminated, so the failed family cannot serve as a clean comparison.
 
 \item \textbf{Scope.} All results concern synthetic simulated workspaces, one base model family and one refusal direction. They are not estimates of real-world misconduct rates.
 \end{enumerate}
 
-\paragraph{What we did to limit these risks.} Every result number is recomputed from raw transcripts by receipt scripts (\fact{d.receipts} records verified). Every number in this paper is generated from those records and re-checked by formula. An independent audit re-derived every Exp~1.1 episode and all Exp~1.4 and Exp~1.2 student outcomes from the raw rows. Authored harmful text appears nowhere in this paper.
+\paragraph{Mitigations.} An automated verification pipeline recomputes every summary record from the raw evaluation logs (\fact{d.receipts} records verified). It also regenerates every number, table and figure in this paper from those records. An independent audit re-derived every Exp~1.1 episode and all Exp~1.4 and Exp~1.2 student outcomes from the raw logs. No authored harmful text appears in this paper.

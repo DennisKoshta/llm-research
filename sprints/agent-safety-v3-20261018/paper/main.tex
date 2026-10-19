@@ -1,43 +1,60 @@
-\documentclass[10pt]{article}
-\usepackage[margin=1in]{geometry}
+\documentclass[10pt,twocolumn]{article}
+\usepackage[letterpaper,top=0.75in,bottom=0.85in,left=0.68in,right=0.68in,columnsep=0.25in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
 \usepackage{microtype}
-\usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{graphicx}
-\usepackage{caption}
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{titlesec}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
 
-\captionsetup{font=small,labelfont=bf}
-\setlist{nosep,leftmargin=1.4em}
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 2pt}{4pt plus 1pt}
+\titlespacing*{\subsection}{0pt}{6pt plus 2pt minus 1pt}{3pt plus 1pt}
+\titlespacing*{\paragraph}{0pt}{4pt plus 1pt minus 1pt}{0.6em}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\setlist{nosep,leftmargin=1.2em}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{8pt plus 2pt minus 2pt}
 
-% ---------------------------------------------------------------------------------------------------------
-% Every result number in this paper is a generated fact: \fact{key} expands to a value computed by
-% scripts/build_paper_artifacts.py from records/*.json and re-checked by scripts/check_paper_claims.py.
+% Every result number is a generated fact: \fact{key} expands to a value computed from the verified records.
 \makeatletter
 \newcommand{\FACT}[2]{\expandafter\def\csname fact@#1\endcsname{#2}}
 \newcommand{\fact}[1]{\ifcsname fact@#1\endcsname\csname fact@#1\endcsname\else
-  \PackageError{facts}{Undefined fact #1}{Rebuild paper/generated/facts.tex}\fi}
+  \PackageError{facts}{Undefined fact #1}{Rebuild the generated facts}\fi}
 \makeatother
 \input{generated/facts.tex}
 \newcommand{\pp}{\,pp}
 \newcommand{\Ablated}{Ablated}
 \newcommand{\Intact}{Intact}
 
-\title{Direct Refusal Is Not Agentic Restraint: How Reasoning Effort, Stakes Abstraction, and Safe-Trajectory Distillation Mediate Boundary Violations in Refusal-Ablated Agents}
-\author{Autonomous research sprint \texttt{agent-safety-v3-20261018}\\[2pt]
-\small Experiments, analysis and manuscript produced by Claude (Anthropic) under human direction}
-\date{October 2026}
-
+\raggedbottom
 \begin{document}
-\maketitle
 
+\twocolumn[
+\begin{@twocolumnfalse}
+\begin{center}
+{\LARGE\bfseries Direct Refusal Is Not Agentic Restraint:\\[3pt] How Reasoning Effort, Stakes Abstraction, and Safe-Trajectory\\[3pt] Distillation Mediate Boundary Violations in Refusal-Ablated Agents\par}
+\vspace{10pt}
+{\large Dennis Koshta$^{*}$\par}
+\vspace{4pt}
+{\small October 2026\par}
+\vspace{8pt}
+\end{center}
 \input{sections/abstract}
+\vspace{10pt}
+\end{@twocolumnfalse}
+]
+{\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnotetext[1]{Experimental design iteration, infrastructure engineering, autonomous experiment execution and deterministic audit verification were carried out with GPT-6 Astra, Claude Sonnet 5.5, Claude Opus 5.5 and Argon 4 under the author's direction; see Appendix~\ref{app:repro}.}}
+
 \input{sections/introduction}
 \input{sections/phase1}
 \input{sections/direct_pathway}
@@ -47,9 +64,11 @@
 \input{sections/limitations}
 \input{sections/conclusion}
 
+\FloatBarrier
 \bibliographystyle{plainnat}
-\bibliography{refs}
+\bibliography{references}
 
+\clearpage
 \appendix
 \input{sections/appendix}
 
