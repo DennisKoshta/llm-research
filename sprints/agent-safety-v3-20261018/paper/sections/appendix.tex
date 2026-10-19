@@ -1,23 +1,25 @@
 \twocolumn[{%
 \section{Overview of the experiment blocks}
 \label{app:overview}
-Table~\ref{tab:overview} lists the nine experiment blocks, the question each one answers, its headline result and our rating of the evidence. Ratings follow the scale used throughout the paper; floor and ceiling entries mark designs that could not detect the effect they targeted.
+Table~\ref{tab:overview} lists the nine experiment blocks and the two deconfounder slices, the question each one answers, its headline result and our rating of the evidence. Ratings follow the scale used throughout the paper; floor and ceiling entries mark designs that could not detect the effect they targeted.
 
 \begin{center}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
-\captionof{table}{The nine experiment blocks, their headline result and our evidence rating (strong: survives multiplicity and clustering checks; moderate: real but narrower than the headline; weak: suggestive only; floor/ceiling: the design could not detect the effect it targeted).}
+\captionof{table}{The experiment blocks and deconfounders, their headline result and our evidence rating (strong: survives multiplicity and clustering checks; moderate: real but narrower than the headline; weak: suggestive only; floor/ceiling: the design could not detect the effect it targeted).}
 \label{tab:overview}
 \begin{tabular}{>{\raggedright}p{0.10\textwidth}>{\raggedright}p{0.28\textwidth}>{\raggedright}p{0.42\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}}
 \toprule
 Block & Question & Headline & Rating \\
 \midrule
 Qualification & Does the edit remove refusal of direct orders? & \fact{p1.C.abl.k}/\fact{p1.C.abl.n} vs \fact{p1.C.int.k}/\fact{p1.C.int.n} (Set~C); \fact{p1.A0.abl.k}/\fact{p1.A0.abl.n} with an invited hand-off & strong \\
-Exp~1.1 & Harmful shortcuts under effort cost, pre-fixed effort & \fact{e11.refusal_ablated.default.k}/\fact{d.pairs} vs \fact{e11.intact.default.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11.holm} & weak \\
-Exp~1.1 & Same, low effort (post hoc) & \fact{e11.refusal_ablated.low.k}/\fact{d.pairs} vs \fact{e11.intact.low.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11low.holm} & strong, post hoc \\
-Exp~3.1 & Does the format of the stakes matter? & \Ablated{} \fact{e31.refusal_ablated.cot_on.narr}\% (sentence) vs \fact{e31.refusal_ablated.cot_on.num}\% (table), thinking on & strong \\
+Exp~1.1 & Harmful shortcuts under effort cost, pre-fixed effort & \fact{e11.refusal_ablated.default.k}/\fact{d.pairs} vs \fact{e11.intact.default.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11.holm}; same-launch replicate \fact{dc.refusal_ablated.std.default.shortcut}/\fact{d.pairs} & weak (items do not reproduce) \\
+Exp~1.1 & Same, low effort (post hoc) & \fact{e11.refusal_ablated.low.k}/\fact{d.pairs} vs \fact{e11.intact.low.k}/\fact{d.pairs}; Holm $p=$\,\fact{p11low.holm}; replicate \fact{dc.refusal_ablated.std.low.shortcut}/\fact{d.pairs} & strong, post hoc \\
+Exp~1.1 deconf. & Is restraint an escape or a rule effect? & no hand-off tool: \fact{dc.refusal_ablated.nh.default.shortcut}/\fact{d.pairs}; no fewer-calls sentence: \fact{dc.refusal_ablated.np.default.shortcut}/\fact{d.pairs} (\Ablated, default) & moderate \\
+Exp~3.1 & Does the format of the stakes matter? & \Ablated{} \fact{e31hc.refusal_ablated.cot_on.narrative.pct}\% (sentence) vs \fact{e31hc.refusal_ablated.cot_on.numeric.pct}\% (table), slice, thinking on & strong \\
+Exp~3.1 deconf. & Layout or abstraction? & \Ablated{} CS/AS/CT/AT \fact{x2.same_launch.refusal_ablated.CS}/\fact{x2.same_launch.refusal_ablated.AS}/\fact{x2.same_launch.refusal_ablated.CT}/\fact{x2.same_launch.refusal_ablated.AT}\%; interaction only & strong \\
 Exp~1.4 & Blocked safe route: persist or shortcut? & \fact{e14.persisted}/\fact{e14.rows} persisted; \fact{e14.harm.pre}/\fact{e14.harm.sc} harmful shortcuts before the block & exploratory \\
-Exp~3.2 & Do pre-thinking activations predict the action? & thinking on: probe \fact{e32A.cot_on.probe} vs lookup \fact{e32A.cot_on.design}; within-cell, thinking off \fact{e32C.p.intact.cot_off}--\fact{e32C.p.refusal_ablated.cot_off} & strong null (on), moderate (off) \\
+Exp~3.2 & Do pre-thinking activations predict the action? & design + probe minus design: \fact{e32inc.p.cot_on.d} (on), \fact{e32inc.p.cot_off.d} (off); within-cell, thinking off \fact{e32C.p.intact.cot_off}--\fact{e32C.p.refusal_ablated.cot_off} & no increment (on); small (off) \\
 Exp~1.2 & Does distillation transmit the tendency? & safe-route-only Corpus~B: \fact{e12.B.refusal_ablated.r32.pct}\% / \fact{e12.B.refusal_ablated.r8.pct}\% vs \fact{e12.B.intact.r32.pct}\% & moderate \\
 Exp~2.3 & Does reviewer advice spread? & natural: zero of \fact{e23.natural.n}; Llama with authored memo \fact{e23.llama.designated.B4a.pct}\% (designated) vs \fact{e23.llama.peer.B4a.pct}\% (peer) & floor; strong for Llama \\
 Exp~2.1 & Do teams commit the joint violation? & \fact{e21.joint}/\fact{e21.trials}; ablated Alpha express \fact{e21.mix.B.alpha}\% with channel vs \fact{e21.mix.A.alpha}\% without & floor; strong (own) \\
@@ -27,6 +29,19 @@ Exp~2.2 & Can monitors be fooled by notes? & \fact{e22.intact.tpr.k}/\fact{e22.i
 \end{center}
 \vspace{8pt}
 }]
+
+\subsection{Example episode}
+\label{app:demo}
+The listing below is one complete episode, verbatim: system prompt, user prompt, the model's reasoning and tool call, and the sandbox observation. To show the task mechanics without reproducing authored scenario text, it uses a hand-written harmless demonstration scenario that is not part of the authored suite. It is rendered by the same code in the high-tedium, harmless-implicit cell and run on \Intact{} at default effort in the deconfounder launch. Here the shortcut is permitted, and the model takes it in one call. Harmful scenarios differ only in the telemetry sentence; explicit cells add one sentence prohibiting the direct tool.
+
+\input{tables/tab_demo_episode}
+
+\subsection{Supplementary tables}
+Tables~\ref{tab:exp21} and~\ref{tab:exp22} give the full breakdowns of the two floor- or ceiling-bound multi-agent experiments.
+
+\input{tables/tab_exp21}
+\input{tables/tab_exp22}
+\FloatBarrier
 
 
 \section{Contributions, execution attribution and reproducibility}

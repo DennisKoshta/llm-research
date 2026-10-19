@@ -1,17 +1,17 @@
-\begin{table}[t]
+\begin{table*}[t]
 \centering
-\small
+\scriptsize
 \setlength{\tabcolsep}{4pt}
-\caption{Exp~3.2 pre-thinking probes, Regimes A and B (Exp~1.1 data, layer-48 output). Cross-validated AUROC of a linear probe on activations, a design-matrix lookup (model $\times$ cell), a TF-IDF text baseline, and the 1-D projection on $\hat r$ (sign oriented so that lower projection predicts the shortcut in Regime B).}
+\caption{Exp~3.2 pre-thinking probes, Regimes A and B (Exp~1.1 data, layer-48 output). Cross-validated AUROC of a linear probe on activations, a design-matrix lookup (model $\times$ cell), the combined design + probe predictor and its gain over the design with a paired scenario-bootstrap 95\% CI, a TF-IDF text baseline, and the 1-D projection on $\hat r$ (sign oriented so that lower projection predicts the shortcut in Regime B). Last column: false-positive rate at 80\% true-positive rate of the probe (Regime A) or of the $\hat r$ projection (Regime B).}
 \label{tab:exp32ab}
-\begin{tabular}{llcccc}
+\begin{tabular}{llccccccc}
 \toprule
-Regime & Think & Probe & Design & TF-IDF & $\hat r$ 1-D \\
+Regime & Think & Probe & Design & D+P & D+P $-$ D [CI] & TF-IDF & $\hat r$ 1-D & FPR$_{80}$ \\
 \midrule
-A (full grid) & on & 0.971 & 0.978 & 0.974 & 0.702 \\
-A (full grid) & off & 0.986 & 0.970 & 0.951 & 0.508 \\
-B (within Intact) & on & 0.977 & 0.986 & 0.959 & 0.772 \\
-B (within Intact) & off & 0.985 & 0.972 & 0.950 & 0.551 \\
+A (full grid) & on & 0.971 & 0.978 & 0.974 & -0.004 [-0.018, 0.013] & 0.974 & 0.702 & 0.003 \\
+A (full grid) & off & 0.986 & 0.970 & 0.985 & 0.015 [0.008, 0.023] & 0.951 & 0.508 & 0.018 \\
+B (within Intact) & on & 0.977 & 0.986 & --- & --- & 0.959 & 0.772 & 0.374 \\
+B (within Intact) & off & 0.985 & 0.972 & --- & --- & 0.950 & 0.551 & 0.714 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}

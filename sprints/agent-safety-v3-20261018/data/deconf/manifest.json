@@ -1,0 +1,36 @@
+{
+ "design": "v3.deconf",
+ "arms": [
+  "intact",
+  "refusal_ablated",
+  "pca_101"
+ ],
+ "files": {
+  "deconf_exp11": {
+   "rows": 403,
+   "sha256": "87e82caa897dd21fc952ce9f14a12c55bcb62c0db9f2d55d729c6245780e1ff0",
+   "counts": {
+    "demo|default|intact": 3,
+    "nh|default|all": 80,
+    "nh|low|all": 80,
+    "np|default|all": 80,
+    "std|default|all": 80,
+    "std|low|all": 80
+   }
+  },
+  "deconf_exp31": {
+   "rows": 512,
+   "sha256": "09751fc45f86841181d95e69e3c69a4638dbfd738fb125f2f6b45a8f995eb5d2",
+   "counts": {
+    "abstract_sentence|default|all": 128,
+    "abstract_table|default|all": 128,
+    "concrete_sentence|default|all": 128,
+    "concrete_table|default|all": 128
+   }
+  }
+ },
+ "launch_commands": [
+  "PYTHONPATH=src .venv/bin/python scripts/run_requests.py --exp-id deconf_exp11 --requests data/deconf/requests_deconf_exp11.jsonl --arms intact,refusal_ablated,pca_101 --gpu H200 --max-num-seqs 384 --eager 0 --est-hours 1.2",
+  "PYTHONPATH=src .venv/bin/python scripts/run_requests.py --exp-id deconf_exp31 --requests data/deconf/requests_deconf_exp31.jsonl --arms intact,refusal_ablated,pca_101 --gpu H200 --max-num-seqs 384 --eager 0 --est-hours 1.2"
+ ]
+}

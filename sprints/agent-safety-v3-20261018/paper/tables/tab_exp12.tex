@@ -1,28 +1,28 @@
 \begin{table*}[t]
 \centering
-\footnotesize
-\setlength{\tabcolsep}{6pt}
-\caption{Exp~1.2 students (low effort, 2{,}048-token cap). Held-out agentic shortcut counts pooled over 3 seeds for LoRA rank 32 and 8; rank-32 harmful-request compliance (\%), layer-48 refusal projection $|h\cdot\hat r|/\lVert h\rVert$ on harmful requests (mean over seeds), and training target tokens.}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Exp~1.2 students (low effort, 2{,}048-token cap). Held-out harmful shortcut counts pooled over 3 seeds (per-seed counts out of 32 in parentheses) for LoRA rank 32 and 8; for \Ablated-teacher students of Corpora A and B, the $r{=}32$ difference to \Intact-teacher students (pp, scenario-clustered 95\% CI) and its exact McNemar $p$ after Holm correction over the teacher family. Then the allowed harmless high-cost shortcut ($r{=}32$), harmful-request compliance (\%), the layer-48 refusal projection $|h\cdot\hat r|/\lVert h\rVert$ on harmful requests (mean over seeds) and training target tokens.}
 \label{tab:exp12}
-\begin{tabular}{llccccc}
+\begin{tabular}{llcccccccc}
 \toprule
-Corpus & Teacher & $r{=}32$ & $r{=}8$ & Comply (\%) & Projection & Target tokens \\
+Corpus & Teacher & $r{=}32$ & $r{=}8$ & $\Delta$ vs Intact & $p_{\mathrm{Holm}}$ & Harmless & Comply & Proj. & Tokens \\
 \midrule
-A (unfiltered) & Ablated & 20/96 & 27/96 & 13.0 & 0.149 & 29{,}570 \\
- & Intact & 0/96 & 0/96 & 0.0 & 0.191 & 23{,}545 \\
- & PCA-101 & 0/96 & 0/96 & 0.0 & 0.202 & 24{,}484 \\
+A (unfiltered) & Ablated & 20/96 (1/12/7) & 27/96 (8/11/8) & 20.8 [10.4, 32.3] & $2.7\times10^{-5}$ & 93/96 & 13.0 & 0.149 & 29{,}570 \\
+ & Intact & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 90/96 & 0.0 & 0.191 & 23{,}545 \\
+ & PCA-101 & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 91/96 & 0.0 & 0.202 & 24{,}484 \\
 \midrule
-B (safe-route only) & Ablated & 17/96 & 13/96 & 9.4 & 0.113 & 36{,}987 \\
- & Intact & 0/96 & 0/96 & 0.0 & 0.193 & 30{,}885 \\
- & PCA-101 & 3/96 & 0/96 & 0.0 & 0.195 & 29{,}448 \\
+B (safe-route only) & Ablated & 17/96 (13/0/4) & 13/96 (6/4/3) & 17.7 [11.5, 24.0] & $1.8\times10^{-4}$ & 86/96 & 9.4 & 0.113 & 36{,}987 \\
+ & Intact & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 82/96 & 0.0 & 0.193 & 30{,}885 \\
+ & PCA-101 & 3/96 (0/0/3) & 0/96 (0/0/0) &  &  & 81/96 & 0.0 & 0.195 & 29{,}448 \\
 \midrule
-B$'$ (paraphrased CoT) & Ablated & 1/96 & 0/96 & 5.7 & 0.169 & 24{,}392 \\
- & Intact & 0/96 & 0/96 & 0.0 & 0.182 & 22{,}447 \\
- & PCA-101 & 0/96 & 0/96 & 0.0 & 0.194 & 22{,}286 \\
+B$'$ (paraphrased CoT) & Ablated & 1/96 (0/1/0) & 0/96 (0/0/0) &  &  & 75/96 & 5.7 & 0.169 & 24{,}392 \\
+ & Intact & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 66/96 & 0.0 & 0.182 & 22{,}447 \\
+ & PCA-101 & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 47/96 & 0.0 & 0.194 & 22{,}286 \\
 \midrule
-C (math/code CoT) & Ablated & 0/96 & 0/96 & 0.0 & 0.217 & 36{,}981 \\
- & Intact & 0/96 & 0/96 & 0.0 & 0.229 & 30{,}863 \\
- & PCA-101 & 0/96 & 0/96 & 0.0 & 0.233 & 29{,}448 \\
+C (math/code CoT) & Ablated & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 74/96 & 0.0 & 0.217 & 36{,}981 \\
+ & Intact & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 80/96 & 0.0 & 0.229 & 30{,}863 \\
+ & PCA-101 & 0/96 (0/0/0) & 0/96 (0/0/0) &  &  & 77/96 & 0.0 & 0.233 & 29{,}448 \\
 \bottomrule
 \end{tabular}
 \end{table*}

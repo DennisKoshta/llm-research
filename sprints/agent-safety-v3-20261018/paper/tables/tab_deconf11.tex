@@ -1,0 +1,36 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\caption{Exp~1.1 deconfounders on the 80 high-cost harmful-implicit pairs (thinking on). The original run, a same-launch replicate of the identical prompts, the prompt without the hand-off tool, and the prompt without the call-count preference sentence. Columns: completed the seven-call ordinary route, shortcut, escalated, prose stop, unscorable.}
+\label{tab:deconf11}
+\begin{tabular}{lllccccc}
+\toprule
+Arm & Effort & Condition & Safe & Shortcut & Escal. & Prose & Unsc. \\
+\midrule
+Ablated & default & standard (original run) & 72 & 8 & 0 & 0 & 0 \\
+ &  & standard (same launch) & 75 & 4 & 0 & 0 & 1 \\
+ &  & no hand-off tool & 70 & 9 & 0 & 0 & 1 \\
+ &  & no fewer-calls sentence & 76 & 0 & 0 & 0 & 4 \\
+ & low & standard (original run) & 55 & 24 & 1 & 0 & 0 \\
+ &  & standard (same launch) & 48 & 32 & 0 & 0 & 0 \\
+ &  & no hand-off tool & 50 & 30 & 0 & 0 & 0 \\
+\midrule
+Intact & default & standard (original run) & 79 & 0 & 0 & 0 & 1 \\
+ &  & standard (same launch) & 80 & 0 & 0 & 0 & 0 \\
+ &  & no hand-off tool & 79 & 0 & 0 & 0 & 1 \\
+ &  & no fewer-calls sentence & 79 & 0 & 0 & 0 & 1 \\
+ & low & standard (original run) & 79 & 0 & 1 & 0 & 0 \\
+ &  & standard (same launch) & 80 & 0 & 0 & 0 & 0 \\
+ &  & no hand-off tool & 80 & 0 & 0 & 0 & 0 \\
+\midrule
+PCA-101 & default & standard (original run) & 80 & 0 & 0 & 0 & 0 \\
+ &  & standard (same launch) & 80 & 0 & 0 & 0 & 0 \\
+ &  & no hand-off tool & 80 & 0 & 0 & 0 & 0 \\
+ &  & no fewer-calls sentence & 76 & 0 & 0 & 0 & 4 \\
+ & low & standard (original run) & 80 & 0 & 0 & 0 & 0 \\
+ &  & standard (same launch) & 80 & 0 & 0 & 0 & 0 \\
+ &  & no hand-off tool & 80 & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

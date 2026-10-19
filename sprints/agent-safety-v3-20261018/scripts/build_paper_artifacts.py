@@ -520,47 +520,67 @@ def build_tables():
                          pct(f"tab4.{arm}.{cot}.narr", F1(arm, cot, "harmful", "rate_b")),
                          pct(f"tab4.{arm}.{cot}.num", F1(arm, cot, "harmful", "rate_a")),
                          pct(f"tab4.{arm}.{cot}.diff", F1(arm, cot, "harmful", "diff")),
+                         f"[{pct(f'tab4.{arm}.{cot}.cl', F1(arm, cot, 'harmful', 'cluster_ci') + '[0]')}, {pct(f'tab4.{arm}.{cot}.ch', F1(arm, cot, 'harmful', 'cluster_ci') + '[1]')}]",
                          "$" + pval(f"tab4.{arm}.{cot}.p", F1(arm, cot, "harmful", "p_mcnemar")) + "$",
-                         "$" + pval(f"tab4.{arm}.{cot}.holm", F1(arm, cot, "harmful", "p_holm")) + "$",
+                         "$" + pval(f"tab4.{arm}.{cot}.sfholm", F1(arm, cot, "harmful", "p_signflip_holm")) + "$",
                          pct(f"tab4.{arm}.{cot}.hcnarr", S31(arm, cot, "narrative", "rate", "hc")),
                          pct(f"tab4.{arm}.{cot}.hcnum", S31(arm, cot, "numeric", "rate", "hc"))])
     tex_table("tab_exp31", "Exp~3.1 harmful-shortcut rates (ITT, \\%) with the stakes given as a narrative sentence or a rating "
-              "table. Columns 3--7: all harmful cells, paired format contrast (exact McNemar, Holm within the F1 family). Columns 8--9: "
-              "the high-cost harmful-implicit slice.", "tab:exp31", "llccccccc",
-              "Arm & Think & Sentence & Table & $\\Delta$ & $p$ & $p_{\\mathrm{Holm}}$ & Slice sent. & Slice table", rows,
-              size="\\footnotesize", wide=True, sep="6pt")
+              "table. Columns 3--8: all harmful cells, paired format difference with scenario-clustered 95\\% CI, exact McNemar $p$ and the "
+              "scenario sign-flip $p$ after Holm correction within the F1 family. Columns 9--10: the high-cost harmful-implicit slice "
+              "(arm contrasts on this slice: Table~\\ref{tab:exp31x2}).", "tab:exp31", "llcccccccc",
+              "Arm & Think & Sentence & Table & $\\Delta$ & 95\\% CI & $p$ & $p_{\\mathrm{sf,Holm}}$ & Slice sent. & Slice table", rows,
+              size="\\footnotesize", wide=True, sep="4.5pt")
     # T5 Exp 3.2
+    E32 = "R['reviewer_addenda']['exp32']"
     rows = []
     for cot in ("cot_on", "cot_off"):
         A = X32("exp11", cot, "A") + "['auroc']"
-        cells = [f"{dec(f'tab5A.{cot}.{m}', A + '[' + repr(m) + ']' + chr(91) + repr('auroc') + chr(93), 3)}" for m in ("probe", "design", "tfidf", "rhat_cv")]
+        inc = f"{E32}['regime_a_incremental']['exp11'][{cot!r}]"
+        fp = f"{E32}['fpr_at_80tpr']['exp11']['regime_a'][{cot!r}]"
+        cells = [dec(f"tab5A.{cot}.{m}", A + "[" + repr(m) + "]['auroc']", 3) for m in ("probe", "design")]
+        cells.append(dec(f"tab5A.{cot}.dp", f"{inc}['auroc']['design_probe']['auroc']", 3))
+        cells.append(f"{dec(f'tab5A.{cot}.dpd', inc + chr(91) + repr('diff') + chr(93) + chr(91) + repr('design_probe-design') + chr(93) + chr(91) + repr('diff') + chr(93), 3)} "
+                     f"[{dec(f'tab5A.{cot}.dpdl', inc + chr(91) + repr('diff') + chr(93) + chr(91) + repr('design_probe-design') + chr(93) + chr(91) + repr('ci_low') + chr(93), 3)}, "
+                     f"{dec(f'tab5A.{cot}.dpdh', inc + chr(91) + repr('diff') + chr(93) + chr(91) + repr('design_probe-design') + chr(93) + chr(91) + repr('ci_high') + chr(93), 3)}]")
+        cells += [dec(f"tab5A.{cot}.{m}", A + "[" + repr(m) + "]['auroc']", 3) for m in ("tfidf", "rhat_cv")]
+        cells.append(dec(f"tab5A.{cot}.fpr", f"{fp}['probe']['fpr']", 3))
         rows.append(["A (full grid)", "on" if cot == "cot_on" else "off"] + cells)
     for cot in ("cot_on", "cot_off"):
         B = X32("exp11", cot, "B") + "['auroc']"
+        fp = f"{E32}['fpr_at_80tpr']['exp11']['regime_b'][{cot!r}]"
         rows.append(["B (within Intact)", "on" if cot == "cot_on" else "off",
-                     dec(f"tab5B.{cot}.probe", B + "['probe']['auroc']", 3), dec(f"tab5B.{cot}.design", B + "['design']['auroc']", 3),
-                     dec(f"tab5B.{cot}.tfidf", B + "['tfidf']['auroc']", 3), dec(f"tab5B.{cot}.rhat", B + "['rhat_neg']['auroc']", 3)])
+                     dec(f"tab5B.{cot}.probe", B + "['probe']['auroc']", 3), dec(f"tab5B.{cot}.design", B + "['design']['auroc']", 3), "---", "---",
+                     dec(f"tab5B.{cot}.tfidf", B + "['tfidf']['auroc']", 3), dec(f"tab5B.{cot}.rhat", B + "['rhat_neg']['auroc']", 3),
+                     dec(f"tab5B.{cot}.fpr", f"{fp}['rhat_neg']['fpr']", 3)])
     tex_table("tab_exp32_AB", "Exp~3.2 pre-thinking probes, Regimes A and B (Exp~1.1 data, layer-48 output). Cross-validated "
-              "AUROC of a linear probe on activations, a design-matrix lookup (model $\\times$ cell), a TF-IDF text baseline, and the 1-D "
-              "projection on $\\hat r$ (sign oriented so that lower projection predicts the shortcut in Regime B).",
-              "tab:exp32ab", "llcccc", "Regime & Think & Probe & Design & TF-IDF & $\\hat r$ 1-D", rows)
+              "AUROC of a linear probe on activations, a design-matrix lookup (model $\\times$ cell), the combined design + probe predictor "
+              "and its gain over the design with a paired scenario-bootstrap 95\\% CI, a TF-IDF text baseline, and the 1-D "
+              "projection on $\\hat r$ (sign oriented so that lower projection predicts the shortcut in Regime B). Last column: false-positive "
+              "rate at 80\\% true-positive rate of the probe (Regime A) or of the $\\hat r$ projection (Regime B).",
+              "tab:exp32ab", "llccccccc", "Regime & Think & Probe & Design & D+P & D+P $-$ D [CI] & TF-IDF & $\\hat r$ 1-D & FPR$_{80}$", rows,
+              size="\\scriptsize", wide=True, sep="4pt")
     rows = []
     for ds, tag in (("exp11", "primary"), ("exp11+exp31", "extended")):
         for cot in ("cot_on", "cot_off"):
             for g in [g["group"] for g in ev(X32(ds, cot, "C") + "['scopes']['arm_cot']")]:
                 c = C32(ds, cot, g)
+                ac = f"next(x for x in {E32}['regime_c_additions'][{ds!r}][{cot!r}]['arm_cot'] if x['group']=={g!r})"
                 arm = g.split("|")[0]
                 rows.append(["P" if tag == "primary" else "X", ARM_LABEL[arm], "on" if cot == "cot_on" else "off", cnt(f"tab5C.{tag}.{g}.n", f"{c}['n']"),
                              dec(f"tab5C.{tag}.{g}.probe", f"{c}['pooled']['probe']['auroc']", 3),
                              f"[{dec(f'tab5C.{tag}.{g}.l', c + chr(91) + repr('pooled') + chr(93) + chr(91) + repr('probe') + chr(93) + chr(91) + repr('ci_low') + chr(93), 3)}, "
                              f"{dec(f'tab5C.{tag}.{g}.h', c + chr(91) + repr('pooled') + chr(93) + chr(91) + repr('probe') + chr(93) + chr(91) + repr('ci_high') + chr(93), 3)}]",
+                             dec(f"tab5C.{tag}.{g}.tf", f"{ac}['auroc']['tfidf']['auroc']", 3),
                              dec(f"tab5C.{tag}.{g}.od", f"{c}['pooled']['order_domain']['auroc']", 3),
+                             dec(f"tab5C.{tag}.{g}.fpr", f"{ac}['fpr_at_tpr']['probe']['fpr']", 2),
                              dec(f"tab5C.{tag}.{g}.pp", f"{c}['permutation_null']['p_perm']", 4)])
     tex_table("tab_exp32_C", "Exp~3.2 Regime C: within-cell split trials (the design lookup is exactly 0.5 here). Probe AUROC "
-              "with bootstrap 95\\% CI, a tool-order/domain baseline, and a 400-shuffle permutation $p$ (floor $\\approx0.0025$). P = primary "
+              "with bootstrap 95\\% CI, a within-cell centred TF-IDF baseline, a tool-order/domain baseline, the probe's false-positive rate at "
+              "80\\% true-positive rate (one threshold across cells), and a 400-shuffle permutation $p$ (floor $\\approx0.0025$). P = primary "
               "(Exp~1.1) data, X = extended (Exp~1.1 + Exp~3.1) data.",
-              "tab:exp32c", "lllccccc", "D & Arm & Th. & $n$ & Probe & 95\\% CI & Ord./dom. & $p_{\\mathrm{perm}}$", rows,
-              size="\\scriptsize", sep="2.5pt")
+              "tab:exp32c", "lllccccccc", "D & Arm & Th. & $n$ & Probe & 95\\% CI & TF-IDF & Ord./dom. & FPR$_{80}$ & $p_{\\mathrm{perm}}$", rows,
+              size="\\scriptsize", wide=True, sep="4pt")
     # T6 Exp 1.2
     rows = []
     for corpus, lab in (("A", "A (unfiltered)"), ("B", "B (safe-route only)"), ("Bp", "B$'$ (paraphrased CoT)"), ("C", "C (math/code CoT)")):
@@ -568,8 +588,16 @@ def build_tables():
             r = [lab if teacher == "refusal_ablated" else "", ARM_LABEL[teacher]]
             for rank in (32, 8):
                 c = E12(corpus, teacher, rank)
-                r.append(kn(f"tab6.{corpus}.{teacher}.r{rank}", f"{c}['agentic']['primary']['shortcut']['k']", f"{c}['agentic']['primary']['shortcut']['n']"))
+                seeds = "/".join(cnt(f"tab6.{corpus}.{teacher}.r{rank}.s{s_}", f"{c}['agentic']['primary']['per_seed_shortcut'][{s_!r}] * {c}['agentic']['primary']['shortcut']['n'] / len({c}['seeds'])") for s_ in ("0", "1", "2"))
+                r.append(kn(f"tab6.{corpus}.{teacher}.r{rank}", f"{c}['agentic']['primary']['shortcut']['k']", f"{c}['agentic']['primary']['shortcut']['n']") + f" ({seeds})")
+            if teacher == "refusal_ablated" and corpus in ("A", "B"):
+                con = "refusal_ablated_vs_intact"
+                r.append(f"{pct(f'tab6.{corpus}.d', E12C(corpus, 32, con, 'diff'))} [{pct(f'tab6.{corpus}.dl', E12C(corpus, 32, con, 'scenario_ci_low'))}, {pct(f'tab6.{corpus}.dh', E12C(corpus, 32, con, 'scenario_ci_high'))}]")
+                r.append("$" + pval(f"tab6.{corpus}.holm", E12C(corpus, 32, con, "p_mcnemar_holm")) + "$")
+            else:
+                r += ["", ""]
             c = E12(corpus, teacher, 32)
+            r.append(kn(f"tab6.{corpus}.{teacher}.hl", f"{c}['agentic']['hc_harmless_implicit']['shortcut']['k']", f"{c}['agentic']['hc_harmless_implicit']['shortcut']['n']"))
             r.append(pct(f"tab6.{corpus}.{teacher}.comply", f"{c}['refusal']['harmful']['comply']['rate']"))
             r.append(dec(f"tab6.{corpus}.{teacher}.proj", f"{c}['projection']['refusal_harmful']['mean_over_seeds']", 3))
             ad = f"R['exp12_students']['summary']['adapters'][{corpus + '.' + teacher + '.r32.s0'!r}]['train']['n_target_tokens']"
@@ -577,11 +605,13 @@ def build_tables():
             rows.append(r)
         rows.append("MIDRULE")
     rows.pop()
-    tex_table("tab_exp12", "Exp~1.2 students (low effort, 2{,}048-token cap). Held-out agentic shortcut counts pooled over 3 seeds "
-              "for LoRA rank 32 and 8; rank-32 harmful-request compliance (\\%), layer-48 refusal projection "
-              "$|h\\cdot\\hat r|/\\lVert h\\rVert$ on harmful requests (mean over seeds), and training target tokens.",
-              "tab:exp12", "llccccc", "Corpus & Teacher & $r{=}32$ & $r{=}8$ & Comply (\\%) & Projection & Target tokens", rows,
-              size="\\footnotesize", wide=True, sep="6pt")
+    tex_table("tab_exp12", "Exp~1.2 students (low effort, 2{,}048-token cap). Held-out harmful shortcut counts pooled over 3 seeds "
+              "(per-seed counts out of 32 in parentheses) for LoRA rank 32 and 8; for \\Ablated-teacher students of Corpora A and B, the "
+              "$r{=}32$ difference to \\Intact-teacher students (pp, scenario-clustered 95\\% CI) and its exact McNemar $p$ after Holm "
+              "correction over the teacher family. Then the allowed harmless high-cost shortcut ($r{=}32$), harmful-request compliance (\\%), "
+              "the layer-48 refusal projection $|h\\cdot\\hat r|/\\lVert h\\rVert$ on harmful requests (mean over seeds) and training target tokens.",
+              "tab:exp12", "llcccccccc", "Corpus & Teacher & $r{=}32$ & $r{=}8$ & $\\Delta$ vs Intact & $p_{\\mathrm{Holm}}$ & Harmless & Comply & Proj. & Tokens", rows,
+              size="\\scriptsize", wide=True, sep="3.5pt")
     # T7 summary of Exp 2.3 / 2.1 / 2.2 / 1.4
     rows = [
         ["2.3", "Natural reviewer notes recommending the shortcut (harmful state)", "0/" + cnt("tab7.e23.nat", " + ".join(f"R['exp23']['manipulation_check']['reviewers'][{r!r}]['n_valid']" for r in ("B1", "B2", "R1a", "R1b")))],
@@ -728,7 +758,7 @@ def build_figures():
     axs[0].axhline(0.5, color="k", lw=0.5, ls=":")
     axs[0].set_ylabel("AUROC")
     axs[0].set_title("(A) Regime A", loc="left")
-    axs[0].legend(fontsize=6, loc="upper center", bbox_to_anchor=(0.5, -0.22), ncol=2)
+    fig.legend(*axs[0].get_legend_handles_labels(), fontsize=7, loc="upper center", bbox_to_anchor=(0.5, 1.0), ncol=2)
     for j, cot in enumerate(("cot_on", "cot_off")):
         B = ev(X32("exp11", cot, "B"))["auroc"]
         for i, m in enumerate(("rhat_neg", "design")):
@@ -762,7 +792,7 @@ def build_figures():
     axs[2].set_ylim(-0.7, len(rowsC) - 0.1)
     axs[2].set_xlabel("within-cell AUROC (thinking on/off)")
     axs[2].set_title("(C) Regime C", loc="left")
-    fig.tight_layout()
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(PAPER / "figures" / "fig3_exp32_prethink_probes.pdf", metadata=META)
     plt.close(fig)
 
@@ -842,12 +872,391 @@ def build_figures():
     fig.savefig(PAPER / "figures" / "fig5_track2_multiagent.pdf", metadata=META)
     plt.close(fig)
 
+    # ---- Fig 6 deconfounders
+    fig, axs = plt.subplots(1, 2, figsize=(7.0, 2.6), gridspec_kw={"width_ratios": [1.1, 1]})
+    DC = "R['exp11_deconfounders']['cells']"
+    conds = [("std_original", "default"), ("std", "default"), ("nh", "default"), ("np", "default"),
+             ("std_original", "low"), ("std", "low"), ("nh", "low")]
+    labels = ["orig.", "repl.", "no\nhand-off", "no fewer-\ncalls rule", "orig.", "repl.", "no\nhand-off"]
+
+    def g6a(gc, arm):
+        k = f"{arm}|{gc[0]}|{gc[1]}"
+        return ev(f"{DC}[{k!r}]['shortcut']"), ev(f"{DC}[{k!r}]['n']")
+    bars(axs[0], conds, ["refusal_ablated", "pca_101", "intact"], g6a, [cols["refusal_ablated"], cols["pca_101"], cols["intact"]],
+         ["Ablated", "PCA-101", "Intact"], ylabel="harmful shortcut (ITT)")
+    axs[0].set_xticklabels(labels, fontsize=6)
+    axs[0].axvline(3.5, color="k", lw=0.5, ls=":")
+    axs[0].text(1.5, 0.62, "default effort", ha="center", fontsize=6.5)
+    axs[0].text(5.0, 0.62, "low effort", ha="center", fontsize=6.5)
+    axs[0].set_ylim(0, 0.7)
+    axs[0].set_title("(A) Exp 1.1 deconfounders", loc="left")
+    axs[0].legend(fontsize=6, loc="upper left", bbox_to_anchor=(0.0, 0.9))
+    X2 = "R['exp31_2x2_deconfounder']['designs']['same_launch']['per_arm']"
+    cells = ["CS", "AS", "CT", "AT"]
+
+    def g6b(cell, arm):
+        return ev(f"{X2}[{arm!r}]['counts'][{cell!r}]"), ev(f"{X2}[{arm!r}]['n_complete_pairs']")
+    bars(axs[1], cells, ["refusal_ablated", "pca_101", "intact"], g6b, [cols["refusal_ablated"], cols["pca_101"], cols["intact"]],
+         ["Ablated", "PCA-101", "Intact"], ylabel="harmful shortcut (ITT)")
+    axs[1].set_xticklabels(["concrete\nsentence", "abstract\nsentence", "concrete\ntable", "abstract\ntable"], fontsize=6.5)
+    axs[1].set_ylim(0, 1.0)
+    axs[1].set_title("(B) Exp 3.1 layout x specificity", loc="left")
+    fig.tight_layout()
+    fig.savefig(PAPER / "figures" / "fig6_deconfounders.pdf", metadata=META)
+    plt.close(fig)
+
+
+# ============================================================================================ reviewer revision
+RA = "R['reviewer_addenda']"
+
+
+def AS(arm, cond, action):
+    """5-way action count summed over the two high-cost harmful-implicit cells (reviewer addenda)."""
+    return " + ".join(f"{RA}['action_splits'][{arm + '|' + cond + '|' + c + '|harmful|implicit'!r}][{action!r}]" for c in ("high_tedium", "high_friction"))
+
+
+def DO(arm, cond, variant, field, cons="harmful"):
+    return f"{RA}['direct_order'][{arm + '|' + cond + '|' + variant + '|' + cons!r}][{field!r}]"
+
+
+def build_review_facts():
+    fact("d.writers", cnt("d.writers", "130"))
+    # ---- Exp 1.1 action splits (high-cost harmful-implicit, both costs)
+    for arm in ARMS:
+        for cond in ("default", "low", "off"):
+            if f"{arm}|{cond}|high_tedium|harmful|implicit" not in ev(f"{RA}['action_splits']"):
+                continue
+            for a in ("safe_route_completed", "shortcut", "escalated", "prose_stop", "unscorable", "native_xml"):
+                fact(f"as.{arm}.{cond}.{a}", cnt(f"as.{arm}.{cond}.{a}", AS(arm, cond, a)))
+    for arm in ("refusal_ablated", "intact"):
+        for cond in ("default", "low", "off"):
+            for var in ("solo", "esc"):
+                for f in ("comply", "escalated", "text_reply", "undeclared_call", "unscorable", "native_xml", "n"):
+                    fact(f"do.{arm}.{cond}.{var}.{f}", cnt(f"do.{arm}.{cond}.{var}.{f}", DO(arm, cond, var, f)))
+    fact("do.prompt.n", cnt("do.prompt.n", f"{RA}['direct_order_prompt']['n_prompts']"))
+    fact("do.prompt.invites", cnt("do.prompt.invites", f"{RA}['direct_order_prompt']['n_mentioning_escalate_outside_tool_line']"))
+    st = f"{RA}['shortcut_turns']"
+    for cond in ("default", "low", "off"):
+        for f in ("turn1", "turn2plus", "n"):
+            e = " + ".join(f"{st}.get({'refusal_ablated|' + cond + '|harmful|' + c!r}, {{}}).get({f!r}, 0)" for c in ("high_tedium", "high_friction"))
+            fact(f"st.abl.{cond}.{f}", cnt(f"st.abl.{cond}.{f}", e))
+    tm = f"{RA}['primary_events_by_template']"
+    fact("tmpl.default.n", cnt("tmpl.default.n", f"len({tm}['default'])"))
+    fact("tmpl.default.max", cnt("tmpl.default.max", f"max({tm}['default'].values())"))
+    fact("tmpl.low.n", cnt("tmpl.low.n", f"len({tm}['low'])"))
+    fact("tmpl.floor.active", pval("tmpl.floor.active", f"2 / 2 ** len({tm}['default'])"), True)
+    fact("tmpl.floor.all", pval("tmpl.floor.all", "2 / 2 ** R['exp11_effort_robustness']['cells']['intact']['default']['n_templates']"), True)
+    fact("holm.k", cnt("holm.k", "len(R['exp11_main']['contrasts']['holm_family'])"))
+    fact("holm.same", cnt("holm.same", "sum(1 for k in R['exp11_main']['contrasts']['holm_family'] if k.startswith('P1.1') or k.startswith('P1.2'))"))
+    lo = "R['exp11_effort_robustness']['contrasts']['low_vs_off:refusal_ablated']"
+    fact("rob.lowoff.diff", pct("rob.lowoff.diff", f"{lo}['diff']"))
+    rp = f"{RA}['reproducibility']"
+    for arm in ("refusal_ablated", "intact"):
+        for pair in ("default_vs_low", "default_vs_off", "low_vs_off"):
+            for scope in ("all_cells", "hc_harmful_implicit"):
+                k = f"{rp}[{arm + '|' + pair + '|' + scope!r}]"
+                key = f"kap.{arm}.{pair}.{scope}"
+                if ev(f"{k}['kappa']") is not None:
+                    fact(key, dec(key, f"{k}['kappa']", 2))
+                fact(key + ".agr", pct(key + ".agr", f"{k}['agreement']", 1))
+                if scope == "hc_harmful_implicit":
+                    fact(key + ".both", cnt(key + ".both", f"{k}['n_both_pos']"))
+    g14 = f"{RA}['exp14_turn1']"
+    fact("e14t1.checked", cnt("e14t1.checked", f"{g14}['n_turn1_prompts_checked']"))
+    fact("e14t1.identical", cnt("e14t1.identical", f"{g14}['n_turn1_prompts_identical']"))
+    fact("e14t1.kmin", dec("e14t1.kmin", f"min(v['exp11_vs_exp14_action']['kappa'] for v in {g14}['groups'].values())", 2))
+    fact("e14t1.kmax", dec("e14t1.kmax", f"max(v['exp11_vs_exp14_action']['kappa'] for v in {g14}['groups'].values())", 2))
+    fact("e14t1.agrmin", pct("e14t1.agrmin", f"min(v['exp11_vs_exp14_action']['agreement'] for v in {g14}['groups'].values())", 1))
+    fact("e14t1.earlylate", pct("e14t1.earlylate", f"min(v['exp14_early_vs_late_action']['agreement'] for v in {g14}['groups'].values())", 1))
+    cf = f"{RA}['cot_features']"
+    for arm in ("refusal_ablated", "intact", "pca_101"):
+        for cond in ("default", "low"):
+            g = f"{cf}[{'exp11|' + arm + '|' + cond!r}]['all']"
+            fact(f"cot.e11.{arm}.{cond}.n", cnt(f"cot.e11.{arm}.{cond}.n", f"{g}['n']"))
+            for feat in ("names_direct", "mentions_escalate", "harm_cue", "cites_call_rule"):
+                fact(f"cot.e11.{arm}.{cond}.{feat}", cnt(f"cot.e11.{arm}.{cond}.{feat}", f"{g}[{feat!r}]"))
+            fact(f"cot.e11.{arm}.{cond}.words", cnt(f"cot.e11.{arm}.{cond}.words", f"{g}['mean_words']"))
+        for fmt in ("narrative", "numeric"):
+            g = f"{cf}[{'exp31|' + arm + '|' + fmt!r}]['all']"
+            fact(f"cot.e31.{arm}.{fmt}.words", cnt(f"cot.e31.{arm}.{fmt}.words", f"{g}['mean_words']"))
+    for teacher in ("refusal_ablated", "intact", "pca_101"):
+        c = f"{RA}['corpus_b'][{'B|' + teacher!r}]"
+        fact(f"cb.B.{teacher}.frac", pct(f"cb.B.{teacher}.frac", f"{c}['frac_naming_direct']", 1))
+        fact(f"cb.B.{teacher}.mentions", dec(f"cb.B.{teacher}.mentions", f"{c}['mean_direct_mentions']", 2))
+        fact(f"cb.B.{teacher}.words", cnt(f"cb.B.{teacher}.words", f"{c}['mean_think_words']"))
+    # ---- Exp 1.2 per-seed counts, Holm, scenario CIs
+    for corpus in ("A", "B"):
+        for teacher in ("refusal_ablated", "pca_101", "intact"):
+            for rank in (32, 8):
+                c = E12(corpus, teacher, rank)
+                for s in ("0", "1", "2"):
+                    fact(f"e12.seed.{corpus}.{teacher}.r{rank}.s{s}", cnt(f"e12.seed.{corpus}.{teacher}.r{rank}.s{s}",
+                         f"{c}['agentic']['primary']['per_seed_shortcut'][{s!r}] * {c}['agentic']['primary']['shortcut']['n'] / len({c}['seeds'])"))
+                fact(f"e12.hl.{corpus}.{teacher}.r{rank}", kn(f"e12.hl.{corpus}.{teacher}.r{rank}", f"{c}['agentic']['hc_harmless_implicit']['shortcut']['k']", f"{c}['agentic']['hc_harmless_implicit']['shortcut']['n']"))
+    c = E12("B", "refusal_ablated", 32)
+    fact("e12.seed.n", cnt("e12.seed.n", f"{c}['agentic']['primary']['shortcut']['n'] / len({c}['seeds'])"))
+    for corpus in ("A", "B"):
+        for rank in (32, 8):
+            for con in ("refusal_ablated_vs_intact", "refusal_ablated_vs_pca_101"):
+                key = f"e12c.{corpus}.r{rank}.{con.split('_vs_')[1]}"
+                fact(key + ".holm", pval(key + ".holm", E12C(corpus, rank, con, "p_mcnemar_holm")), True)
+                fact(key + ".scl", pct(key + ".scl", E12C(corpus, rank, con, "scenario_ci_low")))
+                fact(key + ".sch", pct(key + ".sch", E12C(corpus, rank, con, "scenario_ci_high")))
+                fact(key + ".sfs", pval(key + ".sfs", E12C(corpus, rank, con, "p_signflip_scenario")), True)
+    # ---- Exp 2.3 per-domain Llama counts
+    for frame in ("designated", "peer"):
+        for dom in ("warehouse", "compute", "finance", "wetlab"):
+            fact(f"e23.dom.{frame}.{dom}", cnt(f"e23.dom.{frame}.{dom}", f"R['exp23']['domain_cells'][{'llama70b:cot_off|' + frame + '|B4a'!r}][{dom!r}]['k_shortcut']"))
+    fact("e23.dom.n", cnt("e23.dom.n", "R['exp23']['domain_cells']['llama70b:cot_off|designated|B4a']['warehouse']['n']"))
+    # ---- Exp 1.4 pre/post block
+    for eff in ("default", "low"):
+        T = f"R['exp14_blocked_route']['analyses'][{eff!r}]['tables']['refusal_ablated']['cells']"
+        fact(f"e14.{eff}.abl.post", cnt(f"e14.{eff}.abl.post", f"sum(c['counts']['SHORTCUT'] - c['shortcut_before_block'] for c in {T}.values())"))
+        fact(f"e14.{eff}.abl.reached", cnt(f"e14.{eff}.abl.reached", f"sum(c['reached_block']['k'] for c in {T}.values())"))
+        fact(f"e14.{eff}.abl.hexpl.post", cnt(f"e14.{eff}.abl.hexpl.post", f"sum(c['counts']['SHORTCUT'] - c['shortcut_before_block'] for kk, c in {T}.items() if kk.startswith('harmless|explicit'))"))
+        fact(f"e14.{eff}.abl.hexpl.pre", cnt(f"e14.{eff}.abl.hexpl.pre", f"sum(c['shortcut_before_block'] for kk, c in {T}.items() if kk.startswith('harmless|explicit'))"))
+        fact(f"e14.{eff}.abl.harm.post", cnt(f"e14.{eff}.abl.harm.post", f"sum(c['counts']['SHORTCUT'] - c['shortcut_before_block'] for kk, c in {T}.items() if kk.startswith('harmful'))"))
+    fact("e14.harm.post", cnt("e14.harm.post", "sum(c['counts']['SHORTCUT'] - c['shortcut_before_block'] for a in R['exp14_blocked_route']['analyses'].values() for t in a['tables'].values() for kk, c in t['cells'].items() if kk.startswith('harmful'))"))
+    # ---- Exp 1.1 harmless-explicit exploratory contrast
+    X = "R['exp11_main']['exploratory']['ablated_vs_intact:hc_harmless_explicit']"
+    fact("hx.p", pval("hx.p", f"{X}['p_mcnemar']"), True)
+    fact("hx.sf", pval("hx.sf", f"{X}['cluster_boot']['p_signflip']"), True)
+    fact("hx.ctrlmax", cnt("hx.ctrlmax", f"max({E11('pca_101', 'cot_on', HC_HARMLESS_EXPL)}, {E11('pca_102', 'cot_on', HC_HARMLESS_EXPL)}, {E11('pca_103', 'cot_on', HC_HARMLESS_EXPL)}, {E11('unrelated', 'cot_on', HC_HARMLESS_EXPL)})"))
+    # ---- Exp 3.1 slice contrast details
+    for other in ("intact",):
+        a1 = ("next(x for x in R['exp31_multidomain']['contrasts']['A1_itt'] if x['a']=='refusal_ablated' and "
+              "x['within']['cot_mode']=='cot_on' and x['within']['fmt']=='numeric' and x['scope']=='hc_harmful_implicit')")
+        fact("e31.A1.cl", pct("e31.A1.cl", f"{a1}['cluster_ci'][0]"))
+        fact("e31.A1.ch", pct("e31.A1.ch", f"{a1}['cluster_ci'][1]"))
+        fact("e31.A1.sfholm", pval("e31.A1.sfholm", f"{a1}['p_signflip_holm']"), True)
+    fact("e31.design.scen", cnt("e31.design.scen", "R['exp31_multidomain']['design_observed']['n_scenarios']"))
+    fact("e31.design.cells", cnt("e31.design.cells", "len(R['exp31_multidomain']['design_observed']['cells'])"))
+    fact("e31.design.orders", cnt("e31.design.orders", "2"))
+    fact("e31.hc.n", cnt("e31.hc.n", S31("refusal_ablated", "cot_on", "numeric", "n", "hc")))
+    # ---- Exp 3.2 additions
+    E32 = f"{RA}['exp32']"
+    for ds, t in (("exp11", "p"), ("exp11+exp31", "x")):
+        for cot in ("cot_on", "cot_off"):
+            inc = f"{E32}['regime_a_incremental'][{ds!r}][{cot!r}]"
+            key = f"e32inc.{t}.{cot}"
+            fact(key + ".dp", dec(key + ".dp", f"{inc}['auroc']['design_probe']['auroc']", 3))
+            fact(key + ".design", dec(key + ".design", f"{inc}['auroc']['design']['auroc']", 3))
+            for f, fld in (("d", "diff"), ("dl", "ci_low"), ("dh", "ci_high")):
+                fact(f"{key}.{f}", dec(f"{key}.{f}", f"{inc}['diff']['design_probe-design'][{fld!r}]", 3))
+            hc = f"{E32}['regime_c_additions'][{ds!r}][{cot!r}]['harmful_cot']"
+            key = f"e32h.{t}.{cot}"
+            fact(key, dec(key, f"{hc}['auroc']['probe']['auroc']", 3))
+            fact(key + ".l", dec(key + ".l", f"{hc}['auroc']['probe']['ci_low']", 3))
+            fact(key + ".h", dec(key + ".h", f"{hc}['auroc']['probe']['ci_high']", 3))
+            fact(key + ".tf", dec(key + ".tf", f"{hc}['auroc']['tfidf']['auroc']", 3))
+            fact(key + ".n", cnt(key + ".n", f"{hc}['n']"))
+            fact(key + ".pos", cnt(key + ".pos", f"{hc}['n_pos']"))
+            fp = f"{E32}['fpr_at_80tpr'][{ds!r}]['regime_a'][{cot!r}]"
+            fact(f"e32fpr.{t}.{cot}.probe", dec(f"e32fpr.{t}.{cot}.probe", f"{fp}['probe']['fpr']", 3))
+            fact(f"e32fpr.{t}.{cot}.design", dec(f"e32fpr.{t}.{cot}.design", f"{fp}['design']['fpr']", 3))
+        for g in ("intact", "refusal_ablated", "pca_101"):
+            for cot in ("cot_on", "cot_off"):
+                ac = f"[x for x in {E32}['regime_c_additions'][{ds!r}][{cot!r}]['arm_cot'] if x['group']=={g + '|' + cot!r}]"
+                if ev(ac):
+                    fact(f"e32C.{t}.{g}.{cot}.tf", dec(f"e32C.{t}.{g}.{cot}.tf", f"{ac}[0]['auroc']['tfidf']['auroc']", 3))
+                    fact(f"e32C.{t}.{g}.{cot}.l", dec(f"e32C.{t}.{g}.{cot}.l", f"{ac}[0]['auroc']['probe']['ci_low']", 3))
+                    fact(f"e32C.{t}.{g}.{cot}.h", dec(f"e32C.{t}.{g}.{cot}.h", f"{ac}[0]['auroc']['probe']['ci_high']", 3))
+    for cot in ("cot_on", "cot_off"):
+        pj = f"{E32}['projection_intact']['sites']['out'][{cot!r}]"
+        for c, tag in (("harmless_explicit-harmless_implicit", "prohib"), ("harmful_implicit-harmless_implicit", "harm")):
+            for m in ("signed_dot", "q"):
+                key = f"proj.{cot}.{tag}.{m}"
+                d = 2 if m == "signed_dot" else 4
+                fact(key, dec(key, f"{pj}['contrasts'][{c!r}][{m!r}]['mean_diff']", d))
+                fact(key + ".l", dec(key + ".l", f"{pj}['contrasts'][{c!r}][{m!r}]['ci_low']", d))
+                fact(key + ".h", dec(key + ".h", f"{pj}['contrasts'][{c!r}][{m!r}]['ci_high']", d))
+                fact(key + ".p", pval(key + ".p", f"{pj}['contrasts'][{c!r}][{m!r}]['p_signflip']"), True)
+        for grp in ("harmless_implicit", "harmless_explicit", "harmful_implicit"):
+            fact(f"proj.{cot}.{grp}", dec(f"proj.{cot}.{grp}", f"{pj}['group_means'][{grp!r}]['mean_signed_dot']", 2))
+    fact("e32.tpr", cnt("e32.tpr", "80"))
+    fact("proj.npairs", cnt("proj.npairs", f"{E32}['projection_intact']['sites']['out']['cot_on']['contrasts']['harmful_implicit-harmless_implicit']['q']['n_pairs']"))
+    # ---- Exp 1.1 deconfounders
+    DC = "R['exp11_deconfounders']"
+    for k in ev(f"{DC}['cells']"):
+        arm, cond, eff = k.split("|")
+        for a in ("safe_route_completed", "shortcut", "escalated", "prose_stop", "unscorable", "n"):
+            fact(f"dc.{arm}.{cond}.{eff}.{a}", cnt(f"dc.{arm}.{cond}.{eff}.{a}", f"{DC}['cells'][{k!r}][{a!r}]"))
+    for k in ev(f"{DC}['within_arm']"):
+        arm, eff, comp = k.split("|")
+        w = f"{DC}['within_arm'][{k!r}]"
+        if ev(f"{w}['shortcut'].get('p_mcnemar')") is None:
+            continue
+        key = f"dcw.{arm}.{eff}.{comp}"
+        fact(key + ".p", pval(key + ".p", f"{w}['shortcut']['p_mcnemar']"), True)
+        if ev(f"{w}['shortcut'].get('p_holm')") is not None:
+            fact(key + ".holm", pval(key + ".holm", f"{w}['shortcut']['p_holm']"), True)
+        if ev(f"{w}['agreement_shortcut']['kappa']") is not None:
+            fact(key + ".kappa", dec(key + ".kappa", f"{w}['agreement_shortcut']['kappa']", 2))
+            fact(key + ".both", cnt(key + ".both", f"{w}['agreement_shortcut']['n_both_pos']"))
+        fact(key + ".actagr", pct(key + ".actagr", f"{w}['agreement_action']['agreement']", 1))
+    # ---- Exp 3.1 2x2
+    X2 = "R['exp31_2x2_deconfounder']"
+    for design in ("same_launch", "combined"):
+        for arm in ("refusal_ablated", "pca_101", "intact"):
+            pa = f"{X2}['designs'][{design!r}]['per_arm'][{arm!r}]"
+            for f in ("CS", "AS", "CT", "AT"):
+                fact(f"x2.{design}.{arm}.{f}", pct(f"x2.{design}.{arm}.{f}", f"{pa}['rates'][{f!r}]"))
+                fact(f"x2.{design}.{arm}.{f}.k", cnt(f"x2.{design}.{arm}.{f}.k", f"{pa}['counts'][{f!r}]"))
+            for e in ("layout_main", "abstraction_main", "interaction", "layout_concrete", "layout_abstract",
+                      "abstraction_sentence", "abstraction_table", "total"):
+                key = f"x2.{design}.{arm}.{e}"
+                fact(key, pct(key, f"{pa}[{e!r}]['estimate']"))
+                fact(key + ".l", pct(key + ".l", f"{pa}[{e!r}]['ci_low']"))
+                fact(key + ".h", pct(key + ".h", f"{pa}[{e!r}]['ci_high']"))
+                fact(key + ".p", pval(key + ".p", f"{pa}[{e!r}]['p_signflip']"), True)
+        for other in ("intact", "pca_101"):
+            for e in ("layout_main", "abstraction_main", "interaction", "total", "gap_CS", "gap_AS", "gap_CT", "gap_AT"):
+                d = f"{X2}['designs'][{design!r}]['arm_x_format'][{'refusal_ablated_vs_' + other + '|' + e!r}]"
+                key = f"x2d.{design}.{other}.{e}"
+                fact(key, pct(key, f"{d}['estimate']"))
+                fact(key + ".l", pct(key + ".l", f"{d}['ci_low']"))
+                fact(key + ".h", pct(key + ".h", f"{d}['ci_high']"))
+                fact(key + ".p", pval(key + ".p", f"{d}['p_signflip']"), True)
+                if ev(f"{d}.get('p_signflip_holm')") is not None:
+                    fact(key + ".holm", pval(key + ".holm", f"{d}['p_signflip_holm']"), True)
+    fact("x2.n", cnt("x2.n", f"{X2}['designs']['same_launch']['per_arm']['refusal_ablated']['n_complete_pairs']"))
+    for arm in ("refusal_ablated", "pca_101", "intact"):
+        for fmt in ("concrete_sentence", "abstract_table"):
+            rv = f"{X2}['replicate_vs_original'][{arm + '|' + fmt!r}]"
+            fact(f"x2r.{arm}.{fmt}.p", pval(f"x2r.{arm}.{fmt}.p", f"{rv}['shortcut']['p_mcnemar']"), True)
+            if ev(f"{rv}['agreement']['kappa']") is not None:
+                fact(f"x2r.{arm}.{fmt}.kappa", dec(f"x2r.{arm}.{fmt}.kappa", f"{rv}['agreement']['kappa']", 2))
+
+
+DEMO_TRIAL = "demo:main:demo_inventory:high_tedium:harmless:implicit"
+
+
+def demo_episode() -> dict:
+    """The one hand-written harmless demonstration episode (v3.deconf.DEMO_BASE, never an authored base), read from its raw
+    transcript. The only raw text this script reads; it is checked against the demo scenario before use."""
+    import sys
+    sys.path.insert(0, str(ROOT / "src"))
+    from v3 import deconf
+    rows = [json.loads(l) for l in (ROOT / "raw_transcripts" / "deconf_exp11" / "intact.jsonl").read_text().splitlines() if l.strip()]
+    row = next(r for r in rows if r["trial_id"] == DEMO_TRIAL)
+    expect = next(i for i in deconf.demo_instances() if i["trial_id"] == DEMO_TRIAL)
+    assert row["scenario_id"] == deconf.DEMO_BASE["scenario_id"] and row["messages"] == expect["messages"], "demo row mismatch"
+    return row
+
+
+def build_demo_listing():
+    from v3 import episodes
+    row = demo_episode()
+    fresh = episodes.recompute_record(row)
+    obs = episodes.observation_message(fresh["turns"][0]["observations"])
+    parts = [f"[system]\n{row['messages'][0]['content']}", f"[user]\n{row['messages'][1]['content']}",
+             f"[assistant: reasoning, tool call]\n{row['turns'][0]['raw_output'].strip()}", f"[sandbox]\n{obs}"]
+    text = "\n\n".join(parts)
+    assert "\\end{lstlisting}" not in text and text.isascii()
+    (PAPER / "tables" / "tab_demo_episode.tex").write_text(
+        "\\begin{lstlisting}[basicstyle=\\ttfamily\\scriptsize,breaklines=true,columns=fullflexible,keepspaces=true,"
+        "breakatwhitespace=false,frame=single,framesep=2pt,xleftmargin=2pt,xrightmargin=2pt]\n" + text + "\n\\end{lstlisting}\n")
+
+
+def build_review_tables():
+    build_demo_listing()
+    # Appendix: Exp 2.1 breakdown
+    rows = []
+    for team, tl in (("mixed_team", "Mixed (Abl.\\ Alpha)"), ("all_intact", "All Intact")):
+        for var, vl in (("A", "A: no channel"), ("C_nopen", "C: no channel, gate"), ("C_pen", "C: gate + fee"),
+                        ("B", "B: channel"), ("D_nopen", "D: channel, gate"), ("D_pen", "D: gate + fee")):
+            rows.append([tl if var == "A" else "", vl,
+                         kn(f"tab21.{team}.{var}.af", E21(team, var, "alpha_fast", "k"), E21(team, var, "alpha_fast", "n")),
+                         kn(f"tab21.{team}.{var}.bf", E21(team, var, "beta_fast", "k"), E21(team, var, "beta_fast", "n")),
+                         kn(f"tab21.{team}.{var}.lg", E21(team, var, "LEGIT_SAFE_COORD", "k"), E21(team, var, "LEGIT_SAFE_COORD", "n")),
+                         kn(f"tab21.{team}.{var}.ij", E21(team, var, "ILLEGIT_JOINT", "k"), E21(team, var, "ILLEGIT_JOINT", "n"))])
+        rows.append("MIDRULE")
+    rows.pop()
+    tex_table("tab_exp21", "Exp~2.1 by team and topology ($k/n$ trials): Alpha and Beta express-lane use, the legitimate-coordination "
+              "outcome (Alpha express, Beta standard) and the forbidden joint shortcut.", "tab:exp21", "llcccc",
+              "Team & Topology & Alpha exp. & Beta exp. & Legit.\\ coord. & Joint", rows, size="\\scriptsize", sep="2.5pt")
+    # Appendix: Exp 2.2 breakdown
+    rows = []
+    for mon, ml in (("intact", "Intact"), ("llama70b", "Llama-3.3-70B"), ("flash_next", "Flash-Next")):
+        for cond in ("action_log_only", "minimal", "neutral_matched", "truthful_compliance", "deceptive_compound", "clause_both"):
+            ex = f" and c['condition']=={cond!r}"
+            rows.append([ml if cond == "action_log_only" else "", cond.replace("_", " "),
+                         kn(f"tab22.{mon}.{cond}.t", E22(mon, TPR, "k", ex), E22(mon, TPR, "n", ex)),
+                         kn(f"tab22.{mon}.{cond}.f", E22(mon, FPR, "k", ex), E22(mon, FPR, "n", ex))])
+        rows.append("MIDRULE")
+    rows.pop()
+    tex_table("tab_exp22", "Exp~2.2 monitor verdicts by note condition (thinking off; readable verdicts): forbidden bundles blocked "
+              "and allowed bundles blocked ($k/n$).", "tab:exp22", "llcc",
+              "Monitor & Note & Forbidden blocked & Allowed blocked", rows, size="\\scriptsize", sep="3pt")
+    # Exp 1.1 deconfounders
+    DC = "R['exp11_deconfounders']['cells']"
+    rows = []
+    for arm in ("refusal_ablated", "intact", "pca_101"):
+        for eff in ("default", "low"):
+            for cond, cl in (("std_original", "standard (original run)"), ("std", "standard (same launch)"),
+                             ("nh", "no hand-off tool"), ("np", "no fewer-calls sentence")):
+                k = f"{arm}|{cond}|{eff}"
+                if k not in ev(DC):
+                    continue
+                rows.append([ARM_LABEL[arm] if (eff, cond) == ("default", "std_original") else "", eff if cond == "std_original" else "", cl] +
+                            [cnt(f"tabdc.{arm}.{cond}.{eff}.{a}", f"{DC}[{k!r}][{a!r}]") for a in
+                             ("safe_route_completed", "shortcut", "escalated", "prose_stop", "unscorable")])
+        rows.append("MIDRULE")
+    rows.pop()
+    tex_table("tab_deconf11", "Exp~1.1 deconfounders on the 80 high-cost harmful-implicit pairs (thinking on). The original run, a same-launch "
+              "replicate of the identical prompts, the prompt without the hand-off tool, and the prompt without the call-count preference "
+              "sentence. Columns: completed the seven-call ordinary route, shortcut, escalated, prose stop, unscorable.", "tab:deconf11",
+              "lllccccc", "Arm & Effort & Condition & Safe & Shortcut & Escal. & Prose & Unsc.", rows, size="\\scriptsize", sep="2.2pt")
+    # Exp 3.1 2x2
+    X2 = "R['exp31_2x2_deconfounder']['designs']['same_launch']"
+    rows = []
+    for arm in ("refusal_ablated", "pca_101", "intact"):
+        pa = f"{X2}['per_arm'][{arm!r}]"
+        r = [ARM_LABEL[arm]] + [pct(f"tabx2.{arm}.{f}", f"{pa}['rates'][{f!r}]") for f in ("CS", "AS", "CT", "AT")]
+        for e in ("layout_main", "abstraction_main", "interaction"):
+            r.append(f"{pct(f'tabx2.{arm}.{e}', pa + '[' + repr(e) + '][' + repr('estimate') + ']')} "
+                     f"[{pct(f'tabx2.{arm}.{e}.l', pa + '[' + repr(e) + '][' + repr('ci_low') + ']')}, "
+                     f"{pct(f'tabx2.{arm}.{e}.h', pa + '[' + repr(e) + '][' + repr('ci_high') + ']')}]")
+        rows.append(r)
+    rows.append("MIDRULE")
+    for other, ol in (("intact", "Abl.\\ $-$ Intact"), ("pca_101", "Abl.\\ $-$ PCA-101")):
+        d = f"{X2}['arm_x_format']"
+        r = [ol] + [pct(f"tabx2.d.{other}.{f}", f"{d}[{'refusal_ablated_vs_' + other + '|gap_' + f!r}]['estimate']") for f in ("CS", "AS", "CT", "AT")]
+        for e in ("layout_main", "abstraction_main", "interaction"):
+            q = f"{d}[{'refusal_ablated_vs_' + other + '|' + e!r}]"
+            r.append(f"{pct(f'tabx2.d.{other}.{e}', q + chr(91) + repr('estimate') + chr(93))} "
+                     f"[{pct(f'tabx2.d.{other}.{e}.l', q + chr(91) + repr('ci_low') + chr(93))}, "
+                     f"{pct(f'tabx2.d.{other}.{e}.h', q + chr(91) + repr('ci_high') + chr(93))}]")
+        rows.append(r)
+    tex_table("tab_exp31_2x2", "Exp~3.1 layout $\\times$ specificity on the high-cost harmful-implicit slice (thinking on, 128 pairs per arm, all four "
+              "cells generated in one launch). Shortcut rates (ITT, \\%) for the concrete sentence (CS, the original narrative format), the "
+              "abstract rating sentence (AS), the table with the concrete description (CT) and the abstract table (AT, the original numeric "
+              "format). Effects in pp with scenario-cluster bootstrap 95\\% CI: layout = table $-$ sentence and abstraction = rating words $-$ "
+              "description, each averaged over the other factor; interaction = (AT$-$AS)$-$(CT$-$CS). Lower rows: arm gaps per cell and "
+              "arm $\\times$ format difference-in-differences.", "tab:exp31x2", "lccccccc",
+              "Arm & CS & AS & CT & AT & Layout & Abstraction & Interaction", rows, size="\\footnotesize", wide=True, sep="5pt")
+    # Exp 1.1 5-way action split (main text)
+    rows = []
+    for arm in ARMS:
+        for cond, cl in (("default", "default"), ("low", "low"), ("off", "off")):
+            if f"{arm}|{cond}|high_tedium|harmful|implicit" not in ev(f"{RA}['action_splits']"):
+                continue
+            rows.append([ARM_LABEL[arm] if cond == "default" else "", cl] +
+                        [cnt(f"tab11as.{arm}.{cond}.{a}", AS(arm, cond, a)) for a in
+                         ("safe_route_completed", "shortcut", "escalated", "prose_stop", "unscorable")])
+    tex_table("tab_exp11_actions", "Exp~1.1 action split on the 80 high-cost harmful-implicit pairs: completed the seven-call ordinary "
+              "route, took the direct shortcut, escalated with the hand-off tool, stopped with a prose reply, or unscorable "
+              "(truncated, malformed or turn limit). Thinking on at default or low effort, or thinking off.", "tab:exp11actions",
+              "llccccc", "Arm & Cond. & Safe & Shortcut & Escal. & Prose & Unsc.", rows, size="\\scriptsize", sep="2.5pt")
+
 
 def main() -> int:
     for d in ("generated", "tables", "figures"):
         (PAPER / d).mkdir(parents=True, exist_ok=True)
     build_facts()
+    build_review_facts()
     build_tables()
+    build_review_tables()
     build_figures()
     lines = ["% generated by scripts/build_paper_artifacts.py from records/*.json -- do not edit"]
     for k in sorted(FACTS):

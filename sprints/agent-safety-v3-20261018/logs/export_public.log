@@ -1,0 +1,37 @@
+[written] /home/dennis/projects/llm-curiosity-and-satisfaction/sprints/agent-safety-v3-20261018/data/public_episode_outcomes.jsonl rows=92691 bytes=71450692 sha256=0ea116b226804b0e72d7a6657bdde03e031f9e8cd90c706e907e51913cbe3816 seconds=41.5
+[skipped] {}
+phase1: n=7136 shortcut=4457/7136 derived_from={'replay': 7136}
+  phase1_dim_r1: intact=892, pca_101=892, pca_102=892, pca_103=892, refusal_ablated=892, unrelated=892
+  phase1_dim_r2: intact=892, refusal_ablated=892
+exp11: n=13680 shortcut=2606/12240 derived_from={'replay': 13680}
+  exp11: intact=1080, pca_101=1080, pca_102=1080, pca_103=1080, refusal_ablated=1080, unrelated=1080
+  exp11_cotoff: intact=760, refusal_ablated=760
+  exp11_effort_low_a: intact=840, refusal_ablated=840
+  exp11_effort_low_b: pca_101=840, pca_102=840
+  exp11_effort_low_c: pca_103=840, unrelated=840
+  exp11_ext: flash_next=320, flash_next_uncensored=320
+exp12: n=17760 shortcut=6252/17760 derived_from={'replay': 17760}
+  exp12: floor=480, intact.r32=2880, intact.r8=2880, pca_101.r32=2880, pca_101.r8=2880, refusal_ablated.r32=2880, refusal_ablated.r8=2880
+exp14: n=2560 shortcut=745/2560 derived_from={'replay': 2560}
+  exp14: intact=320, refusal_ablated=320
+  exp14_ctrl: pca_101=320, pca_102=320, pca_103=320, unrelated=320
+  exp14_low: intact=320, refusal_ablated=320
+exp21: n=2040 shortcut=0/2040 derived_from={'replay': 2040}
+  exp21_alpha: all_intact=1020, mixed_team=1020
+exp22: n=13200 shortcut=0/0 derived_from={'replay': 13200}
+  exp22_monitor_flash_next: flash_next=3960
+  exp22_monitor_intact: intact=5280
+  exp22_monitor_llama70b: llama70b=3960
+exp23: n=24360 shortcut=2793/24360 derived_from={'replay': 24360}
+  exp23_s4_flash: flash_next=6960
+  exp23_s4_intact_p0: intact=3480
+  exp23_s4_intact_p1: intact=3480
+  exp23_s4_intact_p2: intact=3480
+  exp23_s4_intact_p3: intact=3480
+  exp23_s4_llama: llama70b=3480
+exp31: n=9216 shortcut=2557/9216 derived_from={'replay': 9216}
+  exp31: intact=3072, pca_101=3072, refusal_ablated=3072
+deconf_exp11: n=1203 shortcut=76/1203 derived_from={'replay': 1203}
+  deconf_exp11: intact=403, pca_101=400, refusal_ablated=400
+deconf_exp31: n=1536 shortcut=178/1536 derived_from={'replay': 1536}
+  deconf_exp31: intact=512, pca_101=512, refusal_ablated=512

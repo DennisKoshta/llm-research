@@ -267,6 +267,30 @@ def v_exp32(name="exp32_probes"):
     return stored, jsonable(mod.recompute_exp32(rows, acts, stored.get("config")))
 
 
+def v_exp11_deconfounders():
+    stored = load_json("exp11_deconfounders")
+    if stored is None:
+        return None
+    mod = load_script("analyze_exp11_deconfounders")
+    return stored, jsonable(mod.recompute(mod.load_raw(RAW), n_boot=stored["params"]["n_boot"]))
+
+
+def v_exp31_2x2():
+    stored = load_json("exp31_2x2_deconfounder")
+    if stored is None:
+        return None
+    mod = load_script("analyze_exp31_2x2")
+    return stored, jsonable(mod.recompute(mod.load_raw(RAW), n_boot=stored["params"]["n_boot"]))
+
+
+def v_reviewer_addenda():
+    stored = load_json("reviewer_addenda")
+    if stored is None:
+        return None
+    mod = load_script("analyze_reviewer_addenda")
+    return stored, jsonable(mod.recompute(stored["params"]))
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*", default=[])
@@ -285,10 +309,12 @@ def main(argv=None) -> int:
             ("exp11_effort_robustness", v_exp11_effort_robustness),
             ("exp14_blocked_route", v_exp14), ("scenario_audit", v_scenario_audit), ("calibration_history", v_calibration_history),
             ("exp12_corpora", v_exp12_corpora), ("exp12_students", v_exp12_students),
-            ("exp31_multidomain", v_exp31)]
+            ("exp31_multidomain", v_exp31), ("exp11_deconfounders", v_exp11_deconfounders),
+            ("exp31_2x2_deconfounder", v_exp31_2x2)]
     if not a.skip_slow:
         jobs.append(("exp32_probes", v_exp32))
         jobs.append(("exp32_probes_perm400", lambda: v_exp32("exp32_probes_perm400")))
+        jobs.append(("reviewer_addenda", v_reviewer_addenda))   # includes the Exp 3.2 probe additions (slow)
 
     results: dict[str, str] = {}
     n_bad = 0

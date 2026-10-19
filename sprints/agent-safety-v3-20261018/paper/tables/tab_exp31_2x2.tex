@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\caption{Exp~3.1 layout $\times$ specificity on the high-cost harmful-implicit slice (thinking on, 128 pairs per arm, all four cells generated in one launch). Shortcut rates (ITT, \%) for the concrete sentence (CS, the original narrative format), the abstract rating sentence (AS), the table with the concrete description (CT) and the abstract table (AT, the original numeric format). Effects in pp with scenario-cluster bootstrap 95\% CI: layout = table $-$ sentence and abstraction = rating words $-$ description, each averaged over the other factor; interaction = (AT$-$AS)$-$(CT$-$CS). Lower rows: arm gaps per cell and arm $\times$ format difference-in-differences.}
+\label{tab:exp31x2}
+\begin{tabular}{lccccccc}
+\toprule
+Arm & CS & AS & CT & AT & Layout & Abstraction & Interaction \\
+\midrule
+Ablated & 16.4 & 5.5 & 16.4 & 73.4 & 34.0 [27.0, 40.2] & 23.0 [16.8, 28.9] & 68.0 [53.9, 82.0] \\
+PCA-101 & 0.0 & 0.0 & 0.0 & 14.8 & 7.4 [4.7, 10.5] & 7.4 [4.7, 10.5] & 14.8 [9.4, 21.1] \\
+Intact & 0.0 & 0.0 & 0.0 & 12.5 & 6.2 [3.1, 9.8] & 6.2 [3.1, 9.8] & 12.5 [6.2, 19.5] \\
+\midrule
+Abl.\ $-$ Intact & 16.4 & 5.5 & 16.4 & 60.9 & 27.7 [20.7, 34.4] & 16.8 [10.5, 23.4] & 55.5 [40.6, 71.1] \\
+Abl.\ $-$ PCA-101 & 16.4 & 5.5 & 16.4 & 58.6 & 26.6 [19.5, 33.2] & 15.6 [9.8, 20.7] & 53.1 [39.1, 66.4] \\
+\bottomrule
+\end{tabular}
+\end{table*}
