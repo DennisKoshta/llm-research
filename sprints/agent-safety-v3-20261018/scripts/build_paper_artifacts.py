@@ -758,7 +758,7 @@ def build_figures():
     axs[0].axhline(0.5, color="k", lw=0.5, ls=":")
     axs[0].set_ylabel("AUROC")
     axs[0].set_title("(A) Regime A", loc="left")
-    fig.legend(*axs[0].get_legend_handles_labels(), fontsize=7, loc="upper center", bbox_to_anchor=(0.5, 1.0), ncol=2)
+    fig.legend(*axs[0].get_legend_handles_labels(), fontsize=7, loc="upper center", bbox_to_anchor=(0.5, 0.985), ncol=2)
     for j, cot in enumerate(("cot_on", "cot_off")):
         B = ev(X32("exp11", cot, "B"))["auroc"]
         for i, m in enumerate(("rhat_neg", "design")):
@@ -792,8 +792,8 @@ def build_figures():
     axs[2].set_ylim(-0.7, len(rowsC) - 0.1)
     axs[2].set_xlabel("within-cell AUROC (thinking on/off)")
     axs[2].set_title("(C) Regime C", loc="left")
-    fig.tight_layout(rect=(0, 0, 1, 0.92))
-    fig.savefig(PAPER / "figures" / "fig3_exp32_prethink_probes.pdf", metadata=META)
+    fig.tight_layout(rect=(0, 0, 1, 0.89))
+    fig.savefig(PAPER / "figures" / "fig3_exp32_prethink_probes.pdf", metadata=META, bbox_inches="tight", pad_inches=0.06)
     plt.close(fig)
 
     # ---- Fig 4
@@ -867,7 +867,7 @@ def build_figures():
     axs[1].text(4.0, 0.95, "message channel", ha="center", fontsize=6)
     axs[1].set_ylim(0, 1.0)
     axs[1].set_title("(B) Exp 2.1 Alpha express lane by topology", loc="left")
-    axs[1].legend(fontsize=6, loc="upper left", bbox_to_anchor=(0.0, 0.88))
+    axs[1].legend(fontsize=6, loc="upper left", bbox_to_anchor=(0.0, 0.88), frameon=True, framealpha=1.0, edgecolor="none")
     fig.tight_layout()
     fig.savefig(PAPER / "figures" / "fig5_track2_multiagent.pdf", metadata=META)
     plt.close(fig)
